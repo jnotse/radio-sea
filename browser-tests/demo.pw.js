@@ -22,41 +22,55 @@ test.beforeEach(async ({ page }) => {
   await page.route('https://www.youtube.com/embed/**', (route) => route.fulfill({ body: '<html>test player</html>', contentType: 'text/html' }));
 });
 
-test('loaded snapshot has complete track records and working filters', async ({ page }) => {
+test('loaded snapshot has complete records, no playlist, and working filters', async ({ page }) => {
   const errors = []; page.on('pageerror', (e) => errors.push(e.message));
   await page.goto('/');
   const total = await page.evaluate(() => window.SEA_DATA.releases.length);
-  await expect(page.locator('#track-list button')).toHaveCount(total);
   await expect(page.locator('#sea')).toHaveAttribute('data-matching', String(total));
+  await expect(page.locator('#search-results')).toBeHidden();
+  await expect(page.locator('#map-status')).toBeHidden();
   expect(await page.evaluate(() => window.SEA_DATA.releases.every((r) =>
     r.station && /^[\w-]{11}$/.test(r.youtubeId) && r.sourceUrl))).toBe(true);
-  await expect(page.locator('[data-station="worldwidefm"]')).toBeDisabled();
+  // Only stations with songs get a filter, and genre filters read as genres.
+  await expect(page.locator('[data-station="worldwidefm"]')).toHaveCount(0);
+  expect(await page.locator('#tag-chips').innerText()).not.toMatch(/mood:|decade:|show/);
   await expect(page.locator('#d-sources a').first()).toHaveAttribute('href', /https:\/\/(www\.)?(nts\.live|thelotradio\.com)\/(?!api)/);
   expect(await page.locator('#detail').innerText()).not.toContain('undefined');
+  expect(await page.locator('#d-meta').innerText()).not.toMatch(/depth|~|Show tagged/);
   await page.locator('[data-station="nts"]').click();
-  const remainingCount = await page.evaluate(() => window.SEA_DATA.releases.filter((r) => r.stations.some((s) => s !== 'nts')).length);
-  await expect(page.locator('#track-list button')).toHaveCount(remainingCount);
-  await page.locator('[data-station="lotradio"]').click();
-  // Other sources (e.g. Radiooooo) may have been added since this snapshot.
-  for (const chip of await page.locator('#station-chips button[aria-pressed="true"]:not(:disabled)').all()) await chip.click();
+  const remaining = await page.evaluate(() => window.SEA_DATA.releases.filter((r) => r.stations.some((s) => s !== 'nts')).length);
+  await expect(page.locator('#sea')).toHaveAttribute('data-matching', String(remaining));
+  await expect(page.locator('#map-status')).toContainText(`${remaining} of ${total}`);
+  const stillOn = await page.locator('#station-chips button[aria-pressed="true"]').evaluateAll((chips) => chips.map((c) => c.dataset.station));
+  for (const station of stillOn) await page.locator(`[data-station="${station}"]`).click();
   await expect(page.locator('#map-status')).toContainText('No matches');
   await expect(page.locator('#btn-banger')).toBeDisabled();
   await page.locator('#btn-clear').click();
-  await expect(page.locator('#track-list button')).toHaveCount(total);
+  await expect(page.locator('#sea')).toHaveAttribute('data-matching', String(total));
+  await expect(page.locator('#map-status')).toBeHidden();
   expect(errors).toEqual([]);
 });
 
-test('search, selecting neighbours, and similar navigation work without undefined errors', async ({ page }) => {
+test('search lists only matching songs, and picking a result or a neighbour plays it', async ({ page }) => {
   await page.goto('/');
-  const title = await page.locator('#d-title').textContent();
-  await page.locator('#btn-similar').click();
-  await expect(page.locator('#d-title')).not.toHaveText(title);
+  const total = await page.evaluate(() => window.SEA_DATA.releases.length);
+  const track = await page.evaluate(() => window.SEA_DATA.releases.at(-1));
+  await page.locator('#search').fill(track.artist);
+  await expect(page.locator('#search-results')).toBeVisible();
+  await expect(page.locator('#search-count')).toContainText('found');
+  const count = await page.locator('#search-results button').count();
+  expect(count).toBeGreaterThan(0); expect(count).toBeLessThan(total);
+  await page.locator(`#search-results button[data-track-id="${track.id}"]`).click();
+  await expect(page.locator('#d-title')).toHaveText(track.name);
+  await expectPlaying(page, track.id);
   const next = await page.locator('#d-neighbours b').first().textContent();
   await page.locator('#d-neighbours button').first().click();
   await expect(page.locator('#d-title')).toHaveText(next.split(' — ').slice(1).join(' — '));
   await page.locator('#search').fill('no-such-song-xyz');
+  await expect(page.locator('#search-count')).toHaveText('Nothing found');
   await expect(page.locator('#map-status')).toContainText('No matches');
   await page.locator('#btn-clear').click();
+  await expect(page.locator('#search-results')).toBeHidden();
   await expect(page.locator('#btn-banger')).toBeEnabled();
 });
 
@@ -105,11 +119,11 @@ async function expectPlaying(page, id) {
 test('player uses a real video ID, supplies origin/referrer and exposes a working fallback', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('#d-player iframe')).toHaveCount(0);
-  await page.locator('#play-track').click();
+  await page.locator('#video-poster').click();
   const iframe = page.locator('#d-player iframe');
   await expect(iframe).toHaveAttribute('src', /embed\/[\w-]{11}\?.*origin=http/);
   await expect(iframe).toHaveAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
-  await expect(page.locator('#player-status')).toContainText('ready');
+  await expect(page.locator('#player-status')).toContainText('If nothing plays');
   await page.evaluate(() => window.__playerOptions.events.onError({ data: 150 }));
   await expect(page.locator('#player-status')).toContainText('error 150');
   await expect(page.locator('#d-youtube')).toHaveAttribute('href', /youtube\.com\/watch\?v=[\w-]{11}/);
@@ -141,12 +155,12 @@ test.describe('touch-screen layout and controls', () => {
       }
       const map = await page.locator('#sea').boundingBox();
       expect(map.width).toBeGreaterThan(230); expect(map.height).toBeGreaterThan(145);
-      for (const selector of ['#zoom-in', '#zoom-out', '#transport-play', '#player-seek', '#player-volume', '#seek-time', '#seek-go',
-        '#search', '#btn-banger', '#track-list li:first-child button', '#station-chips button:first-child', '#tag-chips button:first-child']) {
+      for (const selector of ['#zoom-in', '#zoom-out', '#btn-home', '#transport-prev', '#transport-play', '#transport-next', '#player-seek',
+        '#player-volume', '#search', '#btn-banger', '#btn-clear', '#station-chips button:first-child', '#tag-chips button:first-child']) {
         const box = await page.locator(selector).boundingBox();
         expect(box.height, selector).toBeGreaterThanOrEqual(44);
       }
-      for (const selector of ['#search', '#seek-time']) {
+      for (const selector of ['#search']) {
         expect(await page.locator(selector).evaluate((el) => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(16);
       }
       const nav = await page.locator('.mobile-nav').boundingBox();
@@ -157,26 +171,25 @@ test.describe('touch-screen layout and controls', () => {
   test('section shortcuts, search, playback and native touch seeking work on a phone', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/');
     const nav = page.getByRole('navigation', { name: 'Explore sections' });
-    await nav.getByRole('link', { name: '01 / Library' }).tap();
+    await nav.getByRole('link', { name: 'Explore' }).tap();
     await expect.poll(() => page.locator('#sidebar').evaluate((el) => Math.round(el.getBoundingClientRect().top))).toBe(8);
     const track = await page.evaluate(() => window.SEA_DATA.releases.at(-1));
     await page.locator('#search').fill(track.artist);
-    await page.locator(`#track-list button[data-track-id="${track.id}"]`).tap();
+    await page.locator(`#search-results button[data-track-id="${track.id}"]`).tap();
     await expect(page.locator('#d-title')).toHaveText(track.name);
-    await nav.getByRole('link', { name: '03 / Player' }).tap();
+    await nav.getByRole('link', { name: 'Player' }).tap();
     await expect.poll(() => page.locator('#detail').evaluate((el) => Math.round(el.getBoundingClientRect().top))).toBe(8);
-    await page.locator('#transport-play').tap();
     await expect(page.locator('#player-seek')).toBeEnabled();
-    await page.locator('#transport-pause').tap();
+    await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
+    await page.getByRole('button', { name: 'Pause', exact: true }).tap();
     const slider = page.locator('#player-seek'), box = await slider.boundingBox();
     await slider.tap({ position: { x: box.width * .6, y: box.height / 2 } });
     await expect.poll(() => page.evaluate(() => window.__transport.seeks.length)).toBeGreaterThan(0);
     const seconds = await page.evaluate(() => window.__transport.seeks.at(-1).seconds);
     expect(Math.abs(seconds - 144)).toBeLessThan(10);
     await expect(page.locator('#deck-state')).toHaveText('PAUSE');
-    await page.locator('#seek-time').fill('1:23'); await page.locator('#seek-go').tap();
-    await expect(page.locator('#player-seek')).toHaveValue('83');
-    await nav.getByRole('link', { name: '02 / Map' }).tap();
+    const position = await slider.inputValue();
+    await nav.getByRole('link', { name: 'Map' }).tap();
     await expect(page.locator('#sea')).toBeInViewport();
     const zoom = Number(await page.locator('#sea').getAttribute('data-zoom'));
     await page.locator('#zoom-in').tap();
@@ -184,8 +197,9 @@ test.describe('touch-screen layout and controls', () => {
     await page.setViewportSize({ width: 844, height: 390 });
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(844);
     await expect(nav).toBeInViewport();
-    await expect(page.locator('#player-seek')).toHaveValue('83');
+    await expect(page.locator('#player-seek')).toHaveValue(position);
   });
+
 
   test('real multi-touch pinch and drag do not select tracks, and cancelled gestures recover', async ({ page, context }) => {
     await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/');
@@ -211,9 +225,8 @@ test.describe('touch-screen layout and controls', () => {
     await expect.poll(async () => Number(await canvas.getAttribute('data-camera-x'))).not.toBe(cameraX);
     await expect(canvas).toHaveAttribute('data-selected', selected);
     await expect(canvas).not.toHaveClass(/dragging/);
-    await page.locator('.mobile-nav a[href="#sidebar"]').tap();
-    await page.locator('#btn-home').tap();
     await page.locator('.mobile-nav a[href="#map-panel"]').tap();
+    await page.locator('#btn-home').tap();
     const id = await page.evaluate(() => {
       const c = document.querySelector('#sea'), zoom = Number(c.dataset.zoom);
       return window.SEA_DATA.releases.find((r) => r.id !== c.dataset.selected &&
@@ -231,48 +244,58 @@ test.describe('touch-screen layout and controls', () => {
 test('opening the HTML as a file explains the localhost requirement', async ({ page }) => {
   await page.goto(pathToFileURL(resolve('demo/index.html')).href);
   await expect(page.locator('#file-notice')).toBeVisible();
-  await expect(page.locator('#play-track')).toBeDisabled();
+  await expect(page.locator('#video-poster')).toBeDisabled();
   await expect(page.locator('#transport-play')).toBeDisabled();
   await expect(page.locator('#player-seek')).toBeDisabled();
   await expect(page.locator('#d-youtube')).toHaveAttribute('href', /watch\?v=[\w-]{11}/);
 });
 
-test('retro transport controls navigate, pause, stop and apply real player volume', async ({ page }) => {
+test('next wanders to the nearest unheard song, previous goes back, play toggles pause, volume applies', async ({ page }) => {
   await page.goto('/');
-  const first = await page.locator('#d-title').textContent();
+  const sea = page.locator('#sea');
+  const first = await sea.getAttribute('data-selected');
+  const nearest = await page.evaluate((fromId) => {
+    const all = window.SEA_DATA.releases, from = all.find((r) => r.id === fromId);
+    const distance = (r) => Math.hypot(r.x - from.x, r.y - from.y);
+    return all.filter((r) => r.id !== fromId).sort((a, b) => (b.islandId === from.islandId) - (a.islandId === from.islandId) ||
+      distance(a) - distance(b) || a.id.localeCompare(b.id))[0];
+  }, first);
+  await expect(page.locator('#d-next b')).toHaveText(`${nearest.artist} — ${nearest.name}`);
   await page.getByRole('button', { name: 'Next track', exact: true }).click();
-  await expect(page.locator('#d-title')).not.toHaveText(first);
-  await expect(page.locator('#deck-index')).toHaveText(/02 \/ \d+/);
+  await expect(sea).toHaveAttribute('data-selected', nearest.id);
+  await expectPlaying(page, nearest.id);
+  await page.getByRole('button', { name: 'Next track', exact: true }).click();
+  const third = await sea.getAttribute('data-selected');
+  expect([first, nearest.id]).not.toContain(third);
   await page.getByRole('button', { name: 'Previous track', exact: true }).click();
-  await expect(page.locator('#d-title')).toHaveText(first);
+  await expect(sea).toHaveAttribute('data-selected', nearest.id);
+  await page.getByRole('button', { name: 'Previous track', exact: true }).click();
+  await expect(sea).toHaveAttribute('data-selected', first);
+  await expect(page.locator('#transport-prev')).toBeDisabled();
   await page.locator('#player-volume').focus();
   await page.locator('#player-volume').press('Home');
   await page.locator('#player-volume').press('ArrowRight');
   await expect(page.locator('#volume-value')).toHaveText('1');
-  await page.getByRole('button', { name: 'Play selected track', exact: true }).click();
-  await expect(page.locator('#youtube-player')).toBeVisible();
   await expect.poll(() => page.evaluate(() => window.__transport?.volume)).toBe(1);
-  await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
+  await page.evaluate(() => { window.__transport.time = 42; window.__playerOptions.events.onStateChange({ data: 1 }); });
   await expect(page.locator('#deck-state')).toHaveText('PLAY');
   await expect(page.locator('#deck-clock')).toHaveText('00:42');
-  await page.getByRole('button', { name: 'Pause playback', exact: true }).click();
+  await page.getByRole('button', { name: 'Pause', exact: true }).click();
   await expect(page.locator('#deck-state')).toHaveText('PAUSE');
   expect(await page.evaluate(() => window.__transport.pause)).toBe(1);
-  await page.getByRole('button', { name: 'Stop playback', exact: true }).click();
-  await expect(page.locator('#deck-state')).toHaveText('STOP');
-  await expect(page.locator('#deck-clock')).toHaveText('00:00');
-  expect(await page.evaluate(() => window.__transport.stop)).toBe(1);
+  await expect(page.getByRole('button', { name: 'Play', exact: true })).toBeVisible();
 });
 
-test('pixel skin stays local and respects reduced motion', async ({ page }) => {
+test('Patagonia skin stays local and respects reduced motion', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
   await page.evaluate(() => document.fonts.ready);
   expect(await page.evaluate(() => document.fonts.check('12px Silkscreen'))).toBe(true);
   const bg = await page.locator('#map-wrap').evaluate((el) => getComputedStyle(el).backgroundColor);
-  expect(bg).toBe('rgb(165, 184, 119)');
+  expect(bg).toBe('rgb(207, 165, 72)');
+  await expect.poll(() => page.locator('#banner').evaluate((el) => el.width)).toBeGreaterThan(0);
   await page.locator('#transport-play').click();
-  await expect(page.locator('#player-status')).toContainText('ready');
+  await expect(page.locator('#player-status')).toContainText('If nothing plays');
   await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
   expect(await page.locator('.spectrum i').first().evaluate((el) => getComputedStyle(el).animationName)).toBe('none');
 });
@@ -292,26 +315,6 @@ test('seek knob previews a position without fighting the timer, then seeks on re
   await expect(slider).toHaveValue('83');
   await slider.evaluate((el) => el.dispatchEvent(new Event('change', { bubbles: true })));
   expect(await page.evaluate(() => window.__transport.seeks)).toEqual([{ seconds: 83, allowAhead: true }]);
-});
-
-test('jump accepts seconds or mm:ss, clamps to duration and preserves pause', async ({ page }) => {
-  await page.goto('/'); await page.locator('#transport-play').click();
-  await expect(page.locator('#seek-time')).toBeEnabled();
-  await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 2 }));
-  const playsBefore = await page.evaluate(() => window.__transport.play);
-  await page.getByRole('textbox', { name: 'Jump time', exact: true }).fill('1:23');
-  await page.locator('#seek-go').click();
-  await expect(page.locator('#deck-clock')).toHaveText('01:23');
-  await expect(page.locator('#deck-state')).toHaveText('PAUSE');
-  expect(await page.evaluate(() => window.__transport.play)).toBe(playsBefore);
-  await page.locator('#seek-time').fill('120s'); await page.locator('#seek-go').click();
-  await expect(page.locator('#player-seek')).toHaveValue('120');
-  await page.locator('#seek-time').fill('9999'); await page.locator('#seek-go').click();
-  await expect(page.locator('#seek-readout')).toHaveText('04:00 / 04:00');
-  const count = await page.evaluate(() => window.__transport.seeks.length);
-  await page.locator('#seek-time').fill('1:90'); await page.locator('#seek-go').click();
-  await expect(page.locator('#seek-message')).toBeVisible();
-  expect(await page.evaluate(() => window.__transport.seeks.length)).toBe(count);
 });
 
 test('touch range release commits without change and does not seek twice if change follows', async ({ page }) => {
@@ -334,11 +337,12 @@ test('seek supports one-second keyboard steps and resets when switching tracks',
   await slider.focus(); await slider.press('Home'); await slider.press('ArrowRight');
   await expect(slider).toHaveValue('1');
   expect(await page.evaluate(() => window.__transport.seeks.at(-1).seconds)).toBe(1);
+  // The next video's length is unknown until it loads.
+  await page.evaluate(() => { window.__transport.duration = 0; });
   await page.locator('#transport-next').click();
   await expect(slider).toBeDisabled();
   await expect(slider).toHaveValue('0');
   await expect(page.locator('#seek-readout')).toHaveText('00:00 / --:--');
-  await expect(page.locator('#seek-time')).toBeDisabled();
 });
 
 test('seek stays disabled until a finite duration arrives', async ({ page }) => {
@@ -346,7 +350,6 @@ test('seek stays disabled until a finite duration arrives', async ({ page }) => 
   await expect(page.locator('#player-seek')).toBeEnabled();
   await page.evaluate(() => { window.__transport.duration = 0; });
   await expect(page.locator('#player-seek')).toBeDisabled();
-  await expect(page.locator('#seek-go')).toBeDisabled();
   await page.evaluate(() => { window.__transport.duration = 360; });
   await expect(page.locator('#player-seek')).toBeEnabled();
   await expect(page.locator('#player-seek')).toHaveAttribute('max', '360');
@@ -355,31 +358,39 @@ test('seek stays disabled until a finite duration arrives', async ({ page }) => 
 test('a finished song plays the next one in the same player; unplayable videos are skipped a few times at most', async ({ page }) => {
   await page.goto('/');
   await page.locator('#transport-play').click();
-  await expect(page.locator('#player-status')).toContainText('ready');
-  const ids = await page.evaluate(() => [...document.querySelectorAll('#track-list button')].map((b) => b.dataset.trackId));
+  await expect(page.locator('#player-status')).toContainText('If nothing plays');
+  const sea = page.locator('#sea');
   const videoOf = (id) => page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).youtubeId, id);
   const event = (name, data) => page.evaluate(([n, d]) => window.__playerOptions.events[n]({ data: d }), [name, data]);
+  // The song the player announces as up next is the one that follows.
+  const upNext = () => page.evaluate(() => {
+    const shown = document.querySelector('#d-next b')?.textContent;
+    return window.SEA_DATA.releases.find((r) => `${r.artist} — ${r.name}` === shown)?.id;
+  });
 
+  let expected = await upNext();
   await event('onStateChange', 1);
   await event('onStateChange', 0);
-  await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[1]);
-  expect(await page.evaluate(() => window.__transport.loads)).toEqual([await videoOf(ids[1])]);
+  await expect(sea).toHaveAttribute('data-selected', expected);
+  expect(await page.evaluate(() => window.__transport.loads)).toEqual([await videoOf(expected)]);
   await expect(page.locator('#youtube-player')).toHaveCount(1);
-  await expect(page.locator('#d-youtube')).toHaveAttribute('href', new RegExp(await videoOf(ids[1])));
+  await expect(page.locator('#d-youtube')).toHaveAttribute('href', new RegExp(await videoOf(expected)));
 
   // Embedding refused: skip ahead after a moment.
+  expected = await upNext();
   await event('onError', 150);
   await expect(page.locator('#player-status')).toContainText('Skipping');
-  await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[2]);
+  await expect(sea).toHaveAttribute('data-selected', expected);
   await event('onStateChange', 1);
 
-  // A blocked YouTube must not spin through the whole list.
+  // A blocked YouTube must not spin through the whole map.
   for (let i = 0; i < 5; i += 1) {
+    expected = await upNext();
     await event('onError', 150);
-    await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[3 + i]);
+    await expect(sea).toHaveAttribute('data-selected', expected);
   }
   await event('onError', 150);
   await expect(page.locator('#player-status')).toContainText('playback stopped');
   await page.waitForTimeout(2000);
-  await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[7]);
+  await expect(sea).toHaveAttribute('data-selected', expected);
 });
