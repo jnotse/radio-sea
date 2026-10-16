@@ -24,7 +24,7 @@ export {
   mergeCatalogue,
 };
 
-export class RadioSea {
+export class RadioSeaDiscovery {
   constructor({ releases, users = [], gems = [], seed = 'radio-sea' } = {}) {
     this.releases = releases;
     this.users = users;
@@ -55,12 +55,12 @@ export class RadioSea {
   /** Build an engine directly from raw adapter output (any mix of sources). */
   static fromRaw(rawReleases, options = {}) {
     const { releases } = mergeCatalogue(rawReleases);
-    return new RadioSea({ releases, ...options });
+    return new RadioSeaDiscovery({ releases, ...options });
   }
 
   // --- map ---------------------------------------------------------------
 
-  /** release.maps[mapId] = {x, y} equivalent. */
+  /** Integer map coordinates for a release. */
   mapPlacement(releaseId) {
     return this.placements.get(releaseId) ?? null;
   }
@@ -101,7 +101,7 @@ export class RadioSea {
     });
   }
 
-  /** The release placed at a map coordinate, if any. */
+  /** Find a release at rounded map coordinates. */
   getReleaseByCoordinates({ x, y }) {
     for (const [id, pos] of this.placements) {
       if (pos.x === Math.round(x) && pos.y === Math.round(y)) return this.state.releaseById(id);
@@ -109,7 +109,7 @@ export class RadioSea {
     return null;
   }
 
-  /** Coordinates as an "x~y" string. */
+  /** Coordinates formatted as "x~y". */
   coordinatesString(releaseId) {
     const pos = this.mapPlacement(releaseId);
     return pos ? `${pos.x}~${pos.y}` : null;
@@ -124,7 +124,7 @@ export class RadioSea {
 
   // --- pickers -----------------------------------------------------------
 
-  /** Nearest releases, most similar first. */
+  /** Rank related releases under the current filters. */
   getRelated({ current_release_id, limit = 10, filter } = {}) {
     return pickers.related(this.state, current_release_id, {
       limit,
@@ -133,7 +133,7 @@ export class RadioSea {
     });
   }
 
-  /** One weighted pick among the nearest releases. */
+  /** Pick one similar release. */
   postSimilar({ current_release_id, filter }, { rand = Math.random, excludeIds = [] } = {}) {
     return pickers.similarPick(this.state, current_release_id, {
       filter,
@@ -143,7 +143,7 @@ export class RadioSea {
     });
   }
 
-  /** One popular pick under the current filters. */
+  /** Pick a popular release under the current filters. */
   getBanger({ filter } = {}, { rand = Math.random, excludeIds = [] } = {}) {
     return pickers.bangerPick(this.state, {
       filter,
@@ -153,7 +153,7 @@ export class RadioSea {
     });
   }
 
-  /** One pick from an artist's, label's or user's pool. */
+  /** Pick from an artist, label or user's catalogue. */
   getEntityRadio({ resource, id, style, country, gem_only }, { rand = Math.random, excludeIds = [] } = {}) {
     return pickers.radioPick(this.state, {
       resource,
@@ -174,7 +174,7 @@ export class RadioSea {
 
   // --- reactions ("conditions") -----------------------------------------
 
-  /** Toggle a reaction vote on a track (ConditionGrid behaviour). */
+  /** Toggle a reaction vote on a track. */
   toggleReaction({ userId, releaseId, trackId, condition }) {
     return this.reactions.toggle({ userId, releaseId, trackId, condition });
   }
@@ -203,7 +203,7 @@ export class RadioSea {
       .map((edge) => {
         const release = this.state.releaseById(edge.toReleaseId);
         const base = this.state.asReleaseTrack(release).release_track;
-        // The suggestion carries the inviter's chosen track.
+        // Preserve the track chosen by the person who added the suggestion.
         return {
           ...edge,
           release_track: {
@@ -220,7 +220,7 @@ export class RadioSea {
 
   // --- community --------------------------------------------------------
 
-  /** Gemmed tracks, most liked first. */
+  /** Saved tracks, most liked first. */
   getCommunityTracks({ order_by = 'MOST_LIKED', limit = 20, offset = 0 } = {}) {
     const likes = new Map();
     for (const gem of this.gems) {

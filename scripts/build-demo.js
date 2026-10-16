@@ -15,7 +15,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fetchRadioPlays, RADIO_STATIONS } from '../src/catalog/radio.js';
 import { resolvePlaysToYoutube } from '../src/catalog/youtube.js';
 import { mergeCatalogue } from '../src/catalog/resolve.js';
-import { RadioSea } from '../src/engine.js';
+import { RadioSeaDiscovery } from '../src/engine.js';
 import { candidateMatch } from '../src/catalog/youtube.js';
 import { extendRadioCache, songKey } from '../src/catalog/extend.js';
 import { lookupGenresForPlays } from '../src/catalog/genres.js';
@@ -171,7 +171,7 @@ async function main() {
   const { releases } = mergeCatalogue(withGenres.map(playToRaw));
   console.log(`  merged into ${releases.length} unique tracks`);
 
-  const engine = new RadioSea({ releases, seed: 'radio-sea' });
+  const engine = new RadioSeaDiscovery({ releases, seed: 'radio-sea' });
 
   // Precompute what the demo needs: neighbours with reasons + trade routes.
   const neighbours = new Map();

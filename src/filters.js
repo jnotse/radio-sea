@@ -1,4 +1,4 @@
-// Filter engine. Supported query fields:
+// Catalogue filters and their query fields:
 //
 //   styles_in / styles_in_or / styles_not_in
 //   country_in / country_not_in      (with Discogs-style country alias expansion)
@@ -10,7 +10,7 @@
 //
 // plus the UI-state -> query builder and active-filter counting.
 
-// Common Discogs-style country aliases, normalised to one name.
+// Common country aliases in catalogue metadata.
 export const COUNTRY_ALIASES = {
   UK: 'United Kingdom',
   'Great Britain': 'United Kingdom',
@@ -97,9 +97,9 @@ export function releaseMatchesFilters(release, filters = {}, reactionRegistry = 
   return true;
 }
 
-// --- UI state -> query (mirrors the client function) -----------------------
+// --- UI state -> query ---------------------------------------------------
 
-// UI state shape (subset of useMapFiltersStore):
+// UI state shape:
 // {
 //   genres, excludedGenres, countries, excludedCountries,
 //   yearRange: [min, max] | null,

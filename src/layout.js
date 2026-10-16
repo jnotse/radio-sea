@@ -1,7 +1,6 @@
 // The "digital sea" layout.
 //
-// Releases that are similar end up near each other on a 2D integer grid, and
-// the result is fully deterministic.
+// Similar releases are placed near each other on a deterministic 2D integer grid.
 //
 // Pipeline:
 //   1. feature vectors per release (styles, era, country, format, key, bpm)

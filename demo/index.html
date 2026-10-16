@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#25262d" />
   <title>Radio Sea — FM Explorer</title>
@@ -16,7 +16,7 @@
       <div class="desktop-meta"><span class="led" aria-hidden="true"></span> LOCAL CATALOGUE <span class="build-tag">v.01</span></div>
     </header>
 
-    <aside id="sidebar" class="window">
+    <aside id="sidebar" class="window" aria-label="Music library" tabindex="-1">
       <div class="window-title"><span>01 / music library</span><span class="title-stripes" aria-hidden="true"></span><span class="window-code">LIB</span></div>
       <div class="panel-content">
         <header class="library-intro"><p class="eyebrow">TUNE IN. WANDER OFF.</p><p class="sub">Radio tracklists, uncharted connections.<br />Pick a track. See where it takes you.</p></header>
@@ -26,7 +26,7 @@
         <section id="stats" class="mini-display"></section>
         <section class="search-section">
           <label for="search">SEARCH FREQUENCIES</label>
-          <input id="search" type="search" placeholder="Artist, track, show…" autocomplete="off" />
+          <input id="search" type="search" placeholder="Artist, track, show…" autocomplete="off" enterkeyhint="search" />
         </section>
         <section><h2>Radio stations <span class="section-code">FM</span></h2><div id="station-chips" class="chips station-list"></div></section>
         <section><h2>Sound filters <span class="section-code">TAG</span></h2><div id="tag-chips" class="chips"></div></section>
@@ -43,15 +43,15 @@
       </div>
     </aside>
 
-    <main id="map-panel" class="window">
+    <main id="map-panel" class="window" aria-label="Radio map" tabindex="-1">
       <div class="window-title"><span>02 / the radio sea</span><span class="title-stripes" aria-hidden="true"></span><span class="window-code">MAP</span></div>
       <div class="console-shell">
         <div class="screen-label"><span><i class="power-dot" aria-hidden="true"></i> POWER</span><span>DOT MATRIX · MUSIC EXPLORER</span><span>2-BIT</span></div>
         <div class="screen-bezel">
           <div id="map-wrap">
-            <canvas id="sea" aria-label="Music map. Drag to pan, scroll or pinch to zoom, click or tap a track to play it. Tracks can also be selected from the list." tabindex="0"></canvas>
+            <canvas id="sea" aria-label="Music map. Drag to pan. Pinch, scroll or use the zoom buttons to zoom. Click or tap a track to play it. Tracks can also be selected from the library." tabindex="0"></canvas>
             <div class="screen-grid" aria-hidden="true"></div>
-            <div id="map-help">WORLD 01 / PRESS A SQUARE TO PLAY</div>
+            <div id="map-help"><span class="desktop-hint">WORLD 01 / CLICK A SQUARE TO PLAY</span><span class="touch-hint">TAP TO PLAY · PINCH TO ZOOM</span></div>
             <div id="map-status" role="status" aria-live="polite"></div>
             <div id="map-controls" aria-label="Map controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
             <div id="tooltip" hidden></div>
@@ -65,7 +65,7 @@
       </div>
     </main>
 
-    <aside id="detail" class="window">
+    <aside id="detail" class="window" aria-label="Music player" tabindex="-1">
       <div class="window-title"><span>03 / sea player</span><span class="title-stripes" aria-hidden="true"></span><span class="window-code">AMP</span></div>
       <div class="panel-content">
         <div id="detail-empty">Select a track on the sea.</div>
@@ -81,7 +81,7 @@
               <input id="player-seek" type="range" min="0" max="0" step="1" value="0" disabled aria-label="Song position" aria-valuetext="Load a track to seek" />
               <form id="seek-form" class="seek-jump">
                 <label for="seek-time">JUMP TO</label>
-                <input id="seek-time" type="text" placeholder="1:23 or 83s" maxlength="12" autocomplete="off" spellcheck="false" disabled aria-label="Jump time" aria-describedby="seek-hint" />
+                <input id="seek-time" type="text" placeholder="1:23 or 83s" maxlength="12" autocomplete="off" enterkeyhint="go" spellcheck="false" disabled aria-label="Jump time" aria-describedby="seek-hint" />
                 <button id="seek-go" type="submit" disabled>GO</button>
               </form>
               <p id="seek-hint">Drag to seek, or enter seconds / mm:ss.</p>
@@ -108,6 +108,9 @@
     </aside>
     <footer class="taskbar"><span><i class="led" aria-hidden="true"></i> EXPLORER READY</span><span>DRAG TO PAN / SCROLL TO ZOOM / CLICK TO PLAY</span><span>GOOD MUSIC. NO DESTINATION.</span></footer>
   </div>
+  <nav class="mobile-nav" aria-label="Explore sections">
+    <a href="#map-panel">02 / Map</a><a href="#sidebar">01 / Library</a><a href="#detail">03 / Player</a>
+  </nav>
   <script src="sea-data.js"></script>
   <script src="app.js"></script>
 </body>

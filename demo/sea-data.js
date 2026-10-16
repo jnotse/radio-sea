@@ -1,5 +1,5 @@
 window.SEA_DATA = {
- "generatedAt": "2026-10-16T19:44:05.785Z",
+ "generatedAt": "2026-10-16T19:52:30.294Z",
  "stats": {
   "stations": [
    {

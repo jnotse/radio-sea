@@ -5,10 +5,12 @@ A map for wandering through music that real people played on independent radio.
 Radio Sea collects the tracklists of shows on stations like NTS and The Lot
 Radio, plus picks from Radiooooo, finds each song on YouTube, and lays
 everything out as a sea of islands. Songs that belong together share an
-island, and dotted routes lead to related songs on other islands. Pick a
-square, press play, and follow wherever it takes you.
+island, and dotted routes lead to related songs on other islands. Press a
+square to play it, and follow wherever it takes you.
 
 It has a little retro skin: a Game Boy–style screen and a Winamp-style player.
+On phones, the Map / Library / Player buttons at the bottom jump between
+sections; drag to pan and pinch to zoom.
 
 **Live site:** https://jnotse.github.io/radio-sea/
 
@@ -41,6 +43,7 @@ on, and the island is named after that show.
 ## Tests
 
 ```sh
-npm test               # unit tests
-npm run test:browser   # browser tests (Playwright)
+npm test                       # unit tests
+npx playwright install webkit  # once, for the phone (Safari engine) tests
+npm run test:browser           # desktop and phone browser tests
 ```

@@ -101,66 +101,6 @@ async function expectPlaying(page, id) {
   await expect.poll(() => page.evaluate(() => window.__transport?.play ?? 0)).toBeGreaterThan(0);
 }
 
-test.describe('touch screens', () => {
-  test.use({ hasTouch: true, viewport: { width: 390, height: 844 } });
-
-  async function touchMap(page) {
-    const canvas = page.locator('#sea');
-    await canvas.scrollIntoViewIfNeeded();
-    const box = await canvas.boundingBox();
-    const cdp = await page.context().newCDPSession(page);
-    const send = (type, points) => cdp.send('Input.dispatchTouchEvent',
-      { type, touchPoints: points.map(([x, y], id) => ({ x, y, id })) });
-    const camera = async () => ({ zoom: Number(await canvas.getAttribute('data-zoom')),
-      x: Number(await canvas.getAttribute('data-camera-x')), y: Number(await canvas.getAttribute('data-camera-y')) });
-    return { canvas, send, camera, cx: box.x + box.width / 2, cy: box.y + box.height / 2 };
-  }
-
-  test('two-finger pinch zooms around the fingers without selecting a tile', async ({ page }) => {
-    await page.goto('/');
-    const { canvas, send, camera, cx, cy } = await touchMap(page);
-    const before = await camera();
-    const selected = await canvas.getAttribute('data-selected');
-    await send('touchStart', [[cx - 30, cy], [cx + 30, cy]]);
-    for (let i = 1; i <= 8; i += 1) await send('touchMove', [[cx - 30 - i * 10, cy], [cx + 30 + i * 10, cy]]);
-    await send('touchEnd', []);
-    const after = await camera();
-    // Fingers moved from 60px to 220px apart around the canvas centre.
-    expect(after.zoom / before.zoom).toBeGreaterThan(3);
-    expect(Math.abs(after.x - before.x)).toBeLessThan(0.5);
-    expect(Math.abs(after.y - before.y)).toBeLessThan(0.5);
-    await expect(canvas).toHaveAttribute('data-selected', selected);
-    await expect(page.locator('#youtube-player')).toHaveCount(0);
-
-    await send('touchStart', [[cx - 80, cy], [cx + 80, cy]]);
-    for (let i = 1; i <= 6; i += 1) await send('touchMove', [[cx - 80 + i * 10, cy], [cx + 80 - i * 10, cy]]);
-    await send('touchEnd', []);
-    expect((await camera()).zoom).toBeLessThan(after.zoom);
-  });
-
-  test('one finger pans the map and a tap plays a tile', async ({ page }) => {
-    await page.goto('/');
-    const { canvas, send, camera, cx, cy } = await touchMap(page);
-    const before = await camera();
-    await send('touchStart', [[cx, cy]]);
-    for (let i = 1; i <= 8; i += 1) await send('touchMove', [[cx + i * 10, cy]]);
-    await send('touchEnd', []);
-    const after = await camera();
-    expect(after.zoom).toBe(before.zoom);
-    expect(after.x).toBeCloseTo(before.x - 80 / before.zoom, 1);
-
-    await page.locator('#btn-home').click();
-    await canvas.scrollIntoViewIfNeeded();
-    const id = await page.evaluate(() => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id);
-    const p = await screenPoint(page, id);
-    // A fingertip lands near, not exactly on, a 6px square.
-    await send('touchStart', [[p.x + 9, p.y]]);
-    await send('touchEnd', []);
-    await expect(canvas).toHaveAttribute('data-selected', id);
-    await expectPlaying(page, id);
-  });
-});
-
 test('player uses a real video ID, supplies origin/referrer and exposes a working fallback', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('#d-player iframe')).toHaveCount(0);
@@ -182,6 +122,109 @@ test('responsive layout keeps the map and detail accessible on phones', async ({
   expect(map.width).toBeGreaterThan(300); expect(map.height).toBeGreaterThan(300);
   await page.locator('#detail').scrollIntoViewIfNeeded();
   await expect(page.locator('#d-title')).toBeVisible();
+});
+
+test.describe('touch-screen layout and controls', () => {
+  test.use({ isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+
+  for (const size of [{ width: 320, height: 568 }, { width: 390, height: 844 },
+    { width: 412, height: 915 }, { width: 768, height: 1024 }, { width: 932, height: 430 }]) {
+    test(`fits ${size.width}×${size.height} without clipped content or small controls`, async ({ page }) => {
+      await page.setViewportSize(size); await page.goto('/');
+      await expect(page.getByRole('navigation', { name: 'Explore sections' })).toBeVisible();
+      expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(size.width);
+      for (const selector of ['#map-panel', '#detail', '#sidebar', '.mobile-nav']) {
+        const box = await page.locator(selector).boundingBox();
+        expect(box.x).toBeGreaterThanOrEqual(0);
+        expect(box.x + box.width).toBeLessThanOrEqual(size.width);
+      }
+      const map = await page.locator('#sea').boundingBox();
+      expect(map.width).toBeGreaterThan(230); expect(map.height).toBeGreaterThan(145);
+      for (const selector of ['#zoom-in', '#zoom-out', '#transport-play', '#player-seek', '#player-volume', '#seek-time', '#seek-go',
+        '#search', '#btn-banger', '#track-list li:first-child button', '#station-chips button:first-child', '#tag-chips button:first-child']) {
+        const box = await page.locator(selector).boundingBox();
+        expect(box.height, selector).toBeGreaterThanOrEqual(44);
+      }
+      for (const selector of ['#search', '#seek-time']) {
+        expect(await page.locator(selector).evaluate((el) => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(16);
+      }
+      const nav = await page.locator('.mobile-nav').boundingBox();
+      expect(nav.y + nav.height).toBeCloseTo(size.height, 0);
+    });
+  }
+
+  test('section shortcuts, search, playback and native touch seeking work on a phone', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/');
+    const nav = page.getByRole('navigation', { name: 'Explore sections' });
+    await nav.getByRole('link', { name: '01 / Library' }).tap();
+    await expect.poll(() => page.locator('#sidebar').evaluate((el) => Math.round(el.getBoundingClientRect().top))).toBe(8);
+    const track = await page.evaluate(() => window.SEA_DATA.releases.at(-1));
+    await page.locator('#search').fill(track.artist);
+    await page.locator(`#track-list button[data-track-id="${track.id}"]`).tap();
+    await expect(page.locator('#d-title')).toHaveText(track.name);
+    await nav.getByRole('link', { name: '03 / Player' }).tap();
+    await expect.poll(() => page.locator('#detail').evaluate((el) => Math.round(el.getBoundingClientRect().top))).toBe(8);
+    await page.locator('#transport-play').tap();
+    await expect(page.locator('#player-seek')).toBeEnabled();
+    await page.locator('#transport-pause').tap();
+    const slider = page.locator('#player-seek'), box = await slider.boundingBox();
+    await slider.tap({ position: { x: box.width * .6, y: box.height / 2 } });
+    await expect.poll(() => page.evaluate(() => window.__transport.seeks.length)).toBeGreaterThan(0);
+    const seconds = await page.evaluate(() => window.__transport.seeks.at(-1).seconds);
+    expect(Math.abs(seconds - 144)).toBeLessThan(10);
+    await expect(page.locator('#deck-state')).toHaveText('PAUSE');
+    await page.locator('#seek-time').fill('1:23'); await page.locator('#seek-go').tap();
+    await expect(page.locator('#player-seek')).toHaveValue('83');
+    await nav.getByRole('link', { name: '02 / Map' }).tap();
+    await expect(page.locator('#sea')).toBeInViewport();
+    const zoom = Number(await page.locator('#sea').getAttribute('data-zoom'));
+    await page.locator('#zoom-in').tap();
+    await expect.poll(async () => Number(await page.locator('#sea').getAttribute('data-zoom'))).toBeGreaterThan(zoom);
+    await page.setViewportSize({ width: 844, height: 390 });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(844);
+    await expect(nav).toBeInViewport();
+    await expect(page.locator('#player-seek')).toHaveValue('83');
+  });
+
+  test('real multi-touch pinch and drag do not select tracks, and cancelled gestures recover', async ({ page, context }) => {
+    await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/');
+    const canvas = page.locator('#sea'), box = await canvas.boundingBox();
+    const selected = await canvas.getAttribute('data-selected');
+    const zoom = Number(await canvas.getAttribute('data-zoom'));
+    const x = Math.round(box.x + box.width / 2), y = Math.round(box.y + box.height / 2);
+    const cdp = await context.newCDPSession(page);
+    const touch = (id, x, y) => ({ id, x, y, radiusX: 5, radiusY: 5, force: 1 });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [touch(1, x - 35, y), touch(2, x + 35, y)] });
+    for (const distance of [45, 55, 65, 70]) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [touch(1, x - distance, y), touch(2, x + distance, y)] });
+    }
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await expect.poll(async () => Number(await canvas.getAttribute('data-zoom'))).toBeGreaterThan(zoom * 1.8);
+    expect(Number(await canvas.getAttribute('data-zoom'))).toBeLessThan(zoom * 2.2);
+    await expect(canvas).toHaveAttribute('data-selected', selected);
+    await expect(page.locator('#youtube-player')).toHaveCount(0);
+    const cameraX = Number(await canvas.getAttribute('data-camera-x'));
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [touch(1, x, y)] });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [touch(1, x + 40, y + 24)] });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchCancel', touchPoints: [] });
+    await expect.poll(async () => Number(await canvas.getAttribute('data-camera-x'))).not.toBe(cameraX);
+    await expect(canvas).toHaveAttribute('data-selected', selected);
+    await expect(canvas).not.toHaveClass(/dragging/);
+    await page.locator('.mobile-nav a[href="#sidebar"]').tap();
+    await page.locator('#btn-home').tap();
+    await page.locator('.mobile-nav a[href="#map-panel"]').tap();
+    const id = await page.evaluate(() => {
+      const c = document.querySelector('#sea'), zoom = Number(c.dataset.zoom);
+      return window.SEA_DATA.releases.find((r) => r.id !== c.dataset.selected &&
+        Math.abs((r.x - Number(c.dataset.cameraX)) * zoom) < c.clientWidth / 2 - 45 &&
+        Math.abs((r.y - Number(c.dataset.cameraY)) * zoom) < c.clientHeight / 2 - 90).id;
+    });
+    const point = await screenPoint(page, id);
+    await page.touchscreen.tap(point.x, point.y);
+    await expect(canvas).toHaveAttribute('data-selected', id);
+    await expectPlaying(page, id);
+    await cdp.detach();
+  });
 });
 
 test('opening the HTML as a file explains the localhost requirement', async ({ page }) => {
@@ -268,6 +311,19 @@ test('jump accepts seconds or mm:ss, clamps to duration and preserves pause', as
   await page.locator('#seek-time').fill('1:90'); await page.locator('#seek-go').click();
   await expect(page.locator('#seek-message')).toBeVisible();
   expect(await page.evaluate(() => window.__transport.seeks.length)).toBe(count);
+});
+
+test('touch range release commits without change and does not seek twice if change follows', async ({ page }) => {
+  await page.goto('/'); await page.locator('#transport-play').click();
+  const slider = page.locator('#player-seek'); await expect(slider).toBeEnabled();
+  await slider.evaluate((el) => {
+    el.dispatchEvent(new PointerEvent('pointerdown', { pointerType: 'touch', bubbles: true }));
+    el.value = '83'; el.dispatchEvent(new Event('input', { bubbles: true }));
+    el.dispatchEvent(new PointerEvent('pointerup', { pointerType: 'touch', bubbles: true }));
+  });
+  expect(await page.evaluate(() => window.__transport.seeks)).toEqual([{ seconds: 83, allowAhead: true }]);
+  await slider.evaluate((el) => el.dispatchEvent(new Event('change', { bubbles: true })));
+  expect(await page.evaluate(() => window.__transport.seeks.length)).toBe(1);
 });
 
 test('seek supports one-second keyboard steps and resets when switching tracks', async ({ page }) => {

@@ -1,4 +1,4 @@
-// Shuffle mechanics:
+// Shuffle with recent-track exclusion:
 //
 //   - if the loaded pool already covers the whole playlist, draw from the pool,
 //     excluding recently played tracks;

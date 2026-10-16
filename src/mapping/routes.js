@@ -1,9 +1,6 @@
 // Trade routes: automatic "from here sail there" edges across islands.
 //
-// Navigation suggestions are written by humans. Here we also generate
-// candidate routes mechanically: for each release, the most similar
-// release that lives on a DIFFERENT island. Crossing water to a related sound
-// is exactly the serendipity the sea is for.
+// For each release, connect the most similar releases on different islands.
 
 export function tradeRoutes(releases, similarity, { islands = [], minScore = 0.3, perRelease = 1 } = {}) {
   const islandOf = new Map();

@@ -1,12 +1,12 @@
-// Demo: prints the sea, then runs a sample play path.
+// Demo: prints the sea, then runs a play path the way the site does it.
 // Run with: npm run demo
 
-import { RadioSea, buildMusicMapFilterQuery, EMPTY_FILTER_STATE } from './src/engine.js';
+import { RadioSeaDiscovery, buildMusicMapFilterQuery, EMPTY_FILTER_STATE } from './src/engine.js';
 import { buildFixture } from './src/fixture.js';
 import { seededRand } from './src/rng.js';
 
 const { releases, users, gems } = buildFixture();
-const engine = new RadioSea({ releases, users, gems, seed: 'demo' });
+const engine = new RadioSeaDiscovery({ releases, users, gems, seed: 'demo' });
 
 // --- 1. the sea -----------------------------------------------------------
 
@@ -45,7 +45,7 @@ for (const [id, depth] of deepest) {
 
 const rand = seededRand('demo-play');
 
-// UI filter state -> filter query
+// UI filter state -> the exact query the site would send
 const filter = buildMusicMapFilterQuery({
   ...EMPTY_FILTER_STATE,
   genres: ['disco'],

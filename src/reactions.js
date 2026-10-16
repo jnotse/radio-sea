@@ -1,4 +1,4 @@
-// Reaction system ("conditions"): users vote animated tags per
+// Reaction system: users vote for tags per
 // track. Play-path picks carry `top_conditions`, and the map's "landscapes"
 // filter queries condition_in / condition_in_or.
 
@@ -25,7 +25,7 @@ export class ReactionRegistry {
     return bucket;
   }
 
-  // Toggle semantics: voting the same condition again removes the vote.
+  // Clicking again removes the user's vote.
   toggle({ userId, releaseId, trackId = null, condition }) {
     const map = trackId == null ? this.releaseVotes : this.trackVotes;
     const key = trackId == null ? String(releaseId) : ReactionRegistry.key(releaseId, trackId);
