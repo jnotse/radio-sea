@@ -220,7 +220,8 @@
   document.fonts?.ready.then(draw);
   function tileAt(event) {
     const rect = canvas.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
-    let best = null, distance = Math.max(7, Math.min(11, state.cam.zoom * .5));
+    // Fingertips are imprecise, so touch reaches further; the nearest square still wins.
+    let best = null, distance = event.pointerType === 'touch' ? 20 : Math.max(7, Math.min(11, state.cam.zoom * .5));
     for (const r of pool()) {
       const p = toScreen(r.x, r.y), d = Math.hypot(p.x - x, p.y - y);
       if (d < distance) { best = r; distance = d; }
@@ -285,7 +286,7 @@
   canvas.addEventListener('pointerup', (e) => {
     if (!releasePointer(e) || pointers.size) return;
     const click = !pointer.moved; pointer = null;
-    if (click) { const r = tileAt(e); if (r) select(r.id, true); }
+    if (click) { const r = tileAt(e); if (r) { select(r.id, true); startSelected(); } }
   });
   for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, (e) => {
     if (releasePointer(e) && !pointers.size) pointer = null;

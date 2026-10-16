@@ -68,7 +68,7 @@ async function screenPoint(page, id) {
   }, id);
 }
 
-test('wheel zoom is continuous, drag does not select, hover works after drag, tile clicks select', async ({ page }) => {
+test('wheel zoom is continuous, drag does not select, hover works after drag, tile clicks play', async ({ page }) => {
   await page.goto('/');
   const canvas = page.locator('#sea');
   const initial = Number(await canvas.getAttribute('data-zoom'));
@@ -83,6 +83,7 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
   await page.mouse.move(rect.x + rect.width / 2 + 60, rect.y + rect.height / 2 + 30, { steps: 8 });
   await page.mouse.up();
   await expect(canvas).toHaveAttribute('data-selected', selected);
+  await expect(page.locator('#youtube-player')).toHaveCount(0);
   await page.locator('#btn-home').click();
   const id = await page.evaluate(() => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id);
   const p = await screenPoint(page, id);
@@ -90,7 +91,15 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
   await expect(page.locator('#tooltip')).toBeVisible();
   await page.mouse.click(p.x, p.y);
   await expect(canvas).toHaveAttribute('data-selected', id);
+  await expectPlaying(page, id);
 });
+
+// Clicking a square on the map plays it, not just selects it.
+async function expectPlaying(page, id) {
+  const videoId = await page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).youtubeId, id);
+  await expect(page.locator('#youtube-player')).toHaveAttribute('src', new RegExp(`embed/${videoId}\\?`));
+  await expect.poll(() => page.evaluate(() => window.__transport?.play ?? 0)).toBeGreaterThan(0);
+}
 
 test.describe('touch screens', () => {
   test.use({ hasTouch: true, viewport: { width: 390, height: 844 } });
@@ -121,6 +130,7 @@ test.describe('touch screens', () => {
     expect(Math.abs(after.x - before.x)).toBeLessThan(0.5);
     expect(Math.abs(after.y - before.y)).toBeLessThan(0.5);
     await expect(canvas).toHaveAttribute('data-selected', selected);
+    await expect(page.locator('#youtube-player')).toHaveCount(0);
 
     await send('touchStart', [[cx - 80, cy], [cx + 80, cy]]);
     for (let i = 1; i <= 6; i += 1) await send('touchMove', [[cx - 80 + i * 10, cy], [cx + 80 - i * 10, cy]]);
@@ -128,7 +138,7 @@ test.describe('touch screens', () => {
     expect((await camera()).zoom).toBeLessThan(after.zoom);
   });
 
-  test('one finger pans the map and a tap selects a tile', async ({ page }) => {
+  test('one finger pans the map and a tap plays a tile', async ({ page }) => {
     await page.goto('/');
     const { canvas, send, camera, cx, cy } = await touchMap(page);
     const before = await camera();
@@ -143,9 +153,11 @@ test.describe('touch screens', () => {
     await canvas.scrollIntoViewIfNeeded();
     const id = await page.evaluate(() => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id);
     const p = await screenPoint(page, id);
-    await send('touchStart', [[p.x, p.y]]);
+    // A fingertip lands near, not exactly on, a 6px square.
+    await send('touchStart', [[p.x + 9, p.y]]);
     await send('touchEnd', []);
     await expect(canvas).toHaveAttribute('data-selected', id);
+    await expectPlaying(page, id);
   });
 });
 
