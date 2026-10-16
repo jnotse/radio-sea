@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { candidateMatch, extractSearchResults, resolvePlayToYoutube,
-  resolvePlaysToYoutube, validateYoutubeUrl, youtubeIdFromUrl } from '../src/catalog/youtube.js';
+  resolvePlaysToYoutube, validateYoutubeUrl, youtubeIdFromUrl, YoutubeUnavailable } from '../src/catalog/youtube.js';
 
 const play = { artist: 'Uranium Club', title: "God's Chest", ids: { isrc: 'GBHLW1603489' } };
 const correct = { videoId: 'VxuNvoiel2g', title: "God's Chest", channel: 'Uranium Club - Topic' };
@@ -75,15 +75,19 @@ test('oEmbed metadata disagreement is not admitted even if the search title matc
 });
 
 test('404, throttle and network failures never get labelled verified', async () => {
-  for (const status of [404, 429, 503]) {
-    const r = await resolvePlayToYoutube(play, { fetchImpl: mockFetch({ status }), delayMs: 0 });
-    assert.equal(r, null);
+  assert.equal(await resolvePlayToYoutube(play, { fetchImpl: mockFetch({ status: 404 }), delayMs: 0 }), null);
+  // Throttling and outages are not "no video": they fail loudly so the song is retried later.
+  for (const status of [429, 503]) {
+    await assert.rejects(resolvePlayToYoutube(play, { fetchImpl: mockFetch({ status }), delayMs: 0 }), YoutubeUnavailable);
   }
-  const fetchImpl = async (url) => {
+  const offline = async (url) => {
     if (url.includes('/results')) return response(200, html([correct]));
     throw new Error('offline');
   };
-  assert.equal(await resolvePlayToYoutube(play, { fetchImpl, delayMs: 0 }), null);
+  await assert.rejects(resolvePlayToYoutube(play, { fetchImpl: offline, delayMs: 0 }), YoutubeUnavailable);
+  // Too many searches: YouTube redirects to Google's "unusual traffic" page.
+  const limited = async () => ({ ...response(200, '<html>unusual traffic</html>'), url: 'https://www.google.com/sorry/index?continue=x' });
+  await assert.rejects(resolvePlayToYoutube(play, { fetchImpl: limited, delayMs: 0 }), /limiting requests/);
 });
 
 test('batch counts exclusions instead of substituting unrelated videos', async () => {

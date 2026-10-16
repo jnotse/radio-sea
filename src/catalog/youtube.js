@@ -76,10 +76,21 @@ export function candidateMatch(play, candidate) {
     acceptable: title >= 0.8 && artist >= 0.5 && !differentNumbers && !extraVersion };
 }
 
+/**
+ * YouTube did not answer, or is limiting requests: after too many searches it
+ * redirects to a Google "unusual traffic" check. Temporary, so a song that
+ * hits this must be retried later, never recorded as having no video.
+ */
+export class YoutubeUnavailable extends Error {}
+
 async function request(url, { fetchImpl, retries = 2, delayMs = 900, headers } = {}) {
-  for (let i = 0; i <= retries; i++) {
-    const res = await fetchImpl(url, { headers, signal: AbortSignal.timeout(20000) });
-    if (![429, 503].includes(res.status) || i === retries) return res;
+  for (let i = 0; ; i++) {
+    let res;
+    try { res = await fetchImpl(url, { headers, signal: AbortSignal.timeout(20000) }); }
+    catch (error) { throw new YoutubeUnavailable(`YouTube did not answer (${error.message})`); }
+    const limited = res.status === 429 || /\/\/(www\.)?google\.[a-z.]+\/sorry/.test(res.url ?? '');
+    if (!limited && res.status !== 503) return res;
+    if (i === retries) throw new YoutubeUnavailable(limited ? 'YouTube is limiting requests from this address' : `YouTube answered ${res.status}`);
     await sleep(delayMs * (i + 1));
   }
 }
@@ -93,6 +104,7 @@ export async function searchYoutube(query, { fetchImpl = fetch, retries = 2, del
 }
 
 export async function validateYoutubeUrl(url, { fetchImpl = fetch } = {}) {
+  // Unreachable or limited counts as unavailable here: validation fails closed.
   if (!youtubeIdFromUrl(url)) return false;
   try {
     const res = await request(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`, { fetchImpl });
@@ -106,7 +118,8 @@ export async function resolvePlayToYoutube(play, { fetchImpl = fetch, delayMs = 
   for (const query of queries) {
     if (delayMs > 0) await sleep(delayMs);
     let candidates;
-    try { candidates = await searchYoutube(query, { fetchImpl, delayMs }); } catch { continue; }
+    try { candidates = await searchYoutube(query, { fetchImpl, delayMs }); }
+    catch (error) { if (error instanceof YoutubeUnavailable) throw error; continue; }
     // Search context cannot substitute for matching metadata (ISRC queries can
     // return completely unrelated popular videos when the recording is absent).
     const ranked = candidates.map((c) => ({ ...c, match: candidateMatch(play, c) }))
@@ -116,7 +129,7 @@ export async function resolvePlayToYoutube(play, { fetchImpl = fetch, delayMs = 
       seen.add(candidate.videoId);
       try {
         const res = await request(`https://www.youtube.com/oembed?url=${encodeURIComponent(candidate.url)}&format=json`, { fetchImpl, delayMs });
-        if (!res.ok) continue; // Network/throttle failures are NOT verified.
+        if (!res.ok) continue; // Not found or not embeddable: NOT verified.
         const meta = await res.json();
         const verified = { ...candidate, title: meta.title, channel: meta.author_name };
         const match = candidateMatch(play, verified);
@@ -124,7 +137,10 @@ export async function resolvePlayToYoutube(play, { fetchImpl = fetch, delayMs = 
         return { videoId: candidate.videoId, url: candidate.url, title: meta.title,
           channel: meta.author_name, query, matchScore: match.score,
           confirmed: true, checkedAt: new Date().toISOString() };
-      } catch { /* fail closed: retry on the next scan, never invent availability */ }
+      } catch (error) {
+        // Fail closed: never invent availability. An unreachable YouTube is retried later.
+        if (error instanceof YoutubeUnavailable) throw error;
+      }
     }
   }
   return null;

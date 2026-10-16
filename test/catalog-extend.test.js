@@ -41,14 +41,30 @@ test('extension appends verified songs, keeps existing songs and leaves the inpu
   assert.deepEqual(newRadioCandidates(expanded), [], 'next run does not repeat failed lookups');
 });
 
-test('an unrelated video or network failure is never added during extension', async () => {
+test('an unrelated video is excluded, and a failed lookup is never counted as one', async () => {
   const a = play('Song A'), b = play('Song B');
+  const waits = [];
   const result = await extendRadioCache({ plays: [a, b], resolved: [] }, {
     resolvePlay: async (p) => {
-      if (p.title === b.title) throw new Error('offline');
+      if (p.title === b.title) throw new Error('YouTube is limiting requests from this address');
       return { ...match(p), title: 'A monitor review', channel: 'Tech reviews' };
     },
+    backoffs: [10, 20], pause: async (ms) => { waits.push(ms); },
   });
   assert.equal(result.added, 0); assert.equal(result.cache.resolved.length, 0);
-  assert.equal(result.cache.dropped, 2);
+  assert.equal(result.cache.dropped, 1, 'only the unrelated video counts as excluded');
+  assert.deepEqual(waits, [10, 20], 'backs off before giving up');
+  assert.match(result.stopped.message, /limiting/);
+  assert.deepEqual(newRadioCandidates(result.cache), [b], 'the failed song is retried on the next run');
+});
+
+test('after backing off, a lookup that succeeds carries on with the scan', async () => {
+  const a = play('Song A'), b = play('Song B');
+  let failures = 1;
+  const result = await extendRadioCache({ plays: [a, b], resolved: [] }, {
+    resolvePlay: async (p) => { if (failures-- > 0) throw new Error('offline'); return match(p); },
+    backoffs: [0], pause: async () => {},
+  });
+  assert.equal(result.stopped, null);
+  assert.equal(result.added, 2);
 });

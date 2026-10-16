@@ -1,5 +1,7 @@
 import { resolvePlayToYoutube, candidateMatch } from './youtube.js';
 
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 // Keep recording/version text intact. This is a fetch-cache key, not fuzzy
 // entity resolution (two remixes must not share a YouTube lookup).
 export function songKey(play) {
@@ -33,16 +35,31 @@ export function newRadioCandidates(cache, limit = 160, stations = null) {
 }
 
 /** Incremental scan: preserve accepted tracks and checkpoint completed work.
- * Negative lookups are remembered so subsequent extensions make progress. */
+ * Negative lookups are remembered so subsequent extensions make progress.
+ * A lookup that fails (YouTube unreachable or limiting requests) is not a
+ * negative: the scan backs off and retries, and if YouTube keeps refusing it
+ * stops, leaving that song for the next run. */
 export async function extendRadioCache(cache, { limit = 160, resolvePlay = resolvePlayToYoutube,
-  delayMs = 1100, stations = null, onProgress = () => {}, checkpoint = async () => {} } = {}) {
+  delayMs = 1100, stations = null, onProgress = () => {}, checkpoint = async () => {},
+  backoffs = [120000, 240000, 480000], pause = wait, onBackoff = () => {} } = {}) {
   const result = { ...cache, resolved: [...(cache.resolved ?? [])], dropped: cache.dropped ?? 0 };
   const attempted = new Set([...(cache.attemptedKeys ?? []), ...result.resolved.map(songKey)]);
   const candidates = newRadioCandidates(cache, limit, stations);
-  let added = 0;
+  let added = 0, backoff = 0;
   for (const [index, play] of candidates.entries()) {
     let youtube = null;
-    try { youtube = await resolvePlay(play, { delayMs }); } catch { /* retry next run if desired */ }
+    for (;;) {
+      try { youtube = await resolvePlay(play, { delayMs }); break; } catch (error) {
+        if (backoff === backoffs.length) {
+          result.attemptedKeys = [...attempted];
+          await checkpoint(result);
+          return { cache: result, added, attempted: index, stopped: error };
+        }
+        onBackoff({ error, waitMs: backoffs[backoff], play });
+        await pause(backoffs[backoff]);
+        backoff += 1;
+      }
+    }
     attempted.add(songKey(play));
     if (youtube?.confirmed === true && candidateMatch(play, youtube).acceptable) {
       result.resolved.push({ ...play, youtube }); added++;
@@ -53,5 +70,5 @@ export async function extendRadioCache(cache, { limit = 160, resolvePlay = resol
   }
   result.attemptedKeys = [...attempted];
   await checkpoint(result);
-  return { cache: result, added, attempted: candidates.length };
+  return { cache: result, added, attempted: candidates.length, stopped: null };
 }

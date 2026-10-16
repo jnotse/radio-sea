@@ -6,6 +6,7 @@
 //   node scripts/build-demo.js --genres   # look up per-track genres (MusicBrainz)
 //   node scripts/discogs-import.js <dump>  # genres, styles and years from a Discogs dump
 //   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
+//   add --delay 8 to wait 8 s between YouTube lookups where YouTube limits searches
 //
 // Network required, except with --reuse. Everything is cached in demo/sea-data.js
 // afterwards, so the demo itself runs offline.
@@ -44,6 +45,8 @@ const argValue = (name, fallback) => {
 };
 const maxTracks = argValue('max', 40);
 const maxEpisodes = argValue('episodes', 4);
+// Seconds between YouTube lookups; raise it where YouTube limits searches.
+const delayMs = argValue('delay', 1.1) * 1000;
 
 // A track's own genres (looked up per recording) and per-track tags such as
 // Radiooooo's mood and decade are sound tags. The genres a station lists for a
@@ -117,6 +120,8 @@ async function main() {
       const result = await extendRadioCache(cached, {
         limit: argValue('max', 160),
         stations: args.includes('--radiooooo') ? ['radiooooo'] : null,
+        delayMs,
+        onBackoff: ({ waitMs, error }) => console.log(`  YouTube refused (${error.message}); waiting ${waitMs / 60000} min before retrying…`),
         checkpoint: async (cache) => {
           await writeFile(`${cacheFile}.next`, JSON.stringify(cache, null, 1));
           await rename(`${cacheFile}.next`, cacheFile);
@@ -127,11 +132,12 @@ async function main() {
       resolved = result.cache.resolved;
       dropped = result.cache.dropped;
       console.log(`Added ${result.added} verified matches from ${result.attempted} new lookups; kept existing tracks.`);
+      if (result.stopped) console.log(`Stopped early: ${result.stopped.message}. The remaining songs will be tried on the next run.`);
     }
     if (args.includes('--repair')) {
       const sample = [...resolved, ...interleavePlays(plays, maxTracks)].filter((p, i, all) =>
         all.findIndex((other) => other.station === p.station && other.artist === p.artist && other.title === p.title) === i);
-      const result = await resolvePlaysToYoutube(sample, { delayMs: 1100, onProgress: ({ index, total, play, youtube }) =>
+      const result = await resolvePlaysToYoutube(sample, { delayMs, onProgress: ({ index, total, play, youtube }) =>
         console.log(`  ${index}/${total} ${youtube ? 'matched' : 'excluded'}: ${play.artist} — ${play.title}`) });
       resolved = result.resolved;
       dropped = result.dropped;
@@ -151,7 +157,7 @@ async function main() {
     // Round-robin across stations so one station's block does not eat the quota.
     const mixed = interleavePlays(plays, maxTracks);
 
-    ({ resolved, dropped } = await resolvePlaysToYoutube(mixed, { delayMs: 1100 }));
+    ({ resolved, dropped } = await resolvePlaysToYoutube(mixed, { delayMs }));
     console.log(`  resolved ${resolved.length}, dropped ${dropped} (no valid YouTube link)`);
     await writeFile(cacheFile, JSON.stringify({ plays, resolved, dropped }, null, 1));
     console.log(`  cached to ${cacheFile}`);
