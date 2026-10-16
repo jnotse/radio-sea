@@ -10765,9 +10765,2308 @@
     "confirmed": true,
     "checkedAt": "2026-10-16T19:10:42.965Z"
    }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "XTEREA",
+   "title": "Track 4",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "qik34nMjbSE",
+    "url": "https://www.youtube.com/watch?v=qik34nMjbSE",
+    "title": "Xterea - Track 4",
+    "channel": "Xterea",
+    "query": "XTEREA Track 4",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:40:13.807Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "date": "2026-10-13T05:00:00+01:00",
+   "artist": "JOHN ROBERTS",
+   "title": "Hair",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
+   "showGenres": [
+    "Post Rock",
+    "Dub Techno",
+    "Minimal Synth",
+    "Ambient"
+   ],
+   "youtube": {
+    "videoId": "SC2Y0xMGvIw",
+    "url": "https://www.youtube.com/watch?v=SC2Y0xMGvIw",
+    "title": "The Ultimate Fine Hair Fix: The Volume Bob 🥰🥰",
+    "channel": "Hairstyles With John ",
+    "query": "JOHN ROBERTS Hair",
+    "matchScore": 0.85,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:40:22.809Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "NTS Guide to: Classical Works in Murakami Novels",
+   "date": "2026-10-13T07:00:00+01:00",
+   "artist": "Rossini’s",
+   "title": "La Gazza Ladra",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
+   "showGenres": [
+    "Classical",
+    "The Healing Place",
+    "AUDIO RESEARCH"
+   ],
+   "youtube": {
+    "videoId": "KYfaKAIf-SU",
+    "url": "https://www.youtube.com/watch?v=KYfaKAIf-SU",
+    "title": "Rossini: Ouverture \"La Gazza Ladra\" / Videnoff - Mannheimer Philharmoniker",
+    "channel": "Mannheimer Philharmoniker",
+    "query": "Rossini’s La Gazza Ladra",
+    "matchScore": 0.85,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:40:49.661Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "The Cleaners From Venus",
+   "title": "Tukani (Monday Is Grey)",
+   "ids": {
+    "isrc": "US8YA1200124",
+    "deezer": 67328736,
+    "musicbrainz": "a987d75a-d6d4-491a-ac50-7d0bb916a286"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "gzrntTCioro",
+    "url": "https://www.youtube.com/watch?v=gzrntTCioro",
+    "title": "Cleaners From Venus - Tukani (Monday Is Grey)",
+    "channel": "Dapper Dan",
+    "query": "The Cleaners From Venus Tukani (Monday Is Grey)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:40:58.629Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Ron Carroll",
+   "title": "A New Day (H&F Dubhouse Mix)",
+   "ids": {
+    "isrc": "CAU110308812",
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "VDUHBpOTlrw",
+    "url": "https://www.youtube.com/watch?v=VDUHBpOTlrw",
+    "title": "Ron Carroll - A New Day (H & F Dubhouse Mix) 1993 AF-RYTH-MIX SOUNDS",
+    "channel": "sprado1",
+    "query": "Ron Carroll A New Day (H&F Dubhouse Mix)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:41:07.646Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "Don Julian And The Meadowlarks",
+   "title": "Heaven And Paradise",
+   "ids": {
+    "isrc": "USBT21610969",
+    "deezer": 133562892,
+    "musicbrainz": "a450956b-b92b-4099-a21b-adb715ef08c4"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "13W3OrMeqk4",
+    "url": "https://www.youtube.com/watch?v=13W3OrMeqk4",
+    "title": "DON JULIAN & THE MEADOWLARKS-  HEAVEN & PARADISE",
+    "channel": "Leon Martinez",
+    "query": "Don Julian And The Meadowlarks Heaven And Paradise",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:41:25.816Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Trevor Dandy",
+   "title": "Don't Cry Little Tree",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "P678vq-d8Jk",
+    "url": "https://www.youtube.com/watch?v=P678vq-d8Jk",
+    "title": "𝓣𝓻𝓮𝓿𝓸𝓻 𝓓𝓪𝓷𝓭𝔂 - 𝓓𝓸𝓷'𝓽 𝓒𝓻𝔂 𝓛𝓲𝓽𝓽𝓵𝓮 𝓣𝓻𝓮𝓮",
+    "channel": "𝗣𝗮𝗹𝘂𝗺𝗯𝗼 𝗛. 𝗗𝗶𝗮𝗯𝗹𝗼⚡",
+    "query": "Trevor Dandy Don't Cry Little Tree",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:41:34.899Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "DJ Shafi",
+   "title": "Beat Bakola",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "fyZ1ExrmMuc",
+    "url": "https://www.youtube.com/watch?v=fyZ1ExrmMuc",
+    "title": "fast beat bakola by dj shafi official audio",
+    "channel": "Dj SHAFI ",
+    "query": "DJ Shafi Beat Bakola",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:41:52.948Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "date": "2026-10-13T05:00:00+01:00",
+   "artist": "Aleksi Perälä",
+   "title": "UK74R1517130",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
+   "showGenres": [
+    "Post Rock",
+    "Dub Techno",
+    "Minimal Synth",
+    "Ambient"
+   ],
+   "youtube": {
+    "videoId": "DPWSuqeAnhs",
+    "url": "https://www.youtube.com/watch?v=DPWSuqeAnhs",
+    "title": "Aleksi Perälä - Level 15 - UK74R1517130",
+    "channel": "colundi everyOne",
+    "query": "Aleksi Perälä UK74R1517130",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:02.224Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
+   "date": "2026-10-13T06:00:00+01:00",
+   "artist": "David Cordero",
+   "title": "Zumaia",
+   "ids": {
+    "isrc": "DEG932405899",
+    "deezer": 3087783751,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
+   "showGenres": [
+    "Electronica",
+    "Ambient"
+   ],
+   "youtube": {
+    "videoId": "ZGm3PY8U6LQ",
+    "url": "https://www.youtube.com/watch?v=ZGm3PY8U6LQ",
+    "title": "David Cordero - Zumaia",
+    "channel": "Lost Tapes Soundtracks",
+    "query": "David Cordero Zumaia",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:11.148Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Jim Stafford",
+   "title": "The Last Chant",
+   "ids": {
+    "isrc": "USMR10300093",
+    "deezer": 62071398,
+    "musicbrainz": "761d553e-5bb4-4e1c-b5c5-65bf380f8528"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "QUC-N3JvQQk",
+    "url": "https://www.youtube.com/watch?v=QUC-N3JvQQk",
+    "title": "Jim Stafford - The Last Chant - 45 RPM",
+    "channel": "MusicLuvr76",
+    "query": "Jim Stafford The Last Chant",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:20.381Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Waterlillies, Spooky",
+   "title": "Tempted (Apple Crumble)",
+   "ids": {
+    "isrc": "USRE10601876",
+    "deezer": 83770276,
+    "musicbrainz": "70549fb0-8096-42df-942c-674f118bb246"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "XW95yJgFH5I",
+    "url": "https://www.youtube.com/watch?v=XW95yJgFH5I",
+    "title": "Waterlillies - Tempted (Spooky Apple Crumble mix) Digweed Classic 1994",
+    "channel": "sy 1975",
+    "query": "Waterlillies, Spooky Tempted (Apple Crumble)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:29.609Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "date": "2026-10-13T13:00:00+01:00",
+   "artist": "Kraak & Smaak, Izo FitzRoy, Ray Mang",
+   "title": "Velvet Seas (Ray Mang Remix)",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Leftfield House",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "dD9G7O-oHmA",
+    "url": "https://www.youtube.com/watch?v=dD9G7O-oHmA",
+    "title": "Kraak & Smaak and Izo FitzRoy - Velvet Seas (Ray Mang Remix)",
+    "channel": "Gazzz696",
+    "query": "Kraak & Smaak, Izo FitzRoy, Ray Mang Velvet Seas (Ray Mang Remix)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:38.818Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "The Teenagers, Frankie Lymon",
+   "title": "Why Do Fools Fall In Love ",
+   "ids": {
+    "isrc": "USRH10300803",
+    "deezer": 1103022402,
+    "musicbrainz": "f326f205-5c41-4790-befe-3511cbb20974"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "2sAHiR0rkJg",
+    "url": "https://www.youtube.com/watch?v=2sAHiR0rkJg",
+    "title": "Why Do Fools Fall In Love-Frankie Lymon+The Teenagers-1956",
+    "channel": "AK47bandit",
+    "query": "The Teenagers, Frankie Lymon Why Do Fools Fall In Love ",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:47.914Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Nick Hakim",
+   "title": "I Can See",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "j5y6Gj_1pho",
+    "url": "https://www.youtube.com/watch?v=j5y6Gj_1pho",
+    "title": "Nick Hakim - I Can See (Official Video)",
+    "channel": "Nick Hakim",
+    "query": "Nick Hakim I Can See",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:42:56.993Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Federsen",
+   "title": "Gamma",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "gkl5g9g5oNg",
+    "url": "https://www.youtube.com/watch?v=gkl5g9g5oNg",
+    "title": "Federsen - Gamma",
+    "channel": "Martin Eden",
+    "query": "Federsen Gamma",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:43:06.056Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Lil Noid",
+   "title": "Load My Clip",
+   "ids": {
+    "isrc": "USYBL1500374",
+    "deezer": 1430548872,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "IJc4ScgTaR8",
+    "url": "https://www.youtube.com/watch?v=IJc4ScgTaR8",
+    "title": "Lil Noid - \"Load My Clip\" (Remastered)",
+    "channel": "MemphisRapRemastered",
+    "query": "Lil Noid Load My Clip",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:43:15.017Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "date": "2026-10-13T05:00:00+01:00",
+   "artist": "Carmen Villain",
+   "title": "Subtle Bodies",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
+   "showGenres": [
+    "Post Rock",
+    "Dub Techno",
+    "Minimal Synth",
+    "Ambient"
+   ],
+   "youtube": {
+    "videoId": "-I4TKe2CmTQ",
+    "url": "https://www.youtube.com/watch?v=-I4TKe2CmTQ",
+    "title": "Carmen Villain - Subtle Bodies",
+    "channel": "Smalltown Supersound",
+    "query": "Carmen Villain Subtle Bodies",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:43:24.147Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
+   "date": "2026-10-13T06:00:00+01:00",
+   "artist": "Max Von Der Goltz",
+   "title": "A Fountain to Find Peace Within Yourself",
+   "ids": {
+    "isrc": "usy282016137",
+    "deezer": 1194509832,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
+   "showGenres": [
+    "Electronica",
+    "Ambient"
+   ],
+   "youtube": {
+    "videoId": "KjnCj_2F78g",
+    "url": "https://www.youtube.com/watch?v=KjnCj_2F78g",
+    "title": "Max von der Goltz - A Fountain to Find Peace Within Yourself",
+    "channel": "Max von der Goltz",
+    "query": "Max Von Der Goltz A Fountain to Find Peace Within Yourself",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:43:33.169Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Darcy Clay",
+   "title": "And It Was Easy",
+   "ids": {
+    "isrc": "NZPG00700198",
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "ISrW2JnA7iY",
+    "url": "https://www.youtube.com/watch?v=ISrW2JnA7iY",
+    "title": "Darcy Clay - It Was Easy",
+    "channel": "Esjjioba Communism",
+    "query": "Darcy Clay And It Was Easy",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:43:42.263Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "The Monotones",
+   "title": "The Book Of Love",
+   "ids": {
+    "isrc": "GB8XC1081145",
+    "deezer": 1089991012,
+    "musicbrainz": "49a5d028-3014-4374-a00d-4d6d2aa84a42"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "bn3yQtenLbM",
+    "url": "https://www.youtube.com/watch?v=bn3yQtenLbM",
+    "title": "The Monotones - Book of Love",
+    "channel": "Oldies Zone",
+    "query": "The Monotones The Book Of Love",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:44:18.104Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Ann Peebles",
+   "title": "I Feel Like Breaking Up Somebody's Home",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "gQpfvPCA850",
+    "url": "https://www.youtube.com/watch?v=gQpfvPCA850",
+    "title": "Ann Peebles - I Feel Like Breaking Up Somebody's Home Tonight (Official Audio)",
+    "channel": "Fat Possum Records",
+    "query": "Ann Peebles I Feel Like Breaking Up Somebody's Home",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:44:27.159Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Jorge",
+   "title": "Bunch Of Bees",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "SdFVMB4d75k",
+    "url": "https://www.youtube.com/watch?v=SdFVMB4d75k",
+    "title": "Jorge - Bunch Of Bees",
+    "channel": "Sound Station Strategy",
+    "query": "Jorge Bunch Of Bees",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:45:20.631Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "date": "2026-10-13T13:00:00+01:00",
+   "artist": "Joshua Idehen",
+   "title": "This Is The Place",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Leftfield House",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "7OOcp841Yu0",
+    "url": "https://www.youtube.com/watch?v=7OOcp841Yu0",
+    "title": "Joshua Idehen - This Is The Place (Official Video)",
+    "channel": "Joshua Idehen",
+    "query": "Joshua Idehen This Is The Place",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:45:29.747Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "The Cufflinks",
+   "title": "Guided Missiles",
+   "ids": {
+    "isrc": "QMAHS1508938",
+    "deezer": 1270615442,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "G4Jv1woQeWM",
+    "url": "https://www.youtube.com/watch?v=G4Jv1woQeWM",
+    "title": "The Cufflinks - Guided Missiles",
+    "channel": "Uri DeYoung",
+    "query": "The Cufflinks Guided Missiles",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:45:38.847Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Ramsey Lewis",
+   "title": "Look-A-Here",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "YP_Q8EtAeQ4",
+    "url": "https://www.youtube.com/watch?v=YP_Q8EtAeQ4",
+    "title": "the Ramsey Lewis Trio Look A here",
+    "channel": "BLUES AND SOUL ",
+    "query": "Ramsey Lewis Look-A-Here",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:45:47.904Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "date": "2026-10-13T05:00:00+01:00",
+   "artist": "MICHEL MOULINIÉ",
+   "title": "L’Echo De L’Acier",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
+   "showGenres": [
+    "Post Rock",
+    "Dub Techno",
+    "Minimal Synth",
+    "Ambient"
+   ],
+   "youtube": {
+    "videoId": "MhJflJDDsR4",
+    "url": "https://www.youtube.com/watch?v=MhJflJDDsR4",
+    "title": "Michel Moulinié - L'écho de l'acier",
+    "channel": "fida le rebbec",
+    "query": "MICHEL MOULINIÉ L’Echo De L’Acier",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:46:15.006Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "The Sundays",
+   "title": "You're Not The Only One I Know",
+   "ids": {
+    "isrc": "GB01A9000011",
+    "deezer": 17946513,
+    "musicbrainz": "5b1b0598-a851-4be9-bc87-afc4f858c8b3"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "5ip6ly5rR-k",
+    "url": "https://www.youtube.com/watch?v=5ip6ly5rR-k",
+    "title": "The Sundays - You're not the only one I know",
+    "channel": "vertigo60",
+    "query": "The Sundays You're Not The Only One I Know",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:46:24.209Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Yvette Fauche",
+   "title": "Crazy For You (Bonez Funk Remix)",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "zsmkzdKSAQk",
+    "url": "https://www.youtube.com/watch?v=zsmkzdKSAQk",
+    "title": "YVETTE FAUCHE ~ CRAZY FOR YOU (BONEZ HIP HOP MIX)  (1998) ~ RARE UK INDIE R&B PROMO REMIX",
+    "channel": "Jewelz Smooth",
+    "query": "Yvette Fauche Crazy For You (Bonez Funk Remix)",
+    "matchScore": 0.8833333333333333,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:46:33.394Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "date": "2026-10-13T13:00:00+01:00",
+   "artist": "Drifting Clouds",
+   "title": "Rarrandharr",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Leftfield House",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "7S1FDdcmnUQ",
+    "url": "https://www.youtube.com/watch?v=7S1FDdcmnUQ",
+    "title": "Rarrandharr - Drifting Clouds (Single)",
+    "channel": "Drifting Clouds",
+    "query": "Drifting Clouds Rarrandharr",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:46:42.427Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "The Blues Busters",
+   "title": "There's Always Sunshine",
+   "ids": {
+    "isrc": "JPR221300321",
+    "deezer": 109055268,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "BktqLusoJJE",
+    "url": "https://www.youtube.com/watch?v=BktqLusoJJE",
+    "title": "The Blues Busters - There's Always Sunshine (1968)",
+    "channel": "GOLDEN EAR",
+    "query": "The Blues Busters There's Always Sunshine",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:46:51.485Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Odyssey",
+   "title": "Our Lives Are Shaped By What We Love",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "zWdnX3XlaI4",
+    "url": "https://www.youtube.com/watch?v=zWdnX3XlaI4",
+    "title": "Odyssey - Our Lives are shaped by what we love",
+    "channel": "incrediblecHiller",
+    "query": "Odyssey Our Lives Are Shaped By What We Love",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:47:00.528Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Synapse",
+   "title": "Interrupt Beyond Therapy",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "xHh3ILt_PGM",
+    "url": "https://www.youtube.com/watch?v=xHh3ILt_PGM",
+    "title": "Synapse Interrupt - Beyond Therapy",
+    "channel": "Rick Shiver",
+    "query": "Synapse Interrupt Beyond Therapy",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:47:09.448Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "Lloyd Clarke",
+   "title": "Now I Know The Reason",
+   "ids": {
+    "isrc": "GBQ2F1127112",
+    "deezer": 72327107,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "xelhOOctgZs",
+    "url": "https://www.youtube.com/watch?v=xelhOOctgZs",
+    "title": "lloyd clarke  now i know the reason hi lite blank 1962",
+    "channel": "earlyska",
+    "query": "Lloyd Clarke Now I Know The Reason",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:47:53.844Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Amy Winehouse",
+   "title": "October Song",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "5oP1N46Natk",
+    "url": "https://www.youtube.com/watch?v=5oP1N46Natk",
+    "title": "Amy Winehouse 'October Song' [HD] | North Sea Jazz (2004)",
+    "channel": "North Sea Jazz Archive",
+    "query": "Amy Winehouse October Song",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:48:03.000Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Femtanyl",
+   "title": "Katamari",
+   "ids": {
+    "isrc": "QZPLS2362403",
+    "deezer": 2637054512,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "YfXpNIQbdjo",
+    "url": "https://www.youtube.com/watch?v=YfXpNIQbdjo",
+    "title": "femtanyl - KATAMARI",
+    "channel": "Femtanyl",
+    "query": "Femtanyl Katamari",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:48:21.372Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Superette",
+   "title": "Kiss Someone",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "iv5NV5iW54s",
+    "url": "https://www.youtube.com/watch?v=iv5NV5iW54s",
+    "title": "Superette - Kiss Someone",
+    "channel": "MultiRay66",
+    "query": "Superette Kiss Someone",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:48:30.431Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Jad & The",
+   "title": "Pacific Drums (Liquid Mix)",
+   "ids": {
+    "isrc": "AUSQI1900021",
+    "deezer": 772460762,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "pPE8jwUFeuQ",
+    "url": "https://www.youtube.com/watch?v=pPE8jwUFeuQ",
+    "title": "PREMIERE: Jad & The - Pacific Drums (Liquid Mix)[Beats Of No Nation]",
+    "channel": "Ransom Note",
+    "query": "Jad & The Pacific Drums (Liquid Mix)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:48:40.036Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "date": "2026-10-13T15:00:00+01:00",
+   "artist": "The Downbeats",
+   "title": "Midnight Love",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
+   "showGenres": [
+    "Doo Wop",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "2nj7wpL_MAM",
+    "url": "https://www.youtube.com/watch?v=2nj7wpL_MAM",
+    "title": "The Downbeats - Midnight Love (1961)",
+    "channel": "The Age of Innocence",
+    "query": "The Downbeats Midnight Love",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:48:49.110Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Brenda Russell",
+   "title": "In The Thick Of It",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "YwRnvectcgo",
+    "url": "https://www.youtube.com/watch?v=YwRnvectcgo",
+    "title": "Brenda Russell - In The Thick Of It [2012 Remaster]",
+    "channel": "DoctorRewind",
+    "query": "Brenda Russell In The Thick Of It",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:48:58.297Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Succulent",
+   "title": "Freshly",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "-CyrJWTRLEs",
+    "url": "https://www.youtube.com/watch?v=-CyrJWTRLEs",
+    "title": "Succulent- Freshly (Original Mix)",
+    "channel": "worshiprecs",
+    "query": "Succulent Freshly",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:49:07.521Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Earth, Wind & Fire",
+   "title": "Reasons",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "tJBgmoYzRE8",
+    "url": "https://www.youtube.com/watch?v=tJBgmoYzRE8",
+    "title": "Earth, Wind & Fire - Reasons (Official Audio)",
+    "channel": "EarthWindandFireVEVO",
+    "query": "Earth, Wind & Fire Reasons",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:49:52.567Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Sub Dub",
+   "title": "Ambrosia",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "O8nWXMK-JQ4",
+    "url": "https://www.youtube.com/watch?v=O8nWXMK-JQ4",
+    "title": "Sub Dub - Ambrosia",
+    "channel": "Tomas Federal",
+    "query": "Sub Dub Ambrosia",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:50:01.575Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Jim Legxacy",
+   "title": "Cold Lewisham Roses",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "mfBXTfdzZRA",
+    "url": "https://www.youtube.com/watch?v=mfBXTfdzZRA",
+    "title": "Jim Legxacy  -  cold lewisham roses",
+    "channel": "Jim Legxacy",
+    "query": "Jim Legxacy Cold Lewisham Roses",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:50:10.678Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Jah Wobble",
+   "title": "Invaders Of The Heart",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "cEVpFXL1_NA",
+    "url": "https://www.youtube.com/watch?v=cEVpFXL1_NA",
+    "title": "Jah Wobble's Invaders Of The Heart - \"Take Me to God\"",
+    "channel": "Rafus Gdynia",
+    "query": "Jah Wobble Invaders Of The Heart",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:50:19.704Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Rozie Ramati",
+   "title": "Drown in the Clouds of Dew",
+   "ids": {
+    "isrc": "QZHN82372811",
+    "deezer": 2234346057,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "2UdgBWwuML8",
+    "url": "https://www.youtube.com/watch?v=2UdgBWwuML8",
+    "title": "Rozie Ramati - Drown in the Clouds of Dew",
+    "channel": "porcelan",
+    "query": "Rozie Ramati Drown in the Clouds of Dew",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:50:28.709Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "War",
+   "title": "Youngblood (Livin' In the Streets)",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "20CvJx09KVM",
+    "url": "https://www.youtube.com/watch?v=20CvJx09KVM",
+    "title": "WAR - Youngblood (Livin' In The Streets) 1978",
+    "channel": "Morris MANILAINTHEJUNGLE",
+    "query": "War Youngblood (Livin' In the Streets)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:50:37.761Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Nick, How Dancer, GP Da Zl & Leejack",
+   "title": "Pique Da Ritmada (Feat. Nine Funk)",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "pWsxFrnen6g",
+    "url": "https://www.youtube.com/watch?v=pWsxFrnen6g",
+    "title": "PIQUE DA RITMADA - Gp Da ZL, Jhow Dancer, Leejack, Nick (nine funk)",
+    "channel": "nine music",
+    "query": "Nick, How Dancer, GP Da Zl & Leejack Pique Da Ritmada (Feat. Nine Funk)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:50:55.731Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Vox Populi!, Full Circle, Alexis Le Tan, Joakim Bouaziz",
+   "title": "Soleymani Dub (Full Circle Sannyacid Dub)",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "1UzxAU9ImO4",
+    "url": "https://www.youtube.com/watch?v=1UzxAU9ImO4",
+    "title": "Vox Populi! - Soleymani Dub (Full Circle Sannyacid Dub)",
+    "channel": "Sound Station Strategy",
+    "query": "Vox Populi!, Full Circle, Alexis Le Tan, Joakim Bouaziz Soleymani Dub (Full Circle Sannyacid Dub)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:51:04.635Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "The Earons",
+   "title": "Land of Hunger",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "kcd2NolmwCc",
+    "url": "https://www.youtube.com/watch?v=kcd2NolmwCc",
+    "title": "Land of Hunger - The Earons",
+    "channel": "jw8jw8",
+    "query": "The Earons Land of Hunger",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:51:31.852Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Scott Young",
+   "title": "Commix",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "X78kDXCLCIo",
+    "url": "https://www.youtube.com/watch?v=X78kDXCLCIo",
+    "title": "Scott Young - Commix",
+    "channel": "Les Yeux Orange",
+    "query": "Scott Young Commix",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:51:41.058Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Dove",
+   "title": "Fallen (Dusk)",
+   "ids": {
+    "isrc": "GBBVL9100023",
+    "deezer": 3761857,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "BoezyWIAfLs",
+    "url": "https://www.youtube.com/watch?v=BoezyWIAfLs",
+    "title": "(B2) Dove – Fallen (Dusk) - [Soma Quality Recordings – SOMA-2] - 1991",
+    "channel": "Electronic Music Database",
+    "query": "Dove Fallen (Dusk)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:51:59.148Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Ships Of The Pharaohs",
+   "title": "One (feat. Bror Havnes)",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "QAV0vezWy-Q",
+    "url": "https://www.youtube.com/watch?v=QAV0vezWy-Q",
+    "title": "Ships of the Pharaohs - One (feat. Last Nubian & Bror Havnes) [Audio]",
+    "channel": "First Word Records",
+    "query": "Ships Of The Pharaohs One (feat. Bror Havnes)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:52:17.238Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Massacooramaan",
+   "title": "Dancehall Princess",
+   "ids": {
+    "isrc": "USW9S1100021",
+    "deezer": 100726962,
+    "musicbrainz": "39f750eb-ebba-4384-aaa6-22269fe651ae"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "0SFTDLNH8rI",
+    "url": "https://www.youtube.com/watch?v=0SFTDLNH8rI",
+    "title": "Massacooramaan - Dancehall Princess",
+    "channel": "Fade to Mind",
+    "query": "Massacooramaan Dancehall Princess",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:52:35.186Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Single Gun Theory",
+   "title": "Words Written Backwards",
+   "ids": {
+    "isrc": "CAN119100052",
+    "deezer": 76564846,
+    "musicbrainz": "f931aa7d-47bd-40dc-8b8d-4871a090fcc9"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "P3-P0H10_pM",
+    "url": "https://www.youtube.com/watch?v=P3-P0H10_pM",
+    "title": "Single Gun Theory - Words Written Backwards",
+    "channel": "Sherri Evans",
+    "query": "Single Gun Theory Words Written Backwards",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:52:44.250Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Jarren",
+   "title": "The Way You Do",
+   "ids": {
+    "isrc": "DEG932402850",
+    "deezer": 2928648251,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "ZD06tz7A4f4",
+    "url": "https://www.youtube.com/watch?v=ZD06tz7A4f4",
+    "title": "Jarren - The Way You Do",
+    "channel": "Goodtunes97",
+    "query": "Jarren The Way You Do",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:52:53.307Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Junior Byles",
+   "title": "Fever",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "MAYrtXY9RwU",
+    "url": "https://www.youtube.com/watch?v=MAYrtXY9RwU",
+    "title": "Junior Byles & King Medious - Fever",
+    "channel": "Reggae Box",
+    "query": "Junior Byles Fever",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:02.299Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Greville",
+   "title": "Electric Push CPU Mix",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "Bjy_y8wlHZw",
+    "url": "https://www.youtube.com/watch?v=Bjy_y8wlHZw",
+    "title": "Greville • Electric Push CPU Mix (MADHAB10)",
+    "channel": "Mad Habitat Recordings",
+    "query": "Greville Electric Push CPU Mix",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:11.376Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Shackleton",
+   "title": "Hamas Rule",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "yVPAmOU9D1s",
+    "url": "https://www.youtube.com/watch?v=yVPAmOU9D1s",
+    "title": "Shackleton - Hamas Rule",
+    "channel": "blackcorridors",
+    "query": "Shackleton Hamas Rule",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:20.314Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Headless Chickens",
+   "title": "Cruise Control",
+   "ids": {
+    "isrc": "NZFN00401368",
+    "deezer": 73771867,
+    "musicbrainz": "b106deb5-fc20-4bfb-aa23-87b7516bef3c"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "SHpRnqjahg4",
+    "url": "https://www.youtube.com/watch?v=SHpRnqjahg4",
+    "title": "Headless Chickens - Cruise Control",
+    "channel": "KneesTease",
+    "query": "Headless Chickens Cruise Control",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:29.433Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Deee-Lite",
+   "title": "Party Happening People",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "GESkGp9v2i0",
+    "url": "https://www.youtube.com/watch?v=GESkGp9v2i0",
+    "title": "Deee-Lite - Party Happening People",
+    "channel": "JellyRelish",
+    "query": "Deee-Lite Party Happening People",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:38.557Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Errol Dunkley",
+   "title": "A Little Way Different",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "5tTZFefNDGc",
+    "url": "https://www.youtube.com/watch?v=5tTZFefNDGc",
+    "title": "Errol Dunkley - A Little Way Different 12\"",
+    "channel": "CruciallyRoots",
+    "query": "Errol Dunkley A Little Way Different",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:47.705Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Dubbyman",
+   "title": "The Electric Days (Dub Vocoder)",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "jKvvGbSJU40",
+    "url": "https://www.youtube.com/watch?v=jKvvGbSJU40",
+    "title": "Dubbyman - The Electric Days (Dub Vocoder)",
+    "channel": "Goodtunes97",
+    "query": "Dubbyman The Electric Days (Dub Vocoder)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:53:56.679Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Lush",
+   "title": "Nothing Natural",
+   "ids": {
+    "isrc": "GBAFL9200093",
+    "deezer": 943203,
+    "musicbrainz": "3717822a-4ce7-4e44-996f-40a5b1019eed"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "eUuCXE6nnNs",
+    "url": "https://www.youtube.com/watch?v=eUuCXE6nnNs",
+    "title": "Lush - Nothing Natural",
+    "channel": "4AD",
+    "query": "Lush Nothing Natural",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:54:23.920Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "SOUP TO NUTS W/ ANU",
+   "date": "2026-10-13T11:00:00+01:00",
+   "artist": "Pal Joey",
+   "title": "Perfectionist",
+   "ids": {
+    "isrc": "USI4R1221290",
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
+   "showGenres": [
+    "House",
+    "Trip Hop",
+    "RNB",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "QWI7CQIBR90",
+    "url": "https://www.youtube.com/watch?v=QWI7CQIBR90",
+    "title": "Perfectionist",
+    "channel": "Pal Joey",
+    "query": "Pal Joey Perfectionist",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:54:32.989Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Odyssey",
+   "title": "Don't Tell Me, Tell Her",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "CmEH8XF7IU4",
+    "url": "https://www.youtube.com/watch?v=CmEH8XF7IU4",
+    "title": "Odyssey ‎–  Don't Tell Me, Tell Her (1980)",
+    "channel": "Antony Rosano",
+    "query": "Odyssey Don't Tell Me, Tell Her",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:54:42.249Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Sans Soleil",
+   "title": "That's The Stuff",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "C7lBdSz5udQ",
+    "url": "https://www.youtube.com/watch?v=C7lBdSz5udQ",
+    "title": "Sans Soleil - That's The Stuff [2006]",
+    "channel": "What is Vibe?",
+    "query": "Sans Soleil That's The Stuff",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:54:51.473Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "The B-52's",
+   "title": "Dirty Back Road",
+   "ids": {
+    "isrc": "USIR28000028",
+    "deezer": 99399334,
+    "musicbrainz": "f20510e9-1430-492e-affe-8e20fa032697"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "r4qbZxzQ3Js",
+    "url": "https://www.youtube.com/watch?v=r4qbZxzQ3Js",
+    "title": "Dirty Back Road/THE B 52's 1980 with lyrics",
+    "channel": "RLF 26",
+    "query": "The B-52's Dirty Back Road",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:55:18.738Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Abel Lima",
+   "title": "Faca Não",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "F133yru7Nrg",
+    "url": "https://www.youtube.com/watch?v=F133yru7Nrg",
+    "title": "Abel Lima - Faca Não",
+    "channel": "soulynoise",
+    "query": "Abel Lima Faca Não",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:55:27.855Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Casting Spells",
+   "title": "Teatray In The Sky",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "HBaqmH_-i-Q",
+    "url": "https://www.youtube.com/watch?v=HBaqmH_-i-Q",
+    "title": "Casting Spells - Teatray in the Sky [AGV003]",
+    "channel": "Picasso",
+    "query": "Casting Spells Teatray In The Sky",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:55:36.981Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "The Flowers",
+   "title": "[Life] After Dark",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "f1DSCPHUuwQ",
+    "url": "https://www.youtube.com/watch?v=f1DSCPHUuwQ",
+    "title": "The Flowers | Song: [Life] After Dark | Rock • Punk | Scotland | 1979",
+    "channel": "[ Eye Tunz ] [HD]",
+    "query": "The Flowers [Life] After Dark",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:55:55.061Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Michael Wycoff",
+   "title": "Looking Up To You",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
+   "showGenres": [
+    "Jazz",
+    "Drum & Bass",
+    "UK Garage",
+    "Reggae",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "MRHKROGzXDo",
+    "url": "https://www.youtube.com/watch?v=MRHKROGzXDo",
+    "title": "Michael Wycoff - Looking Up to You (Official Audio)",
+    "channel": "MichaelWycoffVEVO",
+    "query": "Michael Wycoff Looking Up To You",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:56:04.212Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Safety Scissors",
+   "title": "Blust",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "z7b9PhFrM_U",
+    "url": "https://www.youtube.com/watch?v=z7b9PhFrM_U",
+    "title": "Safety Scissors - Blust (Lost At B - Cytrax/2000)",
+    "channel": "Mixed Up Music48",
+    "query": "Safety Scissors Blust",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:56:13.232Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "The NTS Breakfast Show w/ GABI",
+   "date": "2026-10-13T09:00:00+01:00",
+   "artist": "Fehlfarben",
+   "title": "Ein Jahr (Es geht voran)",
+   "ids": {
+    "isrc": "DEA349400159",
+    "deezer": 13660737,
+    "musicbrainz": "5f060425-4501-41fc-813c-2e8c6ae16036"
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
+   "showGenres": [
+    "New Wave",
+    "Post Punk",
+    "Leftfield Pop",
+    "Art Rock",
+    "SAFE FOR WORK"
+   ],
+   "youtube": {
+    "videoId": "Kvek60dvq50",
+    "url": "https://www.youtube.com/watch?v=Kvek60dvq50",
+    "title": "Fehlfarben - Ein Jahr (Es geht voran) 1982",
+    "channel": "EleonorePrinz",
+    "query": "Fehlfarben Ein Jahr (Es geht voran)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:56:31.790Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "KV5",
+   "title": "Landslide Victory Vendetta",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "Sqr2AClsFW4",
+    "url": "https://www.youtube.com/watch?v=Sqr2AClsFW4",
+    "title": "KV5 - Landslide Victory Vendetta",
+    "channel": "hysj!",
+    "query": "KV5 Landslide Victory Vendetta",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:56:40.745Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "MC Hellshit & DJ Carhouse",
+   "title": "Hit City",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "_fAZXEGS084",
+    "url": "https://www.youtube.com/watch?v=_fAZXEGS084",
+    "title": "MC Hellshit & DJ Carhouse - Hit City",
+    "channel": "drunkyokai",
+    "query": "MC Hellshit & DJ Carhouse Hit City",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:56:49.705Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Mikkel Metal",
+   "title": "Bodium",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "N4Z-rsKgc6M",
+    "url": "https://www.youtube.com/watch?v=N4Z-rsKgc6M",
+    "title": "Mikkel Metal - Bodium",
+    "channel": "Scubadevils",
+    "query": "Mikkel Metal Bodium",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:56:58.674Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "The Truth",
+   "title": "Garage Dub",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "O2YKGKDlc5I",
+    "url": "https://www.youtube.com/watch?v=O2YKGKDlc5I",
+    "title": "The Truth - The Garage Dub",
+    "channel": "Name Less",
+    "query": "The Truth Garage Dub",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:57:16.739Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "EsDeeKid, Rico Ace",
+   "title": "Phantom",
+   "ids": {
+    "isrc": "QZHN32557300",
+    "deezer": 3238176521,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "hmdzniMJOZs",
+    "url": "https://www.youtube.com/watch?v=hmdzniMJOZs",
+    "title": "EsDeeKid & Rico Ace - Phantom",
+    "channel": "EsDeeKid",
+    "query": "EsDeeKid, Rico Ace Phantom",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:57:25.970Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Ras Command",
+   "title": "Razor's Edge",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "WumTSxz1sOg",
+    "url": "https://www.youtube.com/watch?v=WumTSxz1sOg",
+    "title": "Razor’s Edge Audiobook Is OUT NOW! | Command Decision Book 3",
+    "channel": "Marc Alan Edelheit",
+    "query": "Ras Command Razor's Edge",
+    "matchScore": 0.85,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:57:35.158Z"
+   }
+  },
+  {
+   "station": "nts",
+   "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "date": "2026-10-13T03:00:00+01:00",
+   "artist": "Darso",
+   "title": "Bandung Ciparay",
+   "ids": {
+    "isrc": null,
+    "deezer": null,
+    "musicbrainz": null
+   },
+   "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
+   "showGenres": [
+    "Cumbia",
+    "Experimental",
+    "Rap",
+    "Dancehall",
+    "Hip Hop ",
+    "DON’T ASSUME"
+   ],
+   "youtube": {
+    "videoId": "h_61dBx1ZjU",
+    "url": "https://www.youtube.com/watch?v=h_61dBx1ZjU",
+    "title": "Darso - Bandung Ciparay",
+    "channel": "GP Musikpedia",
+    "query": "Darso Bandung Ciparay",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:57:44.260Z"
+   }
+  },
+  {
+   "station": "lotradio",
+   "show": "Special Guests",
+   "date": "2026-10-15",
+   "artist": "Granite Slapper",
+   "title": "Turgis 45",
+   "ids": {},
+   "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
+   "showGenres": [
+    "Electronica",
+    "Downtempo",
+    "House",
+    "IDM",
+    "Dub"
+   ],
+   "youtube": {
+    "videoId": "uKcidVlL6tE",
+    "url": "https://www.youtube.com/watch?v=uKcidVlL6tE",
+    "title": "granite slapper - turgis 45 (1997)",
+    "channel": "floor length skirt(s)",
+    "query": "Granite Slapper Turgis 45",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-16T23:58:02.513Z"
+   }
   }
  ],
- "dropped": 53,
+ "dropped": 82,
  "attemptedKeys": [
   "[\"uranium club\",\"god's chest\"]",
   "[\"larry heard\",\"micro-gravity\"]",
@@ -10988,6 +13287,117 @@
   "[\"گوگوش (googoosh)\",\"ما به هم نمی رسیم (ma beh ham nemiresim)\"]",
   "[\"g.g. vikey\",\"je vous remercie\"]",
   "[\"carole king\",\"weekdays\"]",
-  "[\"حسن كاي (hasan kai)\",\"asia west\"]"
+  "[\"حسن كاي (hasan kai)\",\"asia west\"]",
+  "[\"xterea\",\"track 4\"]",
+  "[\"john roberts\",\"hair\"]",
+  "[\"sachi kobayashi\",\"weathervane\"]",
+  "[\"rossini’s\",\"la gazza ladra\"]",
+  "[\"the cleaners from venus\",\"tukani (monday is grey)\"]",
+  "[\"ron carroll\",\"a new day (h&f dubhouse mix)\"]",
+  "[\"mirror people\",\"no technology\"]",
+  "[\"don julian and the meadowlarks\",\"heaven and paradise\"]",
+  "[\"trevor dandy\",\"don't cry little tree\"]",
+  "[\"the 7th plain\",\"think city\"]",
+  "[\"dj shafi\",\"beat bakola\"]",
+  "[\"aleksi perälä\",\"uk74r1517130\"]",
+  "[\"david cordero\",\"zumaia\"]",
+  "[\"jim stafford\",\"the last chant\"]",
+  "[\"waterlillies, spooky\",\"tempted (apple crumble)\"]",
+  "[\"kraak & smaak, izo fitzroy, ray mang\",\"velvet seas (ray mang remix)\"]",
+  "[\"the teenagers, frankie lymon\",\"why do fools fall in love\"]",
+  "[\"nick hakim\",\"i can see\"]",
+  "[\"federsen\",\"gamma\"]",
+  "[\"lil noid\",\"load my clip\"]",
+  "[\"carmen villain\",\"subtle bodies\"]",
+  "[\"max von der goltz\",\"a fountain to find peace within yourself\"]",
+  "[\"darcy clay\",\"and it was easy\"]",
+  "[\"ron carroll\",\"my prayer (underground vocal mix)\"]",
+  "[\"aura safari\",\"spaced out\"]",
+  "[\"the monotones\",\"the book of love\"]",
+  "[\"ann peebles\",\"i feel like breaking up somebody's home\"]",
+  "[\"estelle montenegro\",\"infusion\"]",
+  "[\"menstrual regularity\",\"kannika parameswari gayatri mantra\"]",
+  "[\"giulio stermieri\",\"crepuscular moths\"]",
+  "[\"television personalities, dan treacy, liam watson, sexton ming\",\"no-one's little girl\"]",
+  "[\"jorge\",\"bunch of bees\"]",
+  "[\"joshua idehen\",\"this is the place\"]",
+  "[\"the cufflinks\",\"guided missiles\"]",
+  "[\"ramsey lewis\",\"look-a-here\"]",
+  "[\"atmo.brtschitsch\",\"some girls (gi gi instrumental edit)\"]",
+  "[\"turbo sonidero\",\"magia\"]",
+  "[\"michel moulinié\",\"l’echo de l’acier\"]",
+  "[\"the sundays\",\"you're not the only one i know\"]",
+  "[\"yvette fauche\",\"crazy for you (bonez funk remix)\"]",
+  "[\"drifting clouds\",\"rarrandharr\"]",
+  "[\"the blues busters\",\"there's always sunshine\"]",
+  "[\"odyssey\",\"our lives are shaped by what we love\"]",
+  "[\"synapse\",\"interrupt beyond therapy\"]",
+  "[\"rozaly\",\"offensive twerking\"]",
+  "[\"family fodder\",\"fuck you til you're dead (exhumed)\"]",
+  "[\"fluid fusion\",\"da lub blub\"]",
+  "[\"lloyd clarke\",\"now i know the reason\"]",
+  "[\"amy winehouse\",\"october song\"]",
+  "[\"jammin' unit\",\"dropout dub (gi gi edit)\"]",
+  "[\"femtanyl\",\"katamari\"]",
+  "[\"superette\",\"kiss someone\"]",
+  "[\"jad & the\",\"pacific drums (liquid mix)\"]",
+  "[\"the downbeats\",\"midnight love\"]",
+  "[\"brenda russell\",\"in the thick of it\"]",
+  "[\"succulent\",\"freshly\"]",
+  "[\"jay mitta\",\"sapienz\"]",
+  "[\"jah wobble's invaders of the heart, sinéad o'connor\",\"visions of you (radio edit)\"]",
+  "[\"kingdom x shabnan majid x bally sagoo\",\"dil cheez (zaleel down 4 whatever chop)\"]",
+  "[\"earth, wind & fire\",\"reasons\"]",
+  "[\"sub dub\",\"ambrosia\"]",
+  "[\"jim legxacy\",\"cold lewisham roses\"]",
+  "[\"jah wobble\",\"invaders of the heart\"]",
+  "[\"rozie ramati\",\"drown in the clouds of dew\"]",
+  "[\"war\",\"youngblood (livin' in the streets)\"]",
+  "[\"the mighty quark\",\"late (gi gi no trumpet edit)\"]",
+  "[\"nick, how dancer, gp da zl & leejack\",\"pique da ritmada (feat. nine funk)\"]",
+  "[\"vox populi!, full circle, alexis le tan, joakim bouaziz\",\"soleymani dub (full circle sannyacid dub)\"]",
+  "[\"dj pgz, teether\",\"hypnotic suburbs pt. 1 & 2\"]",
+  "[\"the earons\",\"land of hunger\"]",
+  "[\"scott young\",\"commix\"]",
+  "[\"donniedarko\",\"candy de plan b pero es hoodtrap\"]",
+  "[\"dove\",\"fallen (dusk)\"]",
+  "[\"they hate change\",\"perm\"]",
+  "[\"ships of the pharaohs\",\"one (feat. bror havnes)\"]",
+  "[\"scott grooves\",\"jamaican part: the sauce\"]",
+  "[\"massacooramaan\",\"dancehall princess\"]",
+  "[\"single gun theory\",\"words written backwards\"]",
+  "[\"jarren\",\"the way you do\"]",
+  "[\"junior byles\",\"fever\"]",
+  "[\"greville\",\"electric push cpu mix\"]",
+  "[\"shackleton\",\"hamas rule\"]",
+  "[\"headless chickens\",\"cruise control\"]",
+  "[\"deee-lite\",\"party happening people\"]",
+  "[\"errol dunkley\",\"a little way different\"]",
+  "[\"dubbyman\",\"the electric days (dub vocoder)\"]",
+  "[\"ekuka morris sirikiti\",\"tec me ot jok\"]",
+  "[\"lush\",\"nothing natural\"]",
+  "[\"pal joey\",\"perfectionist\"]",
+  "[\"odyssey\",\"don't tell me, tell her\"]",
+  "[\"sans soleil\",\"that's the stuff\"]",
+  "[\"honest jon’s records\",\"la gyal\"]",
+  "[\"the b-52's\",\"dirty back road\"]",
+  "[\"abel lima\",\"faca não\"]",
+  "[\"casting spells\",\"teatray in the sky\"]",
+  "[\"rozaly\",\"tassa coma\"]",
+  "[\"the flowers\",\"[life] after dark\"]",
+  "[\"michael wycoff\",\"looking up to you\"]",
+  "[\"safety scissors\",\"blust\"]",
+  "[\"various artists\",\"lla\"]",
+  "[\"fehlfarben\",\"ein jahr (es geht voran)\"]",
+  "[\"kv5\",\"landslide victory vendetta\"]",
+  "[\"mc hellshit & dj carhouse\",\"hit city\"]",
+  "[\"mikkel metal\",\"bodium\"]",
+  "[\"osha el soghayar w omar hefzy\",\"m3 el salama le elly ayez\"]",
+  "[\"the truth\",\"garage dub\"]",
+  "[\"esdeekid, rico ace\",\"phantom\"]",
+  "[\"ras command\",\"razor's edge\"]",
+  "[\"darso\",\"bandung ciparay\"]",
+  "[\"o of m with coppé\",\"fire in the fields\"]",
+  "[\"granite slapper\",\"turgis 45\"]"
  ]
 }
