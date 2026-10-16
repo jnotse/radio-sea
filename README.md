@@ -1,8 +1,7 @@
 # Radio sea discovery prototype
 
 Scan catalogues and radio tracklists, merge identities, match songs to YouTube,
-and arrange them on a navigable map. This is our own heuristic algorithm, not
-zig-zag.fm's backend algorithm.
+and arrange them on a navigable map.
 
 ## Open the demo
 
