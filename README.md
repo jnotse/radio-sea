@@ -35,6 +35,17 @@ npm run catalog:genres    # look up each song's own genres on MusicBrainz
 git add data demo && git commit -m "Add more music" && git push
 ```
 
+For finer genres and release years, match the songs against Discogs' free
+monthly catalog dump. Copy the link of the latest `…_releases.xml.gz` file
+from https://data.discogs.com/ and stream it in; it's about 10 GB, so this
+takes a while but never stores it:
+
+```sh
+curl -sL "<releases file link>" | npm run catalog:discogs -- -
+```
+
+Already downloaded? `npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz`.
+
 Stations only describe whole shows ("this set is jazz, drum & bass, reggae"),
 not single songs. So songs are grouped by their own genres once they have
 been looked up; until then they stay grouped with the show they were played
