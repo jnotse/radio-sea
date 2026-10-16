@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { mergeCatalogue } from '../src/catalog/resolve.js';
-import { interleavePlays, playToRaw } from '../scripts/build-demo.js';
+import { interleavePlays, playToRaw, withOwnGenres } from '../scripts/build-demo.js';
+import { songKey } from '../src/catalog/extend.js';
 
 const sample = { station: 'nts', artist: 'Artist', title: 'Song', show: 'Show',
   date: '2026-10-13T00:00:00Z', sourceUrl: 'https://www.nts.live/api/v2/shows/example/episodes/example',
@@ -30,4 +31,17 @@ test('interleaving terminates even if max exceeds all available tracks', () => {
   assert.deepEqual(interleavePlays([sample], 40), [sample]);
   const other = { ...sample, station: 'lotradio' };
   assert.deepEqual(interleavePlays([sample, sample, other], 40), [sample, other, sample]);
+});
+
+test('Discogs genres and styles come first, then MusicBrainz; Discogs fills a missing year', () => {
+  const song = { ...sample, artist: 'McCoy Tyner', title: 'My Favorite Things' };
+  const key = songKey(song);
+  const discogs = { [key]: { genres: ['Jazz'], styles: ['Hard Bop', 'Modal'], year: 1963, source: 'track' } };
+  const musicbrainz = { [key]: { genres: ['post-bop'] } };
+  assert.deepEqual(withOwnGenres(song, discogs, musicbrainz).genres, ['jazz', 'hard bop', 'modal']);
+  assert.equal(withOwnGenres(song, discogs, musicbrainz).releaseYear, 1963);
+  assert.equal(withOwnGenres({ ...song, releaseYear: 1961 }, discogs).releaseYear, 1961, 'a known year is kept');
+  const empty = { [key]: { genres: [], styles: [], year: null, source: null } };
+  assert.deepEqual(withOwnGenres(song, empty, musicbrainz).genres, ['post-bop']);
+  assert.deepEqual(withOwnGenres(song).genres, []);
 });

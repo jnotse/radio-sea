@@ -4,6 +4,7 @@
 //
 //   node scripts/build-demo.js [--max 40] [--episodes 4]
 //   node scripts/build-demo.js --genres   # look up per-track genres (MusicBrainz)
+//   node scripts/discogs-import.js <dump>  # genres, styles and years from a Discogs dump
 //   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
 //
 // Network required, except with --reuse. Everything is cached in demo/sea-data.js
@@ -47,6 +48,17 @@ const maxEpisodes = argValue('episodes', 4);
 // A track's own genres (looked up per recording) and per-track tags such as
 // Radiooooo's mood and decade are sound tags. The genres a station lists for a
 // show describe the whole set, so they are kept as `show-genre:` context.
+// Each song's own genres: Discogs genres and styles of the releases that list
+// it first, then MusicBrainz. Lowercase, so the two vocabularies line up.
+export function withOwnGenres(play, discogs = {}, musicbrainz = {}) {
+  const key = songKey(play);
+  const found = discogs[key];
+  const fromDiscogs = found ? [...found.genres, ...found.styles] : [];
+  const genres = fromDiscogs.length ? fromDiscogs : musicbrainz[key]?.genres ?? [];
+  return { ...play, genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
+    releaseYear: play.releaseYear ?? found?.year ?? null };
+}
+
 export function playToRaw(play) {
   const show = decodeEntities(play.show);
   return {
@@ -166,8 +178,11 @@ async function main() {
     trackGenres = result.cache;
     if (result.error) console.log(`Stopped after ${result.done}/${result.total}: ${result.error.message}. Run again to continue.`);
   }
-  const withGenres = resolved.map((play) => ({ ...play, genres: trackGenres[songKey(play)]?.genres ?? [] }));
-  console.log(`  ${withGenres.filter((p) => p.genres.length).length}/${withGenres.length} tracks have their own genres`);
+  let discogs = {};
+  try { discogs = JSON.parse(await readFile(join(dirname(cacheFile), 'discogs-matches.json'), 'utf8')).songs ?? {}; } catch { /* not imported yet */ }
+  const withGenres = resolved.map((play) => withOwnGenres(play, discogs, trackGenres));
+  const fromDiscogs = resolved.filter((play) => discogs[songKey(play)]?.styles.length || discogs[songKey(play)]?.genres.length).length;
+  console.log(`  ${withGenres.filter((p) => p.genres.length).length}/${withGenres.length} tracks have their own genres (${fromDiscogs} from Discogs)`);
   const { releases } = mergeCatalogue(withGenres.map(playToRaw));
   console.log(`  merged into ${releases.length} unique tracks`);
 
