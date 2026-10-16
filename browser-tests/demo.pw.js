@@ -68,7 +68,7 @@ async function screenPoint(page, id) {
   }, id);
 }
 
-test('wheel zoom is continuous, drag does not select, hover works after drag, tile clicks select', async ({ page }) => {
+test('wheel zoom is continuous, drag does not select, hover works after drag, tile clicks play', async ({ page }) => {
   await page.goto('/');
   const canvas = page.locator('#sea');
   const initial = Number(await canvas.getAttribute('data-zoom'));
@@ -83,6 +83,7 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
   await page.mouse.move(rect.x + rect.width / 2 + 60, rect.y + rect.height / 2 + 30, { steps: 8 });
   await page.mouse.up();
   await expect(canvas).toHaveAttribute('data-selected', selected);
+  await expect(page.locator('#youtube-player')).toHaveCount(0);
   await page.locator('#btn-home').click();
   const id = await page.evaluate(() => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id);
   const p = await screenPoint(page, id);
@@ -90,7 +91,15 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
   await expect(page.locator('#tooltip')).toBeVisible();
   await page.mouse.click(p.x, p.y);
   await expect(canvas).toHaveAttribute('data-selected', id);
+  await expectPlaying(page, id);
 });
+
+// Clicking a square on the map plays it, not just selects it.
+async function expectPlaying(page, id) {
+  const videoId = await page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).youtubeId, id);
+  await expect(page.locator('#youtube-player')).toHaveAttribute('src', new RegExp(`embed/${videoId}\\?`));
+  await expect.poll(() => page.evaluate(() => window.__transport?.play ?? 0)).toBeGreaterThan(0);
+}
 
 test('player uses a real video ID, supplies origin/referrer and exposes a working fallback', async ({ page }) => {
   await page.goto('/');
@@ -193,6 +202,7 @@ test.describe('touch-screen layout and controls', () => {
     await expect.poll(async () => Number(await canvas.getAttribute('data-zoom'))).toBeGreaterThan(zoom * 1.8);
     expect(Number(await canvas.getAttribute('data-zoom'))).toBeLessThan(zoom * 2.2);
     await expect(canvas).toHaveAttribute('data-selected', selected);
+    await expect(page.locator('#youtube-player')).toHaveCount(0);
     const cameraX = Number(await canvas.getAttribute('data-camera-x'));
     await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [touch(1, x, y)] });
     await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [touch(1, x + 40, y + 24)] });
@@ -212,6 +222,7 @@ test.describe('touch-screen layout and controls', () => {
     const point = await screenPoint(page, id);
     await page.touchscreen.tap(point.x, point.y);
     await expect(canvas).toHaveAttribute('data-selected', id);
+    await expectPlaying(page, id);
     await cdp.detach();
   });
 });

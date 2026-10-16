@@ -38,8 +38,13 @@
     a.target = '_blank'; a.rel = 'noopener';
     return a;
   }
+  // Sound tags describe the track itself. Show genres are what the station
+  // lists for the whole show, so they are shown apart and never filter as genres.
   function soundTags(r) {
-    return (r.tags ?? []).filter((t) => !/^(show|station):/.test(t));
+    return (r.tags ?? []).filter((t) => !/^(show|station|show-genre):/.test(t));
+  }
+  function showGenres(r) {
+    return (r.tags ?? []).filter((t) => t.startsWith('show-genre:')).map((t) => t.slice('show-genre:'.length));
   }
   function passesFilter(r) {
     return !!r && stationIds(r).some((s) => state.stations.has(s)) &&
@@ -67,6 +72,7 @@
     chip.onclick = () => { toggle(state.tags, tag); refreshFilters(); };
     $('tag-chips').append(chip);
   }
+  if (!tagCounts.size) $('tag-chips').append(node('p', 'No track genres in this snapshot yet.', 'sub'));
   function toggle(set, value) { if (set.has(value)) set.delete(value); else set.add(value); }
   $('search').addEventListener('input', (e) => { state.query = e.target.value.trim().toLowerCase(); refreshFilters(); });
   $('btn-clear').onclick = () => {
@@ -272,7 +278,8 @@
     pointers.delete(e.pointerId);
     if (!pointers.size) canvas.classList.remove('dragging');
     if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
-    if (click) { const r = tileAt(e); if (r) select(r.id, true); }
+    // Pressing a square plays it.
+    if (click) { const r = tileAt(e); if (r) { select(r.id, true); startSelected(); } }
   }
   canvas.addEventListener('pointerup', (e) => finishPointer(e, true));
   for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, (e) => finishPointer(e, false));
@@ -505,8 +512,10 @@
     $('d-title').textContent = r.name; $('d-artist').textContent = r.artist;
     $('deck-index').textContent = `${String(releases.indexOf(r) + 1).padStart(2, '0')} / ${releases.length}`;
     const island = islands.get(r.islandId);
-    $('d-meta').replaceChildren(node('span', soundTags(r).join(' · ') || 'No sound tags yet'),
-      node('span', `${island?.name?.trim() ?? 'Uncharted'} · depth ${(r.depth ?? 0).toFixed(2)} · ${r.x}~${r.y}`));
+    const grouping = island?.basis === 'show' ? ' (grouped by show)' : '';
+    $('d-meta').replaceChildren(node('span', soundTags(r).join(' · ') || 'No track genres yet'));
+    if (showGenres(r).length) $('d-meta').append(node('span', `Show tagged: ${showGenres(r).join(' · ')}`));
+    $('d-meta').append(node('span', `${island?.name?.trim() ?? 'Uncharted'}${grouping} · depth ${(r.depth ?? 0).toFixed(2)} · ${r.x}~${r.y}`));
     if (r.year || r.country) $('d-meta').append(node('span', [r.year, r.country].filter(Boolean).join(' · ')));
     if (changed) preparePlayer(r);
     $('d-sources').replaceChildren();

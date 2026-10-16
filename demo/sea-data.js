@@ -1,5 +1,5 @@
 window.SEA_DATA = {
- "generatedAt": "2026-10-16T19:10:51.173Z",
+ "generatedAt": "2026-10-16T19:52:30.294Z",
  "stats": {
   "stations": [
    {
@@ -27,12 +27,13 @@ window.SEA_DATA = {
   "resolved": 179,
   "dropped": 53,
   "merged": 179,
-  "islands": 31
+  "islands": 19
  },
  "islands": [
   {
    "id": 0,
-   "name": "Indie Rock",
+   "name": "SHAMOS",
+   "basis": "show",
    "memberIds": [
     "rel-020",
     "rel-022",
@@ -58,7 +59,58 @@ window.SEA_DATA = {
   },
   {
    "id": 1,
-   "name": "Ambient",
+   "name": "Special Guests · 15 Oct",
+   "basis": "show",
+   "memberIds": [
+    "rel-027",
+    "rel-028",
+    "rel-031",
+    "rel-033",
+    "rel-019",
+    "rel-021",
+    "rel-023",
+    "rel-025",
+    "rel-035",
+    "rel-037",
+    "rel-038",
+    "rel-015",
+    "rel-016"
+   ],
+   "centre": {
+    "x": -13,
+    "y": 13
+   },
+   "radius": 7.629437168288781
+  },
+  {
+   "id": 2,
+   "name": "The NTS Breakfast Show w/ GABI",
+   "basis": "show",
+   "memberIds": [
+    "rel-106",
+    "rel-117",
+    "rel-125",
+    "rel-134",
+    "rel-065",
+    "rel-073",
+    "rel-085",
+    "rel-095",
+    "rel-143",
+    "rel-151",
+    "rel-165",
+    "rel-049",
+    "rel-057"
+   ],
+   "centre": {
+    "x": 2,
+    "y": -24
+   },
+   "radius": 7.629437168288781
+  },
+  {
+   "id": 3,
+   "name": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+   "basis": "show",
    "memberIds": [
     "rel-114",
     "rel-122",
@@ -75,38 +127,15 @@ window.SEA_DATA = {
     "rel-063"
    ],
    "centre": {
-    "x": -13,
-    "y": 13
+    "x": 19,
+    "y": 25
    },
    "radius": 7.629437168288781
   },
   {
-   "id": 2,
-   "name": "Art Rock",
-   "memberIds": [
-    "rel-143",
-    "rel-151",
-    "rel-125",
-    "rel-134",
-    "rel-106",
-    "rel-117",
-    "rel-165",
-    "rel-049",
-    "rel-057",
-    "rel-065",
-    "rel-073",
-    "rel-085",
-    "rel-095"
-   ],
-   "centre": {
-    "x": 2,
-    "y": -24
-   },
-   "radius": 7.629437168288781
-  },
-  {
-   "id": 3,
-   "name": "Drum & Bass",
+   "id": 4,
+   "name": "Special Guests · 15 Oct (2)",
+   "basis": "show",
    "memberIds": [
     "rel-129",
     "rel-138",
@@ -122,14 +151,15 @@ window.SEA_DATA = {
     "rel-099"
    ],
    "centre": {
-    "x": 19,
-    "y": 25
+    "x": -31,
+    "y": -6
    },
    "radius": 7.388972745734183
   },
   {
-   "id": 4,
-   "name": "Cumbia",
+   "id": 5,
+   "name": "5 GATE TEMPLE w/ Devon Rexi (R)",
+   "basis": "show",
    "memberIds": [
     "rel-130",
     "rel-140",
@@ -145,29 +175,6 @@ window.SEA_DATA = {
     "rel-121"
    ],
    "centre": {
-    "x": -34,
-    "y": -6
-   },
-   "radius": 7.388972745734183
-  },
-  {
-   "id": 5,
-   "name": "Doo Wop",
-   "memberIds": [
-    "rel-136",
-    "rel-145",
-    "rel-152",
-    "rel-161",
-    "rel-052",
-    "rel-058",
-    "rel-068",
-    "rel-076",
-    "rel-088",
-    "rel-098",
-    "rel-109",
-    "rel-127"
-   ],
-   "centre": {
     "x": 34,
     "y": -22
    },
@@ -175,12 +182,13 @@ window.SEA_DATA = {
   },
   {
    "id": 6,
-   "name": "AUDIO RESEARCH",
+   "name": "NTS Guide to: Classical Works in Murakami Novels",
+   "basis": "show",
    "memberIds": [
-    "rel-150",
-    "rel-158",
     "rel-133",
     "rel-142",
+    "rel-150",
+    "rel-158",
     "rel-048",
     "rel-056",
     "rel-064",
@@ -198,7 +206,32 @@ window.SEA_DATA = {
   },
   {
    "id": 7,
-   "name": "House",
+   "name": "Self Soothe w/ Margeaux: Doo Wop Special",
+   "basis": "show",
+   "memberIds": [
+    "rel-136",
+    "rel-145",
+    "rel-152",
+    "rel-161",
+    "rel-052",
+    "rel-058",
+    "rel-068",
+    "rel-076",
+    "rel-088",
+    "rel-098",
+    "rel-109",
+    "rel-127"
+   ],
+   "centre": {
+    "x": -22,
+    "y": -42
+   },
+   "radius": 7.388972745734183
+  },
+  {
+   "id": 8,
+   "name": "SOUP TO NUTS W/ ANU",
+   "basis": "show",
    "memberIds": [
     "rel-166",
     "rel-050",
@@ -213,14 +246,15 @@ window.SEA_DATA = {
     "rel-159"
    ],
    "centre": {
-    "x": -22,
-    "y": -42
+    "x": 47,
+    "y": 18
    },
    "radius": 7.138262143604179
   },
   {
-   "id": 8,
-   "name": "Industrial ",
+   "id": 9,
+   "name": "SNZ (R)",
+   "basis": "show",
    "memberIds": [
     "rel-039",
     "rel-041",
@@ -234,27 +268,6 @@ window.SEA_DATA = {
     "rel-036"
    ],
    "centre": {
-    "x": 47,
-    "y": 18
-   },
-   "radius": 6.875872022286245
-  },
-  {
-   "id": 9,
-   "name": "Downtempo",
-   "memberIds": [
-    "rel-091",
-    "rel-100",
-    "rel-112",
-    "rel-120",
-    "rel-139",
-    "rel-154",
-    "rel-054",
-    "rel-060",
-    "rel-070",
-    "rel-079"
-   ],
-   "centre": {
     "x": -50,
     "y": 20
    },
@@ -262,7 +275,30 @@ window.SEA_DATA = {
   },
   {
    "id": 10,
-   "name": "House",
+   "name": "Special Guests · 15 Oct (3)",
+   "basis": "show",
+   "memberIds": [
+    "rel-139",
+    "rel-154",
+    "rel-054",
+    "rel-060",
+    "rel-070",
+    "rel-079",
+    "rel-091",
+    "rel-100",
+    "rel-112",
+    "rel-120"
+   ],
+   "centre": {
+    "x": 22,
+    "y": -52
+   },
+   "radius": 6.875872022286245
+  },
+  {
+   "id": 11,
+   "name": "Special Guests · 15 Oct (4)",
+   "basis": "show",
    "memberIds": [
     "rel-044",
     "rel-077",
@@ -275,26 +311,6 @@ window.SEA_DATA = {
     "rel-042"
    ],
    "centre": {
-    "x": 23,
-    "y": -50
-   },
-   "radius": 6.6
-  },
-  {
-   "id": 11,
-   "name": "Ambient",
-   "memberIds": [
-    "rel-104",
-    "rel-115",
-    "rel-123",
-    "rel-132",
-    "rel-149",
-    "rel-157",
-    "rel-164",
-    "rel-047",
-    "rel-083"
-   ],
-   "centre": {
     "x": 18,
     "y": 56
    },
@@ -302,7 +318,29 @@ window.SEA_DATA = {
   },
   {
    "id": 12,
-   "name": "House",
+   "name": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
+   "basis": "show",
+   "memberIds": [
+    "rel-149",
+    "rel-157",
+    "rel-164",
+    "rel-047",
+    "rel-083",
+    "rel-104",
+    "rel-115",
+    "rel-123",
+    "rel-132"
+   ],
+   "centre": {
+    "x": -54,
+    "y": -31
+   },
+   "radius": 6.6
+  },
+  {
+   "id": 13,
+   "name": "Low Life Loves You w/ Bill Brewster & Richard Sen",
+   "basis": "show",
    "memberIds": [
     "rel-051",
     "rel-067",
@@ -314,14 +352,15 @@ window.SEA_DATA = {
     "rel-160"
    ],
    "centre": {
-    "x": -54,
-    "y": -31
+    "x": 63,
+    "y": -14
    },
    "radius": 6.3083261120685235
   },
   {
-   "id": 13,
-   "name": "Ambient",
+   "id": 14,
+   "name": "Special Guests · 16 Oct",
+   "basis": "show",
    "memberIds": [
     "rel-013",
     "rel-002",
@@ -332,14 +371,15 @@ window.SEA_DATA = {
     "rel-012"
    ],
    "centre": {
-    "x": 63,
-    "y": -14
+    "x": -39,
+    "y": 55
    },
    "radius": 5.997777228809804
   },
   {
-   "id": 14,
-   "name": "decade:1970s",
+   "id": 15,
+   "name": "1970s",
+   "basis": "sound",
    "memberIds": [
     "rel-177",
     "rel-168",
@@ -348,14 +388,15 @@ window.SEA_DATA = {
     "rel-179"
    ],
    "centre": {
-    "x": -38,
-    "y": 54
+    "x": -8,
+    "y": -68
    },
    "radius": 5.301315561749643
   },
   {
-   "id": 15,
-   "name": "decade:1960s",
+   "id": 16,
+   "name": "1960s",
+   "basis": "sound",
    "memberIds": [
     "rel-171",
     "rel-175",
@@ -363,190 +404,36 @@ window.SEA_DATA = {
     "rel-174"
    ],
    "centre": {
-    "x": -8,
-    "y": -68
+    "x": 54,
+    "y": 45
    },
    "radius": 4.9
   },
   {
-   "id": 16,
-   "name": "decade:2020s",
+   "id": 17,
+   "name": "2020s",
+   "basis": "sound",
    "memberIds": [
     "rel-167",
     "rel-173",
     "rel-176"
    ],
    "centre": {
-    "x": 22,
-    "y": 41
+    "x": -46,
+    "y": -10
    },
    "radius": 4.444486372867091
   },
   {
-   "id": 17,
-   "name": "island-17",
-   "memberIds": [
-    "rel-015"
-   ],
-   "centre": {
-    "x": -73,
-    "y": 3
-   },
-   "radius": 3.2
-  },
-  {
    "id": 18,
-   "name": "island-18",
-   "memberIds": [
-    "rel-016"
-   ],
-   "centre": {
-    "x": 54,
-    "y": -54
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 19,
-   "name": "island-19",
-   "memberIds": [
-    "rel-019"
-   ],
-   "centre": {
-    "x": -4,
-    "y": 78
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 20,
-   "name": "island-20",
-   "memberIds": [
-    "rel-021"
-   ],
-   "centre": {
-    "x": -52,
-    "y": -61
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 21,
-   "name": "island-21",
-   "memberIds": [
-    "rel-023"
-   ],
-   "centre": {
-    "x": 80,
-    "y": 10
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 22,
-   "name": "island-22",
-   "memberIds": [
-    "rel-025"
-   ],
-   "centre": {
-    "x": -68,
-    "y": 47
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 23,
-   "name": "island-23",
-   "memberIds": [
-    "rel-027"
-   ],
-   "centre": {
-    "x": 19,
-    "y": -83
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 24,
-   "name": "island-24",
-   "memberIds": [
-    "rel-028"
-   ],
-   "centre": {
-    "x": 43,
-    "y": 76
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 25,
-   "name": "island-25",
-   "memberIds": [
-    "rel-031"
-   ],
-   "centre": {
-    "x": -85,
-    "y": -27
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 26,
-   "name": "island-26",
-   "memberIds": [
-    "rel-033"
-   ],
-   "centre": {
-    "x": 82,
-    "y": -38
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 27,
-   "name": "island-27",
-   "memberIds": [
-    "rel-035"
-   ],
-   "centre": {
-    "x": -36,
-    "y": 86
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 28,
-   "name": "island-28",
-   "memberIds": [
-    "rel-037"
-   ],
-   "centre": {
-    "x": -32,
-    "y": -89
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 29,
-   "name": "island-29",
-   "memberIds": [
-    "rel-038"
-   ],
-   "centre": {
-    "x": 85,
-    "y": 45
-   },
-   "radius": 3.2
-  },
-  {
-   "id": 30,
-   "name": "decade:2020s",
+   "name": "2020s (2)",
+   "basis": "sound",
    "memberIds": [
     "rel-169"
    ],
    "centre": {
-    "x": -62,
-    "y": 29
+    "x": 26,
+    "y": -39
    },
    "radius": 3.2
   }
@@ -573,12 +460,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "VxuNvoiel2g",
    "youtubeUrl": "https://www.youtube.com/watch?v=VxuNvoiel2g",
@@ -586,9 +473,9 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:35:54.935Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
-   "x": 3,
-   "y": -2,
+   "depth": 0.785,
+   "x": 2,
+   "y": -1,
    "neighbours": [
     {
      "id": "rel-024",
@@ -596,7 +483,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.7518796992481204,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin",
+      "played on the same show: SHAMOS",
       "same artist: Uranium Club"
      ]
     },
@@ -606,7 +493,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -615,7 +502,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -641,30 +528,30 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "H_AKKQ-f9LM",
    "youtubeUrl": "https://www.youtube.com/watch?v=H_AKKQ-f9LM",
    "youtubeTitle": "Larry Heard - Micro Gravity",
    "youtubeCheckedAt": "2026-10-16T18:35:57.216Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.776,
-   "x": 66,
-   "y": -14,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -36,
+   "y": 55,
    "neighbours": [
     {
      "id": "rel-008",
      "name": "Praise (Fingers Tribal Mix)",
      "artist": "Larry Heard",
-     "score": 0.7518796992481203,
+     "score": 0.7518796992481204,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock",
+      "played on the same show: Special Guests",
       "same artist: Larry Heard"
      ]
     },
@@ -674,7 +561,7 @@ window.SEA_DATA = {
      "artist": "Marcello Napoletano",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -683,7 +570,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard & Mr. White",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -709,12 +596,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "6cRctjPRv6M",
    "youtubeUrl": "https://www.youtube.com/watch?v=6cRctjPRv6M",
@@ -722,7 +609,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:35:59.093Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": 3,
    "y": 0,
    "neighbours": [
@@ -732,7 +619,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -741,7 +628,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -750,7 +637,7 @@ window.SEA_DATA = {
      "artist": "Duds",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -776,22 +663,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "EKLbfDBoawI",
    "youtubeUrl": "https://www.youtube.com/watch?v=EKLbfDBoawI",
    "youtubeTitle": "This Moment Must Be The Movement",
    "youtubeCheckedAt": "2026-10-16T18:36:00.847Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.777,
-   "x": 65,
-   "y": -12,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -37,
+   "y": 57,
    "neighbours": [
     {
      "id": "rel-002",
@@ -799,7 +686,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -808,7 +695,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard & Mr. White",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -817,7 +704,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -843,12 +730,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "Kl1oQE2uzxw",
    "youtubeUrl": "https://www.youtube.com/watch?v=Kl1oQE2uzxw",
@@ -856,7 +743,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:02.749Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": 2,
    "y": 1,
    "neighbours": [
@@ -866,7 +753,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -875,7 +762,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -884,7 +771,7 @@ window.SEA_DATA = {
      "artist": "Duds",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -910,22 +797,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "FiCEdQl91v4",
    "youtubeUrl": "https://www.youtube.com/watch?v=FiCEdQl91v4",
    "youtubeTitle": "Larry Heard presents Mr. White - Virtual Emotion (Dub) [ML2236]",
    "youtubeCheckedAt": "2026-10-16T18:36:05.857Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.777,
-   "x": 62,
-   "y": -12,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -39,
+   "y": 58,
    "neighbours": [
     {
      "id": "rel-002",
@@ -933,7 +820,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -942,7 +829,7 @@ window.SEA_DATA = {
      "artist": "Marcello Napoletano",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -951,7 +838,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -977,12 +864,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "DRwpphViu8o",
    "youtubeUrl": "https://www.youtube.com/watch?v=DRwpphViu8o",
@@ -990,8 +877,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:08.680Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
-   "x": 1,
+   "depth": 0.786,
+   "x": 2,
    "y": 2,
    "neighbours": [
     {
@@ -1000,7 +887,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1009,7 +896,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1018,7 +905,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1044,30 +931,30 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "OpzYRpuuMA4",
    "youtubeUrl": "https://www.youtube.com/watch?v=OpzYRpuuMA4",
    "youtubeTitle": "Larry Heard - Praise Fingers (Fingers Tribal Mix) [ML2247]",
    "youtubeCheckedAt": "2026-10-16T18:36:11.612Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.776,
-   "x": 61,
-   "y": -12,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -41,
+   "y": 56,
    "neighbours": [
     {
      "id": "rel-002",
      "name": "Micro-Gravity",
      "artist": "Larry Heard",
-     "score": 0.7518796992481203,
+     "score": 0.7518796992481204,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock",
+      "played on the same show: Special Guests",
       "same artist: Larry Heard"
      ]
     },
@@ -1077,7 +964,7 @@ window.SEA_DATA = {
      "artist": "Marcello Napoletano",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1086,7 +973,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard & Mr. White",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1112,12 +999,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "UmuksS9xLwA",
    "youtubeUrl": "https://www.youtube.com/watch?v=UmuksS9xLwA",
@@ -1125,7 +1012,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:14.596Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": 0,
    "y": 2,
    "neighbours": [
@@ -1135,7 +1022,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1144,7 +1031,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1153,7 +1040,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1179,22 +1066,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "pEHKum4Bgd0",
    "youtubeUrl": "https://www.youtube.com/watch?v=pEHKum4Bgd0",
    "youtubeTitle": "The Morning Kids - Free Lovin' (Housedream) (1996)",
    "youtubeCheckedAt": "2026-10-16T18:36:17.556Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.777,
-   "x": 60,
-   "y": -15,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -41,
+   "y": 54,
    "neighbours": [
     {
      "id": "rel-002",
@@ -1202,7 +1089,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1211,7 +1098,7 @@ window.SEA_DATA = {
      "artist": "Marcello Napoletano",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1220,7 +1107,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard & Mr. White",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1246,12 +1133,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "dAOX1Sy1b_Q",
    "youtubeUrl": "https://www.youtube.com/watch?v=dAOX1Sy1b_Q",
@@ -1259,7 +1146,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:20.207Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": -1,
    "y": 2,
    "neighbours": [
@@ -1269,7 +1156,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1278,7 +1165,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1287,7 +1174,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1313,22 +1200,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "s1R4EOPhE6k",
    "youtubeUrl": "https://www.youtube.com/watch?v=s1R4EOPhE6k",
    "youtubeTitle": "Strong Souls - Sensual (Let's Work mix)",
    "youtubeCheckedAt": "2026-10-16T18:36:22.753Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.777,
-   "x": 62,
-   "y": -17,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -39,
+   "y": 52,
    "neighbours": [
     {
      "id": "rel-002",
@@ -1336,7 +1223,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1345,7 +1232,7 @@ window.SEA_DATA = {
      "artist": "Marcello Napoletano",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1354,7 +1241,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard & Mr. White",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1380,22 +1267,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-16",
    "tags": [
-    "House",
-    "Ambient",
-    "Electronica",
-    "Classic Rock",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Ambient",
+    "show-genre:Electronica",
+    "show-genre:Classic Rock"
    ],
    "youtubeId": "5Rlp3D_2Fqo",
    "youtubeUrl": "https://www.youtube.com/watch?v=5Rlp3D_2Fqo",
    "youtubeTitle": "So Alive",
    "youtubeCheckedAt": "2026-10-16T18:36:30.498Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 13,
-   "depth": 0.777,
-   "x": 65,
-   "y": -16,
+   "islandId": 14,
+   "depth": 0.8,
+   "x": -37,
+   "y": 53,
    "neighbours": [
     {
      "id": "rel-002",
@@ -1403,7 +1290,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1412,7 +1299,7 @@ window.SEA_DATA = {
      "artist": "Marcello Napoletano",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -1421,7 +1308,7 @@ window.SEA_DATA = {
      "artist": "Larry Heard & Mr. White",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Ambient, Electronica, Classic Rock"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1447,12 +1334,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "qinto7y1AsU",
    "youtubeUrl": "https://www.youtube.com/watch?v=qinto7y1AsU",
@@ -1460,7 +1347,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:33.374Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": -2,
    "y": 1,
    "neighbours": [
@@ -1470,7 +1357,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1479,7 +1366,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1488,7 +1375,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1522,36 +1409,36 @@ window.SEA_DATA = {
    "youtubeTitle": "4 My Peepz (Dubfire Rework)",
    "youtubeCheckedAt": "2026-10-16T18:36:36.233Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 17,
-   "depth": 0.803,
-   "x": -70,
-   "y": 4,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -11,
+   "y": 13,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-021",
+     "name": "When I Feel Like This",
+     "artist": "Artonal",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1585,36 +1472,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Paul Ritch - Walk The Line (HD)",
    "youtubeCheckedAt": "2026-10-16T18:36:44.693Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 18,
-   "depth": 0.803,
-   "x": 57,
-   "y": -54,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -10,
+   "y": 14,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-021",
+     "name": "When I Feel Like This",
+     "artist": "Artonal",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1640,12 +1527,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "P0uzELbI9UE",
    "youtubeUrl": "https://www.youtube.com/watch?v=P0uzELbI9UE",
@@ -1653,7 +1540,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:47.470Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": -2,
    "y": 0,
    "neighbours": [
@@ -1663,7 +1550,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1672,7 +1559,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1681,7 +1568,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1707,12 +1594,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "4Atzj0yPSYg",
    "youtubeUrl": "https://www.youtube.com/watch?v=4Atzj0yPSYg",
@@ -1720,9 +1607,9 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:50.431Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
-   "x": -2,
-   "y": -2,
+   "depth": 0.786,
+   "x": -3,
+   "y": -1,
    "neighbours": [
     {
      "id": "rel-001",
@@ -1730,7 +1617,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1739,7 +1626,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1748,7 +1635,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1782,36 +1669,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Bours? — Blind Pick [TOTEP001]",
    "youtubeCheckedAt": "2026-10-16T18:36:53.206Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 19,
-   "depth": 0.803,
-   "x": -2,
-   "y": 78,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -12,
+   "y": 15,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-021",
+     "name": "When I Feel Like This",
+     "artist": "Artonal",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1837,12 +1724,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "cEIFQiWOEHg",
    "youtubeUrl": "https://www.youtube.com/watch?v=cEIFQiWOEHg",
@@ -1850,8 +1737,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:55.838Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
-   "x": -3,
+   "depth": 0.786,
+   "x": -2,
    "y": -3,
    "neighbours": [
     {
@@ -1860,7 +1747,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1869,7 +1756,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1878,7 +1765,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -1912,36 +1799,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Artonal - When I Feel Like This",
    "youtubeCheckedAt": "2026-10-16T18:36:58.320Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 20,
-   "depth": 0.803,
-   "x": -49,
-   "y": -61,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -13,
+   "y": 15,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -1967,12 +1854,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "E5z3VzjBbF4",
    "youtubeUrl": "https://www.youtube.com/watch?v=E5z3VzjBbF4",
@@ -1980,7 +1867,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:01.240Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": -1,
    "y": -4,
    "neighbours": [
@@ -1990,7 +1877,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -1999,7 +1886,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -2008,7 +1895,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -2042,36 +1929,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Khas — Run Silent [BOI029]",
    "youtubeCheckedAt": "2026-10-16T18:37:04.126Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 21,
-   "depth": 0.803,
-   "x": 83,
-   "y": 11,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -14,
+   "y": 16,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2097,12 +1984,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "Git1gb-msvA",
    "youtubeUrl": "https://www.youtube.com/watch?v=Git1gb-msvA",
@@ -2110,9 +1997,9 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:06.911Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.785,
    "x": 0,
-   "y": -2,
+   "y": -3,
    "neighbours": [
     {
      "id": "rel-001",
@@ -2120,7 +2007,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.7518796992481204,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin",
+      "played on the same show: SHAMOS",
       "same artist: Uranium Club"
      ]
     },
@@ -2130,7 +2017,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -2139,7 +2026,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -2173,36 +2060,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Korrupt",
    "youtubeCheckedAt": "2026-10-16T18:37:09.708Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 22,
-   "depth": 0.803,
-   "x": -65,
-   "y": 47,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -15,
+   "y": 14,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2228,12 +2115,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "w6ZEYWoSzN4",
    "youtubeUrl": "https://www.youtube.com/watch?v=w6ZEYWoSzN4",
@@ -2241,7 +2128,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:12.706Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": 1,
    "y": -5,
    "neighbours": [
@@ -2251,7 +2138,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -2260,7 +2147,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -2269,7 +2156,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -2303,36 +2190,36 @@ window.SEA_DATA = {
    "youtubeTitle": "ISAIAH - Disharmonized [SINDEXVA001B]",
    "youtubeCheckedAt": "2026-10-16T18:37:15.467Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 23,
-   "depth": 0.803,
-   "x": 21,
-   "y": -83,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -16,
+   "y": 14,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2366,36 +2253,36 @@ window.SEA_DATA = {
    "youtubeTitle": "CC:DISCO! - Chez Moi (Waiting For You) ft Confidence Man (Sally C Remix) [PH132R]",
    "youtubeCheckedAt": "2026-10-16T18:37:23.726Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 24,
-   "depth": 0.803,
-   "x": 46,
-   "y": 76,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -16,
+   "y": 12,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2421,12 +2308,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "d0Jyvteqzrw",
    "youtubeUrl": "https://www.youtube.com/watch?v=d0Jyvteqzrw",
@@ -2434,7 +2321,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:26.796Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
+   "depth": 0.786,
    "x": 2,
    "y": -3,
    "neighbours": [
@@ -2444,7 +2331,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -2453,7 +2340,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -2462,7 +2349,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -2488,22 +2375,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "a189Zc1a50o",
    "youtubeUrl": "https://www.youtube.com/watch?v=a189Zc1a50o",
    "youtubeTitle": "Albert Marcœur - Deux Lions Au Soleil - Part 4",
    "youtubeCheckedAt": "2026-10-16T18:37:32.151Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 49,
-   "y": 18,
+   "x": -47,
+   "y": 20,
    "neighbours": [
     {
      "id": "rel-032",
@@ -2511,7 +2398,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2520,7 +2407,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2529,7 +2416,7 @@ window.SEA_DATA = {
      "artist": "Ігор Цимбровський",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -2563,36 +2450,36 @@ window.SEA_DATA = {
    "youtubeTitle": "It Feels So Good (The Conductor & The Cowboy Amnesia Club Mix)",
    "youtubeCheckedAt": "2026-10-16T18:37:34.872Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 25,
-   "depth": 0.803,
-   "x": -82,
-   "y": -27,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -16,
+   "y": 11,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2618,22 +2505,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "4H37VgFCs74",
    "youtubeUrl": "https://www.youtube.com/watch?v=4H37VgFCs74",
    "youtubeTitle": "Spear - The First Breath After Death",
    "youtubeCheckedAt": "2026-10-16T18:37:37.718Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 49,
-   "y": 19,
+   "x": -48,
+   "y": 21,
    "neighbours": [
     {
      "id": "rel-030",
@@ -2641,7 +2528,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2650,7 +2537,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2659,7 +2546,7 @@ window.SEA_DATA = {
      "artist": "Ігор Цимбровський",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -2693,36 +2580,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Dia De Los Muertos",
    "youtubeCheckedAt": "2026-10-16T18:37:40.499Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 26,
-   "depth": 0.803,
-   "x": 85,
-   "y": -38,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -15,
+   "y": 9,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2748,22 +2635,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "qKViYdxbStA",
    "youtubeUrl": "https://www.youtube.com/watch?v=qKViYdxbStA",
    "youtubeTitle": "Roberto Donnini - 'T' 1 A",
    "youtubeCheckedAt": "2026-10-16T18:37:43.088Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 47,
-   "y": 20,
+   "x": -49,
+   "y": 22,
    "neighbours": [
     {
      "id": "rel-030",
@@ -2771,7 +2658,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2780,7 +2667,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2789,7 +2676,7 @@ window.SEA_DATA = {
      "artist": "Ігор Цимбровський",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -2823,36 +2710,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Aetherfall",
    "youtubeCheckedAt": "2026-10-16T18:37:45.759Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 27,
-   "depth": 0.803,
-   "x": -34,
-   "y": 86,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -13,
+   "y": 10,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -2878,22 +2765,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "STOb77rwsHI",
    "youtubeUrl": "https://www.youtube.com/watch?v=STOb77rwsHI",
    "youtubeTitle": "Ігор Цимбровський - троянди поету",
    "youtubeCheckedAt": "2026-10-16T18:37:48.538Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 46,
-   "y": 20,
+   "x": -50,
+   "y": 23,
    "neighbours": [
     {
      "id": "rel-030",
@@ -2901,7 +2788,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2910,7 +2797,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -2919,7 +2806,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -2953,36 +2840,36 @@ window.SEA_DATA = {
    "youtubeTitle": "BLANKA (ES) - Say It with Me ~ [MRV003]",
    "youtubeCheckedAt": "2026-10-16T18:37:51.214Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 28,
-   "depth": 0.803,
-   "x": -30,
-   "y": -89,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -12,
+   "y": 10,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -3016,36 +2903,36 @@ window.SEA_DATA = {
    "youtubeTitle": "Kara Okay - Let Me Lose My Mind",
    "youtubeCheckedAt": "2026-10-16T18:37:57.242Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "islandId": 29,
-   "depth": 0.803,
-   "x": 87,
-   "y": 45,
+   "islandId": 1,
+   "depth": 0.791,
+   "x": -11,
+   "y": 12,
    "neighbours": [
     {
-     "id": "rel-002",
-     "name": "Micro-Gravity",
-     "artist": "Larry Heard",
-     "score": 0.27819548872180455,
+     "id": "rel-015",
+     "name": "4 My Peepz (Dubfire Rework)",
+     "artist": "Paperclip People",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-004",
-     "name": "This Moment Must Be the Movement",
-     "artist": "Marcello Napoletano",
-     "score": 0.27819548872180455,
+     "id": "rel-016",
+     "name": "Walk the Line",
+     "artist": "Paul Ritch",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-006",
-     "name": "Virtual Emotion (Dub)",
-     "artist": "Larry Heard & Mr. White",
-     "score": 0.27819548872180455,
+     "id": "rel-019",
+     "name": "Blind Pick",
+     "artist": "Bours?",
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -3071,22 +2958,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "4ZQ_YXaO3I0",
    "youtubeUrl": "https://www.youtube.com/watch?v=4ZQ_YXaO3I0",
    "youtubeTitle": "Unknown Artist - Untitled 02",
    "youtubeCheckedAt": "2026-10-16T18:38:01.154Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 45,
-   "y": 20,
+   "x": -52,
+   "y": 21,
    "neighbours": [
     {
      "id": "rel-030",
@@ -3094,7 +2981,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -3103,7 +2990,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -3112,7 +2999,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -3138,20 +3025,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "hlPI2GtEmBo",
    "youtubeUrl": "https://www.youtube.com/watch?v=hlPI2GtEmBo",
    "youtubeTitle": "Fabrizio Lapiana - Freckles (beatless) [ATTICLP01]",
    "youtubeCheckedAt": "2026-10-16T18:38:03.785Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 26,
-   "y": -51,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 21,
+   "y": 56,
    "neighbours": [
     {
      "id": "rel-042",
@@ -3159,7 +3046,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -3168,7 +3055,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -3177,7 +3064,7 @@ window.SEA_DATA = {
      "artist": "Sasho Uzun",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -3203,22 +3090,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "AyKmFnJ0CAw",
    "youtubeUrl": "https://www.youtube.com/watch?v=AyKmFnJ0CAw",
    "youtubeTitle": "Richard Davis – Methane Sea - Prelude & Aftermath (1978)",
    "youtubeCheckedAt": "2026-10-16T18:38:11.866Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 43,
-   "y": 18,
+   "x": -52,
+   "y": 20,
    "neighbours": [
     {
      "id": "rel-030",
@@ -3226,7 +3113,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -3235,7 +3122,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -3244,7 +3131,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -3270,20 +3157,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "-mgTXWbu2F4",
    "youtubeUrl": "https://www.youtube.com/watch?v=-mgTXWbu2F4",
    "youtubeTitle": "Indian (Revamp)",
    "youtubeCheckedAt": "2026-10-16T18:38:20.381Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 26,
-   "y": -49,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 21,
+   "y": 58,
    "neighbours": [
     {
      "id": "rel-040",
@@ -3291,7 +3178,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -3300,7 +3187,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -3309,7 +3196,7 @@ window.SEA_DATA = {
      "artist": "Sasho Uzun",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -3335,22 +3222,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "3Lrv2YWmTzs",
    "youtubeUrl": "https://www.youtube.com/watch?v=3Lrv2YWmTzs",
    "youtubeTitle": "Claude Young - Welcome",
    "youtubeCheckedAt": "2026-10-16T18:38:23.075Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 44,
-   "y": 16,
+   "x": -52,
+   "y": 18,
    "neighbours": [
     {
      "id": "rel-030",
@@ -3358,7 +3245,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -3367,7 +3254,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -3376,7 +3263,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -3402,20 +3289,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "h2Nn0my-_xs",
    "youtubeUrl": "https://www.youtube.com/watch?v=h2Nn0my-_xs",
    "youtubeTitle": "Party Guilt (Matt Styles club mix)",
    "youtubeCheckedAt": "2026-10-16T18:38:28.673Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 24,
-   "y": -48,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 19,
+   "y": 59,
    "neighbours": [
     {
      "id": "rel-040",
@@ -3423,7 +3310,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -3432,7 +3319,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -3441,7 +3328,7 @@ window.SEA_DATA = {
      "artist": "Sasho Uzun",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -3467,22 +3354,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "7Tg8V4_7atM",
    "youtubeUrl": "https://www.youtube.com/watch?v=7Tg8V4_7atM",
    "youtubeTitle": "Ruidhle Mo Nighean Donn",
    "youtubeCheckedAt": "2026-10-16T18:58:43.744Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -31,
-   "y": -6,
+   "x": 37,
+   "y": -21,
    "neighbours": [
     {
      "id": "rel-055",
@@ -3490,7 +3377,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -3499,7 +3386,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -3508,7 +3395,7 @@ window.SEA_DATA = {
      "artist": "Brighde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -3526,30 +3413,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "f396MYm7488",
    "youtubeUrl": "https://www.youtube.com/watch?v=f396MYm7488",
    "youtubeTitle": "Hvid //",
    "youtubeCheckedAt": "2026-10-16T18:58:45.650Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -11,
-   "y": 13,
+   "x": 21,
+   "y": 25,
    "neighbours": [
     {
      "id": "rel-063",
@@ -3557,7 +3444,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -3566,7 +3453,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -3575,7 +3462,7 @@ window.SEA_DATA = {
      "artist": "Michele Mercure",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -3601,46 +3488,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "Mf0i0pn9wAs",
    "youtubeUrl": "https://www.youtube.com/watch?v=Mf0i0pn9wAs",
    "youtubeTitle": "Ocean Moon - Angel Falls",
    "youtubeCheckedAt": "2026-10-16T18:58:48.744Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 21,
-   "y": 56,
+   "x": -51,
+   "y": -31,
    "neighbours": [
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-115",
      "name": "Frozen Flowers",
      "artist": "Chihei Hatakeyama",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -3666,11 +3553,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "Z9vAJ_H0rao",
    "youtubeUrl": "https://www.youtube.com/watch?v=Z9vAJ_H0rao",
@@ -3678,35 +3565,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:58:51.374Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
-   "x": -8,
+   "depth": 0.799,
+   "x": -7,
    "y": 43,
    "neighbours": [
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-084",
      "name": "Rosamunde",
      "artist": "Schubert, Budapest Philharmonic Orchestra, Janos Kovacs",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -3732,12 +3619,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "m-uMLbwH0vs",
    "youtubeUrl": "https://www.youtube.com/watch?v=m-uMLbwH0vs",
@@ -3745,7 +3632,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:58:54.129Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": 4,
    "y": -24,
    "neighbours": [
@@ -3753,27 +3640,27 @@ window.SEA_DATA = {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-073",
      "name": "Alto Valle",
      "artist": "Los Espiritus",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -3799,22 +3686,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "b3CLhTInG4o",
    "youtubeUrl": "https://www.youtube.com/watch?v=b3CLhTInG4o",
    "youtubeTitle": "Janice Edwards - Time For Me",
    "youtubeCheckedAt": "2026-10-16T18:58:56.749Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -19,
-   "y": -42,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 49,
+   "y": 18,
    "neighbours": [
     {
      "id": "rel-066",
@@ -3822,7 +3709,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -3831,7 +3718,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -3840,7 +3727,7 @@ window.SEA_DATA = {
      "artist": "RAH Band",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -3858,29 +3745,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "mHRfCfrV2EE",
    "youtubeUrl": "https://www.youtube.com/watch?v=mHRfCfrV2EE",
    "youtubeTitle": "Black Gold of the Sun",
    "youtubeCheckedAt": "2026-10-16T18:58:59.629Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -51,
-   "y": -31,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 66,
+   "y": -14,
    "neighbours": [
     {
      "id": "rel-067",
@@ -3888,7 +3775,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -3897,7 +3784,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -3906,7 +3793,7 @@ window.SEA_DATA = {
      "artist": "Zdar",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -3932,20 +3819,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "bIVKaayaNaY",
    "youtubeUrl": "https://www.youtube.com/watch?v=bIVKaayaNaY",
    "youtubeTitle": "Nolan Strong and The Diablos \"The Wind\" - 1954 Fortune Records",
    "youtubeCheckedAt": "2026-10-16T18:59:02.507Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 37,
-   "y": -22,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -19,
+   "y": -42,
    "neighbours": [
     {
      "id": "rel-058",
@@ -3953,7 +3840,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -3962,7 +3849,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -3971,7 +3858,7 @@ window.SEA_DATA = {
      "artist": "The Orioles",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -3997,22 +3884,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "p2PiyLJxg4Y",
    "youtubeUrl": "https://www.youtube.com/watch?v=p2PiyLJxg4Y",
    "youtubeTitle": "Gengis (Album Version)",
    "youtubeCheckedAt": "2026-10-16T18:59:10.786Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 22,
-   "y": 25,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -29,
+   "y": -6,
    "neighbours": [
     {
      "id": "rel-059",
@@ -4020,7 +3907,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -4029,7 +3916,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -4038,7 +3925,7 @@ window.SEA_DATA = {
      "artist": "Alice Swoboda",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -4064,48 +3951,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "qR9LwfhERhY",
    "youtubeUrl": "https://www.youtube.com/watch?v=qR9LwfhERhY",
    "youtubeTitle": "Northworks - Out (Millions Of Moments)",
    "youtubeCheckedAt": "2026-10-16T18:59:13.320Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -47,
-   "y": 20,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 25,
+   "y": -52,
    "neighbours": [
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-079",
      "name": "Sunk Ice",
      "artist": "2000 And One",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -4131,22 +4018,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "zCT1Fy0IWaw",
    "youtubeUrl": "https://www.youtube.com/watch?v=zCT1Fy0IWaw",
    "youtubeTitle": "1994",
    "youtubeCheckedAt": "2026-10-16T18:59:24.869Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -31,
-   "y": -5,
+   "x": 37,
+   "y": -20,
    "neighbours": [
     {
      "id": "rel-045",
@@ -4154,7 +4041,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -4163,7 +4050,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -4172,7 +4059,7 @@ window.SEA_DATA = {
      "artist": "Brighde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -4198,11 +4085,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "-mQKemKACmQ",
    "youtubeUrl": "https://www.youtube.com/watch?v=-mQKemKACmQ",
@@ -4210,7 +4097,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:59:33.070Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -8,
    "y": 44,
    "neighbours": [
@@ -4218,27 +4105,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-084",
      "name": "Rosamunde",
      "artist": "Schubert, Budapest Philharmonic Orchestra, Janos Kovacs",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -4264,12 +4151,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "gVM8P9Do7yg",
    "youtubeUrl": "https://www.youtube.com/watch?v=gVM8P9Do7yg",
@@ -4277,35 +4164,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:59:36.011Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
-   "x": 4,
+   "depth": 0.793,
+   "x": 5,
    "y": -23,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-073",
      "name": "Alto Valle",
      "artist": "Los Espiritus",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -4331,20 +4218,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "h7-BMmEMvNo",
    "youtubeUrl": "https://www.youtube.com/watch?v=h7-BMmEMvNo",
    "youtubeTitle": "It's Funny To Everyone But Me",
    "youtubeCheckedAt": "2026-10-16T18:59:44.073Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 37,
-   "y": -20,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -20,
+   "y": -41,
    "neighbours": [
     {
      "id": "rel-052",
@@ -4352,7 +4239,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -4361,7 +4248,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -4370,7 +4257,7 @@ window.SEA_DATA = {
      "artist": "The Orioles",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -4396,30 +4283,30 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "NRHE-nS-Hug",
    "youtubeUrl": "https://www.youtube.com/watch?v=NRHE-nS-Hug",
    "youtubeTitle": "The Change",
    "youtubeCheckedAt": "2026-10-16T18:59:52.698Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.781,
-   "x": 21,
-   "y": 26,
+   "islandId": 4,
+   "depth": 0.801,
+   "x": -29,
+   "y": -5,
    "neighbours": [
     {
      "id": "rel-069",
      "name": "Keep on Knocking",
      "artist": "Death",
-     "score": 0.7518796992481204,
+     "score": 0.7518796992481203,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae",
+      "played on the same show: Special Guests",
       "same artist: Death"
      ]
     },
@@ -4429,7 +4316,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -4438,7 +4325,7 @@ window.SEA_DATA = {
      "artist": "Alice Swoboda",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -4464,48 +4351,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "l6ddyATbIn4",
    "youtubeUrl": "https://www.youtube.com/watch?v=l6ddyATbIn4",
    "youtubeTitle": "Beautiful Witness",
    "youtubeCheckedAt": "2026-10-16T18:59:55.638Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -47,
-   "y": 21,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 24,
+   "y": -50,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-079",
      "name": "Sunk Ice",
      "artist": "2000 And One",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -4531,12 +4418,12 @@ window.SEA_DATA = {
    "show": "SHAMOS",
    "date": "2026-10-13T01:00:00+01:00",
    "tags": [
-    "Post Punk",
-    "Krautrock",
-    "Indie Rock",
-    "No Talkin",
     "station:nts",
-    "show:SHAMOS"
+    "show:SHAMOS",
+    "show-genre:Post Punk",
+    "show-genre:Krautrock",
+    "show-genre:Indie Rock",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "haBeRluizqI",
    "youtubeUrl": "https://www.youtube.com/watch?v=haBeRluizqI",
@@ -4544,8 +4431,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:59:58.445Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 0,
-   "depth": 0.787,
-   "x": 2,
+   "depth": 0.786,
+   "x": 4,
    "y": -2,
    "neighbours": [
     {
@@ -4554,7 +4441,7 @@ window.SEA_DATA = {
      "artist": "Uranium Club",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -4563,7 +4450,7 @@ window.SEA_DATA = {
      "artist": "Bedroom",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     },
     {
@@ -4572,7 +4459,7 @@ window.SEA_DATA = {
      "artist": "Preoccupations",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Punk, Krautrock, Indie Rock, No Talkin"
+      "played on the same show: SHAMOS"
      ]
     }
    ]
@@ -4598,22 +4485,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "BAuROIVuZkU",
    "youtubeUrl": "https://www.youtube.com/watch?v=BAuROIVuZkU",
    "youtubeTitle": "Victoria Mingot - 6.  iterniti {God Spill / 5GT038}",
    "youtubeCheckedAt": "2026-10-16T19:00:03.875Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -33,
-   "y": -4,
+   "x": 36,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-045",
@@ -4621,7 +4508,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -4630,7 +4517,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -4639,7 +4526,7 @@ window.SEA_DATA = {
      "artist": "Brighde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -4657,30 +4544,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "niG9f-XiGos",
    "youtubeUrl": "https://www.youtube.com/watch?v=niG9f-XiGos",
    "youtubeTitle": "Carme López - Epilogue: Inflorescencia [Audio]",
    "youtubeCheckedAt": "2026-10-16T19:00:06.834Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -11,
-   "y": 14,
+   "x": 21,
+   "y": 26,
    "neighbours": [
     {
      "id": "rel-046",
@@ -4688,7 +4575,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -4697,7 +4584,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -4706,7 +4593,7 @@ window.SEA_DATA = {
      "artist": "Michele Mercure",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -4732,11 +4619,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "2BopNoD_Zgc",
    "youtubeUrl": "https://www.youtube.com/watch?v=2BopNoD_Zgc",
@@ -4744,7 +4631,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:00:11.983Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -9,
    "y": 45,
    "neighbours": [
@@ -4752,27 +4639,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-084",
      "name": "Rosamunde",
      "artist": "Schubert, Budapest Philharmonic Orchestra, Janos Kovacs",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -4798,12 +4685,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "HrLa7w7FnTM",
    "youtubeUrl": "https://www.youtube.com/watch?v=HrLa7w7FnTM",
@@ -4811,35 +4698,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:00:14.794Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
-   "x": 3,
+   "depth": 0.793,
+   "x": 4,
    "y": -22,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-073",
      "name": "Alto Valle",
      "artist": "Los Espiritus",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -4865,22 +4752,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "PKDQ6eFhp_o",
    "youtubeUrl": "https://www.youtube.com/watch?v=PKDQ6eFhp_o",
    "youtubeTitle": "Bluesette - Mood For Love",
    "youtubeCheckedAt": "2026-10-16T19:00:17.531Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -20,
-   "y": -40,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 49,
+   "y": 19,
    "neighbours": [
     {
      "id": "rel-050",
@@ -4888,7 +4775,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -4897,7 +4784,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -4906,7 +4793,7 @@ window.SEA_DATA = {
      "artist": "RAH Band",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -4924,29 +4811,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "mz7UJFeJkzg",
    "youtubeUrl": "https://www.youtube.com/watch?v=mz7UJFeJkzg",
    "youtubeTitle": "Africa",
    "youtubeCheckedAt": "2026-10-16T19:00:20.473Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -52,
-   "y": -29,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 65,
+   "y": -12,
    "neighbours": [
     {
      "id": "rel-051",
@@ -4954,7 +4841,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -4963,7 +4850,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -4972,7 +4859,7 @@ window.SEA_DATA = {
      "artist": "Zdar",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -4998,20 +4885,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "17wPIYSUGs4",
    "youtubeUrl": "https://www.youtube.com/watch?v=17wPIYSUGs4",
    "youtubeTitle": "Three Little Words",
    "youtubeCheckedAt": "2026-10-16T19:00:23.360Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 35,
-   "y": -19,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -21,
+   "y": -39,
    "neighbours": [
     {
      "id": "rel-052",
@@ -5019,7 +4906,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -5028,7 +4915,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -5037,7 +4924,7 @@ window.SEA_DATA = {
      "artist": "The Orioles",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -5063,30 +4950,30 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "uAZ9R2t5Jd0",
    "youtubeUrl": "https://www.youtube.com/watch?v=uAZ9R2t5Jd0",
    "youtubeTitle": "Death - Keep on Knocking (1976)",
    "youtubeCheckedAt": "2026-10-16T19:00:28.915Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.781,
-   "x": 20,
-   "y": 27,
+   "islandId": 4,
+   "depth": 0.801,
+   "x": -30,
+   "y": -3,
    "neighbours": [
     {
      "id": "rel-059",
      "name": "The Change",
      "artist": "Death",
-     "score": 0.7518796992481204,
+     "score": 0.7518796992481203,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae",
+      "played on the same show: Special Guests",
       "same artist: Death"
      ]
     },
@@ -5096,7 +4983,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -5105,7 +4992,7 @@ window.SEA_DATA = {
      "artist": "Alice Swoboda",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -5131,48 +5018,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "WHHrEzDoMP8",
    "youtubeUrl": "https://www.youtube.com/watch?v=WHHrEzDoMP8",
    "youtubeTitle": "Lost Inside",
    "youtubeCheckedAt": "2026-10-16T19:00:31.613Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -49,
-   "y": 23,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 22,
+   "y": -49,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-079",
      "name": "Sunk Ice",
      "artist": "2000 And One",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -5198,22 +5085,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "zreeXtTGp_Q",
    "youtubeUrl": "https://www.youtube.com/watch?v=zreeXtTGp_Q",
    "youtubeTitle": "Duan",
    "youtubeCheckedAt": "2026-10-16T19:00:36.732Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -34,
-   "y": -3,
+   "x": 34,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-045",
@@ -5221,7 +5108,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -5230,7 +5117,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -5239,7 +5126,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -5257,30 +5144,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "KoUer--doOc",
    "youtubeUrl": "https://www.youtube.com/watch?v=KoUer--doOc",
    "youtubeTitle": "Ms. Meteo",
    "youtubeCheckedAt": "2026-10-16T19:00:39.583Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -11,
-   "y": 15,
+   "x": 20,
+   "y": 27,
    "neighbours": [
     {
      "id": "rel-046",
@@ -5288,7 +5175,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -5297,7 +5184,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -5306,7 +5193,7 @@ window.SEA_DATA = {
      "artist": "Michele Mercure",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -5332,12 +5219,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "3wV67Vunbc8",
    "youtubeUrl": "https://www.youtube.com/watch?v=3wV67Vunbc8",
@@ -5345,7 +5232,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:00:48.221Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": 2,
    "y": -21,
    "neighbours": [
@@ -5353,27 +5240,27 @@ window.SEA_DATA = {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -5399,22 +5286,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "Mb9yL1nYYVI",
    "youtubeUrl": "https://www.youtube.com/watch?v=Mb9yL1nYYVI",
    "youtubeTitle": "Fukutomi Yukihiro - 50 ways",
    "youtubeCheckedAt": "2026-10-16T19:00:50.799Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -21,
-   "y": -40,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 48,
+   "y": 21,
    "neighbours": [
     {
      "id": "rel-050",
@@ -5422,7 +5309,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -5431,7 +5318,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -5440,7 +5327,7 @@ window.SEA_DATA = {
      "artist": "RAH Band",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -5458,29 +5345,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "RBj33usPSV4",
    "youtubeUrl": "https://www.youtube.com/watch?v=RBj33usPSV4",
    "youtubeTitle": "Cheeseslider - Sweatmajor",
    "youtubeCheckedAt": "2026-10-16T19:00:53.518Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -54,
-   "y": -28,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 63,
+   "y": -11,
    "neighbours": [
     {
      "id": "rel-051",
@@ -5488,7 +5375,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -5497,7 +5384,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -5506,7 +5393,7 @@ window.SEA_DATA = {
      "artist": "Zdar",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -5532,20 +5419,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "YXH7IuCVKUo",
    "youtubeUrl": "https://www.youtube.com/watch?v=YXH7IuCVKUo",
    "youtubeTitle": "1948 HITS ARCHIVE: It’s Too Soon To Know - Orioles (#1 R&B hit)",
    "youtubeCheckedAt": "2026-10-16T19:00:56.643Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 34,
-   "y": -19,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -22,
+   "y": -39,
    "neighbours": [
     {
      "id": "rel-052",
@@ -5553,7 +5440,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -5562,7 +5449,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -5571,7 +5458,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -5597,20 +5484,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "Qaq_CfP20_U",
    "youtubeUrl": "https://www.youtube.com/watch?v=Qaq_CfP20_U",
    "youtubeTitle": "Sasho Uzun - Da Rhythm [PRK040]",
    "youtubeCheckedAt": "2026-10-16T19:00:59.138Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 22,
-   "y": -48,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 17,
+   "y": 58,
    "neighbours": [
     {
      "id": "rel-040",
@@ -5618,7 +5505,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -5627,7 +5514,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -5636,7 +5523,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -5662,22 +5549,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "spbnDPQ2dpk",
    "youtubeUrl": "https://www.youtube.com/watch?v=spbnDPQ2dpk",
    "youtubeTitle": "Alice Swoboda - Potter's Field (US 1972)",
    "youtubeCheckedAt": "2026-10-16T19:01:01.978Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 19,
-   "y": 28,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -31,
+   "y": -3,
    "neighbours": [
     {
      "id": "rel-053",
@@ -5685,7 +5572,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -5694,7 +5581,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -5703,7 +5590,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -5729,48 +5616,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "IM948FFYqQk",
    "youtubeUrl": "https://www.youtube.com/watch?v=IM948FFYqQk",
    "youtubeTitle": "2000 And One - Sunk Ice (A1)",
    "youtubeCheckedAt": "2026-10-16T19:01:05.309Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -51,
-   "y": 22,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 21,
+   "y": -49,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -5796,22 +5683,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "1Cc0ICiJHCY",
    "youtubeUrl": "https://www.youtube.com/watch?v=1Cc0ICiJHCY",
    "youtubeTitle": "Nagamatzu - Faith (1983)",
    "youtubeCheckedAt": "2026-10-16T19:01:08.083Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 45,
-   "y": 15,
+   "x": -51,
+   "y": 17,
    "neighbours": [
     {
      "id": "rel-030",
@@ -5819,7 +5706,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -5828,7 +5715,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -5837,7 +5724,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -5863,22 +5750,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "fgCo9S_EeBY",
    "youtubeUrl": "https://www.youtube.com/watch?v=fgCo9S_EeBY",
    "youtubeTitle": "Rider Shafique - When Will We Learn (Produced By O$VMV$M)",
    "youtubeCheckedAt": "2026-10-16T19:01:11.060Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -36,
-   "y": -3,
+   "x": 33,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-045",
@@ -5886,7 +5773,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -5895,7 +5782,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -5904,7 +5791,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -5922,30 +5809,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "pMCAQIhoxDc",
    "youtubeUrl": "https://www.youtube.com/watch?v=pMCAQIhoxDc",
    "youtubeTitle": "Time Piece",
    "youtubeCheckedAt": "2026-10-16T19:01:13.980Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -13,
-   "y": 15,
+   "x": 19,
+   "y": 27,
    "neighbours": [
     {
      "id": "rel-046",
@@ -5953,7 +5840,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -5962,7 +5849,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -5971,7 +5858,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -5997,46 +5884,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "WuXUODms99o",
    "youtubeUrl": "https://www.youtube.com/watch?v=WuXUODms99o",
    "youtubeTitle": "Private Agenda / Bounty (Coral Sea Mix)",
    "youtubeCheckedAt": "2026-10-16T19:01:17.501Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 20,
-   "y": 58,
+   "x": -52,
+   "y": -29,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-115",
      "name": "Frozen Flowers",
      "artist": "Chihei Hatakeyama",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -6062,11 +5949,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "O3dHbjWZMEw",
    "youtubeUrl": "https://www.youtube.com/watch?v=O3dHbjWZMEw",
@@ -6074,7 +5961,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:01:20.249Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -11,
    "y": 46,
    "neighbours": [
@@ -6082,27 +5969,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -6128,12 +6015,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "51WpMfKbtkw",
    "youtubeUrl": "https://www.youtube.com/watch?v=51WpMfKbtkw",
@@ -6141,35 +6028,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:01:23.245Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": 1,
-   "y": -22,
+   "y": -21,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -6195,22 +6082,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "siMQgpoxu20",
    "youtubeUrl": "https://www.youtube.com/watch?v=siMQgpoxu20",
    "youtubeTitle": "Rah Band - Sam the samba man (1983)",
    "youtubeCheckedAt": "2026-10-16T19:01:26.217Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -22,
-   "y": -39,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 46,
+   "y": 21,
    "neighbours": [
     {
      "id": "rel-050",
@@ -6218,7 +6105,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -6227,7 +6114,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -6236,7 +6123,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -6254,29 +6141,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "F2sjj18TcFg",
    "youtubeUrl": "https://www.youtube.com/watch?v=F2sjj18TcFg",
    "youtubeTitle": "How Do You See Me Now (Original Mix)",
    "youtubeCheckedAt": "2026-10-16T19:01:29.172Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -56,
-   "y": -29,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 61,
+   "y": -12,
    "neighbours": [
     {
      "id": "rel-051",
@@ -6284,7 +6171,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -6293,7 +6180,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -6302,7 +6189,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -6328,20 +6215,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "PTw1nH5L4OM",
    "youtubeUrl": "https://www.youtube.com/watch?v=PTw1nH5L4OM",
    "youtubeTitle": "1962 HITS ARCHIVE: I Wish That We Were Married - Ronnie & The Hi-Lites",
    "youtubeCheckedAt": "2026-10-16T19:01:32.033Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 32,
-   "y": -19,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -24,
+   "y": -40,
    "neighbours": [
     {
      "id": "rel-052",
@@ -6349,7 +6236,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -6358,7 +6245,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -6367,7 +6254,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -6393,20 +6280,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "2_-w2SXxogA",
    "youtubeUrl": "https://www.youtube.com/watch?v=2_-w2SXxogA",
    "youtubeTitle": "Traumprinz - Im Rausch Der Tiefe [APW-5]",
    "youtubeCheckedAt": "2026-10-16T19:01:34.866Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 21,
-   "y": -50,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 15,
+   "y": 57,
    "neighbours": [
     {
      "id": "rel-040",
@@ -6414,7 +6301,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -6423,7 +6310,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -6432,7 +6319,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -6458,22 +6345,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "xYkRrv3SVl8",
    "youtubeUrl": "https://www.youtube.com/watch?v=xYkRrv3SVl8",
    "youtubeTitle": "Ted Lucas - 01. Plain and Sane and Simple Melody // Ted Lucas",
    "youtubeCheckedAt": "2026-10-16T19:01:37.760Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 17,
-   "y": 27,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -32,
+   "y": -3,
    "neighbours": [
     {
      "id": "rel-053",
@@ -6481,7 +6368,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -6490,7 +6377,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -6499,7 +6386,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -6525,48 +6412,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "6G91TAnBSas",
    "youtubeUrl": "https://www.youtube.com/watch?v=6G91TAnBSas",
    "youtubeTitle": "Rocket No. 2",
    "youtubeCheckedAt": "2026-10-16T19:01:41.346Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -52,
-   "y": 22,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 19,
+   "y": -51,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -6592,22 +6479,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "mEZ3DLZyEMg",
    "youtubeUrl": "https://www.youtube.com/watch?v=mEZ3DLZyEMg",
    "youtubeTitle": "Alvin Curran - Canti e Vedute Dal Giardino Magnetico (FULL ALBUM)",
    "youtubeCheckedAt": "2026-10-16T19:01:44.086Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 47,
-   "y": 15,
+   "x": -49,
+   "y": 17,
    "neighbours": [
     {
      "id": "rel-030",
@@ -6615,7 +6502,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -6624,7 +6511,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -6633,7 +6520,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -6651,30 +6538,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "QTiZ2zlArFw",
    "youtubeUrl": "https://www.youtube.com/watch?v=QTiZ2zlArFw",
    "youtubeTitle": "Walkabout",
    "youtubeCheckedAt": "2026-10-16T19:01:49.506Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -14,
-   "y": 16,
+   "x": 18,
+   "y": 27,
    "neighbours": [
     {
      "id": "rel-046",
@@ -6682,7 +6569,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -6691,7 +6578,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -6700,7 +6587,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -6726,11 +6613,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "8YKf0Rs8WEk",
    "youtubeUrl": "https://www.youtube.com/watch?v=8YKf0Rs8WEk",
@@ -6738,7 +6625,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:01:57.710Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -12,
    "y": 45,
    "neighbours": [
@@ -6746,27 +6633,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -6792,12 +6679,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "63ePBY2lXdY",
    "youtubeUrl": "https://www.youtube.com/watch?v=63ePBY2lXdY",
@@ -6805,35 +6692,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:02:00.546Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": 0,
-   "y": -22,
+   "y": -23,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -6859,22 +6746,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "miwbarsm_No",
    "youtubeUrl": "https://www.youtube.com/watch?v=miwbarsm_No",
    "youtubeTitle": "小島麻由美 Mayumi Kojima - 愛のミラージュ Ai no Mirāju (Mirage of Love) (~1995-1999)",
    "youtubeCheckedAt": "2026-10-16T19:02:03.486Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -24,
-   "y": -40,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 45,
+   "y": 20,
    "neighbours": [
     {
      "id": "rel-050",
@@ -6882,7 +6769,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -6891,7 +6778,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -6900,7 +6787,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -6918,29 +6805,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "UnrnDH5TwrI",
    "youtubeUrl": "https://www.youtube.com/watch?v=UnrnDH5TwrI",
    "youtubeTitle": "Don't Want to be Alone (Richard Sen Remix)",
    "youtubeCheckedAt": "2026-10-16T19:02:06.269Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -57,
-   "y": -31,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 60,
+   "y": -14,
    "neighbours": [
     {
      "id": "rel-051",
@@ -6948,7 +6835,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -6957,7 +6844,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -6966,7 +6853,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -6992,20 +6879,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "Zh-XUdtpe4U",
    "youtubeUrl": "https://www.youtube.com/watch?v=Zh-XUdtpe4U",
    "youtubeTitle": "If This Is Sin",
    "youtubeCheckedAt": "2026-10-16T19:02:09.617Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 31,
-   "y": -21,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -25,
+   "y": -41,
    "neighbours": [
     {
      "id": "rel-052",
@@ -7013,7 +6900,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -7022,7 +6909,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -7031,7 +6918,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -7057,22 +6944,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "dWrg31Chc4I",
    "youtubeUrl": "https://www.youtube.com/watch?v=dWrg31Chc4I",
    "youtubeTitle": "Ofege - It's Not Easy",
    "youtubeCheckedAt": "2026-10-16T19:02:14.841Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 16,
-   "y": 26,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -34,
+   "y": -4,
    "neighbours": [
     {
      "id": "rel-053",
@@ -7080,7 +6967,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -7089,7 +6976,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -7098,7 +6985,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -7124,48 +7011,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "UnXYI3_jPM8",
    "youtubeUrl": "https://www.youtube.com/watch?v=UnXYI3_jPM8",
    "youtubeTitle": "Rhythm Maker - Herzog - Background records 013a - 33 rpm / from 'Futuristic Experiments chapter III'",
    "youtubeCheckedAt": "2026-10-16T19:02:17.795Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -53,
-   "y": 20,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 19,
+   "y": -52,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -7191,22 +7078,22 @@ window.SEA_DATA = {
    "show": "SNZ (R)",
    "date": "2026-10-13T02:00:00+01:00",
    "tags": [
-    "Kosmische",
-    "Industrial ",
-    "New Age",
-    "No Talkin",
     "station:nts",
-    "show:SNZ (R)"
+    "show:SNZ (R)",
+    "show-genre:Kosmische",
+    "show-genre:Industrial ",
+    "show-genre:New Age",
+    "show-genre:No Talkin"
    ],
    "youtubeId": "Yr8gwTNviuM",
    "youtubeUrl": "https://www.youtube.com/watch?v=Yr8gwTNviuM",
    "youtubeTitle": "enno velthuys 7",
    "youtubeCheckedAt": "2026-10-16T19:02:20.525Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.802,
-   "x": 49,
-   "y": 16,
+   "x": -47,
+   "y": 18,
    "neighbours": [
     {
      "id": "rel-030",
@@ -7214,7 +7101,7 @@ window.SEA_DATA = {
      "artist": "Albert Marcœur",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -7223,7 +7110,7 @@ window.SEA_DATA = {
      "artist": "Spear",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     },
     {
@@ -7232,7 +7119,7 @@ window.SEA_DATA = {
      "artist": "Roberto Donnini",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Kosmische, Industrial , New Age, No Talkin"
+      "played on the same show: SNZ (R)"
      ]
     }
    ]
@@ -7258,22 +7145,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "L-U8lQtK7-g",
    "youtubeUrl": "https://www.youtube.com/watch?v=L-U8lQtK7-g",
    "youtubeTitle": "Clipse - Mr. Me Too (Instrumental) Prod. Pharrell Williams",
    "youtubeCheckedAt": "2026-10-16T19:02:23.286Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -37,
-   "y": -4,
+   "x": 32,
+   "y": -20,
    "neighbours": [
     {
      "id": "rel-045",
@@ -7281,7 +7168,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -7290,7 +7177,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -7299,7 +7186,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -7317,30 +7204,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "bvrIlDs8CwU",
    "youtubeUrl": "https://www.youtube.com/watch?v=bvrIlDs8CwU",
    "youtubeTitle": "The Earliest Trace",
    "youtubeCheckedAt": "2026-10-16T19:02:25.982Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -15,
-   "y": 15,
+   "x": 16,
+   "y": 27,
    "neighbours": [
     {
      "id": "rel-046",
@@ -7348,7 +7235,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -7357,7 +7244,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -7366,7 +7253,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -7392,46 +7279,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "MpF_pAof6qA",
    "youtubeUrl": "https://www.youtube.com/watch?v=MpF_pAof6qA",
    "youtubeTitle": "Ulf Lohmann - Java 'Pop Ambient 2002' Album",
    "youtubeCheckedAt": "2026-10-16T19:02:28.515Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 19,
-   "y": 59,
+   "x": -54,
+   "y": -28,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-115",
      "name": "Frozen Flowers",
      "artist": "Chihei Hatakeyama",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -7457,11 +7344,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "I8X64WJq6qc",
    "youtubeUrl": "https://www.youtube.com/watch?v=I8X64WJq6qc",
@@ -7469,35 +7356,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:02:31.343Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
-   "x": -14,
+   "depth": 0.799,
+   "x": -13,
    "y": 44,
    "neighbours": [
     {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -7523,12 +7410,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "JZ76bJPWun4",
    "youtubeUrl": "https://www.youtube.com/watch?v=JZ76bJPWun4",
@@ -7536,7 +7423,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:02:33.892Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": -1,
    "y": -23,
    "neighbours": [
@@ -7544,27 +7431,27 @@ window.SEA_DATA = {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -7590,22 +7477,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "qfT97SF4mLc",
    "youtubeUrl": "https://www.youtube.com/watch?v=qfT97SF4mLc",
    "youtubeTitle": "Chris Gray - For Being (You Version)",
    "youtubeCheckedAt": "2026-10-16T19:02:36.566Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -25,
-   "y": -41,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 44,
+   "y": 19,
    "neighbours": [
     {
      "id": "rel-050",
@@ -7613,7 +7500,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -7622,7 +7509,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -7631,7 +7518,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -7649,29 +7536,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "LAY3psAk_FU",
    "youtubeUrl": "https://www.youtube.com/watch?v=LAY3psAk_FU",
    "youtubeTitle": "The Witching Hour (Richard Sen Remix)",
    "youtubeCheckedAt": "2026-10-16T19:02:39.372Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -56,
-   "y": -33,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 61,
+   "y": -16,
    "neighbours": [
     {
      "id": "rel-051",
@@ -7679,7 +7566,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -7688,7 +7575,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -7697,7 +7584,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -7723,20 +7610,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "WaRzie2jWPU",
    "youtubeUrl": "https://www.youtube.com/watch?v=WaRzie2jWPU",
    "youtubeTitle": "Tears on my pillow 1958 (lyrics+subt.español) / Little Anthony & The Imperials",
    "youtubeCheckedAt": "2026-10-16T19:02:42.228Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 31,
-   "y": -22,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -25,
+   "y": -42,
    "neighbours": [
     {
      "id": "rel-052",
@@ -7744,7 +7631,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -7753,7 +7640,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -7762,7 +7649,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -7788,20 +7675,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "nchYYdBLmok",
    "youtubeUrl": "https://www.youtube.com/watch?v=nchYYdBLmok",
    "youtubeTitle": "Rob Pearson & Robin Ball - The Right Vibes (Evasive Records)",
    "youtubeCheckedAt": "2026-10-16T19:02:44.938Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 21,
-   "y": -51,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 15,
+   "y": 55,
    "neighbours": [
     {
      "id": "rel-040",
@@ -7809,7 +7696,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -7818,7 +7705,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -7827,7 +7714,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -7853,30 +7740,30 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "QrvQafeKkFE",
    "youtubeUrl": "https://www.youtube.com/watch?v=QrvQafeKkFE",
    "youtubeTitle": "Lorez Alexandria - I'm Wishin'",
    "youtubeCheckedAt": "2026-10-16T19:02:47.889Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.781,
-   "x": 16,
-   "y": 25,
+   "islandId": 4,
+   "depth": 0.801,
+   "x": -34,
+   "y": -6,
    "neighbours": [
     {
      "id": "rel-162",
      "name": "Baltimore Oriole",
      "artist": "Lorez Alexandria",
-     "score": 0.7518796992481204,
+     "score": 0.7518796992481203,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae",
+      "played on the same show: Special Guests",
       "same artist: Lorez Alexandria"
      ]
     },
@@ -7886,7 +7773,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -7895,7 +7782,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -7921,48 +7808,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "MrfiT89Lcz8",
    "youtubeUrl": "https://www.youtube.com/watch?v=MrfiT89Lcz8",
    "youtubeTitle": "ILK - Qwerks",
    "youtubeCheckedAt": "2026-10-16T19:02:50.597Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -52,
-   "y": 18,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 19,
+   "y": -53,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -7988,22 +7875,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "AM1vT6fRXF4",
    "youtubeUrl": "https://www.youtube.com/watch?v=AM1vT6fRXF4",
    "youtubeTitle": "DMX - Prayer III",
    "youtubeCheckedAt": "2026-10-16T19:02:56.566Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -37,
-   "y": -6,
+   "x": 31,
+   "y": -21,
    "neighbours": [
     {
      "id": "rel-045",
@@ -8011,7 +7898,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -8020,7 +7907,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -8029,7 +7916,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -8047,30 +7934,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "1Qpm5NUGUvA",
    "youtubeUrl": "https://www.youtube.com/watch?v=1Qpm5NUGUvA",
    "youtubeTitle": "kisses (sky ii)",
    "youtubeCheckedAt": "2026-10-16T19:02:59.356Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -16,
-   "y": 13,
+   "x": 16,
+   "y": 25,
    "neighbours": [
     {
      "id": "rel-046",
@@ -8078,7 +7965,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -8087,7 +7974,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -8096,7 +7983,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -8122,46 +8009,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "JBhkYwPfBcQ",
    "youtubeUrl": "https://www.youtube.com/watch?v=JBhkYwPfBcQ",
    "youtubeTitle": "Frozen Flowers",
    "youtubeCheckedAt": "2026-10-16T19:03:02.280Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 16,
-   "y": 59,
+   "x": -56,
+   "y": -29,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -8187,11 +8074,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "peKSfnvDcao",
    "youtubeUrl": "https://www.youtube.com/watch?v=peKSfnvDcao",
@@ -8199,7 +8086,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:03:05.033Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -13,
    "y": 43,
    "neighbours": [
@@ -8207,27 +8094,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -8253,12 +8140,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "aDYWtpLNntE",
    "youtubeUrl": "https://www.youtube.com/watch?v=aDYWtpLNntE",
@@ -8266,7 +8153,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:03:07.909Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": -1,
    "y": -25,
    "neighbours": [
@@ -8274,27 +8161,27 @@ window.SEA_DATA = {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -8320,22 +8207,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "78tRl7Lq4Dg",
    "youtubeUrl": "https://www.youtube.com/watch?v=78tRl7Lq4Dg",
    "youtubeTitle": "All Access - Tell Me What You Want",
    "youtubeCheckedAt": "2026-10-16T19:03:10.577Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -25,
-   "y": -43,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 44,
+   "y": 17,
    "neighbours": [
     {
      "id": "rel-050",
@@ -8343,7 +8230,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -8352,7 +8239,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -8361,7 +8248,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -8387,20 +8274,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "VQlCDOo9NNg",
    "youtubeUrl": "https://www.youtube.com/watch?v=VQlCDOo9NNg",
    "youtubeTitle": "The Right Vibe (Radio Edit)",
    "youtubeCheckedAt": "2026-10-16T19:03:21.734Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 22,
-   "y": -53,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 16,
+   "y": 53,
    "neighbours": [
     {
      "id": "rel-040",
@@ -8408,7 +8295,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -8417,7 +8304,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -8426,7 +8313,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -8452,48 +8339,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "0UqJ-4kGBlY",
    "youtubeUrl": "https://www.youtube.com/watch?v=0UqJ-4kGBlY",
    "youtubeTitle": "Interloper - Suck'n'Blow + Suck'n'Dub",
    "youtubeCheckedAt": "2026-10-16T19:03:26.940Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -51,
-   "y": 17,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 21,
+   "y": -55,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -8519,22 +8406,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "PlX8TPp4L3A",
    "youtubeUrl": "https://www.youtube.com/watch?v=PlX8TPp4L3A",
    "youtubeTitle": "Los Thuthanaka - Salay “Titi Ch’iri Siqititi” (2025)",
    "youtubeCheckedAt": "2026-10-16T19:03:29.876Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -37,
-   "y": -7,
+   "x": 32,
+   "y": -23,
    "neighbours": [
     {
      "id": "rel-045",
@@ -8542,7 +8429,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -8551,7 +8438,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -8560,7 +8447,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -8578,30 +8465,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "8Hz2oulDfOQ",
    "youtubeUrl": "https://www.youtube.com/watch?v=8Hz2oulDfOQ",
    "youtubeTitle": "Last Sunrise",
    "youtubeCheckedAt": "2026-10-16T19:03:32.503Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -16,
-   "y": 12,
+   "x": 16,
+   "y": 24,
    "neighbours": [
     {
      "id": "rel-046",
@@ -8609,7 +8496,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -8618,7 +8505,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -8627,7 +8514,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -8653,46 +8540,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "R2d7K0o4g5o",
    "youtubeUrl": "https://www.youtube.com/watch?v=R2d7K0o4g5o",
    "youtubeTitle": "Mark Templeton - Lily of the Valley",
    "youtubeCheckedAt": "2026-10-16T19:03:35.174Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 15,
-   "y": 57,
+   "x": -57,
+   "y": -30,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -8718,11 +8605,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "BypzxmiNqng",
    "youtubeUrl": "https://www.youtube.com/watch?v=BypzxmiNqng",
@@ -8730,7 +8617,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:03:37.969Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -13,
    "y": 41,
    "neighbours": [
@@ -8738,27 +8625,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -8784,12 +8671,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "QoxptLr4znA",
    "youtubeUrl": "https://www.youtube.com/watch?v=QoxptLr4znA",
@@ -8797,35 +8684,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:03:41.068Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
-   "x": 0,
-   "y": -27,
+   "depth": 0.793,
+   "x": -1,
+   "y": -26,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -8851,22 +8738,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "S_InNEuFZHY",
    "youtubeUrl": "https://www.youtube.com/watch?v=S_InNEuFZHY",
    "youtubeTitle": "Will King - Can We Talk",
    "youtubeCheckedAt": "2026-10-16T19:03:43.959Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -24,
-   "y": -44,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 45,
+   "y": 16,
    "neighbours": [
     {
      "id": "rel-050",
@@ -8874,7 +8761,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -8883,7 +8770,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -8892,7 +8779,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -8918,20 +8805,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "gjgNG9Ydaro",
    "youtubeUrl": "https://www.youtube.com/watch?v=gjgNG9Ydaro",
    "youtubeTitle": "Sam",
    "youtubeCheckedAt": "2026-10-16T19:03:51.542Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 32,
-   "y": -23,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -25,
+   "y": -43,
    "neighbours": [
     {
      "id": "rel-052",
@@ -8939,7 +8826,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -8948,7 +8835,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -8957,7 +8844,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -8983,20 +8870,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "S-jHQVtuTbQ",
    "youtubeUrl": "https://www.youtube.com/watch?v=S-jHQVtuTbQ",
    "youtubeTitle": "Dav - Headspin",
    "youtubeCheckedAt": "2026-10-16T19:03:54.134Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 24,
-   "y": -53,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 19,
+   "y": 53,
    "neighbours": [
     {
      "id": "rel-040",
@@ -9004,7 +8891,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9013,7 +8900,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9022,7 +8909,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -9048,22 +8935,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "yaPVbKglRu8",
    "youtubeUrl": "https://www.youtube.com/watch?v=yaPVbKglRu8",
    "youtubeTitle": "McCoy Tyner  My Favorite Things",
    "youtubeCheckedAt": "2026-10-16T19:03:57.374Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 16,
-   "y": 23,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -34,
+   "y": -7,
    "neighbours": [
     {
      "id": "rel-053",
@@ -9071,7 +8958,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9080,7 +8967,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9089,7 +8976,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -9115,22 +9002,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "wx-gLDrf14o",
    "youtubeUrl": "https://www.youtube.com/watch?v=wx-gLDrf14o",
    "youtubeTitle": "I'll Call You Later",
    "youtubeCheckedAt": "2026-10-16T19:04:02.799Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -36,
-   "y": -9,
+   "x": 33,
+   "y": -24,
    "neighbours": [
     {
      "id": "rel-045",
@@ -9138,7 +9025,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -9147,7 +9034,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -9156,7 +9043,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -9174,30 +9061,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "HmVL0g-33hE",
    "youtubeUrl": "https://www.youtube.com/watch?v=HmVL0g-33hE",
    "youtubeTitle": "Cuttleburrs",
    "youtubeCheckedAt": "2026-10-16T19:04:05.383Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -16,
-   "y": 10,
+   "x": 16,
+   "y": 23,
    "neighbours": [
     {
      "id": "rel-046",
@@ -9205,7 +9092,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -9214,7 +9101,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -9223,7 +9110,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -9249,46 +9136,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "PMYwri_QDpk",
    "youtubeUrl": "https://www.youtube.com/watch?v=PMYwri_QDpk",
    "youtubeTitle": "Coquina",
    "youtubeCheckedAt": "2026-10-16T19:04:08.188Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 15,
-   "y": 55,
+   "x": -56,
+   "y": -32,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -9314,11 +9201,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "Fc2w5tIaRPA",
    "youtubeUrl": "https://www.youtube.com/watch?v=Fc2w5tIaRPA",
@@ -9326,7 +9213,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:04:11.274Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -12,
    "y": 40,
    "neighbours": [
@@ -9334,27 +9221,27 @@ window.SEA_DATA = {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -9380,12 +9267,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "rSos898ZfwU",
    "youtubeUrl": "https://www.youtube.com/watch?v=rSos898ZfwU",
@@ -9393,35 +9280,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:04:14.085Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
-   "x": -1,
-   "y": -28,
+   "depth": 0.793,
+   "x": 1,
+   "y": -27,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -9439,29 +9326,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "tmBawfA5meE",
    "youtubeUrl": "https://www.youtube.com/watch?v=tmBawfA5meE",
    "youtubeTitle": "A Man Called Adam - Barefoot In the Head (Radio Edit) [Audio]",
    "youtubeCheckedAt": "2026-10-16T19:04:19.449Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -54,
-   "y": -34,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 63,
+   "y": -17,
    "neighbours": [
     {
      "id": "rel-051",
@@ -9469,7 +9356,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -9478,7 +9365,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -9487,7 +9374,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -9513,20 +9400,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "o1Z_hskvz1M",
    "youtubeUrl": "https://www.youtube.com/watch?v=o1Z_hskvz1M",
    "youtubeTitle": "Maurice Williams & the Zodiacs - Stay",
    "youtubeCheckedAt": "2026-10-16T19:04:22.131Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 32,
-   "y": -25,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -23,
+   "y": -44,
    "neighbours": [
     {
      "id": "rel-052",
@@ -9534,7 +9421,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -9543,7 +9430,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -9552,7 +9439,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -9578,20 +9465,20 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "House",
-    "Techno",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:House",
+    "show-genre:Techno"
    ],
    "youtubeId": "SRxt8RryY4E",
    "youtubeUrl": "https://www.youtube.com/watch?v=SRxt8RryY4E",
    "youtubeTitle": "Missy Zeze & Presslaboys - E.F.X. (European Fusion Experience) (Electro Monkey Mix)",
    "youtubeCheckedAt": "2026-10-16T19:04:24.824Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 10,
-   "depth": 0.786,
-   "x": 26,
-   "y": -53,
+   "islandId": 11,
+   "depth": 0.805,
+   "x": 20,
+   "y": 54,
    "neighbours": [
     {
      "id": "rel-040",
@@ -9599,7 +9486,7 @@ window.SEA_DATA = {
      "artist": "Fabrizio Lapiana",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9608,7 +9495,7 @@ window.SEA_DATA = {
      "artist": "Point G",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9617,7 +9504,7 @@ window.SEA_DATA = {
      "artist": "The Royal We",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Techno, station:lotradio, show:Special Guests"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -9643,22 +9530,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "54NIBJ5mFzM",
    "youtubeUrl": "https://www.youtube.com/watch?v=54NIBJ5mFzM",
    "youtubeTitle": "The Diddys Featuring Paige Douglas ‎– Intergalactic Love Song ℗ 1977",
    "youtubeCheckedAt": "2026-10-16T19:04:27.570Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 17,
-   "y": 22,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -33,
+   "y": -8,
    "neighbours": [
     {
      "id": "rel-053",
@@ -9666,7 +9553,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9675,7 +9562,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -9684,7 +9571,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -9710,48 +9597,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "ZUj_uJUISGw",
    "youtubeUrl": "https://www.youtube.com/watch?v=ZUj_uJUISGw",
    "youtubeTitle": "Gaia Tones (GT006) in side: DEEP",
    "youtubeCheckedAt": "2026-10-16T19:04:30.232Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -49,
-   "y": 17,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 22,
+   "y": -55,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -9777,22 +9664,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "B9qZz-m6BL4",
    "youtubeUrl": "https://www.youtube.com/watch?v=B9qZz-m6BL4",
    "youtubeTitle": "T.I. - Get Back Up ft. Chris Brown [Official Video]",
    "youtubeCheckedAt": "2026-10-16T19:04:33.299Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -34,
-   "y": -9,
+   "x": 34,
+   "y": -25,
    "neighbours": [
     {
      "id": "rel-045",
@@ -9800,7 +9687,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -9809,7 +9696,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -9818,7 +9705,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -9836,30 +9723,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "6ZgPNNGTaHA",
    "youtubeUrl": "https://www.youtube.com/watch?v=6ZgPNNGTaHA",
    "youtubeTitle": "Arpeggio Drum Challenge",
    "youtubeCheckedAt": "2026-10-16T19:04:36.123Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -14,
-   "y": 10,
+   "x": 17,
+   "y": 22,
    "neighbours": [
     {
      "id": "rel-046",
@@ -9867,7 +9754,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -9876,7 +9763,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -9885,7 +9772,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -9911,11 +9798,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "JV6GI3ROj8c",
    "youtubeUrl": "https://www.youtube.com/watch?v=JV6GI3ROj8c",
@@ -9923,35 +9810,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:04:41.599Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
-   "x": -10,
+   "depth": 0.799,
+   "x": -11,
    "y": 40,
    "neighbours": [
     {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -9977,12 +9864,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "OS9ojnXpy3c",
    "youtubeUrl": "https://www.youtube.com/watch?v=OS9ojnXpy3c",
@@ -9990,35 +9877,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:04:44.528Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": 2,
-   "y": -28,
+   "y": -27,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -10044,22 +9931,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "YgwfCdDEKaw",
    "youtubeUrl": "https://www.youtube.com/watch?v=YgwfCdDEKaw",
    "youtubeTitle": "Theo Parrish - How I Feel",
    "youtubeCheckedAt": "2026-10-16T19:04:47.161Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -22,
-   "y": -45,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 46,
+   "y": 15,
    "neighbours": [
     {
      "id": "rel-050",
@@ -10067,7 +9954,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -10076,7 +9963,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -10085,7 +9972,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -10111,20 +9998,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "qmUEkQPE7fk",
    "youtubeUrl": "https://www.youtube.com/watch?v=qmUEkQPE7fk",
    "youtubeTitle": "Laughing on the Outside",
    "youtubeCheckedAt": "2026-10-16T19:04:55.323Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 34,
-   "y": -25,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -22,
+   "y": -45,
    "neighbours": [
     {
      "id": "rel-052",
@@ -10132,7 +10019,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -10141,7 +10028,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -10150,7 +10037,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -10176,22 +10063,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "AE1x7RkWgQk",
    "youtubeUrl": "https://www.youtube.com/watch?v=AE1x7RkWgQk",
    "youtubeTitle": "The Brothers and Sisters - \"All Along the Watchtower\" (From the album, Dylan's Gospel)",
    "youtubeCheckedAt": "2026-10-16T19:04:58.465Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 19,
-   "y": 22,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -32,
+   "y": -8,
    "neighbours": [
     {
      "id": "rel-053",
@@ -10199,7 +10086,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -10208,7 +10095,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -10217,7 +10104,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -10243,22 +10130,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "QL8yHLBN3sQ",
    "youtubeUrl": "https://www.youtube.com/watch?v=QL8yHLBN3sQ",
    "youtubeTitle": "Divine Gosa",
    "youtubeCheckedAt": "2026-10-16T19:05:03.749Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -33,
-   "y": -9,
+   "x": 35,
+   "y": -24,
    "neighbours": [
     {
      "id": "rel-045",
@@ -10266,7 +10153,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -10275,7 +10162,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -10284,7 +10171,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -10302,30 +10189,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "0Yz_Lb_WnFE",
    "youtubeUrl": "https://www.youtube.com/watch?v=0Yz_Lb_WnFE",
    "youtubeTitle": "Undoubtedly",
    "youtubeCheckedAt": "2026-10-16T19:05:06.647Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -13,
-   "y": 10,
+   "x": 19,
+   "y": 22,
    "neighbours": [
     {
      "id": "rel-046",
@@ -10333,7 +10220,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -10342,7 +10229,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -10351,7 +10238,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -10377,46 +10264,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "mKd_-IAr0ss",
    "youtubeUrl": "https://www.youtube.com/watch?v=mKd_-IAr0ss",
    "youtubeTitle": "Pariah - Seed Bank [HTH096]",
    "youtubeCheckedAt": "2026-10-16T19:05:09.350Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 17,
-   "y": 54,
+   "x": -56,
+   "y": -33,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -10442,11 +10329,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "oBjwXyBRcVU",
    "youtubeUrl": "https://www.youtube.com/watch?v=oBjwXyBRcVU",
@@ -10454,35 +10341,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:05:12.409Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
-   "x": -11,
-   "y": 39,
+   "depth": 0.799,
+   "x": -10,
+   "y": 40,
    "neighbours": [
     {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -10508,12 +10395,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "OQV8RgiCt7k",
    "youtubeUrl": "https://www.youtube.com/watch?v=OQV8RgiCt7k",
@@ -10521,7 +10408,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:05:15.398Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
+   "depth": 0.793,
    "x": 3,
    "y": -27,
    "neighbours": [
@@ -10529,27 +10416,27 @@ window.SEA_DATA = {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -10575,20 +10462,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "jYaHXgecv4I",
    "youtubeUrl": "https://www.youtube.com/watch?v=jYaHXgecv4I",
    "youtubeTitle": "The Jive Bombers - Bad Boy",
    "youtubeCheckedAt": "2026-10-16T19:05:26.708Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 35,
-   "y": -24,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -21,
+   "y": -44,
    "neighbours": [
     {
      "id": "rel-052",
@@ -10596,7 +10483,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -10605,7 +10492,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -10614,7 +10501,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -10640,22 +10527,22 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "D5VAt9bh_yE",
    "youtubeUrl": "https://www.youtube.com/watch?v=D5VAt9bh_yE",
    "youtubeTitle": "Nolan Porter - If I Could Only Be Sure",
    "youtubeCheckedAt": "2026-10-16T19:05:29.489Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.782,
-   "x": 20,
-   "y": 22,
+   "islandId": 4,
+   "depth": 0.802,
+   "x": -30,
+   "y": -9,
    "neighbours": [
     {
      "id": "rel-053",
@@ -10663,7 +10550,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -10672,7 +10559,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -10681,7 +10568,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -10707,48 +10594,48 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Electronica",
-    "Downtempo",
-    "House",
-    "IDM",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Electronica",
+    "show-genre:Downtempo",
+    "show-genre:House",
+    "show-genre:IDM"
    ],
    "youtubeId": "HCsiduBWIp0",
    "youtubeUrl": "https://www.youtube.com/watch?v=HCsiduBWIp0",
    "youtubeTitle": "Dune Entombed Fecundity: Part 2 | The Dirge of Bilqis | World Quests |【Genshin Impact】",
    "youtubeCheckedAt": "2026-10-16T19:05:33.580Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
-   "depth": 0.779,
-   "x": -48,
-   "y": 18,
+   "islandId": 10,
+   "depth": 0.8,
+   "x": 24,
+   "y": -54,
    "neighbours": [
     {
      "id": "rel-054",
      "name": "Out",
      "artist": "Northworks",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-060",
      "name": "Beautiful Witness",
      "artist": "Copshow",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     },
     {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Downtempo, House, IDM"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -10774,22 +10661,22 @@ window.SEA_DATA = {
    "show": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "date": "2026-10-13T03:00:00+01:00",
    "tags": [
-    "Cumbia",
-    "Experimental",
-    "Rap",
-    "Dancehall",
     "station:nts",
-    "show:5 GATE TEMPLE w/ Devon Rexi (R)"
+    "show:5 GATE TEMPLE w/ Devon Rexi (R)",
+    "show-genre:Cumbia",
+    "show-genre:Experimental",
+    "show-genre:Rap",
+    "show-genre:Dancehall"
    ],
    "youtubeId": "RfWpA7PFdPo",
    "youtubeUrl": "https://www.youtube.com/watch?v=RfWpA7PFdPo",
    "youtubeTitle": "THE BUG ft. MAGUGU - Deep in a Mud (Official Music Video)",
    "youtubeCheckedAt": "2026-10-16T19:05:36.468Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 5,
    "depth": 0.8,
-   "x": -32,
-   "y": -7,
+   "x": 36,
+   "y": -23,
    "neighbours": [
     {
      "id": "rel-045",
@@ -10797,7 +10684,7 @@ window.SEA_DATA = {
      "artist": "Brìghde Chaimbeul",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -10806,7 +10693,7 @@ window.SEA_DATA = {
      "artist": "DETENTE",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     },
     {
@@ -10815,7 +10702,7 @@ window.SEA_DATA = {
      "artist": "Victoria Mingot",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Cumbia, Experimental, Rap, Dancehall"
+      "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)"
      ]
     }
    ]
@@ -10833,30 +10720,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "NZGpNxWXuV0",
    "youtubeUrl": "https://www.youtube.com/watch?v=NZGpNxWXuV0",
    "youtubeTitle": "Mica",
    "youtubeCheckedAt": "2026-10-16T19:05:39.712Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -11,
-   "y": 10,
+   "x": 20,
+   "y": 22,
    "neighbours": [
     {
      "id": "rel-046",
@@ -10864,7 +10751,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -10873,7 +10760,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -10882,7 +10769,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -10908,46 +10795,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "z42Up1OIxUQ",
    "youtubeUrl": "https://www.youtube.com/watch?v=z42Up1OIxUQ",
    "youtubeTitle": "In Motion",
    "youtubeCheckedAt": "2026-10-16T19:05:42.531Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 18,
-   "y": 53,
+   "x": -54,
+   "y": -34,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -10973,11 +10860,11 @@ window.SEA_DATA = {
    "show": "NTS Guide to: Classical Works in Murakami Novels",
    "date": "2026-10-13T07:00:00+01:00",
    "tags": [
-    "Classical",
-    "The Healing Place",
-    "AUDIO RESEARCH",
     "station:nts",
-    "show:NTS Guide to: Classical Works in Murakami Novels"
+    "show:NTS Guide to: Classical Works in Murakami Novels",
+    "show-genre:Classical",
+    "show-genre:The Healing Place",
+    "show-genre:AUDIO RESEARCH"
    ],
    "youtubeId": "YdEm9bRj2y0",
    "youtubeUrl": "https://www.youtube.com/watch?v=YdEm9bRj2y0",
@@ -10985,35 +10872,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:05:45.362Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 6,
-   "depth": 0.8,
+   "depth": 0.799,
    "x": -8,
-   "y": 42,
+   "y": 41,
    "neighbours": [
     {
      "id": "rel-048",
      "name": "Le Mal Du Pays",
      "artist": "Lazar Berman, Liszt",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     },
     {
      "id": "rel-064",
      "name": "I (Rubinstein, Heifetz, Feuermann)",
      "artist": "Beethoven Piano Trio No 7 Archduke",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Classical, The Healing Place, AUDIO RESEARCH, station:nts"
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels"
      ]
     }
    ]
@@ -11039,22 +10926,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "aqw3OmCGUf0",
    "youtubeUrl": "https://www.youtube.com/watch?v=aqw3OmCGUf0",
    "youtubeTitle": "Chicago Party - Paris Ross \"WBMX Rap\"",
    "youtubeCheckedAt": "2026-10-16T19:05:53.434Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -21,
-   "y": -45,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 48,
+   "y": 15,
    "neighbours": [
     {
      "id": "rel-050",
@@ -11062,7 +10949,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -11071,7 +10958,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -11080,7 +10967,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -11098,29 +10985,29 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+     "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
      "date": "2026-10-13T13:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026"
     }
    ],
-   "show": "Low Life Loves You w/ Bill Brewster &amp; Richard Sen",
+   "show": "Low Life Loves You w/ Bill Brewster & Richard Sen",
    "date": "2026-10-13T13:00:00+01:00",
    "tags": [
-    "House",
-    "Leftfield House",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Low Life Loves You w/ Bill Brewster &amp; Richard Sen"
+    "show:Low Life Loves You w/ Bill Brewster & Richard Sen",
+    "show-genre:House",
+    "show-genre:Leftfield House",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "C1ho4dS4JeM",
    "youtubeUrl": "https://www.youtube.com/watch?v=C1ho4dS4JeM",
    "youtubeTitle": "Bronx Dogs - Tribute To Jazzy Jay",
    "youtubeCheckedAt": "2026-10-16T19:05:57.606Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 12,
-   "depth": 0.804,
-   "x": -52,
-   "y": -33,
+   "islandId": 13,
+   "depth": 0.803,
+   "x": 65,
+   "y": -16,
    "neighbours": [
     {
      "id": "rel-051",
@@ -11128,7 +11015,7 @@ window.SEA_DATA = {
      "artist": "megiapa",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -11137,7 +11024,7 @@ window.SEA_DATA = {
      "artist": "Retrocity",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     },
     {
@@ -11146,7 +11033,7 @@ window.SEA_DATA = {
      "artist": "Cheeseslider",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Leftfield House, SAFE FOR WORK, station:nts"
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
     }
    ]
@@ -11172,20 +11059,20 @@ window.SEA_DATA = {
    "show": "Self Soothe w/ Margeaux: Doo Wop Special",
    "date": "2026-10-13T15:00:00+01:00",
    "tags": [
-    "Doo Wop",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:Self Soothe w/ Margeaux: Doo Wop Special"
+    "show:Self Soothe w/ Margeaux: Doo Wop Special",
+    "show-genre:Doo Wop",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "3nu22AFeGsA",
    "youtubeUrl": "https://www.youtube.com/watch?v=3nu22AFeGsA",
    "youtubeTitle": "The Jiving Juniors - Valerie.wmv",
    "youtubeCheckedAt": "2026-10-16T19:06:00.743Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 5,
-   "depth": 0.796,
-   "x": 36,
-   "y": -23,
+   "islandId": 7,
+   "depth": 0.793,
+   "x": -19,
+   "y": -43,
    "neighbours": [
     {
      "id": "rel-052",
@@ -11193,7 +11080,7 @@ window.SEA_DATA = {
      "artist": "The Diablos, Nolan Strong",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -11202,7 +11089,7 @@ window.SEA_DATA = {
      "artist": "Ink Spots",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     },
     {
@@ -11211,7 +11098,7 @@ window.SEA_DATA = {
      "artist": "The Spaniels",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Doo Wop, SAFE FOR WORK, station:nts, show:Self Soothe w/ Margeaux: Doo Wop Special"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special"
      ]
     }
    ]
@@ -11237,30 +11124,30 @@ window.SEA_DATA = {
    "show": "Special Guests",
    "date": "2026-10-15",
    "tags": [
-    "Jazz",
-    "Drum & Bass",
-    "UK Garage",
-    "Reggae",
     "station:lotradio",
-    "show:Special Guests"
+    "show:Special Guests",
+    "show-genre:Jazz",
+    "show-genre:Drum & Bass",
+    "show-genre:UK Garage",
+    "show-genre:Reggae"
    ],
    "youtubeId": "1OjYkLLAXQ0",
    "youtubeUrl": "https://www.youtube.com/watch?v=1OjYkLLAXQ0",
    "youtubeTitle": "lorez alexandria - baltimore oriole",
    "youtubeCheckedAt": "2026-10-16T19:06:03.728Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 3,
-   "depth": 0.781,
-   "x": 20,
-   "y": 23,
+   "islandId": 4,
+   "depth": 0.801,
+   "x": -29,
+   "y": -7,
    "neighbours": [
     {
      "id": "rel-111",
      "name": "I'm Wishin'",
      "artist": "Lorez Alexandria",
-     "score": 0.7518796992481204,
+     "score": 0.7518796992481203,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae",
+      "played on the same show: Special Guests",
       "same artist: Lorez Alexandria"
      ]
     },
@@ -11270,7 +11157,7 @@ window.SEA_DATA = {
      "artist": "Chico Hamilton",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     },
     {
@@ -11279,7 +11166,7 @@ window.SEA_DATA = {
      "artist": "Death",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Jazz, Drum & Bass, UK Garage, Reggae"
+      "played on the same show: Special Guests"
      ]
     }
    ]
@@ -11297,30 +11184,30 @@ window.SEA_DATA = {
    "radioPlays": [
     {
      "station": "nts",
-     "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+     "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
      "date": "2026-10-13T05:00:00+01:00",
      "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024"
     }
    ],
-   "show": "WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)",
+   "show": "WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
    "date": "2026-10-13T05:00:00+01:00",
    "tags": [
-    "Post Rock",
-    "Dub Techno",
-    "Minimal Synth",
-    "Ambient",
     "station:nts",
-    "show:WAVE FORM W/ AURÉLIEN ARBET &amp; PIERRE ROUSSEAU (R)"
+    "show:WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
+    "show-genre:Post Rock",
+    "show-genre:Dub Techno",
+    "show-genre:Minimal Synth",
+    "show-genre:Ambient"
    ],
    "youtubeId": "oYqO_TotBbI",
    "youtubeUrl": "https://www.youtube.com/watch?v=oYqO_TotBbI",
    "youtubeTitle": "Brighter",
    "youtubeCheckedAt": "2026-10-16T19:06:11.957Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 1,
+   "islandId": 3,
    "depth": 0.793,
-   "x": -11,
-   "y": 11,
+   "x": 22,
+   "y": 24,
    "neighbours": [
     {
      "id": "rel-046",
@@ -11328,7 +11215,7 @@ window.SEA_DATA = {
      "artist": "Irene Bianco",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -11337,7 +11224,7 @@ window.SEA_DATA = {
      "artist": "Carme López",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     },
     {
@@ -11346,7 +11233,7 @@ window.SEA_DATA = {
      "artist": "Mira Calix",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: Post Rock, Dub Techno, Minimal Synth, Ambient"
+      "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)"
      ]
     }
    ]
@@ -11372,46 +11259,46 @@ window.SEA_DATA = {
    "show": "SOPHIA ZHURAVKOVA W/ AIEL (R)",
    "date": "2026-10-13T06:00:00+01:00",
    "tags": [
-    "Electronica",
-    "Ambient",
     "station:nts",
-    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+    "show:SOPHIA ZHURAVKOVA W/ AIEL (R)",
+    "show-genre:Electronica",
+    "show-genre:Ambient"
    ],
    "youtubeId": "T8ErBVwf_0k",
    "youtubeUrl": "https://www.youtube.com/watch?v=T8ErBVwf_0k",
    "youtubeTitle": "Suso Saiz — Anti-stress For Babies And Families (2019) [1 hour fully looped]",
    "youtubeCheckedAt": "2026-10-16T19:06:14.878Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "islandId": 11,
+   "islandId": 12,
    "depth": 0.793,
-   "x": 20,
-   "y": 54,
+   "x": -52,
+   "y": -33,
    "neighbours": [
     {
      "id": "rel-047",
      "name": "Angel Falls",
      "artist": "Ocean Moon",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-083",
      "name": "Bounty (Coral Sea Mix)",
      "artist": "Private Agenda, Coral Sea",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     },
     {
      "id": "rel-104",
      "name": "Java",
      "artist": "Tal, Triola, www.jz-arkh.co.uk, Donnacha Costello, Dettinger, Novisad, Ulf Lohmann, Markus Guentner, All",
-     "score": 0.6165413533834586,
+     "score": 0.6165413533834587,
      "reasons": [
-      "shared tags: Electronica, Ambient, station:nts, show:SOPHIA ZHURAVKOVA W/ AIEL (R)"
+      "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)"
      ]
     }
    ]
@@ -11437,12 +11324,12 @@ window.SEA_DATA = {
    "show": "The NTS Breakfast Show w/ GABI",
    "date": "2026-10-13T09:00:00+01:00",
    "tags": [
-    "New Wave",
-    "Post Punk",
-    "Leftfield Pop",
-    "Art Rock",
     "station:nts",
-    "show:The NTS Breakfast Show w/ GABI"
+    "show:The NTS Breakfast Show w/ GABI",
+    "show-genre:New Wave",
+    "show-genre:Post Punk",
+    "show-genre:Leftfield Pop",
+    "show-genre:Art Rock"
    ],
    "youtubeId": "R8nr2imEHBc",
    "youtubeUrl": "https://www.youtube.com/watch?v=R8nr2imEHBc",
@@ -11450,35 +11337,35 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:06:20.523Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 2,
-   "depth": 0.795,
-   "x": 5,
+   "depth": 0.793,
+   "x": 4,
    "y": -25,
    "neighbours": [
     {
      "id": "rel-049",
      "name": "Trois Gouttes De Sang",
      "artist": "Vox Populi!",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     },
     {
      "id": "rel-065",
      "name": "Ghost Town",
      "artist": "Eddie Miller And His Band",
-     "score": 0.6165413533834587,
+     "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: New Wave, Post Punk, Leftfield Pop, Art Rock"
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -11504,22 +11391,22 @@ window.SEA_DATA = {
    "show": "SOUP TO NUTS W/ ANU",
    "date": "2026-10-13T11:00:00+01:00",
    "tags": [
-    "House",
-    "Trip Hop",
-    "RNB",
-    "SAFE FOR WORK",
     "station:nts",
-    "show:SOUP TO NUTS W/ ANU"
+    "show:SOUP TO NUTS W/ ANU",
+    "show-genre:House",
+    "show-genre:Trip Hop",
+    "show-genre:RNB",
+    "show-genre:SAFE FOR WORK"
    ],
    "youtubeId": "6-cZWB14j00",
    "youtubeUrl": "https://www.youtube.com/watch?v=6-cZWB14j00",
    "youtubeTitle": "Razor Blade (H.N.I.C.) - Detroit's In The House (1990)",
    "youtubeCheckedAt": "2026-10-16T19:06:23.281Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
-   "depth": 0.797,
-   "x": -20,
-   "y": -43,
+   "islandId": 8,
+   "depth": 0.796,
+   "x": 49,
+   "y": 16,
    "neighbours": [
     {
      "id": "rel-050",
@@ -11527,7 +11414,7 @@ window.SEA_DATA = {
      "artist": "Janice Edwards",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -11536,7 +11423,7 @@ window.SEA_DATA = {
      "artist": "Bluesette",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     },
     {
@@ -11545,7 +11432,7 @@ window.SEA_DATA = {
      "artist": "Fukutomi Yukihiro",
      "score": 0.6165413533834586,
      "reasons": [
-      "shared tags: House, Trip Hop, RNB, SAFE FOR WORK"
+      "played on the same show: SOUP TO NUTS W/ ANU"
      ]
     }
    ]
@@ -11581,10 +11468,10 @@ window.SEA_DATA = {
    "youtubeTitle": "SZA - Kill Bill (Official Video)",
    "youtubeCheckedAt": "2026-10-16T19:10:06.644Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 16,
+   "islandId": 17,
    "depth": 0.823,
-   "x": 25,
-   "y": 41,
+   "x": -43,
+   "y": -10,
    "neighbours": [
     {
      "id": "rel-173",
@@ -11592,7 +11479,7 @@ window.SEA_DATA = {
      "artist": "Voyou",
      "score": 0.6220352401118808,
      "reasons": [
-      "shared tags: mood:slow, decade:2020s, station:radiooooo",
+      "shared tags: mood:slow, decade:2020s",
       "1 year apart (2022 / 2023)"
      ]
     },
@@ -11602,7 +11489,7 @@ window.SEA_DATA = {
      "artist": "Voyou",
      "score": 0.6220352401118808,
      "reasons": [
-      "shared tags: mood:slow, decade:2020s, station:radiooooo",
+      "shared tags: mood:slow, decade:2020s",
       "1 year apart (2022 / 2023)"
      ]
     },
@@ -11612,7 +11499,7 @@ window.SEA_DATA = {
      "artist": "Fred Again.. & Bia",
      "score": 0.4359572940759913,
      "reasons": [
-      "shared tags: decade:2020s, station:radiooooo",
+      "shared tags: decade:2020s",
       "3 years apart (2022 / 2025)"
      ]
     }
@@ -11649,10 +11536,10 @@ window.SEA_DATA = {
    "youtubeTitle": "JEALOUS GUY. (Ultimate Mix, 2020) - John Lennon and The Plastic Ono Band (w the Flux Fiddlers)",
    "youtubeCheckedAt": "2026-10-16T19:10:10.446Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 14,
+   "islandId": 15,
    "depth": 0.816,
-   "x": -38,
-   "y": 56,
+   "x": -6,
+   "y": -66,
    "neighbours": [
     {
      "id": "rel-170",
@@ -11660,7 +11547,8 @@ window.SEA_DATA = {
      "artist": "Vashti Bunyan",
      "score": 0.8060150375939851,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo, show:GBR / 1970s",
+      "shared tags: mood:slow, decade:1970s",
+      "played on the same show: GBR / 1970s",
       "1 year apart (1971 / 1970)"
      ]
     },
@@ -11670,7 +11558,8 @@ window.SEA_DATA = {
      "artist": "Supertramp",
      "score": 0.7759398496240603,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo, show:GBR / 1970s",
+      "shared tags: mood:slow, decade:1970s",
+      "played on the same show: GBR / 1970s",
       "6 years apart (1971 / 1977)"
      ]
     },
@@ -11680,7 +11569,7 @@ window.SEA_DATA = {
      "artist": "Carole King",
      "score": 0.6177275520529508,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "2 years apart (1971 / 1973)"
      ]
     }
@@ -11717,10 +11606,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Fred again.., BIA - ..FEISTY (Vancouver, 28th November 2025 with Ian Hotko)",
    "youtubeCheckedAt": "2026-10-16T19:10:12.407Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 30,
+   "islandId": 18,
    "depth": 0.829,
-   "x": -59,
-   "y": 29,
+   "x": 28,
+   "y": -39,
    "neighbours": [
     {
      "id": "rel-173",
@@ -11728,7 +11617,7 @@ window.SEA_DATA = {
      "artist": "Voyou",
      "score": 0.4441318167655074,
      "reasons": [
-      "shared tags: decade:2020s, station:radiooooo",
+      "shared tags: decade:2020s",
       "2 years apart (2025 / 2023)"
      ]
     },
@@ -11738,7 +11627,7 @@ window.SEA_DATA = {
      "artist": "Voyou",
      "score": 0.4441318167655074,
      "reasons": [
-      "shared tags: decade:2020s, station:radiooooo",
+      "shared tags: decade:2020s",
       "2 years apart (2025 / 2023)"
      ]
     },
@@ -11748,7 +11637,7 @@ window.SEA_DATA = {
      "artist": "SZA",
      "score": 0.4359572940759913,
      "reasons": [
-      "shared tags: decade:2020s, station:radiooooo",
+      "shared tags: decade:2020s",
       "3 years apart (2025 / 2022)"
      ]
     }
@@ -11785,10 +11674,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Diamond Day",
    "youtubeCheckedAt": "2026-10-16T19:10:14.332Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 14,
+   "islandId": 15,
    "depth": 0.816,
-   "x": -36,
-   "y": 54,
+   "x": -6,
+   "y": -68,
    "neighbours": [
     {
      "id": "rel-168",
@@ -11796,7 +11685,8 @@ window.SEA_DATA = {
      "artist": "John Lennon",
      "score": 0.8060150375939851,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo, show:GBR / 1970s",
+      "shared tags: mood:slow, decade:1970s",
+      "played on the same show: GBR / 1970s",
       "1 year apart (1970 / 1971)"
      ]
     },
@@ -11806,7 +11696,8 @@ window.SEA_DATA = {
      "artist": "Supertramp",
      "score": 0.7699248120300752,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo, show:GBR / 1970s",
+      "shared tags: mood:slow, decade:1970s",
+      "played on the same show: GBR / 1970s",
       "7 years apart (1970 / 1977)"
      ]
     },
@@ -11816,7 +11707,7 @@ window.SEA_DATA = {
      "artist": "Carole King",
      "score": 0.6117125144589658,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "3 years apart (1970 / 1973)"
      ]
     }
@@ -11853,10 +11744,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Funeral De Um Lavrador",
    "youtubeCheckedAt": "2026-10-16T19:10:17.352Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 15,
+   "islandId": 16,
    "depth": 0.821,
-   "x": -11,
-   "y": -67,
+   "x": 52,
+   "y": 45,
    "neighbours": [
     {
      "id": "rel-175",
@@ -11864,7 +11755,7 @@ window.SEA_DATA = {
      "artist": "Dana Gillespie",
      "score": 0.6138607174223648,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "2 years apart (1966 / 1968)"
      ]
     },
@@ -11874,7 +11765,7 @@ window.SEA_DATA = {
      "artist": "Little Emmett Sutton",
      "score": 0.6078456798283798,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "3 years apart (1966 / 1963)"
      ]
     },
@@ -11884,7 +11775,7 @@ window.SEA_DATA = {
      "artist": "Miriam Makeba",
      "score": 0.5898005670464249,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "6 years apart (1966 / 1960)"
      ]
     }
@@ -11921,10 +11812,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Miriam Makeba - House Of The Rising Sun",
    "youtubeCheckedAt": "2026-10-16T19:10:20.265Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 15,
+   "islandId": 16,
    "depth": 0.822,
-   "x": -6,
-   "y": -68,
+   "x": 57,
+   "y": 45,
    "neighbours": [
     {
      "id": "rel-174",
@@ -11932,7 +11823,7 @@ window.SEA_DATA = {
      "artist": "Little Emmett Sutton",
      "score": 0.6078456798283798,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "3 years apart (1960 / 1963)"
      ]
     },
@@ -11942,7 +11833,7 @@ window.SEA_DATA = {
      "artist": "Nara",
      "score": 0.5898005670464249,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "6 years apart (1960 / 1966)"
      ]
     },
@@ -11952,7 +11843,7 @@ window.SEA_DATA = {
      "artist": "Dana Gillespie",
      "score": 0.577770491858455,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "8 years apart (1960 / 1968)"
      ]
     }
@@ -11989,10 +11880,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Voyou - Une île (Visualizer)",
    "youtubeCheckedAt": "2026-10-16T19:10:22.881Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 16,
+   "islandId": 17,
    "depth": 0.822,
-   "x": 21,
-   "y": 42,
+   "x": -47,
+   "y": -9,
    "neighbours": [
     {
      "id": "rel-176",
@@ -12000,7 +11891,8 @@ window.SEA_DATA = {
      "artist": "Voyou",
      "score": 0.9999999999999999,
      "reasons": [
-      "shared tags: mood:slow, decade:2020s, station:radiooooo, show:FRA / 2020s",
+      "shared tags: mood:slow, decade:2020s",
+      "played on the same show: FRA / 2020s",
       "same artist: Voyou",
       "same label: A+LSO",
       "both from 2023"
@@ -12012,7 +11904,7 @@ window.SEA_DATA = {
      "artist": "SZA",
      "score": 0.6220352401118808,
      "reasons": [
-      "shared tags: mood:slow, decade:2020s, station:radiooooo",
+      "shared tags: mood:slow, decade:2020s",
       "1 year apart (2023 / 2022)"
      ]
     },
@@ -12022,7 +11914,7 @@ window.SEA_DATA = {
      "artist": "Fred Again.. & Bia",
      "score": 0.4441318167655074,
      "reasons": [
-      "shared tags: decade:2020s, station:radiooooo",
+      "shared tags: decade:2020s",
       "2 years apart (2023 / 2025)"
      ]
     }
@@ -12059,10 +11951,10 @@ window.SEA_DATA = {
    "youtubeTitle": "MOM, WON'T YOU TEACH ME TO MONKEY - Little Emmett Sutton [Federal 12501] 1963",
    "youtubeCheckedAt": "2026-10-16T19:10:25.616Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 15,
+   "islandId": 16,
    "depth": 0.821,
-   "x": -8,
-   "y": -65,
+   "x": 54,
+   "y": 48,
    "neighbours": [
     {
      "id": "rel-171",
@@ -12070,7 +11962,7 @@ window.SEA_DATA = {
      "artist": "Nara",
      "score": 0.6078456798283798,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "3 years apart (1963 / 1966)"
      ]
     },
@@ -12080,7 +11972,7 @@ window.SEA_DATA = {
      "artist": "Miriam Makeba",
      "score": 0.6078456798283798,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "3 years apart (1963 / 1960)"
      ]
     },
@@ -12090,7 +11982,7 @@ window.SEA_DATA = {
      "artist": "Dana Gillespie",
      "score": 0.5958156046404098,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "5 years apart (1963 / 1968)"
      ]
     }
@@ -12127,10 +12019,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Souvenirs of Stefan",
    "youtubeCheckedAt": "2026-10-16T19:10:28.276Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 15,
+   "islandId": 16,
    "depth": 0.819,
-   "x": -8,
-   "y": -71,
+   "x": 54,
+   "y": 42,
    "neighbours": [
     {
      "id": "rel-171",
@@ -12138,7 +12030,7 @@ window.SEA_DATA = {
      "artist": "Nara",
      "score": 0.6138607174223648,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "2 years apart (1968 / 1966)"
      ]
     },
@@ -12148,7 +12040,7 @@ window.SEA_DATA = {
      "artist": "Little Emmett Sutton",
      "score": 0.5958156046404098,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "5 years apart (1968 / 1963)"
      ]
     },
@@ -12158,7 +12050,7 @@ window.SEA_DATA = {
      "artist": "Miriam Makeba",
      "score": 0.577770491858455,
      "reasons": [
-      "shared tags: mood:slow, decade:1960s, station:radiooooo",
+      "shared tags: mood:slow, decade:1960s",
       "8 years apart (1968 / 1960)"
      ]
     }
@@ -12195,10 +12087,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Enfin",
    "youtubeCheckedAt": "2026-10-16T19:10:31.303Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 16,
+   "islandId": 17,
    "depth": 0.822,
-   "x": 21,
-   "y": 40,
+   "x": -47,
+   "y": -11,
    "neighbours": [
     {
      "id": "rel-173",
@@ -12206,7 +12098,8 @@ window.SEA_DATA = {
      "artist": "Voyou",
      "score": 0.9999999999999999,
      "reasons": [
-      "shared tags: mood:slow, decade:2020s, station:radiooooo, show:FRA / 2020s",
+      "shared tags: mood:slow, decade:2020s",
+      "played on the same show: FRA / 2020s",
       "same artist: Voyou",
       "same label: A+LSO",
       "both from 2023"
@@ -12218,7 +12111,7 @@ window.SEA_DATA = {
      "artist": "SZA",
      "score": 0.6220352401118808,
      "reasons": [
-      "shared tags: mood:slow, decade:2020s, station:radiooooo",
+      "shared tags: mood:slow, decade:2020s",
       "1 year apart (2023 / 2022)"
      ]
     },
@@ -12228,7 +12121,7 @@ window.SEA_DATA = {
      "artist": "Fred Again.. & Bia",
      "score": 0.4441318167655074,
      "reasons": [
-      "shared tags: decade:2020s, station:radiooooo",
+      "shared tags: decade:2020s",
       "2 years apart (2023 / 2025)"
      ]
     }
@@ -12265,10 +12158,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Supertramp - From Now On (Official Audio)",
    "youtubeCheckedAt": "2026-10-16T19:10:34.289Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 14,
+   "islandId": 15,
    "depth": 0.817,
-   "x": -37,
-   "y": 52,
+   "x": -7,
+   "y": -70,
    "neighbours": [
     {
      "id": "rel-168",
@@ -12276,7 +12169,8 @@ window.SEA_DATA = {
      "artist": "John Lennon",
      "score": 0.7759398496240603,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo, show:GBR / 1970s",
+      "shared tags: mood:slow, decade:1970s",
+      "played on the same show: GBR / 1970s",
       "6 years apart (1977 / 1971)"
      ]
     },
@@ -12286,7 +12180,8 @@ window.SEA_DATA = {
      "artist": "Vashti Bunyan",
      "score": 0.7699248120300752,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo, show:GBR / 1970s",
+      "shared tags: mood:slow, decade:1970s",
+      "played on the same show: GBR / 1970s",
       "7 years apart (1977 / 1970)"
      ]
     },
@@ -12296,7 +12191,7 @@ window.SEA_DATA = {
      "artist": "G.G. Vikey",
      "score": 0.6177275520529508,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "2 years apart (1977 / 1975)"
      ]
     }
@@ -12333,10 +12228,10 @@ window.SEA_DATA = {
    "youtubeTitle": "🇧🇯 G. G. Vikey - Je Vous Remercie (1976)🇧🇯",
    "youtubeCheckedAt": "2026-10-16T19:10:40.246Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 14,
+   "islandId": 15,
    "depth": 0.82,
-   "x": -41,
-   "y": 52,
+   "x": -10,
+   "y": -70,
    "neighbours": [
     {
      "id": "rel-177",
@@ -12344,7 +12239,7 @@ window.SEA_DATA = {
      "artist": "Supertramp",
      "score": 0.6177275520529508,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "2 years apart (1975 / 1977)"
      ]
     },
@@ -12354,7 +12249,7 @@ window.SEA_DATA = {
      "artist": "Carole King",
      "score": 0.613860717422365,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "2 years apart (1975 / 1973)"
      ]
     },
@@ -12364,7 +12259,7 @@ window.SEA_DATA = {
      "artist": "John Lennon",
      "score": 0.6056974768649809,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "4 years apart (1975 / 1971)"
      ]
     }
@@ -12401,10 +12296,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Weekdays",
    "youtubeCheckedAt": "2026-10-16T19:10:42.965Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 14,
+   "islandId": 15,
    "depth": 0.819,
-   "x": -41,
-   "y": 56,
+   "x": -10,
+   "y": -66,
    "neighbours": [
     {
      "id": "rel-168",
@@ -12412,7 +12307,7 @@ window.SEA_DATA = {
      "artist": "John Lennon",
      "score": 0.6177275520529508,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "2 years apart (1973 / 1971)"
      ]
     },
@@ -12422,7 +12317,7 @@ window.SEA_DATA = {
      "artist": "G.G. Vikey",
      "score": 0.613860717422365,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "2 years apart (1973 / 1975)"
      ]
     },
@@ -12432,7 +12327,7 @@ window.SEA_DATA = {
      "artist": "Vashti Bunyan",
      "score": 0.6117125144589658,
      "reasons": [
-      "shared tags: mood:slow, decade:1970s, station:radiooooo",
+      "shared tags: mood:slow, decade:1970s",
       "3 years apart (1973 / 1970)"
      ]
     }
@@ -12444,176 +12339,176 @@ window.SEA_DATA = {
    "from": "rel-170",
    "to": "rel-175",
    "score": 0.469,
-   "fromIsland": 14,
-   "toIsland": 15
+   "fromIsland": 15,
+   "toIsland": 16
   },
   {
    "from": "rel-168",
    "to": "rel-175",
    "score": 0.463,
-   "fromIsland": 14,
-   "toIsland": 15
+   "fromIsland": 15,
+   "toIsland": 16
   },
   {
    "from": "rel-169",
    "to": "rel-173",
    "score": 0.444,
-   "fromIsland": 30,
-   "toIsland": 16
+   "fromIsland": 18,
+   "toIsland": 17
   },
   {
    "from": "rel-176",
    "to": "rel-169",
    "score": 0.444,
-   "fromIsland": 16,
-   "toIsland": 30
+   "fromIsland": 17,
+   "toIsland": 18
   },
   {
    "from": "rel-167",
    "to": "rel-169",
    "score": 0.436,
-   "fromIsland": 16,
-   "toIsland": 30
+   "fromIsland": 17,
+   "toIsland": 18
   },
   {
    "from": "rel-177",
    "to": "rel-175",
    "score": 0.427,
-   "fromIsland": 14,
-   "toIsland": 15
+   "fromIsland": 15,
+   "toIsland": 16
   },
   {
    "from": "rel-174",
    "to": "rel-179",
    "score": 0.417,
-   "fromIsland": 15,
-   "toIsland": 14
+   "fromIsland": 16,
+   "toIsland": 15
   },
   {
    "from": "rel-171",
    "to": "rel-170",
    "score": 0.367,
-   "fromIsland": 15,
-   "toIsland": 14
+   "fromIsland": 16,
+   "toIsland": 15
   },
   {
    "from": "rel-178",
    "to": "rel-175",
    "score": 0.345,
-   "fromIsland": 14,
-   "toIsland": 15
+   "fromIsland": 15,
+   "toIsland": 16
   },
   {
    "from": "rel-172",
    "to": "rel-170",
    "score": 0.33,
-   "fromIsland": 15,
-   "toIsland": 14
+   "fromIsland": 16,
+   "toIsland": 15
   },
   {
    "from": "rel-002",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-004",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-006",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-008",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-010",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-012",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-013",
    "to": "rel-047",
-   "score": 0.329,
-   "fromIsland": 13,
-   "toIsland": 11
+   "score": 0.277,
+   "fromIsland": 14,
+   "toIsland": 12
   },
   {
    "from": "rel-083",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-104",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-115",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-123",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-132",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-149",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-157",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   },
   {
    "from": "rel-164",
    "to": "rel-002",
-   "score": 0.329,
-   "fromIsland": 11,
-   "toIsland": 13
+   "score": 0.277,
+   "fromIsland": 12,
+   "toIsland": 14
   }
  ]
 };

@@ -1,7 +1,7 @@
 // Feature space and similarity for mapped catalogues.
 //
 // Signals combined per release pair:
-//   tags    TF-IDF cosine over the union of genres / styles / descriptors
+//   tags    TF-IDF cosine over sound tags, plus context tags (see tags.js)
 //   credits shared artists (0.5 weight) and shared labels (0.175)
 //   era     proximity in years (exponential decay over 25 years)
 //   audio   bpm closeness and key distance (when both sides have data)
@@ -11,12 +11,7 @@
 // descriptors especially) are the strongest signal we get from scanned data.
 
 import { keyDistance } from '../layout.js';
-
-const PROVENANCE_PREFIX = /^(station|show):/;
-
-function isProvenance(tag) {
-  return PROVENANCE_PREFIX.test(tag);
-}
+import { isContextTag } from './tags.js';
 
 export function buildTagVocabulary(releases) {
   const docFrequency = new Map();
@@ -32,9 +27,9 @@ export function tagVector(release, vocabulary, { mode = 'all' } = {}) {
   const vector = new Map();
   const tags = release.tags?.all ?? release.styles ?? [];
   for (const tag of tags) {
-    const provenance = isProvenance(tag);
-    if (mode === 'sound' && provenance) continue;
-    if (mode === 'provenance' && !provenance) continue;
+    const context = isContextTag(tag);
+    if (mode === 'sound' && context) continue;
+    if (mode === 'context' && !context) continue;
     const df = vocabulary.get(tag);
     if (!df) continue;
     const idf = Math.log((vocabulary.size + 1) / (df + 0.5));
@@ -82,22 +77,23 @@ export function buildSimilarity(releases) {
   const pairCache = new Map();
   const vocabulary = buildTagVocabulary(releases);
   const soundVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'sound' })]));
-  const provenanceVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'provenance' })]));
+  const contextVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'context' })]));
 
   return function similarity(a, b) {
     if (a.id === b.id) return 1;
     const pair = a.id < b.id ? `${a.id}\0${b.id}` : `${b.id}\0${a.id}`;
     if (pairCache.has(pair)) return pairCache.get(pair);
 
-    // Sound tags (genres, moods, descriptors) decide the geography. Provenance
-    // (station, show) is only a weak tie: two records from one show may still
-    // be worlds apart.
-    const soundScore = cosine(soundVectors.get(a.id) ?? new Map(), soundVectors.get(b.id) ?? new Map());
-    const provenanceScore = cosine(
-      provenanceVectors.get(a.id) ?? new Map(),
-      provenanceVectors.get(b.id) ?? new Map(),
-    );
-    const tagScore = 0.75 * soundScore + 0.25 * provenanceScore;
+    // When both tracks have sound tags, those decide the geography and context
+    // is only a weak tie: two records from one show may still be worlds apart.
+    // Without them, context is all we know: the tracks were played together,
+    // or on shows described alike.
+    const soundA = soundVectors.get(a.id) ?? new Map();
+    const soundB = soundVectors.get(b.id) ?? new Map();
+    const contextScore = cosine(contextVectors.get(a.id) ?? new Map(), contextVectors.get(b.id) ?? new Map());
+    const tagScore = soundA.size && soundB.size
+      ? 0.75 * cosine(soundA, soundB) + 0.25 * contextScore
+      : contextScore;
     const artistScore = overlap(a.artists ?? [a.artist], b.artists ?? [b.artist]);
     const labelScore = overlap([a.label], [b.label]);
 

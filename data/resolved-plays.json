@@ -12,7 +12,7 @@
     "musicbrainz": "7513ebc4-a9ae-4143-97b8-be178c826aa2"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -31,7 +31,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -50,7 +50,7 @@
     "musicbrainz": "1b90ab50-fcaa-4c7f-813c-1975e0dd3194"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -69,7 +69,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -88,7 +88,7 @@
     "musicbrainz": "2d1af22d-1f63-4093-a636-b764c9e999d0"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -107,7 +107,7 @@
     "musicbrainz": "fa0eeb6f-cc0a-4c57-81f1-deb110c2b6e9"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -126,7 +126,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -145,7 +145,7 @@
     "musicbrainz": "142c5f75-c567-45f5-ba2c-d2d724f1de72"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -164,7 +164,7 @@
     "musicbrainz": "585e7d1d-a4da-49ad-8e79-3775d31ac623"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -183,7 +183,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -202,7 +202,7 @@
     "musicbrainz": "fc4b095e-b200-4ae1-a16d-1eb58006a549"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -221,7 +221,7 @@
     "musicbrainz": "68bf7ad2-8c1b-4268-89ca-72dd352694f6"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -240,7 +240,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -259,7 +259,7 @@
     "musicbrainz": "7cfe6ea6-d6f6-4c27-870e-7494ffc2abbc"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -278,7 +278,7 @@
     "musicbrainz": "92c1d476-e1eb-461a-b983-e47823b547a7"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -297,7 +297,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -316,7 +316,7 @@
     "musicbrainz": "82a51cd9-d106-496b-867e-bde37fa99da9"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -335,7 +335,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -354,7 +354,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -373,7 +373,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -392,7 +392,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -411,7 +411,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -430,7 +430,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -449,7 +449,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -468,7 +468,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -487,7 +487,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -506,7 +506,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -525,7 +525,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -544,7 +544,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -563,7 +563,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -582,7 +582,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -601,7 +601,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -620,7 +620,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -641,7 +641,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -662,7 +662,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -683,7 +683,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -704,7 +704,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -725,7 +725,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -746,7 +746,7 @@
     "musicbrainz": "b02f1f3c-8cf4-4171-8a6a-225fe70fa229"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -767,7 +767,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -788,7 +788,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -809,7 +809,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -830,7 +830,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -851,7 +851,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -872,7 +872,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -893,7 +893,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -914,7 +914,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -935,7 +935,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -956,7 +956,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -977,7 +977,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -998,7 +998,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1019,7 +1019,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1040,7 +1040,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1061,7 +1061,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1082,7 +1082,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1103,7 +1103,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1124,7 +1124,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1145,7 +1145,7 @@
     "musicbrainz": "39f750eb-ebba-4384-aaa6-22269fe651ae"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1166,7 +1166,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1187,7 +1187,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1208,7 +1208,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1229,7 +1229,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1250,7 +1250,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1271,7 +1271,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1292,7 +1292,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1313,7 +1313,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1334,7 +1334,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -1355,7 +1355,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1374,7 +1374,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1393,7 +1393,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1412,7 +1412,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1431,7 +1431,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1450,7 +1450,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1469,7 +1469,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1488,7 +1488,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1507,7 +1507,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1526,7 +1526,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1545,7 +1545,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1564,7 +1564,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1583,7 +1583,7 @@
     "musicbrainz": "9803641c-a200-4ffa-a38c-0d143bbb53ea"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1602,7 +1602,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1621,7 +1621,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1640,7 +1640,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1659,7 +1659,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1678,7 +1678,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1697,7 +1697,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -1716,7 +1716,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1733,7 +1733,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1750,7 +1750,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1767,7 +1767,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1784,7 +1784,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1801,7 +1801,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1818,7 +1818,7 @@
     "musicbrainz": "75553d2d-0380-4a33-b168-d2ac2a99b501"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1835,7 +1835,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1852,7 +1852,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1869,7 +1869,7 @@
     "musicbrainz": "7be97f55-e66d-4ca9-9a79-45574370ede4"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1886,7 +1886,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1903,7 +1903,7 @@
     "musicbrainz": "1f5879d5-4bde-424f-bd73-401822acdf2a"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1920,7 +1920,7 @@
     "musicbrainz": "ee137642-092c-4870-85ec-910dd3e5ad78"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1937,7 +1937,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1954,7 +1954,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1971,7 +1971,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -1988,7 +1988,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ]
@@ -2005,7 +2005,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2023,7 +2023,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2041,7 +2041,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2059,7 +2059,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2077,7 +2077,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2095,7 +2095,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2113,7 +2113,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2131,7 +2131,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2149,7 +2149,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2167,7 +2167,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2185,7 +2185,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2203,7 +2203,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2221,7 +2221,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2239,7 +2239,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2257,7 +2257,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -2275,7 +2275,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2295,7 +2295,7 @@
     "musicbrainz": "4a72a327-7a85-49a4-9593-25670cbeba94"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2315,7 +2315,7 @@
     "musicbrainz": "da536782-f97c-49f2-a6df-aaf5d2e4c7d7"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2335,7 +2335,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2355,7 +2355,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2375,7 +2375,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2395,7 +2395,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2415,7 +2415,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2435,7 +2435,7 @@
     "musicbrainz": "3c0cacb0-5963-488b-8ac1-a96879a1bec0"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2455,7 +2455,7 @@
     "musicbrainz": "10c0b571-9e2b-480c-a2c6-dc3ebf6c2e5d"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2475,7 +2475,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2495,7 +2495,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2515,7 +2515,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2535,7 +2535,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2555,7 +2555,7 @@
     "musicbrainz": "a987d75a-d6d4-491a-ac50-7d0bb916a286"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2575,7 +2575,7 @@
     "musicbrainz": "761d553e-5bb4-4e1c-b5c5-65bf380f8528"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2595,7 +2595,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2615,7 +2615,7 @@
     "musicbrainz": "930dc296-db5f-4ced-b25d-62edf16fa841"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2635,7 +2635,7 @@
     "musicbrainz": "5b1b0598-a851-4be9-bc87-afc4f858c8b3"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2655,7 +2655,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2675,7 +2675,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2695,7 +2695,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2715,7 +2715,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2735,7 +2735,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2755,7 +2755,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2775,7 +2775,7 @@
     "musicbrainz": "f931aa7d-47bd-40dc-8b8d-4871a090fcc9"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2795,7 +2795,7 @@
     "musicbrainz": "b106deb5-fc20-4bfb-aa23-87b7516bef3c"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2815,7 +2815,7 @@
     "musicbrainz": "3717822a-4ce7-4e44-996f-40a5b1019eed"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2835,7 +2835,7 @@
     "musicbrainz": "f20510e9-1430-492e-affe-8e20fa032697"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2855,7 +2855,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2875,7 +2875,7 @@
     "musicbrainz": "5f060425-4501-41fc-813c-2e8c6ae16036"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -2895,7 +2895,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -2914,7 +2914,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -2933,7 +2933,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -2952,7 +2952,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -2971,7 +2971,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -2990,7 +2990,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3009,7 +3009,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3028,7 +3028,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3047,7 +3047,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3066,7 +3066,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3085,7 +3085,7 @@
     "musicbrainz": "79d5c7bf-7798-47e7-bf59-51eba2475653"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3104,7 +3104,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3123,7 +3123,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3142,7 +3142,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3161,7 +3161,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3180,7 +3180,7 @@
     "musicbrainz": "70549fb0-8096-42df-942c-674f118bb246"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3199,7 +3199,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3218,7 +3218,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3237,7 +3237,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3256,7 +3256,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3275,7 +3275,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3294,7 +3294,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3313,7 +3313,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3332,7 +3332,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3351,7 +3351,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3370,7 +3370,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3389,7 +3389,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3408,7 +3408,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -3427,7 +3427,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3445,7 +3445,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3463,7 +3463,7 @@
     "musicbrainz": "23643413-8564-4ca5-b365-26cd069ae146"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3481,7 +3481,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3499,7 +3499,7 @@
     "musicbrainz": "b7944c3f-adef-4c84-9fa0-28d4c4c833fb"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3517,7 +3517,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3535,7 +3535,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3553,7 +3553,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3571,7 +3571,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3589,7 +3589,7 @@
     "musicbrainz": "4048d47a-5907-47be-98b6-b4479349f128"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3607,7 +3607,7 @@
     "musicbrainz": "6a0bc4a5-bd74-4556-84a4-5c4f1803c37f"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3625,7 +3625,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3643,7 +3643,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3661,7 +3661,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3679,7 +3679,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3697,7 +3697,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3715,7 +3715,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3733,7 +3733,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3751,7 +3751,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -3769,7 +3769,7 @@
     "musicbrainz": "860e1300-6831-4535-9bc1-cc7d02f82f07"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3786,7 +3786,7 @@
     "musicbrainz": "a4327f2d-5054-4e48-af26-451208665a52"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3803,7 +3803,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3820,7 +3820,7 @@
     "musicbrainz": "0cadac07-962b-4e32-be41-f358ffa881ea"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3837,7 +3837,7 @@
     "musicbrainz": "e7c322e3-dc65-4cd5-a317-fbf864e906fc"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3854,7 +3854,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3871,7 +3871,7 @@
     "musicbrainz": "f67d868f-3282-4a88-85ce-172034f7f9ed"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3888,7 +3888,7 @@
     "musicbrainz": "cfe2be99-68ea-441b-b5be-86e8b51e6be6"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3905,7 +3905,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3922,7 +3922,7 @@
     "musicbrainz": "04c3022d-bb19-43cf-9b30-74c616b7f2bf"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3939,7 +3939,7 @@
     "musicbrainz": "f8fa2d68-016d-4d8e-ad62-cd9a9defac15"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3956,7 +3956,7 @@
     "musicbrainz": "dd03b238-e94a-4e1f-8e56-35863a70d4f2"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3973,7 +3973,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -3990,7 +3990,7 @@
     "musicbrainz": "a450956b-b92b-4099-a21b-adb715ef08c4"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4007,7 +4007,7 @@
     "musicbrainz": "f326f205-5c41-4790-befe-3511cbb20974"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4024,7 +4024,7 @@
     "musicbrainz": "49a5d028-3014-4374-a00d-4d6d2aa84a42"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4041,7 +4041,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4058,7 +4058,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4075,7 +4075,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4092,7 +4092,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ]
@@ -4105,7 +4105,7 @@
    "title": "Micro-Gravity",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4121,7 +4121,7 @@
    "title": "This Moment Must Be the Movement",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4137,7 +4137,7 @@
    "title": "Virtual Emotion (Dub)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4153,7 +4153,7 @@
    "title": "Praise (Fingers Tribal Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4169,7 +4169,7 @@
    "title": "Free Lovin' (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4185,7 +4185,7 @@
    "title": "Sensual (Let's Work Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4201,7 +4201,7 @@
    "title": "So Alive",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -4217,7 +4217,7 @@
    "title": "4 My Peepz (Dubfire Rework)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4227,7 +4227,7 @@
    "title": "Walk the Line",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4237,7 +4237,7 @@
    "title": "Hot Girl Bummer",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4247,7 +4247,7 @@
    "title": "Blind Pick",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4257,7 +4257,7 @@
    "title": "When I Feel Like This",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4267,7 +4267,7 @@
    "title": "Run Silent",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4277,7 +4277,7 @@
    "title": "Korrupt",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4287,7 +4287,7 @@
    "title": "Disharmonized",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4297,7 +4297,7 @@
    "title": "Chez Moi (Waiting For You) [feat. Confidence Man] [Sally C Remix]",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4307,7 +4307,7 @@
    "title": "Flamengo",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4317,7 +4317,7 @@
    "title": "It Feels so Good (The Conductor & the Cowboy Amnesia Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4327,7 +4327,7 @@
    "title": "Dia De Los Muertos",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4337,7 +4337,7 @@
    "title": "Aetherfall",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4347,7 +4347,7 @@
    "title": "Say It with Me",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4357,7 +4357,7 @@
    "title": "Let Me Lose My Mind",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": []
+   "showGenres": []
   },
   {
    "station": "lotradio",
@@ -4367,7 +4367,7 @@
    "title": "Freckles (Beatless)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4380,7 +4380,7 @@
    "title": "The Acid Test",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4393,7 +4393,7 @@
    "title": "The Acid Test (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4406,7 +4406,7 @@
    "title": "Indian (Revamp)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4419,7 +4419,7 @@
    "title": "Orbit 1.1 (Acapella)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4432,7 +4432,7 @@
    "title": "Party Guilt (Matt Styles Club Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4445,7 +4445,7 @@
    "title": "Da Rhythm",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4458,7 +4458,7 @@
    "title": "Im Rausch Der Tiefe",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4471,7 +4471,7 @@
    "title": "Break It Down (Classics)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4484,7 +4484,7 @@
    "title": "The Right Vibes (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4497,7 +4497,7 @@
    "title": "The Right Vibe (Radio Edit)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4510,7 +4510,7 @@
    "title": "Headspin (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4523,7 +4523,7 @@
    "title": "E.F.X (European Fusion X-perience) (Electro Monkey Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ]
@@ -4536,7 +4536,7 @@
    "title": "Gengis",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4552,7 +4552,7 @@
    "title": "The Change",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4568,7 +4568,7 @@
    "title": "Keep on Knocking",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4584,7 +4584,7 @@
    "title": "Potter's Field",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4600,7 +4600,7 @@
    "title": "Plain and Sane and Simple Melody",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4616,7 +4616,7 @@
    "title": "It's Not Easy",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4632,7 +4632,7 @@
    "title": "I'm Wishin'",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4648,7 +4648,7 @@
    "title": "Lesson for the Lords (feat. Nushape Orchestra)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4664,7 +4664,7 @@
    "title": "My Favorite Things",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4680,7 +4680,7 @@
    "title": "Intergalactic Love Song",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4696,7 +4696,7 @@
    "title": "All Along The Watchtower",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4712,7 +4712,7 @@
    "title": "If I Could Only Be Sure",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4728,7 +4728,7 @@
    "title": "Baltimore Oriole",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4744,7 +4744,7 @@
    "title": "Don't Cry Little Tree",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4760,7 +4760,7 @@
    "title": "I Can See",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4776,7 +4776,7 @@
    "title": "I Feel Like Breaking Up Somebody's Home",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4792,7 +4792,7 @@
    "title": "Look-A-Here",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4808,7 +4808,7 @@
    "title": "Our Lives Are Shaped By What We Love",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4824,7 +4824,7 @@
    "title": "October Song",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4840,7 +4840,7 @@
    "title": "In The Thick Of It",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4856,7 +4856,7 @@
    "title": "Reasons",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4872,7 +4872,7 @@
    "title": "Youngblood (Livin' In the Streets)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4888,7 +4888,7 @@
    "title": "Land of Hunger",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4904,7 +4904,7 @@
    "title": "One (feat. Bror Havnes)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4920,7 +4920,7 @@
    "title": "Fever",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4936,7 +4936,7 @@
    "title": "A Little Way Different",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4952,7 +4952,7 @@
    "title": "Don't Tell Me, Tell Her",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4968,7 +4968,7 @@
    "title": "Faca Não",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -4984,7 +4984,7 @@
    "title": "Looking Up To You",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -5000,7 +5000,7 @@
    "title": "Out",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5016,7 +5016,7 @@
    "title": "Beautiful Witness",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5032,7 +5032,7 @@
    "title": "Lost Inside",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5048,7 +5048,7 @@
    "title": "Sunk Ice",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5064,7 +5064,7 @@
    "title": "Rocket No. 2",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5080,7 +5080,7 @@
    "title": "Herzog",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5096,7 +5096,7 @@
    "title": "Qwerks",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5112,7 +5112,7 @@
    "title": "Suck'n'Dub",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5128,7 +5128,7 @@
    "title": "Show You Dub",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5144,7 +5144,7 @@
    "title": "Deep",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5160,7 +5160,7 @@
    "title": "Driving Blind (Vapourspace Sex Binge Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5176,7 +5176,7 @@
    "title": "Dirge (Part 2)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5192,7 +5192,7 @@
    "title": "You Give Me (Love) (Geche Mix) (Gi Gi De-Voxed Edit)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5208,7 +5208,7 @@
    "title": "Think City",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5224,7 +5224,7 @@
    "title": "Gamma",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5240,7 +5240,7 @@
    "title": "Infusion",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5256,7 +5256,7 @@
    "title": "Some Girls (Gi Gi Instrumental Edit)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5272,7 +5272,7 @@
    "title": "Interrupt Beyond Therapy",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5288,7 +5288,7 @@
    "title": "Dropout Dub (Gi Gi Edit)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5304,7 +5304,7 @@
    "title": "Freshly",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5320,7 +5320,7 @@
    "title": "Ambrosia",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5336,7 +5336,7 @@
    "title": "Late (Gi Gi No Trumpet Edit)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5352,7 +5352,7 @@
    "title": "Commix",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5368,7 +5368,7 @@
    "title": "Jamaican Part: The Sauce",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5384,7 +5384,7 @@
    "title": "Electric Push CPU Mix",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5400,7 +5400,7 @@
    "title": "The Electric Days (Dub Vocoder)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5416,7 +5416,7 @@
    "title": "That's The Stuff",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5432,7 +5432,7 @@
    "title": "Teatray In The Sky",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5448,7 +5448,7 @@
    "title": "Blust",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5464,7 +5464,7 @@
    "title": "Landslide Victory Vendetta",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5480,7 +5480,7 @@
    "title": "Bodium",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5496,7 +5496,7 @@
    "title": "Garage Dub",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5512,7 +5512,7 @@
    "title": "Razor's Edge",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5528,7 +5528,7 @@
    "title": "Fire In The Fields",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5544,7 +5544,7 @@
    "title": "Turgis 45",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -5870,7 +5870,7 @@
     "musicbrainz": "7513ebc4-a9ae-4143-97b8-be178c826aa2"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -5895,7 +5895,7 @@
    "title": "Micro-Gravity",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -5925,7 +5925,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -5950,7 +5950,7 @@
    "title": "This Moment Must Be the Movement",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -5980,7 +5980,7 @@
     "musicbrainz": "1b90ab50-fcaa-4c7f-813c-1975e0dd3194"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6005,7 +6005,7 @@
    "title": "Virtual Emotion (Dub)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -6035,7 +6035,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6060,7 +6060,7 @@
    "title": "Praise (Fingers Tribal Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -6090,7 +6090,7 @@
     "musicbrainz": "2d1af22d-1f63-4093-a636-b764c9e999d0"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6115,7 +6115,7 @@
    "title": "Free Lovin' (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -6145,7 +6145,7 @@
     "musicbrainz": "fa0eeb6f-cc0a-4c57-81f1-deb110c2b6e9"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6170,7 +6170,7 @@
    "title": "Sensual (Let's Work Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -6196,7 +6196,7 @@
    "title": "So Alive",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "tags": [
+   "showGenres": [
     "House",
     "Ambient",
     "Electronica",
@@ -6226,7 +6226,7 @@
     "musicbrainz": "142c5f75-c567-45f5-ba2c-d2d724f1de72"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6251,7 +6251,7 @@
    "title": "4 My Peepz (Dubfire Rework)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "OBsrLfPA218",
     "url": "https://www.youtube.com/watch?v=OBsrLfPA218",
@@ -6271,7 +6271,7 @@
    "title": "Walk the Line",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "CZvPXId0Ze0",
     "url": "https://www.youtube.com/watch?v=CZvPXId0Ze0",
@@ -6295,7 +6295,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6324,7 +6324,7 @@
     "musicbrainz": "fc4b095e-b200-4ae1-a16d-1eb58006a549"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6349,7 +6349,7 @@
    "title": "Blind Pick",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "OhPu6BUbJ64",
     "url": "https://www.youtube.com/watch?v=OhPu6BUbJ64",
@@ -6373,7 +6373,7 @@
     "musicbrainz": "68bf7ad2-8c1b-4268-89ca-72dd352694f6"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6398,7 +6398,7 @@
    "title": "When I Feel Like This",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "nwF6XbG-KTw",
     "url": "https://www.youtube.com/watch?v=nwF6XbG-KTw",
@@ -6422,7 +6422,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6447,7 +6447,7 @@
    "title": "Run Silent",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "1nqb34Ix85I",
     "url": "https://www.youtube.com/watch?v=1nqb34Ix85I",
@@ -6471,7 +6471,7 @@
     "musicbrainz": "7cfe6ea6-d6f6-4c27-870e-7494ffc2abbc"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6496,7 +6496,7 @@
    "title": "Korrupt",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "ln_s_tJx3eg",
     "url": "https://www.youtube.com/watch?v=ln_s_tJx3eg",
@@ -6520,7 +6520,7 @@
     "musicbrainz": "92c1d476-e1eb-461a-b983-e47823b547a7"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6545,7 +6545,7 @@
    "title": "Disharmonized",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "9ZIbTmum0Pw",
     "url": "https://www.youtube.com/watch?v=9ZIbTmum0Pw",
@@ -6565,7 +6565,7 @@
    "title": "Chez Moi (Waiting For You) [feat. Confidence Man] [Sally C Remix]",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "adtmmZS_Blg",
     "url": "https://www.youtube.com/watch?v=adtmmZS_Blg",
@@ -6589,7 +6589,7 @@
     "musicbrainz": "82a51cd9-d106-496b-867e-bde37fa99da9"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -6618,7 +6618,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6643,7 +6643,7 @@
    "title": "It Feels so Good (The Conductor & the Cowboy Amnesia Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "v3TEi8T8iAA",
     "url": "https://www.youtube.com/watch?v=v3TEi8T8iAA",
@@ -6667,7 +6667,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6692,7 +6692,7 @@
    "title": "Dia De Los Muertos",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "goFPbL5pZmk",
     "url": "https://www.youtube.com/watch?v=goFPbL5pZmk",
@@ -6716,7 +6716,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6741,7 +6741,7 @@
    "title": "Aetherfall",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "exrjgNbIUgQ",
     "url": "https://www.youtube.com/watch?v=exrjgNbIUgQ",
@@ -6765,7 +6765,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6790,7 +6790,7 @@
    "title": "Say It with Me",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "LDM0nZqdQDA",
     "url": "https://www.youtube.com/watch?v=LDM0nZqdQDA",
@@ -6810,7 +6810,7 @@
    "title": "Let Me Lose My Mind",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
-   "tags": [],
+   "showGenres": [],
    "youtube": {
     "videoId": "VQDOMQ-mL9M",
     "url": "https://www.youtube.com/watch?v=VQDOMQ-mL9M",
@@ -6834,7 +6834,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6859,7 +6859,7 @@
    "title": "Freckles (Beatless)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -6886,7 +6886,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6911,7 +6911,7 @@
    "title": "Indian (Revamp)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -6938,7 +6938,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -6963,7 +6963,7 @@
    "title": "Party Guilt (Matt Styles Club Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -6990,7 +6990,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -7021,7 +7021,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -7050,7 +7050,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -7077,7 +7077,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -7105,7 +7105,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -7135,7 +7135,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -7164,7 +7164,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -7192,7 +7192,7 @@
     "musicbrainz": "860e1300-6831-4535-9bc1-cc7d02f82f07"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -7215,7 +7215,7 @@
    "title": "Gengis",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -7241,7 +7241,7 @@
    "title": "Out",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -7271,7 +7271,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -7302,7 +7302,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -7330,7 +7330,7 @@
     "musicbrainz": "4a72a327-7a85-49a4-9593-25670cbeba94"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -7360,7 +7360,7 @@
     "musicbrainz": "a4327f2d-5054-4e48-af26-451208665a52"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -7383,7 +7383,7 @@
    "title": "The Change",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -7409,7 +7409,7 @@
    "title": "Beautiful Witness",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -7439,7 +7439,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/shamos/episodes/shamos-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Post Punk",
     "Krautrock",
     "Indie Rock",
@@ -7468,7 +7468,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -7499,7 +7499,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -7528,7 +7528,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -7556,7 +7556,7 @@
     "musicbrainz": "da536782-f97c-49f2-a6df-aaf5d2e4c7d7"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -7586,7 +7586,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -7615,7 +7615,7 @@
     "musicbrainz": "23643413-8564-4ca5-b365-26cd069ae146"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -7643,7 +7643,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -7666,7 +7666,7 @@
    "title": "Keep on Knocking",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -7692,7 +7692,7 @@
    "title": "Lost Inside",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -7722,7 +7722,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -7753,7 +7753,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -7782,7 +7782,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -7812,7 +7812,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -7841,7 +7841,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -7869,7 +7869,7 @@
     "musicbrainz": "0cadac07-962b-4e32-be41-f358ffa881ea"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -7892,7 +7892,7 @@
    "title": "Da Rhythm",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -7915,7 +7915,7 @@
    "title": "Potter's Field",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -7941,7 +7941,7 @@
    "title": "Sunk Ice",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -7971,7 +7971,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -8000,7 +8000,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -8031,7 +8031,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -8060,7 +8060,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -8087,7 +8087,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -8115,7 +8115,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -8145,7 +8145,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -8174,7 +8174,7 @@
     "musicbrainz": "b7944c3f-adef-4c84-9fa0-28d4c4c833fb"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -8202,7 +8202,7 @@
     "musicbrainz": "e7c322e3-dc65-4cd5-a317-fbf864e906fc"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -8225,7 +8225,7 @@
    "title": "Im Rausch Der Tiefe",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -8248,7 +8248,7 @@
    "title": "Plain and Sane and Simple Melody",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -8274,7 +8274,7 @@
    "title": "Rocket No. 2",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -8304,7 +8304,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -8333,7 +8333,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -8362,7 +8362,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -8390,7 +8390,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -8420,7 +8420,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -8449,7 +8449,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -8477,7 +8477,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -8500,7 +8500,7 @@
    "title": "It's Not Easy",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -8526,7 +8526,7 @@
    "title": "Herzog",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -8556,7 +8556,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/snz/episodes/snz-2nd-march-2017",
-   "tags": [
+   "showGenres": [
     "Kosmische",
     "Industrial ",
     "New Age",
@@ -8585,7 +8585,7 @@
     "musicbrainz": "b02f1f3c-8cf4-4171-8a6a-225fe70fa229"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -8616,7 +8616,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -8645,7 +8645,7 @@
     "musicbrainz": "75553d2d-0380-4a33-b168-d2ac2a99b501"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -8672,7 +8672,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -8700,7 +8700,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -8730,7 +8730,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -8759,7 +8759,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -8787,7 +8787,7 @@
     "musicbrainz": "f67d868f-3282-4a88-85ce-172034f7f9ed"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -8810,7 +8810,7 @@
    "title": "The Right Vibes (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -8833,7 +8833,7 @@
    "title": "I'm Wishin'",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -8859,7 +8859,7 @@
    "title": "Qwerks",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -8889,7 +8889,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -8920,7 +8920,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -8949,7 +8949,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -8976,7 +8976,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -9004,7 +9004,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -9034,7 +9034,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -9059,7 +9059,7 @@
    "title": "The Right Vibe (Radio Edit)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -9082,7 +9082,7 @@
    "title": "Suck'n'Dub",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -9112,7 +9112,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -9143,7 +9143,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -9172,7 +9172,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -9199,7 +9199,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -9227,7 +9227,7 @@
     "musicbrainz": "3c0cacb0-5963-488b-8ac1-a96879a1bec0"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -9257,7 +9257,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -9286,7 +9286,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -9309,7 +9309,7 @@
    "title": "Headspin (Original Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -9332,7 +9332,7 @@
    "title": "My Favorite Things",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -9362,7 +9362,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -9393,7 +9393,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -9422,7 +9422,7 @@
     "musicbrainz": "7be97f55-e66d-4ca9-9a79-45574370ede4"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -9449,7 +9449,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -9477,7 +9477,7 @@
     "musicbrainz": "10c0b571-9e2b-480c-a2c6-dc3ebf6c2e5d"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -9507,7 +9507,7 @@
     "musicbrainz": "4048d47a-5907-47be-98b6-b4479349f128"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -9535,7 +9535,7 @@
     "musicbrainz": "04c3022d-bb19-43cf-9b30-74c616b7f2bf"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -9558,7 +9558,7 @@
    "title": "E.F.X (European Fusion X-perience) (Electro Monkey Mix)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "tags": [
+   "showGenres": [
     "House",
     "Techno"
    ],
@@ -9581,7 +9581,7 @@
    "title": "Intergalactic Love Song",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -9607,7 +9607,7 @@
    "title": "Deep",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -9637,7 +9637,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -9668,7 +9668,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -9697,7 +9697,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -9725,7 +9725,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -9755,7 +9755,7 @@
     "musicbrainz": "79d5c7bf-7798-47e7-bf59-51eba2475653"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -9784,7 +9784,7 @@
     "musicbrainz": "f8fa2d68-016d-4d8e-ad62-cd9a9defac15"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -9807,7 +9807,7 @@
    "title": "All Along The Watchtower",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -9837,7 +9837,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -9868,7 +9868,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -9897,7 +9897,7 @@
     "musicbrainz": "1f5879d5-4bde-424f-bd73-401822acdf2a"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -9924,7 +9924,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -9952,7 +9952,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -9982,7 +9982,7 @@
     "musicbrainz": "dd03b238-e94a-4e1f-8e56-35863a70d4f2"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -10005,7 +10005,7 @@
    "title": "If I Could Only Be Sure",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -10031,7 +10031,7 @@
    "title": "Dirge (Part 2)",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Downtempo",
     "House",
@@ -10061,7 +10061,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "tags": [
+   "showGenres": [
     "Cumbia",
     "Experimental",
     "Rap",
@@ -10092,7 +10092,7 @@
     "musicbrainz": "9803641c-a200-4ffa-a38c-0d143bbb53ea"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -10121,7 +10121,7 @@
     "musicbrainz": "ee137642-092c-4870-85ec-910dd3e5ad78"
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -10148,7 +10148,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
-   "tags": [
+   "showGenres": [
     "Classical",
     "The Healing Place",
     "AUDIO RESEARCH"
@@ -10176,7 +10176,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",
@@ -10205,7 +10205,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Leftfield House",
     "SAFE FOR WORK"
@@ -10233,7 +10233,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "Doo Wop",
     "SAFE FOR WORK"
    ],
@@ -10256,7 +10256,7 @@
    "title": "Baltimore Oriole",
    "ids": {},
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "tags": [
+   "showGenres": [
     "Jazz",
     "Drum & Bass",
     "UK Garage",
@@ -10286,7 +10286,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "tags": [
+   "showGenres": [
     "Post Rock",
     "Dub Techno",
     "Minimal Synth",
@@ -10315,7 +10315,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
-   "tags": [
+   "showGenres": [
     "Electronica",
     "Ambient"
    ],
@@ -10342,7 +10342,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "New Wave",
     "Post Punk",
     "Leftfield Pop",
@@ -10372,7 +10372,7 @@
     "musicbrainz": null
    },
    "sourceUrl": "https://www.nts.live/api/v2/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "tags": [
+   "showGenres": [
     "House",
     "Trip Hop",
     "RNB",

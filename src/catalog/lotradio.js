@@ -41,13 +41,15 @@ export function parseLotRadioShowPage(html, { station = 'lotradio' } = {}) {
       if (!track?.title) continue;
       plays.push({
         station,
-        show: showName || episode.title || '',
+        // Guest sets share one category ("Special Guests"); the episode title
+        // names the guest.
+        show: [showName, episode.title].filter((part, i, all) => part && all.indexOf(part) === i).join(': '),
         date,
         artist: track.artist ?? '',
         title: track.title,
         ids: {},
         sourceUrl: `https://www.thelotradio.com/shows/${episode.show?.slug ?? ''}/${episode.slug ?? ''}`,
-        tags: genres,
+        showGenres: genres,
       });
     }
   }

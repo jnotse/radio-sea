@@ -1,7 +1,9 @@
 // Radio tracklist adapters: NTS, Worldwide FM, The Lot Radio.
 //
 // All three normalize into RadioPlay:
-//   { station, show, date, artist, title, ids: { isrc, deezer, musicbrainz }, sourceUrl, tags[] }
+//   { station, show, date, artist, title, ids: { isrc, deezer, musicbrainz }, sourceUrl, showGenres[] }
+//
+// showGenres are what the station lists for the whole show, not for the track.
 //
 // NTS has a first-party JSON API (the public client token is embedded in their
 // own web app). Worldwide FM and The Lot Radio publish their shows on
@@ -48,7 +50,7 @@ export function parseNtsTracklist(json, { show = '', date = null, episodeUrl = n
       musicbrainz: track.musicbrainz_track_id ?? null,
     },
     sourceUrl: episodeUrl,
-    tags: genres,
+    showGenres: genres,
   }));
 }
 
@@ -63,8 +65,8 @@ export async function fetchNtsPlays({ channel = 1, pastDays = 3, maxEpisodes = 1
     const res = await fetchImpl(`${broadcast.episodeUrl}/tracklist`, { headers: NTS_HEADERS });
     if (!res.ok) continue;
 
-    // Episode details carry the show's genre and mood tags — the mapping
-    // layer's main sound signal for NTS plays.
+    // Episode details carry the show's genre and mood tags. They describe the
+    // whole show, so they are kept apart from any track's own genres.
     let genres = [];
     try {
       const detail = await fetchImpl(broadcast.episodeUrl, { headers: NTS_HEADERS });
@@ -83,7 +85,7 @@ export async function fetchNtsPlays({ channel = 1, pastDays = 3, maxEpisodes = 1
 // --- Mixcloud (Worldwide FM, The Lot Radio) --------------------------------
 
 export function parseMixcloudCloudcast(cloudcast, station) {
-  const tags = (cloudcast.tags ?? []).map((t) => t.name ?? t).filter(Boolean);
+  const showGenres = (cloudcast.tags ?? []).map((t) => t.name ?? t).filter(Boolean);
   return (cloudcast.sections ?? [])
     .filter((section) => section.track)
     .map((section) => ({
@@ -94,7 +96,7 @@ export function parseMixcloudCloudcast(cloudcast, station) {
       title: section.track.name ?? '',
       ids: {},
       sourceUrl: cloudcast.url ?? null,
-      tags,
+      showGenres,
     }));
 }
 
