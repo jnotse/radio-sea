@@ -1,9 +1,6 @@
 // The "digital sea" layout.
 //
-// In the real product the placement of releases is server-side data
-// (release.maps[mapId] = {x, y}); the algorithm is not in the shipped frontend.
-// This module implements a principled stand-in: releases that are similar end up
-// near each other on a 2D integer grid, and the result is fully deterministic.
+// Similar releases are placed near each other on a deterministic 2D integer grid.
 //
 // Pipeline:
 //   1. feature vectors per release (styles, era, country, format, key, bpm)
@@ -120,7 +117,7 @@ function relax(points, sims, rand) {
 }
 
 function snapAndResolve(entries) {
-  const occupied = new Map(); // "x~y" -> releaseId (same coord format as the site)
+  const occupied = new Map(); // "x~y" -> releaseId
   const placements = new Map();
   const key = (x, y) => `${x}~${y}`;
 
@@ -157,7 +154,7 @@ function snapAndResolve(entries) {
  * Lay releases out on the sea.
  * @returns {{ placements: Map<string, {x:number,y:number}>, similarity: (a,b)=>number }}
  */
-export function layoutSea(releases, { seed = 'zig~zag' } = {}) {
+export function layoutSea(releases, { seed = 'radio-sea' } = {}) {
   const rand = mulberry32(fnv1aHash(String(seed)));
 
   // Group by dominant style; deterministic cluster order.

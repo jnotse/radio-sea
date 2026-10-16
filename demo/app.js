@@ -15,7 +15,8 @@
   const state = { cam: { x: 0, y: 0, zoom: 8 }, selected: null, hovered: null,
     trail: [], stations: new Set(DATA.stats.stations.filter((s) => s.tracks > 0).map((s) => s.id)),
     tags: new Set(), query: '', showRoutes: true };
-  let pointer = null, animation = null, player = null, playerGeneration = 0, playerTimer;
+  const pointers = new Map();
+  let animation = null, player = null, playerGeneration = 0, playerTimer;
   let playbackMode = 'idle', volume = 75;
   let playerReady = false, songDuration = 0, scrubbing = false, pendingSeek = null;
   const isLocalFile = location.protocol === 'file:';
@@ -213,7 +214,7 @@
   document.fonts?.ready.then(draw);
   function tileAt(event) {
     const rect = canvas.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
-    let best = null, distance = Math.max(7, Math.min(11, state.cam.zoom * .5));
+    let best = null, distance = event.pointerType === 'touch' ? 22 : Math.max(7, Math.min(11, state.cam.zoom * .5));
     for (const r of pool()) {
       const p = toScreen(r.x, r.y), d = Math.hypot(p.x - x, p.y - y);
       if (d < distance) { best = r; distance = d; }
@@ -221,14 +222,30 @@
     return best;
   }
   function hideTooltip() { state.hovered = null; $('tooltip').hidden = true; }
+  function pinchPoints() {
+    const [a, b] = [...pointers.values()];
+    return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2, distance: Math.max(1, Math.hypot(a.x - b.x, a.y - b.y)) };
+  }
   canvas.addEventListener('pointerdown', (e) => {
     if (e.button !== 0) return;
-    cancelFly(); hideTooltip(); canvas.focus(); canvas.setPointerCapture(e.pointerId);
-    pointer = { id: e.pointerId, startX: e.clientX, startY: e.clientY,
-      x: e.clientX, y: e.clientY, moved: false };
+    cancelFly(); hideTooltip(); canvas.focus({ preventScroll: true }); canvas.setPointerCapture(e.pointerId);
+    pointers.set(e.pointerId, { startX: e.clientX, startY: e.clientY, x: e.clientX, y: e.clientY, moved: false });
+    // Neither finger may select a tile after a multi-touch gesture.
+    if (pointers.size > 1) for (const p of pointers.values()) p.moved = true;
   });
   canvas.addEventListener('pointermove', (e) => {
-    if (pointer?.id === e.pointerId) {
+    const pointer = pointers.get(e.pointerId);
+    if (pointer && pointers.size > 1) {
+      const before = pinchPoints(), old = state.cam.zoom;
+      pointer.x = e.clientX; pointer.y = e.clientY;
+      const after = pinchPoints(), rect = canvas.getBoundingClientRect();
+      const next = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, old * after.distance / before.distance));
+      // Keep the world position under the fingers stable while pinching/panning.
+      state.cam.x += (before.x - rect.left - rect.width / 2) / old - (after.x - rect.left - rect.width / 2) / next;
+      state.cam.y += (before.y - rect.top - rect.height / 2) / old - (after.y - rect.top - rect.height / 2) / next;
+      state.cam.zoom = next; canvas.classList.add('dragging'); draw(); return;
+    }
+    if (pointer) {
       if (Math.hypot(e.clientX - pointer.startX, e.clientY - pointer.startY) > 5) pointer.moved = true;
       if (pointer.moved) {
         canvas.classList.add('dragging');
@@ -238,6 +255,7 @@
       }
       pointer.x = e.clientX; pointer.y = e.clientY; return;
     }
+    if (e.pointerType === 'touch') return;
     const r = tileAt(e); state.hovered = r?.id ?? null;
     $('tooltip').hidden = !r;
     if (r) {
@@ -248,15 +266,16 @@
     }
     draw();
   });
-  canvas.addEventListener('pointerup', (e) => {
-    if (!pointer || e.pointerId !== pointer.id) return;
-    const click = !pointer.moved; pointer = null; canvas.classList.remove('dragging');
+  function finishPointer(e, allowSelect) {
+    const pointer = pointers.get(e.pointerId); if (!pointer) return;
+    const click = allowSelect && !pointer.moved && Math.hypot(e.clientX - pointer.startX, e.clientY - pointer.startY) <= 5;
+    pointers.delete(e.pointerId);
+    if (!pointers.size) canvas.classList.remove('dragging');
     if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
     if (click) { const r = tileAt(e); if (r) select(r.id, true); }
-  });
-  for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, () => {
-    pointer = null; canvas.classList.remove('dragging');
-  });
+  }
+  canvas.addEventListener('pointerup', (e) => finishPointer(e, true));
+  for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, (e) => finishPointer(e, false));
   canvas.addEventListener('pointerleave', () => { hideTooltip(); draw(); });
   canvas.addEventListener('wheel', (e) => {
     e.preventDefault(); hideTooltip(); const rect = canvas.getBoundingClientRect();
@@ -345,7 +364,11 @@
   }
   $('player-seek').addEventListener('pointerdown', () => { scrubbing = true; });
   $('player-seek').addEventListener('input', (e) => { scrubbing = true; showPosition(Number(e.target.value)); });
-  $('player-seek').addEventListener('change', (e) => seekTo(Number(e.target.value)));
+  // Touch ranges in WebKit can emit input + pointerup without change. Commit
+  // on release too; the guard avoids seeking twice if change follows it.
+  for (const type of ['change', 'pointerup']) $('player-seek').addEventListener(type, (e) => {
+    if (scrubbing) seekTo(Number(e.target.value));
+  });
   $('player-seek').addEventListener('pointercancel', () => { scrubbing = false; syncTimeline(); });
   $('player-seek').addEventListener('blur', () => { if (scrubbing) seekTo(Number($('player-seek').value)); });
   $('seek-form').addEventListener('submit', (e) => {

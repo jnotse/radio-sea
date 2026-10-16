@@ -217,7 +217,7 @@ function snapAndResolve(entries) {
  * Map a catalogue onto the sea.
  * @returns {{placements, islands, depths, similarity}}
  */
-export function mapCatalogue(releases, similarity, { seed = 'zig~zag' } = {}) {
+export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) {
   const rand = mulberry32(fnv1aHash(String(seed)));
   const islands = clusterReleases(releases, similarity);
   const centres = arrangeIslands(islands, similarity, rand);

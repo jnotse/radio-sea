@@ -1,5 +1,4 @@
-// Pickers: the server-side "one call, one pick" endpoints of the real product
-// (related / similar / banger / radio) plus gems. Pure functions over engine state.
+// Related, similar, popular, radio and saved-track picks over engine state.
 
 import { releaseMatchesFilters } from './filters.js';
 import { similarity as layoutSimilarity } from './layout.js';
@@ -17,7 +16,7 @@ export function rankedRelated(state, releaseId, { filter, reactionRegistry = nul
     .sort((a, b) => b.score - a.score || a.release.id.localeCompare(b.release.id));
 }
 
-/** GET /v2/maps/:mapId/releases/related */
+/** Related releases, ranked by similarity. */
 export function related(state, releaseId, { limit = 10, filter, reactionRegistry = null } = {}) {
   return rankedRelated(state, releaseId, { filter, reactionRegistry })
     .slice(0, limit)
@@ -25,7 +24,7 @@ export function related(state, releaseId, { limit = 10, filter, reactionRegistry
 }
 
 /**
- * POST /v2/maps/:mapId/releases/similar — one weighted pick among the nearest
+ * One weighted pick among the nearest
  * neighbourhood that passes the filters. Weight falls off with dissimilarity.
  */
 export function similarPick(state, releaseId, { filter, reactionRegistry = null, rand = Math.random, excludeIds = [] } = {}) {
@@ -41,7 +40,7 @@ export function similarPick(state, releaseId, { filter, reactionRegistry = null,
 }
 
 /**
- * GET /v2/maps/:mapId/releases/banger — a popular pick under the current
+ * A popular pick under the current
  * filters. Weight = 1 + gems + reaction votes, with a little age bonus.
  */
 export function bangerPick(state, { filter, reactionRegistry = null, rand = Math.random, excludeIds = [] } = {}) {
@@ -60,7 +59,7 @@ export function bangerPick(state, { filter, reactionRegistry = null, rand = Math
 }
 
 /**
- * GET /v2/{resource}/{id}/radio — one pick from an entity's pool
+ * One pick from an entity's pool
  * (artists | labels | sellers | users), optionally narrowed by style / country
  * and `gem_only`.
  */
@@ -82,7 +81,7 @@ export function radioPick(state, { resource, id, style, country, gemOnly = false
   return weightedPick(source, weights, rand);
 }
 
-/** Gems-shuffle's server helper: one random gem of a user. */
+/** One random saved release from a user. */
 export function randomGem(state, userId, rand = Math.random) {
   const gems = state.gems.filter((g) => g.userId === userId);
   if (gems.length === 0) return null;

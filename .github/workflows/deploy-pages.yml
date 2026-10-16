@@ -27,8 +27,8 @@ jobs:
         run: npm ci
       - name: Unit and catalogue tests
         run: npm test
-      - name: Install browser for UI tests
-        run: npx playwright install --with-deps chromium
+      - name: Install browsers for desktop and phone UI tests
+        run: npx playwright install --with-deps chromium webkit
       - name: Browser tests
         run: npm run test:browser
       - name: Configure Pages

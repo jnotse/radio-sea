@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { fetchMusicbrainz, fetchItunes } from '../src/catalog/sources.js';
 import { mergeCatalogue, crossSourceReleases } from '../src/catalog/resolve.js';
-import { ZigZagDiscovery } from '../src/engine.js';
+import { RadioSeaDiscovery } from '../src/engine.js';
 
 const args = process.argv.slice(2);
 let backend = 'auto';
@@ -50,7 +50,7 @@ async function main() {
   console.log(`\ncatalogue: ${catalogue.releases.length} unique releases from ${raws.length} raw rows`);
   console.log(`cross-source matches: ${crossSourceReleases(catalogue).length}`);
 
-  const engine = new ZigZagDiscovery({ releases: catalogue.releases, seed: 'scan' });
+  const engine = new RadioSeaDiscovery({ releases: catalogue.releases, seed: 'scan' });
 
   console.log(`\nislands (${engine.islands.length}):`);
   for (const island of engine.islands) {

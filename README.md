@@ -1,8 +1,7 @@
 # Radio sea discovery prototype
 
 Scan catalogues and radio tracklists, merge identities, match songs to YouTube,
-and arrange them on a navigable map. This is our own heuristic algorithm, not
-zig-zag.fm's backend algorithm.
+and arrange them on a navigable map using metadata-based similarity and clustering.
 
 ## Open the demo
 
@@ -25,7 +24,9 @@ links, but disables embedded playback.
 - Search artists/titles/shows; filter by station or tags. Clear filters to reset.
 - Neighbours explain shared metadata. Trade routes connect different islands.
 - Watch on YouTube is always available if embedding is blocked, slow, or restricted.
-- On small screens the map and detail panel stack instead of disappearing offscreen.
+- On phones, use the fixed **Map / Library / Player** shortcuts to move between
+  sections. Drag with one finger to pan the map; pinch or use + / − to zoom.
+  Controls are touch-sized, and the layout fits portrait and landscape screens.
 - The POSITION slider seeks in one-second steps. Drag its handle or use arrow
   keys. The JUMP TO box accepts seconds (`83`, `83s`), `mm:ss` (`1:23`), or
   `hh:mm:ss`. It stays disabled until YouTube provides the track's duration.
@@ -76,12 +77,13 @@ the same tags. Do not interpret the map as a measured acoustic embedding.
 
 ```sh
 npm test               # deterministic unit/contract tests
-npm run test:browser   # 12 Chrome/Playwright tests
+npx playwright install webkit  # one-time install for Safari-engine checks
+npm run test:browser   # desktop and mobile Playwright tests
 ```
 
-Local browser tests use installed Chrome; GitHub Actions installs Chromium
-(see `playwright.config.js`). They mock the
-external YouTube API so network failures cannot make UI tests pass/fail at random.
+Local browser tests use installed Chrome plus Playwright's WebKit for phone
+checks; GitHub Actions installs Chromium and WebKit (see `playwright.config.js`).
+They mock the external YouTube API so network failures cannot make UI tests pass/fail at random.
 They check complete data records, filters, search, selection, pan/zoom/hover,
 player configuration/error fallback, file-mode notice, and phone layout.
 Live playback is a separate network-dependent check; oEmbed success alone does

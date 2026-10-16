@@ -1,5 +1,4 @@
-// Navigation suggestions: the crowd-curated "from this record, go to that one"
-// graph (zig-zag: POST/GET/DELETE /v2/maps/:mapId/navigation-suggestions).
+// A graph of user-curated links between records.
 
 let nextId = 1;
 
@@ -23,8 +22,7 @@ export class NavigationGraph {
   }
 
   /**
-   * Mirrors GET ...?from_release_id&limit. fromReleaseId = 0 returns general
-   * suggestions (not tied to a specific release), like the site.
+   * fromReleaseId = 0 returns all suggestions, regardless of starting release.
    */
   list({ fromReleaseId = 0, limit = 10 } = {}) {
     const rows = [...this.edges.values()]

@@ -173,7 +173,7 @@ export function parseYoutubeJson(json) {
 // --- MusicBrainz (live, keyless) ------------------------------------------
 
 const MB_ROOT = 'https://musicbrainz.org/ws/2';
-const MB_HEADERS = { 'User-Agent': 'zigzag-discovery/0.1 (research)' };
+const MB_HEADERS = { 'User-Agent': 'radio-sea/0.1 (research)' };
 
 export function parseMusicbrainzRelease(mb, { sourceId = mb.id ?? null } = {}) {
   const artistCredit = (mb['artist-credit'] ?? []).map((a) => a.name ?? a.artist?.name).filter(Boolean);
