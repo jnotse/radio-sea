@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="theme-color" content="#25262d" />
+  <title>Radio Sea — FM Explorer</title>
+  <link rel="preload" href="fonts/silkscreen-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="desktop-bar">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">▧</span><h1>radio sea</h1><span class="edition">FM EXPLORER</span></div>
+      <div class="desktop-meta"><span class="led" aria-hidden="true"></span> LOCAL CATALOGUE <span class="build-tag">v.01</span></div>
+    </header>
+
+    <aside id="sidebar" class="window">
+      <div class="window-title"><span>01 / music library</span><span class="title-stripes" aria-hidden="true"></span><span class="window-code">LIB</span></div>
+      <div class="panel-content">
+        <header class="library-intro"><p class="eyebrow">TUNE IN. WANDER OFF.</p><p class="sub">Radio tracklists, uncharted connections.<br />Pick a track. See where it takes you.</p></header>
+        <div id="file-notice" class="notice" hidden>For embedded playback, run <code>npm start</code> in
+          <code>discovery</code>, then open <a href="http://127.0.0.1:4173">http://127.0.0.1:4173</a>.
+          YouTube links still work here.</div>
+        <section id="stats" class="mini-display"></section>
+        <section class="search-section">
+          <label for="search">SEARCH FREQUENCIES</label>
+          <input id="search" type="search" placeholder="Artist, track, show…" autocomplete="off" />
+        </section>
+        <section><h2>Radio stations <span class="section-code">FM</span></h2><div id="station-chips" class="chips station-list"></div></section>
+        <section><h2>Sound filters <span class="section-code">TAG</span></h2><div id="tag-chips" class="chips"></div></section>
+        <section><h2>Navigation <span class="section-code">NAV</span></h2>
+          <div class="buttons">
+            <button id="btn-banger">✳ random find</button><button id="btn-similar">↝ similar track</button>
+            <button id="btn-routes" aria-pressed="true">trade routes: on</button><button id="btn-home">⌂ sail home</button>
+            <button id="btn-clear">clear filters</button>
+          </div>
+        </section>
+        <section class="playlist-section"><h2 id="track-count">tracks</h2><ul id="track-list" aria-labelledby="track-count"></ul></section>
+        <section class="trail-section"><h2>Your trail <span class="section-code">LOG</span></h2><ol id="trail"></ol></section>
+        <footer class="library-footer">NTS / THE LOT / RADIOOOOO<br />A little less algorithm. A little more exploring.</footer>
+      </div>
+    </aside>
+
+    <main id="map-panel" class="window">
+      <div class="window-title"><span>02 / the radio sea</span><span class="title-stripes" aria-hidden="true"></span><span class="window-code">MAP</span></div>
+      <div class="console-shell">
+        <div class="screen-label"><span><i class="power-dot" aria-hidden="true"></i> POWER</span><span>DOT MATRIX · MUSIC EXPLORER</span><span>2-BIT</span></div>
+        <div class="screen-bezel">
+          <div id="map-wrap">
+            <canvas id="sea" aria-label="Music map. Drag to pan, scroll to zoom. Tracks can also be selected from the list." tabindex="0"></canvas>
+            <div class="screen-grid" aria-hidden="true"></div>
+            <div id="map-help">WORLD 01 / DRAG TO EXPLORE</div>
+            <div id="map-status" role="status" aria-live="polite"></div>
+            <div id="map-controls" aria-label="Map controls"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button></div>
+            <div id="tooltip" hidden></div>
+          </div>
+        </div>
+        <div class="console-bottom">
+          <div class="console-brand">radio sea<span>POCKET EXPLORER</span></div>
+          <div class="map-legend"><span><i class="legend-track"></i> TRACK</span><span><i class="legend-path"></i> TRADE ROUTE</span><span>SCROLL TO ZOOM</span></div>
+          <div class="speaker" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </main>
+
+    <aside id="detail" class="window">
+      <div class="window-title"><span>03 / sea player</span><span class="title-stripes" aria-hidden="true"></span><span class="window-code">AMP</span></div>
+      <div class="panel-content">
+        <div id="detail-empty">Select a track on the sea.</div>
+        <div id="detail-body" hidden>
+          <div class="player-deck">
+            <div class="player-display">
+              <div class="display-top"><span id="deck-state">READY</span><span id="deck-index">01 / 44</span><span>YT · STEREO</span></div>
+              <div class="display-main"><span id="deck-clock" aria-label="Playback time">00:00</span><div class="spectrum" aria-hidden="true" title="Decorative playback activity, not an audio analyser"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+              <h2 id="d-title"></h2><p id="d-artist"></p>
+            </div>
+            <div class="seek-strip">
+              <div class="seek-caption"><label for="player-seek">POSITION</label><output id="seek-readout" for="player-seek">00:00 / --:--</output></div>
+              <input id="player-seek" type="range" min="0" max="0" step="1" value="0" disabled aria-label="Song position" aria-valuetext="Load a track to seek" />
+              <form id="seek-form" class="seek-jump">
+                <label for="seek-time">JUMP TO</label>
+                <input id="seek-time" type="text" placeholder="1:23 or 83s" maxlength="12" autocomplete="off" spellcheck="false" disabled aria-label="Jump time" aria-describedby="seek-hint" />
+                <button id="seek-go" type="submit" disabled>GO</button>
+              </form>
+              <p id="seek-hint">Drag to seek, or enter seconds / mm:ss.</p>
+              <p id="seek-message" class="seek-message" role="status" aria-live="polite" hidden></p>
+            </div>
+            <div class="transport" aria-label="Playback controls">
+              <button id="transport-prev" aria-label="Previous track" title="Previous track">|◀</button>
+              <button id="transport-play" aria-label="Play selected track" title="Play selected track">▶</button>
+              <button id="transport-pause" aria-label="Pause playback" title="Pause playback" disabled>Ⅱ</button>
+              <button id="transport-stop" aria-label="Stop playback" title="Stop playback" disabled>■</button>
+              <button id="transport-next" aria-label="Next track" title="Next track">▶|</button>
+            </div>
+            <div class="volume-row"><label for="player-volume">VOL</label><input id="player-volume" type="range" min="0" max="100" value="75" aria-label="Playback volume" /><output id="volume-value" for="player-volume">75</output><span class="stereo-indicator">STEREO</span></div>
+          </div>
+          <div id="d-player"></div>
+          <p id="player-status" class="sub" role="status" aria-live="polite"></p>
+          <a id="d-youtube" class="watch-link" target="_blank" rel="noopener">OPEN IN YOUTUBE ↗</a>
+          <div id="d-meta" class="meta"></div>
+          <h3>Nearby frequencies <span class="section-code">WHY</span></h3><ul id="d-neighbours"></ul>
+          <h3>Cross-island routes <span class="section-code">LINK</span></h3><ul id="d-routes"></ul>
+          <h3>Heard on <span class="section-code">SRC</span></h3><ul id="d-sources"></ul>
+        </div>
+      </div>
+    </aside>
+    <footer class="taskbar"><span><i class="led" aria-hidden="true"></i> EXPLORER READY</span><span>DRAG TO PAN / SCROLL TO ZOOM / CLICK TO DISCOVER</span><span>GOOD MUSIC. NO DESTINATION.</span></footer>
+  </div>
+  <script src="sea-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

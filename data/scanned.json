@@ -1,0 +1,1258 @@
+{
+  "scannedAt": "2026-10-16T15:29:35.519Z",
+  "queries": [
+    "dub techno",
+    "spiritual jazz"
+  ],
+  "backends": [
+    "musicbrainz"
+  ],
+  "releases": [
+    {
+      "id": "rel-001",
+      "title": "Dub Techno",
+      "name": "Dub Techno",
+      "artist": "Ash Room",
+      "artists": [
+        "Ash Room"
+      ],
+      "label": "[no label]",
+      "year": 2026,
+      "country": "XW",
+      "format": "Digital Media",
+      "rating": null,
+      "tags": {
+        "genres": [],
+        "styles": [],
+        "descriptors": [],
+        "all": []
+      },
+      "tracks": [
+        {
+          "title": "Dubiety",
+          "duration": 366,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dubitation",
+          "duration": 340,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dubious",
+          "duration": 388,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Overdub",
+          "duration": 386,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dubnium",
+          "duration": 348,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Indubitable",
+          "duration": 380,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Indubious",
+          "duration": 418,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Redub",
+          "duration": 348,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/44a79b85-42c1-4417-a054-2c890579b128"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "44a79b85-42c1-4417-a054-2c890579b128"
+        }
+      ],
+      "mergedCount": 1,
+      "styles": []
+    },
+    {
+      "id": "rel-002",
+      "title": "Dub Techno Explorations",
+      "name": "Dub Techno Explorations",
+      "artist": "STL",
+      "artists": [
+        "STL"
+      ],
+      "label": "Something",
+      "year": 2009,
+      "country": "DE",
+      "format": "CD-R",
+      "rating": null,
+      "tags": {
+        "genres": [],
+        "styles": [],
+        "descriptors": [],
+        "all": []
+      },
+      "tracks": [
+        {
+          "title": "Part 1",
+          "duration": 655,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Part 2",
+          "duration": 522,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Part 3",
+          "duration": 710,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Part 4",
+          "duration": 494,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Part 5",
+          "duration": 823,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Part 6",
+          "duration": 683,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Part 7",
+          "duration": 439,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/676b61ab-6133-45f0-95e9-de28137a5d63"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "676b61ab-6133-45f0-95e9-de28137a5d63"
+        }
+      ],
+      "mergedCount": 1,
+      "styles": []
+    },
+    {
+      "id": "rel-003",
+      "title": "Dub Techno v7",
+      "name": "Dub Techno v7",
+      "artist": "Various Artists",
+      "artists": [
+        "Various Artists"
+      ],
+      "label": "Ubertrend Records",
+      "year": 2021,
+      "country": "XW",
+      "format": "Digital Media",
+      "rating": null,
+      "tags": {
+        "genres": [
+          "dub techno",
+          "electronic",
+          "united kingdom",
+          "deep techno",
+          "minimal techno",
+          "techno",
+          "deep house",
+          "microhouse",
+          "tech house"
+        ],
+        "styles": [],
+        "descriptors": [],
+        "all": [
+          "dub techno",
+          "electronic",
+          "united kingdom",
+          "deep techno",
+          "minimal techno",
+          "techno",
+          "deep house",
+          "microhouse",
+          "tech house"
+        ]
+      },
+      "tracks": [
+        {
+          "title": "No Cure",
+          "duration": 490,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Nale Ba",
+          "duration": 526,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Random People",
+          "duration": 501,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Deep Inside Me",
+          "duration": 613,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Bopy Cook",
+          "duration": 376,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Shots of Breath",
+          "duration": 384,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Polterguest",
+          "duration": 445,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Teke Teke",
+          "duration": 525,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dark Sunrise",
+          "duration": 443,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Isabelline (Denny Kay remix)",
+          "duration": 475,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Hysteresis",
+          "duration": 404,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Displace",
+          "duration": 317,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Оn the Other Side",
+          "duration": 425,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Infinitism",
+          "duration": 616,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "World Order",
+          "duration": 398,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Introverted",
+          "duration": 547,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Ex Machina II",
+          "duration": 409,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Elevation",
+          "duration": 480,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Expanse",
+          "duration": 267,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Tone Inseption",
+          "duration": 428,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dina Saur",
+          "duration": 425,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Animal Behaviour",
+          "duration": 463,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dark Matter",
+          "duration": 511,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Sentiment",
+          "duration": 475,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Kunzite",
+          "duration": 592,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Digital Sand",
+          "duration": 370,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dispatcher",
+          "duration": 332,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Stranno",
+          "duration": 506,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Atmospheric Way",
+          "duration": 419,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "The Taste of Rain",
+          "duration": 512,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Another Side",
+          "duration": 421,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Between the Rings",
+          "duration": 219,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Distorted Poetry",
+          "duration": 871,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Eventide",
+          "duration": 462,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Ufortjent Rykte (R.Hz remix)",
+          "duration": 396,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Second Stratosphere",
+          "duration": 497,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Boleite",
+          "duration": 438,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Under Road",
+          "duration": 476,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Ququmaria",
+          "duration": 346,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Mobiustone",
+          "duration": 419,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Departure",
+          "duration": 429,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Transparent Colors",
+          "duration": 555,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/fb6ea45d-f2ed-4ac7-8aa7-93165f40a82e"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "43d5c2d7-c84c-4860-8a9e-673dc58ce23d"
+        },
+        {
+          "source": "musicbrainz",
+          "sourceId": "464e64b3-8d35-4eac-981c-5e60dc26a731"
+        },
+        {
+          "source": "musicbrainz",
+          "sourceId": "9e641864-ab38-43d6-8ba3-da7088ce8037"
+        },
+        {
+          "source": "musicbrainz",
+          "sourceId": "fb6ea45d-f2ed-4ac7-8aa7-93165f40a82e"
+        }
+      ],
+      "mergedCount": 4,
+      "styles": [
+        "dub techno",
+        "electronic",
+        "united kingdom",
+        "deep techno",
+        "minimal techno",
+        "techno",
+        "deep house",
+        "microhouse",
+        "tech house"
+      ]
+    },
+    {
+      "id": "rel-004",
+      "title": "Spiritual Jazz",
+      "name": "Spiritual Jazz",
+      "artist": "Uli Gutscher",
+      "artists": [
+        "Uli Gutscher",
+        "Tilman Jäger"
+      ],
+      "label": "Herder",
+      "year": 2012,
+      "country": "DE",
+      "format": "CD",
+      "rating": null,
+      "tags": {
+        "genres": [],
+        "styles": [],
+        "descriptors": [],
+        "all": []
+      },
+      "tracks": [
+        {
+          "title": "Guten Abend, gut' Nacht (J. Brahms, Arr. U. Gutscher)",
+          "duration": 299,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "When Israel was in Egypt's land (Spritual, Arr. T. Jäger)",
+          "duration": 220,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Nobody knows the trouble I've seen (Spiritual, Arr. U. Gutscher, Pos. - Solo)",
+          "duration": 173,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Shuffle-Bone (Komp. & Arr. U. Gutscher)",
+          "duration": 283,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Sometimes I feel like a motherless child (Spiritual, Arr. U. Gutscher)",
+          "duration": 252,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Joshua fit the battle of Jericho (Spiritual, Arr. U. Gutscher)",
+          "duration": 157,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Wer nur den lieben Gott lässt walten (G. Neumark, 1641, Arr. T. Jäger)",
+          "duration": 281,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "In dir ist Freude (G. Gastoldi, 1591, Arr. T. Jäger)",
+          "duration": 268,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Was Gott tut, das ist wohlgetan (S. Gastorius, 1675, Arr. T. Jäger, Piano - Solo)",
+          "duration": 210,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "The Preacher (H. Silver, Arr. U. Gutscher)",
+          "duration": 227,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Der Mond ist aufgegangen (M. Claudius, Arr. T. Jäger)",
+          "duration": 273,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/131852ad-70a3-4493-9961-cdd80c0398d4"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "131852ad-70a3-4493-9961-cdd80c0398d4"
+        }
+      ],
+      "mergedCount": 1,
+      "styles": []
+    },
+    {
+      "id": "rel-005",
+      "title": "Spiritual Jazz 3",
+      "name": "Spiritual Jazz 3",
+      "artist": "Various Artists",
+      "artists": [
+        "Various Artists"
+      ],
+      "label": "Jazzman",
+      "year": 2012,
+      "country": "GB",
+      "format": "CD",
+      "rating": null,
+      "tags": {
+        "genres": [],
+        "styles": [],
+        "descriptors": [],
+        "all": []
+      },
+      "tracks": [
+        {
+          "title": "Unknown",
+          "duration": 105,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Kyrie",
+          "duration": 183,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Mongolia",
+          "duration": 208,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Le Temps",
+          "duration": 317,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Pro Form",
+          "duration": 279,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Udoyeleg",
+          "duration": 193,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Vasvirag",
+          "duration": 346,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Variation on the Azerbajian Muga",
+          "duration": 394,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Macedonian Fertility Dance",
+          "duration": 134,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Sakura Waltz",
+          "duration": 206,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Aisha",
+          "duration": 228,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Odins Oga",
+          "duration": 261,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Bario Chino",
+          "duration": 203,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Samba Miaou",
+          "duration": 452,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Suite",
+          "duration": 329,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Haze's Dance",
+          "duration": 795,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/54181938-d13c-412f-8b55-3b6df25fc70e"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "54181938-d13c-412f-8b55-3b6df25fc70e"
+        }
+      ],
+      "mergedCount": 1,
+      "styles": []
+    },
+    {
+      "id": "rel-006",
+      "title": "Spiritual Jazz 10: Prestige",
+      "name": "Spiritual Jazz 10: Prestige",
+      "artist": "Various Artists",
+      "artists": [
+        "Various Artists"
+      ],
+      "label": "Jazzman",
+      "year": 2019,
+      "country": "GB",
+      "format": "12\" Vinyl",
+      "rating": null,
+      "tags": {
+        "genres": [
+          "contemporary jazz",
+          "free jazz",
+          "jazz fusion",
+          "soul jazz"
+        ],
+        "styles": [],
+        "descriptors": [],
+        "all": [
+          "contemporary jazz",
+          "free jazz",
+          "jazz fusion",
+          "soul jazz"
+        ]
+      },
+      "tracks": [
+        {
+          "title": "Song of Delilah",
+          "duration": 422,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dorian",
+          "duration": 409,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Rip a Dip",
+          "duration": 338,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Modette",
+          "duration": 587,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Death & Taxes",
+          "duration": 370,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Love Theme From Spartacus",
+          "duration": 256,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Organ Rounds",
+          "duration": 126,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Summertime",
+          "duration": 645,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Warm Canto",
+          "duration": 340,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Peace",
+          "duration": 582,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "I've Known Rivers",
+          "duration": 519,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/1941980c-3da6-41fd-a90d-617f18a46a14"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "1941980c-3da6-41fd-a90d-617f18a46a14"
+        }
+      ],
+      "mergedCount": 1,
+      "styles": [
+        "contemporary jazz",
+        "free jazz",
+        "jazz fusion",
+        "soul jazz"
+      ]
+    },
+    {
+      "id": "rel-007",
+      "title": "Spiritual Jazz 11: SteepleChase",
+      "name": "Spiritual Jazz 11: SteepleChase",
+      "artist": "Various Artists",
+      "artists": [
+        "Various Artists"
+      ],
+      "label": "Jazzman",
+      "year": 2020,
+      "country": "GB",
+      "format": "12\" Vinyl",
+      "rating": null,
+      "tags": {
+        "genres": [
+          "avant-garde jazz",
+          "contemporary jazz",
+          "post-bop"
+        ],
+        "styles": [],
+        "descriptors": [],
+        "all": [
+          "avant-garde jazz",
+          "contemporary jazz",
+          "post-bop"
+        ]
+      },
+      "tracks": [
+        {
+          "title": "Ode to St Cecile",
+          "duration": 357,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "The Time of This World Is at Hand",
+          "duration": 434,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Jean-Marie",
+          "duration": 416,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Aida",
+          "duration": 332,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Tipe Tizwe",
+          "duration": 265,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Magwaza",
+          "duration": 787,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "De I Comahlee Ah",
+          "duration": 702,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Miss Priss",
+          "duration": 376,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Dark Warrior",
+          "duration": 387,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Camel Driver",
+          "duration": 534,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Naima",
+          "duration": 508,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Ode to Saint Cecilie",
+          "duration": 358,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "De I Comalee A",
+          "duration": 703,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/ed3e9f76-e5fa-44c5-a5af-7fc33ce2d2fe"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "44300cec-0e46-4fe8-b8ae-3ae2abbdb002"
+        },
+        {
+          "source": "musicbrainz",
+          "sourceId": "ed3e9f76-e5fa-44c5-a5af-7fc33ce2d2fe"
+        }
+      ],
+      "mergedCount": 2,
+      "styles": [
+        "avant-garde jazz",
+        "contemporary jazz",
+        "post-bop"
+      ]
+    },
+    {
+      "id": "rel-008",
+      "title": "Spiritual Jazz XII: Impulse!",
+      "name": "Spiritual Jazz XII: Impulse!",
+      "artist": "Various Artists",
+      "artists": [
+        "Various Artists"
+      ],
+      "label": "Jazzman",
+      "year": 2020,
+      "country": "GB",
+      "format": "CD",
+      "rating": null,
+      "tags": {
+        "genres": [],
+        "styles": [],
+        "descriptors": [],
+        "all": []
+      },
+      "tracks": [
+        {
+          "title": "A Love Supreme Pt.1 (Acknowledgement)",
+          "duration": 466,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Fantazm",
+          "duration": 239,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Lonesome Lover",
+          "duration": 117,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Sister Mamie",
+          "duration": 313,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "The 7th Day",
+          "duration": 634,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Three Flowers",
+          "duration": 611,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Half and Half",
+          "duration": 385,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Groove Waltz",
+          "duration": 328,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Le matin des noire",
+          "duration": 475,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "The Blessing Song",
+          "duration": 374,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Turiya and Ramakrishna",
+          "duration": 498,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "A Taste of Honey",
+          "duration": 344,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Hum-Allah-Hum-Allah-Hum-Allah",
+          "duration": 900,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Constant Throb Pt. 1",
+          "duration": 184,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Thembi",
+          "duration": 427,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Maimoun",
+          "duration": 453,
+          "bpm": null,
+          "key": null
+        },
+        {
+          "title": "Journey in Satchidananda",
+          "duration": 396,
+          "bpm": null,
+          "key": null
+        }
+      ],
+      "urls": {
+        "musicbrainz": "https://musicbrainz.org/release/f01760f1-8629-4653-9f68-9c076c118c71"
+      },
+      "sources": [
+        {
+          "source": "musicbrainz",
+          "sourceId": "f01760f1-8629-4653-9f68-9c076c118c71"
+        }
+      ],
+      "mergedCount": 1,
+      "styles": []
+    }
+  ],
+  "placements": {
+    "rel-006": {
+      "x": 1,
+      "y": -1
+    },
+    "rel-007": {
+      "x": -4,
+      "y": -1
+    },
+    "rel-001": {
+      "x": -8,
+      "y": 7
+    },
+    "rel-002": {
+      "x": 4,
+      "y": -12
+    },
+    "rel-003": {
+      "x": 15,
+      "y": 11
+    },
+    "rel-004": {
+      "x": -14,
+      "y": -3
+    },
+    "rel-005": {
+      "x": 12,
+      "y": 2
+    },
+    "rel-008": {
+      "x": 6,
+      "y": 9
+    }
+  },
+  "islands": [
+    {
+      "id": 0,
+      "name": "contemporary jazz",
+      "memberIds": [
+        "rel-006",
+        "rel-007"
+      ],
+      "centre": {
+        "x": -1,
+        "y": -1
+      },
+      "radius": 3.9041630560342617
+    },
+    {
+      "id": 1,
+      "name": "island-1",
+      "memberIds": [
+        "rel-001"
+      ],
+      "centre": {
+        "x": -10,
+        "y": 7
+      },
+      "radius": 3.2
+    },
+    {
+      "id": 2,
+      "name": "island-2",
+      "memberIds": [
+        "rel-002"
+      ],
+      "centre": {
+        "x": 1,
+        "y": -12
+      },
+      "radius": 3.2
+    },
+    {
+      "id": 3,
+      "name": "deep house",
+      "memberIds": [
+        "rel-003"
+      ],
+      "centre": {
+        "x": 12,
+        "y": 12
+      },
+      "radius": 3.2
+    },
+    {
+      "id": 4,
+      "name": "island-4",
+      "memberIds": [
+        "rel-004"
+      ],
+      "centre": {
+        "x": -17,
+        "y": -3
+      },
+      "radius": 3.2
+    },
+    {
+      "id": 5,
+      "name": "island-5",
+      "memberIds": [
+        "rel-005"
+      ],
+      "centre": {
+        "x": 10,
+        "y": 2
+      },
+      "radius": 3.2
+    },
+    {
+      "id": 6,
+      "name": "island-6",
+      "memberIds": [
+        "rel-008"
+      ],
+      "centre": {
+        "x": 3,
+        "y": 9
+      },
+      "radius": 3.2
+    }
+  ],
+  "tradeRoutes": [
+    {
+      "from": "rel-007",
+      "to": "rel-008",
+      "score": 0.549,
+      "fromIsland": 0,
+      "toIsland": 6
+    },
+    {
+      "from": "rel-006",
+      "to": "rel-008",
+      "score": 0.543,
+      "fromIsland": 0,
+      "toIsland": 6
+    },
+    {
+      "from": "rel-005",
+      "to": "rel-006",
+      "score": 0.507,
+      "fromIsland": 5,
+      "toIsland": 0
+    },
+    {
+      "from": "rel-003",
+      "to": "rel-007",
+      "score": 0.4,
+      "fromIsland": 3,
+      "toIsland": 0
+    },
+    {
+      "from": "rel-002",
+      "to": "rel-004",
+      "score": 0.343,
+      "fromIsland": 2,
+      "toIsland": 4
+    }
+  ]
+}
