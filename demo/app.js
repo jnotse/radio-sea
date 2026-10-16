@@ -16,6 +16,7 @@
     trail: [], stations: new Set(DATA.stats.stations.filter((s) => s.tracks > 0).map((s) => s.id)),
     tags: new Set(), query: '', showRoutes: true };
   const pointers = new Map();
+  const terrain = window.RadioSeaLandscape.buildTerrain(DATA);
   let animation = null, player = null, playerGeneration = 0, playerTimer;
   let playbackMode = 'idle', volume = 75;
   let playerReady = false, songDuration = 0, scrubbing = false, pendingSeek = null;
@@ -38,13 +39,10 @@
     a.target = '_blank'; a.rel = 'noopener';
     return a;
   }
-  // Sound tags describe the track itself. Show genres are what the station
-  // lists for the whole show, so they are shown apart and never filter as genres.
-  function soundTags(r) {
-    return (r.tags ?? []).filter((t) => !/^(show|station|show-genre):/.test(t));
-  }
-  function showGenres(r) {
-    return (r.tags ?? []).filter((t) => t.startsWith('show-genre:')).map((t) => t.slice('show-genre:'.length));
+  // A song's own genres. Station, show and show-genre tags describe where it
+  // was heard; mood and decade tags are not genres.
+  function genres(r) {
+    return (r.tags ?? []).filter((t) => !/^(show|station|show-genre|mood|decade):/.test(t));
   }
   function passesFilter(r) {
     return !!r && stationIds(r).some((s) => state.stations.has(s)) &&
@@ -54,29 +52,29 @@
   }
   const pool = () => releases.filter(passesFilter);
 
-  $('stats').append(node('div', `${String(releases.length).padStart(3, '0')} TRACKS / ${String(DATA.islands.length).padStart(2, '0')} ISLANDS`),
-    node('div', 'RADIO ARCHIVE // YOUTUBE PLAYBACK', 'sub'));
-  for (const station of DATA.stats.stations) {
+  const liveStations = DATA.stats.stations.filter((s) => s.tracks > 0);
+  $('stats').append(node('div', `${releases.length} SONGS · ${DATA.islands.length} GROVES`),
+    node('div', liveStations.map((s) => s.label).join(' · '), 'sub'));
+  for (const station of liveStations) {
     const chip = node('button', `${station.label} (${station.tracks})`, 'chip');
     chip.dataset.station = station.id;
-    chip.disabled = !station.tracks;
-    chip.title = station.tracks ? `Toggle ${station.label}` : 'No tracklists imported in this snapshot';
+    chip.title = `Show or hide songs from ${station.label}`;
     chip.onclick = () => { toggle(state.stations, station.id); refreshFilters(); };
     $('station-chips').append(chip);
   }
   const tagCounts = new Map();
-  releases.forEach((r) => soundTags(r).forEach((t) => tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1)));
+  releases.forEach((r) => genres(r).forEach((t) => tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1)));
   for (const [tag] of [...tagCounts].sort((a, b) => b[1] - a[1]).slice(0, 12)) {
     const chip = node('button', tag, 'chip');
     chip.dataset.tag = tag;
     chip.onclick = () => { toggle(state.tags, tag); refreshFilters(); };
     $('tag-chips').append(chip);
   }
-  if (!tagCounts.size) $('tag-chips').append(node('p', 'No track genres in this snapshot yet.', 'sub'));
+  if (!tagCounts.size) $('tag-chips').append(node('p', 'No genres in this snapshot yet.', 'sub'));
   function toggle(set, value) { if (set.has(value)) set.delete(value); else set.add(value); }
   $('search').addEventListener('input', (e) => { state.query = e.target.value.trim().toLowerCase(); refreshFilters(); });
   $('btn-clear').onclick = () => {
-    state.stations = new Set(DATA.stats.stations.filter((s) => s.tracks > 0).map((s) => s.id));
+    state.stations = new Set(liveStations.map((s) => s.id));
     state.tags.clear(); state.query = ''; $('search').value = ''; refreshFilters();
   };
   function refreshFilters() {
@@ -89,20 +87,23 @@
       c.classList.toggle('on', on); c.setAttribute('aria-pressed', String(on));
     });
     const visible = pool();
-    $('track-count').textContent = `tracklist [${String(visible.length).padStart(2, '0')}/${releases.length}]`;
-    $('map-status').textContent = visible.length ? `${visible.length} tracks match` : 'No matches — clear filters to explore again';
+    const filtering = state.query || state.tags.size || state.stations.size < liveStations.length;
+    $('map-status').hidden = !filtering;
+    $('map-status').textContent = visible.length ? `${visible.length} of ${releases.length} songs match` : 'No matches — clear filters to explore again';
     $('btn-banger').disabled = !visible.length;
-    $('btn-similar').disabled = !visible.some((r) => r.id !== state.selected);
-    $('transport-prev').disabled = visible.length < 2;
-    $('transport-next').disabled = visible.length < 2;
-    $('track-list').replaceChildren();
-    visible.forEach((r) => {
+    $('transport-prev').disabled = state.trail.length < 2;
+    $('transport-next').disabled = !upNext();
+    // Search lists its results; the map itself is the way to browse everything.
+    $('search-count').hidden = $('search-results').hidden = !state.query;
+    $('search-count').textContent = visible.length ? `${visible.length} ${visible.length === 1 ? 'song' : 'songs'} found` : 'Nothing found';
+    $('search-results').replaceChildren(...(state.query ? visible.slice(0, 50) : []).map((r) => {
       const button = node('button', `${r.artist} — ${r.name}`);
       button.dataset.trackId = r.id;
       button.setAttribute('aria-pressed', String(r.id === state.selected));
-      button.onclick = () => select(r.id, true);
-      const li = node('li'); li.append(button); $('track-list').append(li);
-    });
+      button.onclick = () => playTrack(r.id);
+      const li = node('li'); li.append(button); return li;
+    }));
+    showUpNext();
     state.hovered = null; $('tooltip').hidden = true;
     draw();
   }
@@ -152,32 +153,16 @@
     canvas.dataset.cameraX = String(state.cam.x); canvas.dataset.cameraY = String(state.cam.y);
     canvas.dataset.selected = state.selected ?? '';
     canvas.dataset.matching = String(pool().length);
-    // Four-shade LCD geography: pixel-dithered land instead of smooth glows.
+    // Patagonian steppe seen from above, each cluster of songs a grove of
+    // bushes. The terrain is painted once in world space and scaled with the
+    // camera, so its pixels grow as you zoom.
     ctx.imageSmoothingEnabled = false;
-    for (const island of DATA.islands) {
-      const p = toScreen(island.centre.x, island.centre.y);
-      const radius = Math.max(18, island.radius * state.cam.zoom * 1.25);
-      if (island.memberIds.length > 1) {
-        ctx.fillStyle = '#607d4230';
-        const step = 6;
-        const left = Math.max(0, Math.floor((p.x - radius) / step) * step);
-        const top = Math.max(0, Math.floor((p.y - radius) / step) * step);
-        for (let y = top; y < Math.min(h, p.y + radius); y += step) {
-          for (let x = left; x < Math.min(w, p.x + radius); x += step) {
-            if (((x + y) / step) % 2 !== 0) continue;
-            if (((x - p.x) / radius) ** 2 + ((y - p.y) / (radius * .75)) ** 2 < 1) ctx.fillRect(x, y, 2, 2);
-          }
-        }
-        const label = island.name.trim().toUpperCase();
-        ctx.font = '9px Silkscreen, monospace'; ctx.textAlign = 'center';
-        const labelWidth = ctx.measureText(label).width + 10;
-        ctx.fillStyle = '#a5b877';
-        ctx.fillRect(Math.round(p.x - labelWidth / 2), Math.round(p.y - radius - 17), labelWidth, 15);
-        ctx.fillStyle = '#334d2c'; ctx.fillText(label, Math.round(p.x), Math.round(p.y - radius - 7));
-      }
-    }
+    ctx.fillStyle = terrain.ground; ctx.fillRect(0, 0, w, h);
+    const origin = toScreen(terrain.minX, terrain.minY), unit = state.cam.zoom / terrain.scale;
+    ctx.drawImage(terrain.bitmap, Math.round(origin.x), Math.round(origin.y),
+      Math.round(terrain.bitmap.width * unit), Math.round(terrain.bitmap.height * unit));
     if (state.showRoutes) {
-      ctx.strokeStyle = '#48633488'; ctx.setLineDash([2, 5]);
+      ctx.strokeStyle = '#5a3b26cc'; ctx.setLineDash([2, 4]);
       for (const r of DATA.tradeRoutes) {
         const a = byId.get(r.from), b = byId.get(r.to);
         if (!passesFilter(a) || !passesFilter(b)) continue;
@@ -187,7 +172,7 @@
       ctx.setLineDash([]);
     }
     if (state.trail.length > 1) {
-      ctx.strokeStyle = '#243c25'; ctx.lineWidth = 1.5; ctx.beginPath();
+      ctx.strokeStyle = '#2b2236'; ctx.lineWidth = 2; ctx.beginPath();
       state.trail.slice(-40).forEach((id, i) => {
         const r = byId.get(id), p = toScreen(r.x, r.y);
         if (i) ctx.lineTo(p.x, p.y); else ctx.moveTo(p.x, p.y);
@@ -196,21 +181,62 @@
     for (const r of releases) {
       const projected = toScreen(r.x, r.y), p = { x: Math.round(projected.x), y: Math.round(projected.y) };
       const size = Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78)));
-      ctx.globalAlpha = passesFilter(r) ? 1 : .12;
-      ctx.fillStyle = '#263e25';
-      ctx.fillRect(Math.round(p.x - size / 2), Math.round(p.y - size / 2), size, size);
-      if (size >= 8) {
-        ctx.fillStyle = '#a5b877'; ctx.fillRect(p.x - 1, p.y - 1, 2, 2);
-      }
+      ctx.globalAlpha = passesFilter(r) ? 1 : .2;
+      // Each song is a small cabin-dark square with a lamp-lit centre.
+      ctx.fillStyle = '#f6ead2'; ctx.fillRect(Math.round(p.x - size / 2) - 1, Math.round(p.y - size / 2) - 1, size + 2, size + 2);
+      ctx.fillStyle = '#2b2236'; ctx.fillRect(Math.round(p.x - size / 2), Math.round(p.y - size / 2), size, size);
+      if (size >= 8) { ctx.fillStyle = '#f0a05a'; ctx.fillRect(p.x - 1, p.y - 1, 2, 2); }
       if (r.id === state.selected || r.id === state.hovered) {
-        ctx.strokeStyle = '#1c3320';
-        ctx.strokeRect(Math.round(p.x - size / 2 - 3) + .5, Math.round(p.y - size / 2 - 3) + .5, size + 6, size + 6);
+        ctx.strokeStyle = '#fff8ea'; ctx.lineWidth = 2;
+        ctx.strokeRect(Math.round(p.x - size / 2 - 4), Math.round(p.y - size / 2 - 4), size + 8, size + 8);
+        ctx.lineWidth = 1;
         if (r.id === state.selected) {
-          ctx.fillStyle = '#1c3320'; ctx.fillRect(p.x - 1, p.y - size / 2 - 8, 3, 3);
+          // A little orange pennant over the song that is playing.
+          ctx.fillStyle = '#2b2236'; ctx.fillRect(p.x, p.y - size / 2 - 14, 2, 10);
+          ctx.fillStyle = '#ef7d3c'; ctx.fillRect(p.x + 2, p.y - size / 2 - 14, 6, 4);
         }
       }
     }
     ctx.globalAlpha = 1;
+    drawIslandLabels(w, h);
+  }
+  // Signs never overlap each other or cover a song: each goes just above its
+  // grove's songs, or below them, or waits until zooming in makes room. The
+  // current song's grove and bigger groves choose first.
+  function drawIslandLabels(w, h) {
+    const current = byId.get(state.selected)?.islandId;
+    const order = DATA.islands.filter((island) => island.memberIds.length > 1)
+      .sort((a, b) => (b.id === current) - (a.id === current) || b.memberIds.length - a.memberIds.length);
+    const size = Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78))) + 6;
+    const songs = releases.map((r) => toScreen(r.x, r.y));
+    // The hint, status and zoom buttons float over the map; signs stay clear of them.
+    const frame = canvas.getBoundingClientRect();
+    const placed = ['map-help', 'map-status', 'map-controls'].map($).filter((el) => el && !el.hidden).map((el) => {
+      const r = el.getBoundingClientRect();
+      return { x: r.left - frame.left, y: r.top - frame.top, w: r.width, h: r.height };
+    });
+    const overlays = placed.length;
+    const clear = (box) => !placed.some((o) => box.x < o.x + o.w + 4 && o.x < box.x + box.w + 4 && box.y < o.y + o.h + 2 && o.y < box.y + box.h + 2) &&
+      !songs.some((p) => p.x + size / 2 > box.x && p.x - size / 2 < box.x + box.w && p.y + size / 2 > box.y && p.y - size / 2 < box.y + box.h);
+    ctx.font = '9px Silkscreen, monospace'; ctx.textAlign = 'center';
+    for (const island of order) {
+      const name = island.name.trim().toUpperCase();
+      const label = name.length > 22 ? `${name.slice(0, 21).trimEnd()}…` : name;
+      const members = island.memberIds.map((id) => byId.get(id)).filter(Boolean).map((r) => toScreen(r.x, r.y));
+      const cx = members.reduce((sum, p) => sum + p.x, 0) / members.length;
+      const top = Math.min(...members.map((p) => p.y)), bottom = Math.max(...members.map((p) => p.y));
+      const width = ctx.measureText(label).width + 10;
+      const box = [top - size / 2 - 17, bottom + size / 2 + 3]
+        .map((y) => ({ x: Math.round(cx - width / 2), y: Math.round(y), w: width, h: 15 }))
+        .find((b) => b.x + b.w > 0 && b.x < w && b.y + b.h > 0 && b.y < h && clear(b));
+      if (!box) continue;
+      placed.push(box);
+      // Weathered wooden signs.
+      ctx.fillStyle = '#4a3328'; ctx.fillRect(box.x - 1, box.y - 1, box.w + 2, box.h + 2);
+      ctx.fillStyle = '#f1dfb8'; ctx.fillRect(box.x, box.y, box.w, box.h);
+      ctx.fillStyle = '#3a2a22'; ctx.fillText(label, Math.round(box.x + box.w / 2), box.y + 10);
+    }
+    canvas.dataset.labels = String(placed.length - overlays);
   }
   function resize() {
     const dpr = window.devicePixelRatio || 1;
@@ -279,7 +305,7 @@
     if (!pointers.size) canvas.classList.remove('dragging');
     if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
     // Pressing a square plays it.
-    if (click) { const r = tileAt(e); if (r) { select(r.id, true); startSelected(); } }
+    if (click) { const r = tileAt(e); if (r) playTrack(r.id); }
   }
   canvas.addEventListener('pointerup', (e) => finishPointer(e, true));
   for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, (e) => finishPointer(e, false));
@@ -303,9 +329,10 @@
     const labels = { idle: 'READY', loading: 'LOAD', ready: 'READY', playing: 'PLAY',
       paused: 'PAUSE', buffering: 'BUFFER', stopped: 'STOP', ended: 'END', error: 'ERROR' };
     $('deck-state').textContent = labels[mode] ?? 'READY';
-    const active = ['ready', 'playing', 'paused', 'buffering'].includes(mode);
-    $('transport-pause').disabled = !active;
-    $('transport-stop').disabled = !active;
+    const going = ['loading', 'playing', 'buffering'].includes(mode);
+    $('transport-play').textContent = going ? 'Ⅱ' : '▶';
+    $('transport-play').setAttribute('aria-label', going ? 'Pause' : 'Play');
+    $('transport-play').title = going ? 'Pause' : 'Play';
     if (mode === 'error') { playerReady = false; resetSeeking(); }
   }
   function formatTime(seconds) {
@@ -322,8 +349,7 @@
     $('player-seek').disabled = true; $('player-seek').max = '0'; $('player-seek').value = '0';
     $('player-seek').style.setProperty('--seek-progress', '0%');
     $('player-seek').setAttribute('aria-valuetext', 'Load a track to seek');
-    $('seek-time').value = ''; $('seek-time').disabled = true; $('seek-go').disabled = true;
-    $('seek-message').hidden = true; $('seek-readout').textContent = '00:00 / --:--';
+    $('seek-readout').textContent = '00:00 / --:--';
   }
   function showPosition(seconds) {
     const position = Math.max(0, Math.min(songDuration || Infinity, Number(seconds) || 0));
@@ -342,10 +368,8 @@
     if (Number.isFinite(duration) && duration >= 1 && !live) {
       songDuration = Math.floor(duration);
       $('player-seek').max = String(songDuration); $('player-seek').disabled = false;
-      $('seek-time').disabled = false; $('seek-go').disabled = false;
     } else {
       songDuration = 0; $('player-seek').disabled = true;
-      $('seek-time').disabled = true; $('seek-go').disabled = true;
     }
     // Polling must not pull the knob away from the user while it is dragged.
     if (scrubbing) return;
@@ -367,7 +391,6 @@
     if (stayPaused) { player.pauseVideo(); setPlayback('paused'); }
     pendingSeek = { seconds: target, expires: performance.now() + 2500 };
     scrubbing = false; showPosition(target);
-    $('seek-message').hidden = true;
   }
   $('player-seek').addEventListener('pointerdown', () => { scrubbing = true; });
   $('player-seek').addEventListener('input', (e) => { scrubbing = true; showPosition(Number(e.target.value)); });
@@ -378,66 +401,68 @@
   });
   $('player-seek').addEventListener('pointercancel', () => { scrubbing = false; syncTimeline(); });
   $('player-seek').addEventListener('blur', () => { if (scrubbing) seekTo(Number($('player-seek').value)); });
-  $('seek-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const raw = $('seek-time').value.trim().replace(/s$/i, '').trim();
-    const parts = raw.split(':');
-    const valid = /^\d+(?::\d{1,2}){0,2}$/.test(raw) &&
-      (parts.length === 1 || parts.slice(1).every((p) => Number(p) < 60));
-    if (!valid) {
-      $('seek-message').textContent = 'Enter seconds (83), mm:ss (1:23), or hh:mm:ss.';
-      $('seek-message').hidden = false; return;
-    }
-    seekTo(parts.reduce((total, p) => total * 60 + Number(p), 0));
-  });
   function startSelected() {
     if (isLocalFile) return;
     if (player && !['idle', 'error'].includes(playbackMode)) { player.playVideo(); return; }
-    if (playbackMode === 'error') preparePlayer(byId.get(state.selected));
-    $('play-track')?.click();
+    const r = byId.get(state.selected);
+    if (!r || !validVideo(r)) return;
+    if (playbackMode === 'error') preparePlayer(r);
+    createPlayer(r);
   }
-  $('transport-play').onclick = startSelected;
-  $('transport-pause').onclick = () => player?.pauseVideo?.();
-  $('transport-stop').onclick = () => {
-    player?.stopVideo?.(); clearTimeout(playerTimer); setPlayback('stopped');
-    scrubbing = false; pendingSeek = null; showPosition(0);
-    $('player-status').textContent = 'Stopped. Press Play to listen again.';
-  };
-  function adjacentTrack(direction) {
-    const tracks = pool(); if (!tracks.length) return;
-    const index = tracks.findIndex((r) => r.id === state.selected);
-    const next = tracks[(Math.max(0, index) + direction + tracks.length) % tracks.length];
-    const resume = ['playing', 'buffering'].includes(playbackMode);
-    select(next.id, true);
-    if (resume) startSelected();
+  function togglePlay() {
+    if (['playing', 'buffering', 'loading'].includes(playbackMode)) player?.pauseVideo?.();
+    else startSelected();
   }
-  // Leave it running: when a song ends, the next one in the list starts. It
-  // loads into the same YouTube player, because browsers (iOS Safari above
-  // all) let a player that is already playing continue without another tap.
-  // Videos YouTube will not play here are skipped, but only a few in a row, so
-  // a blocked YouTube does not spin through the whole list.
+  // Where "next" goes: the nearest song not heard yet, in the same grove
+  // first, then over to the next grove. Previous goes back through what you played.
+  function upNext(fromId = state.selected) {
+    const from = byId.get(fromId); if (!from) return null;
+    const heard = new Set(state.trail);
+    const others = pool().filter((r) => r.id !== fromId);
+    const fresh = others.filter((r) => !heard.has(r.id));
+    const candidates = fresh.length ? fresh : others;
+    const distance = (r) => Math.hypot(r.x - from.x, r.y - from.y);
+    return candidates.sort((a, b) => (b.islandId === from.islandId) - (a.islandId === from.islandId) ||
+      distance(a) - distance(b) || a.id.localeCompare(b.id))[0] ?? null;
+  }
+  // Leave it running: when a song ends, the next one starts. Songs load into
+  // the same YouTube player, because browsers (iOS Safari above all) let a
+  // player that is already playing continue without another tap. Videos
+  // YouTube will not play here are skipped, but only a few in a row, so a
+  // blocked YouTube does not spin through the whole map.
   const MAX_SKIPS_IN_A_ROW = 5;
   let skippedInARow = 0, continueInPlayer = false;
-  function playNext() {
-    const tracks = pool(); if (!tracks.length) return;
-    const next = tracks[(tracks.findIndex((r) => r.id === state.selected) + 1) % tracks.length];
-    const sameVideo = typeof player?.loadVideoById === 'function';
-    if (next.id === state.selected && sameVideo) { player.seekTo(0, true); player.playVideo(); return; }
-    continueInPlayer = sameVideo;
-    select(next.id, true);
+  function playTrack(id) {
+    if (!byId.has(id)) return;
+    if (id === state.selected) { startSelected(); return; }
+    continueInPlayer = !isLocalFile && typeof player?.loadVideoById === 'function';
+    const reused = continueInPlayer;
+    select(id, true);
     continueInPlayer = false;
-    if (!sameVideo) startSelected();
+    if (!reused) startSelected();
+  }
+  function playNext() {
+    const next = upNext();
+    if (next) playTrack(next.id);
+    else if (player?.seekTo) { player.seekTo(0, true); player.playVideo(); }
+  }
+  function goBack() {
+    if (state.trail.length < 2) return;
+    state.trail.pop();
+    playTrack(state.trail.at(-1));
   }
   function loadInPlayer(r) {
     clearTimeout(playerTimer); resetSeeking(); showTime(0);
     playerReady = true; setPlayback('loading');
     $('d-youtube').href = `https://www.youtube.com/watch?v=${r.youtubeId}`;
     const frame = $('youtube-player'); if (frame) frame.title = `${r.artist} — ${r.name}`;
-    $('player-status').textContent = 'Loading the next track…';
+    $('player-status').textContent = '';
     player.setVolume?.(volume); player.loadVideoById(r.youtubeId);
   }
-  $('transport-prev').onclick = () => adjacentTrack(-1);
-  $('transport-next').onclick = () => adjacentTrack(1);
+  const validVideo = (r) => /^[\w-]{11}$/.test(r?.youtubeId ?? '');
+  $('transport-play').onclick = togglePlay;
+  $('transport-prev').onclick = goBack;
+  $('transport-next').onclick = playNext;
   $('player-volume').addEventListener('input', (e) => {
     volume = Number(e.target.value); $('volume-value').value = String(volume);
     player?.setVolume?.(volume);
@@ -462,68 +487,87 @@
     setPlayback('idle'); showTime(0);
     playerGeneration++; if (player) { player.destroy(); player = null; }
     $('d-player').replaceChildren();
-    const valid = /^[\w-]{11}$/.test(r.youtubeId ?? '');
+    const valid = validVideo(r);
     $('transport-play').disabled = !valid || isLocalFile;
     $('d-youtube').href = valid ? `https://www.youtube.com/watch?v=${r.youtubeId}` : r.youtubeUrl ?? '#';
-    const play = node('button', valid ? '▶ Play this track' : 'No valid YouTube video', 'play-button');
-    play.id = 'play-track'; play.disabled = !valid || isLocalFile;
-    if (valid) {
-      const poster = node('div', null, 'video-poster');
-      const fallback = node('div', null, 'poster-fallback');
-      fallback.append(node('span', '▤'), node('span', 'RADIO SEA / YOUTUBE'));
-      fallback.setAttribute('aria-hidden', 'true'); poster.append(fallback);
-      const image = node('img'); image.src = `https://i.ytimg.com/vi/${r.youtubeId}/mqdefault.jpg`;
-      image.alt = ''; image.loading = 'lazy';
-      image.onerror = () => image.remove();
-      poster.append(image); $('d-player').append(poster);
-    }
-    $('d-player').append(play);
-    $('player-status').textContent = isLocalFile ? 'Embedded playback needs localhost. See the notice on the left.' :
-      'Press Play to load YouTube. If a video is restricted, use the watch link below.';
-    play.onclick = async () => {
-      setPlayback('loading');
-      const generation = ++playerGeneration;
-      const frame = node('iframe'); frame.id = 'youtube-player';
-      frame.title = `${r.artist} — ${r.name}`;
-      frame.referrerPolicy = 'strict-origin-when-cross-origin';
-      frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
-      frame.allowFullscreen = true;
-      frame.src = `https://www.youtube.com/embed/${r.youtubeId}?enablejsapi=1&playsinline=1&origin=${encodeURIComponent(location.origin)}`;
-      $('d-player').replaceChildren(frame);
-      $('player-status').textContent = 'Loading YouTube…';
-      try {
-        const YT = await loadPlayerApi();
-        if (generation !== playerGeneration) return;
-        player = new YT.Player(frame, { events: {
-          onReady: (e) => { if (generation !== playerGeneration) return;
-            playerReady = true; syncTimeline(e.target);
-            e.target.setVolume?.(volume); setPlayback('ready');
-            $('player-status').textContent = 'YouTube player ready. Press Play in the video if needed.';
-            e.target.playVideo(); },
-          onStateChange: (e) => { if (generation !== playerGeneration) return;
-            syncTimeline(e.target ?? player);
-            clearTimeout(playerTimer);
-            if (e.data === 1) { skippedInARow = 0; setPlayback('playing'); $('player-status').textContent = 'Playing on YouTube'; }
-            else if (e.data === 2) { setPlayback('paused'); $('player-status').textContent = 'Paused'; }
-            else if (e.data === 0) { setPlayback('ended'); $('player-status').textContent = 'Track finished. Playing the next one…'; playNext(); }
-            else if (e.data === 3) {
-              setPlayback('buffering');
-              $('player-status').textContent = 'Buffering YouTube…';
-              playerTimer = setTimeout(() => {
-                if (generation === playerGeneration) $('player-status').textContent =
-                  'YouTube is taking a long time to buffer. Check your connection or use the watch link below.';
-              }, 12000);
-            } },
-          onError: (e) => { if (generation !== playerGeneration) return;
-            setPlayback('error');
-            clearTimeout(playerTimer);
-            const skip = skippedInARow < MAX_SKIPS_IN_A_ROW;
-            $('player-status').textContent = `YouTube cannot play this video here (error ${e.data}). ` +
-              (skip ? 'Skipping to the next track…' : 'Several in a row failed, so playback stopped. Use the watch link below.');
-            if (skip) { skippedInARow += 1; playerTimer = setTimeout(playNext, 1500); } },
-        } });
-      } catch (error) { if (generation === playerGeneration) { setPlayback('error'); $('player-status').textContent = error.message; } }
-    };
+    $('player-status').textContent = isLocalFile ? 'Embedded playback needs localhost. See the notice in Explore.' :
+      valid ? '' : 'No YouTube video for this song.';
+    if (!valid) return;
+    // The thumbnail is the play button until the video loads in its place.
+    const poster = node('button', null, 'video-poster');
+    poster.id = 'video-poster'; poster.disabled = isLocalFile;
+    poster.setAttribute('aria-label', `Play ${r.artist} — ${r.name}`);
+    const fallback = node('div', null, 'poster-fallback');
+    fallback.append(node('span', 'PLAY ON YOUTUBE'));
+    fallback.setAttribute('aria-hidden', 'true'); poster.append(fallback);
+    const image = node('img'); image.src = `https://i.ytimg.com/vi/${r.youtubeId}/mqdefault.jpg`;
+    image.alt = ''; image.loading = 'lazy';
+    image.onerror = () => image.remove();
+    poster.append(image); $('d-player').append(poster);
+    poster.onclick = () => createPlayer(r);
+  }
+  async function createPlayer(r) {
+    setPlayback('loading');
+    const generation = ++playerGeneration;
+    const frame = node('iframe'); frame.id = 'youtube-player';
+    frame.title = `${r.artist} — ${r.name}`;
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+    frame.allowFullscreen = true;
+    frame.src = `https://www.youtube.com/embed/${r.youtubeId}?enablejsapi=1&playsinline=1&origin=${encodeURIComponent(location.origin)}`;
+    $('d-player').replaceChildren(frame);
+    $('player-status').textContent = '';
+    try {
+      const YT = await loadPlayerApi();
+      if (generation !== playerGeneration) return;
+      player = new YT.Player(frame, { events: {
+        onReady: (e) => { if (generation !== playerGeneration) return;
+          playerReady = true; syncTimeline(e.target);
+          e.target.setVolume?.(volume); setPlayback('ready');
+          $('player-status').textContent = 'If nothing plays, press play in the video.';
+          e.target.playVideo(); },
+        onStateChange: (e) => { if (generation !== playerGeneration) return;
+          syncTimeline(e.target ?? player);
+          clearTimeout(playerTimer);
+          if (e.data === 1) { skippedInARow = 0; setPlayback('playing'); $('player-status').textContent = ''; }
+          else if (e.data === 2) { setPlayback('paused'); $('player-status').textContent = ''; }
+          else if (e.data === 0) { setPlayback('ended'); playNext(); }
+          else if (e.data === 3) {
+            setPlayback('buffering');
+            $('player-status').textContent = '';
+            playerTimer = setTimeout(() => {
+              if (generation === playerGeneration) $('player-status').textContent =
+                'YouTube is taking a long time to buffer. Check your connection or use the watch link below.';
+            }, 12000);
+          } },
+        onError: (e) => { if (generation !== playerGeneration) return;
+          setPlayback('error');
+          clearTimeout(playerTimer);
+          const skip = skippedInARow < MAX_SKIPS_IN_A_ROW;
+          $('player-status').textContent = `YouTube cannot play this video here (error ${e.data}). ` +
+            (skip ? 'Skipping to the next track…' : 'Several in a row failed, so playback stopped. Use the watch link below.');
+          if (skip) { skippedInARow += 1; playerTimer = setTimeout(playNext, 1500); } },
+      } });
+    } catch (error) { if (generation === playerGeneration) { setPlayback('error'); $('player-status').textContent = error.message; } }
+  }
+  /** A grove's name ("deep house"), or as a sentence ("In the deep house grove"). */
+  function islandLabel(islandId, sentence = false) {
+    const island = islands.get(islandId);
+    if (!island) return sentence ? 'Not in a grove' : '';
+    const name = island.name.trim();
+    if (!sentence) return name;
+    return island.basis === 'show' ? `With songs from the show ${name}` : `In the ${name} grove`;
+  }
+  function showUpNext() {
+    const next = state.selected ? upNext() : null;
+    const box = $('d-next'); if (!box) return;
+    box.replaceChildren();
+    if (!next) { box.append(node('p', 'Nothing else matches your filters.', 'sub')); return; }
+    const here = byId.get(state.selected)?.islandId === next.islandId;
+    const button = node('button');
+    button.append(node('b', `${next.artist} — ${next.name}`),
+      node('span', here ? 'Nearest song in this grove' : `Over to the ${islandLabel(next.islandId)} grove`, 'why'));
+    button.onclick = () => playTrack(next.id); box.append(button);
   }
   function select(id, sail) {
     const r = byId.get(id); if (!r) return;
@@ -533,61 +577,56 @@
     $('trail').replaceChildren();
     state.trail.slice(-8).forEach((trackId) => {
       const t = byId.get(trackId), button = node('button', `${t.artist} — ${t.name}`), li = node('li');
-      button.onclick = () => select(trackId, true); li.append(button); $('trail').append(li);
+      button.onclick = () => playTrack(trackId); li.append(button); $('trail').append(li);
     });
     if (sail) flyTo(r);
     $('detail-empty').hidden = true; $('detail-body').hidden = false;
     $('d-title').textContent = r.name; $('d-artist').textContent = r.artist;
-    $('deck-index').textContent = `${String(releases.indexOf(r) + 1).padStart(2, '0')} / ${releases.length}`;
-    const island = islands.get(r.islandId);
-    const grouping = island?.basis === 'show' ? ' (grouped by show)' : '';
-    $('d-meta').replaceChildren(node('span', soundTags(r).join(' · ') || 'No track genres yet'));
-    if (showGenres(r).length) $('d-meta').append(node('span', `Show tagged: ${showGenres(r).join(' · ')}`));
-    $('d-meta').append(node('span', `${island?.name?.trim() ?? 'Uncharted'}${grouping} · depth ${(r.depth ?? 0).toFixed(2)} · ${r.x}~${r.y}`));
+    $('deck-island').textContent = islandLabel(r.islandId).toUpperCase();
+    $('d-meta').replaceChildren(node('span', genres(r).join(' · ') || 'No genres found for this song'));
     if (r.year || r.country) $('d-meta').append(node('span', [r.year, r.country].filter(Boolean).join(' · ')));
-    if (changed) { if (continueInPlayer && /^[\w-]{11}$/.test(r.youtubeId ?? '')) loadInPlayer(r); else preparePlayer(r); }
+    $('d-meta').append(node('span', islandLabel(r.islandId, true)));
+    if (changed) { if (continueInPlayer && validVideo(r)) loadInPlayer(r); else preparePlayer(r); }
     $('d-sources').replaceChildren();
     for (const p of r.radioPlays ?? [{ station: r.station, show: r.show, date: r.date, sourceUrl: r.sourceUrl }]) {
       const li = node('li'), label = `${stationNames.get(p.station) ?? p.station ?? 'Radio'} · ${p.show ?? ''} · ${p.date?.slice(0, 10) ?? ''}`;
       li.append(link(p.sourceUrl, label)); $('d-sources').append(li);
     }
     $('d-neighbours').replaceChildren();
+    const following = upNext(id)?.id;
     for (const n of r.neighbours ?? []) {
-      if (!byId.has(n.id)) continue;
+      if (!byId.has(n.id) || n.id === following) continue;
       const li = node('li'), button = node('button');
       button.append(node('b', `${n.artist} — ${n.name}`), node('span', n.reasons.join(' · '), 'why'));
-      button.onclick = () => select(n.id, true); li.append(button); $('d-neighbours').append(li);
+      button.onclick = () => playTrack(n.id); li.append(button); $('d-neighbours').append(li);
     }
     $('d-routes').replaceChildren();
     for (const route of DATA.tradeRoutes.filter((v) => v.from === id || v.to === id).slice(0, 5)) {
       const t = byId.get(route.from === id ? route.to : route.from); if (!t) continue;
       const li = node('li'), button = node('button');
-      button.append(node('b', `${t.artist} — ${t.name}`), node('span', `Route score ${route.score}`, 'why'));
-      button.onclick = () => select(t.id, true); li.append(button); $('d-routes').append(li);
+      button.append(node('b', `${t.artist} — ${t.name}`), node('span', islandLabel(t.islandId, true), 'why'));
+      button.onclick = () => playTrack(t.id); li.append(button); $('d-routes').append(li);
     }
-    if (!$('d-routes').children.length) $('d-routes').append(node('li', 'No cross-island routes in this snapshot.', 'sub'));
+    if (!$('d-routes').children.length) $('d-routes').append(node('li', 'No trails from this song.', 'sub'));
     refreshFilters();
   }
   $('btn-banger').onclick = () => {
     const all = pool(), alternatives = all.filter((r) => r.id !== state.selected);
     const source = alternatives.length ? alternatives : all;
-    if (source.length) select(source[Math.floor(Math.random() * source.length)].id, true);
-  };
-  $('btn-similar').onclick = () => {
-    const current = byId.get(state.selected);
-    const neighbours = (current?.neighbours ?? []).filter((n) => n.id !== state.selected && passesFilter(byId.get(n.id)));
-    const alternatives = pool().filter((r) => r.id !== state.selected);
-    const source = neighbours.length ? neighbours : alternatives;
-    if (source.length) select(source[Math.floor(Math.random() * source.length)].id, true);
+    if (source.length) playTrack(source[Math.floor(Math.random() * source.length)].id);
   };
   $('btn-routes').onclick = () => {
     state.showRoutes = !state.showRoutes;
-    $('btn-routes').textContent = `trade routes: ${state.showRoutes ? 'on' : 'off'}`;
     $('btn-routes').setAttribute('aria-pressed', String(state.showRoutes)); draw();
   };
   $('btn-home').onclick = fitView;
   $('zoom-in').onclick = () => zoomAt(1.25);
   $('zoom-out').onclick = () => zoomAt(1 / 1.25);
   new ResizeObserver(resize).observe($('map-wrap'));
+  const banner = $('banner');
+  if (banner) {
+    const paint = () => window.RadioSeaLandscape.drawBanner(banner);
+    new ResizeObserver(paint).observe(banner);
+  }
   resize(); fitView(); select(releases[0].id, false);
 })();

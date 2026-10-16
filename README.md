@@ -4,13 +4,15 @@ A map for wandering through music that real people played on independent radio.
 
 Radio Sea collects the tracklists of shows on stations like NTS and The Lot
 Radio, plus picks from Radiooooo, finds each song on YouTube, and lays
-everything out as a sea of islands. Songs that belong together share an
-island, and dotted routes lead to related songs on other islands. Press a
-square to play it, and follow wherever it takes you. When a song ends the
-next one starts, so you can leave it running.
+everything out as a Patagonian steppe seen from above. Songs that sound alike
+grow together as groves of bushes (lenga forests, calafate and neneo
+thickets), with the Andes, glacial lakes and rivers in the open ground and
+trails leading to related groves. Press a square to play it; when a song ends
+the music wanders on to the nearest song you haven't heard, so you can leave
+it running.
 
-It has a little retro skin: a Game Boy–style screen and a Winamp-style player.
-On phones, the Map / Library / Player buttons at the bottom jump between
+It's drawn as pixel art in the colours of Torres del Paine at sunset. On
+phones, the Map / Player / Explore buttons at the bottom jump between
 sections; drag to pan and pinch to zoom.
 
 **Live site:** https://jnotse.github.io/radio-sea/
@@ -49,8 +51,8 @@ Already downloaded? `npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz
 
 Stations only describe whole shows ("this set is jazz, drum & bass, reggae"),
 not single songs. So songs are grouped by their own genres once they have
-been looked up; until then they stay grouped with the show they were played
-on, and the island is named after that show.
+been looked up; a song without any stays with the show it was played on, and
+its grove is named after that show.
 
 ## Tests
 
