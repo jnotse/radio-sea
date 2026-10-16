@@ -6,12 +6,13 @@ import { resolve } from 'node:path';
 // embeds get a separate live smoke test. The fake API exercises player errors.
 test.beforeEach(async ({ page }) => {
   await page.route('https://www.youtube.com/iframe_api', (route) => route.fulfill({
-    contentType: 'text/javascript', body: `window.__transport={play:0,pause:0,stop:0,volume:75,time:42,duration:240,seeks:[]};
+    contentType: 'text/javascript', body: `window.__transport={play:0,pause:0,stop:0,volume:75,time:42,duration:240,seeks:[],loads:[]};
     window.YT={Player:function(frame,opts){
       this.destroy=()=>frame.remove(); this.playVideo=()=>{window.__transport.play++};
       this.pauseVideo=()=>{window.__transport.pause++;opts.events.onStateChange({data:2})};
       this.stopVideo=()=>{window.__transport.stop++;window.__transport.time=0};
       this.setVolume=(v)=>{window.__transport.volume=v};
+      this.loadVideoById=(id)=>{window.__transport.loads.push(id);window.__transport.time=0};
       this.getCurrentTime=()=>window.__transport.time;
       this.getDuration=()=>window.__transport.duration;
       this.seekTo=(seconds,allowAhead)=>{window.__transport.time=seconds;window.__transport.seeks.push({seconds,allowAhead})};
@@ -349,4 +350,36 @@ test('seek stays disabled until a finite duration arrives', async ({ page }) => 
   await page.evaluate(() => { window.__transport.duration = 360; });
   await expect(page.locator('#player-seek')).toBeEnabled();
   await expect(page.locator('#player-seek')).toHaveAttribute('max', '360');
+});
+
+test('a finished song plays the next one in the same player; unplayable videos are skipped a few times at most', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('#transport-play').click();
+  await expect(page.locator('#player-status')).toContainText('ready');
+  const ids = await page.evaluate(() => [...document.querySelectorAll('#track-list button')].map((b) => b.dataset.trackId));
+  const videoOf = (id) => page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).youtubeId, id);
+  const event = (name, data) => page.evaluate(([n, d]) => window.__playerOptions.events[n]({ data: d }), [name, data]);
+
+  await event('onStateChange', 1);
+  await event('onStateChange', 0);
+  await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[1]);
+  expect(await page.evaluate(() => window.__transport.loads)).toEqual([await videoOf(ids[1])]);
+  await expect(page.locator('#youtube-player')).toHaveCount(1);
+  await expect(page.locator('#d-youtube')).toHaveAttribute('href', new RegExp(await videoOf(ids[1])));
+
+  // Embedding refused: skip ahead after a moment.
+  await event('onError', 150);
+  await expect(page.locator('#player-status')).toContainText('Skipping');
+  await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[2]);
+  await event('onStateChange', 1);
+
+  // A blocked YouTube must not spin through the whole list.
+  for (let i = 0; i < 5; i += 1) {
+    await event('onError', 150);
+    await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[3 + i]);
+  }
+  await event('onError', 150);
+  await expect(page.locator('#player-status')).toContainText('playback stopped');
+  await page.waitForTimeout(2000);
+  await expect(page.locator('#sea')).toHaveAttribute('data-selected', ids[7]);
 });

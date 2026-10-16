@@ -411,6 +411,31 @@
     select(next.id, true);
     if (resume) startSelected();
   }
+  // Leave it running: when a song ends, the next one in the list starts. It
+  // loads into the same YouTube player, because browsers (iOS Safari above
+  // all) let a player that is already playing continue without another tap.
+  // Videos YouTube will not play here are skipped, but only a few in a row, so
+  // a blocked YouTube does not spin through the whole list.
+  const MAX_SKIPS_IN_A_ROW = 5;
+  let skippedInARow = 0, continueInPlayer = false;
+  function playNext() {
+    const tracks = pool(); if (!tracks.length) return;
+    const next = tracks[(tracks.findIndex((r) => r.id === state.selected) + 1) % tracks.length];
+    const sameVideo = typeof player?.loadVideoById === 'function';
+    if (next.id === state.selected && sameVideo) { player.seekTo(0, true); player.playVideo(); return; }
+    continueInPlayer = sameVideo;
+    select(next.id, true);
+    continueInPlayer = false;
+    if (!sameVideo) startSelected();
+  }
+  function loadInPlayer(r) {
+    clearTimeout(playerTimer); resetSeeking(); showTime(0);
+    playerReady = true; setPlayback('loading');
+    $('d-youtube').href = `https://www.youtube.com/watch?v=${r.youtubeId}`;
+    const frame = $('youtube-player'); if (frame) frame.title = `${r.artist} — ${r.name}`;
+    $('player-status').textContent = 'Loading the next track…';
+    player.setVolume?.(volume); player.loadVideoById(r.youtubeId);
+  }
   $('transport-prev').onclick = () => adjacentTrack(-1);
   $('transport-next').onclick = () => adjacentTrack(1);
   $('player-volume').addEventListener('input', (e) => {
@@ -478,9 +503,9 @@
           onStateChange: (e) => { if (generation !== playerGeneration) return;
             syncTimeline(e.target ?? player);
             clearTimeout(playerTimer);
-            if (e.data === 1) { setPlayback('playing'); $('player-status').textContent = 'Playing on YouTube'; }
+            if (e.data === 1) { skippedInARow = 0; setPlayback('playing'); $('player-status').textContent = 'Playing on YouTube'; }
             else if (e.data === 2) { setPlayback('paused'); $('player-status').textContent = 'Paused'; }
-            else if (e.data === 0) { setPlayback('ended'); $('player-status').textContent = 'Track finished. Choose a neighbour or another track.'; }
+            else if (e.data === 0) { setPlayback('ended'); $('player-status').textContent = 'Track finished. Playing the next one…'; playNext(); }
             else if (e.data === 3) {
               setPlayback('buffering');
               $('player-status').textContent = 'Buffering YouTube…';
@@ -492,7 +517,10 @@
           onError: (e) => { if (generation !== playerGeneration) return;
             setPlayback('error');
             clearTimeout(playerTimer);
-            $('player-status').textContent = `YouTube cannot play this video here (error ${e.data}). Use the watch link below.`; },
+            const skip = skippedInARow < MAX_SKIPS_IN_A_ROW;
+            $('player-status').textContent = `YouTube cannot play this video here (error ${e.data}). ` +
+              (skip ? 'Skipping to the next track…' : 'Several in a row failed, so playback stopped. Use the watch link below.');
+            if (skip) { skippedInARow += 1; playerTimer = setTimeout(playNext, 1500); } },
         } });
       } catch (error) { if (generation === playerGeneration) { setPlayback('error'); $('player-status').textContent = error.message; } }
     };
@@ -517,7 +545,7 @@
     if (showGenres(r).length) $('d-meta').append(node('span', `Show tagged: ${showGenres(r).join(' · ')}`));
     $('d-meta').append(node('span', `${island?.name?.trim() ?? 'Uncharted'}${grouping} · depth ${(r.depth ?? 0).toFixed(2)} · ${r.x}~${r.y}`));
     if (r.year || r.country) $('d-meta').append(node('span', [r.year, r.country].filter(Boolean).join(' · ')));
-    if (changed) preparePlayer(r);
+    if (changed) { if (continueInPlayer && /^[\w-]{11}$/.test(r.youtubeId ?? '')) loadInPlayer(r); else preparePlayer(r); }
     $('d-sources').replaceChildren();
     for (const p of r.radioPlays ?? [{ station: r.station, show: r.show, date: r.date, sourceUrl: r.sourceUrl }]) {
       const li = node('li'), label = `${stationNames.get(p.station) ?? p.station ?? 'Radio'} · ${p.show ?? ''} · ${p.date?.slice(0, 10) ?? ''}`;
