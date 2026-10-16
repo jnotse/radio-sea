@@ -29,6 +29,8 @@ const PLAYS = [
   play('Nolan Porter', 'If I Could Only Be Sure', 'NOLANvideo1'),
   play('Throbbing Gristle', 'Walkabout'),
   play('Solar', 'Your Secret'),
+  play('Unknown Artist', 'Untitled'),
+  play('Preoccupations', 'Espionage'),
 ];
 const RELEASES = [
   release({ id: 1, artists: [[10, 'McCoy Tyner']], title: 'Live At Newport', genres: ['Jazz'], styles: ['Hard Bop', 'Modal'],
@@ -59,6 +61,14 @@ const RELEASES = [
   // Two different artists called Solar and neither has the song: too ambiguous to guess.
   release({ id: 11, artists: [[50, 'Solar']], title: 'A', genres: ['Electronic'], styles: ['Trance'], tracks: ['Other'] }),
   release({ id: 12, artists: [[51, 'Solar (3)']], title: 'B', genres: ['Jazz'], styles: ['Fusion'], tracks: ['Else'] }),
+  // Discogs holds thousands of anonymous untitled tracks.
+  release({ id: 13, artists: [[355, 'Unknown Artist']], title: 'Field Tapes', genres: ['Non-Music'], styles: ['Field Recording'],
+    released: '1914', tracks: ['Untitled'] }),
+  // On the band's own album and on a mixed compilation: the album decides.
+  release({ id: 14, artists: [[60, 'Preoccupations']], title: 'New Material', genres: ['Rock'], styles: ['Post-Punk', 'Indie Rock'],
+    released: '2018', master: 800, tracks: ['Espionage'] }),
+  release({ id: 15, artists: [[194, 'Various']], title: 'Summer Mix', genres: ['Reggae', 'Rock'], styles: ['Dub', 'Reggae'], released: '2019',
+    tracks: [{ title: 'Espionage', artists: [[60, 'Preoccupations']] }] }),
 ];
 
 async function scan(text, { gzip = false, chunk = 7, limit } = {}) {
@@ -104,6 +114,13 @@ test('without a listed song, the artist styles are used only when the name is un
   assert.deepEqual(of(songs, 'Throbbing Gristle', 'Walkabout'),
     { genres: ['Electronic'], styles: ['Industrial', 'Experimental', 'Noise'], year: null, source: 'artist', releases: [] });
   assert.deepEqual(of(songs, 'Solar', 'Your Secret'), { genres: [], styles: [], year: null, source: null, releases: [] });
+});
+
+test('own releases outrank compilations, and placeholder artists are never matched', async () => {
+  const { songs } = await scan(dump(RELEASES));
+  assert.deepEqual(of(songs, 'Preoccupations', 'Espionage'),
+    { genres: ['Rock'], styles: ['Indie Rock', 'Post-Punk'], year: 2018, source: 'track', releases: [14] });
+  assert.deepEqual(of(songs, 'Unknown Artist', 'Untitled'), { genres: [], styles: [], year: null, source: null, releases: [] });
 });
 
 test('the dump streams as gzip or plain XML in any chunk size, and --limit stops early', async () => {

@@ -77,3 +77,11 @@ test('episodes of one show get distinct island names; station HTML entities are 
   const [release] = mergeCatalogue([playToRaw(play('E', 'Five', { show: 'Low Life w/ A &amp; B' }))]).releases;
   assert.equal(release.show, 'Low Life w/ A & B');
 });
+
+test('unknown tempo, year, label or country never adds similarity', () => {
+  const { releases, similarity } = build([
+    play('A', 'One', { genres: ['deep house'] }),
+    play('B', 'Two', { genres: ['doo wop'], station: 'nts', show: 'Other', showGenres: ['Doo Wop'] }),
+  ]);
+  assert.equal(similarity(releases[0], releases[1]), 0);
+});

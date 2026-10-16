@@ -8,7 +8,8 @@
 // stays unknown rather than borrowing the show's tags.
 //
 // MusicBrainz asks for a descriptive User-Agent and at most one request per
-// second. A failed request (throttling, outage) stops the run so it can resume
+// second, and answers 503 when busy: those requests are retried after a
+// growing wait. A request that still fails stops the run so it can resume
 // later; it is never recorded as "no genres".
 
 import { songKey } from './extend.js';
@@ -45,19 +46,25 @@ export function searchQuery(play) {
   return `recording:${quote(play.title)} AND artist:${quote(primaryArtist)}`;
 }
 
-async function getJson(path, fetchImpl) {
-  const res = await fetchImpl(`${API}${path}`, { headers: HEADERS, signal: AbortSignal.timeout(20000) });
-  if (res.status === 404) return null;
-  if (!res.ok) throw new Error(`MusicBrainz request failed (${res.status})`);
-  return res.json();
+const BUSY_RETRIES = 5;
+
+async function getJson(path, fetchImpl, backoff) {
+  for (let attempt = 0; ; attempt += 1) {
+    const res = await fetchImpl(`${API}${path}`, { headers: HEADERS, signal: AbortSignal.timeout(20000) });
+    if (res.status === 404) return null;
+    if (res.ok) return res.json();
+    if (res.status !== 503 || attempt === BUSY_RETRIES) throw new Error(`MusicBrainz request failed (${res.status})`);
+    await backoff(attempt);
+  }
 }
 
 /**
  * Genres for one play: { genres, source: 'recording' | 'artist' | null, recording }.
  * `artistGenres` caches artist lookups across plays.
  */
-export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () => wait(1100), artistGenres = new Map() } = {}) {
-  const get = async (path) => { await pause(); return getJson(path, fetchImpl); };
+export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () => wait(1100),
+  backoff = (attempt) => wait(2000 * 2 ** attempt), artistGenres = new Map() } = {}) {
+  const get = async (path) => { await pause(); return getJson(path, fetchImpl, backoff); };
   const recordingById = async (id) => {
     const recording = await get(`/recording/${encodeURIComponent(id)}?inc=genres+artist-credits&fmt=json`);
     return recording && recordingMatches(play, recording, { minScore: 0 }) ? recording : null;

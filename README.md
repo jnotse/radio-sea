@@ -6,7 +6,8 @@ Radio Sea collects the tracklists of shows on stations like NTS and The Lot
 Radio, plus picks from Radiooooo, finds each song on YouTube, and lays
 everything out as a sea of islands. Songs that belong together share an
 island, and dotted routes lead to related songs on other islands. Press a
-square to play it, and follow wherever it takes you.
+square to play it, and follow wherever it takes you. When a song ends the
+next one starts, so you can leave it running.
 
 It has a little retro skin: a Game Boy–style screen and a Winamp-style player.
 On phones, the Map / Library / Player buttons at the bottom jump between

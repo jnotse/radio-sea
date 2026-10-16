@@ -12,6 +12,9 @@
 //                 Discogs artists (Death the proto-punk band vs Death (2))
 //
 // Reissues of one album share a Discogs "master", so each master counts once.
+// The artist's own releases outrank compilations the song appears on, whose
+// styles describe the whole compilation. Placeholder artists ("Unknown
+// Artist") are never matched: their thousands of "Untitled" tracks say nothing.
 
 import { Readable } from 'node:stream';
 import { createGunzip } from 'node:zlib';
@@ -21,6 +24,7 @@ import { canonicalArtist, canonicalTitle, decodeEntities } from './text.js';
 const MAX_GENRES = 2;
 const MAX_STYLES = 3;
 const VARIOUS = 'various';
+const PLACEHOLDER_ARTISTS = new Set([VARIOUS, 'unknown artist', 'unknown', 'anonymous', 'no artist']);
 
 const first = (text, pattern) => text.match(pattern)?.[1] ?? null;
 const every = (text, pattern) => [...text.matchAll(pattern)].map((m) => decodeEntities(m[1]));
@@ -93,13 +97,14 @@ export function createDiscogsMatcher(plays) {
     // "T.I., Chris Brown" credits both; "The Brothers & Sisters" is one name.
     const parts = String(play.artist).split(/,\s+|\s+(?:feat\.?|ft\.?|featuring)\s+/i);
     const primary = artistKey(parts[0]);
-    songs.set(key, { titles: titleKeys(play.title), primary, groups: new Map(), artistIds: new Set() });
-    for (const name of new Set([play.artist, ...parts].map(artistKey).filter(Boolean))) {
+    const names = new Set([play.artist, ...parts].map(artistKey).filter((name) => name && !PLACEHOLDER_ARTISTS.has(name)));
+    songs.set(key, { titles: titleKeys(play.title), primary, names, groups: new Map(), artistIds: new Set() });
+    for (const name of names) {
       if (!byArtist.has(name)) byArtist.set(name, new Set());
       byArtist.get(name).add(key);
     }
     if (play.youtube?.videoId) byVideo.set(play.youtube.videoId, key);
-    if (primary && primary !== VARIOUS) tallies.set(primary, tallies.get(primary) ?? new Map());
+    if (names.has(primary)) tallies.set(primary, tallies.get(primary) ?? new Map());
   }
 
   const keyed = (list) => list.flatMap((credit) => credit.names.map((name) => ({ id: credit.id, key: artistKey(name) })));
@@ -135,14 +140,15 @@ export function createDiscogsMatcher(plays) {
             if (key === song.primary) song.artistIds.add(id);
             // A compilation's year is not the song's.
             const own = releaseArtists.some((artist) => artist.key === key);
-            if (!song.groups.has(group)) song.groups.set(group, { ...found, year: own ? release.year : null, via: 'track' });
+            if (!song.groups.has(group)) song.groups.set(group, { ...found, own, year: own ? release.year : null, via: 'track' });
           }
         }
       }
 
       for (const videoId of release.videoIds) {
         const song = songs.get(byVideo.get(videoId));
-        if (song && !song.groups.has(group)) song.groups.set(group, { ...found, via: 'video' });
+        const own = Boolean(song) && releaseArtists.some((artist) => song.names.has(artist.key));
+        if (song && !song.groups.has(group)) song.groups.set(group, { ...found, own, via: 'video' });
       }
     },
 
@@ -153,7 +159,8 @@ export function createDiscogsMatcher(plays) {
       }
       const out = {};
       for (const [key, song] of songs) {
-        const groups = [...song.groups.values()];
+        const matched = [...song.groups.values()];
+        const groups = matched.some((group) => group.own) ? matched.filter((group) => group.own) : matched;
         if (groups.length) {
           const styles = new Map(), genres = new Map();
           for (const group of groups) { count(styles, group.styles); count(genres, group.genres); }

@@ -96,3 +96,22 @@ test('a failed request stops the run without caching a false "no genres"', async
   assert.equal(resumed.total, 1, 'only the song that failed is looked up again');
   assert.equal(Object.keys(resumed.cache).length, 2);
 });
+
+test('a busy MusicBrainz (503) is retried with growing waits before giving up', async () => {
+  const waits = [];
+  let busy = 2;
+  const fetchImpl = async () => (busy-- > 0
+    ? { ok: false, status: 503, json: async () => ({}) }
+    : { ok: true, status: 200, json: async () => ({ ...RECORDING, genres: [{ name: 'jazz', count: 1 }] }) });
+  const backoff = async (attempt) => { waits.push(attempt); };
+  const found = await lookupTrackGenres({ ...play, ids: { musicbrainz: 'rec-1' } }, { fetchImpl, backoff, ...fast });
+  assert.deepEqual(found.genres, ['jazz']);
+  assert.deepEqual(waits, [0, 1]);
+
+  const alwaysBusy = async () => ({ ok: false, status: 503, json: async () => ({}) });
+  await assert.rejects(lookupTrackGenres({ ...play, ids: { musicbrainz: 'rec-1' } }, { fetchImpl: alwaysBusy, backoff, ...fast }), /503/);
+  const brokenRequest = async () => ({ ok: false, status: 400, json: async () => ({}) });
+  waits.length = 0;
+  await assert.rejects(lookupTrackGenres({ ...play, ids: { musicbrainz: 'rec-1' } }, { fetchImpl: brokenRequest, backoff, ...fast }), /400/);
+  assert.deepEqual(waits, [], 'only "busy" is retried');
+});

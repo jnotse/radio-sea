@@ -2,13 +2,14 @@
 //
 // Signals combined per release pair:
 //   tags    TF-IDF cosine over sound tags, plus context tags (see tags.js)
-//   credits shared artists (0.5 weight) and shared labels (0.175)
-//   era     proximity in years (exponential decay over 25 years)
+//   credits shared artists, and shared labels when both are known
+//   era     proximity in years, when both are known (linear over 25 years)
 //   audio   bpm closeness and key distance (when both sides have data)
-//   place   same country (mild)
+//   place   same country, when both are known (mild)
 //
-// Weights are deliberately tag-heavy: catalog vocabularies (RYM genres and
-// descriptors especially) are the strongest signal we get from scanned data.
+// Weights are deliberately tag-heavy: genres and styles are the strongest
+// signal we get. A field one side lacks is left out rather than counted as a
+// mismatch, so sparse radio records are not pushed apart by what nobody knows.
 
 import { keyDistance } from '../layout.js';
 import { isContextTag } from './tags.js';
@@ -23,7 +24,9 @@ export function buildTagVocabulary(releases) {
   return docFrequency;
 }
 
-export function tagVector(release, vocabulary, { mode = 'all' } = {}) {
+// `documents` is how many releases the vocabulary was built from: a tag on
+// every release weighs almost nothing, a rare style weighs most.
+export function tagVector(release, vocabulary, { mode = 'all', documents = vocabulary.size } = {}) {
   const vector = new Map();
   const tags = release.tags?.all ?? release.styles ?? [];
   for (const tag of tags) {
@@ -32,7 +35,7 @@ export function tagVector(release, vocabulary, { mode = 'all' } = {}) {
     if (mode === 'context' && !context) continue;
     const df = vocabulary.get(tag);
     if (!df) continue;
-    const idf = Math.log((vocabulary.size + 1) / (df + 0.5));
+    const idf = Math.log((documents + 1) / (df + 0.5));
     vector.set(tag, (vector.get(tag) ?? 0) + 1 * idf);
   }
   return vector;
@@ -52,7 +55,8 @@ export function cosine(vecA, vecB) {
 }
 
 function meanBpm(release) {
-  const bpms = (release.tracks ?? []).map((t) => Number(t.bpm)).filter((b) => Number.isFinite(b));
+  // An unknown tempo is null, and Number(null) would read as 0 BPM.
+  const bpms = (release.tracks ?? []).filter((t) => t.bpm != null && t.bpm !== '').map((t) => Number(t.bpm)).filter((b) => Number.isFinite(b));
   return bpms.length ? bpms.reduce((a, b) => a + b, 0) / bpms.length : null;
 }
 
@@ -76,8 +80,9 @@ function overlap(listA = [], listB = []) {
 export function buildSimilarity(releases) {
   const pairCache = new Map();
   const vocabulary = buildTagVocabulary(releases);
-  const soundVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'sound' })]));
-  const contextVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'context' })]));
+  const documents = releases.length;
+  const soundVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'sound', documents })]));
+  const contextVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'context', documents })]));
 
   return function similarity(a, b) {
     if (a.id === b.id) return 1;
@@ -92,15 +97,9 @@ export function buildSimilarity(releases) {
     const soundB = soundVectors.get(b.id) ?? new Map();
     const contextScore = cosine(contextVectors.get(a.id) ?? new Map(), contextVectors.get(b.id) ?? new Map());
     const tagScore = soundA.size && soundB.size
-      ? 0.75 * cosine(soundA, soundB) + 0.25 * contextScore
+      ? 0.9 * cosine(soundA, soundB) + 0.1 * contextScore
       : contextScore;
     const artistScore = overlap(a.artists ?? [a.artist], b.artists ?? [b.artist]);
-    const labelScore = overlap([a.label], [b.label]);
-
-    const yearA = a.year;
-    const yearB = b.year;
-    const eraScore =
-      yearA != null && yearB != null ? Math.max(0, 1 - Math.abs(yearA - yearB) / 25) : 0.3;
 
     const bpmA = meanBpm(a);
     const bpmB = meanBpm(b);
@@ -112,15 +111,13 @@ export function buildSimilarity(releases) {
         ? (bpmScore + keyScore) / 2
         : bpmScore ?? keyScore;
 
-    const countryScore = a.country && b.country && a.country === b.country ? 1 : 0;
-
     const parts = [
       [3.0, tagScore],
       [0.9, artistScore],
-      [0.35, labelScore],
-      [1.0, eraScore],
-      [0.6, countryScore],
     ];
+    if (a.label && b.label) parts.push([0.35, overlap([a.label], [b.label])]);
+    if (a.year != null && b.year != null) parts.push([1.0, Math.max(0, 1 - Math.abs(a.year - b.year) / 25)]);
+    if (a.country && b.country) parts.push([0.6, a.country === b.country ? 1 : 0]);
     if (audioScore != null) parts.push([0.8, audioScore]);
 
     let weightSum = 0;
