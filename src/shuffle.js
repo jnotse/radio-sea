@@ -1,5 +1,4 @@
-// Shuffle mechanics, mirroring pickShuffleRelease / drawRandomPlaylistTrack
-// (auth.pretty.js 17495-17564):
+// Shuffle mechanics:
 //
 //   - if the loaded pool already covers the whole playlist, draw from the pool,
 //     excluding recently played tracks;

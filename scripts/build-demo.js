@@ -3,9 +3,11 @@
 // are dropped), map the result onto the sea, and write demo/sea-data.js.
 //
 //   node scripts/build-demo.js [--max 40] [--episodes 4]
+//   node scripts/build-demo.js --genres   # look up per-track genres (MusicBrainz)
+//   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
 //
-// Network required. Everything is cached in demo/sea-data.js afterwards, so the
-// demo itself runs offline.
+// Network required, except with --reuse. Everything is cached in demo/sea-data.js
+// afterwards, so the demo itself runs offline.
 
 import { mkdir, writeFile, readFile, rename } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -13,10 +15,12 @@ import { dirname, join, resolve } from 'node:path';
 import { fetchRadioPlays, RADIO_STATIONS } from '../src/catalog/radio.js';
 import { resolvePlaysToYoutube } from '../src/catalog/youtube.js';
 import { mergeCatalogue } from '../src/catalog/resolve.js';
-import { ZigZagDiscovery } from '../src/engine.js';
+import { RadioSea } from '../src/engine.js';
 import { candidateMatch } from '../src/catalog/youtube.js';
-import { extendRadioCache } from '../src/catalog/extend.js';
+import { extendRadioCache, songKey } from '../src/catalog/extend.js';
+import { lookupGenresForPlays } from '../src/catalog/genres.js';
 import { fetchRadioooooPlays } from '../src/catalog/radiooooo.js';
+import { decodeEntities } from '../src/catalog/text.js';
 
 export function interleavePlays(plays, limit) {
   const groups = new Map();
@@ -40,7 +44,11 @@ const argValue = (name, fallback) => {
 const maxTracks = argValue('max', 40);
 const maxEpisodes = argValue('episodes', 4);
 
+// A track's own genres (looked up per recording) and per-track tags such as
+// Radiooooo's mood and decade are sound tags. The genres a station lists for a
+// show describe the whole set, so they are kept as `show-genre:` context.
 export function playToRaw(play) {
+  const show = decodeEntities(play.show);
   return {
     source: 'radio',
     sourceId: `${play.station}|${play.show}|${play.artist}|${play.title}`,
@@ -53,15 +61,18 @@ export function playToRaw(play) {
     format: 'Radio',
     rating: null,
     tags: {
-      genres: (play.tags ?? []).slice(0, 4),
+      genres: [...(play.genres ?? []), ...(play.tags ?? [])],
       styles: [`station:${play.station}`],
-      descriptors: play.show ? [`show:${play.show}`] : [],
+      descriptors: [
+        ...(show ? [`show:${show}`] : []),
+        ...(play.showGenres ?? []).slice(0, 4).map((genre) => `show-genre:${genre}`),
+      ],
     },
     tracks: [{ title: play.title, duration: null, bpm: null, key: null }],
     urls: { youtube: play.youtube.url },
     youtubeId: play.youtube.videoId,
     station: play.station,
-    show: play.show,
+    show,
     date: play.date,
     sourceUrl: play.sourceUrl?.replace('www.nts.live/api/v2/', 'www.nts.live/'),
   };
@@ -76,7 +87,7 @@ async function main() {
   let plays = [];
   let errors = [];
 
-  if (args.includes('--reuse') || args.includes('--repair') || args.includes('--extend') || args.includes('--radiooooo')) {
+  if (['--reuse', '--repair', '--extend', '--radiooooo', '--genres'].some((flag) => args.includes(flag))) {
     const cached = JSON.parse(await readFile(cacheFile, 'utf8'));
     resolved = cached.resolved;
     dropped = cached.dropped;
@@ -137,10 +148,30 @@ async function main() {
   // Reject stale/unverified or unrelated cached candidates too.
   resolved = resolved.filter((p) => p.youtube?.confirmed === true && candidateMatch(p, p.youtube).acceptable);
   if (!resolved.length) throw new Error('No verified matches. Run build-demo with --repair to refresh the cache.');
-  const { releases } = mergeCatalogue(resolved.map(playToRaw));
+  // Per-track genres live in their own cache so lookups survive rebuilds.
+  const genresFile = join(dirname(cacheFile), 'track-genres.json');
+  let trackGenres = {};
+  try { trackGenres = JSON.parse(await readFile(genresFile, 'utf8')); } catch { /* none looked up yet */ }
+  if (args.includes('--genres')) {
+    console.log('Looking up per-track genres on MusicBrainz (about one request per second)…');
+    const result = await lookupGenresForPlays(resolved, {
+      cache: trackGenres,
+      checkpoint: async (cache) => {
+        await writeFile(`${genresFile}.next`, JSON.stringify(cache, null, 1));
+        await rename(`${genresFile}.next`, genresFile);
+      },
+      onProgress: ({ index, total, play, genres, source }) => console.log(
+        `  ${index}/${total} ${genres.length ? `${genres.join(', ')} (${source})` : 'no genres'}: ${play.artist} — ${play.title}`),
+    });
+    trackGenres = result.cache;
+    if (result.error) console.log(`Stopped after ${result.done}/${result.total}: ${result.error.message}. Run again to continue.`);
+  }
+  const withGenres = resolved.map((play) => ({ ...play, genres: trackGenres[songKey(play)]?.genres ?? [] }));
+  console.log(`  ${withGenres.filter((p) => p.genres.length).length}/${withGenres.length} tracks have their own genres`);
+  const { releases } = mergeCatalogue(withGenres.map(playToRaw));
   console.log(`  merged into ${releases.length} unique tracks`);
 
-  const engine = new ZigZagDiscovery({ releases, seed: 'radio-sea' });
+  const engine = new RadioSea({ releases, seed: 'radio-sea' });
 
   // Precompute what the demo needs: neighbours with reasons + trade routes.
   const neighbours = new Map();

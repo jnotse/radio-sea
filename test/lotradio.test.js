@@ -30,8 +30,8 @@ test('parseLotRadioShowPage extracts tracklists with artist, title and genres', 
   assert.equal(plays[0].artist, 'Fabrizio Lapiana');
   assert.equal(plays[0].title, 'Freckles (Beatless)');
   assert.equal(plays[0].date, '2026-10-15');
-  assert.equal(plays[0].show, 'Special Guests');
-  assert.deepEqual(plays[0].tags, ['House', 'Techno']);
+  assert.equal(plays[0].show, 'Special Guests: Royce Laroca');
+  assert.deepEqual(plays[0].showGenres, ['House', 'Techno']);
   assert.match(plays[0].sourceUrl, /thelotradio\.com\/shows\/special-guests\/2026-10-15-1800/);
 });
 

@@ -1,12 +1,21 @@
 // Explainability: why did the engine consider two releases similar, or why did
 // it pick something? Every recommendation should be able to say why.
 
+import { isContextTag, tagLabel } from './mapping/tags.js';
+
 export function explainSimilarity(a, b, similarity) {
   const reasons = [];
 
   const tagsA = new Set(a.tags?.all ?? a.styles ?? []);
   const sharedTags = (b.tags?.all ?? b.styles ?? []).filter((t) => tagsA.has(t));
-  if (sharedTags.length > 0) reasons.push(`shared tags: ${sharedTags.slice(0, 4).join(', ')}`);
+  const sharedSound = sharedTags.filter((t) => !isContextTag(t));
+  if (sharedSound.length > 0) reasons.push(`shared tags: ${sharedSound.slice(0, 4).join(', ')}`);
+  const sharedShow = sharedTags.find((t) => t.startsWith('show:'));
+  const sharedShowGenres = sharedTags.filter((t) => t.startsWith('show-genre:'));
+  if (sharedShow) reasons.push(`played on the same show: ${tagLabel(sharedShow)}`);
+  else if (sharedShowGenres.length > 0) {
+    reasons.push(`both shows tagged: ${sharedShowGenres.slice(0, 4).map(tagLabel).join(', ')}`);
+  }
 
   const artistsB = new Set((b.artists ?? [b.artist]).map((x) => String(x).toLowerCase()));
   const sharedArtists = (a.artists ?? [a.artist]).filter((x) => artistsB.has(String(x).toLowerCase()));

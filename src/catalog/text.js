@@ -4,6 +4,17 @@ export function stripDiacritics(text) {
   return text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
 }
 
+const NAMED_ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+
+/** Decode the HTML entities some station APIs leave in names ("A &amp; B"). */
+export function decodeEntities(text) {
+  return String(text ?? '').replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (match, code) => {
+    if (code[0] !== '#') return NAMED_ENTITIES[code.toLowerCase()] ?? match;
+    const point = code[1].toLowerCase() === 'x' ? parseInt(code.slice(2), 16) : Number(code.slice(1));
+    return point > 0 && point <= 0x10ffff ? String.fromCodePoint(point) : match;
+  });
+}
+
 export function normalizeText(text) {
   return stripDiacritics(String(text ?? ''))
     .toLowerCase()

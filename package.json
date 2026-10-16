@@ -1,5 +1,5 @@
 {
-  "name": "zigzag-discovery",
+  "name": "radio-sea",
   "version": "0.1.0",
   "description": "A retro radio discovery map with verified YouTube matches and a Game Boy / Winamp-inspired player.",
   "type": "module",
@@ -11,7 +11,8 @@
     "build-demo": "node scripts/build-demo.js",
     "build-demo:reuse": "node scripts/build-demo.js --reuse",
     "catalog:extend": "node scripts/build-demo.js --extend",
-    "catalog:radiooooo": "node scripts/build-demo.js --radiooooo"
+    "catalog:radiooooo": "node scripts/build-demo.js --radiooooo",
+    "catalog:genres": "node scripts/build-demo.js --genres"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1"

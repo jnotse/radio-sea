@@ -1,12 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ZigZagDiscovery } from '../src/engine.js';
+import { RadioSea } from '../src/engine.js';
 import { seededRand } from '../src/rng.js';
 import { buildFixture } from '../src/fixture.js';
 
 function makeEngine() {
   const { releases, users, gems } = buildFixture();
-  return new ZigZagDiscovery({ releases, users, gems, seed: 'seed-1' });
+  return new RadioSea({ releases, users, gems, seed: 'seed-1' });
 }
 
 test('related excludes the current release, respects limit, ranks by score', () => {

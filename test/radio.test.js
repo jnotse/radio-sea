@@ -107,7 +107,7 @@ test('parseMixcloudCloudcast reads sections and show tags', () => {
   assert.equal(plays.length, 2);
   assert.equal(plays[0].station, 'worldwidefm');
   assert.equal(plays[0].date, '2026-10-12');
-  assert.deepEqual(plays[0].tags, ['jazz', 'afrobeat']);
+  assert.deepEqual(plays[0].showGenres, ['jazz', 'afrobeat']);
 });
 
 test('fetchMixcloudPlays lists recent cloudcasts then reads each tracklist', async () => {

@@ -19,9 +19,10 @@
 
 import { fnv1aHash } from '../fnv1a.js';
 import { mulberry32 } from '../rng.js';
+import { isContextTag, tagLabel } from './tags.js';
 
 // Cluster while average linkage stays above this. Measured on radio data:
-// unrelated pairs score ~0.32, same-world pairs 0.44-0.77, so 0.55 keeps the
+// unrelated pairs score ~0.32, same-world pairs 0.44-0.77, so 0.50 keeps the
 // archipelagos sound-based instead of station-based.
 const LINKAGE_THRESHOLD = 0.50;
 
@@ -61,20 +62,51 @@ export function clusterReleases(releases, similarity, { threshold = LINKAGE_THRE
 
   // Deterministic order: larger islands first, then by first member id.
   groups.sort((a, b) => b.length - a.length || a[0].id.localeCompare(b[0].id));
-  return groups.map((members, index) => ({
-    id: index,
-    name: dominantTag(members) ?? `island-${index}`,
-    members,
+  return distinctNames(groups.map((members, index) => {
+    const { name, basis } = islandName(members);
+    return { id: index, name: name ?? `island-${index}`, basis, members };
   }));
 }
 
-function dominantTag(members) {
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// Separate episodes of one show can form separate islands. Tell them apart by
+// air date, then by number.
+function distinctNames(islands) {
+  const counts = new Map();
+  for (const island of islands) counts.set(island.name, (counts.get(island.name) ?? 0) + 1);
+  for (const island of islands) {
+    if (island.basis !== 'show' || counts.get(island.name) < 2) continue;
+    const day = majorityTag(island.members, (m) => (m.date ? [String(m.date).slice(0, 10)] : []));
+    const [, month, date] = (day ?? '').split('-').map(Number);
+    if (MONTHS[month - 1] && date) island.name = `${island.name} · ${date} ${MONTHS[month - 1]}`;
+  }
+  const seen = new Map();
+  for (const island of islands) {
+    const n = (seen.get(island.name) ?? 0) + 1;
+    seen.set(island.name, n);
+    if (n > 1) island.name = `${island.name} (${n})`;
+  }
+  return islands;
+}
+
+// An island may only claim a sound that at least half of its tracks really
+// have. Otherwise it is named after the show most of them were played on,
+// since that is what grouped them. Station-supplied show genres never name an
+// island: they describe a whole set, not its tracks.
+function islandName(members) {
+  const tagsOf = (member) => member.tags?.all ?? member.styles ?? [];
+  const genre = majorityTag(members, (m) => tagsOf(m).filter((t) => !isContextTag(t) && !t.startsWith('mood:')));
+  if (genre) return { name: tagLabel(genre), basis: 'sound' };
+  const show = majorityTag(members, (m) => tagsOf(m).filter((t) => t.startsWith('show:')));
+  if (show) return { name: tagLabel(show), basis: 'show' };
+  return { name: null, basis: null };
+}
+
+function majorityTag(members, tagsOf) {
   const counts = new Map();
   for (const member of members) {
-    for (const tag of member.styles ?? []) {
-      if (/^(station|show):/.test(tag)) continue; // provenance names make poor island names
-      counts.set(tag, (counts.get(tag) ?? 0) + 1);
-    }
+    for (const tag of new Set(tagsOf(member))) counts.set(tag, (counts.get(tag) ?? 0) + 1);
   }
   let best = null;
   let bestCount = 0;
@@ -84,7 +116,7 @@ function dominantTag(members) {
       bestCount = count;
     }
   }
-  return best;
+  return bestCount * 2 >= members.length ? best : null;
 }
 
 function islandRadius(memberCount) {
@@ -217,7 +249,7 @@ function snapAndResolve(entries) {
  * Map a catalogue onto the sea.
  * @returns {{placements, islands, depths, similarity}}
  */
-export function mapCatalogue(releases, similarity, { seed = 'zig~zag' } = {}) {
+export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) {
   const rand = mulberry32(fnv1aHash(String(seed)));
   const islands = clusterReleases(releases, similarity);
   const centres = arrangeIslands(islands, similarity, rand);
@@ -254,6 +286,7 @@ export function mapCatalogue(releases, similarity, { seed = 'zig~zag' } = {}) {
     islands: centres.map((centre) => ({
       id: centre.island.id,
       name: centre.island.name,
+      basis: centre.island.basis,
       memberIds: centre.island.members.map((m) => m.id),
       centre: { x: Math.round(centre.x), y: Math.round(centre.y) },
       radius: centre.radius,

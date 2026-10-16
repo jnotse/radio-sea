@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ZigZagDiscovery } from '../src/engine.js';
+import { RadioSea } from '../src/engine.js';
 import { buildSimilarity } from '../src/mapping/embed.js';
 import { clusterReleases, mapCatalogue } from '../src/mapping/cartography.js';
 import { tradeRoutes } from '../src/mapping/routes.js';
@@ -114,7 +114,7 @@ test('explanations name the actual shared signals', () => {
 });
 
 test('engine exposes the whole pipeline together', () => {
-  const engine = new ZigZagDiscovery({ releases, users, gems, seed: 'world-1' });
+  const engine = new RadioSea({ releases, users, gems, seed: 'world-1' });
   assert.ok(engine.islands.length >= 4);
   assert.ok(engine.islandOf(releases[0].id) !== null);
   assert.ok(engine.depthOf(releases[0].id) >= 0);

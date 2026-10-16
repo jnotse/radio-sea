@@ -1,4 +1,4 @@
-// FNV-1a, copied semantically from zig-zag's assets_fnv1aHash-r0oawFqj.js.
+// FNV-1a 32-bit hash.
 // Used wherever we need a stable, seedable hash (layout jitter, ids, PRNG seeds).
 export const FNV_OFFSET_BASIS = 2166136261;
 export const FNV_PRIME = 16777619;

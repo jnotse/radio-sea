@@ -8,7 +8,7 @@ import {
   parseMusicbrainzRelease,
 } from '../src/catalog/sources.js';
 import { mergeCatalogue, crossSourceReleases, matchScore } from '../src/catalog/resolve.js';
-import { ZigZagDiscovery } from '../src/engine.js';
+import { RadioSea } from '../src/engine.js';
 
 test('csv parser handles quoted fields and commas', () => {
   const rows = parseCsv('a,b\n"x, y","say ""hi"""\n');
@@ -128,7 +128,7 @@ test('matchScore: series volumes never merge', () => {
   assert.ok(matchScore(vol3, vol10) < 0.72, 'different volumes must stay separate');
 });
 
-test('ZigZagDiscovery.fromRaw builds a mapped engine from mixed sources', () => {
+test('RadioSea.fromRaw builds a mapped engine from mixed sources', () => {
   const raws = [
     ...parseDiscogsCsv(
       ['Artist,Title,Label,Format,Released,Release ID', 'Drexciya,Wavejumper,Tresor,Vinyl,1999,10'].join('\n'),
@@ -137,7 +137,7 @@ test('ZigZagDiscovery.fromRaw builds a mapped engine from mixed sources', () => 
       ['Artist,Title,Year,Genres,Descriptors', 'Drexciya,Wavejumper,1999,Techno,submerged'].join('\n'),
     ),
   ];
-  const engine = ZigZagDiscovery.fromRaw(raws, { seed: 'mixed' });
+  const engine = RadioSea.fromRaw(raws, { seed: 'mixed' });
   assert.equal(engine.releases.length, 1);
   assert.ok(engine.mapPlacement(engine.releases[0].id));
   assert.ok(engine.explain(engine.releases[0].id, engine.releases[0].id) === null || true);

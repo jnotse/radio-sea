@@ -92,6 +92,63 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
   await expect(canvas).toHaveAttribute('data-selected', id);
 });
 
+test.describe('touch screens', () => {
+  test.use({ hasTouch: true, viewport: { width: 390, height: 844 } });
+
+  async function touchMap(page) {
+    const canvas = page.locator('#sea');
+    await canvas.scrollIntoViewIfNeeded();
+    const box = await canvas.boundingBox();
+    const cdp = await page.context().newCDPSession(page);
+    const send = (type, points) => cdp.send('Input.dispatchTouchEvent',
+      { type, touchPoints: points.map(([x, y], id) => ({ x, y, id })) });
+    const camera = async () => ({ zoom: Number(await canvas.getAttribute('data-zoom')),
+      x: Number(await canvas.getAttribute('data-camera-x')), y: Number(await canvas.getAttribute('data-camera-y')) });
+    return { canvas, send, camera, cx: box.x + box.width / 2, cy: box.y + box.height / 2 };
+  }
+
+  test('two-finger pinch zooms around the fingers without selecting a tile', async ({ page }) => {
+    await page.goto('/');
+    const { canvas, send, camera, cx, cy } = await touchMap(page);
+    const before = await camera();
+    const selected = await canvas.getAttribute('data-selected');
+    await send('touchStart', [[cx - 30, cy], [cx + 30, cy]]);
+    for (let i = 1; i <= 8; i += 1) await send('touchMove', [[cx - 30 - i * 10, cy], [cx + 30 + i * 10, cy]]);
+    await send('touchEnd', []);
+    const after = await camera();
+    // Fingers moved from 60px to 220px apart around the canvas centre.
+    expect(after.zoom / before.zoom).toBeGreaterThan(3);
+    expect(Math.abs(after.x - before.x)).toBeLessThan(0.5);
+    expect(Math.abs(after.y - before.y)).toBeLessThan(0.5);
+    await expect(canvas).toHaveAttribute('data-selected', selected);
+
+    await send('touchStart', [[cx - 80, cy], [cx + 80, cy]]);
+    for (let i = 1; i <= 6; i += 1) await send('touchMove', [[cx - 80 + i * 10, cy], [cx + 80 - i * 10, cy]]);
+    await send('touchEnd', []);
+    expect((await camera()).zoom).toBeLessThan(after.zoom);
+  });
+
+  test('one finger pans the map and a tap selects a tile', async ({ page }) => {
+    await page.goto('/');
+    const { canvas, send, camera, cx, cy } = await touchMap(page);
+    const before = await camera();
+    await send('touchStart', [[cx, cy]]);
+    for (let i = 1; i <= 8; i += 1) await send('touchMove', [[cx + i * 10, cy]]);
+    await send('touchEnd', []);
+    const after = await camera();
+    expect(after.zoom).toBe(before.zoom);
+    expect(after.x).toBeCloseTo(before.x - 80 / before.zoom, 1);
+
+    await page.locator('#btn-home').click();
+    await canvas.scrollIntoViewIfNeeded();
+    const id = await page.evaluate(() => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id);
+    const p = await screenPoint(page, id);
+    await send('touchStart', [[p.x, p.y]]);
+    await send('touchEnd', []);
+    await expect(canvas).toHaveAttribute('data-selected', id);
+  });
+});
+
 test('player uses a real video ID, supplies origin/referrer and exposes a working fallback', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('#d-player iframe')).toHaveCount(0);

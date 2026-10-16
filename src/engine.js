@@ -1,6 +1,5 @@
 // The engine: one object wiring catalogue + sea layout + filters + pickers +
-// reactions + navigation suggestions + community charts. Method names mirror the
-// site's endpoints so the mapping is obvious.
+// reactions + navigation suggestions + community charts.
 
 import { layoutSea } from './layout.js';
 import { buildSimilarity } from './mapping/embed.js';
@@ -25,8 +24,8 @@ export {
   mergeCatalogue,
 };
 
-export class ZigZagDiscovery {
-  constructor({ releases, users = [], gems = [], seed = 'zig~zag' } = {}) {
+export class RadioSea {
+  constructor({ releases, users = [], gems = [], seed = 'radio-sea' } = {}) {
     this.releases = releases;
     this.users = users;
     this.gems = gems;
@@ -56,7 +55,7 @@ export class ZigZagDiscovery {
   /** Build an engine directly from raw adapter output (any mix of sources). */
   static fromRaw(rawReleases, options = {}) {
     const { releases } = mergeCatalogue(rawReleases);
-    return new ZigZagDiscovery({ releases, ...options });
+    return new RadioSea({ releases, ...options });
   }
 
   // --- map ---------------------------------------------------------------
@@ -102,7 +101,7 @@ export class ZigZagDiscovery {
     });
   }
 
-  /** GET /v2/releases/by-coordinates?xy_x&xy_y */
+  /** The release placed at a map coordinate, if any. */
   getReleaseByCoordinates({ x, y }) {
     for (const [id, pos] of this.placements) {
       if (pos.x === Math.round(x) && pos.y === Math.round(y)) return this.state.releaseById(id);
@@ -110,7 +109,7 @@ export class ZigZagDiscovery {
     return null;
   }
 
-  /** Coordinates in the site's URL format ("x~y"). */
+  /** Coordinates as an "x~y" string. */
   coordinatesString(releaseId) {
     const pos = this.mapPlacement(releaseId);
     return pos ? `${pos.x}~${pos.y}` : null;
@@ -125,7 +124,7 @@ export class ZigZagDiscovery {
 
   // --- pickers -----------------------------------------------------------
 
-  /** GET /v2/maps/:mapId/releases/related */
+  /** Nearest releases, most similar first. */
   getRelated({ current_release_id, limit = 10, filter } = {}) {
     return pickers.related(this.state, current_release_id, {
       limit,
@@ -134,7 +133,7 @@ export class ZigZagDiscovery {
     });
   }
 
-  /** POST /v2/maps/:mapId/releases/similar */
+  /** One weighted pick among the nearest releases. */
   postSimilar({ current_release_id, filter }, { rand = Math.random, excludeIds = [] } = {}) {
     return pickers.similarPick(this.state, current_release_id, {
       filter,
@@ -144,7 +143,7 @@ export class ZigZagDiscovery {
     });
   }
 
-  /** GET /v2/maps/:mapId/releases/banger */
+  /** One popular pick under the current filters. */
   getBanger({ filter } = {}, { rand = Math.random, excludeIds = [] } = {}) {
     return pickers.bangerPick(this.state, {
       filter,
@@ -154,7 +153,7 @@ export class ZigZagDiscovery {
     });
   }
 
-  /** GET /v2/{resource}/{id}/radio */
+  /** One pick from an artist's, label's or user's pool. */
   getEntityRadio({ resource, id, style, country, gem_only }, { rand = Math.random, excludeIds = [] } = {}) {
     return pickers.radioPick(this.state, {
       resource,
@@ -204,8 +203,7 @@ export class ZigZagDiscovery {
       .map((edge) => {
         const release = this.state.releaseById(edge.toReleaseId);
         const base = this.state.asReleaseTrack(release).release_track;
-        // The suggestion carries the inviter's chosen track, like the site's
-        // attach-a-gem links.
+        // The suggestion carries the inviter's chosen track.
         return {
           ...edge,
           release_track: {
@@ -222,7 +220,7 @@ export class ZigZagDiscovery {
 
   // --- community --------------------------------------------------------
 
-  /** GET /v2/community/track — gemmed tracks, most liked first. */
+  /** Gemmed tracks, most liked first. */
   getCommunityTracks({ order_by = 'MOST_LIKED', limit = 20, offset = 0 } = {}) {
     const likes = new Map();
     for (const gem of this.gems) {

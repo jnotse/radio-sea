@@ -1,12 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { ZigZagDiscovery, DEFAULT_CONDITIONS } from '../src/engine.js';
+import { RadioSea, DEFAULT_CONDITIONS } from '../src/engine.js';
 import { seededRand } from '../src/rng.js';
 import { buildFixture } from '../src/fixture.js';
 
 function makeEngine() {
   const { releases, users, gems } = buildFixture();
-  return new ZigZagDiscovery({ releases, users, gems, seed: 'seed-1' });
+  return new RadioSea({ releases, users, gems, seed: 'seed-1' });
 }
 
 test('coordinates round trip through the map', () => {

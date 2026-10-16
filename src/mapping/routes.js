@@ -1,7 +1,7 @@
 // Trade routes: automatic "from here sail there" edges across islands.
 //
-// Idea: zig-zag's navigation suggestions are written by humans. Here we also
-// generate candidate routes mechanically: for each release, the most similar
+// Navigation suggestions are written by humans. Here we also generate
+// candidate routes mechanically: for each release, the most similar
 // release that lives on a DIFFERENT island. Crossing water to a related sound
 // is exactly the serendipity the sea is for.
 

@@ -1,4 +1,4 @@
-// Filter engine, faithful to zig-zag's buildMusicMapFilterQuery (auth.pretty.js 13630):
+// Filter engine. Supported query fields:
 //
 //   styles_in / styles_in_or / styles_not_in
 //   country_in / country_not_in      (with Discogs-style country alias expansion)
@@ -10,7 +10,7 @@
 //
 // plus the UI-state -> query builder and active-filter counting.
 
-// Subset of the Discogs country aliases zig-zag normalises (auth.pretty.js 13595 area).
+// Common Discogs-style country aliases, normalised to one name.
 export const COUNTRY_ALIASES = {
   UK: 'United Kingdom',
   'Great Britain': 'United Kingdom',

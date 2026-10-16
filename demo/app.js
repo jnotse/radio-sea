@@ -15,6 +15,7 @@
   const state = { cam: { x: 0, y: 0, zoom: 8 }, selected: null, hovered: null,
     trail: [], stations: new Set(DATA.stats.stations.filter((s) => s.tracks > 0).map((s) => s.id)),
     tags: new Set(), query: '', showRoutes: true };
+  const pointers = new Map();
   let pointer = null, animation = null, player = null, playerGeneration = 0, playerTimer;
   let playbackMode = 'idle', volume = 75;
   let playerReady = false, songDuration = 0, scrubbing = false, pendingSeek = null;
@@ -37,8 +38,13 @@
     a.target = '_blank'; a.rel = 'noopener';
     return a;
   }
+  // Sound tags describe the track itself. Show genres are what the station
+  // lists for the whole show, so they are shown apart and never filter as genres.
   function soundTags(r) {
-    return (r.tags ?? []).filter((t) => !/^(show|station):/.test(t));
+    return (r.tags ?? []).filter((t) => !/^(show|station|show-genre):/.test(t));
+  }
+  function showGenres(r) {
+    return (r.tags ?? []).filter((t) => t.startsWith('show-genre:')).map((t) => t.slice('show-genre:'.length));
   }
   function passesFilter(r) {
     return !!r && stationIds(r).some((s) => state.stations.has(s)) &&
@@ -66,6 +72,7 @@
     chip.onclick = () => { toggle(state.tags, tag); refreshFilters(); };
     $('tag-chips').append(chip);
   }
+  if (!tagCounts.size) $('tag-chips').append(node('p', 'No track genres in this snapshot yet.', 'sub'));
   function toggle(set, value) { if (set.has(value)) set.delete(value); else set.add(value); }
   $('search').addEventListener('input', (e) => { state.query = e.target.value.trim().toLowerCase(); refreshFilters(); });
   $('btn-clear').onclick = () => {
@@ -221,22 +228,42 @@
     return best;
   }
   function hideTooltip() { state.hovered = null; $('tooltip').hidden = true; }
+  // Every finger (or the mouse) on the map: one pans, two pinch-zoom around
+  // their midpoint. `pointer` is the press as a whole, so lifting the last
+  // finger after a pinch or drag is never mistaken for a tap.
+  function pinchState() {
+    const [a, b] = [...pointers.values()];
+    return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2, distance: Math.max(1, Math.hypot(a.x - b.x, a.y - b.y)) };
+  }
   canvas.addEventListener('pointerdown', (e) => {
     if (e.button !== 0) return;
     cancelFly(); hideTooltip(); canvas.focus(); canvas.setPointerCapture(e.pointerId);
-    pointer = { id: e.pointerId, startX: e.clientX, startY: e.clientY,
-      x: e.clientX, y: e.clientY, moved: false };
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 1) pointer = { startX: e.clientX, startY: e.clientY, moved: false, pinch: null };
+    else { pointer.moved = true; pointer.pinch = pointers.size === 2 ? pinchState() : null; }
   });
   canvas.addEventListener('pointermove', (e) => {
-    if (pointer?.id === e.pointerId) {
+    const finger = pointers.get(e.pointerId);
+    if (finger) {
+      const last = { ...finger };
+      finger.x = e.clientX; finger.y = e.clientY;
+      if (pointer.pinch) {
+        const next = pinchState(), rect = canvas.getBoundingClientRect();
+        canvas.classList.add('dragging');
+        state.cam.x -= (next.x - pointer.pinch.x) / state.cam.zoom;
+        state.cam.y -= (next.y - pointer.pinch.y) / state.cam.zoom;
+        zoomAt(next.distance / pointer.pinch.distance, next.x - rect.left, next.y - rect.top);
+        pointer.pinch = next; return;
+      }
+      if (pointers.size > 1) return;
       if (Math.hypot(e.clientX - pointer.startX, e.clientY - pointer.startY) > 5) pointer.moved = true;
       if (pointer.moved) {
         canvas.classList.add('dragging');
-        state.cam.x -= (e.clientX - pointer.x) / state.cam.zoom;
-        state.cam.y -= (e.clientY - pointer.y) / state.cam.zoom;
+        state.cam.x -= (e.clientX - last.x) / state.cam.zoom;
+        state.cam.y -= (e.clientY - last.y) / state.cam.zoom;
         draw();
       }
-      pointer.x = e.clientX; pointer.y = e.clientY; return;
+      return;
     }
     const r = tileAt(e); state.hovered = r?.id ?? null;
     $('tooltip').hidden = !r;
@@ -248,15 +275,23 @@
     }
     draw();
   });
-  canvas.addEventListener('pointerup', (e) => {
-    if (!pointer || e.pointerId !== pointer.id) return;
-    const click = !pointer.moved; pointer = null; canvas.classList.remove('dragging');
+  function releasePointer(e) {
+    if (!pointers.delete(e.pointerId)) return false;
     if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
+    pointer.pinch = pointers.size === 2 ? pinchState() : null;
+    if (!pointers.size) canvas.classList.remove('dragging');
+    return true;
+  }
+  canvas.addEventListener('pointerup', (e) => {
+    if (!releasePointer(e) || pointers.size) return;
+    const click = !pointer.moved; pointer = null;
     if (click) { const r = tileAt(e); if (r) select(r.id, true); }
   });
-  for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, () => {
-    pointer = null; canvas.classList.remove('dragging');
+  for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, (e) => {
+    if (releasePointer(e) && !pointers.size) pointer = null;
   });
+  // Older iOS Safari zooms the whole page on pinch unless its gesture events are cancelled.
+  canvas.addEventListener('gesturestart', (e) => e.preventDefault());
   canvas.addEventListener('pointerleave', () => { hideTooltip(); draw(); });
   canvas.addEventListener('wheel', (e) => {
     e.preventDefault(); hideTooltip(); const rect = canvas.getBoundingClientRect();
@@ -482,8 +517,10 @@
     $('d-title').textContent = r.name; $('d-artist').textContent = r.artist;
     $('deck-index').textContent = `${String(releases.indexOf(r) + 1).padStart(2, '0')} / ${releases.length}`;
     const island = islands.get(r.islandId);
-    $('d-meta').replaceChildren(node('span', soundTags(r).join(' · ') || 'No sound tags yet'),
-      node('span', `${island?.name?.trim() ?? 'Uncharted'} · depth ${(r.depth ?? 0).toFixed(2)} · ${r.x}~${r.y}`));
+    const grouping = island?.basis === 'show' ? ' (grouped by show)' : '';
+    $('d-meta').replaceChildren(node('span', soundTags(r).join(' · ') || 'No track genres yet'));
+    if (showGenres(r).length) $('d-meta').append(node('span', `Show tagged: ${showGenres(r).join(' · ')}`));
+    $('d-meta').append(node('span', `${island?.name?.trim() ?? 'Uncharted'}${grouping} · depth ${(r.depth ?? 0).toFixed(2)} · ${r.x}~${r.y}`));
     if (r.year || r.country) $('d-meta').append(node('span', [r.year, r.country].filter(Boolean).join(' · ')));
     if (changed) preparePlayer(r);
     $('d-sources').replaceChildren();

@@ -1,5 +1,5 @@
-// Pickers: the server-side "one call, one pick" endpoints of the real product
-// (related / similar / banger / radio) plus gems. Pure functions over engine state.
+// Pickers: "one call, one pick" helpers (related / similar / banger / radio)
+// plus gems. Pure functions over engine state.
 
 import { releaseMatchesFilters } from './filters.js';
 import { similarity as layoutSimilarity } from './layout.js';
@@ -17,7 +17,7 @@ export function rankedRelated(state, releaseId, { filter, reactionRegistry = nul
     .sort((a, b) => b.score - a.score || a.release.id.localeCompare(b.release.id));
 }
 
-/** GET /v2/maps/:mapId/releases/related */
+/** Nearest releases, most similar first. */
 export function related(state, releaseId, { limit = 10, filter, reactionRegistry = null } = {}) {
   return rankedRelated(state, releaseId, { filter, reactionRegistry })
     .slice(0, limit)
@@ -25,7 +25,7 @@ export function related(state, releaseId, { limit = 10, filter, reactionRegistry
 }
 
 /**
- * POST /v2/maps/:mapId/releases/similar — one weighted pick among the nearest
+ * Similar: one weighted pick among the nearest
  * neighbourhood that passes the filters. Weight falls off with dissimilarity.
  */
 export function similarPick(state, releaseId, { filter, reactionRegistry = null, rand = Math.random, excludeIds = [] } = {}) {
@@ -41,7 +41,7 @@ export function similarPick(state, releaseId, { filter, reactionRegistry = null,
 }
 
 /**
- * GET /v2/maps/:mapId/releases/banger — a popular pick under the current
+ * Banger: a popular pick under the current
  * filters. Weight = 1 + gems + reaction votes, with a little age bonus.
  */
 export function bangerPick(state, { filter, reactionRegistry = null, rand = Math.random, excludeIds = [] } = {}) {
@@ -60,7 +60,7 @@ export function bangerPick(state, { filter, reactionRegistry = null, rand = Math
 }
 
 /**
- * GET /v2/{resource}/{id}/radio — one pick from an entity's pool
+ * Radio: one pick from an entity's pool
  * (artists | labels | sellers | users), optionally narrowed by style / country
  * and `gem_only`.
  */
