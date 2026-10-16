@@ -1,0 +1,2686 @@
+{
+ "dump": null,
+ "scannedAt": "2026-10-16T21:44:44.122Z",
+ "releasesScanned": 19492392,
+ "songs": {
+  "[\"uranium club\",\"god's chest\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Punk"
+   ],
+   "year": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"larry heard\",\"micro-gravity\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Deep House",
+    "Downtempo"
+   ],
+   "year": 1996,
+   "source": "track",
+   "releases": [
+    13131
+   ]
+  },
+  "[\"bedroom\",\"in my head\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Pop"
+   ],
+   "styles": [
+    "Indie Pop",
+    "Lo-Fi",
+    "Shoegaze"
+   ],
+   "year": 2013,
+   "source": "track",
+   "releases": [
+    13961697
+   ]
+  },
+  "[\"marcello napoletano\",\"this moment must be the movement\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "House",
+    "Techno"
+   ],
+   "year": 2010,
+   "source": "track",
+   "releases": [
+    2562117
+   ]
+  },
+  "[\"preoccupations\",\"espionage\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Indie Rock"
+   ],
+   "year": 2018,
+   "source": "track",
+   "releases": [
+    11735198
+   ]
+  },
+  "[\"larry heard & mr. white\",\"virtual emotion (dub)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "House"
+   ],
+   "year": 2017,
+   "source": "video",
+   "releases": [
+    10799078
+   ]
+  },
+  "[\"duds\",\"no remark\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "No Wave",
+    "Post-Punk",
+    "Art Rock"
+   ],
+   "year": 2016,
+   "source": "track",
+   "releases": [
+    9358515,
+    10841911
+   ]
+  },
+  "[\"larry heard\",\"praise (fingers tribal mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "House"
+   ],
+   "year": 2001,
+   "source": "track",
+   "releases": [
+    13734,
+    30283,
+    36672757
+   ]
+  },
+  "[\"omni\",\"southbound station\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Indie Rock",
+    "Post-Punk"
+   ],
+   "year": 2017,
+   "source": "track",
+   "releases": [
+    10885972,
+    11561193
+   ]
+  },
+  "[\"morning kids\",\"free lovin' (original mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "House",
+    "Abstract",
+    "Deep House"
+   ],
+   "year": 1996,
+   "source": "track",
+   "releases": [
+    7317,
+    202431
+   ]
+  },
+  "[\"scottibrains\",\"sustained threat (full version)\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Krautrock"
+   ],
+   "year": 2018,
+   "source": "track",
+   "releases": [
+    11890327
+   ]
+  },
+  "[\"strong souls\",\"sensual (let's work mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "House"
+   ],
+   "year": 2016,
+   "source": "track",
+   "releases": [
+    8619737
+   ]
+  },
+  "[\"the rurals\",\"so alive\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House"
+   ],
+   "year": 2000,
+   "source": "track",
+   "releases": [
+    10560,
+    38170
+   ]
+  },
+  "[\"exek\",\"a hedonist\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "Post-Punk",
+    "Dub",
+    "Avantgarde"
+   ],
+   "year": 2014,
+   "source": "track",
+   "releases": [
+    7661531,
+    9116352,
+    11433222,
+    14463759,
+    22247473
+   ]
+  },
+  "[\"paperclip people\",\"4 my peepz (dubfire rework)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Techno",
+    "Deep House",
+    "Experimental"
+   ],
+   "year": 1998,
+   "source": "track",
+   "releases": [
+    4177,
+    3003734
+   ]
+  },
+  "[\"paul ritch\",\"walk the line\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Minimal",
+    "Techno"
+   ],
+   "year": 2008,
+   "source": "track",
+   "releases": [
+    1547839
+   ]
+  },
+  "[\"vestron vulture\",\"phantom\"]": {
+   "genres": [
+    "Electronic",
+    "Rock"
+   ],
+   "styles": [
+    "Darkwave",
+    "Post-Punk",
+    "Synth-pop"
+   ],
+   "year": 2017,
+   "source": "track",
+   "releases": [
+    15836403,
+    32786967
+   ]
+  },
+  "[\"public image ltd.\",\"religion ii\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Post-Punk",
+    "Disco",
+    "Dub"
+   ],
+   "year": 1979,
+   "source": "track",
+   "releases": [
+    652274,
+    1211322,
+    4738941
+   ]
+  },
+  "[\"bours?\",\"blind pick\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Techno"
+   ],
+   "year": 2026,
+   "source": "track",
+   "releases": [
+    36772543
+   ]
+  },
+  "[\"protomartyr\",\"the chuckler\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Post-Punk"
+   ],
+   "year": 2017,
+   "source": "track",
+   "releases": [
+    10900549
+   ]
+  },
+  "[\"artonal\",\"when i feel like this\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"french police\",\"vampiro\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Coldwave",
+    "New Wave",
+    "Post-Punk"
+   ],
+   "year": 2026,
+   "source": "track",
+   "releases": [
+    36906231
+   ]
+  },
+  "[\"khas\",\"run silent\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"uranium club\",\"operation pt.ii\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Punk"
+   ],
+   "year": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"disguised\",\"korrupt\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"crack cloud\",\"tunnel vision\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "Art Rock",
+    "No Wave",
+    "Post-Punk"
+   ],
+   "year": 2020,
+   "source": "track",
+   "releases": [
+    15297813,
+    16093993,
+    28501771
+   ]
+  },
+  "[\"isaiah\",\"disharmonized\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"cc:disco!\",\"chez moi (waiting for you) [feat. confidence man] [sally c remix]\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "House",
+    "Nu-Disco"
+   ],
+   "year": 2023,
+   "source": "track",
+   "releases": [
+    27766092
+   ]
+  },
+  "[\"eyedress\",\"jealous\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Indie Pop",
+    "Dream Pop",
+    "Indie Rock"
+   ],
+   "year": 2020,
+   "source": "track",
+   "releases": [
+    15802626,
+    16059862
+   ]
+  },
+  "[\"albert marcœur\",\"deux lions au soleil\"]": {
+   "genres": [
+    "Electronic",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Abstract",
+    "Experimental",
+    "Soundtrack"
+   ],
+   "year": 1982,
+   "source": "track",
+   "releases": [
+    368351
+   ]
+  },
+  "[\"sonique\",\"it feels so good (the conductor & the cowboy amnesia mix)\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Trance",
+    "House",
+    "Breakbeat"
+   ],
+   "year": 1999,
+   "source": "track",
+   "releases": [
+    47839,
+    70994,
+    546592,
+    1718774,
+    2572051
+   ]
+  },
+  "[\"spear\",\"the first breath after death\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Experimental",
+    "Field Recording"
+   ],
+   "year": 1997,
+   "source": "track",
+   "releases": [
+    358293
+   ]
+  },
+  "[\"doctor jeep\",\"dia de los muertos\"]": {
+   "genres": [
+    "Electronic",
+    "Hip Hop"
+   ],
+   "styles": [
+    "Drum n Bass",
+    "Bass Music",
+    "Breakbeat"
+   ],
+   "year": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"roberto donnini\",\"t 1 a\"]": {
+   "genres": [
+    "Classical",
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Experimental",
+    "Minimal"
+   ],
+   "year": 1980,
+   "source": "track",
+   "releases": [
+    3060509
+   ]
+  },
+  "[\"mila necchella\",\"aetherfall\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"ігор цимбровський\",\"троянди поету\"]": {
+   "genres": [
+    "Classical",
+    "Electronic"
+   ],
+   "styles": [
+    "Avantgarde",
+    "Contemporary",
+    "Experimental"
+   ],
+   "year": 1996,
+   "source": "video",
+   "releases": [
+    6951668,
+    8773170
+   ]
+  },
+  "[\"blanka (es)\",\"say it with me\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"kara okay\",\"let me lose my mind\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Hard House",
+    "House",
+    "Trance"
+   ],
+   "year": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"unknown artist\",\"untitled\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "Dub Techno",
+    "Tech House"
+   ],
+   "year": 2019,
+   "source": "video",
+   "releases": [
+    13946206
+   ]
+  },
+  "[\"fabrizio lapiana\",\"freckles (beatless)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Techno",
+    "Ambient",
+    "Minimal"
+   ],
+   "year": 2012,
+   "source": "track",
+   "releases": [
+    3783303,
+    11688071
+   ]
+  },
+  "[\"richard davis\",\"methane sea-aftermath\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 1978,
+   "source": "track",
+   "releases": [
+    877252
+   ]
+  },
+  "[\"point g\",\"indian (revamp)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "House"
+   ],
+   "year": 2013,
+   "source": "track",
+   "releases": [
+    4506395,
+    8236610,
+    11768758
+   ]
+  },
+  "[\"claude young\",\"welcome\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Techno"
+   ],
+   "year": 1999,
+   "source": "track",
+   "releases": [
+    15955
+   ]
+  },
+  "[\"the royal we\",\"party guilt (matt styles club mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Minimal",
+    "Tribal House"
+   ],
+   "year": 2009,
+   "source": "track",
+   "releases": [
+    1955851
+   ]
+  },
+  "[\"brìghde chaimbeul\",\"ruidhle mo nighean donn\"]": {
+   "genres": [
+    "Folk, World, & Country"
+   ],
+   "styles": [],
+   "year": 2019,
+   "source": "track",
+   "releases": [
+    13453553
+   ]
+  },
+  "[\"irene bianco\",\"hvid//\"]": {
+   "genres": [
+    "Electronic",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Abstract"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    32108319
+   ]
+  },
+  "[\"ocean moon\",\"angel falls\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "New Age"
+   ],
+   "year": 2025,
+   "source": "track",
+   "releases": [
+    32992680
+   ]
+  },
+  "[\"lazar berman, liszt\",\"le mal du pays\"]": {
+   "genres": [
+    "Classical",
+    "Non-Music"
+   ],
+   "styles": [
+    "Romantic",
+    "Piano",
+    "Solo"
+   ],
+   "year": 1966,
+   "source": "track",
+   "releases": [
+    1228443,
+    3845650,
+    3981919,
+    6970022,
+    7627771
+   ]
+  },
+  "[\"vox populi!\",\"trois gouttes de sang\"]": {
+   "genres": [
+    "Electronic",
+    "Rock"
+   ],
+   "styles": [
+    "Abstract",
+    "Ambient",
+    "Avantgarde"
+   ],
+   "year": 1985,
+   "source": "track",
+   "releases": [
+    315061,
+    6365547
+   ]
+  },
+  "[\"janice edwards\",\"time for me\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Soul"
+   ],
+   "year": 1991,
+   "source": "track",
+   "releases": [
+    1654137
+   ]
+  },
+  "[\"megiapa\",\"black gold of the sun\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Contemporary R&B",
+    "Neo Soul"
+   ],
+   "year": 2026,
+   "source": "track",
+   "releases": [
+    38464794
+   ]
+  },
+  "[\"the diablos, nolan strong\",\"the wind\"]": {
+   "genres": [
+    "Rock",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues",
+    "Rock & Roll"
+   ],
+   "year": 1954,
+   "source": "track",
+   "releases": [
+    1726573,
+    3238869,
+    3379949,
+    4204414,
+    5446039
+   ]
+  },
+  "[\"chico hamilton\",\"gengis\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Jazz"
+   ],
+   "styles": [
+    "Post Bop",
+    "Soul-Jazz"
+   ],
+   "year": 1974,
+   "source": "track",
+   "releases": [
+    1242802
+   ]
+  },
+  "[\"northworks\",\"out\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Dub Techno"
+   ],
+   "year": 2010,
+   "source": "track",
+   "releases": [
+    2272225
+   ]
+  },
+  "[\"detente\",\"1994\"]": {
+   "genres": [
+    "Electronic",
+    "Rock"
+   ],
+   "styles": [
+    "Ethereal",
+    "Indie Rock"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    33627753
+   ]
+  },
+  "[\"schumann, robert, backhaus, wilhelm, the vienna philharmonic orchestra, wand, günter\",\"vogel als prophet\"]": {
+   "genres": [
+    "Classical"
+   ],
+   "styles": [
+    "Romantic",
+    "Classical",
+    "Piano"
+   ],
+   "year": 1955,
+   "source": "track",
+   "releases": [
+    1746907,
+    2383268,
+    5365535,
+    5980586,
+    7090161
+   ]
+  },
+  "[\"swans\",\"in my garden\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "Experimental",
+    "Industrial",
+    "Ambient"
+   ],
+   "year": 1987,
+   "source": "track",
+   "releases": [
+    305775,
+    350246,
+    16228641
+   ]
+  },
+  "[\"ink spots\",\"it's funny to everyone but me\"]": {
+   "genres": [
+    "Pop",
+    "Jazz"
+   ],
+   "styles": [
+    "Vocal"
+   ],
+   "year": 1939,
+   "source": "track",
+   "releases": [
+    1642456,
+    1995084,
+    4335130,
+    4491420,
+    4689857
+   ]
+  },
+  "[\"death\",\"the change\"]": {
+   "genres": [
+    "Rock",
+    "Blues"
+   ],
+   "styles": [
+    "Punk",
+    "Hard Rock",
+    "Garage Rock"
+   ],
+   "year": 2011,
+   "source": "track",
+   "releases": [
+    2714645,
+    5819476,
+    6916805
+   ]
+  },
+  "[\"copshow\",\"beautiful witness\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Downtempo",
+    "Future Jazz"
+   ],
+   "year": 2002,
+   "source": "track",
+   "releases": [
+    81339
+   ]
+  },
+  "[\"молчат дома, molchat doma\",\"на дне\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"victoria mingot\",\"iterniti\"]": {
+   "genres": [
+    "Electronic",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Acoustic",
+    "Ambient",
+    "Drone"
+   ],
+   "year": 2026,
+   "source": "track",
+   "releases": [
+    37768692
+   ]
+  },
+  "[\"carme lópez\",\"epilogue: inflorescencia\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Drone",
+    "Experimental",
+    "Minimal"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    30143954
+   ]
+  },
+  "[\"beethoven piano trio no 7 archduke\",\"i (rubinstein, heifetz, feuermann)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"eddie miller and his band\",\"ghost town\"]": {
+   "genres": [
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Country"
+   ],
+   "year": 1960,
+   "source": "track",
+   "releases": [
+    6414436
+   ]
+  },
+  "[\"bluesette\",\"mood for love\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Pop"
+   ],
+   "styles": [
+    "J-pop",
+    "RnB/Swing"
+   ],
+   "year": 1996,
+   "source": "track",
+   "releases": [
+    20155879
+   ]
+  },
+  "[\"retrocity\",\"africa\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"the spaniels\",\"three little words\"]": {
+   "genres": [
+    "Pop",
+    "Rock"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues",
+    "Vocal"
+   ],
+   "year": 1986,
+   "source": "track",
+   "releases": [
+    2100991,
+    6298793,
+    8110999,
+    25098754,
+    26892269
+   ]
+  },
+  "[\"death\",\"keep on knocking\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Punk",
+    "Garage Rock"
+   ],
+   "year": 2009,
+   "source": "track",
+   "releases": [
+    1708703,
+    3068363,
+    5819476
+   ]
+  },
+  "[\"estelle montenegro\",\"lost inside\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Deep House",
+    "Downtempo"
+   ],
+   "year": 2000,
+   "source": "track",
+   "releases": [
+    22393
+   ]
+  },
+  "[\"brighde chaimbeul\",\"duan\"]": {
+   "genres": [
+    "Folk, World, & Country"
+   ],
+   "styles": [],
+   "year": 2025,
+   "source": "video",
+   "releases": [
+    34438771
+   ]
+  },
+  "[\"mira calix\",\"ms. meteo\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Abstract",
+    "Ambient",
+    "Experimental"
+   ],
+   "year": 1998,
+   "source": "track",
+   "releases": [
+    3213,
+    3226
+   ]
+  },
+  "[\"los espiritus\",\"alto valle\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Indie Rock",
+    "Krautrock",
+    "Psychedelic Rock"
+   ],
+   "year": 2015,
+   "source": "track",
+   "releases": [
+    8902827
+   ]
+  },
+  "[\"fukutomi yukihiro\",\"50 ways\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "Downtempo",
+    "Jazzdance"
+   ],
+   "year": 1995,
+   "source": "track",
+   "releases": [
+    255347
+   ]
+  },
+  "[\"cheeseslider\",\"sweatmajor\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Rock"
+   ],
+   "styles": [
+    "Country Rock",
+    "Funk",
+    "Blues Rock"
+   ],
+   "year": 1996,
+   "source": "track",
+   "releases": [
+    1407433,
+    1407440
+   ]
+  },
+  "[\"the orioles\",\"it's too soon to know\"]": {
+   "genres": [
+    "Rock",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues",
+    "Soul"
+   ],
+   "year": 1954,
+   "source": "track",
+   "releases": [
+    1643150,
+    3057658,
+    3957697,
+    5444504,
+    6262613
+   ]
+  },
+  "[\"sasho uzun\",\"da rhythm\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "House",
+    "Deep House",
+    "Tech House"
+   ],
+   "year": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"alice swoboda\",\"potter's field\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Blues"
+   ],
+   "styles": [
+    "Funk",
+    "Soul"
+   ],
+   "year": null,
+   "source": "track",
+   "releases": [
+    1785706,
+    7785691
+   ]
+  },
+  "[\"2000 and one\",\"sunk ice\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Downtempo",
+    "Electro",
+    "IDM"
+   ],
+   "year": 1995,
+   "source": "track",
+   "releases": [
+    36891
+   ]
+  },
+  "[\"nagamatzu\",\"faith\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Darkwave",
+    "Electro",
+    "Synth-pop"
+   ],
+   "year": 1983,
+   "source": "track",
+   "releases": [
+    2484750,
+    6224396
+   ]
+  },
+  "[\"rider shafique\",\"when will we learn\"]": {
+   "genres": [
+    "Reggae"
+   ],
+   "styles": [
+    "Dancehall"
+   ],
+   "year": 2021,
+   "source": "track",
+   "releases": [
+    18908317
+   ]
+  },
+  "[\"michele mercure\",\"time piece\"]": {
+   "genres": [
+    "Electronic",
+    "Stage & Screen"
+   ],
+   "styles": [
+    "Electro",
+    "Leftfield",
+    "Minimal"
+   ],
+   "year": 2018,
+   "source": "track",
+   "releases": [
+    12793349
+   ]
+  },
+  "[\"private agenda, coral sea\",\"bounty (coral sea mix)\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Downtempo",
+    "Ambient"
+   ],
+   "year": 2019,
+   "source": "track",
+   "releases": [
+    13815695,
+    23560160
+   ]
+  },
+  "[\"schubert, budapest philharmonic orchestra, janos kovacs\",\"rosamunde\"]": {
+   "genres": [
+    "Classical"
+   ],
+   "styles": [
+    "Romantic",
+    "Classical",
+    "Baroque"
+   ],
+   "year": 1941,
+   "source": "track",
+   "releases": [
+    728386,
+    1006561,
+    3405026,
+    4666076,
+    5323327
+   ]
+  },
+  "[\"inrain\",\"grow\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Downtempo",
+    "Ethereal",
+    "Experimental"
+   ],
+   "year": 1991,
+   "source": "track",
+   "releases": [
+    417839
+   ]
+  },
+  "[\"rah band\",\"sam the samba man\"]": {
+   "genres": [
+    "Electronic",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Synth-pop",
+    "Electro",
+    "Disco"
+   ],
+   "year": 1983,
+   "source": "track",
+   "releases": [
+    118627,
+    165882,
+    322615,
+    441319,
+    459970
+   ]
+  },
+  "[\"zdar\",\"how do u see me now\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Electro",
+    "House",
+    "Tech House"
+   ],
+   "year": 2005,
+   "source": "track",
+   "releases": [
+    429408
+   ]
+  },
+  "[\"ronnie and the hi-lites\",\"i wish that we were married\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Twist"
+   ],
+   "year": 1968,
+   "source": "track",
+   "releases": [
+    1120412,
+    2122661
+   ]
+  },
+  "[\"traumprinz\",\"im rausch der tiefe\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Deep House",
+    "Dub Techno"
+   ],
+   "year": 2026,
+   "source": "track",
+   "releases": [
+    37372980
+   ]
+  },
+  "[\"ted lucas\",\"plain and sane and simple melody\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Rock"
+   ],
+   "styles": [
+    "Acoustic",
+    "Folk Rock",
+    "Soft Rock"
+   ],
+   "year": 1975,
+   "source": "track",
+   "releases": [
+    2507304
+   ]
+  },
+  "[\"a rocket in dub\",\"rocket no. 2\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "Downtempo",
+    "Dub"
+   ],
+   "year": 2001,
+   "source": "track",
+   "releases": [
+    127603,
+    174886
+   ]
+  },
+  "[\"alvin curran\",\"canti e vedute dal giardino magnetico\"]": {
+   "genres": [
+    "Electronic",
+    "Classical"
+   ],
+   "styles": [
+    "Experimental",
+    "Contemporary",
+    "Free Improvisation"
+   ],
+   "year": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"throbbing gristle\",\"walkabout\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Industrial",
+    "Abstract",
+    "Experimental"
+   ],
+   "year": 1982,
+   "source": "track",
+   "releases": [
+    47339,
+    250850,
+    328127,
+    1406631,
+    2973362
+   ]
+  },
+  "[\"radu lupu, franz schubert\",\"piano sonata in a minor, d 845\"]": {
+   "genres": [
+    "Classical",
+    "Non-Music"
+   ],
+   "styles": [
+    "Romantic",
+    "Sonata",
+    "Piano"
+   ],
+   "year": 1974,
+   "source": "track",
+   "releases": [
+    5289846,
+    5993209,
+    9469882,
+    9662633,
+    10770430
+   ]
+  },
+  "[\"solar\",\"your secret\"]": {
+   "genres": [
+    "Electronic",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Ambient",
+    "Experimental",
+    "New Wave"
+   ],
+   "year": null,
+   "source": "track",
+   "releases": [
+    37508154
+   ]
+  },
+  "[\"mayumi kojima\",\"ai no mirju (mirage of love)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"obost\",\"don’t want to be alone (richard sen remix)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"eddy bailes & the cadillacs\",\"if this is sin\"]": {
+   "genres": [
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Country"
+   ],
+   "year": 1963,
+   "source": "track",
+   "releases": [
+    16280647
+   ]
+  },
+  "[\"ofege\",\"it's not easy\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Rock"
+   ],
+   "styles": [
+    "Funk",
+    "Psychedelic Rock"
+   ],
+   "year": 1973,
+   "source": "track",
+   "releases": [
+    1312733
+   ]
+  },
+  "[\"rhythm maker\",\"herzog\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Minimal",
+    "Techno"
+   ],
+   "year": null,
+   "source": "track",
+   "releases": [
+    82938
+   ]
+  },
+  "[\"enno velthuys\",\"7\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 1984,
+   "source": "video",
+   "releases": [
+    1464862
+   ]
+  },
+  "[\"clipse, pharrell williams\",\"mr. me too (instrumental)\"]": {
+   "genres": [
+    "Hip Hop",
+    "Electronic"
+   ],
+   "styles": [
+    "Gangsta",
+    "Dubstep",
+    "Pop Rap"
+   ],
+   "year": 2006,
+   "source": "track",
+   "releases": [
+    699489,
+    845159,
+    1515388,
+    2194541,
+    10830237
+   ]
+  },
+  "[\"craig leon\",\"the earliest trace\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Choral",
+    "Contemporary"
+   ],
+   "year": 2019,
+   "source": "track",
+   "releases": [
+    13575062
+   ]
+  },
+  "[\"tal, triola, www.jz-arkh.co.uk, donnacha costello, dettinger, novisad, ulf lohmann, markus guentner, all\",\"java\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": null,
+   "source": "track",
+   "releases": [
+    19076
+   ]
+  },
+  "[\"karajan, wiener philharmoniker, mozart, beethoven, schubert, brahms, r. strauss\",\"der rosenkavalier\"]": {
+   "genres": [
+    "Classical",
+    "Stage & Screen"
+   ],
+   "styles": [
+    "Opera",
+    "Romantic",
+    "Classical"
+   ],
+   "year": 1934,
+   "source": "track",
+   "releases": [
+    2606866,
+    2606873,
+    5399971,
+    5643182,
+    5662805
+   ]
+  },
+  "[\"annabel lamb\",\"no cure\"]": {
+   "genres": [
+    "Electronic",
+    "Rock"
+   ],
+   "styles": [
+    "Synth-pop",
+    "New Wave",
+    "Pop Rock"
+   ],
+   "year": 1983,
+   "source": "track",
+   "releases": [
+    446941,
+    1036576,
+    1555020,
+    1603869
+   ]
+  },
+  "[\"chris gray\",\"for being you (version)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House"
+   ],
+   "year": 2001,
+   "source": "track",
+   "releases": [
+    9173
+   ]
+  },
+  "[\"glok, timothy clerkin\",\"the witching hour (richard sen remix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Techno",
+    "Balearic"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    32435109,
+    36671512
+   ]
+  },
+  "[\"the imperials\",\"tears on my pillow\"]": {
+   "genres": [
+    "Rock",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues"
+   ],
+   "year": 1958,
+   "source": "track",
+   "releases": [
+    4795201,
+    35618404
+   ]
+  },
+  "[\"rob pearson, robin ball\",\"the right vibes (original mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Tech House",
+    "House"
+   ],
+   "year": 2008,
+   "source": "track",
+   "releases": [
+    1411344,
+    35158036
+   ]
+  },
+  "[\"lorez alexandria\",\"i'm wishin'\"]": {
+   "genres": [
+    "Jazz",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Soul-Jazz",
+    "Vocal"
+   ],
+   "year": 1968,
+   "source": "track",
+   "releases": [
+    3131950,
+    3156675,
+    3377468
+   ]
+  },
+  "[\"ilk\",\"qwerks\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breaks",
+    "Tech House",
+    "Techno"
+   ],
+   "year": 2003,
+   "source": "track",
+   "releases": [
+    264045
+   ]
+  },
+  "[\"dmx, ja rule\",\"prayer iii\"]": {
+   "genres": [
+    "Hip Hop"
+   ],
+   "styles": [
+    "Gangsta",
+    "Hardcore Hip-Hop",
+    "Pop Rap"
+   ],
+   "year": 1999,
+   "source": "track",
+   "releases": [
+    226712,
+    1097735,
+    3648016,
+    8548879,
+    9633489
+   ]
+  },
+  "[\"slowdive, grouper\",\"kisses (sky ii)\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Dream Pop",
+    "Shoegaze",
+    "Alternative Rock"
+   ],
+   "year": 2023,
+   "source": "track",
+   "releases": [
+    27442044,
+    27733215,
+    27955854,
+    28085920
+   ]
+  },
+  "[\"chihei hatakeyama\",\"frozen flowers\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Drone",
+    "Experimental"
+   ],
+   "year": 2025,
+   "source": "track",
+   "releases": [
+    33004785
+   ]
+  },
+  "[\"bruno walter, beethoven\",\"symphony no. 7 in a major, op. 92\"]": {
+   "genres": [
+    "Classical",
+    "Non-Music"
+   ],
+   "styles": [
+    "Classical",
+    "Romantic",
+    "Symphony"
+   ],
+   "year": 1929,
+   "source": "track",
+   "releases": [
+    894643,
+    1012895,
+    1092092,
+    1274928,
+    1439376
+   ]
+  },
+  "[\"rinascita\",\"enigma eden\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"all access\",\"tell me what you want\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Contemporary R&B",
+    "Soul"
+   ],
+   "year": 1989,
+   "source": "track",
+   "releases": [
+    6314267
+   ]
+  },
+  "[\"rob pearson & robin ball\",\"the right vibe (radio edit)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"interloper\",\"suck'n'dub\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breakbeat"
+   ],
+   "year": 2001,
+   "source": "track",
+   "releases": [
+    20910
+   ]
+  },
+  "[\"los thuthanaka\",\"salay “titi ch’iri siqititi”\"]": {
+   "genres": [
+    "Latin"
+   ],
+   "styles": [],
+   "year": 2025,
+   "source": "track",
+   "releases": [
+    33599760
+   ]
+  },
+  "[\"pat’s soundhouse\",\"last sunrise\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"mark templeton\",\"lily of the valley\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    30937945
+   ]
+  },
+  "[\"mozart, strauss, cristina gómez godoy, west-eastern divan orchestra, daniel barenboim\",\"oboe concerto in d major, trv 292\"]": {
+   "genres": [
+    "Classical"
+   ],
+   "styles": [
+    "Romantic",
+    "Classical",
+    "Concerto"
+   ],
+   "year": 2014,
+   "source": "track",
+   "releases": [
+    7662963,
+    21203437
+   ]
+  },
+  "[\"he said\",\"pump\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Synth-pop",
+    "Ballad",
+    "Darkwave"
+   ],
+   "year": 1986,
+   "source": "track",
+   "releases": [
+    167711,
+    183143
+   ]
+  },
+  "[\"will king\",\"can we talk\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Disco",
+    "Soul"
+   ],
+   "year": 1985,
+   "source": "track",
+   "releases": [
+    1666621
+   ]
+  },
+  "[\"the castaways\",\"sam\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Garage Rock",
+    "Pop Rock"
+   ],
+   "year": 1965,
+   "source": "track",
+   "releases": [
+    1151802,
+    3787332,
+    4108237,
+    34629340,
+    36918192
+   ]
+  },
+  "[\"dav (croatia)\",\"headspin (original mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "Tech House"
+   ],
+   "year": 2005,
+   "source": "video",
+   "releases": [
+    503529
+   ]
+  },
+  "[\"mccoy tyner\",\"my favorite things\"]": {
+   "genres": [
+    "Jazz"
+   ],
+   "styles": [
+    "Post Bop",
+    "Hard Bop",
+    "Modal"
+   ],
+   "year": 1988,
+   "source": "track",
+   "releases": [
+    1042283,
+    4336960,
+    7609374
+   ]
+  },
+  "[\"xterea\",\"i'll call you later\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Abstract"
+   ],
+   "year": 2026,
+   "source": "track",
+   "releases": [
+    36499789
+   ]
+  },
+  "[\"andrea taeggi\",\"cuttleburrs\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dub Techno",
+    "Experimental",
+    "Leftfield"
+   ],
+   "year": 2020,
+   "source": "track",
+   "releases": [
+    14992503
+   ]
+  },
+  "[\"green-house\",\"coquina\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 2023,
+   "source": "track",
+   "releases": [
+    28712626
+   ]
+  },
+  "[\"mendelssohn, the cleveland quartet\",\"octet in e-flat major, op. 20\"]": {
+   "genres": [
+    "Classical"
+   ],
+   "styles": [
+    "Romantic",
+    "Chamber Music",
+    "String Ensemble"
+   ],
+   "year": 1960,
+   "source": "track",
+   "releases": [
+    1913876,
+    2605681,
+    4430383,
+    5051742,
+    6388189
+   ]
+  },
+  "[\"el perro del mar\",\"walk on by\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Synth-pop",
+    "Deep House",
+    "Indie Pop"
+   ],
+   "year": 2012,
+   "source": "track",
+   "releases": [
+    3962942,
+    3990564,
+    4027427
+   ]
+  },
+  "[\"a man called adam\",\"barefoot in the head (radio edit)\"]": {
+   "genres": [
+    "Electronic",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Downtempo",
+    "House",
+    "Ambient"
+   ],
+   "year": 1990,
+   "source": "track",
+   "releases": [
+    9023,
+    153102,
+    261136,
+    6004347,
+    16689087
+   ]
+  },
+  "[\"maurice williams & the zodiacs\",\"stay\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Rock"
+   ],
+   "styles": [
+    "Rhythm & Blues",
+    "Doo Wop",
+    "Soul"
+   ],
+   "year": 1960,
+   "source": "track",
+   "releases": [
+    1026718,
+    1701699,
+    1836214,
+    2555100,
+    2988747
+   ]
+  },
+  "[\"missy zeze & presslaboys\",\"e.f.x (european fusion x-perience) (electro monkey mix)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"the diddys\",\"intergalactic love song\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Jazz"
+   ],
+   "styles": [
+    "Jazz-Funk",
+    "Soul",
+    "Disco"
+   ],
+   "year": 1977,
+   "source": "track",
+   "releases": [
+    2702413,
+    8823395
+   ]
+  },
+  "[\"gaia tones\",\"deep\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dub",
+    "Experimental",
+    "Tribal"
+   ],
+   "year": 2023,
+   "source": "track",
+   "releases": [
+    27347160
+   ]
+  },
+  "[\"t.i., chris brown\",\"get back up\"]": {
+   "genres": [
+    "Hip Hop"
+   ],
+   "styles": [
+    "Gangsta",
+    "Pop Rap"
+   ],
+   "year": 2010,
+   "source": "track",
+   "releases": [
+    2700436,
+    2799831,
+    3151192,
+    14088183
+   ]
+  },
+  "[\"tomaga\",\"arpeggio drum challenge\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Abstract",
+    "Ambient",
+    "Experimental"
+   ],
+   "year": 2018,
+   "source": "track",
+   "releases": [
+    11867916
+   ]
+  },
+  "[\"leoš janáček, wiener philharmoniker, sir charles mackerras\",\"sinfonietta\"]": {
+   "genres": [
+    "Classical"
+   ],
+   "styles": [
+    "Modern",
+    "Romantic",
+    "Orchestra"
+   ],
+   "year": 1947,
+   "source": "track",
+   "releases": [
+    1171679,
+    1230740,
+    1463145,
+    1585374,
+    1769550
+   ]
+  },
+  "[\"7th plain\",\"untitled a4\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Ambient",
+    "IDM",
+    "Leftfield"
+   ],
+   "year": 1996,
+   "source": "video",
+   "releases": [
+    2568897
+   ]
+  },
+  "[\"theo parrish\",\"how i feel\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House"
+   ],
+   "year": 2000,
+   "source": "track",
+   "releases": [
+    2910
+   ]
+  },
+  "[\"bernadette carroll\",\"laughing on the outside\"]": {
+   "genres": [
+    "Pop",
+    "Rock"
+   ],
+   "styles": [],
+   "year": 1962,
+   "source": "track",
+   "releases": [
+    9010258,
+    11916263,
+    11917176
+   ]
+  },
+  "[\"the brothers & sisters\",\"all along the watchtower\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Jazz"
+   ],
+   "styles": [
+    "Gospel"
+   ],
+   "year": 1969,
+   "source": "track",
+   "releases": [
+    2323614,
+    11699289
+   ]
+  },
+  "[\"bonde do role\",\"divine gosa\"]": {
+   "genres": [
+    "Electronic",
+    "Hip Hop"
+   ],
+   "styles": [
+    "Electro",
+    "Breakbeat",
+    "Favela Funk"
+   ],
+   "year": 2007,
+   "source": "track",
+   "releases": [
+    988121,
+    5264984
+   ]
+  },
+  "[\"band ane\",\"undoubtedly\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Drum n Bass",
+    "IDM"
+   ],
+   "year": 2006,
+   "source": "track",
+   "releases": [
+    803871
+   ]
+  },
+  "[\"pariah\",\"seed bank\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 2018,
+   "source": "track",
+   "releases": [
+    12246739
+   ]
+  },
+  "[\"mozart, neville marriner, academy of st. martin-in-the-fields\",\"don giovanni, k. 527\"]": {
+   "genres": [
+    "Classical",
+    "Children's"
+   ],
+   "styles": [
+    "Classical",
+    "Opera",
+    "Orchestra"
+   ],
+   "year": 1951,
+   "source": "track",
+   "releases": [
+    1787179,
+    2058092,
+    3002344,
+    3038581,
+    3290383
+   ]
+  },
+  "[\"judy nylon, crucial\",\"jailhouse rock\"]": {
+   "genres": [
+    "Reggae",
+    "Rock"
+   ],
+   "styles": [
+    "Dub",
+    "Noise",
+    "Punk"
+   ],
+   "year": 1982,
+   "source": "track",
+   "releases": [
+    63931,
+    2435757
+   ]
+  },
+  "[\"the jive bombers\",\"bad boy\"]": {
+   "genres": [
+    "Rock",
+    "Blues"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues",
+    "Jump Blues"
+   ],
+   "year": 1956,
+   "source": "track",
+   "releases": [
+    944658,
+    2826505,
+    3077872,
+    5081823,
+    5993048
+   ]
+  },
+  "[\"nolan porter\",\"if i could only be sure\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Rock"
+   ],
+   "styles": [
+    "Soul",
+    "Funk"
+   ],
+   "year": 1972,
+   "source": "track",
+   "releases": [
+    636632,
+    1316201,
+    1919236,
+    2380596,
+    2875940
+   ]
+  },
+  "[\"e world\",\"dirge (part 2)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"the bug, magugu\",\"deep in a mud\"]": {
+   "genres": [
+    "Electronic",
+    "Hip Hop"
+   ],
+   "styles": [
+    "Bass Music",
+    "Dancehall",
+    "Dub"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    34381360,
+    35757310
+   ]
+  },
+  "[\"crescent\",\"mica\"]": {
+   "genres": [
+    "Electronic",
+    "Rock"
+   ],
+   "styles": [
+    "Abstract",
+    "Experimental",
+    "Leftfield"
+   ],
+   "year": 2003,
+   "source": "track",
+   "releases": [
+    235014
+   ]
+  },
+  "[\"ann annie\",\"in motion\"]": {
+   "genres": [
+    "Electronic",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 2019,
+   "source": "track",
+   "releases": [
+    25280656
+   ]
+  },
+  "[\"brahms, curzon, london symphony, szell\",\"piano concerto no. 1 in d minor, op. 15\"]": {
+   "genres": [
+    "Classical",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Romantic",
+    "Concerto",
+    "Piano"
+   ],
+   "year": 1933,
+   "source": "track",
+   "releases": [
+    1602017,
+    1948830,
+    2429837,
+    2927664,
+    2951018
+   ]
+  },
+  "[\"chicago party\",\"paris ross (wbmx rap)\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Disco",
+    "Funk",
+    "Soul"
+   ],
+   "year": 2015,
+   "source": "video",
+   "releases": [
+    6764181
+   ]
+  },
+  "[\"bronx dogs\",\"tribute to jazzy jay\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breakbeat",
+    "House",
+    "Big Beat"
+   ],
+   "year": 1997,
+   "source": "track",
+   "releases": [
+    18800,
+    59387,
+    239227,
+    311878,
+    461329
+   ]
+  },
+  "[\"the jiving juniors\",\"valerie\"]": {
+   "genres": [
+    "Reggae",
+    "Rock"
+   ],
+   "styles": [
+    "Rhythm & Blues",
+    "Doo Wop",
+    "Ska"
+   ],
+   "year": 1962,
+   "source": "track",
+   "releases": [
+    1402984,
+    8987544,
+    28745170
+   ]
+  },
+  "[\"lorez alexandria\",\"baltimore oriole\"]": {
+   "genres": [
+    "Jazz",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Vocal",
+    "Afro-Cuban Jazz",
+    "Easy Listening"
+   ],
+   "year": 1957,
+   "source": "track",
+   "releases": [
+    531151,
+    2220082,
+    2370732,
+    2470043,
+    2658481
+   ]
+  },
+  "[\"earthly\",\"brighter\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breakbeat",
+    "Downtempo",
+    "Experimental"
+   ],
+   "year": 2017,
+   "source": "track",
+   "releases": [
+    11714838
+   ]
+  },
+  "[\"suso size\",\"anti-stress for babies and families\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"eurythmics\",\"for the love of big brother\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Synth-pop",
+    "Pop Rock",
+    "New Wave"
+   ],
+   "year": 1984,
+   "source": "track",
+   "releases": [
+    75525,
+    3769486,
+    6622541,
+    6655543,
+    7651144
+   ]
+  },
+  "[\"dj razor blade and the h.i.n.c.\",\"detroit’s in the house\"]": {
+   "genres": [
+    "Electronic",
+    "Hip Hop"
+   ],
+   "styles": [
+    "Electro",
+    "Hip Hop"
+   ],
+   "year": 1990,
+   "source": "video",
+   "releases": [
+    1102153
+   ]
+  },
+  "[\"sza\",\"kill bill\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Pop"
+   ],
+   "styles": [
+    "Contemporary R&B",
+    "Neo Soul",
+    "Alt-Pop"
+   ],
+   "year": 2022,
+   "source": "track",
+   "releases": [
+    25404283,
+    25757452,
+    26374532,
+    32670549,
+    38293305
+   ]
+  },
+  "[\"john lennon\",\"jealous guy\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Pop Rock",
+    "Classic Rock",
+    "Rock & Roll"
+   ],
+   "year": 1971,
+   "source": "track",
+   "releases": [
+    370648,
+    376138,
+    378966,
+    479679,
+    490808
+   ]
+  },
+  "[\"fred again.. & bia\",\"..feisty\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"vashti bunyan\",\"diamond day\"]": {
+   "genres": [
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Folk"
+   ],
+   "year": 2004,
+   "source": "track",
+   "releases": [
+    640394
+   ]
+  },
+  "[\"nara\",\"funeral de um lavrador\"]": {
+   "genres": [
+    "Latin"
+   ],
+   "styles": [],
+   "year": 2007,
+   "source": "track",
+   "releases": [
+    7532211
+   ]
+  },
+  "[\"miriam makeba\",\"house of the rising sun\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Latin"
+   ],
+   "styles": [
+    "African",
+    "Folk",
+    "Gospel"
+   ],
+   "year": 1968,
+   "source": "track",
+   "releases": [
+    1261435,
+    3009530,
+    3627436,
+    7272141,
+    8451451
+   ]
+  },
+  "[\"voyou\",\"une île\"]": {
+   "genres": [
+    "Pop"
+   ],
+   "styles": [
+    "Chanson"
+   ],
+   "year": 2023,
+   "source": "track",
+   "releases": [
+    26213477
+   ]
+  },
+  "[\"little emmett sutton\",\"mom, won't you teach me to monkey\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Rhythm & Blues"
+   ],
+   "year": 1963,
+   "source": "track",
+   "releases": [
+    4940016
+   ]
+  },
+  "[\"dana gillespie\",\"souvenirs of stefan\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Pop"
+   ],
+   "styles": [
+    "Beat",
+    "Folk",
+    "Psychedelic Rock"
+   ],
+   "year": 2006,
+   "source": "track",
+   "releases": [
+    3055060,
+    13083704
+   ]
+  },
+  "[\"voyou\",\"enfin\"]": {
+   "genres": [
+    "Pop"
+   ],
+   "styles": [
+    "Chanson"
+   ],
+   "year": 2024,
+   "source": "track",
+   "releases": [
+    30482891,
+    30493165
+   ]
+  },
+  "[\"supertramp\",\"from now on\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Pop Rock",
+    "Prog Rock",
+    "Art Rock"
+   ],
+   "year": 1977,
+   "source": "track",
+   "releases": [
+    372273,
+    389572,
+    435579,
+    448302,
+    527192
+   ]
+  },
+  "[\"g.g. vikey\",\"je vous remercie\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Blues"
+   ],
+   "styles": [
+    "African",
+    "Cha-Cha",
+    "Highlife"
+   ],
+   "year": null,
+   "source": "track",
+   "releases": [
+    5123451,
+    8583877
+   ]
+  },
+  "[\"carole king\",\"weekdays\"]": {
+   "genres": [
+    "Rock",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Folk Rock",
+    "Pop Rock",
+    "Acoustic"
+   ],
+   "year": 1973,
+   "source": "track",
+   "releases": [
+    851940,
+    2281441,
+    6486217,
+    6845322,
+    6996952
+   ]
+  }
+ }
+}
