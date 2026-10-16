@@ -1,7 +1,7 @@
 # Radio sea discovery prototype
 
 Scan catalogues and radio tracklists, merge identities, match songs to YouTube,
-and arrange them on a navigable map using metadata-based similarity and clustering.
+and arrange them on a navigable map.
 
 ## Open the demo
 
