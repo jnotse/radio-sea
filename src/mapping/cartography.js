@@ -21,10 +21,11 @@ import { fnv1aHash } from '../fnv1a.js';
 import { mulberry32 } from '../rng.js';
 import { isContextTag, tagLabel } from './tags.js';
 
-// Cluster while average linkage stays above this. Measured on radio data:
-// unrelated pairs score ~0.32, same-world pairs 0.44-0.77, so 0.50 keeps the
-// archipelagos sound-based instead of station-based.
-const LINKAGE_THRESHOLD = 0.50;
+// Cluster while average linkage stays above this. Measured on the radio
+// catalogue with per-song genres: songs sharing nothing score ~0 (p90 0.16),
+// sharing only a broad genre ~0.07 (p90 0.20), sharing a style ~0.27
+// (p90 0.49). 0.30 forms islands of one sound across shows and stations.
+const LINKAGE_THRESHOLD = 0.30;
 
 function averageLinkage(similarity, groupA, groupB) {
   let total = 0;
@@ -62,8 +63,12 @@ export function clusterReleases(releases, similarity, { threshold = LINKAGE_THRE
 
   // Deterministic order: larger islands first, then by first member id.
   groups.sort((a, b) => b.length - a.length || a[0].id.localeCompare(b[0].id));
+  const documentFrequency = new Map();
+  for (const release of releases) {
+    for (const tag of new Set(release.tags?.all ?? release.styles ?? [])) documentFrequency.set(tag, (documentFrequency.get(tag) ?? 0) + 1);
+  }
   return distinctNames(groups.map((members, index) => {
-    const { name, basis } = islandName(members);
+    const { name, basis } = islandName(members, documentFrequency);
     return { id: index, name: name ?? `island-${index}`, basis, members };
   }));
 }
@@ -91,32 +96,30 @@ function distinctNames(islands) {
 }
 
 // An island may only claim a sound that at least half of its tracks really
-// have. Otherwise it is named after the show most of them were played on,
-// since that is what grouped them. Station-supplied show genres never name an
-// island: they describe a whole set, not its tracks.
-function islandName(members) {
+// have. Of those, it takes the most specific: the one rarest in the whole
+// catalogue, so doo-wop songs that also carry "rock" make a "doo wop" island.
+// Without such a sound it is named after the show most of them were played
+// on, since that is what grouped them. Station-supplied show genres never
+// name an island: they describe a whole set, not its tracks.
+function islandName(members, documentFrequency = new Map()) {
   const tagsOf = (member) => member.tags?.all ?? member.styles ?? [];
-  const genre = majorityTag(members, (m) => tagsOf(m).filter((t) => !isContextTag(t) && !t.startsWith('mood:')));
+  const genre = majorityTag(members, (m) => tagsOf(m).filter((t) => !isContextTag(t) && !t.startsWith('mood:')), documentFrequency);
   if (genre) return { name: tagLabel(genre), basis: 'sound' };
   const show = majorityTag(members, (m) => tagsOf(m).filter((t) => t.startsWith('show:')));
   if (show) return { name: tagLabel(show), basis: 'show' };
   return { name: null, basis: null };
 }
 
-function majorityTag(members, tagsOf) {
+/** Tags at least half the members share; the rarest in the catalogue wins, then the commonest here. */
+function majorityTag(members, tagsOf, documentFrequency = new Map()) {
   const counts = new Map();
   for (const member of members) {
     for (const tag of new Set(tagsOf(member))) counts.set(tag, (counts.get(tag) ?? 0) + 1);
   }
-  let best = null;
-  let bestCount = 0;
-  for (const [tag, count] of [...counts.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
-    if (count > bestCount) {
-      best = tag;
-      bestCount = count;
-    }
-  }
-  return bestCount * 2 >= members.length ? best : null;
+  const shared = [...counts.entries()].filter(([, count]) => count * 2 >= members.length);
+  const rarity = (tag) => documentFrequency.get(tag) ?? Infinity;
+  shared.sort((a, b) => rarity(a[0]) - rarity(b[0]) || b[1] - a[1] || a[0].localeCompare(b[0]));
+  return shared[0]?.[0] ?? null;
 }
 
 function islandRadius(memberCount) {
