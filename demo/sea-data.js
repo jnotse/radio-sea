@@ -1,5 +1,5 @@
 window.SEA_DATA = {
- "generatedAt": "2026-10-17T18:12:52.875Z",
+ "generatedAt": "2026-10-17T19:01:52.580Z",
  "stats": {
   "stations": [
    {
@@ -26945,6 +26945,1187 @@ window.SEA_DATA = {
    "bridge": true
   }
  ],
+ "facts": {
+  "genres": {
+   "rock": {
+    "title": "Rock music",
+    "url": "https://en.wikipedia.org/wiki/Rock_music",
+    "text": "It has its roots beginning as classic rock and roll, a style that drew from the African-American musical genres of blues and rhythm and blues, as well as from country music."
+   },
+   "punk": {
+    "title": "Punk rock",
+    "url": "https://en.wikipedia.org/wiki/Punk_rock",
+    "text": "Punk rock is a genre of rock music that emerged in the mid-1970s. Rooted in 1950s rock and roll and 1960s garage rock, punk bands rejected the overproduction and corporate nature of mainstream arena rock."
+   },
+   "electronic": {
+    "title": "Electronic music",
+    "url": "https://en.wikipedia.org/wiki/Electronic_music",
+    "text": "Electronic music broadly is a group of music genres that employ electronic musical instruments, circuitry-based music technology and software, or general-purpose electronics in its creation."
+   },
+   "ambient": {
+    "title": "Ambient music",
+    "url": "https://en.wikipedia.org/wiki/Ambient_music",
+    "text": "Ambient music is a genre of music that emphasizes tone and atmosphere over traditional musical structure or rhythm. The genre evokes an \"atmospheric\", \"visual\", or \"unobtrusive\" quality."
+   },
+   "deep house": {
+    "title": "Deep house",
+    "url": "https://en.wikipedia.org/wiki/Deep_house",
+    "text": "Deep house is a subgenre of house music that originated in the 1980s, initially fusing elements of Chicago house with the lush chords of 1980s jazz-funk and touches of soul music."
+   },
+   "downtempo": {
+    "title": "Downtempo",
+    "url": "https://en.wikipedia.org/wiki/Downtempo",
+    "text": "Downtempo is a broad label for electronic music that features an atmospheric sound and slower beats than would typically be found in dance music."
+   },
+   "folk, world, & country": {
+    "title": "Folk music",
+    "url": "https://en.wikipedia.org/wiki/Folk_music",
+    "text": "Folk music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former during the 20th-century folk revival. Some types of folk music may be called world music."
+   },
+   "pop": {
+    "title": "Pop music",
+    "url": "https://en.wikipedia.org/wiki/Pop_music",
+    "text": "Pop music, or simply pop, is a genre of popular music that originated in its modern form during the mid-1950s in the United States and the United Kingdom."
+   },
+   "indie pop": {
+    "title": "Indie pop",
+    "url": "https://en.wikipedia.org/wiki/Indie_pop",
+    "text": "Indie pop is a music genre and subculture that combines guitar pop with a DIY ethic in opposition to the style and tone of mainstream pop music."
+   },
+   "lo-fi": {
+    "title": "Lo-fi music",
+    "url": "https://en.wikipedia.org/wiki/Lo-fi_music",
+    "text": "Low fidelity is a music or production quality in which elements usually regarded as imperfections in the context of a recording or performance are present, sometimes as a deliberate stylistic choice."
+   },
+   "shoegaze": {
+    "title": "Shoegaze",
+    "url": "https://en.wikipedia.org/wiki/Shoegaze",
+    "text": "Shoegaze is a subgenre of indie and alternative rock characterised by ethereal soundscapes, obscured vocals, and extensive use of guitar effects and distortion. It was sometimes used interchangeably with \"dream pop\"."
+   },
+   "house": {
+    "title": "House music",
+    "url": "https://en.wikipedia.org/wiki/House_music",
+    "text": "House music, or simply house, is a type of electronic dance music which is characterized by a repetitive four-on-the-floor beat and a typical tempo of 115–130 beats per minute."
+   },
+   "techno": {
+    "title": "Techno",
+    "url": "https://en.wikipedia.org/wiki/Techno",
+    "text": "Techno is a genre of electronic music which is generally produced for use in a continuous DJ set, with tempos being in the range from 120 to 150 beats per minute."
+   },
+   "indie rock": {
+    "title": "Indie rock",
+    "url": "https://en.wikipedia.org/wiki/Indie_rock",
+    "text": "Indie rock is a subgenre of rock music that originated in the United Kingdom, United States and New Zealand in the early to mid-1980s."
+   },
+   "no wave": {
+    "title": "No wave",
+    "url": "https://en.wikipedia.org/wiki/No_wave",
+    "text": "No wave was an avant-garde music and visual art scene that emerged in the late 1970s in Downtown New York City. The term was coined as a rejection of commercial new wave music."
+   },
+   "post-punk": {
+    "title": "Post-punk",
+    "url": "https://en.wikipedia.org/wiki/Post-punk",
+    "text": "Post-punk is a loosely defined music genre and period that emerged in the late 1970s in the wake of punk rock."
+   },
+   "art rock": {
+    "title": "Art rock",
+    "url": "https://en.wikipedia.org/wiki/Art_rock",
+    "text": "Art rock is rock music that aims to distinguish the genre from popular entertainment, with the term typically being applied as the middle ground between mainstream and experimental rock."
+   },
+   "abstract": {
+    "title": "Absolute music",
+    "url": "https://en.wikipedia.org/wiki/Absolute_music",
+    "text": "Absolute music is music that is not explicitly \"about\" anything; in contrast to program music, it is non-representational."
+   },
+   "krautrock": {
+    "title": "Krautrock",
+    "url": "https://en.wikipedia.org/wiki/Krautrock",
+    "text": "Krautrock is a broad genre of experimental rock that developed in West Germany in the late 1960s and early 1970s."
+   },
+   "dub": {
+    "title": "Dub music",
+    "url": "https://en.wikipedia.org/wiki/Dub_music",
+    "text": "Dub is a musical style that grew out of reggae in the late 1960s and early 1970s. It is commonly considered a subgenre of reggae, though it has developed to extend beyond that style."
+   },
+   "avantgarde": {
+    "title": "Avant-garde music",
+    "url": "https://en.wikipedia.org/wiki/Avant-garde_music",
+    "text": "Avant-garde music may be distinguished from experimental music by the way it adopts an extreme position within a certain tradition, whereas experimental music lies outside tradition."
+   },
+   "experimental": {
+    "title": "Experimental music",
+    "url": "https://en.wikipedia.org/wiki/Experimental_music",
+    "text": "Experimental music is a general label for any music or music genre that pushes existing boundaries and genre definitions."
+   },
+   "minimal": {
+    "title": "Minimal techno",
+    "url": "https://en.wikipedia.org/wiki/Minimal_techno",
+    "text": "Minimal techno is a subgenre of techno music. It is characterized by a stripped-down aesthetic that exploits the use of repetition and understated development."
+   },
+   "darkwave": {
+    "title": "Dark wave",
+    "url": "https://en.wikipedia.org/wiki/Dark_wave",
+    "text": "Dark wave is a music genre that emerged from the new wave and post-punk movement of the late 1970s."
+   },
+   "synth-pop": {
+    "title": "Synth-pop",
+    "url": "https://en.wikipedia.org/wiki/Synth-pop",
+    "text": "Synth-pop is a music genre that first became prominent in the late 1970s and features the synthesizer as the dominant musical instrument."
+   },
+   "disco": {
+    "title": "Disco",
+    "url": "https://en.wikipedia.org/wiki/Disco",
+    "text": "Disco is a genre of dance music and a subculture that emerged in the late 1960s from the United States' urban nightlife scene."
+   },
+   "coldwave": {
+    "title": "Industrial metal",
+    "url": "https://en.wikipedia.org/wiki/Industrial_metal",
+    "text": "Industrial metal is the fusion of heavy metal and industrial music, typically employing repeating metal guitar riffs, sampling, synthesizer or sequencer lines, and distorted vocals."
+   },
+   "new wave": {
+    "title": "New wave music",
+    "url": "https://en.wikipedia.org/wiki/New_wave_music",
+    "text": "New wave is a music genre encompassing pop-oriented styles that emerged in the United States and United Kingdom in the mid-to late 1970s."
+   },
+   "nu-disco": {
+    "title": "Nu-disco",
+    "url": "https://en.wikipedia.org/wiki/Nu-disco",
+    "text": "Nu-disco is a 21st-century dance music genre associated with a renewed interest in the late 1970s disco, synthesizer-heavy 1980s European dance music styles, and early 1990s electronic dance music."
+   },
+   "dream pop": {
+    "title": "Dream pop",
+    "url": "https://en.wikipedia.org/wiki/Dream_pop",
+    "text": "Dream pop is a subgenre of alternative rock and neo-psychedelia that emphasizes atmosphere and sonic texture as strongly as it does pop melody."
+   },
+   "trance": {
+    "title": "Trance music",
+    "url": "https://en.wikipedia.org/wiki/Trance_music",
+    "text": "Trance is a genre of electronic dance music that emerged from the techno and EBM scene in Frankfurt, Germany, in the late 1980s and early 1990s, and quickly spread throughout Europe."
+   },
+   "field recording": {
+    "title": "Field recording",
+    "url": "https://en.wikipedia.org/wiki/Field_recording",
+    "text": "Field recording is the production of audio recordings outside recording studios, and the term applies to recordings of both natural and human-produced sounds."
+   },
+   "hip hop": {
+    "title": "Hip-hop",
+    "url": "https://en.wikipedia.org/wiki/Hip-hop",
+    "text": "Hip-hop is a genre of popular music that emerged in the early 1970s alongside an associated subculture in New York City."
+   },
+   "drum n bass": {
+    "title": "Drum and bass",
+    "url": "https://en.wikipedia.org/wiki/Drum_and_bass",
+    "text": "Drum and bass, also known as drum 'n' bass, is a genre of electronic dance music that emerged in the United Kingdom in the early 1990s."
+   },
+   "bass music": {
+    "title": "Bass music",
+    "url": "https://en.wikipedia.org/wiki/Bass_music",
+    "text": "Bass music is any of several genres of electronic dance music and hip hop music arising from the 1980s on, focusing on a prominent bass drum and/or bassline sound."
+   },
+   "classical": {
+    "title": "Classical music",
+    "url": "https://en.wikipedia.org/wiki/Classical_music",
+    "text": "Classical music is a tradition of art music in the Western world, considered to be distinct from Western folk music or popular music."
+   },
+   "contemporary": {
+    "title": "Contemporary music",
+    "url": "https://en.wikipedia.org/wiki/Contemporary_music",
+    "text": "Contemporary music is whatever music is produced at the current time. Specifically, it could refer to:"
+   },
+   "hard house": {
+    "title": "UK hard house",
+    "url": "https://en.wikipedia.org/wiki/UK_hard_house",
+    "text": "UK hard house or simply hard house is a style of electronic dance music that emerged in the early 1990s and is synonymous with its association to the Trade club and the associated DJs there that created the style."
+   },
+   "dub techno": {
+    "title": "Dub techno",
+    "url": "https://en.wikipedia.org/wiki/Dub_techno",
+    "text": "Dub techno is a subgenre of electronic music that originated in the early 1990s, blending the repetitive, minimal structures of techno with the echo-laden, spacey production techniques of dub music."
+   },
+   "tech house": {
+    "title": "Tech house",
+    "url": "https://en.wikipedia.org/wiki/Tech_house",
+    "text": "Tech house is a house music subgenre that prominently incorporates stylistic features from techno. Tech house originally featured the clean and minimal production style associated with techno from Detroit and the UK."
+   },
+   "tribal house": {
+    "title": "Tribal house",
+    "url": "https://en.wikipedia.org/wiki/Tribal_house",
+    "text": "Tribal house is a subgenre of house music combined with world music rhythms. It is broadly characterized by elements of indigenous musical percussions."
+   },
+   "new age": {
+    "title": "New-age music",
+    "url": "https://en.wikipedia.org/wiki/New-age_music",
+    "text": "New age is a genre of music intended to create artistic inspiration, relaxation, and optimism."
+   },
+   "romantic": {
+    "title": "Romantic music",
+    "url": "https://en.wikipedia.org/wiki/Romantic_music",
+    "text": "Romantic music is a stylistic movement in Western Classical music associated with the period of the 19th century commonly referred to as the Romantic era."
+   },
+   "piano": {
+    "title": "Piano",
+    "url": "https://en.wikipedia.org/wiki/Piano",
+    "text": "A piano is a keyboard instrument that produces sound when its keys are pressed, activating an action mechanism where hammers strike strings."
+   },
+   "solo": {
+    "title": "Solo (music)",
+    "url": "https://en.wikipedia.org/wiki/Solo_(music)",
+    "text": "Performing a solo is \"to solo\", and the performer is known as a soloist."
+   },
+   "funk / soul": {
+    "title": "Funk",
+    "url": "https://en.wikipedia.org/wiki/Funk",
+    "text": "Funk typically consists of a complex percussive groove with rhythm instruments playing interlocking grooves that create a \"hypnotic\" and \"danceable\" feel."
+   },
+   "soul": {
+    "title": "Soul music",
+    "url": "https://en.wikipedia.org/wiki/Soul_music",
+    "text": "Soul music is a popular music genre that originated in African-American communities throughout the United States in the late 1950s and early 1960s."
+   },
+   "neo soul": {
+    "title": "Neo soul",
+    "url": "https://en.wikipedia.org/wiki/Neo_soul",
+    "text": "Neo soul is a genre of popular music. It has been noted by music writers for its conscious lyrics."
+   },
+   "doo wop": {
+    "title": "Doo-wop",
+    "url": "https://en.wikipedia.org/wiki/Doo-wop",
+    "text": "Doo-wop is a subgenre of rhythm and blues music that originated in African-American communities during the late 1940s, mainly in the large cities of the United States."
+   },
+   "rhythm & blues": {
+    "title": "Rhythm and blues",
+    "url": "https://en.wikipedia.org/wiki/Rhythm_and_blues",
+    "text": "Rhythm and blues, frequently abbreviated as R&B or R'n'B, is a genre of popular music that originated within African American communities in the 1940s."
+   },
+   "rock & roll": {
+    "title": "Rock and roll",
+    "url": "https://en.wikipedia.org/wiki/Rock_and_roll",
+    "text": "Rock and roll is a genre of popular music that evolved in the United States during the late 1940s and early 1950s."
+   },
+   "jazz": {
+    "title": "Jazz",
+    "url": "https://en.wikipedia.org/wiki/Jazz",
+    "text": "Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana, in the late 19th and early 20th centuries."
+   },
+   "post bop": {
+    "title": "Post-bop",
+    "url": "https://en.wikipedia.org/wiki/Post-bop",
+    "text": "Post-bop is a jazz term with several possible definitions and usages."
+   },
+   "soul-jazz": {
+    "title": "Soul jazz",
+    "url": "https://en.wikipedia.org/wiki/Soul_jazz",
+    "text": "Soul jazz or funky jazz is a subgenre of jazz that incorporates strong influences from hard bop, blues, soul, gospel and rhythm and blues."
+   },
+   "ethereal": {
+    "title": "Ethereal wave",
+    "url": "https://en.wikipedia.org/wiki/Ethereal_wave",
+    "text": "Ethereal wave, also called ethereal darkwave, ethereal goth or simply ethereal, is a subgenre of dark wave music that is variously described as \"gothic\", \"romantic\", and \"otherworldly\"."
+   },
+   "industrial": {
+    "title": "Industrial music",
+    "url": "https://en.wikipedia.org/wiki/Industrial_music",
+    "text": "The term was coined in 1976 by Monte Cazazza and adopted by Throbbing Gristle with the founding of Industrial Records. Other early industrial musicians include NON and Cabaret Voltaire."
+   },
+   "vocal": {
+    "title": "Vocal music",
+    "url": "https://en.wikipedia.org/wiki/Vocal_music",
+    "text": "Vocal music is a type of singing performed by one or more singers, either with instrumental accompaniment or without instrumental accompaniment, in which singing provides the main focus of the piece."
+   },
+   "blues": {
+    "title": "Blues",
+    "url": "https://en.wikipedia.org/wiki/Blues",
+    "text": "Blues is a music genre and musical form that originated among African Americans in the Deep South of the United States around the 1860s."
+   },
+   "hard rock": {
+    "title": "Hard rock",
+    "url": "https://en.wikipedia.org/wiki/Hard_rock",
+    "text": "Hard rock or heavy rock is a heavier subgenre of rock music typified by vocals and electric guitars that are aggressive and distorted relative to traditional rock music."
+   },
+   "garage rock": {
+    "title": "Garage rock",
+    "url": "https://en.wikipedia.org/wiki/Garage_rock",
+    "text": "Garage rock is a raw and energetic style of rock and roll that flourished in the mid-1960s, most commonly in the United States and Canada, and has experienced a series of subsequent revivals."
+   },
+   "future jazz": {
+    "title": "Nu jazz",
+    "url": "https://en.wikipedia.org/wiki/Nu_jazz",
+    "text": "Nu jazz is a genre of jazz and electronic music. The music blends jazz elements with other musical styles, such as funk, electronic music, and free improvisation."
+   },
+   "acoustic": {
+    "title": "Acoustic music",
+    "url": "https://en.wikipedia.org/wiki/Acoustic_music",
+    "text": "Acoustic music is music that solely or primarily uses instruments that produce sound through acoustic means, as opposed to electric or electronic means."
+   },
+   "drone": {
+    "title": "Drone music",
+    "url": "https://en.wikipedia.org/wiki/Drone_music",
+    "text": "Drone music is a minimalist genre of music that emphasizes the use of sustained sounds, notes, or tone clusters called drones."
+   },
+   "country": {
+    "title": "Country music",
+    "url": "https://en.wikipedia.org/wiki/Country_music",
+    "text": "Country music, also known as country and western or simply country, is a music genre originating from the United States. Once called hillbilly music, the term country music was popularized in the 1940s."
+   },
+   "j-pop": {
+    "title": "J-pop",
+    "url": "https://en.wikipedia.org/wiki/J-pop",
+    "text": "J-pop is a form of popular music that entered the musical mainstream of Japan in the 1990s. In Japan it is known simply as pops."
+   },
+   "psychedelic rock": {
+    "title": "Psychedelic rock",
+    "url": "https://en.wikipedia.org/wiki/Psychedelic_rock",
+    "text": "Psychedelic rock is a subgenre of rock music that originally emerged during the mid-1960s, inspired by psychedelic culture and centered primarily around the influence of psychoactive and hallucinogenic drugs."
+   },
+   "country rock": {
+    "title": "Country rock",
+    "url": "https://en.wikipedia.org/wiki/Country_rock",
+    "text": "Country rock is a music genre that fuses rock and country."
+   },
+   "funk": {
+    "title": "Funk",
+    "url": "https://en.wikipedia.org/wiki/Funk",
+    "text": "Funk typically consists of a complex percussive groove with rhythm instruments playing interlocking grooves that create a \"hypnotic\" and \"danceable\" feel."
+   },
+   "blues rock": {
+    "title": "Blues rock",
+    "url": "https://en.wikipedia.org/wiki/Blues_rock",
+    "text": "Blues rock is a fusion genre and form of rock and blues music that relies on the chords/scales and instrumental improvisation of blues."
+   },
+   "electro": {
+    "title": "Electro (music)",
+    "url": "https://en.wikipedia.org/wiki/Electro_(music)",
+    "text": "Electro is a genre of electronic dance music that emerged in the early 1980s. It is defined by the prominent use of the Roland TR-808 drum machine, and draws direct influence from early hip-hop and funk music."
+   },
+   "idm": {
+    "title": "Intelligent dance music",
+    "url": "https://en.wikipedia.org/wiki/Intelligent_dance_music",
+    "text": "Intelligent dance music is a loose label used to describe experimental forms of electronic music associated with early-1990s ambient techno, \"electronic listening music\" and related forms of electronica."
+   },
+   "reggae": {
+    "title": "Reggae",
+    "url": "https://en.wikipedia.org/wiki/Reggae",
+    "text": "Reggae is a music genre that originated in Jamaica in the late 1960s. The term also refers to the modern popular music of Jamaica and its diaspora."
+   },
+   "dancehall": {
+    "title": "Dancehall",
+    "url": "https://en.wikipedia.org/wiki/Dancehall",
+    "text": "Dancehall is a genre of Jamaican popular music that originated in the late 1970s. Initially, dancehall was a more sparse version of reggae than the roots style, which had dominated much of the 1970s."
+   },
+   "leftfield": {
+    "title": "Leftfield",
+    "url": "https://en.wikipedia.org/wiki/Leftfield",
+    "text": "Leftfield are a British electronic music group formed in London in 1989, a duo of Neil Barnes and Paul Daley."
+   },
+   "baroque": {
+    "title": "Baroque music",
+    "url": "https://en.wikipedia.org/wiki/Baroque_music",
+    "text": "Baroque music refers to the period or dominant style of Western classical music composed from about 1600 to 1750."
+   },
+   "folk rock": {
+    "title": "Folk rock",
+    "url": "https://en.wikipedia.org/wiki/Folk_rock",
+    "text": "Folk rock is a fusion genre of rock music with heavy influences from English and American folk music. It arose in the United States, Canada, and the United Kingdom in the mid-1960s."
+   },
+   "soft rock": {
+    "title": "Soft rock",
+    "url": "https://en.wikipedia.org/wiki/Soft_rock",
+    "text": "Soft rock was prevalent on the radio throughout the 1970s and eventually metamorphosed into a form of the synthesized music of adult contemporary in the 1980s."
+   },
+   "free improvisation": {
+    "title": "Free improvisation",
+    "url": "https://en.wikipedia.org/wiki/Free_improvisation",
+    "text": "Free improvisation is a form of improvised music centered on a commitment to non-idiomatic musical expression."
+   },
+   "sonata": {
+    "title": "Sonata",
+    "url": "https://en.wikipedia.org/wiki/Sonata",
+    "text": "In music, a sonata is a piece that consists of 3 or 4 movements that can be for different musical instruments."
+   },
+   "dubstep": {
+    "title": "Dubstep",
+    "url": "https://en.wikipedia.org/wiki/Dubstep",
+    "text": "Dubstep is a genre of electronic dance music or Bass Music that originated in South London in the early 2000s."
+   },
+   "pop rap": {
+    "title": "Pop rap",
+    "url": "https://en.wikipedia.org/wiki/Pop_rap",
+    "text": "This genre gained mainstream popularity during the 1990s, though the influences and roots of pop rap can trace back to late-1980s hip-hop artists such as Run-DMC, LL Cool J, and Beastie Boys."
+   },
+   "choral": {
+    "title": "Choir",
+    "url": "https://en.wikipedia.org/wiki/Choir",
+    "text": "A choir, also known as a chorale or chorus, is a musical ensemble of singers."
+   },
+   "opera": {
+    "title": "Opera",
+    "url": "https://en.wikipedia.org/wiki/Opera",
+    "text": "Opera is a form of Western theatre in which music is a fundamental component and dramatic roles are taken by singers."
+   },
+   "pop rock": {
+    "title": "Pop rock",
+    "url": "https://en.wikipedia.org/wiki/Pop_rock",
+    "text": "Pop rock is rock music with greater emphasis on professional songwriting and recording craft, and less emphasis on attitude than standard rock music."
+   },
+   "breaks": {
+    "title": "Break (music)",
+    "url": "https://en.wikipedia.org/wiki/Break_(music)",
+    "text": "In popular music, a break is an instrumental or percussion section during a song derived from or related to stop-time – being a \"break\" from the main parts of the song or piece."
+   },
+   "hardcore hip-hop": {
+    "title": "Hardcore hip-hop",
+    "url": "https://en.wikipedia.org/wiki/Hardcore_hip-hop",
+    "text": "Hardcore hip-hop is a subgenre of hip-hop that developed through the East Coast hip-hop scene in the 1980s."
+   },
+   "alternative rock": {
+    "title": "Alternative rock",
+    "url": "https://en.wikipedia.org/wiki/Alternative_rock",
+    "text": "Alternative rock is a category of rock music that evolved from the independent music underground of the 1970s."
+   },
+   "symphony": {
+    "title": "Symphony",
+    "url": "https://en.wikipedia.org/wiki/Symphony",
+    "text": "A symphony is an extended musical composition in Western classical music, most often for orchestra."
+   },
+   "latin": {
+    "title": "Latin music",
+    "url": "https://en.wikipedia.org/wiki/Latin_music",
+    "text": "It may also include music from other territories where Spanish- and Portuguese-language music is made."
+   },
+   "concerto": {
+    "title": "Concerto",
+    "url": "https://en.wikipedia.org/wiki/Concerto",
+    "text": "A concerto is, since the late Baroque era, mostly understood as an instrumental composition, written for one or more soloists accompanied by an orchestra or other ensemble."
+   },
+   "ballad": {
+    "title": "Sentimental ballad",
+    "url": "https://en.wikipedia.org/wiki/Sentimental_ballad",
+    "text": "Ballads are generally melodic enough to capture the listener's attention."
+   },
+   "hard bop": {
+    "title": "Hard bop",
+    "url": "https://en.wikipedia.org/wiki/Hard_bop",
+    "text": "Hard bop is a subgenre of jazz that is an extension of bebop."
+   },
+   "modal": {
+    "title": "Mode (music)",
+    "url": "https://en.wikipedia.org/wiki/Mode_(music)",
+    "text": "In music theory, the term mode or modus is used in a number of distinct senses, depending on context."
+   },
+   "chamber music": {
+    "title": "Chamber music",
+    "url": "https://en.wikipedia.org/wiki/Chamber_music",
+    "text": "Chamber music is a form of classical music that is composed for a small group of instruments—traditionally a group that could fit in a palace chamber or a large room."
+   },
+   "string ensemble": {
+    "title": "String orchestra",
+    "url": "https://en.wikipedia.org/wiki/String_orchestra",
+    "text": "A string orchestra is an orchestra consisting solely of a string section made up of the bowed strings used in Western Classical music."
+   },
+   "jazz-funk": {
+    "title": "Jazz-funk",
+    "url": "https://en.wikipedia.org/wiki/Jazz-funk",
+    "text": "Jazz-funk is a subgenre of jazz music characterized by a strong back beat, electrified sounds, and analog synthesizers. Similar genres to jazz-funk include acid jazz."
+   },
+   "orchestra": {
+    "title": "Orchestra",
+    "url": "https://en.wikipedia.org/wiki/Orchestra",
+    "text": "An orchestra is a large instrumental ensemble typical of classical music or jazz, which combines instruments from different families. There are typically four main sections of instruments:"
+   },
+   "gospel": {
+    "title": "Gospel music",
+    "url": "https://en.wikipedia.org/wiki/Gospel_music",
+    "text": "Gospel music is a traditional genre of Christian music and a cornerstone of Christian media, characterized by dominant vocals and lyrics that reflect Christian teachings and values."
+   },
+   "favela funk": {
+    "title": "Funk carioca",
+    "url": "https://en.wikipedia.org/wiki/Funk_carioca",
+    "text": "Funk carioca, also known as baile funk, Brazilian funk, or simply funk, is a Brazilian hip hop-influenced music genre from Rio de Janeiro, taking influences from musical styles such as Miami bass and freestyle."
+   },
+   "children's": {
+    "title": "Children's music",
+    "url": "https://en.wikipedia.org/wiki/Children%27s_music",
+    "text": "Children's music or kids' music is music composed and performed for children. In European-influenced contexts this means music, usually songs, written specifically for a juvenile audience."
+   },
+   "noise": {
+    "title": "Noise music",
+    "url": "https://en.wikipedia.org/wiki/Noise_music",
+    "text": "Noise music is a subgenre of experimental music that is characterised by its use of unwanted noise as a primary musical element."
+   },
+   "jump blues": {
+    "title": "Jump blues",
+    "url": "https://en.wikipedia.org/wiki/Jump_blues",
+    "text": "Jump blues is an uptempo style of blues with jazz and boogie woogie influence, usually played by small groups and featuring horn instruments."
+   },
+   "big beat": {
+    "title": "Big beat",
+    "url": "https://en.wikipedia.org/wiki/Big_beat",
+    "text": "Big beat is an electronic music genre that usually uses heavy breakbeats and synthesizer-generated loops and patterns – common to acid house/techno."
+   },
+   "ska": {
+    "title": "Ska",
+    "url": "https://en.wikipedia.org/wiki/Ska",
+    "text": "Ska is a music genre that originated in Jamaica in the late 1950s and was the precursor to rocksteady and reggae. It combined elements of Caribbean mento with American jazz and rhythm and blues."
+   },
+   "easy listening": {
+    "title": "Easy listening",
+    "url": "https://en.wikipedia.org/wiki/Easy_listening",
+    "text": "Easy listening is a popular music genre and radio format that was most popular during the 1950s to the 1970s."
+   },
+   "alt-pop": {
+    "title": "Alternative pop",
+    "url": "https://en.wikipedia.org/wiki/Alternative_pop",
+    "text": "Alternative pop is pop music with broad commercial appeal that is made by figures outside the mainstream, or which is considered more original, challenging, or eclectic than traditional pop music."
+   },
+   "classic rock": {
+    "title": "Rock music",
+    "url": "https://en.wikipedia.org/wiki/Rock_music",
+    "text": "It has its roots beginning as classic rock and roll, a style that drew from the African-American musical genres of blues and rhythm and blues, as well as from country music."
+   },
+   "uk garage": {
+    "title": "UK garage",
+    "url": "https://en.wikipedia.org/wiki/UK_garage",
+    "text": "UK garage, abbreviated as UKG, is a genre of electronic music which originated in England in the early to mid-1990s."
+   },
+   "edm": {
+    "title": "Electronic dance music",
+    "url": "https://en.wikipedia.org/wiki/Electronic_dance_music",
+    "text": "Electronic dance music, also referred to as dance music or club music, is a broad range of percussive electronic music genres originally made for nightclubs, raves, and festivals."
+   },
+   "folk": {
+    "title": "Folk music",
+    "url": "https://en.wikipedia.org/wiki/Folk_music",
+    "text": "Folk music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former during the 20th-century folk revival. Some types of folk music may be called world music."
+   },
+   "african": {
+    "title": "Music of Africa",
+    "url": "https://en.wikipedia.org/wiki/Music_of_Africa",
+    "text": "The music of Africa is vast and highly diverse, with different regions and nations maintaining distinct musical traditions."
+   },
+   "chanson": {
+    "title": "Chanson",
+    "url": "https://en.wikipedia.org/wiki/Chanson",
+    "text": "A chanson is generally any lyric-driven French song."
+   },
+   "beat": {
+    "title": "Beat music",
+    "url": "https://en.wikipedia.org/wiki/Beat_music",
+    "text": "Beat music, British beat, or Merseybeat is a British popular music genre that developed around Liverpool in the late 1950s and early 1960s."
+   },
+   "prog rock": {
+    "title": "Progressive rock",
+    "url": "https://en.wikipedia.org/wiki/Progressive_rock",
+    "text": "Progressive rock is a broad genre of rock music that primarily developed in the United States and United Kingdom through the mid- to late 1960s."
+   },
+   "cha-cha": {
+    "title": "Cha-cha-chá (music)",
+    "url": "https://en.wikipedia.org/wiki/Cha-cha-ch%C3%A1_(music)",
+    "text": "Cha-cha-chá is a genre of Cuban music. It has been a popular dance music which developed from the danzón-mambo in the early 1950s, and became widely popular throughout the world."
+   },
+   "highlife": {
+    "title": "Highlife",
+    "url": "https://en.wikipedia.org/wiki/Highlife",
+    "text": "Highlife is a Ghanaian music genre that originated along the coastal cities of present-day Ghana in the 19th century, during its history as a colony of the British and through its trade routes in coastal areas."
+   },
+   "rhythmic noise": {
+    "title": "Power noise",
+    "url": "https://en.wikipedia.org/wiki/Power_noise",
+    "text": "Power noise is a subgenre of noise and post-industrial music, that originated predominantly in Europe during the 1990s. It draws primary influence from various styles of electronic dance music."
+   },
+   "power pop": {
+    "title": "Power pop",
+    "url": "https://en.wikipedia.org/wiki/Power_pop",
+    "text": "Power pop is a subgenre of rock music and a form of pop rock based on the early music of bands such as the Beach Boys, the Beatles, the Byrds, and the Who."
+   },
+   "garage house": {
+    "title": "Garage house",
+    "url": "https://en.wikipedia.org/wiki/Garage_house",
+    "text": "Garage house is an electronic dance music style that was developed alongside Chicago house music."
+   },
+   "comedy": {
+    "title": "Comedy music",
+    "url": "https://en.wikipedia.org/wiki/Comedy_music",
+    "text": "Comedy music or musical comedy is a genre of music that is comedic in nature."
+   },
+   "horrorcore": {
+    "title": "Horrorcore",
+    "url": "https://en.wikipedia.org/wiki/Horrorcore",
+    "text": "Horrorcore is a subgenre of hip-hop based on horror-themed and often darkly transgressive lyrical content and imagery."
+   },
+   "boogaloo": {
+    "title": "Boogaloo",
+    "url": "https://en.wikipedia.org/wiki/Boogaloo",
+    "text": "Boogaloo or bugalú is a modern jazz genre of Latin music and dance which was popular in the United States in the 1960s."
+   },
+   "chicago blues": {
+    "title": "Chicago blues",
+    "url": "https://en.wikipedia.org/wiki/Chicago_blues",
+    "text": "Chicago blues is a form of blues music that developed in Chicago, Illinois. It is based on earlier blues idioms, such as Delta blues, but is performed in an urban style."
+   },
+   "rocksteady": {
+    "title": "Rocksteady",
+    "url": "https://en.wikipedia.org/wiki/Rocksteady",
+    "text": "Rocksteady is a music genre that originated in Jamaica around 1966. The term rocksteady comes from a popular dance style which is the subject in the Alton Ellis song \"Rocksteady\" and matched the new sound."
+   },
+   "breakcore": {
+    "title": "Breakcore",
+    "url": "https://en.wikipedia.org/wiki/Breakcore",
+    "text": "Breakcore is a style of electronic dance music that emerged from jungle, hardcore, and drum & bass in the mid-to-late 1990s."
+   },
+   "footwork": {
+    "title": "Footwork (genre)",
+    "url": "https://en.wikipedia.org/wiki/Footwork_(genre)",
+    "text": "Footwork, also called juke, or Chicago juke, is a genre of electronic dance music derived from ghetto house with elements of hip-hop, first appearing in Chicago in the late 1990s."
+   },
+   "illbient": {
+    "title": "Illbient",
+    "url": "https://en.wikipedia.org/wiki/Illbient",
+    "text": "Illbient is a genre of electronic music and an art movement that originated among hip hop-influenced experimental musicians from New York City in the early 1990s."
+   },
+   "jungle": {
+    "title": "Jungle music",
+    "url": "https://en.wikipedia.org/wiki/Jungle_music",
+    "text": "Jungle is a genre of electronic music that developed in the 1990s out of the UK rave scene and Jamaican sound system culture."
+   },
+   "ghetto": {
+    "title": "Ghetto house",
+    "url": "https://en.wikipedia.org/wiki/Ghetto_house",
+    "text": "Ghetto house or booty house is a subgenre of house music which started being recognized as a distinct style from around 1992 onwards."
+   },
+   "trip hop": {
+    "title": "Trip hop",
+    "url": "https://en.wikipedia.org/wiki/Trip_hop",
+    "text": "Trip hop is a music genre defined as a psychedelic fusion of hip-hop and electronica with slow tempos and an atmospheric sound."
+   },
+   "roots reggae": {
+    "title": "Roots reggae",
+    "url": "https://en.wikipedia.org/wiki/Roots_reggae",
+    "text": "It is identified with the life of the ghetto sufferer, and the rural poor."
+   },
+   "acid jazz": {
+    "title": "Acid jazz",
+    "url": "https://en.wikipedia.org/wiki/Acid_jazz",
+    "text": "Acid jazz is a music genre that combines elements of funk, soul, and hip-hop."
+   },
+   "funaná": {
+    "title": "Funaná",
+    "url": "https://en.wikipedia.org/wiki/Funan%C3%A1",
+    "text": "The funaná [funɐˈna] is a music and dance genre from Cape Verde. Funaná is an accordion-based music."
+   },
+   "drill": {
+    "title": "Drill music",
+    "url": "https://en.wikipedia.org/wiki/Drill_music",
+    "text": "Drill music, also known as drill rap or simply drill, is a subgenre of hip-hop music with sonic origins in trap music and lyrical origins in gangsta rap. It began in Chicago, Illinois, United States, in the early 2010s."
+   },
+   "trap": {
+    "title": "Trap music",
+    "url": "https://en.wikipedia.org/wiki/Trap_music",
+    "text": "Trap music, also known simply as trap, is a subgenre of hip-hop music that originated in the Southern United States. Lyrical references to trap began appearing in 1991, while the modern sound of trap emerged in 1999."
+   },
+   "art pop": {
+    "title": "Art pop",
+    "url": "https://en.wikipedia.org/wiki/Art_pop",
+    "text": "The genre draws on pop art's integration of high and low culture, and emphasizes imagery, style, and gesture over personal expression."
+   },
+   "soukous": {
+    "title": "Soukous",
+    "url": "https://en.wikipedia.org/wiki/Soukous",
+    "text": "Soukous is a genre of dance music originating from the Democratic Republic of the Congo and the Republic of the Congo."
+   },
+   "punta": {
+    "title": "Punta",
+    "url": "https://en.wikipedia.org/wiki/Punta",
+    "text": "Punta is an Afro-indigenous dance and cultural music of the Belizean, Guatemalan, Honduran and Nicaraguan Garífuna people, originating from the Caribbean island of Saint Vincent and the Grenadines."
+   },
+   "singer-songwriter": {
+    "title": "Singer-songwriter",
+    "url": "https://en.wikipedia.org/wiki/Singer-songwriter",
+    "text": "A singer-songwriter is a musician who writes, composes, and performs their own musical material, including lyrics and melodies."
+   },
+   "world fusion": {
+    "title": "World music",
+    "url": "https://en.wikipedia.org/wiki/World_music",
+    "text": "World music is an English phrase for styles of music from primarily non-English-speaking countries, including quasi-traditional, intercultural, and traditional music."
+   },
+   "bolero": {
+    "title": "Bolero",
+    "url": "https://en.wikipedia.org/wiki/Bolero",
+    "text": "Bolero is a music genre which originated in eastern Cuba in the late 19th century as part of the trova tradition."
+   },
+   "latin pop": {
+    "title": "Latin pop",
+    "url": "https://en.wikipedia.org/wiki/Latin_pop",
+    "text": "Latin pop, also referred to as Spanish-language pop or Portuguese-language pop, is a subgenre of popular music defined primarily as pop music performed in Spanish or Portuguese."
+   },
+   "christmas music": {
+    "title": "Christmas music",
+    "url": "https://en.wikipedia.org/wiki/Christmas_music",
+    "text": "Christmas music comprises a variety of genres of music regularly performed or heard around the Christmas season. Many songs simply have a winter or seasonal theme, or have been adopted into the canon for other reasons."
+   },
+   "bachata": {
+    "title": "Bachata (music)",
+    "url": "https://en.wikipedia.org/wiki/Bachata_(music)",
+    "text": "Bachata is a genre of music that evolved in the Dominican Republic in the 20th century."
+   }
+  },
+  "artists": {
+   "Uranium Club": {
+    "title": "Uranium Club",
+    "url": "https://en.wikipedia.org/wiki/Uranium_Club",
+    "text": "Uranium Club is an American punk rock band based in Minneapolis. The band consists of members Brendan Wells, Harry Wohl, Ian Stemper and Matt Stagner."
+   },
+   "Larry Heard": {
+    "title": "Larry Heard",
+    "url": "https://en.wikipedia.org/wiki/Larry_Heard",
+    "text": "Larry Heard is an American DJ, record producer, and musician who has recorded under various names, most notably Mr. Fingers."
+   },
+   "Preoccupations": {
+    "title": "Preoccupations",
+    "url": "https://en.wikipedia.org/wiki/Preoccupations",
+    "text": "Preoccupations is a Canadian post-punk band from Calgary, Alberta, that formed in 2012 under the name Viet Cong."
+   },
+   "Larry Heard & Mr. White": {
+    "title": "Larry Heard",
+    "url": "https://en.wikipedia.org/wiki/Larry_Heard",
+    "text": "Larry Heard is an American DJ, record producer, and musician who has recorded under various names, most notably Mr. Fingers."
+   },
+   "Public Image Ltd.": {
+    "title": "Public Image Ltd",
+    "url": "https://en.wikipedia.org/wiki/Public_Image_Ltd",
+    "text": "Public Image Ltd are an English post-punk band formed by lead vocalist John Lydon, guitarist Keith Levene, bassist Jah Wobble, and drummer Jim Walker in June 1978."
+   },
+   "Protomartyr": {
+    "title": "Protomartyr (band)",
+    "url": "https://en.wikipedia.org/wiki/Protomartyr_(band)",
+    "text": "Protomartyr is an American post-punk band formed in Detroit, Michigan, in 2010. The band consists of Joe Casey, Greg Ahee, Alex Leonard, and Scott Davidson."
+   },
+   "Crack Cloud": {
+    "title": "Crack Cloud",
+    "url": "https://en.wikipedia.org/wiki/Crack_Cloud",
+    "text": "Crack Cloud are a Canadian musical and multimedia collective currently based in Calgary, Alberta, formed by drummer and frontman Zach Choy."
+   },
+   "Eyedress": {
+    "title": "Eyedress",
+    "url": "https://en.wikipedia.org/wiki/Eyedress",
+    "text": "Idris Ennolandy Vicuña, known professionally as Eyedress, is a Filipino musician who has released albums in various rock, pop and electronic styles. Hailing from Manila, he currently lives in Los Angeles."
+   },
+   "Albert Marcœur": {
+    "title": "Albert Marcœur",
+    "url": "https://en.wikipedia.org/wiki/Albert_Marc%C5%93ur",
+    "text": "Albert Marcœur is a French composer, singer and songwriter. He began his career in the early 1970s."
+   },
+   "Sonique": {
+    "title": "Sonique (musician)",
+    "url": "https://en.wikipedia.org/wiki/Sonique_(musician)",
+    "text": "Sonia Marina Clarke, better known by her stage name Sonique, is an English singer, musician and DJ."
+   },
+   "Lazar Berman, Liszt": {
+    "title": "Lazar Berman",
+    "url": "https://en.wikipedia.org/wiki/Lazar_Berman",
+    "text": "Lazar Naumovich Berman was a Soviet Russian classical pianist, Honoured Artist of the RSFSR."
+   },
+   "Chico Hamilton": {
+    "title": "Chico Hamilton",
+    "url": "https://en.wikipedia.org/wiki/Chico_Hamilton",
+    "text": "Foreststorn \"Chico\" Hamilton was an American jazz drummer and bandleader. He came to prominence as sideman for Lester Young, Gerry Mulligan, Count Basie, and Lena Horne."
+   },
+   "Swans": {
+    "title": "Swans (band)",
+    "url": "https://en.wikipedia.org/wiki/Swans_(band)",
+    "text": "Swans are an American experimental rock band formed in 1981 by singer, songwriter and multi-instrumentalist Michael Gira. Initially, their music was known for its sonic brutality and misanthropic lyrics."
+   },
+   "Mira Calix": {
+    "title": "Mira Calix",
+    "url": "https://en.wikipedia.org/wiki/Mira_Calix",
+    "text": "Chantal Francesca Passamonte, known professionally as Mira Calix, was a South African-born British-based audio and visual artist and musician signed to Warp Records. She also worked as Warp's press officer."
+   },
+   "The Orioles": {
+    "title": "The Orioles",
+    "url": "https://en.wikipedia.org/wiki/The_Orioles",
+    "text": "The Orioles were an American R&B group in the late 1940s and early 1950s. One of the first vocal groups in R&B, they were early pioneers of the doo-wop sound."
+   },
+   "Schubert, Budapest Philharmonic Orchestra, Janos Kovacs": {
+    "title": "Franz Schubert",
+    "url": "https://en.wikipedia.org/wiki/Franz_Schubert",
+    "text": "Franz Peter Schubert was an Austrian composer of the late Classical and early Romantic eras."
+   },
+   "Alvin Curran": {
+    "title": "Alvin Curran",
+    "url": "https://en.wikipedia.org/wiki/Alvin_Curran",
+    "text": "Alvin Curran is an American composer, performer, improviser, sound artist, and writer. He was born in Providence, Rhode Island, and lives and works in Rome, Italy."
+   },
+   "Throbbing Gristle": {
+    "title": "Throbbing Gristle",
+    "url": "https://en.wikipedia.org/wiki/Throbbing_Gristle",
+    "text": "Throbbing Gristle were an English music and visual arts group formed in Kingston upon Hull by Genesis P-Orridge and Cosey Fanni Tutti, later joined by Peter \"Sleazy\" Christopherson and Chris Carter."
+   },
+   "Radu Lupu, Franz Schubert": {
+    "title": "Radu Lupu",
+    "url": "https://en.wikipedia.org/wiki/Radu_Lupu",
+    "text": "Radu Lupu was a Romanian pianist. He was widely recognized as one of the greatest pianists of his time."
+   },
+   "Mayumi Kojima": {
+    "title": "Mayumi Kojima",
+    "url": "https://en.wikipedia.org/wiki/Mayumi_Kojima",
+    "text": "Mayumi Kojima is a Japanese Shibuya-kei musician. As of 2015, she has released 10 studio albums, 3 extended plays and several singles."
+   },
+   "Craig Leon": {
+    "title": "Craig Leon",
+    "url": "https://en.wikipedia.org/wiki/Craig_Leon",
+    "text": "Craig Leon is an American-born record producer, composer and arranger currently living in England."
+   },
+   "Annabel Lamb": {
+    "title": "Annabel Lamb",
+    "url": "https://en.wikipedia.org/wiki/Annabel_Lamb",
+    "text": "Annabel Lamb is an English singer-songwriter. She has released eight albums beginning with her debut album, Once Bitten."
+   },
+   "Lorez Alexandria": {
+    "title": "Lorez Alexandria",
+    "url": "https://en.wikipedia.org/wiki/Lorez_Alexandria",
+    "text": "Lorez Alexandria was an American jazz singer, described as \"one of the most gifted and underrated jazz singers of the twentieth century\"."
+   },
+   "Slowdive, Grouper": {
+    "title": "Slowdive",
+    "url": "https://en.wikipedia.org/wiki/Slowdive",
+    "text": "Slowdive is an English rock band that formed in Reading, Berkshire, in 1989."
+   },
+   "Bruno Walter, Beethoven": {
+    "title": "Bruno Walter",
+    "url": "https://en.wikipedia.org/wiki/Bruno_Walter",
+    "text": "Bruno Walter was a German-born conductor, pianist, and composer. Born in Berlin, he left Nazi Germany in 1933."
+   },
+   "Los Thuthanaka": {
+    "title": "Los Thuthanaka",
+    "url": "https://en.wikipedia.org/wiki/Los_Thuthanaka",
+    "text": "Los Thuthanaka is the debut studio album by the American duo Los Thuthanaka, consisting of siblings Chuquimamani-Condori and Joshua Chuquimia Crampton."
+   },
+   "McCoy Tyner": {
+    "title": "McCoy Tyner",
+    "url": "https://en.wikipedia.org/wiki/McCoy_Tyner",
+    "text": "Alfred McCoy Tyner was an American jazz pianist and composer known for his work with the John Coltrane Quartet from 1960 to 1965 and his long solo career afterward."
+   },
+   "Maurice Williams & The Zodiacs": {
+    "title": "Maurice Williams and the Zodiacs",
+    "url": "https://en.wikipedia.org/wiki/Maurice_Williams_and_the_Zodiacs",
+    "text": "Maurice Williams and the Zodiacs were an American doo-wop/R&B vocal group in the late 1950s and early 1960s."
+   },
+   "T.I., Chris Brown": {
+    "title": "T.I.",
+    "url": "https://en.wikipedia.org/wiki/T.I.",
+    "text": "Clifford Joseph Harris Jr., known professionally as T.I. or Tip, is an American rapper and actor."
+   },
+   "Leoš Janáček, Wiener Philharmoniker, Sir Charles Mackerras": {
+    "title": "Leoš Janáček",
+    "url": "https://en.wikipedia.org/wiki/Leo%C5%A1_Jan%C3%A1%C4%8Dek",
+    "text": "Leoš Janáček was a Czech composer, music theorist, folklorist, and teacher. He was inspired by Moravian and other Slavic music, including Eastern European folk music, to create an original, modern musical style."
+   },
+   "Theo Parrish": {
+    "title": "Theo Parrish",
+    "url": "https://en.wikipedia.org/wiki/Theo_Parrish",
+    "text": "Theo Parrish is an American DJ and record producer based in Detroit, Michigan, and known for his genre-spanning DJ sets and unconventional house productions."
+   },
+   "Bonde Do Role": {
+    "title": "Bonde do Rolê",
+    "url": "https://en.wikipedia.org/wiki/Bonde_do_Rol%C3%AA",
+    "text": "Bonde do Rolê was a Brazilian funk carioca-influenced electropop group from Curitiba, Paraná state, and consisted of MC's Pedro D'Eyrot, Laura Taylor, and DJ/MC Rodrigo Gorky."
+   },
+   "Judy Nylon, Crucial": {
+    "title": "Judy Nylon",
+    "url": "https://en.wikipedia.org/wiki/Judy_Nylon",
+    "text": "Judy Nylon is a multidisciplinary American artist who moved to London in 1970. She was half of the punk rock music group Snatch, which also featured fellow American immigrant Patti Palladin."
+   },
+   "The Jive Bombers": {
+    "title": "The Jive Bombers",
+    "url": "https://en.wikipedia.org/wiki/The_Jive_Bombers",
+    "text": "The Jive Bombers were an American R&B group from New York City."
+   },
+   "Nolan Porter": {
+    "title": "Nolan Porter",
+    "url": "https://en.wikipedia.org/wiki/Nolan_Porter",
+    "text": "Nolan Frederick Porter was an American R&B singer and songwriter who recorded two albums and six singles in the early 1970s. His best known song is \"Keep On Keeping On\", which became popular on the northern soul scene."
+   },
+   "Eurythmics": {
+    "title": "Eurythmics",
+    "url": "https://en.wikipedia.org/wiki/Eurythmics",
+    "text": "Eurythmics were a British pop duo formed in 1980, consisting of the Scottish vocalist Annie Lennox and the English musician and producer Dave Stewart."
+   },
+   "SZA": {
+    "title": "SZA",
+    "url": "https://en.wikipedia.org/wiki/SZA",
+    "text": "Solána Imani Rowe, known professionally as SZA, is an American singer-songwriter."
+   },
+   "John Lennon": {
+    "title": "John Lennon",
+    "url": "https://en.wikipedia.org/wiki/John_Lennon",
+    "text": "John Winston Ono Lennon was an English musician, songwriter and activist. He gained global fame as the founder, co-lead vocalist and rhythm guitarist of the Beatles."
+   },
+   "Fred Again.. & Bia": {
+    "title": "Fred Again",
+    "url": "https://en.wikipedia.org/wiki/Fred_Again",
+    "text": "At the 66th Annual Grammy Awards, he was nominated for Best New Artist, won Best Dance/Electronic Album for his third album Actual Life 3, and won Best Dance/Electronic Recording for his 2023 single \"Rumble\"."
+   },
+   "Vashti Bunyan": {
+    "title": "Vashti Bunyan",
+    "url": "https://en.wikipedia.org/wiki/Vashti_Bunyan",
+    "text": "Jennifer Vashti Bunyan is an English singer-songwriter. She began her career in the mid-1960s and released a debut album, Just Another Diamond Day, in 1970."
+   },
+   "Miriam Makeba": {
+    "title": "Miriam Makeba",
+    "url": "https://en.wikipedia.org/wiki/Miriam_Makeba",
+    "text": "Zenzile Miriam Makeba, nicknamed Mama Africa, was a South African singer, songwriter, actress, and civil rights activist."
+   },
+   "Voyou": {
+    "title": "Voyou",
+    "url": "https://en.wikipedia.org/wiki/Voyou",
+    "text": "Thibaud Vanhooland, known professionally as Voyou, is a French singer-songwriter."
+   },
+   "Dana Gillespie": {
+    "title": "Dana Gillespie",
+    "url": "https://en.wikipedia.org/wiki/Dana_Gillespie",
+    "text": "Richenda Antoinette de Winterstein Gillespie, known professionally as Dana Gillespie, is an English actress, singer and songwriter."
+   },
+   "Supertramp": {
+    "title": "Supertramp",
+    "url": "https://en.wikipedia.org/wiki/Supertramp",
+    "text": "Supertramp were a British rock band formed in London in 1970. Marked by the individual songwriting of founders Roger Hodgson and Rick Davies, the group were distinguished for blending progressive rock and pop styles."
+   },
+   "Carole King": {
+    "title": "Carole King",
+    "url": "https://en.wikipedia.org/wiki/Carole_King",
+    "text": "Carole King Klein is an American singer-songwriter and musician renowned for her extensive contributions to popular music."
+   },
+   "Ron Carroll": {
+    "title": "Ron Carroll",
+    "url": "https://en.wikipedia.org/wiki/Ron_Carroll",
+    "text": "Ronald Michael Carroll was an American DJ, singer, songwriter, and music producer. He was primarily active on the house music circuit and openly gay."
+   },
+   "Don Julian And The Meadowlarks": {
+    "title": "Don Julian (musician)",
+    "url": "https://en.wikipedia.org/wiki/Don_Julian_(musician)",
+    "text": "Don Julian was an American rhythm and blues, funk and soul singer, guitarist and songwriter."
+   },
+   "Trevor Dandy": {
+    "title": "Trevor Dandy",
+    "url": "https://en.wikipedia.org/wiki/Trevor_Dandy",
+    "text": "Trevor Dandy is a Jamaican-born Canadian gospel and funk musician active in the 1970s."
+   },
+   "Aleksi Perälä": {
+    "title": "Aleksi Perälä",
+    "url": "https://en.wikipedia.org/wiki/Aleksi_Per%C3%A4l%C3%A4",
+    "text": "Aleksi Perälä is a Finnish electronic music composer and producer. He has made music since 1988, and performed it live since 1996, switching between hardware and software over the years."
+   },
+   "Jim Stafford": {
+    "title": "Jim Stafford",
+    "url": "https://en.wikipedia.org/wiki/Jim_Stafford",
+    "text": "James Wayne Stafford is an American singer, songwriter, musician, and comedian. Stafford is self-taught on guitar, fiddle, piano, banjo, organ, and harmonica."
+   },
+   "The Teenagers, Frankie Lymon": {
+    "title": "The Teenagers",
+    "url": "https://en.wikipedia.org/wiki/The_Teenagers",
+    "text": "The Teenagers were an American doo-wop music group, most noted for being one of rock music's earliest successes, presented to international audiences by DJ Alan Freed."
+   },
+   "Nick Hakim": {
+    "title": "Nick Hakim",
+    "url": "https://en.wikipedia.org/wiki/Nick_Hakim",
+    "text": "Nicolas Hakim is an American musician based in Queens, New York, United States. His first EP, Where Will We Go Part 1 & 2, was self-released in 2014."
+   },
+   "Carmen Villain": {
+    "title": "Carmen Villain",
+    "url": "https://en.wikipedia.org/wiki/Carmen_Villain",
+    "text": "Carmen Maria Hillestad, known professionally as Carmen Villain, is a Norwegian-Mexican musical artist."
+   },
+   "Darcy Clay": {
+    "title": "Darcy Clay",
+    "url": "https://en.wikipedia.org/wiki/Darcy_Clay",
+    "text": "Darcy Clay was a New Zealand singer, songwriter and musician, who was made famous in 1997 for his Number 5 hit \"Jesus I Was Evil\", in which he recorded all of the instruments in his bedroom on a 4-track recorder."
+   },
+   "The Monotones": {
+    "title": "The Monotones",
+    "url": "https://en.wikipedia.org/wiki/The_Monotones",
+    "text": "The Monotones were a six-member American doo-wop vocal group in the 1950s."
+   },
+   "Ann Peebles": {
+    "title": "Ann Peebles",
+    "url": "https://en.wikipedia.org/wiki/Ann_Peebles",
+    "text": "Ann Lee Peebles is a retired American singer and songwriter who gained popularity for her Memphis soul albums of the 1970s while signed to Hi Records."
+   },
+   "Ramsey Lewis": {
+    "title": "Ramsey Lewis",
+    "url": "https://en.wikipedia.org/wiki/Ramsey_Lewis",
+    "text": "Ramsey Emmanuel Lewis Jr. was an American jazz pianist, composer, and radio personality. Lewis recorded over 80 albums and received five gold records and three Grammy Awards in his career."
+   },
+   "The Sundays": {
+    "title": "The Sundays",
+    "url": "https://en.wikipedia.org/wiki/The_Sundays",
+    "text": "The Sundays were an English alternative rock band formed in Bristol in 1988. The band's lineup consisted of lead vocalist Harriet Wheeler, guitarist David Gavurin, bassist Paul Brindley, and drummer Patrick Hannan."
+   },
+   "The Blues Busters": {
+    "title": "The Blues Busters",
+    "url": "https://en.wikipedia.org/wiki/The_Blues_Busters",
+    "text": "The Blues Busters was a vocal duo from Jamaica formed in 1960, consisting of Philip James and Lloyd Osbourne Campbell. The Blues Busters was the most consistently popular Jamaican male duo of the early 1960s."
+   },
+   "Odyssey": {
+    "title": "Odyssey (band)",
+    "url": "https://en.wikipedia.org/wiki/Odyssey_(band)",
+    "text": "Odyssey is a vocal trio originally from New York City, who are best known for their disco hits including \"Native New Yorker\", \"Use It Up and Wear It Out\", and \"Going Back to My Roots\"."
+   },
+   "Lloyd Clarke": {
+    "title": "Lloyd Clarke",
+    "url": "https://en.wikipedia.org/wiki/Lloyd_Clarke",
+    "text": "Lloyd Clarke is a Jamaican ska musician. He had a series of hits in the early 1960s."
+   },
+   "Amy Winehouse": {
+    "title": "Amy Winehouse",
+    "url": "https://en.wikipedia.org/wiki/Amy_Winehouse",
+    "text": "Amy Jade Winehouse was a British singer and songwriter."
+   },
+   "Femtanyl": {
+    "title": "Femtanyl",
+    "url": "https://en.wikipedia.org/wiki/Femtanyl",
+    "text": "Femtanyl are a Canadian-American electronic music duo based in Toronto and Seattle consisting of founding member and lead singer Noelle Stockwood and multi-instrumentalist Juno Callender."
+   },
+   "Brenda Russell": {
+    "title": "Brenda Russell",
+    "url": "https://en.wikipedia.org/wiki/Brenda_Russell",
+    "text": "Brenda Russell is an American-Canadian singer-songwriter, producer, and keyboardist. Russell has a diverse musical range which encompasses R&B, pop, soul, dance, and jazz."
+   },
+   "Earth, Wind & Fire": {
+    "title": "Earth, Wind & Fire",
+    "url": "https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire",
+    "text": "Earth, Wind & Fire is an American band formed in Chicago, Illinois, in 1969. Their music spans multiple genres, including jazz, R&B, soul, funk, disco, pop, Latin and Afro-pop."
+   },
+   "Jim Legxacy": {
+    "title": "Jim Legxacy",
+    "url": "https://en.wikipedia.org/wiki/Jim_Legxacy",
+    "text": "James Folorunso Ifeanyi Olaloye known professionally as Jim Legxacy, is a British rapper, singer, and record producer from Catford, London Borough of Lewisham."
+   },
+   "Jah Wobble": {
+    "title": "Jah Wobble",
+    "url": "https://en.wikipedia.org/wiki/Jah_Wobble",
+    "text": "John Joseph Wardle is an English bass guitarist and singer. He was the original bass player in Public Image Ltd in the late 1970s and early 1980s; he left the band after two albums."
+   },
+   "The Earons": {
+    "title": "The Earons",
+    "url": "https://en.wikipedia.org/wiki/The_Earons",
+    "text": "The Earons are a self-described \"astro-funk\" band from Tampa Bay, Florida. They were inspired by the cosmic mythology of Sun Ra with a bit of Anthony Braxton's mathematica."
+   },
+   "Single Gun Theory": {
+    "title": "Single Gun Theory",
+    "url": "https://en.wikipedia.org/wiki/Single_Gun_Theory",
+    "text": "Single Gun Theory was an Australian electronic dance music band formed in 1986."
+   },
+   "Junior Byles": {
+    "title": "Junior Byles",
+    "url": "https://en.wikipedia.org/wiki/Junior_Byles",
+    "text": "Kenneth Byles, also known as \"Junior Byles\", \"Chubby\", or \"King Chubby\", was a foundation conscious roots reggae singer from Jamaica."
+   },
+   "Headless Chickens": {
+    "title": "Headless Chickens",
+    "url": "https://en.wikipedia.org/wiki/Headless_Chickens",
+    "text": "The Headless Chickens was a New Zealand band."
+   },
+   "Deee-Lite": {
+    "title": "Deee-Lite",
+    "url": "https://en.wikipedia.org/wiki/Deee-Lite",
+    "text": "Deee-Lite was an American house and dance music group formed in New York City."
+   },
+   "Errol Dunkley": {
+    "title": "Errol Dunkley",
+    "url": "https://en.wikipedia.org/wiki/Errol_Dunkley",
+    "text": "Errol Dunkley, sometimes spelled Erroll Dunkley, is a Jamaican reggae musician, born in Kingston, Jamaica."
+   },
+   "Michael Wycoff": {
+    "title": "Michael Wycoff",
+    "url": "https://en.wikipedia.org/wiki/Michael_Wycoff",
+    "text": "Michael Wycoff was an American R&B singer. He scored several hits on the US R&B chart during the 1980s."
+   },
+   "Fehlfarben": {
+    "title": "Fehlfarben",
+    "url": "https://en.wikipedia.org/wiki/Fehlfarben",
+    "text": "Fehlfarben is a Neue Deutsche Welle music band from Düsseldorf, Germany, that was formed in 1979."
+   },
+   "EsDeeKid, Rico Ace": {
+    "title": "EsDeeKid",
+    "url": "https://en.wikipedia.org/wiki/EsDeeKid",
+    "text": "EsDeeKid is a British rapper from Liverpool, England. He released his debut mixtape, Rebel, in June 2025."
+   },
+   "The Monn Keys": {
+    "title": "The Monn Keys",
+    "url": "https://en.wikipedia.org/wiki/The_Monn_Keys",
+    "text": "The Monn Keys were a Norwegian musical show group that was active from 1948 until 1964. Founded by Sølvi Wang and Egil Monn-Iversen, the group became well-known in Norway for their jazz and pop music performances."
+   },
+   "El Wali": {
+    "title": "El Wali (band)",
+    "url": "https://en.wikipedia.org/wiki/El_Wali_(band)",
+    "text": "El Wali is a Western Saharan folk music group who recorded an album, Tiris, in 1994."
+   },
+   "Eivør": {
+    "title": "Eivør (singer)",
+    "url": "https://en.wikipedia.org/wiki/Eiv%C3%B8r_(singer)",
+    "text": "Eivør Pálsdóttir, known mononymously as Eivør, is a Faroese singer-songwriter. Born and raised in Syðrugøta, she had her first televised performance at the age of 13."
+   },
+   "Alice Babs and her orchestra": {
+    "title": "Alice Babs",
+    "url": "https://en.wikipedia.org/wiki/Alice_Babs",
+    "text": "Hildur Alice Nilson, known by her stage name Alice Babs, was a Swedish singer. She worked in a wide number of genres – Swedish folklore, Elizabethan songs and opera."
+   },
+   "Björk": {
+    "title": "Björk",
+    "url": "https://en.wikipedia.org/wiki/Bj%C3%B6rk",
+    "text": "Björk Guðmundsdóttir is an Icelandic singer, songwriter, composer, record producer and actress. She is regarded as one of the most influential musicians of her era."
+   },
+   "Agustín Barrios": {
+    "title": "Agustín Barrios",
+    "url": "https://en.wikipedia.org/wiki/Agust%C3%ADn_Barrios",
+    "text": "Agustín Pío Barrios was a Paraguayan virtuoso classical guitarist and composer, regarded by some as one of the greatest performers and arguably the most prolific composer for the classical guitar."
+   },
+   "M'Pongo Love": {
+    "title": "M'Pongo Love",
+    "url": "https://en.wikipedia.org/wiki/M%27Pongo_Love",
+    "text": "Aimee Françoise M'Pongo Langu, known professionally as M'Pongo Love, was a Congolese singer and songwriter."
+   },
+   "Gro Anita Schønn": {
+    "title": "Gro Anita Schønn",
+    "url": "https://en.wikipedia.org/wiki/Gro_Anita_Sch%C3%B8nn",
+    "text": "Gro Anita Schønn was a Norwegian singer."
+   },
+   "Virna Lindt": {
+    "title": "Virna Lindt",
+    "url": "https://en.wikipedia.org/wiki/Virna_Lindt",
+    "text": "Virna Lindt is a Swedish singer and record producer. Her debut single \"Attention Stockholm\" became an indie-chart hit in 1982."
+   },
+   "José Feliciano": {
+    "title": "José Feliciano",
+    "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Feliciano",
+    "text": "José Montserrate Feliciano García is a Puerto Rican musician. He recorded many international hits, including his rendition of the Doors' \"Light My Fire\" and his self-penned Christmas song \"Feliz Navidad\"."
+   },
+   "Jacintha": {
+    "title": "Jacintha Abisheganaden",
+    "url": "https://en.wikipedia.org/wiki/Jacintha_Abisheganaden",
+    "text": "She is a founding member of the performance company TheatreWorks."
+   },
+   "Pretty Ugly": {
+    "title": "Pretty Ugly",
+    "url": "https://en.wikipedia.org/wiki/Pretty_Ugly",
+    "text": "Pretty Ugly is the fourth studio album by the American punk rock band Lunachicks. It was released by Go-Kart Records in 1997."
+   },
+   "Grace Barbé": {
+    "title": "Grace Barbé",
+    "url": "https://en.wikipedia.org/wiki/Grace_Barb%C3%A9",
+    "text": "Grace Barbé is a Seychellois-born Australian singer-songwriter who also performs with the Afrobeat and psychedelic band of the same name which includes Jamie Searle and Hardy Perrine."
+   },
+   "Frank de Wulf": {
+    "title": "Frank De Wulf",
+    "url": "https://en.wikipedia.org/wiki/Frank_De_Wulf",
+    "text": "Frank De Wulf is a Belgian DJ, musician and record label owner. He is considered one of the pioneers of the Belgian new beat and techno scene."
+   },
+   "Seu Jorge": {
+    "title": "Seu Jorge",
+    "url": "https://en.wikipedia.org/wiki/Seu_Jorge",
+    "text": "Jorge Mário da Silva, known as Seu Jorge, is a Brazilian musician, singer, songwriter, and actor."
+   }
+  }
+ },
  "topology": {
   "cycles": [
    {
