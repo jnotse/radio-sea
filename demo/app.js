@@ -17,6 +17,7 @@
     tags: new Set(), query: '', showRoutes: true };
   const pointers = new Map();
   const terrain = window.RadioSeaLandscape.buildTerrain(DATA);
+  let landDrawn = false, pendingLand = null;
   let animation = null, player = null, playerGeneration = 0, playerTimer;
   let playbackMode = 'idle', volume = 75;
   let playerReady = false, songDuration = 0, scrubbing = false, pendingSeek = null;
@@ -110,18 +111,23 @@
 
   // Camera is in pixels per world unit. Keep one consistent range for fit,
   // flying and wheel zoom (the old wheel handler clamped fitted zoom to 4).
+  // Zooming out stops at twice the view that fits every song: further out
+  // the squares are specks and the land would take long to paint.
   const MIN_ZOOM = 0.5, MAX_ZOOM = 100;
+  const songBounds = {
+    minX: Math.min(...releases.map((r) => r.x)) - 5, maxX: Math.max(...releases.map((r) => r.x)) + 5,
+    minY: Math.min(...releases.map((r) => r.y)) - 5, maxY: Math.max(...releases.map((r) => r.y)) + 5,
+  };
+  const fittedZoom = () => Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, canvas.clientWidth / (songBounds.maxX - songBounds.minX),
+    canvas.clientHeight / (songBounds.maxY - songBounds.minY)));
+  const minZoom = () => Math.max(MIN_ZOOM, fittedZoom() / 2);
   const toScreen = (x, y) => ({ x: (x - state.cam.x) * state.cam.zoom + canvas.clientWidth / 2,
     y: (y - state.cam.y) * state.cam.zoom + canvas.clientHeight / 2 });
   function cancelFly() { if (animation !== null) cancelAnimationFrame(animation); animation = null; }
   function fitView() {
     cancelFly();
-    const minX = Math.min(...releases.map((r) => r.x)) - 5;
-    const maxX = Math.max(...releases.map((r) => r.x)) + 5;
-    const minY = Math.min(...releases.map((r) => r.y)) - 5;
-    const maxY = Math.max(...releases.map((r) => r.y)) + 5;
-    Object.assign(state.cam, { x: (minX + maxX) / 2, y: (minY + maxY) / 2,
-      zoom: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, canvas.clientWidth / (maxX - minX), canvas.clientHeight / (maxY - minY))) });
+    Object.assign(state.cam, { x: (songBounds.minX + songBounds.maxX) / 2, y: (songBounds.minY + songBounds.maxY) / 2,
+      zoom: fittedZoom() });
     draw();
   }
   function flyTo(r) {
@@ -140,7 +146,7 @@
   }
   function zoomAt(factor, x = canvas.clientWidth / 2, y = canvas.clientHeight / 2) {
     cancelFly();
-    const old = state.cam.zoom, next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, old * factor));
+    const old = state.cam.zoom, next = Math.min(MAX_ZOOM, Math.max(minZoom(), old * factor));
     state.cam.x += (x - canvas.clientWidth / 2) * (1 / old - 1 / next);
     state.cam.y += (y - canvas.clientHeight / 2) * (1 / old - 1 / next);
     state.cam.zoom = next; draw();
@@ -156,11 +162,15 @@
     // Patagonian steppe seen from above, each cluster of songs a grove of
     // bushes. The terrain is painted once in world space and scaled with the
     // camera, so its pixels grow as you zoom.
+    // The land has no edge: tiles a view reaches for the first time are
+    // painted a few per frame (all at once for the first view) so panning
+    // stays smooth, with plain steppe showing until they are ready.
     ctx.imageSmoothingEnabled = false;
     ctx.fillStyle = terrain.ground; ctx.fillRect(0, 0, w, h);
-    const origin = toScreen(terrain.minX, terrain.minY), unit = state.cam.zoom / terrain.scale;
-    ctx.drawImage(terrain.bitmap, Math.round(origin.x), Math.round(origin.y),
-      Math.round(terrain.bitmap.width * unit), Math.round(terrain.bitmap.height * unit));
+    if (!terrain.draw(ctx, state.cam, w, h, landDrawn ? 12 : Infinity) && pendingLand === null) {
+      pendingLand = requestAnimationFrame(() => { pendingLand = null; draw(); });
+    }
+    landDrawn = true;
     if (state.showRoutes) {
       ctx.strokeStyle = '#5a3b26cc'; ctx.setLineDash([2, 4]);
       for (const r of DATA.tradeRoutes) {
@@ -271,7 +281,7 @@
       const before = pinchPoints(), old = state.cam.zoom;
       pointer.x = e.clientX; pointer.y = e.clientY;
       const after = pinchPoints(), rect = canvas.getBoundingClientRect();
-      const next = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, old * after.distance / before.distance));
+      const next = Math.max(minZoom(), Math.min(MAX_ZOOM, old * after.distance / before.distance));
       // Keep the world position under the fingers stable while pinching/panning.
       state.cam.x += (before.x - rect.left - rect.width / 2) / old - (after.x - rect.left - rect.width / 2) / next;
       state.cam.y += (before.y - rect.top - rect.height / 2) / old - (after.y - rect.top - rect.height / 2) / next;
