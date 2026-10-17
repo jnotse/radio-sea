@@ -59,7 +59,8 @@ async function getJson(path, fetchImpl, backoff) {
 }
 
 /**
- * Genres for one play: { genres, source: 'recording' | 'artist' | null, recording }.
+ * Genres for one play: { genres, source: 'recording' | 'artist' | null, recording, length }.
+ * `length` is the recording's length in seconds when MusicBrainz knows it.
  * `artistGenres` caches artist lookups across plays.
  */
 export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () => wait(1100),
@@ -83,17 +84,18 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
     const hit = (found?.recordings ?? []).find((r) => recordingMatches(play, r));
     if (hit) recording = await recordingById(hit.id);
   }
-  if (!recording) return { genres: [], source: null, recording: null };
+  if (!recording) return { genres: [], source: null, recording: null, length: null };
 
+  const length = recording.length > 0 ? Math.round(recording.length / 1000) : null;
   const own = topGenres(recording);
-  if (own.length) return { genres: own, source: 'recording', recording: recording.id };
+  if (own.length) return { genres: own, source: 'recording', recording: recording.id, length };
   const artistId = recording['artist-credit']?.[0]?.artist?.id;
-  if (!artistId) return { genres: [], source: null, recording: recording.id };
+  if (!artistId) return { genres: [], source: null, recording: recording.id, length };
   if (!artistGenres.has(artistId)) {
     artistGenres.set(artistId, topGenres(await get(`/artist/${encodeURIComponent(artistId)}?inc=genres&fmt=json`)));
   }
   const fromArtist = artistGenres.get(artistId);
-  return { genres: fromArtist, source: fromArtist.length ? 'artist' : null, recording: recording.id };
+  return { genres: fromArtist, source: fromArtist.length ? 'artist' : null, recording: recording.id, length };
 }
 
 /**
@@ -104,7 +106,9 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
 export async function lookupGenresForPlays(plays, { cache = {}, lookup = lookupTrackGenres,
   onProgress = () => {}, checkpoint = async () => {}, ...options } = {}) {
   const result = { ...cache };
-  const todo = [...new Map(plays.map((play) => [songKey(play), play])).entries()].filter(([key]) => !(key in result));
+  // Entries saved before lengths were recorded are looked up again.
+  const todo = [...new Map(plays.map((play) => [songKey(play), play])).entries()]
+    .filter(([key]) => !(key in result) || !('length' in result[key]));
   const artistGenres = new Map();
   for (const [index, [key, play]] of todo.entries()) {
     let found;

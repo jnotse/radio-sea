@@ -35,6 +35,7 @@ push to `main`; GitHub Pages republishes automatically.
 ```sh
 npm run catalog:extend    # add new songs from the saved radio tracklists
 npm run catalog:genres    # look up each song's own genres on MusicBrainz
+npm run catalog:deezer    # tempo (BPM), length and loudness from Deezer
 git add data demo && git commit -m "Add more music" && git push
 ```
 

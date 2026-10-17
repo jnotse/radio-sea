@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { Readable } from 'node:stream';
 import { gzipSync } from 'node:zlib';
-import { createDiscogsMatcher, parseDumpRelease, scanDiscogsDump } from '../src/catalog/discogs-dump.js';
+import { createDiscogsMatcher, parseDumpRelease, scanDiscogsDump, seconds } from '../src/catalog/discogs-dump.js';
 import { songKey } from '../src/catalog/extend.js';
 
 // Miniature of the Discogs releases dump layout (https://data.discogs.com/).
@@ -81,6 +81,10 @@ async function scan(text, { gzip = false, chunk = 7, limit } = {}) {
 }
 const of = (songs, artist, title) => songs[songKey({ artist, title })];
 
+test('track lengths read as seconds', () => {
+  assert.deepEqual(['4:45', '1:02:03', '', 'n/a', '0:00'].map(seconds), [285, 3723, null, null, null]);
+});
+
 test('parses a release, including nested index tracks and escaped names', () => {
   const r = parseDumpRelease(RELEASES[9]);
   assert.equal(r.id, 10);
@@ -96,7 +100,7 @@ test('songs get the styles of the releases that list them, counting each album o
   const { scanned, songs } = await scan(dump(RELEASES));
   assert.equal(scanned, RELEASES.length);
   assert.deepEqual(of(songs, 'McCoy Tyner', 'My Favorite Things'),
-    { genres: ['Jazz'], styles: ['Hard Bop', 'Modal', 'Post Bop'], year: 1963, source: 'track', releases: [1, 3] });
+    { genres: ['Jazz'], styles: ['Hard Bop', 'Modal', 'Post Bop'], year: 1963, length: 180, source: 'track', releases: [1, 3] });
   const death = of(songs, 'Death', 'Keep on Knocking');
   assert.deepEqual([death.styles, death.source], [['Garage Rock', 'Proto-Punk'], 'track']);
   assert.ok(!death.styles.includes('Death Metal'), 'the other band called Death must not leak in');
@@ -112,15 +116,15 @@ test('compilations and YouTube videos count, but a compilation year is not the s
 test('without a listed song, the artist styles are used only when the name is unambiguous', async () => {
   const { songs } = await scan(dump(RELEASES));
   assert.deepEqual(of(songs, 'Throbbing Gristle', 'Walkabout'),
-    { genres: ['Electronic'], styles: ['Industrial', 'Experimental', 'Noise'], year: null, source: 'artist', releases: [] });
-  assert.deepEqual(of(songs, 'Solar', 'Your Secret'), { genres: [], styles: [], year: null, source: null, releases: [] });
+    { genres: ['Electronic'], styles: ['Industrial', 'Experimental', 'Noise'], year: null, length: null, source: 'artist', releases: [] });
+  assert.deepEqual(of(songs, 'Solar', 'Your Secret'), { genres: [], styles: [], year: null, length: null, source: null, releases: [] });
 });
 
 test('own releases outrank compilations, and placeholder artists are never matched', async () => {
   const { songs } = await scan(dump(RELEASES));
   assert.deepEqual(of(songs, 'Preoccupations', 'Espionage'),
-    { genres: ['Rock'], styles: ['Indie Rock', 'Post-Punk'], year: 2018, source: 'track', releases: [14] });
-  assert.deepEqual(of(songs, 'Unknown Artist', 'Untitled'), { genres: [], styles: [], year: null, source: null, releases: [] });
+    { genres: ['Rock'], styles: ['Indie Rock', 'Post-Punk'], year: 2018, length: 180, source: 'track', releases: [14] });
+  assert.deepEqual(of(songs, 'Unknown Artist', 'Untitled'), { genres: [], styles: [], year: null, length: null, source: null, releases: [] });
 });
 
 test('the dump streams as gzip or plain XML in any chunk size, and --limit stops early', async () => {

@@ -66,10 +66,17 @@ export function parseDumpRelease(xml) {
     // Index tracks nest sub-tracks, so split at each opening tag instead of pairing tags.
     tracks: tracklist.split('<track>').slice(1).map((part) => ({
       title: decodeEntities(first(part, /<title>([^<]*)<\/title>/) ?? ''),
+      length: seconds(first(part, /<duration>([^<]*)<\/duration>/)),
       artists: credits(first(part, /<artists>([\s\S]*?)<\/artists>/)),
     })),
     videoIds: [...xml.matchAll(/<video src="[^"]*?(?:[?&]v=|youtu\.be\/)([\w-]{11})/g)].map((m) => m[1]),
   };
+}
+
+/** "4:45" or "1:02:03" -> seconds; anything else -> null. */
+export function seconds(duration) {
+  if (!/^\d{1,3}(:\d{2}){1,2}$/.test(duration ?? '')) return null;
+  return duration.split(':').reduce((total, part) => total * 60 + Number(part), 0) || null;
 }
 
 function count(tally, names) {
@@ -140,7 +147,7 @@ export function createDiscogsMatcher(plays) {
             if (key === song.primary) song.artistIds.add(id);
             // A compilation's year is not the song's.
             const own = releaseArtists.some((artist) => artist.key === key);
-            if (!song.groups.has(group)) song.groups.set(group, { ...found, own, year: own ? release.year : null, via: 'track' });
+            if (!song.groups.has(group)) song.groups.set(group, { ...found, own, year: own ? release.year : null, length: track.length, via: 'track' });
           }
         }
       }
@@ -165,8 +172,11 @@ export function createDiscogsMatcher(plays) {
           const styles = new Map(), genres = new Map();
           for (const group of groups) { count(styles, group.styles); count(genres, group.genres); }
           const years = groups.map((group) => group.year).filter(Boolean);
+          const lengths = groups.map((group) => group.length).filter(Boolean).sort((a, b) => a - b);
           out[key] = { genres: top(genres, MAX_GENRES), styles: top(styles, MAX_STYLES),
             year: years.length ? Math.min(...years) : null,
+            // The middle of the listed lengths: edits and extended mixes pull both ways.
+            length: lengths.length ? lengths[Math.floor((lengths.length - 1) / 2)] : null,
             source: groups.some((group) => group.via === 'track') ? 'track' : 'video',
             releases: groups.map((group) => group.releaseId).slice(0, 5) };
           continue;
@@ -177,8 +187,8 @@ export function createDiscogsMatcher(plays) {
         const id = ids.length === 1 ? ids[0] : known.length === 1 ? known[0] : null;
         const tally = id == null ? null : byId.get(id);
         out[key] = tally
-          ? { genres: top(tally.genres, MAX_GENRES), styles: top(tally.styles, MAX_STYLES), year: null, source: 'artist', releases: [] }
-          : { genres: [], styles: [], year: null, source: null, releases: [] };
+          ? { genres: top(tally.genres, MAX_GENRES), styles: top(tally.styles, MAX_STYLES), year: null, length: null, source: 'artist', releases: [] }
+          : { genres: [], styles: [], year: null, length: null, source: null, releases: [] };
       }
       return out;
     },

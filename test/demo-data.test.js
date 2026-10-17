@@ -45,3 +45,15 @@ test('Discogs genres and styles come first, then MusicBrainz; Discogs fills a mi
   assert.deepEqual(withOwnGenres(song, empty, musicbrainz).genres, ['post-bop']);
   assert.deepEqual(withOwnGenres(song).genres, []);
 });
+
+test('length prefers measured recordings over sleeve listings; tempo comes from Deezer', () => {
+  const song = { ...sample, artist: 'McCoy Tyner', title: 'My Favorite Things' };
+  const key = songKey(song);
+  const discogs = { [key]: { genres: [], styles: [], length: 820 } };
+  assert.equal(withOwnGenres(song, discogs).length, 820);
+  assert.equal(withOwnGenres(song, discogs, { [key]: { genres: [], length: 819 } }).length, 819);
+  const both = withOwnGenres(song, discogs, { [key]: { genres: [], length: 819 } }, { [key]: { bpm: 132, length: 818 } });
+  assert.deepEqual([both.length, both.bpm], [818, 132]);
+  const [release] = mergeCatalogue([playToRaw(both)]).releases;
+  assert.deepEqual([release.tracks[0].duration, release.tracks[0].bpm], [818, 132]);
+});

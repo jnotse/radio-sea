@@ -584,7 +584,8 @@
     $('d-title').textContent = r.name; $('d-artist').textContent = r.artist;
     $('deck-island').textContent = islandLabel(r.islandId).toUpperCase();
     $('d-meta').replaceChildren(node('span', genres(r).join(' · ') || 'No genres found for this song'));
-    if (r.year || r.country) $('d-meta').append(node('span', [r.year, r.country].filter(Boolean).join(' · ')));
+    const facts = [r.year, r.country, r.length ? formatTime(r.length) : null, r.bpm ? `${r.bpm} BPM` : null].filter(Boolean);
+    if (facts.length) $('d-meta').append(node('span', facts.join(' · ')));
     $('d-meta').append(node('span', islandLabel(r.islandId, true)));
     if (changed) { if (continueInPlayer && validVideo(r)) loadInPlayer(r); else preparePlayer(r); }
     $('d-sources').replaceChildren();
