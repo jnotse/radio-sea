@@ -67,6 +67,20 @@ test('an island only claims a genre that at least half its tracks have', () => {
   assert.equal(island.name, 'Special Guests');
 });
 
+test('a mixed set whose tracks mostly have genres is named after its two commonest, not the show', () => {
+  const { islands } = build([
+    play('A', 'One', { genres: ['soul', 'house'] }),
+    play('B', 'Two', { genres: ['soul', 'disco'] }),
+    play('C', 'Three', { genres: ['soul'] }),
+    play('D', 'Four', { genres: ['house'] }),
+    play('E', 'Five', { genres: ['funk'] }),
+    play('F', 'Six'),
+    play('G', 'Seven'),
+  ]);
+  assert.equal(islands.length, 1);
+  assert.deepEqual([islands[0].name, islands[0].basis], ['soul & house', 'mixed']);
+});
+
 test('episodes of one show get distinct island names; station HTML entities are decoded', () => {
   const other = { date: '2026-10-16', showGenres: ['Ambient'], sourceUrl: 'https://www.thelotradio.com/shows/special-guests/2026-10-16-1100' };
   const { islands } = build([

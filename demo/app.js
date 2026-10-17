@@ -221,7 +221,7 @@
     ctx.font = '9px Silkscreen, monospace'; ctx.textAlign = 'center';
     for (const island of order) {
       const name = island.name.trim().toUpperCase();
-      const label = name.length > 22 ? `${name.slice(0, 21).trimEnd()}…` : name;
+      const label = name.length > 26 ? `${name.slice(0, 25).trimEnd()}…` : name;
       const members = island.memberIds.map((id) => byId.get(id)).filter(Boolean).map((r) => toScreen(r.x, r.y));
       const cx = members.reduce((sum, p) => sum + p.x, 0) / members.length;
       const top = Math.min(...members.map((p) => p.y)), bottom = Math.max(...members.map((p) => p.y));

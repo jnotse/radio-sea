@@ -98,28 +98,46 @@ function distinctNames(islands) {
 // An island may only claim a sound that at least half of its tracks really
 // have. Of those, it takes the most specific: the one rarest in the whole
 // catalogue, so doo-wop songs that also carry "rock" make a "doo wop" island.
-// Without such a sound it is named after the show most of them were played
-// on, since that is what grouped them. Station-supplied show genres never
-// name an island: they describe a whole set, not its tracks.
+// A mixed set, where most tracks have genres but none is shared by half, is
+// named after its two commonest. Only when most of its tracks have no genre
+// at all is it named after the show most of them were played on, since that
+// is what grouped them. Station-supplied show genres never name an island:
+// they describe a whole set, not its tracks.
 function islandName(members, documentFrequency = new Map()) {
   const tagsOf = (member) => member.tags?.all ?? member.styles ?? [];
-  const genre = majorityTag(members, (m) => tagsOf(m).filter((t) => !isContextTag(t) && !t.startsWith('mood:')), documentFrequency);
+  const soundOf = (member) => tagsOf(member).filter((t) => !isContextTag(t) && !t.startsWith('mood:'));
+  const genre = majorityTag(members, soundOf, documentFrequency);
   if (genre) return { name: tagLabel(genre), basis: 'sound' };
+  if (members.filter((m) => soundOf(m).length > 0).length * 2 >= members.length) {
+    return { name: commonestTags(members, soundOf, documentFrequency).slice(0, 2).map(tagLabel).join(' & '), basis: 'mixed' };
+  }
   const show = majorityTag(members, (m) => tagsOf(m).filter((t) => t.startsWith('show:')));
   if (show) return { name: tagLabel(show), basis: 'show' };
   return { name: null, basis: null };
 }
 
-/** Tags at least half the members share; the rarest in the catalogue wins, then the commonest here. */
-function majorityTag(members, tagsOf, documentFrequency = new Map()) {
+function tagCounts(members, tagsOf) {
   const counts = new Map();
   for (const member of members) {
     for (const tag of new Set(tagsOf(member))) counts.set(tag, (counts.get(tag) ?? 0) + 1);
   }
-  const shared = [...counts.entries()].filter(([, count]) => count * 2 >= members.length);
+  return [...counts.entries()];
+}
+
+/** Tags at least half the members share; the rarest in the catalogue wins, then the commonest here. */
+function majorityTag(members, tagsOf, documentFrequency = new Map()) {
+  const shared = tagCounts(members, tagsOf).filter(([, count]) => count * 2 >= members.length);
   const rarity = (tag) => documentFrequency.get(tag) ?? Infinity;
   shared.sort((a, b) => rarity(a[0]) - rarity(b[0]) || b[1] - a[1] || a[0].localeCompare(b[0]));
   return shared[0]?.[0] ?? null;
+}
+
+/** Every tag the members carry, commonest here first; ties go to the rarest in the catalogue. */
+function commonestTags(members, tagsOf, documentFrequency = new Map()) {
+  const rarity = (tag) => documentFrequency.get(tag) ?? Infinity;
+  return tagCounts(members, tagsOf)
+    .sort((a, b) => b[1] - a[1] || rarity(a[0]) - rarity(b[0]) || a[0].localeCompare(b[0]))
+    .map(([tag]) => tag);
 }
 
 function islandRadius(memberCount) {

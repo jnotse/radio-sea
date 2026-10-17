@@ -1,5 +1,5 @@
 window.SEA_DATA = {
- "generatedAt": "2026-10-17T11:13:07.232Z",
+ "generatedAt": "2026-10-17T15:01:34.660Z",
  "stats": {
   "stations": [
    {
@@ -83,8 +83,8 @@ window.SEA_DATA = {
   },
   {
    "id": 2,
-   "name": "5 GATE TEMPLE w/ Devon Rexi (R)",
-   "basis": "show",
+   "name": "electronic & hip hop",
+   "basis": "mixed",
    "memberIds": [
     "rel-130",
     "rel-180",
@@ -181,8 +181,8 @@ window.SEA_DATA = {
   },
   {
    "id": 6,
-   "name": "SOUP TO NUTS W/ ANU",
-   "basis": "show",
+   "name": "funk / soul & electronic",
+   "basis": "mixed",
    "memberIds": [
     "rel-184",
     "rel-118",
