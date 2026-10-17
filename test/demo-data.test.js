@@ -107,18 +107,42 @@ test('richer descriptors (instruments, credits, formats, curator channels and co
   assert.ok(releases[0].tags.all.includes('channel:Shindō Vibrations'));
 });
 
-test('only facts for genres and artists on the map go into it, with their credit', () => {
-  const wiki = {
-    genres: { kuduro: { title: 'Kuduro', url: 'https://en.wikipedia.org/wiki/Kuduro', text: 'Kuduro is music from Angola.' },
-      polka: { title: 'Polka', url: 'u', text: 'Polka is a dance.' }, 'new wave': null },
-    artists: { 'Buraka Som Sistema': { title: 'Buraka Som Sistema', url: 'v', text: 'A Portuguese band.' }, Nobody: null },
+test("Guano's facts: genres on the map, and artists only for the songs their fact was checked against", () => {
+  const written = {
+    genres: { kuduro: 'Kuduro comes from Luanda.', polka: 'Polka is from Bohemia.' },
+    artists: {
+      'Buraka Som Sistema': { songs: ['Kalemba (Wegue Wegue)'], text: 'A Lisbon kuduro group.' },
+      Solar: { songs: ['Your Secret'], text: 'A Dutch duo.' },
+    },
   };
-  const releases = [{ artist: 'Buraka Som Sistema', tags: ['kuduro', 'new wave', 'show-genre:polka', 'station:nts'] }, { artist: 'Nobody', tags: [] }];
-  assert.deepEqual(factsOnMap(releases, wiki), {
-    genres: { kuduro: { title: 'Kuduro', url: 'https://en.wikipedia.org/wiki/Kuduro', text: 'Kuduro is music from Angola.' } },
-    artists: { 'Buraka Som Sistema': { title: 'Buraka Som Sistema', url: 'v', text: 'A Portuguese band.' } },
+  const releases = [
+    { artist: 'Buraka Som Sistema', name: 'kalemba (wegue wegue)', tags: ['kuduro', 'show-genre:polka', 'station:nts'] },
+    // Another song under a name with a fact: maybe someone else, so no fact until it is checked.
+    { artist: 'Solar', name: 'Your Secret', tags: [] }, { artist: 'Solar', name: 'Something Else', tags: [] },
+  ];
+  assert.deepEqual(factsOnMap(releases, written), {
+    genres: { kuduro: { text: 'Kuduro comes from Luanda.' } },
+    artists: { 'Buraka Som Sistema': { text: 'A Lisbon kuduro group.' } },
   });
-  assert.deepEqual(factsOnMap(releases), { genres: {}, artists: {} }, 'nothing looked up yet');
+  // Names written with combining accents still match.
+  assert.deepEqual(factsOnMap([{ artist: 'Jose\u0301', name: 'Song', tags: ['funana\u0301'] }],
+    { genres: { 'funaná': 'From Cape Verde.' }, artists: { 'José': { songs: ['Song'], text: 'A singer.' } } }),
+  { genres: { 'funana\u0301': { text: 'From Cape Verde.' } }, artists: { 'Jose\u0301': { text: 'A singer.' } } });
+  assert.deepEqual(factsOnMap(releases), { genres: {}, artists: {} }, 'nothing written yet');
+});
+
+test('every written fact fits a speech bubble and names something on the map', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const written = JSON.parse(await readFile(new URL('../data/guano-facts.json', import.meta.url), 'utf8'));
+  const map = JSON.parse(await readFile(new URL('../demo/sea-data.json', import.meta.url), 'utf8'));
+  for (const text of [...Object.values(written.genres), ...Object.values(written.artists).map((a) => a.text)]) {
+    assert.ok(text.length >= 30 && text.length <= 220, `fits a bubble: ${text}`);
+  }
+  const facts = factsOnMap(map.releases, written);
+  assert.equal(Object.keys(facts.genres).length, Object.keys(written.genres).length, 'every genre fact is for a genre on the map');
+  const key = (name) => name.normalize('NFC').toLowerCase();
+  const used = new Set(Object.keys(facts.artists).map(key));
+  for (const name of Object.keys(written.artists)) assert.ok(used.has(key(name)), `${name}'s fact is for songs on the map`);
 });
 
 test('a channel upload takes its linked record\'s spelling, album and label before the uploader\'s own', () => {
