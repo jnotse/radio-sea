@@ -45,9 +45,13 @@ code { color: var(--gold); }
 .desktop-bar { grid-column: 1 / -1; position: relative; display: flex; align-items: center; padding: 0 14px;
   border: 2px solid var(--edge-dark); overflow: hidden; background: #36609a; }
 #banner { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; }
-.brand { position: relative; display: flex; align-items: baseline; gap: 10px; padding: 4px 9px 3px;
+.brand { position: relative; display: flex; align-items: center; gap: 10px; padding: 4px 9px 3px;
   background: #182033d9; border: 2px solid #0c111d; }
-.brand-icon { font-size: 18px; line-height: 1; color: var(--orange); }
+/* Guano's face, drawn at 32 × 32 and scaled up in whole pixels. */
+.guano-face { width: 32px; height: 32px; image-rendering: pixelated; flex: none; }
+.guano-face.large { width: 64px; height: 64px; background: var(--recess); border: 2px solid; border-color: var(--edge-dark) var(--edge-light) var(--edge-light) var(--edge-dark); }
+.guano-line { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.guano-line p { margin: 0; color: var(--text); }
 h1 { font: 18px var(--pixel); letter-spacing: -1px; margin: 0; color: var(--text); }
 .edition { font: 8px var(--pixel); color: var(--glacier); }
 

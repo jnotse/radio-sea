@@ -16,7 +16,7 @@ import { songKey } from './extend.js';
 import { titleSimilarity, artistSimilarity, normalizeIsrc } from './text.js';
 
 const API = 'https://musicbrainz.org/ws/2';
-const HEADERS = { 'User-Agent': 'radio-sea/0.1 ( https://github.com/jnotse/radio-sea )', Accept: 'application/json' };
+const HEADERS = { 'User-Agent': 'g-digs/0.1 ( https://github.com/jnotse/radio-sea )', Accept: 'application/json' };
 const MAX_GENRES = 3;
 const MAX_TAGS = 4;
 const NOISE_TAGS = new Set([

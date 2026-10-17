@@ -72,7 +72,7 @@ test('search lists only matching songs, and picking a result or a neighbour play
   await expect(page.locator('#d-title')).toHaveText(track.name);
   await expectPlaying(page, track.id);
   const next = await page.locator('#d-neighbours b').first().textContent();
-  await page.locator('#d-neighbours button').first().click();
+  await clickAfterScrolling(page, page.locator('#d-neighbours button').first());
   await expect(page.locator('#d-title')).toHaveText(next.split(' — ').slice(1).join(' — '));
   await page.locator('#search').fill('no-such-song-xyz');
   await expect(page.locator('#search-count')).toHaveText('Nothing found');
@@ -81,6 +81,15 @@ test('search lists only matching songs, and picking a result or a neighbour play
   await expect(page.locator('#search-results')).toBeHidden();
   await expect(page.locator('#btn-banger')).toBeEnabled();
 });
+
+// The player panel scrolls, and the YouTube frame sits at its top. Clicked
+// straight after a scroll, Chromium can deliver the click to where that frame
+// was before the scroll was painted, so let a frame paint first.
+async function clickAfterScrolling(page, locator) {
+  await locator.scrollIntoViewIfNeeded();
+  await page.evaluate(() => new Promise((done) => requestAnimationFrame(() => requestAnimationFrame(done))));
+  await locator.click();
+}
 
 test('2D pan and zoom survive switching to 3D and back', async ({ page }) => {
   await page.goto('/');
@@ -419,4 +428,73 @@ test('a finished song plays the next one in the same player; unplayable videos a
   await expect(page.locator('#player-status')).toContainText('playback stopped');
   await page.waitForTimeout(2000);
   await expect(sea).toHaveAttribute('data-selected', expected);
+});
+
+// A song Guano dances to, or one he vibes to, other than the one already selected.
+async function songFor(page, mood) {
+  return page.evaluate((wanted) => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected &&
+    window.Guano.grooves({ genres: (r.tags ?? []).filter((t) => !/^(show|station|show-genre|mood|decade):/.test(t)), bpm: r.bpm }) === wanted).id, mood);
+}
+
+test('G-digs: Guano trots to the song you press, dances or vibes while it plays, and lies down when paused', async ({ page }) => {
+  const errors = []; page.on('pageerror', (e) => errors.push(e.message));
+  await page.goto('/');
+  await expect(page).toHaveTitle(/^G-digs/);
+  await expect(page.locator('.brand h1')).toHaveText('G-digs');
+  for (const face of await page.locator('canvas.guano-face').all()) {
+    expect(await face.evaluate((c) => c.getContext('2d').getImageData(0, 0, c.width, c.height).data.some((v, i) => i % 4 === 3 && v > 0))).toBe(true);
+  }
+  const canvas = page.locator('#sea');
+  await expect(canvas).toHaveAttribute('data-guano', 'idle');
+  await expect(page.locator('#guano-says')).toHaveText('Guano is waiting by this song.');
+
+  const upbeat = await songFor(page, 'dance');
+  await page.locator('#btn-home').click();
+  const p = await screenPoint(page, upbeat);
+  await page.mouse.click(p.x, p.y);
+  await expect(canvas).toHaveAttribute('data-selected', upbeat);
+  await expect(canvas).toHaveAttribute('data-guano', 'walk');
+  await expect(page.locator('#guano-says')).toContainText('trotting over');
+  await expect(canvas).not.toHaveAttribute('data-guano', 'walk', { timeout: 6000 });
+  await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
+  await expect(canvas).toHaveAttribute('data-guano', 'dance');
+  await expect(page.locator('#guano-says')).toContainText('dancing');
+  // He stands beside the song, on its ground line, facing it.
+  const rect = await canvas.boundingBox(), song = await screenPoint(page, upbeat);
+  const g = await canvas.evaluate((c) => ({ x: Number(c.dataset.guanoX), y: Number(c.dataset.guanoY), facing: c.dataset.guanoFacing }));
+  const dx = g.x - (song.x - rect.x);
+  expect(Math.abs(dx)).toBeGreaterThan(10); expect(Math.abs(dx)).toBeLessThan(50);
+  expect(Math.abs(g.y - (song.y - rect.y))).toBeLessThan(14);
+  expect(g.facing).toBe(dx > 0 ? 'left' : 'right');
+
+  await page.locator('#transport-play').click();
+  await expect(canvas).toHaveAttribute('data-guano', 'rest');
+  await expect(page.locator('#guano-says')).toContainText('lay down');
+
+  const calm = await songFor(page, 'vibe');
+  const name = await page.evaluate((id) => window.SEA_DATA.releases.find((r) => r.id === id).name, calm);
+  await page.locator('#search').fill(name);
+  await page.locator(`#search-results button[data-track-id="${calm}"]`).click();
+  await expect(canvas).not.toHaveAttribute('data-guano', 'walk', { timeout: 6000 });
+  await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
+  await expect(canvas).toHaveAttribute('data-guano', 'vibe');
+  await expect(page.locator('#guano-says')).toContainText('vibing');
+  expect(errors).toEqual([]);
+});
+
+test('with reduced motion Guano moves without walking; he is in the 3D view too', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  const canvas = page.locator('#sea');
+  const id = await songFor(page, 'dance');
+  const name = await page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).name, id);
+  await page.locator('#search').fill(name);
+  await page.locator(`#search-results button[data-track-id="${id}"]`).click();
+  await expect(canvas).toHaveAttribute('data-selected', id);
+  expect(await canvas.getAttribute('data-guano')).not.toBe('walk');
+  await page.locator('#btn-topology').click();
+  await expect(canvas).toHaveAttribute('data-view', '3d');
+  const g = await canvas.evaluate((c) => ({ x: Number(c.dataset.guanoX), y: Number(c.dataset.guanoY), w: c.clientWidth, h: c.clientHeight }));
+  expect(g.x).toBeGreaterThan(0); expect(g.x).toBeLessThan(g.w);
+  expect(g.y).toBeGreaterThan(0); expect(g.y).toBeLessThan(g.h);
 });

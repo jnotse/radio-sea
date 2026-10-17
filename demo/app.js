@@ -112,6 +112,9 @@
   const minZoom = () => Math.max(MIN_ZOOM, fittedZoom() / 2);
   const toScreen = (x, y) => ({ x: (x - state.cam.x) * state.cam.zoom + canvas.clientWidth / 2,
     y: (y - state.cam.y) * state.cam.zoom + canvas.clientHeight / 2 });
+  // How big a song's square is drawn in the 2D map (signs and Guano make room for it); the 3D view sizes by depth.
+  const songSize = () => (state.viewMode === '3d' ? Math.round(Math.max(6, Math.min(14, state.cam3d.zoom * .78)))
+    : Math.round(Math.max(3, Math.min(14, state.cam.zoom * 1.7))));
   function project3D(wx, wy, wz, w = canvas.clientWidth, h = canvas.clientHeight) {
     const dx = wx - state.cam3d.x, dy = wy - state.cam3d.y, dz = wz - state.cam3d.z;
     const cy = Math.cos(state.cam3d.yaw), sy = Math.sin(state.cam3d.yaw);
@@ -348,14 +351,11 @@
         ctx.strokeStyle = '#fff8ea'; ctx.lineWidth = 2;
         ctx.strokeRect(Math.round(p.x - size / 2 - 4), Math.round(p.y - size / 2 - 4), size + 8, size + 8);
         ctx.lineWidth = 1;
-        if (r.id === state.selected) {
-          ctx.fillStyle = '#2b2236'; ctx.fillRect(p.x, p.y - size / 2 - 14, 2, 10);
-          ctx.fillStyle = '#ef7d3c'; ctx.fillRect(p.x + 2, p.y - size / 2 - 14, 6, 4);
-        }
       }
     }
     ctx.globalAlpha = 1;
     drawIslandLabels(w, h);
+    drawGuano(w, h);
   }
   function draw() {
     const w = canvas.clientWidth, h = canvas.clientHeight;
@@ -402,7 +402,7 @@
     }
     for (const r of releases) {
       const projected = toScreen(r.x, r.y), p = { x: Math.round(projected.x), y: Math.round(projected.y) };
-      const size = Math.round(Math.max(3, Math.min(14, state.cam.zoom * 1.7)));
+      const size = songSize();
       ctx.globalAlpha = passesFilter(r) ? 1 : .2;
       // Each song is a small cabin-dark square with a lamp-lit centre.
       if (size >= 5) {
@@ -414,15 +414,11 @@
         ctx.strokeStyle = '#fff8ea'; ctx.lineWidth = 2;
         ctx.strokeRect(Math.round(p.x - size / 2 - 4), Math.round(p.y - size / 2 - 4), size + 8, size + 8);
         ctx.lineWidth = 1;
-        if (r.id === state.selected) {
-          // A little orange pennant over the song that is playing.
-          ctx.fillStyle = '#2b2236'; ctx.fillRect(p.x, p.y - size / 2 - 14, 2, 10);
-          ctx.fillStyle = '#ef7d3c'; ctx.fillRect(p.x + 2, p.y - size / 2 - 14, 6, 4);
-        }
       }
     }
     ctx.globalAlpha = 1;
     drawIslandLabels(w, h);
+    drawGuano(w, h);
   }
   // Signs never overlap each other or cover a song: each goes just above its
   // grove's songs, or below them, or waits until zooming in makes room. The
@@ -431,8 +427,7 @@
     const current = byId.get(state.selected)?.islandId;
     const order = DATA.islands.filter((island) => island.memberIds.length > 1)
       .sort((a, b) => (b.id === current) - (a.id === current) || b.memberIds.length - a.memberIds.length);
-    const activeZoom = state.viewMode === '3d' ? state.cam3d.zoom : state.cam.zoom;
-    const size = Math.round(Math.max(6, Math.min(14, activeZoom * .78))) + 6;
+    const size = songSize() + 6;
     const songs = releases.map((r) => screenPos(r, w, h));
     // The hint, status and zoom buttons float over the map; signs stay clear of them.
     const frame = canvas.getBoundingClientRect();
@@ -440,6 +435,11 @@
       const r = el.getBoundingClientRect();
       return { x: r.left - frame.left, y: r.top - frame.top, w: r.width, h: r.height };
     });
+    // They keep clear of Guano too while he stands still; walking, he passes over them.
+    if (guano.placed && !guano.walk) {
+      const g = guanoPose(w, h);
+      placed.push({ x: g.x0, y: g.y0, w: 24 * g.scale, h: 24 * g.scale });
+    }
     const overlays = placed.length;
     const clear = (box) => !placed.some((o) => box.x < o.x + o.w + 4 && o.x < box.x + box.w + 4 && box.y < o.y + o.h + 2 && o.y < box.y + box.h + 2) &&
       !songs.some((p) => p.x + size / 2 > box.x && p.x - size / 2 < box.x + box.w && p.y + size / 2 > box.y && p.y - size / 2 < box.y + box.h);
@@ -463,6 +463,77 @@
     }
     canvas.dataset.labels = String(placed.length - overlays);
   }
+
+  // Guano the guanaco walks to whatever is playing: he trots over when a song
+  // starts, dances or vibes while it plays, and lies down while it is paused.
+  // He stands beside the song facing it: side -1 is to its left, 1 its right.
+  // The music never waits for him; the song starts as he sets off. He keeps
+  // his place in the 2D map and the 3D view alike, so either can show him.
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const WALK_SPEED = 11.5; // world units a second
+  const SPOT = ['x', 'y', 'x3', 'y3', 'z3', 'side'];
+  const guano = { x: 0, y: 0, x3: 0, y3: 0, z3: 0, side: -1, walk: null, placed: false };
+  let guanoTimer = null, guanoFrame = null;
+  function guanoAt(now) {
+    const walk = guano.walk; if (!walk) return guano;
+    const t = Math.min(1, (now - walk.start) / walk.duration);
+    if (t >= 1) { Object.assign(guano, walk.to); guano.walk = null; return guano; }
+    return Object.fromEntries(SPOT.map((key) => [key, walk.from[key] + (walk.to[key] - walk.from[key]) * t]));
+  }
+  const guanoScreen = (at, w, h) => (state.viewMode === '3d' ? project3D(at.x3, at.y3, at.z3, w, h) : toScreen(at.x, at.y));
+  function walkTo(r) {
+    const now = performance.now(), here = guanoAt(now), p3 = pos3(r), w = canvas.clientWidth, h = canvas.clientHeight;
+    // He faces the way he walks, and ends up on the near side of the song, facing it.
+    const fromX = guanoScreen(here, w, h).x, toX = screenPos(r, w, h).x;
+    const side = toX < fromX - 4 ? 1 : toX > fromX + 4 ? -1 : Math.sign(here.side) || -1;
+    const to = { x: r.x, y: r.y, x3: p3.x, y3: p3.y, z3: p3.z, side };
+    if (!guano.placed || reduceMotion.matches) { Object.assign(guano, to, { walk: null, placed: true }); return; }
+    const distance = Math.hypot(to.x - here.x, to.y - here.y);
+    guano.walk = { from: Object.fromEntries(SPOT.map((key) => [key, here[key]])), to, start: now, leftward: side > 0,
+      duration: Math.max(400, Math.min(4000, distance / WALK_SPEED * 1000)) };
+  }
+  function guanoMood(r) {
+    if (guano.walk) return 'walk';
+    if (playbackMode === 'paused') return 'rest';
+    if (playbackMode !== 'playing' || !r) return 'idle';
+    const showGenres = (r.tags ?? []).filter((t) => t.startsWith('show-genre:')).map((t) => t.slice(11));
+    return window.Guano.grooves({ genres: genres(r), showGenres, bpm: r.bpm });
+  }
+  // Where he stands on screen: beside the song with his hooves on its ground
+  // line, at 2×, or 1× when the 2D map is zoomed far out.
+  function guanoPose(w, h, now = performance.now()) {
+    const at = guanoAt(now), p = guanoScreen(at, w, h), is3d = state.viewMode === '3d';
+    const size = is3d ? Math.round(Math.max(5, Math.min(16, state.cam3d.zoom * p.perspective * .85))) : songSize();
+    const scale = is3d || state.cam.zoom >= 2.5 ? 2 : 1;
+    const feetX = p.x + at.side * (12 * scale + size / 2 + 1), feetY = p.y + size / 2 + 1;
+    return { scale, feetX, feetY, x0: Math.round(feetX - 12 * scale), y0: Math.round(feetY - 23 * scale),
+      facingLeft: guano.walk ? guano.walk.leftward : at.side > 0 };
+  }
+  const GUANO_SAYS = { walk: 'Guano is trotting over to this song.', dance: 'Guano is dancing to this one.',
+    vibe: 'Guano has his eyes closed, vibing to this one.', rest: 'Guano lay down for a rest. Press play and he gets back up.',
+    idle: 'Guano is waiting by this song.' };
+  function drawGuano(w, h) {
+    if (!guano.placed) return;
+    const now = performance.now(), { scale, feetX, feetY, x0, y0, facingLeft } = guanoPose(w, h, now);
+    const r = byId.get(state.selected), mood = guanoMood(r), walk = guano.walk, still = reduceMotion.matches;
+    ctx.fillStyle = '#3a261e47';
+    ctx.fillRect(x0 + 4 * scale, y0 + 22 * scale, 16 * scale, 2 * scale);
+    ctx.drawImage(window.Guano.sprite(window.Guano.frame(mood, now, { bpm: r?.bpm, still }), facingLeft), x0, y0, 24 * scale, 24 * scale);
+    for (const q of window.Guano.particles(mood, now, { still })) {
+      const img = window.Guano.sprite(q.name), qx = facingLeft ? 24 - q.x - img.width : q.x;
+      ctx.drawImage(img, x0 + qx * scale, y0 + q.y * scale, img.width * scale, img.height * scale);
+    }
+    Object.assign(canvas.dataset, { guano: mood, guanoX: String(Math.round(feetX)), guanoY: String(Math.round(feetY)),
+      guanoFacing: facingLeft ? 'left' : 'right' });
+    if ($('guano-says').textContent !== GUANO_SAYS[mood]) $('guano-says').textContent = GUANO_SAYS[mood];
+    // Redraw while he moves: every frame while walking, otherwise when his picture next changes.
+    clearTimeout(guanoTimer); cancelAnimationFrame(guanoFrame);
+    const onScreen = feetX > -60 && feetX < w + 60 && feetY > -60 && feetY < h + 60;
+    if (document.hidden || (still && !walk)) return;
+    if (walk) guanoFrame = requestAnimationFrame(draw);
+    else if (onScreen) guanoTimer = setTimeout(draw, window.Guano.wait(mood, now, { bpm: r?.bpm }));
+  }
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) draw(); });
   function resize() {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = Math.round(canvas.clientWidth * dpr); canvas.height = Math.round(canvas.clientHeight * dpr);
@@ -574,6 +645,7 @@
     $('transport-play').setAttribute('aria-label', going ? 'Pause' : 'Play');
     $('transport-play').title = going ? 'Pause' : 'Play';
     if (mode === 'error') { playerReady = false; resetSeeking(); }
+    draw(); // Guano dances, vibes or lies down with the music.
   }
   function formatTime(seconds) {
     const n = Math.max(0, Math.floor(Number(seconds) || 0));
@@ -851,6 +923,7 @@
       button.onclick = () => playTrack(t.id); li.append(button); $('d-routes').append(li);
     }
     if (!$('d-routes').children.length) $('d-routes').append(node('li', 'No trails from this song.', 'sub'));
+    if (changed) walkTo(r);
     refreshFilters();
   }
   $('btn-banger').onclick = () => {
@@ -904,5 +977,6 @@
     const paint = () => window.RadioSeaLandscape.drawBanner(banner);
     new ResizeObserver(paint).observe(banner);
   }
+  for (const face of document.querySelectorAll('canvas.guano-face')) window.Guano.drawFace(face);
   resize(); fitView(); select(releases[0].id, false);
 })();
