@@ -19,7 +19,7 @@
     trail: [], tags: new Set(), query: '', showRoutes: true };
   const pointers = new Map();
   const terrain = window.RadioSeaLandscape.buildTerrain(DATA);
-  let landDrawn = false, pendingLand = null;
+  let landDrawn = false, pendingLand = null, orbitFrame = null, lastOrbitTime = 0;
   let animation = null, player = null, playerGeneration = 0, playerTimer;
   let playbackMode = 'idle', volume = 75;
   let playerReady = false, songDuration = 0, scrubbing = false, pendingSeek = null;
@@ -213,21 +213,42 @@
     const maxR = Math.max(14, ...pts3.map((p) => Math.hypot(p.x, p.y)));
 
     // 3D base reference rings and radial axes on the z = baseZ plane.
-    ctx.strokeStyle = '#5cc4bb22'; ctx.lineWidth = 1;
-    for (const frac of [0.45, 0.85, 1.15]) {
+    ctx.strokeStyle = '#5cc4bb33'; ctx.lineWidth = 1;
+    for (const frac of [0.4, 0.75, 1.1]) {
       const r = maxR * frac;
       ctx.beginPath();
-      for (let s = 0; s <= 36; s += 1) {
-        const a = (s / 36) * Math.PI * 2;
+      for (let s = 0; s <= 40; s += 1) {
+        const a = (s / 40) * Math.PI * 2;
         const p = project3D(Math.cos(a) * r, Math.sin(a) * r, baseZ, w, h);
         if (s === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
       }
       ctx.stroke();
     }
     for (let a = 0; a < Math.PI; a += Math.PI / 4) {
-      const p1 = project3D(Math.cos(a) * maxR * 1.15, Math.sin(a) * maxR * 1.15, baseZ, w, h);
-      const p2 = project3D(-Math.cos(a) * maxR * 1.15, -Math.sin(a) * maxR * 1.15, baseZ, w, h);
+      const p1 = project3D(Math.cos(a) * maxR * 1.1, Math.sin(a) * maxR * 1.1, baseZ, w, h);
+      const p2 = project3D(-Math.cos(a) * maxR * 1.1, -Math.sin(a) * maxR * 1.1, baseZ, w, h);
       ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+    }
+
+    // 3D vertical axis pillar at the origin of the manifold.
+    const topPole = project3D(0, 0, Math.max(...pts3.map((p) => p.z)) + 4, w, h);
+    const botPole = project3D(0, 0, baseZ, w, h);
+    ctx.strokeStyle = '#5cc4bb44'; ctx.setLineDash([2, 3]);
+    ctx.beginPath(); ctx.moveTo(botPole.x, botPole.y); ctx.lineTo(topPole.x, topPole.y); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // 3D grove rings: draw a 3D orbital halo around each multi-song island.
+    ctx.strokeStyle = '#a7dbea33';
+    for (const island of DATA.islands) {
+      if (island.memberIds.length < 2) continue;
+      const members = island.memberIds.map((id) => byId.get(id)).filter((r) => passesFilter(r));
+      if (members.length < 2) continue;
+      ctx.beginPath();
+      members.forEach((r, idx) => {
+        const p = screenPos(r, w, h);
+        if (idx === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
+      });
+      ctx.closePath(); ctx.stroke();
     }
 
     // Mapper nerve centroids (0-simplices) & 2-simplices (triangles).
@@ -839,6 +860,16 @@
     $('btn-routes').setAttribute('aria-pressed', String(state.showRoutes)); draw();
   };
   if ($('btn-topology')) {
+    function stepOrbit(now) {
+      if (state.viewMode !== '3d') { orbitFrame = null; return; }
+      const dt = lastOrbitTime ? Math.min(64, now - lastOrbitTime) : 16;
+      lastOrbitTime = now;
+      if (!pointers.size && !state.hovered && animation === null && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        state.cam3d.yaw += dt * 0.00028;
+        draw();
+      }
+      orbitFrame = requestAnimationFrame(stepOrbit);
+    }
     $('btn-topology').onclick = () => {
       state.viewMode = state.viewMode === '3d' ? '2d' : '3d';
       const is3d = state.viewMode === '3d';
@@ -849,6 +880,13 @@
       if (desktopHint) desktopHint.textContent = is3d ? 'DRAG TO ORBIT 3D · CLICK TO PLAY' : 'CLICK A SQUARE TO PLAY';
       if (touchHint) touchHint.textContent = is3d ? 'DRAG TO ORBIT 3D · TAP TO PLAY' : 'TAP TO PLAY · PINCH TO ZOOM';
       fitView();
+      if (is3d && orbitFrame === null) {
+        lastOrbitTime = 0;
+        orbitFrame = requestAnimationFrame(stepOrbit);
+      } else if (!is3d && orbitFrame !== null) {
+        cancelAnimationFrame(orbitFrame);
+        orbitFrame = null;
+      }
     };
   }
   $('btn-home').onclick = fitView;
