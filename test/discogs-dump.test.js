@@ -85,6 +85,22 @@ test('track lengths read as seconds', () => {
   assert.deepEqual(['4:45', '1:02:03', '', 'n/a', '0:00'].map(seconds), [285, 3723, null, null, null]);
 });
 
+test('track-matched dump videos are preserved for pending songs, not artist-only matches', () => {
+  const pending = { artist: 'Larry Heard', title: 'Micro-Gravity' };
+  const missing = { artist: 'Larry Heard', title: 'Missing Song' };
+  const xml = release({ id: 13131, artists: [[1, 'Larry Heard']], title: 'Alien',
+    tracks: ['Micro-Gravity'], videos: ['H_AKKQ-f9LM', 'aaaaaaaaaaa'],
+  }).replace('<title>Video</title>', '<title>Larry Heard - Micro-Gravity</title>');
+  const parsed = parseDumpRelease(xml);
+  assert.equal(parsed.videos[0].title, 'Larry Heard - Micro-Gravity');
+  const matcher = createDiscogsMatcher([pending, missing]);
+  matcher.add(parsed);
+  const songs = matcher.results();
+  assert.deepEqual(songs[songKey(pending)].youtubeCandidates.map((c) => c.videoId), ['H_AKKQ-f9LM']);
+  assert.equal(songs[songKey(pending)].youtubeCandidates[0].sourceUrl, 'https://www.discogs.com/release/13131');
+  assert.equal(songs[songKey(missing)].youtubeCandidates, undefined);
+});
+
 test('parses a release, including nested index tracks and escaped names', () => {
   const r = parseDumpRelease(RELEASES[9]);
   assert.equal(r.id, 10);

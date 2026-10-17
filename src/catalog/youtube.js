@@ -1,5 +1,5 @@
 // Search results are candidates, NOT proof that the requested song was found.
-// Admission requires artist/title agreement and a successful oEmbed response.
+// Admission requires artist/title agreement and verified video metadata.
 import { youtubeIdFromUrl } from './youtube-link.js';
 import { decodeEntities } from './text.js';
 export { youtubeIdFromUrl } from './youtube-link.js';
@@ -62,10 +62,16 @@ function words(value) {
 }
 const IGNORED = new Set(['the', 'a', 'and', 'of', 'ft', 'feat', 'featuring', 'official', 'audio',
   'video', 'lyrics', 'hd', 'hq', 'original', 'mix', 'full', 'version', 'topic']);
-function coverage(expected, actual) {
+function coverage(expected, actual, repeatedTitle = false) {
   const tokens = words(expected).filter((w) => !IGNORED.has(w));
   if (!tokens.length) return 0;
-  const available = new Set(words(actual));
+  const actualWords = words(actual);
+  // "Ya Ya Ya" must not match any song containing just one generic "Ya".
+  // Longer titles can legitimately abbreviate a repeated phrase in uploads.
+  if (repeatedTitle && tokens.length > 1 && new Set(tokens).size === 1) {
+    return Math.min(tokens.length, actualWords.filter((w) => w === tokens[0]).length) / tokens.length;
+  }
+  const available = new Set(actualWords);
   return tokens.filter((w) => available.has(w)).length / tokens.length;
 }
 
@@ -87,14 +93,15 @@ export function nameForms(name) {
 
 /** Unicode-aware conservative matching, also used to audit cached matches. */
 export function candidateMatch(play, candidate) {
-  const title = Math.max(...nameForms(play.title).map((form) => coverage(form, candidate.title)));
+  const title = Math.max(...nameForms(play.title).map((form) => coverage(form, candidate.title, true)));
   const artist = Math.max(...String(play.artist ?? '').split(',').flatMap(nameForms).map((alias) =>
     coverage(alias, `${candidate.title} ${candidate.channel ?? candidate.author_name ?? ''}`)));
   const expected = words(play.title), actual = words(candidate.title);
   const numbers = (value) => String(value ?? '').match(/\d+(?:[.:]\d+)*/g) ?? [];
   const actualNumbers = numbers(candidate.title);
   const differentNumbers = numbers(play.title).some((n) => !actualNumbers.includes(n));
-  const extraVersion = ['remix', 'live', 'cover', 'karaoke'].some((v) => actual.includes(v) && !expected.includes(v));
+  const extraVersion = ['remix', 'live', 'cover', 'karaoke', 'snipped', 'snippet', 'preview', 'teaser']
+    .some((v) => actual.includes(v) && !expected.includes(v));
   return { score: 0.7 * title + 0.3 * artist,
     acceptable: title >= 0.8 && artist >= 0.5 && !differentNumbers && !extraVersion };
 }
@@ -106,24 +113,45 @@ export function candidateMatch(play, candidate) {
  */
 export class YoutubeUnavailable extends Error {}
 
-export async function request(url, { fetchImpl, retries = 2, delayMs = 900, headers } = {}) {
+function unavailable(message, code = 'unavailable') {
+  const error = new YoutubeUnavailable(message);
+  error.code = code;
+  return error;
+}
+
+export async function request(url, { fetchImpl = fetch, retries = 2, delayMs = 900, headers,
+  beforeRequest = async () => {} } = {}) {
   for (let i = 0; ; i++) {
+    await beforeRequest();
     let res;
     try { res = await fetchImpl(url, { headers, signal: AbortSignal.timeout(20000) }); }
     catch (error) { throw new YoutubeUnavailable(`YouTube did not answer (${error.message})`); }
     const limited = res.status === 429 || /\/\/(www\.)?google\.[a-z.]+\/sorry/.test(res.url ?? '');
-    if (!limited && res.status !== 503) return res;
-    if (i === retries) throw new YoutubeUnavailable(limited ? 'YouTube is limiting requests from this address' : `YouTube answered ${res.status}`);
+    const gated = res.status === 403 || /\b(consent\.(youtube|google)\.com|accounts\.google\.com)\b/.test(res.url ?? '');
+    if (gated) throw unavailable('YouTube blocked the request; the lookup remains pending', 'blocked');
+    if (!limited && res.status < 500) return res;
+    if (i === retries) throw unavailable(limited ? 'YouTube is limiting requests from this address' : `YouTube answered ${res.status}`, limited ? 'blocked' : 'unavailable');
     await sleep(delayMs * (i + 1));
   }
 }
 
-export async function searchYoutube(query, { fetchImpl = fetch, retries = 2, delayMs = 900 } = {}) {
+export async function searchYoutube(query, { fetchImpl = fetch, retries = 2, delayMs = 900,
+  beforeRequest = async () => {} } = {}) {
   const res = await request(`https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`,
-    { fetchImpl, retries, delayMs,
+    { fetchImpl, retries, delayMs, beforeRequest,
       headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 'Accept-Language': 'en' } });
-  if (!res.ok) throw new Error(`youtube search failed: ${res.status}`);
-  return extractSearchResults(await res.text());
+  if (!res.ok) throw unavailable(`YouTube search failed (${res.status}); the lookup remains pending`);
+  const page = await res.text();
+  if (/confirm (?:that )?you(?:'|’|&#39;|&apos;)?re not a bot|unusual traffic|\/sorry\/|g-recaptcha/i.test(page)) {
+    throw unavailable('YouTube requested bot verification; the lookup remains pending', 'blocked');
+  }
+  // An empty, valid result set is different from a consent/challenge page or
+  // an unsupported response. Only the first can be recorded as "no match".
+  const data = readPageJson(page, /(?:var\s+ytInitialData\s*=|window\["ytInitialData"\]\s*=)\s*/);
+  if (!data?.contents || typeof data.contents !== 'object') {
+    throw unavailable('YouTube returned an unreadable search page; the lookup remains pending');
+  }
+  return extractSearchResults(page);
 }
 
 const DATA_API = 'https://www.googleapis.com/youtube/v3';
@@ -140,7 +168,10 @@ async function dataApi(path, params, { apiKey, fetchImpl }) {
   try { res = await fetchImpl(url, { signal: AbortSignal.timeout(20000) }); }
   catch (error) { throw new YoutubeUnavailable(`The YouTube Data API did not answer (${error.message})`); }
   const body = await res.json().catch(() => ({}));
-  if (res.ok) return body;
+  if (res.ok) {
+    if (!Array.isArray(body.items)) throw unavailable('The YouTube Data API returned an unreadable response');
+    return body;
+  }
   const reason = body.error?.errors?.[0]?.reason ?? '';
   const message = body.error?.message ?? String(res.status);
   // Daily limits come as 403 quotaExceeded or as 429 "… per day" (a key may
@@ -153,10 +184,12 @@ async function dataApi(path, params, { apiKey, fetchImpl }) {
     ? 'The YouTube Data API quota for today is used up; run again tomorrow'
     : `The YouTube Data API refused the request (${message})`);
   error.final = true;
+  error.code = daily ? 'quota' : 'credentials';
+  error.operation = path;
   throw error;
 }
 
-/** Search candidates from the Data API (100 quota units per search). */
+/** Search candidates from the Data API's separate daily search-call bucket. */
 export async function searchYoutubeApi(query, options) {
   const body = await dataApi('search', { part: 'snippet', type: 'video', maxResults: '10', q: query }, options);
   return (body.items ?? []).filter((item) => /^[\w-]{11}$/.test(item.id?.videoId ?? '')).map((item) => ({
@@ -165,12 +198,81 @@ export async function searchYoutubeApi(query, options) {
     title: decodeEntities(item.snippet?.title), channel: decodeEntities(item.snippet?.channelTitle) }));
 }
 
-/** A video's own title and channel when it exists and may be embedded, else null (1 quota unit). */
-async function embeddableVideo(videoId, options) {
-  const body = await dataApi('videos', { part: 'snippet,status', id: videoId }, options);
-  const item = body.items?.[0];
-  if (!item?.status?.embeddable || item.status.privacyStatus === 'private') return null;
-  return { title: item.snippet?.title ?? '', author_name: item.snippet?.channelTitle ?? '' };
+export function candidateVideoId(candidate) {
+  if (typeof candidate === 'string') return youtubeIdFromUrl(candidate);
+  return youtubeIdFromUrl(candidate?.url) ?? (/^[\w-]{11}$/.test(candidate?.videoId ?? '') ? candidate.videoId : null);
+}
+
+const VIDEO_CACHE_AGE = 30 * 24 * 60 * 60 * 1000;
+
+/** Cache and verify known IDs, 50 per API request. Never fetch audio/video. */
+export async function lookupYoutubeVideos(ids, { apiKey = null, fetchImpl = fetch, videoCache = {},
+  delayMs = 1100, now = () => new Date(), checkpoint = async () => {} } = {}) {
+  const unique = [...new Set(ids.filter((id) => /^[\w-]{11}$/.test(id)))];
+  const date = now();
+  const todo = unique.filter((id) => {
+    const cached = videoCache[id];
+    const age = date.getTime() - Date.parse(cached?.checkedAt);
+    return !cached || !Number.isFinite(age) || age < 0 || age >= VIDEO_CACHE_AGE
+      || (apiKey && cached.method !== 'api');
+  });
+  for (let start = 0; start < todo.length; start += apiKey ? 50 : 1) {
+    if (delayMs > 0) await sleep(delayMs);
+    const batch = todo.slice(start, start + (apiKey ? 50 : 1));
+    const checkedAt = now().toISOString();
+    if (apiKey) {
+      const body = await dataApi('videos', { part: 'snippet,status', id: batch.join(',') }, { apiKey, fetchImpl });
+      if (body.items.some((item) => !/^[\w-]{11}$/.test(item.id ?? '') || !item.snippet?.title
+        || !item.snippet?.channelTitle || typeof item.status?.embeddable !== 'boolean')) {
+        throw unavailable('The YouTube Data API returned incomplete video metadata');
+      }
+      const items = new Map(body.items.map((item) => [item.id, item]));
+      for (const id of batch) {
+        const item = items.get(id);
+        videoCache[id] = item ? { found: true, title: item.snippet?.title ?? '',
+          channel: item.snippet?.channelTitle ?? '', embeddable: item.status?.embeddable === true,
+          privacy: item.status?.privacyStatus ?? null, method: 'api', checkedAt }
+          : { found: false, method: 'api', checkedAt };
+      }
+    } else {
+      const id = batch[0];
+      const res = await request(`https://www.youtube.com/oembed?url=${encodeURIComponent(videoUrl(id))}&format=json`, { fetchImpl, delayMs });
+      if (res.status === 401 || res.status === 404) videoCache[id] = { found: false, method: 'oembed', checkedAt };
+      else {
+        if (!res.ok) throw unavailable(`YouTube metadata lookup failed (${res.status})`);
+        const meta = await res.json().catch(() => null);
+        if (!meta?.title || !meta.author_name) throw unavailable('YouTube returned unreadable video metadata');
+        videoCache[id] = { found: true, title: meta.title, channel: meta.author_name,
+          embeddable: true, method: 'oembed', checkedAt };
+      }
+    }
+    await checkpoint(videoCache);
+  }
+  return videoCache;
+}
+
+export async function verifyYoutubeCandidates(play, candidates, options = {}) {
+  const videoCache = options.videoCache ?? {};
+  const ids = candidates.map(candidateVideoId).filter(Boolean);
+  if (options.apiKey) await lookupYoutubeVideos(ids, { ...options, videoCache });
+  for (const candidate of candidates) {
+    const videoId = candidateVideoId(candidate);
+    if (!videoId) continue;
+    // Without batching, stop at the first verified link instead of fetching
+    // every alternative upload unnecessarily.
+    if (!options.apiKey) await lookupYoutubeVideos([videoId], { ...options, videoCache });
+    const meta = videoCache[videoId];
+    if (!meta?.found || !meta.embeddable || meta.privacy === 'private') continue;
+    // Catalogue titles help discover candidates; only YouTube's own metadata
+    // is evidence for admission, including the actual artist and version.
+    const match = candidateMatch(play, meta);
+    if (!match.acceptable) continue;
+    return { videoId, url: videoUrl(videoId), title: meta.title, channel: meta.channel,
+      matchScore: match.score, confirmed: true, checkedAt: meta.checkedAt,
+      ...(candidate.query ? { query: candidate.query } : {}),
+      via: candidate.source ?? 'catalogue', ...(candidate.sourceUrl ? { sourceUrl: candidate.sourceUrl } : {}) };
+  }
+  return null;
 }
 
 export async function validateYoutubeUrl(url, { fetchImpl = fetch } = {}) {
@@ -187,7 +289,12 @@ export async function validateYoutubeUrl(url, { fetchImpl = fetch } = {}) {
  * search and the check go through the YouTube Data API; without, through
  * YouTube's search page and oEmbed, `delayMs` apart.
  */
-export async function resolvePlayToYoutube(play, { fetchImpl = fetch, delayMs = 1100, apiKey = null } = {}) {
+export async function resolvePlayToYoutube(play, { fetchImpl = fetch, delayMs = 1100, apiKey = null,
+  candidates = play.youtubeCandidates ?? [], videoCache = {}, beforeSearch = async () => {},
+  checkpointVideos = async () => {}, now = () => new Date() } = {}) {
+  const verification = { fetchImpl, delayMs, apiKey, videoCache, checkpoint: checkpointVideos, now };
+  const direct = await verifyYoutubeCandidates(play, candidates, verification);
+  if (direct) return direct;
   // Romanized names are searched too: a video titled in Latin letters only may
   // not come up for a query that is half in another script.
   const latin = (name) => nameForms(name).slice(1).find((form) => LATIN.test(form)) ?? name;
@@ -197,37 +304,20 @@ export async function resolvePlayToYoutube(play, { fetchImpl = fetch, delayMs = 
   for (const query of queries) {
     // Searches are spaced out on the Data API too: it limits them per minute.
     if (delayMs > 0) await sleep(delayMs);
-    let candidates;
-    try {
-      candidates = apiKey ? await searchYoutubeApi(query, { apiKey, fetchImpl })
-        : await searchYoutube(query, { fetchImpl, delayMs });
-    } catch (error) { if (error instanceof YoutubeUnavailable) throw error; continue; }
+    let found;
+    if (apiKey) {
+      await beforeSearch({ query, apiKey: true });
+      found = await searchYoutubeApi(query, { apiKey, fetchImpl });
+    } else found = await searchYoutube(query, { fetchImpl, delayMs,
+      beforeRequest: () => beforeSearch({ query, apiKey: false }) });
     // Search context cannot substitute for matching metadata (ISRC queries can
     // return completely unrelated popular videos when the recording is absent).
-    const ranked = candidates.map((c) => ({ ...c, match: candidateMatch(play, c) }))
+    const ranked = found.map((c) => ({ ...c, query, source: 'search', match: candidateMatch(play, c) }))
       .filter((c) => c.match.acceptable).sort((a, b) => b.match.score - a.match.score);
-    for (const candidate of ranked) {
-      if (seen.has(candidate.videoId)) continue;
-      seen.add(candidate.videoId);
-      try {
-        let meta;
-        if (apiKey) meta = await embeddableVideo(candidate.videoId, { apiKey, fetchImpl });
-        else {
-          const res = await request(`https://www.youtube.com/oembed?url=${encodeURIComponent(candidate.url)}&format=json`, { fetchImpl, delayMs });
-          meta = res.ok ? await res.json() : null;
-        }
-        if (!meta) continue; // Not found or not embeddable: NOT verified.
-        const verified = { ...candidate, title: meta.title, channel: meta.author_name };
-        const match = candidateMatch(play, verified);
-        if (!match.acceptable) continue;
-        return { videoId: candidate.videoId, url: candidate.url, title: meta.title,
-          channel: meta.author_name, query, matchScore: match.score,
-          confirmed: true, checkedAt: new Date().toISOString() };
-      } catch (error) {
-        // Fail closed: never invent availability. An unreachable YouTube is retried later.
-        if (error instanceof YoutubeUnavailable) throw error;
-      }
-    }
+    const fresh = ranked.filter((c) => !seen.has(c.videoId));
+    fresh.forEach((c) => seen.add(c.videoId));
+    const verified = await verifyYoutubeCandidates(play, fresh, verification);
+    if (verified) return verified;
   }
   return null;
 }

@@ -29,6 +29,31 @@ test('topGenres keeps the most-voted genres', () => {
   ['hard bop', 'jazz', 'post-bop']);
 });
 
+test('optional link discovery reads recording URLs, video relationships and release IDs', async () => {
+  const { fetchImpl, calls } = fakeFetch({ '/recording/rec-1': { ...RECORDING,
+    genres: [{ name: 'jazz', count: 1 }],
+    releases: [{ id: 'release-1' }, { id: 'release-1' }, { id: 'release-2' }],
+    relations: [{ url: { resource: 'https://youtu.be/aaaaaaaaaaa' } },
+      { url: { resource: 'https://evil.test/watch?v=bbbbbbbbbbb' } },
+      { type: 'music video', recording: { id: 'video-recording' } }],
+  } });
+  const found = await lookupTrackGenres({ ...play, ids: { musicbrainz: 'rec-1' } }, { fetchImpl, ...fast, includeVideoLinks: true });
+  assert.match(calls[0], /url-rels\+recording-rels/);
+  assert.deepEqual(found.youtubeCandidates.map((c) => c.videoId), ['aaaaaaaaaaa']);
+  assert.deepEqual(found.releaseIds, ['release-1', 'release-2']);
+  assert.deepEqual(found.videoRecordings, ['video-recording']);
+});
+
+test('genre-only cache entries are upgraded for pending-song link discovery', async () => {
+  const key = JSON.stringify(['mccoy tyner', 'my favorite things']);
+  let calls = 0;
+  const result = await lookupGenresForPlays([play], {
+    cache: { [key]: { genres: ['jazz'], length: 819, recording: 'rec-1' } }, includeVideoLinks: true,
+    lookup: async () => { calls++; return { genres: ['jazz'], length: 819, youtubeCandidates: [] }; },
+  });
+  assert.equal(calls, 1); assert.deepEqual(result.cache[key].youtubeCandidates, []);
+});
+
 test('extracts folksonomy tags, earliest release year, country, instruments and credits from MusicBrainz', async () => {
   const { fetchImpl } = fakeFetch({
     '/recording/rec-1': {

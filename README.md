@@ -56,6 +56,43 @@ curl -sL "<releases file link>" | npm run catalog:discogs -- -
 ```
 
 Already downloaded? `npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz`.
+The dump matcher covers pending songs too, and preserves track-matched YouTube
+links for the next import.
+
+### YouTube matching without unnecessary searches
+
+Imports first discover YouTube links from MusicBrainz recording/release
+relationships and Discogs releases. These are candidates, not proof: each
+video's actual YouTube title and artist/channel must match before admission.
+Only songs still unresolved then need a YouTube search. No import downloads
+or plays audio/video.
+
+Set `YOUTUBE_API_KEY` to use the official Data API. Known IDs are checked in
+batches of up to 50 (`videos.list`), without a `search.list` call. Without a
+key, known links are checked individually with oEmbed and the fallback uses
+YouTube search pages, which can be blocked.
+
+```sh
+npm run catalog:extend -- --max 26 --search-budget 20 --no-wait
+# Explicitly revisit old negative lookups (including possible historical blocks):
+npm run catalog:extend -- --max 40 --retry-unmatched --no-wait
+```
+
+`--search-budget` defaults to 100 actual search calls per Pacific day, saved
+before each call in `data/resolved-plays.json`; restarting doesn't reset it.
+API and web counts are separate, and this is a local safeguard, not a live
+reading of Google's project quota. Multiple query variants and retries each
+count. Known-link verification uses no search budget and can continue after
+the search budget/quota is exhausted. Video checks are cached for 30 days;
+catalogue link facts live in `data/catalogue-links.json`, and per-song lookup
+statuses distinguish verified, no-match and pending.
+
+HTTP 403/429, bot checks, unreadable responses and outages leave songs pending,
+never permanently excluded as missing. `--no-wait` stops promptly on such
+failures; otherwise the importer backs off. Run again later to resume. An
+explicit `--retry-unmatched` can revisit legacy exclusions without deleting
+accepted songs. Embedding metadata is not a guarantee of playback in every
+region or browser.
 
 ### Guano's facts from Wikipedia
 

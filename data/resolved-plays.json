@@ -16794,9 +16794,381 @@
     "confirmed": true,
     "checkedAt": "2026-10-17T15:40:01.428Z"
    }
+  },
+  {
+   "station": "radiooooo",
+   "show": "KOR / 1940s",
+   "date": null,
+   "artist": "옥잠화 (Ok Jam-Hwa)",
+   "title": "양산도 봄바람 (Yangsan-do Spring Breeze)",
+   "releaseYear": 1943,
+   "country": "KOR",
+   "label": "Columbia",
+   "album": "양산도 봄바람 / 제3 아리랑",
+   "ids": {
+    "radiooooo": "5e4cf21b26345807167e4df4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "o-YJp7QFYJs",
+    "url": "https://www.youtube.com/watch?v=o-YJp7QFYJs",
+    "title": "양산도 봄바람 1943 옥잠화 👍 [ 박지애님 신청곡 ] 0172",
+    "channel": "은발촌",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:25.975Z",
+    "query": "옥잠화 (Ok Jam-Hwa) 양산도 봄바람 (Yangsan-do Spring Breeze)",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "PYF / 1950s",
+   "date": null,
+   "artist": "The Polynesians",
+   "title": "Kou Kino Mambo",
+   "releaseYear": 1959,
+   "country": "PYF",
+   "label": "Crown Records/ Astor",
+   "album": "Blue Hawaii",
+   "ids": {
+    "radiooooo": "6088094188e68b3d2f4dbdfa"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1950s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "VvOqHRDwLWA",
+    "url": "https://www.youtube.com/watch?v=VvOqHRDwLWA",
+    "title": "Kou Kino Mambo",
+    "channel": "The Polynesians - Topic",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:29.001Z",
+    "query": "The Polynesians Kou Kino Mambo",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "FIN / 1970s",
+   "date": null,
+   "artist": "Wigwam",
+   "title": "Let The World Ramble On",
+   "releaseYear": 1970,
+   "country": "FIN",
+   "label": "Love Records",
+   "album": "Tombstone Valentine",
+   "ids": {
+    "radiooooo": "632483506cf9d5998c17bdd2"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "RgSGaMyhaGM",
+    "url": "https://www.youtube.com/watch?v=RgSGaMyhaGM",
+    "title": "Let The World Ramble On",
+    "channel": "Wigwam - Topic",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:34.922Z",
+    "query": "Wigwam Let The World Ramble On",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "COL / 1980s",
+   "date": null,
+   "artist": "Son Palenque",
+   "title": "Azuca y Limon",
+   "releaseYear": 1985,
+   "country": "COL",
+   "label": "",
+   "album": "Ane Jue Ellos Son",
+   "ids": {
+    "radiooooo": "5d330a6206fb03d8872a6d17"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1980s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "uBh7J3_uOPQ",
+    "url": "https://www.youtube.com/watch?v=uBh7J3_uOPQ",
+    "title": "Azuca y Limón",
+    "channel": "Son Palenque - Topic",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:38.043Z",
+    "query": "Son Palenque Azuca y Limon",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "BEL / 1990s",
+   "date": null,
+   "artist": "Frank de Wulf",
+   "title": "Reforced",
+   "releaseYear": 1990,
+   "country": "BEL",
+   "label": "Music Man Records",
+   "album": "The B-Sides Volume One",
+   "ids": {
+    "radiooooo": "5d330a4c06fb03d8872a41da"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1990s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "1Lv4xmHiGyg",
+    "url": "https://www.youtube.com/watch?v=1Lv4xmHiGyg",
+    "title": "Frank de Wulf - Reforced",
+    "channel": "TheTarnishedAngels",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:41.012Z",
+    "query": "Frank de Wulf Reforced",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "BRA / 2000s",
+   "date": null,
+   "artist": "Seu Jorge",
+   "title": "Rock N'Roll Suicide",
+   "releaseYear": 2004,
+   "country": "BRA",
+   "label": "CHRYSALIS MUSIC LTD",
+   "album": "The Life Aquatic With Steve Zissou",
+   "ids": {
+    "radiooooo": "5d330a4606fb03d8872a3525"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "6gAYtsDEH0Y",
+    "url": "https://www.youtube.com/watch?v=6gAYtsDEH0Y",
+    "title": "Rock N' Roll Suicide (Album Version)",
+    "channel": "Seu Jorge - Topic",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:44.096Z",
+    "query": "Seu Jorge Rock N'Roll Suicide",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MUS / 2020s",
+   "date": null,
+   "artist": "GЯEG",
+   "title": "Eau Coulée Smart City",
+   "releaseYear": 2021,
+   "country": "MUS",
+   "label": "lavibe",
+   "album": "Eau Coulée Smart City",
+   "ids": {
+    "radiooooo": "63fc80d8f111ddc3359855c7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2020s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "hpT88w7ppGI",
+    "url": "https://www.youtube.com/watch?v=hpT88w7ppGI",
+    "title": "Eau Coulée Smart City",
+    "channel": "GЯEG - Topic",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:49.942Z",
+    "query": "GЯEG Eau Coulée Smart City",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "BRI / 1900s",
+   "date": null,
+   "artist": "Moujodeen Khan",
+   "title": "Multani",
+   "releaseYear": 1904,
+   "country": "BRI",
+   "label": "Gramophone Concert Record",
+   "album": "Multani",
+   "ids": {
+    "radiooooo": "668cf22124a7404804f26c13"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "T2AaZzhs6sg",
+    "url": "https://www.youtube.com/watch?v=T2AaZzhs6sg",
+    "title": "Majooddin : Moujodeen Khan | Multani  | दुरजन लोगवा को कहा करू | durjan logvaa ko | 1904",
+    "channel": "Sundeep Dougal",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:52.826Z",
+    "query": "Moujodeen Khan Multani",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "ROU / 1920s",
+   "date": null,
+   "artist": "Jancu Marinescu",
+   "title": "Adio de Cavadia",
+   "releaseYear": 1924,
+   "country": "ROU",
+   "label": "Perfection Concert Record",
+   "album": "Adio De Cavadia / Inșirați",
+   "ids": {
+    "radiooooo": "66846010bc252b37eab19e38"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "YnJWg6cmaqE",
+    "url": "https://www.youtube.com/watch?v=YnJWg6cmaqE",
+    "title": "Jancu Marinescu - Adio de Cavadia (1924)",
+    "channel": "Mathieu Peiffer",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:08:57.371Z",
+    "query": "Jancu Marinescu Adio de Cavadia",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "LBY / 1950s",
+   "date": null,
+   "artist": "Troupe Chaoueche Saad",
+   "title": "Goumri Oueld Eddounane",
+   "releaseYear": 1952,
+   "country": "LBY",
+   "label": "Folkways",
+   "album": "Folk Music of the Mediterranean",
+   "ids": {
+    "radiooooo": "668a3136f82dc0383f73ad2d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "HXdeM-B8OZU",
+    "url": "https://www.youtube.com/watch?v=HXdeM-B8OZU",
+    "title": "Libya: Goumri Oueld Eddounane",
+    "channel": "Troupe Chaoueche Saad - Topic",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:09:04.881Z",
+    "query": "Troupe Chaoueche Saad Goumri Oueld Eddounane",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "NGA / 1960s",
+   "date": null,
+   "artist": "E.C. Arinze & His Music",
+   "title": "Lumumba Calypso",
+   "releaseYear": 1961,
+   "country": "NGA",
+   "label": "Decca",
+   "album": "Lumumba Calypso / Sisi Sisi",
+   "ids": {
+    "radiooooo": "641c6ccbf111ddc3359bb87b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "N1ddCydyH30",
+    "url": "https://www.youtube.com/watch?v=N1ddCydyH30",
+    "title": "E. C. Arinze & His Music – Lumumba Calypso",
+    "channel": "Pharoah Serge",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:09:08.552Z",
+    "query": "E.C. Arinze & His Music Lumumba Calypso",
+    "via": "search"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "LTU / 1970s",
+   "date": null,
+   "artist": "Nerija",
+   "title": "Paprastas Motyvas",
+   "releaseYear": 1973,
+   "country": "LTU",
+   "label": "Мелодия",
+   "album": "Nerija",
+   "ids": {
+    "radiooooo": "62fc02d3fb09406458a1ca84"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ],
+   "youtubeCandidates": [],
+   "youtube": {
+    "videoId": "wviwdBi5mnQ",
+    "url": "https://www.youtube.com/watch?v=wviwdBi5mnQ",
+    "title": "Nerija - Paprastas Motyvas",
+    "channel": "Art ReYou",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T18:09:12.385Z",
+    "query": "Nerija Paprastas Motyvas",
+    "via": "search"
+   }
   }
  ],
- "dropped": 126,
+ "dropped": 130,
  "attemptedKeys": [
   "[\"uranium club\",\"god's chest\"]",
   "[\"larry heard\",\"micro-gravity\"]",
@@ -17222,6 +17594,249 @@
   "[\"daaliah\",\"run nicki run\"]",
   "[\"berkes béla ifj. cigányzenekara\",\"korcsmárosné, szép csaplárné és csárdás\"]",
   "[\"bim and bom\",\"дуракамъ законъ не писанъ\"]",
-  "[\"jānis āre\",\"ardievu, dakter spundze!\"]"
- ]
+  "[\"jānis āre\",\"ardievu, dakter spundze!\"]",
+  "[\"จํารัส สุวคนธ์ และ เกษม มิลินทจินดา (chamras suwakon & kasem milintachinda)\",\"ฝันไปว่า (făn bpai wâa)\"]",
+  "[\"옥잠화 (ok jam-hwa)\",\"양산도 봄바람 (yangsan-do spring breeze)\"]",
+  "[\"the polynesians\",\"kou kino mambo\"]",
+  "[\"wigwam\",\"let the world ramble on\"]",
+  "[\"son palenque\",\"azuca y limon\"]",
+  "[\"frank de wulf\",\"reforced\"]",
+  "[\"seu jorge\",\"rock n'roll suicide\"]",
+  "[\"gяeg\",\"eau coulée smart city\"]",
+  "[\"moujodeen khan\",\"multani\"]",
+  "[\"cheryl e leonard\",\"storm on gamage point\"]",
+  "[\"jancu marinescu\",\"adio de cavadia\"]",
+  "[\"miss nancy and d. lincoln's orchestra\",\"stambol junjongan hati\"]",
+  "[\"panchito maquieira and his typical orchestra\",\"la cumparsita\"]",
+  "[\"troupe chaoueche saad\",\"goumri oueld eddounane\"]",
+  "[\"e.c. arinze & his music\",\"lumumba calypso\"]",
+  "[\"nerija\",\"paprastas motyvas\"]"
+ ],
+ "youtubeVideos": {
+  "o-YJp7QFYJs": {
+   "found": true,
+   "title": "양산도 봄바람 1943 옥잠화 👍 [ 박지애님 신청곡 ] 0172",
+   "channel": "은발촌",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:25.975Z"
+  },
+  "VvOqHRDwLWA": {
+   "found": true,
+   "title": "Kou Kino Mambo",
+   "channel": "The Polynesians - Topic",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:29.001Z"
+  },
+  "nLe44TDPhw4": {
+   "found": true,
+   "title": "Mayada Bseliss - Ma Beddi Ya Mama | ميادة بسيليس - ما بدي يا ماما",
+   "channel": "Music Box Intl. MBI",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:32.012Z"
+  },
+  "RgSGaMyhaGM": {
+   "found": true,
+   "title": "Let The World Ramble On",
+   "channel": "Wigwam - Topic",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:34.922Z"
+  },
+  "uBh7J3_uOPQ": {
+   "found": true,
+   "title": "Azuca y Limón",
+   "channel": "Son Palenque - Topic",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:38.043Z"
+  },
+  "1Lv4xmHiGyg": {
+   "found": true,
+   "title": "Frank de Wulf - Reforced",
+   "channel": "TheTarnishedAngels",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:41.012Z"
+  },
+  "6gAYtsDEH0Y": {
+   "found": true,
+   "title": "Rock N' Roll Suicide (Album Version)",
+   "channel": "Seu Jorge - Topic",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:44.096Z"
+  },
+  "Sdr--pTFZTM": {
+   "found": true,
+   "title": "Ya Mahmud (Dar Disku Edit) -SNIPPED-",
+   "channel": "adarts",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:46.932Z"
+  },
+  "hpT88w7ppGI": {
+   "found": true,
+   "title": "Eau Coulée Smart City",
+   "channel": "GЯEG - Topic",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:49.942Z"
+  },
+  "T2AaZzhs6sg": {
+   "found": true,
+   "title": "Majooddin : Moujodeen Khan | Multani  | दुरजन लोगवा को कहा करू | durjan logvaa ko | 1904",
+   "channel": "Sundeep Dougal",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:52.826Z"
+  },
+  "YnJWg6cmaqE": {
+   "found": true,
+   "title": "Jancu Marinescu - Adio de Cavadia (1924)",
+   "channel": "Mathieu Peiffer",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:08:57.371Z"
+  },
+  "HXdeM-B8OZU": {
+   "found": true,
+   "title": "Libya: Goumri Oueld Eddounane",
+   "channel": "Troupe Chaoueche Saad - Topic",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:09:04.881Z"
+  },
+  "N1ddCydyH30": {
+   "found": true,
+   "title": "E. C. Arinze & His Music – Lumumba Calypso",
+   "channel": "Pharoah Serge",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:09:08.552Z"
+  },
+  "wviwdBi5mnQ": {
+   "found": true,
+   "title": "Nerija - Paprastas Motyvas",
+   "channel": "Art ReYou",
+   "embeddable": true,
+   "method": "oembed",
+   "checkedAt": "2026-10-17T18:09:12.385Z"
+  }
+ },
+ "youtubeLookups": {
+  "[\"จํารัส สุวคนธ์ และ เกษม มิลินทจินดา (chamras suwakon & kasem milintachinda)\",\"ฝันไปว่า (făn bpai wâa)\"]": {
+   "status": "no_match",
+   "checkedAt": "2026-10-17T18:08:23.147Z"
+  },
+  "[\"옥잠화 (ok jam-hwa)\",\"양산도 봄바람 (yangsan-do spring breeze)\"]": {
+   "status": "verified",
+   "videoId": "o-YJp7QFYJs",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:26.051Z"
+  },
+  "[\"the polynesians\",\"kou kino mambo\"]": {
+   "status": "verified",
+   "videoId": "VvOqHRDwLWA",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:29.077Z"
+  },
+  "[\"ميادة (mayada)\",\"ياي .. ياي .. ياي (ya..ya..ya..)\"]": {
+   "status": "pending",
+   "reason": "match_review",
+   "error": "Candidate rejected by stricter repeated-title/preview checks; look for another upload on the next run",
+   "checkedAt": "2026-10-17T18:11:53.070Z"
+  },
+  "[\"wigwam\",\"let the world ramble on\"]": {
+   "status": "verified",
+   "videoId": "RgSGaMyhaGM",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:34.999Z"
+  },
+  "[\"son palenque\",\"azuca y limon\"]": {
+   "status": "verified",
+   "videoId": "uBh7J3_uOPQ",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:38.117Z"
+  },
+  "[\"frank de wulf\",\"reforced\"]": {
+   "status": "verified",
+   "videoId": "1Lv4xmHiGyg",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:41.100Z"
+  },
+  "[\"seu jorge\",\"rock n'roll suicide\"]": {
+   "status": "verified",
+   "videoId": "6gAYtsDEH0Y",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:44.169Z"
+  },
+  "[\"dar disku\",\"ya mahmud\"]": {
+   "status": "pending",
+   "reason": "match_review",
+   "error": "Candidate rejected by stricter repeated-title/preview checks; look for another upload on the next run",
+   "checkedAt": "2026-10-17T18:11:53.071Z"
+  },
+  "[\"gяeg\",\"eau coulée smart city\"]": {
+   "status": "verified",
+   "videoId": "hpT88w7ppGI",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:50.004Z"
+  },
+  "[\"moujodeen khan\",\"multani\"]": {
+   "status": "verified",
+   "videoId": "T2AaZzhs6sg",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:52.891Z"
+  },
+  "[\"cheryl e leonard\",\"storm on gamage point\"]": {
+   "status": "no_match",
+   "checkedAt": "2026-10-17T18:08:54.663Z"
+  },
+  "[\"jancu marinescu\",\"adio de cavadia\"]": {
+   "status": "verified",
+   "videoId": "YnJWg6cmaqE",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:08:57.442Z"
+  },
+  "[\"miss nancy and d. lincoln's orchestra\",\"stambol junjongan hati\"]": {
+   "status": "no_match",
+   "checkedAt": "2026-10-17T18:08:59.163Z"
+  },
+  "[\"panchito maquieira and his typical orchestra\",\"la cumparsita\"]": {
+   "status": "no_match",
+   "checkedAt": "2026-10-17T18:09:00.976Z"
+  },
+  "[\"troupe chaoueche saad\",\"goumri oueld eddounane\"]": {
+   "status": "verified",
+   "videoId": "HXdeM-B8OZU",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:09:04.966Z"
+  },
+  "[\"e.c. arinze & his music\",\"lumumba calypso\"]": {
+   "status": "verified",
+   "videoId": "N1ddCydyH30",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:09:08.614Z"
+  },
+  "[\"nerija\",\"paprastas motyvas\"]": {
+   "status": "verified",
+   "videoId": "wviwdBi5mnQ",
+   "via": "search",
+   "checkedAt": "2026-10-17T18:09:12.457Z"
+  },
+  "[\"altieri dorival\",\"coq la\"]": {
+   "status": "pending",
+   "reason": "unavailable",
+   "error": "YouTube returned an unreadable search page; the lookup remains pending",
+   "checkedAt": "2026-10-17T18:09:15.024Z"
+  }
+ },
+ "youtubeSearchUsage": {
+  "day": "2026-10-17",
+  "api": 0,
+  "web": 20
+ }
 }

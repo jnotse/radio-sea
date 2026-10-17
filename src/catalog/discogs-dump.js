@@ -20,6 +20,7 @@ import { Readable } from 'node:stream';
 import { createGunzip } from 'node:zlib';
 import { songKey } from './extend.js';
 import { canonicalArtist, canonicalTitle, decodeEntities } from './text.js';
+import { candidateMatch, youtubeIdFromUrl } from './youtube.js';
 
 const MAX_GENRES = 3;
 const MAX_STYLES = 5;
@@ -175,6 +176,9 @@ export function parseDumpRelease(xml) {
   const rawCountry = decodeEntities(first(head, /<country>([^<]+)<\/country>/) ?? '').trim();
   const country = rawCountry && rawCountry.toLowerCase() !== 'unknown' ? rawCountry : null;
   const extra = parseExtraArtists(first(head, /<extraartists>([\s\S]*?)<\/extraartists>/));
+  const videos = [...xml.matchAll(/<video\b[^>]*\bsrc="([^"]+)"[^>]*>([\s\S]*?)<\/video>/g)]
+    .map((m) => ({ url: decodeEntities(m[1]), title: decodeEntities(first(m[2], /<title>([^<]*)<\/title>/) ?? '') }))
+    .map((video) => ({ ...video, videoId: youtubeIdFromUrl(video.url) })).filter((video) => video.videoId);
   return {
     id: Number(first(xml, /<release id="(\d+)"/)),
     artists: credits(first(head, /<artists>([\s\S]*?)<\/artists>/)),
@@ -199,7 +203,8 @@ export function parseDumpRelease(xml) {
         credits: trackExtra.credits,
       };
     }),
-    videoIds: [...xml.matchAll(/<video src="[^"]*?(?:[?&]v=|youtu\.be\/)([\w-]{11})/g)].map((m) => m[1]),
+    videos,
+    videoIds: videos.map((video) => video.videoId),
   };
 }
 
@@ -235,7 +240,7 @@ export function createDiscogsMatcher(plays) {
     const parts = String(play.artist).split(/,\s+|\s+(?:feat\.?|ft\.?|featuring)\s+/i);
     const primary = artistKey(parts[0]);
     const names = new Set([play.artist, ...parts].map(artistKey).filter((name) => name && !PLACEHOLDER_ARTISTS.has(name)));
-    songs.set(key, { titles: titleKeys(play.title), primary, names, groups: new Map(), artistIds: new Set() });
+    songs.set(key, { play, videos: new Map(), titles: titleKeys(play.title), primary, names, groups: new Map(), artistIds: new Set() });
     for (const name of names) {
       if (!byArtist.has(name)) byArtist.set(name, new Set());
       byArtist.get(name).add(key);
@@ -275,6 +280,13 @@ export function createDiscogsMatcher(plays) {
             titles ??= titleKeys(track.title);
             if (![...song.titles].some((title) => titles.has(title))) continue;
             if (key === song.primary) song.artistIds.add(id);
+            // Keep video hints from track-matched releases, not artist-only
+            // guesses. The actual YouTube title/channel are verified later.
+            for (const video of release.videos ?? []) {
+              if (song.videos.size >= 10 || !candidateMatch(song.play, { title: video.title, channel: song.play.artist }).acceptable) continue;
+              if (!song.videos.has(video.videoId)) song.videos.set(video.videoId, { ...video,
+                source: 'discogs', sourceUrl: `https://www.discogs.com/release/${release.id}` });
+            }
             // A compilation's year, label, country and format are not the song's.
             const own = releaseArtists.some((artist) => artist.key === key);
             if (!song.groups.has(group)) {
@@ -354,6 +366,7 @@ export function createDiscogsMatcher(plays) {
             ...(topCredits.length ? { credits: topCredits } : {}),
             source: groups.some((group) => group.via === 'track') ? 'track' : 'video',
             releases: groups.map((group) => group.releaseId).slice(0, 5),
+            ...(song.videos.size ? { youtubeCandidates: [...song.videos.values()] } : {}),
           };
           continue;
         }

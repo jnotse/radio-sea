@@ -25,10 +25,12 @@ if (!source || !(limit > 0)) {
   process.exit(1);
 }
 
-const { resolved } = JSON.parse(await readFile(join(root, 'data', 'resolved-plays.json'), 'utf8'));
-const matcher = createDiscogsMatcher(resolved);
+const cached = JSON.parse(await readFile(join(root, 'data', 'resolved-plays.json'), 'utf8'));
+// Pending songs need catalogue links before their first YouTube search too.
+const plays = [...(cached.resolved ?? []), ...(cached.plays ?? [])];
+const matcher = createDiscogsMatcher(plays);
 const started = Date.now();
-console.log(`Scanning ${source === '-' ? 'standard input' : source} for ${new Set(resolved.map(songKey)).size} songs…`);
+console.log(`Scanning ${source === '-' ? 'standard input' : source} for ${new Set(plays.map(songKey)).size} songs (including pending)…`);
 const { scanned } = await scanDiscogsDump(source === '-' ? process.stdin : createReadStream(source), matcher, {
   limit,
   onProgress: ({ scanned: n }) => console.log(`  ${n.toLocaleString('en')} releases (${Math.round((Date.now() - started) / 1000)}s)`),

@@ -11,6 +11,9 @@
 //   node scripts/build-demo.js --radiooooo [--max 120]  # one Radiooooo song per country
 //                                         and decade not yet sampled, matched on YouTube
 //   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
+//   add --search-budget 100 for a durable daily search-call cap (Pacific time)
+//   add --retry-unmatched to reconsider legacy negative lookups
+//   add --no-wait to checkpoint and stop immediately on a YouTube block
 //   add --delay 8 to wait 8 s between YouTube lookups where YouTube limits searches
 //
 // Network required, except with --reuse. Everything is cached in demo/sea-data.js
@@ -30,6 +33,7 @@ import { lookupDeezerForPlays } from '../src/catalog/deezer.js';
 import { lookupYoutubeMeta, isCuratorChannel } from '../src/catalog/youtube-meta.js';
 import { fetchRadioooooPlaces, spreadPlaces, sampleRadioooooPlaces, placeOf, placeKey } from '../src/catalog/radiooooo.js';
 import { decodeEntities } from '../src/catalog/text.js';
+import { discoverCatalogueLinks } from '../src/catalog/catalogue-links.js';
 
 export function interleavePlays(plays, limit) {
   const groups = new Map();
@@ -176,6 +180,46 @@ export function playToRaw(play) {
 async function main() {
   const cacheFile = join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'resolved-plays.json');
   await mkdir(join(dirname(cacheFile)), { recursive: true });
+  const readCache = async (file, fallback = {}) => {
+    try { return JSON.parse(await readFile(file, 'utf8')); }
+    catch (error) { if (error.code !== 'ENOENT') throw error; return fallback; }
+  };
+  const saveCache = async (file, value) => {
+    await writeFile(`${file}.next`, JSON.stringify(value, null, 1));
+    await rename(`${file}.next`, file);
+  };
+  const genresFile = join(dirname(cacheFile), 'track-genres.json');
+  const linksFile = join(dirname(cacheFile), 'catalogue-links.json');
+  let trackGenres = await readCache(genresFile);
+  const discogs = (await readCache(join(dirname(cacheFile), 'discogs-matches.json'))).songs ?? {};
+  let catalogueLinks = await readCache(linksFile);
+  const extend = async (cached, options = {}) => extendRadioCache(cached, {
+    delayMs, apiKey: youtubeApiKey, searchBudget: argValue('search-budget', 100),
+    retryUnmatched: args.includes('--retry-unmatched'),
+    ...(args.includes('--no-wait') ? { backoffs: [] } : {}),
+    prepareCandidates: async (pending) => {
+      console.log(`Discovering catalogue links for ${pending.length} pending songs (MusicBrainz / Discogs)…`);
+      const result = await discoverCatalogueLinks(pending, {
+        musicbrainz: trackGenres, discogs, cache: catalogueLinks,
+        checkpoint: async ({ musicbrainz, cache }) => {
+          trackGenres = musicbrainz; catalogueLinks = cache;
+          await saveCache(genresFile, musicbrainz);
+          await saveCache(linksFile, cache);
+        },
+        onProgress: ({ index, total, play, candidates }) => console.log(
+          `  catalogue ${index}/${total}: ${candidates} link hints — ${play.artist} — ${play.title}`),
+      });
+      for (const error of result.errors) console.log(`  ! ${error.provider}: ${error.message}; using other sources and cached links.`);
+      console.log(youtubeApiKey ? 'Verifying known IDs in API batches of 50; searching only leftovers…'
+        : 'Verifying known links via oEmbed; searching only leftovers (no API key set)…');
+      return result.plays;
+    },
+    onBackoff: ({ waitMs, error }) => console.log(`  YouTube refused (${error.message}); waiting ${waitMs / 60000} min before retrying…`),
+    checkpoint: (cache) => saveCache(cacheFile, cache),
+    onProgress: ({ index, total, play, youtube, added, pending }) => console.log(
+      `  ${index}/${total} ${pending ? 'pending' : youtube?.confirmed ? `matched via ${youtube.via}` : 'no match'} (+${added}): ${play.artist} — ${play.title}`),
+    ...options,
+  });
 
   let resolved = [];
   let dropped = 0;
@@ -204,26 +248,17 @@ async function main() {
       plays = cached.plays;
     }
     if (args.includes('--extend') || args.includes('--radiooooo')) {
-      console.log(youtubeApiKey ? 'Matching on YouTube through the Data API (YOUTUBE_API_KEY)…'
-        : `Matching on YouTube's search pages, one every ${delayMs / 1000} s…`);
-      const result = await extendRadioCache(cached, {
+      const result = await extend(cached, {
         // Every new Radiooooo pick is looked up: --max already capped the sample.
         limit: args.includes('--radiooooo') ? Infinity : argValue('max', 160),
         stations: args.includes('--radiooooo') ? ['radiooooo'] : null,
-        delayMs,
-        apiKey: youtubeApiKey,
-        onBackoff: ({ waitMs, error }) => console.log(`  YouTube refused (${error.message}); waiting ${waitMs / 60000} min before retrying…`),
-        checkpoint: async (cache) => {
-          await writeFile(`${cacheFile}.next`, JSON.stringify(cache, null, 1));
-          await rename(`${cacheFile}.next`, cacheFile);
-        },
-        onProgress: ({ index, total, play, youtube, added }) => console.log(
-          `  ${index}/${total} ${youtube?.confirmed ? 'matched' : 'excluded'} (+${added}): ${play.artist} — ${play.title}`),
       });
       resolved = result.cache.resolved;
       dropped = result.cache.dropped;
       console.log(`Added ${result.added} verified matches from ${result.attempted} new lookups; kept existing tracks.`);
-      if (result.stopped) console.log(`Stopped early: ${result.stopped.message}. The remaining songs will be tried on the next run.`);
+      const usage = result.cache.youtubeSearchUsage;
+      if (usage.day) console.log(`Search calls saved for ${usage.day} (Pacific): API ${usage.api ?? 0}, web ${usage.web ?? 0}.`);
+      if (result.stopped) console.log(`Pending: ${result.stopped.message}. Run again later to continue.`);
     }
     if (args.includes('--repair')) {
       const sample = [...resolved, ...interleavePlays(plays, maxTracks)].filter((p, i, all) =>
@@ -248,9 +283,12 @@ async function main() {
     // Round-robin across stations so one station's block does not eat the quota.
     const mixed = interleavePlays(plays, maxTracks);
 
-    ({ resolved, dropped } = await resolvePlaysToYoutube(mixed, { delayMs, apiKey: youtubeApiKey }));
+    const result = await extend({ plays: mixed, resolved: [], dropped: 0 }, {
+      limit: maxTracks, checkpoint: (cache) => saveCache(cacheFile, { ...cache, plays }),
+    });
+    ({ resolved, dropped } = result.cache);
+    if (result.stopped) console.log(`Pending: ${result.stopped.message}. Run catalog:extend later to continue.`);
     console.log(`  resolved ${resolved.length}, dropped ${dropped} (no valid YouTube link)`);
-    await writeFile(cacheFile, JSON.stringify({ plays, resolved, dropped }, null, 1));
     console.log(`  cached to ${cacheFile}`);
   }
 
@@ -258,13 +296,10 @@ async function main() {
   resolved = resolved.filter((p) => p.youtube?.confirmed === true && candidateMatch(p, p.youtube).acceptable);
   if (!resolved.length) throw new Error('No verified matches. Run build-demo with --repair to refresh the cache.');
   // Per-track genres live in their own cache so lookups survive rebuilds.
-  const genresFile = join(dirname(cacheFile), 'track-genres.json');
-  let trackGenres = {};
-  try { trackGenres = JSON.parse(await readFile(genresFile, 'utf8')); } catch { /* none looked up yet */ }
   if (args.includes('--genres')) {
     console.log('Looking up per-track genres on MusicBrainz (about one request per second)…');
-    const result = await lookupGenresForPlays(resolved, {
-      cache: trackGenres,
+    const result = await lookupGenresForPlays([...resolved, ...plays], {
+      cache: trackGenres, includeVideoLinks: true,
       checkpoint: async (cache) => {
         await writeFile(`${genresFile}.next`, JSON.stringify(cache, null, 1));
         await rename(`${genresFile}.next`, genresFile);
@@ -275,8 +310,6 @@ async function main() {
     trackGenres = result.cache;
     if (result.error) console.log(`Stopped after ${result.done}/${result.total}: ${result.error.message}. Run again to continue.`);
   }
-  let discogs = {};
-  try { discogs = JSON.parse(await readFile(join(dirname(cacheFile), 'discogs-matches.json'), 'utf8')).songs ?? {}; } catch { /* not imported yet */ }
   const deezerFile = join(dirname(cacheFile), 'deezer-tracks.json');
   let deezer = {};
   try { deezer = JSON.parse(await readFile(deezerFile, 'utf8')); } catch { /* none looked up yet */ }
