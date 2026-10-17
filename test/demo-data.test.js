@@ -120,3 +120,16 @@ test('only facts for genres and artists on the map go into it, with their credit
   });
   assert.deepEqual(factsOnMap(releases), { genres: {}, artists: {} }, 'nothing looked up yet');
 });
+
+test('a channel upload takes its linked record\'s spelling, album and label before the uploader\'s own', () => {
+  const upload = { ...sample, station: 'floorlengthskirts', show: null, artist: 'koji nakamura', title: 'the right world', releaseYear: 1993,
+    labelHint: 'cultdep', youtube: { ...sample.youtube, via: 'channel' } };
+  const key = songKey(upload);
+  const discogs = { [key]: { genres: ['Electronic'], styles: ['Synth-pop'], year: 2012, source: 'link', album: 'Tokio Explosion Vol.2',
+    label: 'Cultdep', artistName: 'Koji Nakamura', trackTitle: 'The Right World' } };
+  const song = withOwnGenres(upload, discogs);
+  assert.deepEqual([song.artist, song.title, song.album, song.label, song.releaseYear], ['Koji Nakamura', 'The Right World', 'Tokio Explosion Vol.2', 'Cultdep', 1993]);
+  assert.equal(withOwnGenres(upload).label, 'cultdep', 'without Discogs, the uploader\'s label');
+  const [release] = mergeCatalogue([playToRaw(song)]).releases;
+  assert.equal(release.radioPlays[0].show, '');
+});

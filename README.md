@@ -94,6 +94,21 @@ explicit `--retry-unmatched` can revisit legacy exclusions without deleting
 accepted songs. Embedding metadata is not a guarantee of playback in every
 region or browser.
 
+### Record channels on YouTube
+
+Every record a YouTube channel has uploaded can join the map, such as
+[floor length skirt(s)](https://www.youtube.com/@floorlengthskirts). Their
+uploads are titled "artist - title (year)" and link the record's Discogs page,
+so each song is matched to exactly that record by the next Discogs import:
+
+```sh
+YOUTUBE_API_KEY=… node scripts/build-demo.js --channel floorlengthskirts
+npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz
+```
+
+A new channel is added to `RADIO_STATIONS` in `src/catalog/radio.js` (kind
+`youtube`) first. Rerunning `--channel` only adds uploads that are new.
+
 ### Guano's facts from Wikipedia
 
 While a song plays, Guano now and then tells you something about its artist
@@ -126,10 +141,19 @@ not single songs. So songs are grouped by their own genres once they have
 been looked up; a song without any stays with the show it was played on.
 A grove is named after the genre at least half its songs share, or after
 its two commonest genres when it's a mix. Only a grove where most songs
-have no genres yet is named after the show they were played on.
+have no genres yet is named after the show they were played on, and songs
+nobody knows anything about yet gather under the station or channel they
+came from. A song or two too far from everything else joins the grove it's
+closest to, so there are no specks of one or two songs.
 
 The 2D steppe has its own genre-led clustering and layout, retaining era,
-mood and radio context for songs without genres. Instruments,
+mood and radio context for songs without genres. A style ("new wave",
+"dub techno") counts for much more than a broad genre ("rock",
+"electronic"), and a compilation's styles, which describe the whole record,
+count for less than a song's own. The groves are packed around the biggest
+one, each next to the groves it is most like, so the map grows only as fast
+as its songs do; zoomed out, only groves big enough on screen show their
+signs. Instruments,
 credits, formats, uploader channels, co-play sequence and spectral audio
 descriptors can inform discovery and the 3D topology without moving its
 groves. Switching views preserves each map's pan and zoom.

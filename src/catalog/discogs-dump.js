@@ -171,7 +171,7 @@ export function parseDumpRelease(xml) {
   const tracklistAt = xml.indexOf('<tracklist>');
   const head = tracklistAt >= 0 ? xml.slice(0, tracklistAt) : xml;
   const tracklist = tracklistAt >= 0 ? xml.slice(tracklistAt, xml.indexOf('</tracklist>', tracklistAt)) : '';
-  const master = xml.match(/<master_id is_main_release="(?:true|false)">(\d+)<\/master_id>/);
+  const master = xml.match(/<master_id is_main_release="(true|false)">(\d+)<\/master_id>/);
   const year = Number(first(xml, /<released>(\d{4})/));
   const rawCountry = decodeEntities(first(head, /<country>([^<]+)<\/country>/) ?? '').trim();
   const country = rawCountry && rawCountry.toLowerCase() !== 'unknown' ? rawCountry : null;
@@ -191,7 +191,8 @@ export function parseDumpRelease(xml) {
     formats: parseFormats(head),
     instruments: extra.instruments,
     credits: extra.credits,
-    masterId: master ? Number(master[1]) : null,
+    masterId: master ? Number(master[2]) : null,
+    mainRelease: master?.[1] === 'true',
     // Index tracks nest sub-tracks, so split at each opening tag instead of pairing tags.
     tracks: tracklist.split('<track>').slice(1).map((part) => {
       const trackExtra = parseExtraArtists(first(part, /<extraartists>([\s\S]*?)<\/extraartists>/));
@@ -231,7 +232,10 @@ export function createDiscogsMatcher(plays) {
   const songs = new Map();
   const byArtist = new Map();
   const byVideo = new Map();
+  const byRelease = new Map(); // Discogs release or master linked to the song (a channel's upload says which record it is)
+  const byMaster = new Map();
   const tallies = new Map(); // primary artist key -> Discogs artist id -> styles of their releases
+  const link = (map, id, key) => { if (id) map.set(Number(id), (map.get(Number(id)) ?? new Set()).add(key)); };
 
   for (const play of plays) {
     const key = songKey(play);
@@ -246,6 +250,8 @@ export function createDiscogsMatcher(plays) {
       byArtist.get(name).add(key);
     }
     if (play.youtube?.videoId) byVideo.set(play.youtube.videoId, key);
+    link(byRelease, play.ids?.discogsRelease, key);
+    link(byMaster, play.ids?.discogsMaster, key);
     if (names.has(primary)) tallies.set(primary, tallies.get(primary) ?? new Map());
   }
 
@@ -253,6 +259,8 @@ export function createDiscogsMatcher(plays) {
 
   return {
     wants(xml) {
+      if (byRelease.has(Number(first(xml, /<release id="(\d+)"/)))) return true;
+      if (byMaster.size && byMaster.has(Number(first(xml, /<master_id[^>]*>(\d+)<\/master_id>/)))) return true;
       const head = xml.slice(0, xml.indexOf('</artists>') + 10);
       if (keyed(credits(first(head, /<artists>([\s\S]*?)<\/artists>/))).some(({ key }) => key === VARIOUS || byArtist.has(key))) return true;
       return xml.includes('<videos>') && parseDumpRelease(xml).videoIds.some((id) => byVideo.has(id));
@@ -307,6 +315,31 @@ export function createDiscogsMatcher(plays) {
         }
       }
 
+      // The record a song's upload links: trusted as its own release. Its
+      // tracklist confirms the track, and spells its artist and title.
+      const linked = new Set([...(byRelease.get(release.id) ?? []), ...(release.masterId ? byMaster.get(release.masterId) ?? [] : [])]);
+      for (const songId of linked) {
+        const song = songs.get(songId);
+        const track = release.tracks.find((t) => [...song.titles].some((title) => titleKeys(t.title).has(title)));
+        const names = (track?.artists.length ? track.artists : release.artists).map((a) => cleanDisambiguation(a.names[0]));
+        song.groups.set(`link${release.id}`, {
+          ...found,
+          own: true,
+          via: 'link',
+          main: release.mainRelease || byRelease.get(release.id)?.has(songId) || false,
+          compilation: releaseArtists.some((artist) => artist.key === VARIOUS),
+          year: release.year,
+          country: release.country ?? null,
+          labels: release.labels ?? [],
+          formats: release.formats ?? [],
+          instruments: [...new Set([...(release.instruments ?? []), ...(track?.instruments ?? [])])],
+          credits: [...new Set([...(release.credits ?? []), ...(track?.credits ?? [])])],
+          length: track?.length ?? null,
+          album: release.title || null,
+          ...(track ? { artist: names.filter((name) => artistKey(name) !== VARIOUS).join(', ') || null, title: track.title } : {}),
+        });
+      }
+
       for (const videoId of release.videoIds) {
         const song = songs.get(byVideo.get(videoId));
         const own = Boolean(song) && releaseArtists.some((artist) => song.names.has(artist.key));
@@ -333,7 +366,10 @@ export function createDiscogsMatcher(plays) {
       const out = {};
       for (const [key, song] of songs) {
         const matched = [...song.groups.values()];
-        const groups = matched.some((group) => group.own) ? matched.filter((group) => group.own) : matched;
+        const linked = matched.filter((group) => group.via === 'link');
+        const groups = linked.length ? linked : matched.some((group) => group.own) ? matched.filter((group) => group.own) : matched;
+        // For a linked master, the main release names the record; else the earliest.
+        const record = linked.length ? [...linked].sort((a, b) => (b.main - a.main) || ((a.year ?? 9999) - (b.year ?? 9999)))[0] : null;
         if (groups.length) {
           const styles = new Map(), genres = new Map(), labels = new Map(), countries = new Map();
           const formats = new Map(), instruments = new Map(), creditNames = new Map();
@@ -364,7 +400,12 @@ export function createDiscogsMatcher(plays) {
             ...(topFormats.length ? { formats: topFormats } : {}),
             ...(topInstruments.length ? { instruments: topInstruments } : {}),
             ...(topCredits.length ? { credits: topCredits } : {}),
-            source: groups.some((group) => group.via === 'track') ? 'track' : 'video',
+            ...(record?.album ? { album: record.album } : {}),
+            ...(record?.labels?.length ? { label: record.labels[0] } : {}),
+            ...(record?.title ? { artistName: linked.find((g) => g.artist)?.artist ?? null, trackTitle: record.title } : {}),
+            source: linked.length ? 'link' : groups.some((group) => group.via === 'track') ? 'track' : 'video',
+            // Only compilations list it: their styles describe the whole record.
+            ...((record ? record.compilation : !groups.some((group) => group.own)) ? { compilation: true } : {}),
             releases: groups.map((group) => group.releaseId).slice(0, 5),
             ...(song.videos.size ? { youtubeCandidates: [...song.videos.values()] } : {}),
           };

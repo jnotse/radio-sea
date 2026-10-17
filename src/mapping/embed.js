@@ -12,7 +12,7 @@
 // mismatch, so sparse radio records are not pushed apart by what nobody knows.
 
 import { keyDistance } from '../layout.js';
-import { isContextTag, isGenreTag } from './tags.js';
+import { isBroadGenre, isContextTag, isGenreTag } from './tags.js';
 import { audioSimilarity } from '../catalog/audio-features.js';
 
 export function buildTagVocabulary(releases) {
@@ -26,18 +26,19 @@ export function buildTagVocabulary(releases) {
 }
 
 // `documents` is how many releases the vocabulary was built from: a tag on
-// every release weighs almost nothing, a rare style weighs most.
-export function tagVector(release, vocabulary, { mode = 'all', documents = vocabulary.size } = {}) {
+// every release weighs almost nothing, a rare style weighs most. `weigh` can
+// scale a tag further, given all the release's tags.
+export function tagVector(release, vocabulary, { mode = 'all', documents = vocabulary.size, isContext = isContextTag, weigh = () => 1 } = {}) {
   const vector = new Map();
   const tags = release.tags?.all ?? release.styles ?? [];
   for (const tag of tags) {
-    const context = isContextTag(tag);
+    const context = isContext(tag);
     if (mode === 'sound' && context) continue;
     if (mode === 'context' && !context) continue;
     const df = vocabulary.get(tag);
     if (!df) continue;
     const idf = Math.log((documents + 1) / (df + 0.5));
-    vector.set(tag, (vector.get(tag) ?? 0) + 1 * idf);
+    vector.set(tag, (vector.get(tag) ?? 0) + weigh(tag, tags) * idf);
   }
   return vector;
 }
@@ -113,16 +114,22 @@ function overlap(listA = [], listB = []) {
   return 0;
 }
 
+const WEIGHTS = { tags: 3.0, artist: 0.9, label: 0.35, era: 1.0, country: 0.6, audio: 0.8, coplay: 0.5 };
+
 /**
  * Returns a similarity function sim(a, b) in [0, 1] plus the vocabulary for
- * introspection.
+ * introspection. Options: `weights` overrides signal weights; `isContext` and
+ * `weigh` shape the tag vectors; `trust(release)` in [0, 1] says how far a
+ * release's tags describe it (the pair's tag score counts that much).
  */
-export function buildSimilarity(releases, { richSignals = true } = {}) {
+export function buildSimilarity(releases, { richSignals = true, weights = {}, isContext = isContextTag, weigh, trust = () => 1 } = {}) {
   const pairCache = new Map();
+  const w = { ...WEIGHTS, ...weights };
   const vocabulary = buildTagVocabulary(releases);
   const documents = releases.length;
-  const soundVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'sound', documents })]));
-  const contextVectors = new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode: 'context', documents })]));
+  const vectors = (mode) => new Map(releases.map((r) => [r.id, tagVector(r, vocabulary, { mode, documents, isContext, weigh })]));
+  const soundVectors = vectors('sound');
+  const contextVectors = vectors('context');
 
   return function similarity(a, b) {
     if (a.id === b.id) return 1;
@@ -157,14 +164,14 @@ export function buildSimilarity(releases, { richSignals = true } = {}) {
     const coplayScore = richSignals ? coplayProximity(a, b) : null;
 
     const parts = [
-      [3.0, tagScore],
-      [0.9, artistScore],
+      [w.tags, tagScore * Math.min(trust(a), trust(b))],
+      [w.artist, artistScore],
     ];
-    if (a.label && b.label) parts.push([0.35, overlap([a.label], [b.label])]);
-    if (a.year != null && b.year != null) parts.push([1.0, Math.max(0, 1 - Math.abs(a.year - b.year) / 25)]);
-    if (a.country && b.country) parts.push([0.6, a.country === b.country ? 1 : 0]);
-    if (audioScore != null) parts.push([0.8, audioScore]);
-    if (coplayScore != null) parts.push([0.5, coplayScore]);
+    if (a.label && b.label) parts.push([w.label, overlap([a.label], [b.label])]);
+    if (a.year != null && b.year != null) parts.push([w.era, Math.max(0, 1 - Math.abs(a.year - b.year) / 25)]);
+    if (a.country && b.country) parts.push([w.country, a.country === b.country ? 1 : 0]);
+    if (audioScore != null) parts.push([w.audio, audioScore]);
+    if (coplayScore != null) parts.push([w.coplay, coplayScore]);
 
     let weightSum = 0;
     let total = 0;
@@ -179,14 +186,28 @@ export function buildSimilarity(releases, { richSignals = true } = {}) {
 }
 
 // The 2D map has its own stable feature space. Genres/styles define groves;
-// era/mood tags and radio context help place songs whose genres are unknown.
+// era/mood tags and radio context only help place songs whose genres are
+// unknown, and the year and country of two songs are a weak tie. Context most
+// of the catalogue shares (one big channel's uploads) places nothing. A broad
+// genre counts for little next to a style ("rock" alone would join new wave,
+// krautrock and city pop), and a compilation's styles, which describe the
+// whole record, count for less than a song's own.
 // Extra descriptors, uploader channels, spectral audio features and co-play
 // sequence remain available to discovery and TDA without rearranging this map.
 export function buildMapSimilarity(releases) {
+  const tagsOf = (release) => release.tags?.all ?? release.styles ?? [];
+  const common = [...buildTagVocabulary(releases)].filter(([tag, count]) => !isGenreTag(tag) && count * 2 > releases.length).map(([tag]) => tag);
   const mapReleases = releases.map((release) => ({
     ...release,
-    tags: { all: (release.tags?.all ?? release.styles ?? [])
-      .filter((tag) => isGenreTag(tag) || /^(mood|decade|station|show|show-genre):/.test(tag)) },
+    tags: { all: tagsOf(release).filter((tag) => (isGenreTag(tag) || /^(mood|decade|station|show|show-genre):/.test(tag)) && !common.includes(tag)) },
   }));
-  return buildSimilarity(mapReleases, { richSignals: false });
+  const compilations = new Set(releases.filter((release) => tagsOf(release).includes('format:compilation')).map((release) => release.id));
+  const specific = (tag) => isGenreTag(tag) && !isBroadGenre(tag);
+  return buildSimilarity(mapReleases, {
+    richSignals: false,
+    weights: { era: 0.35, country: 0.2 },
+    isContext: (tag) => !isGenreTag(tag),
+    weigh: (tag, tags) => (isBroadGenre(tag) && tags.some(specific) ? 0.35 : 1),
+    trust: (release) => (compilations.has(release.id) ? 0.6 : 1),
+  });
 }

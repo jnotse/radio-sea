@@ -133,6 +133,8 @@ export const RADIO_STATIONS = [
   { id: 'worldwidefm', label: 'Worldwide FM', kind: 'mixcloud', user: 'worldwidefm' },
   { id: 'lotradio', label: 'The Lot Radio', kind: 'lotshow', categories: ['special-guests'] },
   { id: 'radiooooo', label: 'Radiooooo', kind: 'radiooooo' },
+  // Record channels on YouTube: imported whole with build-demo --channel <handle>, not scanned.
+  { id: 'floorlengthskirts', label: 'floor length skirt(s)', kind: 'youtube', handle: 'floorlengthskirts' },
 ];
 
 /**
@@ -142,7 +144,7 @@ export const RADIO_STATIONS = [
 export async function fetchRadioPlays({ stations = RADIO_STATIONS, fetchImpl = fetch, maxEpisodes = 8 } = {}) {
   const plays = [];
   const errors = [];
-  for (const station of stations) {
+  for (const station of stations.filter((s) => s.kind !== 'youtube')) {
     try {
       let rows;
       if (station.kind === 'nts') {

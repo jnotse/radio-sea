@@ -10,6 +10,7 @@
 //                                         (Data API if YOUTUBE_API_KEY is set, else watch pages)
 //   node scripts/build-demo.js --radiooooo [--max 120]  # one Radiooooo song per country
 //                                         and decade not yet sampled, matched on YouTube
+//   node scripts/build-demo.js --channel floorlengthskirts  # every record a YouTube channel uploaded
 //   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
 //   add --search-budget 100 for a durable daily search-call cap (Pacific time)
 //   add --retry-unmatched to reconsider legacy negative lookups
@@ -33,6 +34,7 @@ import { lookupDeezerForPlays } from '../src/catalog/deezer.js';
 import { lookupYoutubeMeta, isCuratorChannel } from '../src/catalog/youtube-meta.js';
 import { fetchRadioooooPlaces, spreadPlaces, sampleRadioooooPlaces, placeOf, placeKey } from '../src/catalog/radiooooo.js';
 import { decodeEntities } from '../src/catalog/text.js';
+import { fetchChannelUploads, uploadToPlay } from '../src/catalog/youtube-channel.js';
 import { discoverCatalogueLinks } from '../src/catalog/catalogue-links.js';
 
 export function interleavePlays(plays, limit) {
@@ -83,8 +85,12 @@ export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {},
   const credits = [...new Set([...(found?.credits ?? []), ...(mb?.credits ?? []), ...(video?.credits ?? [])])];
   const formats = [...new Set([...(found?.formats ?? []), ...(video?.formats ?? [])])];
   const audio = dz?.audio ?? play.audio ?? null;
+  // A record the upload links names its artist and title properly ("koji nakamura" is Koji Nakamura).
+  const linked = found?.source === 'link';
   return {
     ...play,
+    ...(linked && found.artistName ? { artist: found.artistName } : {}),
+    ...(linked && found.trackTitle ? { title: found.trackTitle } : {}),
     genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
     releaseYear: play.releaseYear ?? found?.year ?? mb?.year ?? null,
     country: play.country ?? found?.country ?? mb?.country ?? video?.country ?? null,
@@ -92,13 +98,15 @@ export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {},
     bpm: dz?.bpm ?? audio?.bpm ?? null,
     ...(play.key ?? audio?.key ? { key: play.key ?? audio.key } : {}),
     ...(audio ? { audio } : {}),
-    album: play.album ?? video?.album ?? null,
-    label: play.label ?? found?.label ?? video?.label ?? null,
+    album: play.album ?? found?.album ?? video?.album ?? null,
+    label: play.label ?? found?.label ?? play.labelHint ?? video?.label ?? null,
     ...(instruments.length ? { instruments } : {}),
     ...(credits.length ? { credits } : {}),
     ...(formats.length ? { formats } : {}),
     ...(video?.channel ? { channel: video.channel } : {}),
     ...(video?.views != null ? { views: video.views } : {}),
+    // A compilation's styles describe the whole record, not this song.
+    ...(play.compilation || found?.compilation ? { compilation: true } : {}),
   };
 }
 
@@ -142,6 +150,7 @@ export function playToRaw(play) {
         ...(play.instruments ?? []).map((inst) => `inst:${inst.toLowerCase()}`),
         ...(play.credits ?? []).map((credit) => `credit:${credit.toLowerCase()}`),
         ...(play.formats ?? []).map((fmt) => `format:${fmt.toLowerCase()}`),
+        ...(play.compilation ? ['format:compilation'] : []),
       ],
       styles: [`station:${play.station}`],
       descriptors: [
@@ -226,7 +235,7 @@ async function main() {
   let plays = [];
   let errors = [];
 
-  if (['--reuse', '--repair', '--extend', '--radiooooo', '--genres', '--deezer', '--youtube-meta'].some((flag) => args.includes(flag))) {
+  if (['--reuse', '--repair', '--extend', '--radiooooo', '--genres', '--deezer', '--youtube-meta', '--channel'].some((flag) => args.includes(flag))) {
     const cached = JSON.parse(await readFile(cacheFile, 'utf8'));
     resolved = cached.resolved;
     dropped = cached.dropped;
@@ -246,6 +255,31 @@ async function main() {
       const keys = new Set(cached.plays.map((p) => `${p.station}|${p.ids?.radiooooo ?? ''}|${p.artist}|${p.title}`));
       cached.plays.push(...incoming.filter((p) => !keys.has(`${p.station}|${p.ids?.radiooooo ?? ''}|${p.artist}|${p.title}`)));
       plays = cached.plays;
+    }
+    if (args.includes('--channel')) {
+      // A record channel's uploads are its own videos: they join the map as they are.
+      const handle = String(args[args.indexOf('--channel') + 1] ?? '').replace(/^@/, '');
+      const station = RADIO_STATIONS.find((s) => s.kind === 'youtube' && s.handle === handle);
+      if (!station) throw new Error(`Add @${handle} to RADIO_STATIONS in src/catalog/radio.js (kind 'youtube') first`);
+      console.log(`Listing every upload of @${handle} with the YouTube Data API…`);
+      const { videos } = await fetchChannelUploads({ handle, apiKey: youtubeApiKey });
+      const checkedAt = new Date().toISOString();
+      const known = new Set(cached.resolved.map((p) => p.youtube?.videoId));
+      const uploads = videos.map((video) => uploadToPlay(video, station, checkedAt));
+      const fresh = uploads.filter((p) => !known.has(p.youtube.videoId));
+      // Uploads already on the map learn which of them link a compilation.
+      const compilations = new Set(uploads.filter((p) => p.compilation).map((p) => p.youtube.videoId));
+      for (const play of [...cached.plays, ...cached.resolved]) {
+        if (play.youtube?.via === 'channel' && compilations.has(play.youtube.videoId)) play.compilation = true;
+      }
+      cached.plays.push(...fresh);
+      cached.resolved.push(...fresh);
+      cached.attemptedKeys = [...new Set([...(cached.attemptedKeys ?? []), ...fresh.map(songKey)])];
+      await saveCache(cacheFile, cached);
+      ({ resolved, plays } = cached);
+      const linked = fresh.filter((p) => p.ids.discogsRelease || p.ids.discogsMaster).length;
+      console.log(`  ${videos.length} playable uploads; added ${fresh.length} new songs, ${linked} of them linking their Discogs record.`);
+      if (linked) console.log('  Run npm run catalog:discogs -- <releases dump> to read those records.');
     }
     if (args.includes('--extend') || args.includes('--radiooooo')) {
       const result = await extend(cached, {
@@ -293,7 +327,8 @@ async function main() {
   }
 
   // Reject stale/unverified or unrelated cached candidates too.
-  resolved = resolved.filter((p) => p.youtube?.confirmed === true && candidateMatch(p, p.youtube).acceptable);
+  // A channel's own upload is its song by definition; searched matches must agree with their song.
+  resolved = resolved.filter((p) => p.youtube?.confirmed === true && (p.youtube.via === 'channel' || candidateMatch(p, p.youtube).acceptable));
   if (!resolved.length) throw new Error('No verified matches. Run build-demo with --repair to refresh the cache.');
   // Per-track genres live in their own cache so lookups survive rebuilds.
   if (args.includes('--genres')) {
@@ -401,7 +436,7 @@ async function main() {
     },
     islands: engine.islands.map((island) => ({
       ...island,
-      name: island.name.replace(/^station:/, ''),
+      name: island.basis === 'station' ? RADIO_STATIONS.find((s) => s.id === island.name)?.label ?? island.name : island.name,
     })),
     releases: releases.map((release) => {
       const placement = engine.mapPlacement(release.id);
