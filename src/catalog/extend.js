@@ -1,4 +1,4 @@
-import { resolvePlayToYoutube, candidateMatch } from './youtube.js';
+import { resolvePlayToYoutube, candidateMatch, candidateVideoId, lookupYoutubeVideos, YoutubeUnavailable } from './youtube.js';
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -11,8 +11,8 @@ export function songKey(play) {
 
 /** Round-robin episodes, not just stations, to avoid filling the map with
  * hundreds of tracks from the first programme in the schedule. */
-export function newRadioCandidates(cache, limit = 160, stations = null) {
-  const tried = new Set([...(cache.attemptedKeys ?? []), ...(cache.resolved ?? []).map(songKey)]);
+export function newRadioCandidates(cache, limit = 160, stations = null, { retryUnmatched = false } = {}) {
+  const tried = new Set([...(retryUnmatched ? [] : cache.attemptedKeys ?? []), ...(cache.resolved ?? []).map(songKey)]);
   const groups = new Map();
   for (const play of cache.plays ?? []) {
     if (stations && !stations.includes(play.station)) continue;
@@ -41,35 +41,86 @@ export function newRadioCandidates(cache, limit = 160, stations = null) {
  * stops, leaving that song for the next run. */
 export async function extendRadioCache(cache, { limit = 160, resolvePlay = resolvePlayToYoutube,
   delayMs = 1100, apiKey = null, stations = null, onProgress = () => {}, checkpoint = async () => {},
-  backoffs = [120000, 240000, 480000], pause = wait, onBackoff = () => {} } = {}) {
-  const result = { ...cache, resolved: [...(cache.resolved ?? [])], dropped: cache.dropped ?? 0 };
+  backoffs = [120000, 240000, 480000], pause = wait, onBackoff = () => {},
+  prepareCandidates = async (plays) => plays, fetchImpl = fetch, retryUnmatched = false,
+  searchBudget = 100, now = () => new Date() } = {}) {
+  if (!Number.isInteger(searchBudget) || searchBudget < 0) throw new Error('searchBudget must be a non-negative integer');
+  const result = { ...cache, resolved: [...(cache.resolved ?? [])], dropped: cache.dropped ?? 0,
+    youtubeVideos: { ...(cache.youtubeVideos ?? {}) }, youtubeLookups: { ...(cache.youtubeLookups ?? {}) },
+    youtubeSearchUsage: { ...(cache.youtubeSearchUsage ?? {}) } };
   const attempted = new Set([...(cache.attemptedKeys ?? []), ...result.resolved.map(songKey)]);
-  const candidates = newRadioCandidates(cache, limit, stations);
-  let added = 0, backoff = 0;
-  for (const [index, play] of candidates.entries()) {
+  const candidates = await prepareCandidates(newRadioCandidates(cache, limit, stations, { retryUnmatched }));
+  let searchStopped = null;
+  const checkpointVideos = async () => { await checkpoint(result); };
+  const beforeSearch = async ({ apiKey: api }) => {
+    if (searchStopped) throw searchStopped;
+    // The API resets daily limits at midnight Pacific, including DST changes.
+    const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles' }).format(now());
+    if (result.youtubeSearchUsage.day !== day) result.youtubeSearchUsage = { day, api: 0, web: 0 };
+    const mode = api ? 'api' : 'web';
+    if ((result.youtubeSearchUsage[mode] ?? 0) >= searchBudget) {
+      const error = new YoutubeUnavailable(`Today's ${mode === 'api' ? 'API' : 'web'} search budget (${searchBudget}) is used up; known links can still be checked`);
+      error.code = 'search_budget'; error.final = true;
+      throw error;
+    }
+    result.youtubeSearchUsage[mode] = (result.youtubeSearchUsage[mode] ?? 0) + 1;
+    // Persist before sending the request, so a restart does not reset usage.
+    await checkpoint(result);
+  };
+  if (apiKey) {
+    try {
+      await lookupYoutubeVideos(candidates.flatMap((p) => (p.youtubeCandidates ?? []).map(candidateVideoId)).filter(Boolean),
+        { apiKey, fetchImpl, delayMs, videoCache: result.youtubeVideos, now, checkpoint: checkpointVideos });
+    } catch (error) {
+      await checkpoint(result);
+      return { cache: result, added: 0, attempted: 0, stopped: error };
+    }
+  }
+  let added = 0, completed = 0, backoff = 0, stopped = null;
+  candidateLoop: for (const [index, play] of candidates.entries()) {
+    const key = songKey(play), previouslyDropped = attempted.has(key) || result.youtubeLookups[key]?.previouslyDropped === true;
     let youtube = null;
     for (;;) {
-      try { youtube = await resolvePlay(play, { delayMs, apiKey }); break; } catch (error) {
+      try { youtube = await resolvePlay(play, { delayMs, apiKey, fetchImpl,
+        videoCache: result.youtubeVideos, beforeSearch, checkpointVideos, now }); break; } catch (error) {
         // Waiting does not bring back a day's API quota.
         if (backoff === backoffs.length || error.final) {
+          attempted.delete(key);
+          result.youtubeLookups[key] = { status: 'pending', reason: error.code ?? 'unavailable',
+            error: error.message, checkedAt: now().toISOString(), ...(previouslyDropped ? { previouslyDropped: true } : {}) };
           result.attemptedKeys = [...attempted];
           await checkpoint(result);
-          return { cache: result, added, attempted: index, stopped: error };
+          // A search limit must not starve later songs with known links. Their
+          // metadata can still be checked without making another search call.
+          if (error.code === 'search_budget' || (error.code === 'quota' && error.operation === 'search')) {
+            searchStopped = error;
+            stopped ??= error;
+            onProgress({ index: index + 1, total: candidates.length, play, youtube: null, added, pending: true });
+            continue candidateLoop;
+          }
+          return { cache: result, added, attempted: completed, stopped: error };
         }
         onBackoff({ error, waitMs: backoffs[backoff], play });
         await pause(backoffs[backoff]);
         backoff += 1;
       }
     }
-    attempted.add(songKey(play));
+    attempted.add(key);
+    completed++;
     if (youtube?.confirmed === true && candidateMatch(play, youtube).acceptable) {
       result.resolved.push({ ...play, youtube }); added++;
-    } else result.dropped++;
+      if (previouslyDropped) result.dropped = Math.max(0, result.dropped - 1);
+      result.youtubeLookups[key] = { status: 'verified', videoId: youtube.videoId,
+        via: youtube.via ?? 'search', checkedAt: now().toISOString() };
+    } else {
+      if (!previouslyDropped) result.dropped++;
+      result.youtubeLookups[key] = { status: 'no_match', checkedAt: now().toISOString() };
+    }
     result.attemptedKeys = [...attempted];
     onProgress({ index: index + 1, total: candidates.length, play, youtube, added });
     if ((index + 1) % 10 === 0) await checkpoint(result);
   }
   result.attemptedKeys = [...attempted];
   await checkpoint(result);
-  return { cache: result, added, attempted: candidates.length, stopped: null };
+  return { cache: result, added, attempted: completed, stopped };
 }

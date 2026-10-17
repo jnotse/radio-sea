@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { candidateMatch, extractSearchResults, nameForms, resolvePlayToYoutube,
   resolvePlaysToYoutube, validateYoutubeUrl, youtubeIdFromUrl, YoutubeUnavailable } from '../src/catalog/youtube.js';
+import { lookupYoutubeVideos, verifyYoutubeCandidates, searchYoutube } from '../src/catalog/youtube.js';
 
 const play = { artist: 'Uranium Club', title: "God's Chest", ids: { isrc: 'GBHLW1603489' } };
 const correct = { videoId: 'VxuNvoiel2g', title: "God's Chest", channel: 'Uranium Club - Topic' };
@@ -61,6 +62,17 @@ test('relevance supports non-Latin artist and title names', () => {
     { title: 'Судно (Борис Рыжий)', channel: 'Молчат Дома' }).acceptable, false);
 });
 
+test('repeated title words require repeated evidence and previews are not full-song matches', () => {
+  const repeated = { artist: 'ميادة (Mayada)', title: 'ياي .. ياي .. ياي (Ya..Ya..Ya..)' };
+  assert.equal(candidateMatch(repeated, {
+    title: 'Mayada Bseliss - Ma Beddi Ya Mama | ميادة بسيليس - ما بدي يا ماما',
+  }).acceptable, false);
+  assert.equal(candidateMatch(repeated, { title: 'Mayada - Ya Ya Ya' }).acceptable, true);
+  assert.equal(candidateMatch({ artist: 'Dar Disku', title: 'Ya Mahmud' }, {
+    title: 'Ya Mahmud (Dar Disku Edit) -SNIPPED-',
+  }).acceptable, false);
+});
+
 test('a name in its own script with a romanization matches a video titled in either one', () => {
   const googoosh = { artist: 'گوگوش (Googoosh)', title: 'ما به هم نمی رسیم (Ma Beh Ham Nemiresim)' };
   assert.deepEqual(nameForms(googoosh.artist), ['گوگوش (Googoosh)', 'گوگوش', 'Googoosh']);
@@ -90,7 +102,7 @@ test('with an API key, search and the embed check go through the YouTube Data AP
       return response(200, { items: [unrelated, correct].map((r) => ({ id: { videoId: r.videoId },
         snippet: { title: r.title.replace("'", '&#39;'), channelTitle: r.channel } })) });
     }
-    return response(200, { items: [{ snippet: { title: correct.title, channelTitle: correct.channel },
+    return response(200, { items: [{ id: correct.videoId, snippet: { title: correct.title, channelTitle: correct.channel },
       status: { embeddable, privacyStatus: 'public' } }] });
   };
   const r = await resolvePlayToYoutube(play, { fetchImpl: api(), apiKey: 'k', delayMs: 0 });
@@ -148,4 +160,70 @@ test('URL validation fails closed on unavailable videos', async () => {
   const url = 'https://www.youtube.com/watch?v=VxuNvoiel2g';
   assert.equal(await validateYoutubeUrl(url, { fetchImpl: mockFetch() }), true);
   assert.equal(await validateYoutubeUrl(url, { fetchImpl: mockFetch({ status: 404 }) }), false);
+});
+
+test('403, consent, bot checks and unreadable search pages are pending, not empty results', async () => {
+  for (const res of [response(403, ''), response(200, "Confirm you're not a bot"),
+    response(200, '<html>Please enable JavaScript</html>'), response(200, 'var ytInitialData = {};'),
+    { ...response(200, ''), url: 'https://consent.youtube.com/m' }]) {
+    await assert.rejects(resolvePlayToYoutube(play, { delayMs: 0, fetchImpl: async () => res }), YoutubeUnavailable);
+  }
+  assert.deepEqual(await searchYoutube('no results', { delayMs: 0, fetchImpl: async () => response(200, html([])) }), []);
+});
+
+test('known catalogue links verify without a search and ignore catalogue titles as proof', async () => {
+  let searches = 0, requests = 0;
+  const options = { delayMs: 0, beforeSearch: async () => { searches++; },
+    fetchImpl: async (url) => {
+      requests++;
+      assert.ok(url.includes('/oembed?'));
+      return response(200, { title: correct.title, author_name: correct.channel });
+    } };
+  const resolved = await resolvePlayToYoutube({ ...play, youtubeCandidates: [
+    { videoId: correct.videoId, source: 'discogs' }, { videoId: unrelated.videoId, source: 'discogs' },
+  ] }, options);
+  assert.equal(resolved.via, 'discogs'); assert.equal(searches, 0); assert.equal(requests, 1);
+  assert.equal(await verifyYoutubeCandidates(play, [{ ...correct, source: 'discogs' }], {
+    delayMs: 0, fetchImpl: mockFetch({ metadata: unrelated }),
+  }), null, 'a good catalogue hint cannot override unrelated YouTube metadata');
+});
+
+test('API ID verification deduplicates and batches 50, caching missing and non-embeddable IDs', async () => {
+  const ids = Array.from({ length: 52 }, (_, i) => String(i).padStart(11, 'a'));
+  const cache = {}, sizes = [];
+  let checkpoints = 0;
+  await lookupYoutubeVideos([...ids, ids[0], 'invalid'], { apiKey: 'test', videoCache: cache, delayMs: 0,
+    checkpoint: async () => { checkpoints++; },
+    fetchImpl: async (request) => {
+      const url = new URL(request);
+      assert.equal(url.pathname, '/youtube/v3/videos');
+      assert.equal(url.searchParams.has('maxResults'), false);
+      const batch = url.searchParams.get('id').split(','); sizes.push(batch.length);
+      return response(200, { items: batch.filter((id) => id !== ids[1]).map((id) => ({ id,
+        snippet: { title: correct.title, channelTitle: correct.channel },
+        status: { embeddable: id !== ids[2], privacyStatus: id === ids[3] ? 'private' : 'public' },
+      })) });
+    },
+  });
+  assert.deepEqual(sizes, [50, 2]); assert.equal(checkpoints, 2);
+  assert.equal(Object.keys(cache).length, 52); assert.equal(cache[ids[1]].found, false);
+  assert.equal(await verifyYoutubeCandidates(play, ids.slice(1, 4).map((videoId) => ({ videoId })), {
+    apiKey: 'test', videoCache: cache, delayMs: 0, fetchImpl: async () => assert.fail('fresh cache is reused'),
+  }), null);
+  assert.ok(await verifyYoutubeCandidates(play, [{ videoId: ids[0] }], {
+    apiKey: 'test', videoCache: cache, delayMs: 0, fetchImpl: async () => assert.fail('fresh cache is reused'),
+  }));
+});
+
+test('stale video metadata is refreshed and blocked checks are not cached as missing', async () => {
+  const cache = { [correct.videoId]: { found: false, method: 'oembed', checkedAt: '2020-01-01T00:00:00Z' } };
+  await lookupYoutubeVideos([correct.videoId], { videoCache: cache, delayMs: 0, fetchImpl: mockFetch() });
+  assert.equal(cache[correct.videoId].found, true);
+  const empty = {};
+  for (const res of [response(403, ''), response(200, '<html>challenge</html>')]) {
+    await assert.rejects(lookupYoutubeVideos([correct.videoId], {
+      videoCache: empty, delayMs: 0, fetchImpl: async () => res,
+    }), YoutubeUnavailable);
+    assert.deepEqual(empty, {});
+  }
 });

@@ -14,6 +14,7 @@
 
 import { songKey } from './extend.js';
 import { titleSimilarity, artistSimilarity, normalizeIsrc } from './text.js';
+import { youtubeIdFromUrl } from './youtube-link.js';
 
 const API = 'https://musicbrainz.org/ws/2';
 const HEADERS = { 'User-Agent': 'g-digs/0.1 ( https://github.com/jnotse/radio-sea )', Accept: 'application/json' };
@@ -122,10 +123,10 @@ async function getJson(path, fetchImpl, backoff) {
  * `artistGenres` caches artist lookups across plays.
  */
 export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () => wait(1100),
-  backoff = (attempt) => wait(2000 * 2 ** attempt), artistGenres = new Map() } = {}) {
+  backoff = (attempt) => wait(2000 * 2 ** attempt), artistGenres = new Map(), includeVideoLinks = false } = {}) {
   const get = async (path) => { await pause(); return getJson(path, fetchImpl, backoff); };
   const recordingById = async (id) => {
-    const recording = await get(`/recording/${encodeURIComponent(id)}?inc=genres+tags+artist-credits+releases+artist-rels&fmt=json`);
+    const recording = await get(`/recording/${encodeURIComponent(id)}?inc=genres+tags+artist-credits+releases+artist-rels${includeVideoLinks ? '+url-rels+recording-rels' : ''}&fmt=json`);
     return recording && recordingMatches(play, recording, { minScore: 0 }) ? recording : null;
   };
 
@@ -143,7 +144,18 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
     const hit = (found?.recordings ?? []).find((r) => recordingMatches(play, r));
     if (hit) recording = await recordingById(hit.id);
   }
-  if (!recording) return { genres: [], source: null, recording: null, length: null };
+  if (!recording) return { genres: [], source: null, recording: null, length: null,
+    ...(includeVideoLinks ? { youtubeCandidates: [], releaseIds: [], videoRecordings: [] } : {}) };
+
+  const linkFacts = includeVideoLinks ? {
+    youtubeCandidates: (recording.relations ?? []).filter((r) => youtubeIdFromUrl(r.url?.resource)).map((r) => ({
+      videoId: youtubeIdFromUrl(r.url.resource), url: r.url.resource, source: 'musicbrainz',
+      sourceUrl: `https://musicbrainz.org/recording/${recording.id}`,
+    })),
+    releaseIds: [...new Set((recording.releases ?? []).map((r) => r.id).filter(Boolean))].slice(0, 2),
+    videoRecordings: (recording.relations ?? []).filter((r) => r.type === 'music video' && r.recording?.id)
+      .map((r) => r.recording.id).slice(0, 2),
+  } : {};
 
   const length = recording.length > 0 ? Math.round(recording.length / 1000) : null;
   const year = releaseYear(recording);
@@ -153,6 +165,7 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
     const tags = topTags(recording, own);
     const country = releaseCountry(recording);
     return {
+      ...linkFacts,
       genres: own,
       source: 'recording',
       recording: recording.id,
@@ -169,6 +182,7 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
     const tags = topTags(recording);
     const country = releaseCountry(recording);
     return {
+      ...linkFacts,
       genres: [],
       source: null,
       recording: recording.id,
@@ -195,6 +209,7 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
   const tags = [...new Set([...topTags(recording, fromArtist), ...artistTags])].slice(0, MAX_TAGS);
   const country = releaseCountry(recording) ?? (Array.isArray(cachedArtist) ? null : cachedArtist.country);
   return {
+    ...linkFacts,
     genres: fromArtist,
     source: fromArtist.length ? 'artist' : null,
     recording: recording.id,
@@ -217,7 +232,8 @@ export async function lookupGenresForPlays(plays, { cache = {}, lookup = lookupT
   const result = { ...cache };
   // Entries saved before lengths were recorded are looked up again.
   const todo = [...new Map(plays.map((play) => [songKey(play), play])).entries()]
-    .filter(([key]) => !(key in result) || !('length' in result[key]));
+    .filter(([key]) => !(key in result) || !('length' in result[key])
+      || (options.includeVideoLinks && !('youtubeCandidates' in result[key])));
   const artistGenres = new Map();
   for (const [index, [key, play]] of todo.entries()) {
     let found;
