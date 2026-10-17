@@ -110,18 +110,27 @@ export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {},
   };
 }
 
-// Facts from Wikipedia (scripts/wiki_facts.py) for the genres and artists on
-// the map, which Guano tells while their songs play. Text is CC BY-SA 4.0 and
-// keeps its article's title and link for credit.
-export function factsOnMap(releases, wiki = {}) {
+// Guano's facts (data/guano-facts.json) for the genres and artists on the
+// map, which he tells while their songs play. An artist's fact lists the songs
+// it was written for, and only goes on the map while those are all the songs
+// under that name: a new song, or another artist called the same, gets nothing
+// until someone who knows checks it.
+export function factsOnMap(releases, written = {}) {
   const facts = { genres: {}, artists: {} };
+  const key = (text) => String(text ?? '').normalize('NFC').toLowerCase();
+  const genres = new Map(Object.entries(written.genres ?? {}).map(([tag, text]) => [key(tag), text]));
+  const artists = new Map(Object.entries(written.artists ?? {}).map(([name, fact]) => [key(name), fact]));
   const own = (tag) => !/^(show|station|show-genre|mood|decade):/.test(tag);
+  const songsBy = new Map();
+  for (const r of releases) songsBy.set(r.artist, [...(songsBy.get(r.artist) ?? []), r.name]);
+  for (const [artist, songs] of songsBy) {
+    const fact = artists.get(key(artist));
+    const checked = new Set((fact?.songs ?? []).map(key));
+    if (fact?.text && songs.every((song) => checked.has(key(song)))) facts.artists[artist] = { text: fact.text };
+  }
   for (const r of releases) {
-    const artist = wiki.artists?.[r.artist];
-    if (artist) facts.artists[r.artist] = { title: artist.title, url: artist.url, text: artist.text };
     for (const tag of (r.tags ?? []).filter(own)) {
-      const genre = wiki.genres?.[tag];
-      if (genre) facts.genres[tag] = { title: genre.title, url: genre.url, text: genre.text };
+      if (genres.has(key(tag))) facts.genres[tag] = { text: genres.get(key(tag)) };
     }
   }
   return facts;
@@ -365,8 +374,8 @@ async function main() {
   const youtubeFile = join(dirname(cacheFile), 'youtube-meta.json');
   let youtubeMeta = {};
   try { youtubeMeta = JSON.parse(await readFile(youtubeFile, 'utf8')); } catch { /* none read yet */ }
-  let wikiFacts = {};
-  try { wikiFacts = JSON.parse(await readFile(join(dirname(cacheFile), 'wiki-facts.json'), 'utf8')); } catch { /* not looked up yet */ }
+  let guanoFacts = {};
+  try { guanoFacts = JSON.parse(await readFile(join(dirname(cacheFile), 'guano-facts.json'), 'utf8')); } catch { /* none written yet */ }
   if (args.includes('--youtube-meta')) {
     const apiKey = process.env.YOUTUBE_API_KEY || null;
     const pageDelayMs = args.includes('--delay') ? delayMs : 15000;
@@ -484,8 +493,8 @@ async function main() {
   for (const r of payload.releases) {
     if (!r.station || !r.youtubeId || !r.sourceUrl) throw new Error(`Incomplete demo track: ${r.id}`);
   }
-  payload.facts = factsOnMap(payload.releases, wikiFacts);
-  console.log(`  Wikipedia facts for ${Object.keys(payload.facts.genres).length} genres and ${Object.keys(payload.facts.artists).length} artists`);
+  payload.facts = factsOnMap(payload.releases, guanoFacts);
+  console.log(`  Guano's facts for ${Object.keys(payload.facts.genres).length} genres and ${Object.keys(payload.facts.artists).length} artists`);
   const demoDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'demo');
   await mkdir(demoDir, { recursive: true });
   await writeFile(join(demoDir, 'sea-data.js'), `window.SEA_DATA = ${JSON.stringify(payload, null, 1).replace(/</g, '\\u003c')};\n`);

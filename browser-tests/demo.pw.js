@@ -499,14 +499,13 @@ test('with reduced motion Guano moves without walking; he is in the 3D view too'
   expect(g.y).toBeGreaterThan(0); expect(g.y).toBeLessThan(g.h);
 });
 
-test('while a song plays, Guano tells a fact from Wikipedia, and the player credits it', async ({ page }) => {
+test('while a song plays, Guano tells a fact, and the player shows it too', async ({ page }) => {
   // Give one song's artist a fact before the map loads.
   await page.addInitScript(() => {
     let data;
     Object.defineProperty(window, 'SEA_DATA', { configurable: true, get: () => data, set: (value) => {
       const song = value.releases[1];
-      value.facts = { genres: {}, artists: { [song.artist]: { title: 'Test Artist', url: 'https://en.wikipedia.org/wiki/Test_Artist',
-        text: 'Test Artist is a band from the steppe that plays very long songs.' } } };
+      value.facts = { genres: {}, artists: { [song.artist]: { text: 'Test Artist is a band from the steppe that plays very long songs.' } } };
       window.__factSong = song.id; data = value;
     } });
   });
@@ -521,9 +520,8 @@ test('while a song plays, Guano tells a fact from Wikipedia, and the player cred
   await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
   await expect(page.locator('#guano-bubble')).toBeVisible({ timeout: 6000 });
   await expect(page.locator('#guano-bubble')).toContainText('plays very long songs');
-  await expect(page.locator('#guano-fact')).toBeVisible();
-  await expect(page.locator('#guano-fact-link')).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Test_Artist');
-  await expect(page.locator('#guano-fact-link')).toHaveText(/Wikipedia: Test Artist/);
+  await expect(page.locator('#guano-fact')).toHaveText('Test Artist is a band from the steppe that plays very long songs.');
+  await expect(page.locator('#guano-bubble')).toHaveText('Test Artist is a band from the steppe that plays very long songs.');
   // The bubble stays inside the map, near Guano.
   const map = await page.locator('#map-wrap').boundingBox(), bubble = await page.locator('#guano-bubble').boundingBox();
   expect(bubble.x).toBeGreaterThanOrEqual(map.x); expect(bubble.x + bubble.width).toBeLessThanOrEqual(map.x + map.width);

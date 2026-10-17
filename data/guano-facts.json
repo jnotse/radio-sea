@@ -1,0 +1,945 @@
+{
+ "about": "What Guano tells while a song plays. Written for G-digs from what is well known about each genre and artist; artists we know nothing certain about are left out. Each artist fact lists the songs it was checked against, and only goes on the map while those are all of that artist's songs.",
+ "genres": {
+  "aboriginal": "The didgeridoo, from northern Australia, is played with circular breathing, so players can hold its drone for minutes without stopping.",
+  "abstract": "In the '90s, London's Mo' Wax label made a scene of abstract beats: instrumental hip hop like DJ Shadow's that wandered wherever its samples led.",
+  "acid house": "Acid house took its smiley-face logo to Britain's 1988 Second Summer of Love, when raves in fields and warehouses drew thousands of people.",
+  "acid jazz": "Acid jazz started as a joke: DJ Gilles Peterson and Chris Bangs played jazz-funk at a London club night and called it acid jazz to tease the acid house crowd.",
+  "acid rock": "Acid rock was the heavy, improvised psychedelia of mid-'60s San Francisco, where the Grateful Dead played writer Ken Kesey's Acid Tests.",
+  "acid": "Acid's squelch came from a flop: the Roland TB-303, a bassline machine made for guitarists to practise with, sold poorly until Chicago producers like Phuture twisted its knobs.",
+  "acoustic": "Before microphones, records were made acoustically: musicians played into a big horn that cut the sound straight into wax, and singers stepped back for loud notes.",
+  "african": "Fela Kuti declared his Lagos compound the independent Kalakuta Republic, and his Afrobeat songs often ran longer than a whole side of an LP.",
+  "afro-cuban jazz": "Afro-Cuban jazz took off in 1947 when Dizzy Gillespie hired Cuban conga player Chano Pozo; their 'Manteca' is still a standard.",
+  "afro-cuban": "Afro-Cuban music rests on the clave, a two-bar pattern of five strokes that underpins son, rumba and salsa alike.",
+  "alternative metal": "Faith No More's 'Epic' (1990) mixed rap, metal and piano, and the fish flopping on a beach in its video upset animal-rights groups.",
+  "alternative rock": "In the '80s alternative rock was college rock: R.E.M., the Replacements and Pixies found their first fans on student-run radio stations.",
+  "ambient house": "The Orb's 'Little Fluffy Clouds' (1990) samples Rickie Lee Jones describing the skies of her Arizona childhood, a high point of ambient house.",
+  "ambient": "Brian Eno came up with ambient music in 1975, stuck in bed after an accident: a friend left a harp record on too quietly to hear properly, and he found he liked it that way.",
+  "andalusian classical": "Andalusian classical music, the nūba, travelled from medieval Al-Andalus to North Africa, where orchestras in Fez and Tetouan still play it.",
+  "aor": "AOR first meant album-oriented rock, the FM radio format of the '70s that played album tracks instead of singles; later it came to mean polished rock like Journey and Toto.",
+  "art rock": "Andy Warhol managed the Velvet Underground and designed the banana on their first album; early copies let you peel it off to reveal a pink one underneath.",
+  "avant-garde jazz": "Sun Ra said he came from Saturn, led his Arkestra for four decades, and released many albums on his own label, El Saturn, often in hand-decorated sleeves.",
+  "avantgarde": "Italian Futurist Luigi Russolo built noise machines called intonarumori in 1913 and wrote the manifesto 'The Art of Noises', decades before noise music.",
+  "bachata": "Bachata was once looked down on as the music of the Dominican countryside and kept off the radio, until Juan Luis Guerra's 'Bachata Rosa' (1990) made it respectable.",
+  "balearic": "Balearic is named after Ibiza, where DJ Alfredo at Amnesia mixed pop, rock and house; four British DJs who heard him in 1987 brought the idea home to London.",
+  "ballad": "Broadside ballads were printed on single sheets and sold in the streets of 16th- and 17th-century England for a penny, to be sung to tunes everyone already knew.",
+  "baroque": "As a young organist, Bach walked about 250 miles from Arnstadt to Lübeck to hear Dieterich Buxtehude play, and overstayed his leave by months.",
+  "bass music": "'Bass music' is a catch-all born in the 2000s for the UK sounds that followed dubstep and grime, built to be felt through big sound systems as much as heard.",
+  "beat": "Merseybeat came from Liverpool's Cavern Club, where the Beatles played some 290 times between 1961 and 1963.",
+  "beguine": "The beguine comes from Martinique and Guadeloupe, and Cole Porter's 'Begin the Beguine' (1935) made the word famous worldwide.",
+  "berlin-school": "The Berlin School is the cosmic, sequencer-driven electronic music of 1970s West Berlin; Klaus Schulze, one of its stars, was Tangerine Dream's first drummer.",
+  "bhangra": "Bhangra began as a Punjabi harvest dance, and British-Asian bands in '80s Birmingham and Southall plugged it into synths and drum machines.",
+  "big beat": "Big beat, the late-'90s sound of Fatboy Slim and the Chemical Brothers, is named after the Big Beat Boutique, a club night in Brighton.",
+  "bleep": "Bleep was Sheffield's early-'90s sound of piercing tones over deep sub-bass, launched on Warp Records by LFO and Sweet Exorcist.",
+  "blues rock": "British blues rock was American blues bounced back across the Atlantic; the Rolling Stones took their name from a Muddy Waters song.",
+  "blues": "Robert Johnson recorded only 29 songs, in sessions in 1936 and 1937, yet guitarists from Eric Clapton to Keith Richards learned to play from them.",
+  "bolero": "The Cuban bolero isn't Ravel's: it's a slow, romantic song form born in Santiago de Cuba in the 1880s, later loved across Mexico and all of Latin America.",
+  "bollywood": "In Bollywood films the actors lip-sync to playback singers; Lata Mangeshkar sang for films across seven decades.",
+  "boogaloo": "Boogaloo was the Latin soul craze of '60s New York; Joe Cuba's 'Bang Bang' (1966) was a hit built on crowd chants.",
+  "boogie": "Boogie was the synth-bass post-disco of the early '80s, the sound of New York labels like Prelude, and the records many hip hop producers later sampled.",
+  "bossanova": "Bossa nova's gentle guitar beat was worked out by João Gilberto, who practised for months in a bathroom because he liked its acoustics.",
+  "breakbeat": "Much of breakbeat descends from six seconds of drumming: the Amen break, played by Gregory Coleman on the Winstons' 1969 B-side 'Amen, Brother'.",
+  "breakcore": "Breakcore chops up the Amen break, and anything else, at absurd speeds; Venetian Snares wrote much of his in 7/4 time.",
+  "breaks": "Breaks are named after the break in a funk record, the moment the band drops out and only the drums play, which early hip hop DJs looped with two copies of the same record.",
+  "britpop": "Britpop's Blur-Oasis chart battle in August 1995 made the evening news; Blur's 'Country House' outsold Oasis's 'Roll With It'.",
+  "broken beat": "Broken beat came from West London in the late '90s, where producers like IG Culture and Bugz in the Attic bent jazz-funk and house into off-kilter rhythms.",
+  "calypso": "Calypsonians sang Trinidad's news in sharp-tongued verse, under stage names like Lord Kitchener and the Mighty Sparrow.",
+  "catalan music": "Catalan rumba was born among the Gitano communities of Barcelona; Peret's fast, fanning guitar strum, the ventilador, is its trademark.",
+  "cha-cha": "The cha-cha-chá was created by Cuban violinist Enrique Jorrín in the early '50s; its name imitates the shuffle of dancers' feet.",
+  "chamber music": "Chamber music was made for rooms, not halls: Haydn's string quartets were played at home by the amateurs who bought the sheet music.",
+  "champeta": "Champeta grew in Cartagena, Colombia, from African soukous and highlife records, played on huge painted sound systems called picós.",
+  "chanson": "Édith Piaf was singing on a Paris street corner when nightclub owner Louis Leplée discovered her and named her la Môme Piaf, the little sparrow.",
+  "chicago blues": "Chicago blues went electric because the clubs were loud: Muddy Waters plugged in his guitar to be heard over the crowds after moving north from Mississippi.",
+  "children's": "Sesame Street's songwriter Joe Raposo wrote 'Bein' Green' for Kermit the Frog; Frank Sinatra and Ray Charles both recorded it.",
+  "chillwave": "Chillwave was named, half as a joke, by a blog in 2009, for the hazy, warm bedroom pop of Washed Out and Toro y Moi.",
+  "choral": "Thomas Tallis's motet 'Spem in alium', written around 1570, has 40 separate voice parts, each singing its own line.",
+  "classic rock": "Classic rock was invented as a radio format in the '80s, when stations decided rock from the '60s and '70s could be played forever.",
+  "classical": "The orchestra tunes to the oboe: its steady, penetrating tone carries across the stage, so it plays the A that everyone else matches.",
+  "coldwave": "Coldwave was the chilly, synth-heavy French and Belgian answer to post-punk in the early '80s.",
+  "comedy": "Bob Newhart's 'The Button-Down Mind of Bob Newhart' was the first comedy album to top the Billboard chart, and won the Grammy for Album of the Year in 1961.",
+  "concerto": "Vivaldi's 'Four Seasons' are four violin concertos, each printed with a sonnet describing what the music paints, down to a barking dog.",
+  "conscious": "Conscious hip hop takes its cue from Grandmaster Flash and the Furious Five's 'The Message' (1982), which described the pressures of life in the inner city.",
+  "contemporary r&b": "Timbaland's stuttering, off-kilter beats for Aaliyah and Missy Elliott in the late '90s made contemporary R&B sound like nothing before it.",
+  "cool jazz": "Miles Davis's 'Birth of the Cool' sessions of 1949 and 1950 used a nonet with French horn and tuba, and gave cool jazz its name.",
+  "copla": "Copla, Spain's dramatic song of the 1940s and '50s, was the voice of stars like Concha Piquer and Lola Flores.",
+  "country rock": "Gram Parsons, who called his music Cosmic American Music, steered the Byrds to Nashville for 'Sweetheart of the Rodeo' (1968), a founding country rock album.",
+  "country": "The 1927 Bristol sessions, where Ralph Peer recorded the Carter Family and Jimmie Rodgers in the same few days, are called the big bang of country music.",
+  "cumbia": "Cumbia came from Colombia's Caribbean coast and has been remade everywhere: as chicha in Peru, villera in Argentina and slowed-down rebajada in Monterrey, Mexico.",
+  "dance-pop": "Madonna's first single, 'Everybody' (1982), was pushed to dance clubs before radio; she got her break handing a demo to DJ Mark Kamins at New York's Danceteria.",
+  "dancehall": "Dancehall's digital era began in 1985 with Wayne Smith's 'Under Mi Sleng Teng', built on a rhythm preset from a cheap Casio keyboard.",
+  "dark ambient": "Dark ambient is ambient music's night side; Lustmord built early records from sounds he recorded in caves, crypts and catacombs.",
+  "darkwave": "Darkwave was the cold, synth-led side of post-punk, strongest in '80s Germany, France and Belgium, where cassette labels spread it hand to hand.",
+  "deep house": "Larry Heard, recording as Mr. Fingers, made 'Can You Feel It' in the mid-'80s, and its warm, jazzy chords became the template for deep house.",
+  "disco": "The 12-inch single was invented for disco: in 1974 remixer Tom Moulton ran out of 7-inch blanks, cut a song onto a 12-inch, and found the wider grooves played louder.",
+  "doo wop": "Doo-wop is named after the nonsense syllables its backing singers sang; many groups learned to harmonize on street corners and in stairwells for the echo.",
+  "downtempo": "Downtempo grew out of the chill-out rooms of early-'90s raves, where DJs played slow, dubby records for dancers to come down to.",
+  "dream pop": "The London duo A.R. Kane described their own music as dream pop in the late '80s, and the name stuck for hazy, reverb-soaked bands like Cocteau Twins and later Beach House.",
+  "drill": "Drill began on Chicago's South Side in the early 2010s with Chief Keef; London's drill scene rebuilt it around sliding 808 basslines.",
+  "drone": "La Monte Young's Dream House in New York has filled a room with sustained electronic drones and magenta light, on and off, for decades.",
+  "drum n bass": "Drum and bass speeds up the beats hip hop slowed down: the six-second Amen break, played at around 170 BPM, runs through thousands of jungle and drum and bass tracks.",
+  "dub poetry": "Dub poet Linton Kwesi Johnson recites over reggae basslines, and was only the second living poet ever published in the Penguin Modern Classics series.",
+  "dub techno": "Dub techno was built by Basic Channel, Moritz von Oswald and Mark Ernestus, in mid-'90s Berlin; Ernestus also ran the city's Hard Wax record shop.",
+  "dub": "Dub began in late-'60s Kingston when engineers like King Tubby stripped the vocals off reggae records and drenched what was left in echo, reverb and sudden drop-outs.",
+  "dubstep": "Dubstep grew in early-2000s Croydon, around the Big Apple Records shop and the club night FWD>>, before Digital Mystikz made it a bass-heavy meditation at their DMZ nights.",
+  "easy listening": "Muzak arranged easy-listening music to raise workers' energy at the times of day it dropped, a system the company called Stimulus Progression.",
+  "ebm": "EBM, electronic body music, was named by Belgium's Front 242 for their muscular, sequencer-driven sound.",
+  "edm": "'EDM' became the American name for festival-sized dance music in the 2010s, when DJs like Skrillex and Avicii headlined over rock bands.",
+  "electro house": "Benny Benassi's 'Satisfaction' (2002), with its distorted, buzzing bassline, set the template for electro house.",
+  "electro": "Afrika Bambaataa's 'Planet Rock' (1982), the electro blueprint, borrowed the melody of Kraftwerk's 'Trans-Europe Express' and ran on a Roland TR-808 drum machine.",
+  "electroacoustic": "Electroacoustic music grew up in radio studios: Pierre Schaeffer's at French radio in Paris, and Karlheinz Stockhausen's at West German radio in Cologne.",
+  "electronic": "The first all-electronic film score, Louis and Bebe Barron's Forbidden Planet (1956), couldn't be credited as music because of a union rule, so the titles call it 'electronic tonalities'.",
+  "ethereal": "Ethereal wave owes much to Cocteau Twins, whose singer Elizabeth Fraser often sang in sounds rather than words, so listeners couldn't make out any lyrics at all.",
+  "euro house": "Euro house filled '90s charts with a formula: a rapper for the verses and a diva for the chorus, as in Snap!'s 'Rhythm Is a Dancer' and 2 Unlimited's hits.",
+  "euro-disco": "Donna Summer's 'I Feel Love' (1977), made in Munich with Giorgio Moroder, was all synthesizer; Brian Eno told David Bowie it would change club music.",
+  "europop": "Eurovision launched Europop's biggest stars: ABBA in 1974, and Céline Dion, who won for Switzerland in 1988.",
+  "experimental": "John Cage's 4′33″ (1952) is three movements in which the performer plays nothing at all, so the sounds of the room and the audience become the piece.",
+  "fantasia": "A fantasia follows the composer's fancy instead of a set form, and Disney's 1940 film Fantasia borrowed the name.",
+  "favela funk": "Rio's baile funk grew out of Miami bass records played at favela dances in the '80s, until locals built their own beat, the tamborzão.",
+  "field recording": "Soundscape recordist Bernie Krause found that many places he had taped over the decades had fallen quiet, their animals gone: his archive is a record of lost sounds.",
+  "flamenco": "Paco de Lucía's 'Entre dos aguas' (1973), a rumba improvised in the studio to fill out an album, became flamenco's biggest hit.",
+  "folk rock": "Folk rock arrived in 1965, with the Byrds' electric 'Mr. Tambourine Man' and Bob Dylan going electric at the Newport Folk Festival to boos and cheers.",
+  "folk, world, & country": "Discogs files folk, world and country music under one roof, so a Bulgarian choir, a Malian kora player and a Nashville songwriter can share a shelf.",
+  "folk": "Folk song collector Alan Lomax drove a disc recorder weighing about 300 pounds across the American South in the 1930s, recording singers for the Library of Congress.",
+  "footwork": "Footwork is Chicago's dance-battle music, around 160 BPM, made for fast feet; DJ Rashad's 'Double Cup' (2013) took it around the world.",
+  "free improvisation": "In free improvisation nothing is agreed beforehand. Guitarist Derek Bailey played with almost anyone willing for decades, and wrote the book on it, 'Improvisation' (1980).",
+  "free jazz": "Ornette Coleman's 'Free Jazz' (1961) set two quartets improvising at once, and its sleeve had a window showing a Jackson Pollock painting.",
+  "freestyle": "Freestyle, the Latin dance pop of '80s New York and Miami, grew out of electro; Shannon's 'Let the Music Play' (1983) is often called its first hit.",
+  "funaná": "Funaná, from Cape Verde's Santiago island, is driven by accordion and the ferrinho, an iron bar scraped with a knife; it was frowned on under Portuguese rule.",
+  "funk / soul": "Funk put the weight on 'the one', the first beat of the bar: James Brown drilled his band to treat every instrument, even the guitar and horns, like a drum.",
+  "funk": "Parliament-Funkadelic landed a spaceship, the Mothership, on stage during their late-'70s shows; a replica now sits in the Smithsonian.",
+  "fusion": "In fusion, jazz musicians plugged in: Weather Report and the Mahavishnu Orchestra were formed by players from Miles Davis's electric bands.",
+  "future jazz": "Future jazz was the late-'90s sound of labels like Munich's Compost and Vienna's G-Stone, where producers mixed jazz with house, downtempo and broken beats.",
+  "g-funk": "G-funk slowed down Parliament-Funkadelic grooves and added whining synth leads; Dr. Dre's 'The Chronic' (1992) made it the sound of West Coast rap.",
+  "gabber": "Gabber, Rotterdam's hardcore of the '90s, ran at up to 200 BPM or more; its fans shaved their heads and wore tracksuits.",
+  "gangsta": "N.W.A's 'Straight Outta Compton' (1988) went platinum with almost no radio play, and its most notorious song brought their label a warning letter from the FBI.",
+  "garage house": "Garage house is named after the Paradise Garage in New York, where Larry Levan DJed from 1977 to 1987 on a famously powerful custom sound system.",
+  "garage rock": "Garage rock was rehearsed in real garages by teenage American bands of the mid-'60s, then rescued from obscurity by Lenny Kaye's 1972 compilation 'Nuggets'.",
+  "ghetto": "Ghetto house was Chicago's raw, fast, chant-driven offshoot of house in the '90s, much of it released on the Dance Mania label.",
+  "glitch": "Glitch artists make music from errors: the German group Oval painted on CDs to make them skip, then built tracks from the mistakes.",
+  "gospel": "Thomas A. Dorsey played blues piano as Georgia Tom before becoming the father of gospel music; he wrote 'Take My Hand, Precious Lord' after his wife died in childbirth.",
+  "goth rock": "Bauhaus's nine-minute 'Bela Lugosi's Dead' (1979) is often called the first goth rock record.",
+  "guajira": "'Guantanamera', the most famous guajira, sets verses by Cuban poet José Martí to a country melody.",
+  "hard bop": "Many of Blue Note's hard bop classics of the '50s were recorded in the living room of engineer Rudy Van Gelder's parents' house in Hackensack, New Jersey.",
+  "hard house": "Hard house's pounding beats fuelled late-'90s London nights like Trade, the after-hours club at Turnmills that opened at 3 a.m. on Sunday mornings.",
+  "hard rock": "Deep Purple's 'Smoke on the Water' is about a real fire: in 1971 a flare at a Frank Zappa concert burned down the Montreux casino where the band had planned to record.",
+  "hard trance": "Hard trance came out of Germany and Belgium in the mid-'90s, faster and harsher than trance, with acid lines borrowed from techno.",
+  "hardcore hip-hop": "Run-DMC's bare drum-machine beats and Public Enemy's dense walls of samples set the tone for hardcore hip hop in the '80s.",
+  "hardcore": "'Hardcore' names two scenes: the fast, furious punk of Black Flag and Minor Threat, and the speeding breakbeat rave music of early-'90s Britain.",
+  "hawaiian": "Hawaiian steel guitar, played flat with a metal bar, swept America after the 1915 Panama-Pacific Exposition, and later gave country music its steel guitar.",
+  "heavy metal": "Black Sabbath's Tony Iommi lost two fingertips in a factory accident, made himself thimbles and slackened his strings, and the heavy, low sound helped create metal.",
+  "hi nrg": "Hi-NRG grew from Patrick Cowley's synth disco in San Francisco; his work on Sylvester's 'You Make Me Feel (Mighty Real)' set the template.",
+  "highlife": "Highlife got its name in 1920s Ghana from the dance bands that played for the elite, in clubs most people couldn't afford: the high life.",
+  "hindustani": "In Hindustani classical music each raga has its time of day, so an evening raga played in the morning is thought out of place.",
+  "hip hop": "Hip hop's birthday is usually given as 11 August 1973, when DJ Kool Herc played a back-to-school party in the Bronx and stretched out the drum breaks of funk records.",
+  "hip-house": "Hip house set rapping over Chicago house; Fast Eddie's 1988 single 'Hip House' gave the blend its name.",
+  "horrorcore": "Horrorcore set horror-film imagery to rap; the Geto Boys' 1990 album was so shocking that its pressing plant refused to make it.",
+  "house": "House is named after the Warehouse, a Chicago club where Frankie Knuckles DJed from 1977, mixing disco, soul and European synth records late into the night.",
+  "idm": "IDM, 'intelligent dance music', took its name from an internet mailing list started in 1993, inspired by Warp's 'Artificial Intelligence' series. Many of its artists hated the name.",
+  "illbient": "Illbient was a 1990s New York scene of dark, dubby ambient music; the name joins hip hop slang 'ill' to ambient, and DJ Spooky was its best-known face.",
+  "indie pop": "Indie pop's jangly scene got a nickname from a cassette: C86, given away by the NME in 1986 with songs by Primal Scream, the Pastels and others.",
+  "indie rock": "'Indie' first meant the label, not the sound: the UK Indie Chart, started in 1980, ranked records sold through independent distributors like Rough Trade.",
+  "industrial": "Industrial music is named after Throbbing Gristle's label, Industrial Records, founded in 1976 with the slogan 'Industrial Music for Industrial People'.",
+  "italo house": "Italo house's piano riffs ruled 1989: Black Box's 'Ride on Time' topped the UK chart for six weeks, built on a sampled Loleatta Holloway vocal.",
+  "italo-disco": "Italo disco was often sung in English by Italians who barely spoke it, and it took its name from German label ZYX's 'The Best of Italo-Disco' compilations.",
+  "j-pop": "The word J-pop was popularized around 1988 by Tokyo radio station J-Wave, to set Western-style Japanese pop apart from older kayōkyoku.",
+  "jazz": "The first jazz record was released in 1917 by the Original Dixieland Jass Band of New Orleans, back when the word was still often spelled 'jass'.",
+  "jazz-funk": "Herbie Hancock's 'Head Hunters' (1973), with the clavinet groove of 'Chameleon', became the best-selling jazz album of its time and set the jazz-funk template.",
+  "jazz-rock": "Miles Davis's 'Bitches Brew' (1970) plugged jazz in; producer Teo Macero built its tracks by editing together tape from long studio jams.",
+  "jazzdance": "In '80s London, jazz dancers battled on club floors to fast bebop and Latin jazz spun by DJs like Paul Murphy, a scene that fed straight into acid jazz.",
+  "jazzy hip-hop": "A Tribe Called Quest's 'The Low End Theory' (1991) brought in jazz bassist Ron Carter, who had played in Miles Davis's great '60s quintet.",
+  "jump blues": "Louis Jordan's jump blues hits of the '40s, like 'Caldonia', were a direct ancestor of rock and roll; Chuck Berry said he modelled himself on Jordan.",
+  "jungle": "Jungle grew up on London's pirate radio in the early '90s, broadcast from tower-block rooftops with transmitters moved often to dodge the authorities.",
+  "krautrock": "Krautrock was a mocking British name for adventurous German bands like Can, Neu! and Faust; Neu!'s steady motorik beat fed into David Bowie's Berlin albums.",
+  "kwaito": "Kwaito arose in Soweto in the early '90s, as apartheid ended: slowed-down house beats, chanted vocals and township slang.",
+  "latin jazz": "Tito Puente, the King of Latin Music, played timbales standing at the front of his band, and Santana's 'Oye Como Va' is his song.",
+  "latin": "'Salsa' was partly a marketing word: New York's Fania Records spread it in the '70s for the Cuban and Puerto Rican dance music its stars had played for years.",
+  "leftfield": "The phrase 'out of left field' comes from baseball, and dance music borrowed it for records too odd for any other shelf.",
+  "lied": "Schubert wrote more than 600 Lieder, among them 'Erlkönig', which he set as a teenager, reportedly in a single afternoon.",
+  "lo-fi": "Lo-fi wears its cheap gear proudly. R. Stevie Moore had been making home-recorded cassettes since the '70s, and is often called the godfather of DIY pop.",
+  "lounge": "Martin Denny's band added bird calls to their exotica after hearing frogs croak by the pool at their Honolulu club, and the calls became their trademark.",
+  "lovers rock": "Lovers rock, romantic reggae made in 1970s London, took Janet Kay's 'Silly Games' to No. 2 in the UK in 1979, and its high note is famously hard to hit.",
+  "marcha carnavalesca": "Rio's carnival marches, marchinhas, were written for whole streets of revelers to sing; Chiquinha Gonzaga's 'Ó Abre Alas' (1899) is called the first.",
+  "memphis rap": "Memphis rap of the early '90s, from DJ Paul, Juicy J and others, spread on lo-fi cassette tapes, and later shaped trap and phonk.",
+  "merengue": "Dictator Rafael Trujillo made merengue the Dominican Republic's national music in the 1930s, and had songs written in his praise.",
+  "minimal techno": "Robert Hood's 'Minimal Nation' (1994) stripped Detroit techno down to its bones, and is often called the first minimal techno record.",
+  "minimal": "Discogs' 'minimal' covers two scenes: the stripped-down techno of Robert Hood and Richie Hawtin in the '90s, and the cold, home-recorded minimal wave synth tapes of the early '80s.",
+  "mod": "Mods rode Italian scooters covered in mirrors, wore sharp suits and danced to American soul and R&B; the Who's 'My Generation' was their anthem.",
+  "modal": "Miles Davis's 'Kind of Blue' (1959), the best-selling jazz album ever, used modes instead of chord changes; the band saw most of the music for the first time at the session.",
+  "modern classical": "Steve Reich found his phasing technique by accident in 1965, when two tape loops of a street preacher drifted out of sync; the result was 'It's Gonna Rain'.",
+  "mpb": "MPB, Música Popular Brasileira, was born on the TV song festivals of the late '60s, where Chico Buarque, Caetano Veloso and Elis Regina competed for prizes.",
+  "musique concrète": "Pierre Schaeffer invented musique concrète in 1948 at French radio, composing with recorded sounds; his 'Étude aux chemins de fer' is made of train noises.",
+  "ndw": "Neue Deutsche Welle, German new wave, gave the world Nena's '99 Luftballons', a hit across Europe and America in 1983 and 1984.",
+  "neo soul": "'Neo soul' was a marketing term coined by Kedar Massenburg, who managed D'Angelo and Erykah Badu in the late '90s.",
+  "neo-classical": "Stravinsky's ballet 'Pulcinella' (1920) launched neoclassicism, reworking 18th-century pieces then thought to be by Pergolesi.",
+  "neofolk": "Neofolk grew out of post-industrial music in the '80s, when bands like Death in June and Current 93 turned to acoustic guitars.",
+  "new age": "Windham Hill, a label guitarist William Ackerman started with about $300 from friends in 1976, turned quiet acoustic records into one of new age's biggest sellers.",
+  "new beat": "New beat was born in Belgium around 1987, when a DJ played an EBM record at 33 rpm instead of 45 and the slowed-down groove filled the floor.",
+  "new jack swing": "Teddy Riley built new jack swing, and its name came from a 1987 Village Voice article by Barry Michael Cooper, who later co-wrote the film New Jack City.",
+  "new wave": "'New wave' started as a sales label: in the late '70s it let record companies sell punk-adjacent bands like Blondie and Talking Heads without the scary word 'punk'.",
+  "no wave": "No wave bands like DNA and Teenage Jesus and the Jerks rejected even punk's rules; Brian Eno's 1978 compilation 'No New York' captured the scene.",
+  "noise": "Japanese noise artist Merzbow has released hundreds of albums; one box set of his work, the Merzbox, came on 50 CDs.",
+  "non-music": "Discogs files records that aren't music at all as 'non-music': birdsong, speeches, sound effects, even language lessons.",
+  "novelty": "Novelty records sped up voices long before Auto-Tune: David Seville's 'Witch Doctor' and his Chipmunks were tapes played back at double speed.",
+  "nu-disco": "Nu-disco's love of re-edits goes back to the '70s, when Walter Gibbons cut up disco tapes with a razor blade to make longer versions for New York DJs.",
+  "opera": "Opera began as an experiment: around 1600, a group of Florentine scholars and musicians, the Camerata, tried to revive ancient Greek drama sung from start to finish.",
+  "orchestra": "Most orchestras tune to an A at 440 vibrations a second, the pitch agreed at an international conference in London in 1939.",
+  "overture": "Tchaikovsky's '1812 Overture' calls for real cannon fire, which is why outdoor performances sometimes bring in the artillery.",
+  "persian pop": "After the 1979 revolution Persian pop went into exile, and Los Angeles became its capital, nicknamed Tehrangeles.",
+  "piano": "The piano's full name, pianoforte, means soft-loud: Bartolomeo Cristofori's invention, around 1700, was the first keyboard that played louder the harder you struck it.",
+  "poetry": "Allen Ginsberg first read 'Howl' aloud in 1955 at San Francisco's Six Gallery, and Beat poets were soon reading over jazz in clubs and on records.",
+  "pop rap": "The Sugarhill Gang's 'Rapper's Delight' (1979), the first rap hit, rode the bassline of Chic's 'Good Times', replayed by a studio band.",
+  "pop rock": "The Beatles' producers spent far longer on the mono mixes than the stereo ones until the late '60s, when stereo was still thought a gimmick for hi-fi buffs.",
+  "pop": "Phil Spector's Wall of Sound stacked several guitars, pianos and drummers playing the same parts at once, then sent them through echo chambers at Gold Star Studios in Los Angeles.",
+  "post bop": "Post-bop kept bebop's language but opened up its forms, as on Wayne Shorter's 'Speak No Evil' and Herbie Hancock's 'Maiden Voyage', both cut for Blue Note in the mid-'60s.",
+  "post rock": "Critic Simon Reynolds coined 'post-rock' in 1994, writing about bands like Bark Psychosis and Talk Talk that used rock instruments for anything but rock.",
+  "post-punk": "The cover of Joy Division's 'Unknown Pleasures' (1979) shows radio pulses from the first pulsar ever discovered, CP 1919, taken from an astronomy encyclopedia.",
+  "power pop": "Pete Townshend coined 'power pop' in 1967 for the Who's music; in the '70s Big Star made it a cult, selling few records but inspiring countless bands.",
+  "prog rock": "Prog loved the long form: Jethro Tull's 'Thick as a Brick' (1972) is a single song, about 43 minutes long, spread over both sides of the LP.",
+  "progressive house": "Progressive house was the early-'90s British name for long, deep, building house tracks, with Leftfield among its first names.",
+  "psychedelic rock": "The 13th Floor Elevators, from Austin, Texas, called their 1966 debut psychedelic before almost anyone else, and one member played an electric jug.",
+  "psychedelic": "The word psychedelic, 'mind-manifesting', was coined in 1956 by psychiatrist Humphry Osmond in letters with the writer Aldous Huxley.",
+  "psychobilly": "The Cramps fused rockabilly with horror movies, and in 1978 played a famous free show at Napa State Hospital, a California psychiatric hospital.",
+  "punk": "The Ramones' first album was recorded in about a week for around $6,400, and most of its 14 songs are under two and a half minutes.",
+  "ragga hiphop": "Ragga hip hop joins Jamaican toasting to rap, a family reunion of sorts: DJ Kool Herc, who threw the first hip hop parties, was born in Kingston.",
+  "ragga": "Ragga, short for raggamuffin, is the digital dancehall of the mid-'80s onwards, and its fast toasting fed straight into London's jungle.",
+  "ragtime": "Scott Joplin's 'Maple Leaf Rag' (1899) sold hundreds of thousands of copies as sheet music, earning him a royalty of a cent a copy.",
+  "rapso": "Rapso, from Trinidad, sets spoken rhyme to calypso and soca rhythms; Lancelot Layne recorded it in the '70s, before rap had reached the island.",
+  "reggae gospel": "Reggae gospel sets Christian lyrics to Jamaican riddims, often cut in the same Kingston studios where roots singers praised Jah.",
+  "reggae": "Toots and the Maytals' 'Do the Reggay' (1968) was the first popular song to use the word, and helped give the new sound its name.",
+  "reggae-pop": "Millie Small's 'My Boy Lollipop' (1964), one of the first Jamaican hits abroad, sold millions and helped Chris Blackwell build Island Records.",
+  "rhythm & blues": "'Rhythm and blues' replaced 'race records' in 1949 when Billboard renamed its chart; the term came from a young Billboard writer, Jerry Wexler, later a famous producer.",
+  "rhythmic noise": "Rhythmic noise turns harsh industrial distortion into pounding dance beats, a scene built in the '90s by German labels like Ant-Zen.",
+  "rnb/swing": "Discogs' 'RnB/Swing' is the new jack swing era, when producer Teddy Riley set R&B singing over hip hop drum machines in the late '80s.",
+  "rock & roll": "When Alan Freed popularized 'rock and roll' on his Cleveland radio show in 1951, the phrase was already old slang in blues and gospel songs.",
+  "rock": "Rock's fuzz began with broken gear: on Jackie Brenston's 'Rocket 88' (1951), cut with Ike Turner's band, the guitar amp had been damaged on the way to the studio and was stuffed with paper.",
+  "rockabilly": "Elvis Presley's first single, 'That's All Right' (1954), came out of a break at Sun Records, when he started fooling around with an old blues song.",
+  "rocksteady": "Rocksteady lasted barely two years, from about 1966 to 1968, but its slow, bass-led grooves, as on the Paragons' 'The Tide Is High', paved the way for reggae.",
+  "romantic": "Romantic-era audiences adored virtuosos: fans of Franz Liszt fought over his handkerchiefs and broken piano strings, a frenzy the poet Heinrich Heine called Lisztomania.",
+  "roots reggae": "Roots reggae sang of Rastafari, Africa and the struggles of the poor; Bob Marley and the Wailers' 'Catch a Fire' (1973) took it around the world on Island Records.",
+  "rumba": "Congolese rumba, added to UNESCO's intangible heritage list in 2021, grew from Cuban son records sold in Africa from the 1930s on.",
+  "samba": "'Pelo Telefone' (1917), registered by Donga, is called the first recorded samba, and who really wrote it has been argued over ever since.",
+  "samba-canção": "Samba-canção is samba slowed down for heartbreak, and in 1950s Rio it led the way to bossa nova.",
+  "schlager": "Schlager simply means 'hit' in German. In Sweden the word covers Eurovision-style pop, and ABBA won Eurovision with 'Waterloo' in 1974.",
+  "score": "Stanley Kubrick commissioned a full score from Alex North for '2001: A Space Odyssey', then dropped it for the classical pieces he had been using as a guide.",
+  "shoegaze": "Shoegaze got its name because its guitarists spent gigs staring down at their effects pedals; My Bloody Valentine's 'Loveless' took about two years and many studios to make.",
+  "ska": "Ska's quick offbeat gave way to rocksteady around 1966, when, the story goes, a scorching summer made dancers want something slower.",
+  "soca": "Soca, the soul of calypso, was created by Trinidad's Lord Shorty in the '70s, who blended Indian rhythms into calypso.",
+  "soft rock": "Soft rock ruled '70s FM radio, and Fleetwood Mac's 'Rumours' was recorded while both couples in the band were breaking up.",
+  "son": "A few days of recording in Havana in 1996 brought Cuban son back to the world: the Buena Vista Social Club album sold millions.",
+  "sonata": "Beethoven never called it the Moonlight Sonata: a critic, Ludwig Rellstab, compared it to moonlight on Lake Lucerne years after the composer died.",
+  "soukous": "Soukous sped up Congolese rumba in the '70s and '80s, and its dazzling high guitar lines made stars of players like Diblo Dibala.",
+  "soul": "Soul came out of church: in 1954 Ray Charles turned a gospel song into 'I Got a Woman', and some churchgoers were scandalized to hear the holy sound used for love.",
+  "soul-jazz": "Soul jazz put the Hammond B-3 organ centre stage: players like Jimmy Smith made it the sound of '60s jazz clubs, often playing the bass lines themselves instead of hiring a bassist.",
+  "sound collage": "The Beatles' 'Revolution 9' is a sound collage of tape loops and voices, eight minutes of it on a Number 1 album.",
+  "soundtrack": "Bernard Herrmann scored the shower scene in Psycho for strings alone. Hitchcock had wanted it silent, then heard the shrieking violins and changed his mind.",
+  "space-age": "Space-age pop of the '50s and '60s showed off stereo hi-fi: Esquivel's records bounced instruments from one speaker to the other.",
+  "special effects": "Radio stations and film makers once bought sound effects on records: the BBC released dozens of effects LPs, from steam trains to crowds and doors.",
+  "speed metal": "Motörhead said they just played rock and roll, but 'Overkill' (1979), with its pounding double bass drums, pushed metal toward speed.",
+  "spoken word": "Spoken word records have their own Grammy, and one winner was Barack Obama, for reading his memoir 'Dreams from My Father' aloud.",
+  "stage & screen": "Stage and screen music took a leap in 1927: The Jazz Singer, the first feature film with synchronized songs, has Al Jolson saying 'You ain't heard nothin' yet!'",
+  "sunshine pop": "Much of sunshine pop's sound, on records by the Mamas & the Papas and the Association, came from the same Los Angeles session players, the Wrecking Crew.",
+  "surf": "Dick Dale's 'Misirlou', the surf guitar classic, is an old Eastern Mediterranean folk tune that he played at breakneck speed.",
+  "swing": "Benny Goodman's 1938 Carnegie Hall concert brought swing, and a racially integrated band, into New York's temple of classical music.",
+  "swingbeat": "Swingbeat was the British name for new jack swing, the R&B-meets-hip hop sound Teddy Riley built for Guy, Keith Sweat and Bobby Brown's 'My Prerogative'.",
+  "symphony": "Beethoven's Ninth was the first major symphony to bring in singers, and he helped conduct its 1824 premiere while almost completely deaf.",
+  "synth-pop": "Synth-pop alarmed the British Musicians' Union so much that in 1982 it voted to try to ban synthesizers and drum machines from recording sessions.",
+  "synthwave": "Synthwave is nostalgia for an '80s that never quite existed, borrowed from John Carpenter and Tangerine Dream film scores; the 2011 film Drive made it famous.",
+  "séga": "Séga is the music of Mauritius and Réunion, born among enslaved Africans; its ravanne, a goatskin frame drum, is warmed over a fire to tune it.",
+  "tango": "Tango was born in the dance halls of Buenos Aires and Montevideo, and the bandoneón that defines it was a German instrument meant for church music.",
+  "tech house": "Tech house took shape in mid-'90s London, at clubs like The End and the Wiggle parties, where DJs blended the groove of house with the cool of techno.",
+  "techno": "Techno's founders, Juan Atkins, Derrick May and Kevin Saunderson, met at school in Belleville near Detroit; May called the music George Clinton and Kraftwerk stuck in an elevator.",
+  "thrash": "Thrash metal's Big Four, Metallica, Slayer, Megadeth and Anthrax, first shared one bill in 2010; Megadeth's Dave Mustaine had been fired from Metallica in 1983.",
+  "thug rap": "Tupac Shakur had 'THUG LIFE' tattooed across his stomach, and the phrase became a rallying cry for thug rap.",
+  "trance": "Frankfurt was trance's first capital: in the early '90s, labels like Harthouse and Eye Q, co-founded by Sven Väth, released the long, hypnotic tracks that named it.",
+  "trap": "Trap is named after Atlanta's trap houses, and its rattling hi-hats come from the Roland TR-808, a drum machine first sold in 1980.",
+  "tribal house": "In tribal house the drums lead: congas, toms and chants drive the groove, a sound Danny Tenaglia and Junior Vasquez pushed in '90s New York.",
+  "tribal": "In tribal house and techno, percussion leads: layered congas, toms and chants drive the groove more than any melody.",
+  "trip hop": "Trip hop grew out of Bristol's Wild Bunch sound system, which became Massive Attack. A Mixmag writer coined the name in 1994, and Massive Attack never liked it.",
+  "twist": "Chubby Checker's 'The Twist' topped the Billboard Hot 100 in 1960 and again in 1962, and set off a worldwide dance craze.",
+  "uk funky": "UK funky was a late-2000s London club sound that mixed house with soca and Afro rhythms.",
+  "uk garage": "UK garage sped up New York's garage house and added skippy 2-step drums, filling London's Sunday-afternoon clubs, where crowds dressed up to dance.",
+  "uk street soul": "UK street soul was home-grown British R&B of the late '80s and '90s, made in bedrooms and pressed on tiny labels, then rediscovered by collectors decades later.",
+  "zouk": "Zouk was created in the French Caribbean by the band Kassav' around 1980; the word is Creole for a party."
+ },
+ "artists": {
+  "A Man Called Adam": {
+   "songs": [
+    "Barefoot In The Head (Radio Edit)"
+   ],
+   "text": "A Man Called Adam is the London duo of Sally Rodgers and Steve Jones; 'Barefoot in the Head' (1990) became a staple of Balearic and chill-out compilations."
+  },
+  "Agustín Barrios": {
+   "songs": [
+    "Danza paraguaya"
+   ],
+   "text": "Paraguayan guitarist Agustín Barrios sometimes performed in traditional dress as Nitsuga Mangoré, his first name spelled backwards, and was among the first classical guitarists on record."
+  },
+  "Alice Babs and her orchestra": {
+   "songs": [
+    "Jingle Jangle Jingle"
+   ],
+   "text": "Swedish singer Alice Babs later sang in Duke Ellington's Sacred Concerts; Ellington called her the most unique artist he knew."
+  },
+  "Alvin Curran": {
+   "songs": [
+    "Canti E Vedute Dal Giardino Magnetico"
+   ],
+   "text": "American composer Alvin Curran moved to Rome, where in 1966 he co-founded the live-electronics group Musica Elettronica Viva."
+  },
+  "Amy Winehouse": {
+   "songs": [
+    "October Song"
+   ],
+   "text": "'October Song' is on Amy Winehouse's debut 'Frank' (2003), named partly after Frank Sinatra; she wrote it about Ava, her pet canary, who had died."
+  },
+  "Angela Bowie, Chico Rey": {
+   "songs": [
+    "Closer To Heaven"
+   ],
+   "text": "Angela Bowie was married to David Bowie from 1970 to 1980, and helped shape the look of his Ziggy Stardust years."
+  },
+  "Ann Peebles": {
+   "songs": [
+    "I Feel Like Breaking Up Somebody's Home"
+   ],
+   "text": "Ann Peebles cut her soul records with producer Willie Mitchell at Hi Records in Memphis, Al Green's label; 'I Can't Stand the Rain' (1973) was her biggest hit."
+  },
+  "Beethoven Piano Trio No 7 Archduke": {
+   "songs": [
+    "I (Rubinstein, Heifetz, Feuermann)"
+   ],
+   "text": "Rubinstein, Heifetz and Feuermann were nicknamed the Million Dollar Trio; they recorded Beethoven's 'Archduke' Trio in 1941, a year before Feuermann died."
+  },
+  "Björk": {
+   "songs": [
+    "Bachelorette"
+   ],
+   "text": "'Bachelorette' is from Björk's 'Homogenic' (1997); its video, by Michel Gondry, is about a book that writes itself, telling a story that keeps repeating inside itself."
+  },
+  "Bonde Do Role": {
+   "songs": [
+    "Divine Gosa"
+   ],
+   "text": "Bonde do Rolê, from Curitiba in Brazil, were signed by Diplo to his Mad Decent label and took baile funk to indie dance floors in the 2000s."
+  },
+  "Brenda Russell": {
+   "songs": [
+    "In The Thick Of It"
+   ],
+   "text": "Brenda Russell wrote 'Get Here', which became a worldwide hit for Oleta Adams in 1990."
+  },
+  "Brighde Chaimbeul": {
+   "songs": [
+    "Duan"
+   ],
+   "text": "Brìghde Chaimbeul, from the Isle of Skye, plays the Scottish smallpipes, a quieter, bellows-blown cousin of the Highland bagpipe."
+  },
+  "Brìghde Chaimbeul": {
+   "songs": [
+    "Ruidhle Mo Nighean Donn"
+   ],
+   "text": "Brìghde Chaimbeul, from the Isle of Skye, plays the Scottish smallpipes, a quieter, bellows-blown cousin of the Highland bagpipe."
+  },
+  "Bruno Walter, Beethoven": {
+   "songs": [
+    "Symphony No. 7 In A Major, Op. 92"
+   ],
+   "text": "Conductor Bruno Walter was Gustav Mahler's assistant, and premiered 'Das Lied von der Erde' and Mahler's Ninth Symphony after the composer's death."
+  },
+  "Carole King": {
+   "songs": [
+    "Weekdays"
+   ],
+   "text": "Before 'Tapestry', Carole King co-wrote hits with Gerry Goffin for other singers, such as the Shirelles' 'Will You Love Me Tomorrow'. 'Weekdays' is from 'Fantasy' (1973)."
+  },
+  "Chico Hamilton": {
+   "songs": [
+    "Gengis"
+   ],
+   "text": "Drummer Chico Hamilton's quintet, with a cello in the front line, appears in the film 'Sweet Smell of Success' (1957), and his bands launched Eric Dolphy and Charles Lloyd."
+  },
+  "Chihei Hatakeyama": {
+   "songs": [
+    "Frozen Flowers"
+   ],
+   "text": "Chihei Hatakeyama makes slow ambient music from guitar and electronics in Japan, and runs his own label, White Paddy Mountain."
+  },
+  "Clipse, Pharrell Williams": {
+   "songs": [
+    "Mr. Me Too (Instrumental)"
+   ],
+   "text": "Clipse are the Virginia brothers Pusha T and No Malice; 'Mr. Me Too' is from 'Hell Hath No Fury' (2006), produced entirely by the Neptunes."
+  },
+  "Crack Cloud": {
+   "songs": [
+    "Tunnel Vision"
+   ],
+   "text": "Crack Cloud is a Vancouver collective led by drummer and singer Zach Choy; many of its members met through addiction recovery and harm-reduction work."
+  },
+  "Craig Leon": {
+   "songs": [
+    "The Earliest Trace"
+   ],
+   "text": "Craig Leon produced the first albums by the Ramones and Blondie, then made the cosmic synth records 'Nommos' and 'Visiting', inspired by the Dogon people of Mali."
+  },
+  "Dana Gillespie": {
+   "songs": [
+    "Souvenirs Of Stefan"
+   ],
+   "text": "Dana Gillespie was a British junior water-skiing champion before she sang; David Bowie gave her his song 'Andy Warhol', and she was Mary Magdalene in the first London 'Jesus Christ Superstar'."
+  },
+  "Death": {
+   "songs": [
+    "The Change",
+    "Keep on Knocking"
+   ],
+   "text": "Death were three Hackney brothers playing punk in Detroit in 1974, before punk had a name; their tapes sat in an attic until Drag City released them in 2009."
+  },
+  "Deee-Lite": {
+   "songs": [
+    "Party Happening People"
+   ],
+   "text": "Deee-Lite, Lady Miss Kier, Towa Tei and DJ Dmitry, met in New York; their 'Groove Is in the Heart' (1990) features Bootsy Collins and Q-Tip."
+  },
+  "DMX, Ja Rule": {
+   "songs": [
+    "Prayer III"
+   ],
+   "text": "DMX opened his albums with spoken prayers like this one, and his first two albums both went to No. 1 in the same year, 1998."
+  },
+  "Don Campau": {
+   "songs": [
+    "Poor Lulu",
+    "its raining",
+    "Man With A Dronehead",
+    "so possible plan #7",
+    "Same Time Next Channel",
+    "Sandra"
+   ],
+   "text": "Don Campau was a hub of the '80s home-taping network, trading cassettes by mail with musicians around the world and playing them on his radio show, No Pigeonholes."
+  },
+  "Dub Narcotic Sound System": {
+   "songs": [
+    "Dub Narcotic"
+   ],
+   "text": "Dub Narcotic Sound System is Calvin Johnson of Beat Happening, who founded K Records in Olympia, Washington; Dub Narcotic was also his home studio."
+  },
+  "Earth, Wind & Fire": {
+   "songs": [
+    "Reasons"
+   ],
+   "text": "Maurice White named Earth, Wind & Fire after the elements in his astrological chart; 'Reasons' is from 'That's the Way of the World' (1975)."
+  },
+  "Ebenezer Calender": {
+   "songs": [
+    "Fire, Fire, Fire"
+   ],
+   "text": "Ebenezer Calender led a maringa band in Freetown, Sierra Leone, mixing palm-wine guitar with the rhythms of Caribbean calypso."
+  },
+  "Eivør": {
+   "songs": [
+    "Verð Mín"
+   ],
+   "text": "Eivør sings in Faroese and English; she co-wrote the music for the TV series 'The Last Kingdom' and sang on the soundtrack of the game 'God of War'."
+  },
+  "El Perro Del Mar": {
+   "songs": [
+    "Walk On By"
+   ],
+   "text": "El Perro del Mar is the Swedish singer Sarah Assbring; her stage name is Spanish for 'the dog of the sea'."
+  },
+  "El Wali": {
+   "songs": [
+    "The People of El Aaiún"
+   ],
+   "text": "El Wali were the national band of the Sahrawi people of Western Sahara, formed in the refugee camps near Tindouf, Algeria, to sing of their struggle."
+  },
+  "Errol Dunkley": {
+   "songs": [
+    "A Little Way Different"
+   ],
+   "text": "Errol Dunkley made his first records as a teenager in Kingston, and had a UK Top 20 hit in 1979 with 'O.K. Fred'."
+  },
+  "Eurythmics": {
+   "songs": [
+    "For The Love Of Big Brother"
+   ],
+   "text": "Eurythmics recorded music for the 1984 film of Orwell's 'Nineteen Eighty-Four'; director Michael Radford objected that the studio had added it without his consent."
+  },
+  "Eyedress": {
+   "songs": [
+    "Jealous"
+   ],
+   "text": "Eyedress is the Filipino musician Idris Vicuña; 'Jealous' (2020) became a viral hit on TikTok."
+  },
+  "Fehlfarben": {
+   "songs": [
+    "Ein Jahr (Es geht voran)"
+   ],
+   "text": "'Ein Jahr (Es geht voran)' is from Fehlfarben's 'Monarchie und Alltag' (1980), often named among the best German rock albums; singer Peter Hein kept his office job at Rank Xerox."
+  },
+  "Fred Again.. & Bia": {
+   "songs": [
+    "..feisty"
+   ],
+   "text": "Fred again.. produced for Ed Sheeran and Stormzy before building his own 'Actual Life' albums from voice memos and videos of friends and strangers."
+  },
+  "Geraint Jarman A'r Cynganeddwyr": {
+   "songs": [
+    "Rhyfela Yn Y Ser",
+    "Gwynt Milain Y Sais",
+    "Cerddorfa Wag",
+    "Yn Fy Mro"
+   ],
+   "text": "Geraint Jarman, with his band Y Cynganeddwyr, brought reggae into Welsh-language rock in the late '70s."
+  },
+  "He Said": {
+   "songs": [
+    "Pump"
+   ],
+   "text": "He Said is the solo project of Graham Lewis, bass player of Wire, recorded for Mute in the mid-'80s."
+  },
+  "Headless Chickens": {
+   "songs": [
+    "Cruise Control"
+   ],
+   "text": "Headless Chickens were an Auckland band on New Zealand's Flying Nun label, mixing samplers and guitars; 'Cruise Control' is one of their best-known songs."
+  },
+  "Ink Spots": {
+   "songs": [
+    "It's Funny To Everyone But Me"
+   ],
+   "text": "The Ink Spots' formula, Bill Kenny's high tenor lead and a spoken bass interlude, inspired the doo-wop groups of the '50s."
+  },
+  "Jah Wobble": {
+   "songs": [
+    "Invaders Of The Heart"
+   ],
+   "text": "Jah Wobble played bass in Public Image Ltd; his stage name came from Sid Vicious slurring his real name, John Wardle."
+  },
+  "Jim Stafford": {
+   "songs": [
+    "The Last Chant"
+   ],
+   "text": "Jim Stafford had a 1974 hit with the comic 'Spiders & Snakes', and later had his own TV variety show and a theatre in Branson, Missouri."
+  },
+  "John Lennon": {
+   "songs": [
+    "Jealous Guy"
+   ],
+   "text": "'Jealous Guy' began in 1968 as 'Child of Nature', written during the Beatles' stay in Rishikesh, India, before Lennon rewrote it for 'Imagine' (1971)."
+  },
+  "José Feliciano": {
+   "songs": [
+    "Light My Fire"
+   ],
+   "text": "José Feliciano, blind since birth, took his Latin-flavoured cover of the Doors' 'Light My Fire' into the US Top 5 in 1968 and won two Grammys for it."
+  },
+  "Joshua Idehen": {
+   "songs": [
+    "This Is The Place"
+   ],
+   "text": "Joshua Idehen is a London poet and singer who fronted Benin City and appeared on Sons of Kemet's 'Your Queen Is a Reptile'."
+  },
+  "Judy Nylon, Crucial": {
+   "songs": [
+    "Jailhouse Rock"
+   ],
+   "text": "Judy Nylon was the friend who visited Brian Eno in hospital in 1975 and left the quiet harp record on that led him to ambient music. 'Jailhouse Rock' is from her 'Pal Judy', made with Adrian Sherwood."
+  },
+  "Junior Byles": {
+   "songs": [
+    "Fever"
+   ],
+   "text": "Junior Byles made his best-known records with Lee 'Scratch' Perry, among them 'Curly Locks' and 'Beat Down Babylon'."
+  },
+  "Larry Heard": {
+   "songs": [
+    "Micro-Gravity",
+    "Praise (Fingers Tribal Mix)"
+   ],
+   "text": "Larry Heard was a drummer before he bought a Roland Juno-60 synthesizer and made 'Can You Feel It' as Mr. Fingers."
+  },
+  "Larry Heard & Mr. White": {
+   "songs": [
+    "Virtual Emotion (Dub)"
+   ],
+   "text": "Mr. White is another of Larry Heard's names, the one he sings under; Heard was a drummer before he made 'Can You Feel It' as Mr. Fingers."
+  },
+  "Leoš Janáček, Wiener Philharmoniker, Sir Charles Mackerras": {
+   "songs": [
+    "Sinfonietta"
+   ],
+   "text": "Janáček wrote his Sinfonietta (1926) for a gymnastics festival; it opens with a fanfare for 13 extra brass players, and Charles Mackerras championed it."
+  },
+  "Leslie Winer": {
+   "songs": [
+    "Remote Viewing",
+    "Kings Of Sleep"
+   ],
+   "text": "Leslie Winer was a model in the '80s before making 'Witch' (1990), a spoken-word dub record often called the first trip hop album."
+  },
+  "Lorez Alexandria": {
+   "songs": [
+    "I'm Wishin'",
+    "Baltimore Oriole"
+   ],
+   "text": "Lorez Alexandria sang gospel in Chicago before turning to jazz, and recorded for the city's Argo label in the late '50s."
+  },
+  "Lush": {
+   "songs": [
+    "Nothing Natural"
+   ],
+   "text": "Lush were a London band on 4AD; Cocteau Twins' Robin Guthrie produced their early records."
+  },
+  "Mario Reis": {
+   "songs": [
+    "Jura"
+   ],
+   "text": "Mario Reis sang samba softly, almost speaking, at a time when singers belted; his intimate style is often heard as a forerunner of bossa nova."
+  },
+  "Maurice Williams & The Zodiacs": {
+   "songs": [
+    "Stay"
+   ],
+   "text": "'Stay', at about 1 minute 36 seconds, is the shortest single ever to top the Billboard Hot 100; Maurice Williams wrote it as a teenager."
+  },
+  "McCoy Tyner": {
+   "songs": [
+    "My Favorite Things"
+   ],
+   "text": "McCoy Tyner was the pianist in John Coltrane's classic quartet, which turned 'My Favorite Things' from The Sound of Music into a modal jazz epic in 1960."
+  },
+  "Michele Mercure": {
+   "songs": [
+    "Time Piece"
+   ],
+   "text": "Michele Mercure self-released her synthesizer music on cassette in 1980s Pennsylvania; Freedom to Spend reissued it decades later."
+  },
+  "Mikkel Metal": {
+   "songs": [
+    "Bodium"
+   ],
+   "text": "Mikkel Metal is a Danish producer of dub techno, a mainstay of Copenhagen's Echocord label."
+  },
+  "Mira Calix": {
+   "songs": [
+    "Ms. Meteo"
+   ],
+   "text": "Mira Calix was a South African-born composer on Warp Records, where she first worked in the press office; she later made a piece with live insects."
+  },
+  "Miriam Makeba": {
+   "songs": [
+    "House Of The Rising Sun"
+   ],
+   "text": "Miriam Makeba, Mama Africa, was kept out of South Africa for 30 years after speaking against apartheid, and her 'Pata Pata' (1967) was a worldwide hit."
+  },
+  "Morgan Fisher": {
+   "songs": [
+    "Cool Heat"
+   ],
+   "text": "Morgan Fisher played keyboards in Mott the Hoople and toured with Queen, then moved to Japan, where he has lived since the '80s."
+  },
+  "Mozart, Strauss, Cristina Gómez Godoy, West-Eastern Divan Orchestra, Daniel Barenboim": {
+   "songs": [
+    "Oboe Concerto In D Major, TrV 292"
+   ],
+   "text": "Richard Strauss wrote his Oboe Concerto in 1945 after an American soldier, the oboist John de Lancie, asked him whether he had ever thought of writing one."
+  },
+  "Nara": {
+   "songs": [
+    "Funeral De Um Lavrador"
+   ],
+   "text": "Nara Leão's Copacabana apartment hosted the late-'50s gatherings where bossa nova took shape, and she was later called its muse."
+  },
+  "Nolan Porter": {
+   "songs": [
+    "If I Could Only Be Sure"
+   ],
+   "text": "Nolan Porter's 'If I Could Only Be Sure' became a Northern soul favourite in Britain, and Joy Division borrowed the riff of his 'Keep On Keepin' On' for 'Interzone'."
+  },
+  "Ofege": {
+   "songs": [
+    "It's Not Easy"
+   ],
+   "text": "Ofege were schoolboys at St Gregory's College in Lagos when they recorded their psychedelic rock album 'Try and Love' in 1973."
+  },
+  "Paperclip People": {
+   "songs": [
+    "4 My Peepz (Dubfire Rework)"
+   ],
+   "text": "Paperclip People is one of Detroit producer Carl Craig's names, and Planet E is the label he started in 1991."
+  },
+  "Pariah": {
+   "songs": [
+    "Seed Bank"
+   ],
+   "text": "Pariah is London producer Arthur Cayzer, who also plays live techno with Blawan as Karenn; 'Here From Where We Are' (2018) was his ambient debut album."
+  },
+  "Paul Haig": {
+   "songs": [
+    "Find Me"
+   ],
+   "text": "Paul Haig sang in the Edinburgh post-punk band Josef K, named after the hero of Kafka's 'The Trial', before going solo."
+  },
+  "Pluto Shervington": {
+   "songs": [
+    "Groovin' In The Grove "
+   ],
+   "text": "Pluto Shervington's comic reggae song 'Dat' (1976), about a Rastafarian trying to buy pork without saying the word, was a UK Top 10 hit."
+  },
+  "Preoccupations": {
+   "songs": [
+    "Espionage"
+   ],
+   "text": "Preoccupations, from Calgary, were first called Viet Cong and changed their name after protests; two of them had played in the band Women."
+  },
+  "Protomartyr": {
+   "songs": [
+    "The Chuckler"
+   ],
+   "text": "Protomartyr are a Detroit post-punk band; 'The Chuckler' is from 'Relatives in Descent' (2017), their first album for Domino."
+  },
+  "Public Image Ltd.": {
+   "songs": [
+    "Religion II"
+   ],
+   "text": "Public Image Ltd was John Lydon's band after the Sex Pistols; their 'Metal Box' (1979) first came as three 12-inch records in a film canister."
+  },
+  "RAH Band": {
+   "songs": [
+    "Sam The Samba Man"
+   ],
+   "text": "The RAH Band is Richard Anthony Hewson, who arranged the orchestra and choir on the Beatles' 'The Long and Winding Road'."
+  },
+  "Ramsey Lewis": {
+   "songs": [
+    "Look-A-Here"
+   ],
+   "text": "The Ramsey Lewis Trio's live 'The In Crowd', recorded at a Washington club, was a Top 5 pop hit in 1965."
+  },
+  "Robyn Hitchcock": {
+   "songs": [
+    "Let There Be More Darkness"
+   ],
+   "text": "Robyn Hitchcock led the Soft Boys in late-'70s Cambridge before a long solo career of surreal songs; R.E.M.'s Peter Buck later played in his band."
+  },
+  "Rossini’s": {
+   "songs": [
+    "La Gazza Ladra"
+   ],
+   "text": "Rossini's overture to 'La gazza ladra', The Thieving Magpie, opens with snare-drum rolls, and is best known now from Kubrick's 'A Clockwork Orange'."
+  },
+  "Seu Jorge": {
+   "songs": [
+    "Rock N'Roll Suicide"
+   ],
+   "text": "Seu Jorge sang David Bowie songs in Portuguese, on acoustic guitar, for Wes Anderson's 'The Life Aquatic with Steve Zissou' (2004); Bowie praised them."
+  },
+  "Shackleton": {
+   "songs": [
+    "Hamas Rule"
+   ],
+   "text": "Shackleton co-founded the label Skull Disco with Appleblim in 2005, making dark, percussive dubstep; artist Zeke Clough drew its sleeves."
+  },
+  "Six Brown Brothers": {
+   "songs": [
+    "Pussyfoot March"
+   ],
+   "text": "The Six Brown Brothers were a vaudeville saxophone sextet who helped make the saxophone a craze in 1910s America."
+  },
+  "Slowdive, Grouper": {
+   "songs": [
+    "Kisses (Sky II)"
+   ],
+   "text": "Slowdive were dropped by Creation soon after releasing 'Pygmalion' in 1995, and reunited in 2014; 'Kisses' is from 'Everything Is Alive' (2023)."
+  },
+  "Sonique": {
+   "songs": [
+    "It Feels so Good (The Conductor & the Cowboy Amnesia Mix)"
+   ],
+   "text": "Sonique was a London DJ and singer; 'It Feels So Good', first released in 1998, went to No. 1 in the UK in 2000."
+  },
+  "steve beresford": {
+   "songs": [
+    "violin-ID 11",
+    "joey-ID 10"
+   ],
+   "text": "Steve Beresford is a London improviser known for playing toy pianos and toys alongside the piano."
+  },
+  "Supertramp": {
+   "songs": [
+    "From Now On"
+   ],
+   "text": "Supertramp's early years were paid for by a Dutch millionaire, Stanley August Miesegaes, who backed Rick Davies; 'From Now On' is from 'Even in the Quietest Moments' (1977)."
+  },
+  "Swans": {
+   "songs": [
+    "In My Garden"
+   ],
+   "text": "Swans, led by Michael Gira, were once known as the loudest band in New York; 'Children of God' (1987) brought in Jarboe's voice and quieter, hymn-like songs."
+  },
+  "SZA": {
+   "songs": [
+    "Kill Bill"
+   ],
+   "text": "SZA's 'Kill Bill', from 'SOS' (2022), takes its title from Tarantino's revenge films, and became her first solo No. 1 on the Billboard Hot 100."
+  },
+  "T.I., Chris Brown": {
+   "songs": [
+    "Get Back Up"
+   ],
+   "text": "T.I.'s 2003 album 'Trap Muzik' helped give trap its name."
+  },
+  "The B-52's": {
+   "songs": [
+    "Dirty Back Road"
+   ],
+   "text": "The B-52's took their name from Southern slang for the tall beehive hairdos Kate Pierson and Cindy Wilson wore."
+  },
+  "The Bug, Magugu": {
+   "songs": [
+    "Deep In a Mud"
+   ],
+   "text": "The Bug is London producer Kevin Martin, maker of crushing dub and dancehall bass, often with MCs like Flowdan."
+  },
+  "The Castaways": {
+   "songs": [
+    "Sam"
+   ],
+   "text": "The Castaways, from Minneapolis, are best known for 'Liar, Liar' (1965), a garage rock classic later collected on 'Nuggets'."
+  },
+  "The Cleaners From Venus": {
+   "songs": [
+    "Tukani (Monday Is Grey)"
+   ],
+   "text": "The Cleaners from Venus was Martin Newell's home-taping pop project in Essex, its albums sold on cassette by mail in the '80s."
+  },
+  "The Diablos, Nolan Strong": {
+   "songs": [
+    "The Wind"
+   ],
+   "text": "Nolan Strong's high tenor on the Diablos' Detroit records of the '50s was a model for the young Smokey Robinson."
+  },
+  "The Imperials": {
+   "songs": [
+    "Tears On My Pillow"
+   ],
+   "text": "'Tears on My Pillow' (1958) was the first hit for Little Anthony and the Imperials, with Anthony Gourdine's high lead."
+  },
+  "The Monotones": {
+   "songs": [
+    "The Book Of Love"
+   ],
+   "text": "The Monotones' 'The Book of Love' (1958) was inspired by a toothpaste jingle: 'You'll wonder where the yellow went when you brush your teeth with Pepsodent.'"
+  },
+  "The Orioles": {
+   "songs": [
+    "It's Too Soon To Know"
+   ],
+   "text": "The Orioles, from Baltimore, are often called the first rhythm and blues vocal group, and set off a craze of groups named after birds."
+  },
+  "The Spaniels": {
+   "songs": [
+    "Three Little Words"
+   ],
+   "text": "The Spaniels, from Gary, Indiana, recorded the doo-wop classic 'Goodnite, Sweetheart, Goodnite' in 1954."
+  },
+  "The Sundays": {
+   "songs": [
+    "You're Not The Only One I Know"
+   ],
+   "text": "The Sundays, Harriet Wheeler and David Gavurin, met at Bristol University; their debut 'Reading, Writing and Arithmetic' (1990) went into the UK Top 5."
+  },
+  "The Teenagers, Frankie Lymon": {
+   "songs": [
+    "Why Do Fools Fall In Love "
+   ],
+   "text": "Frankie Lymon was 13 when he sang lead on 'Why Do Fools Fall in Love', a hit in 1956."
+  },
+  "Theo Parrish": {
+   "songs": [
+    "How I Feel"
+   ],
+   "text": "Detroit DJ and producer Theo Parrish calls his label Sound Signature, and his rough, filtered house records sound like no one else's."
+  },
+  "Throbbing Gristle": {
+   "songs": [
+    "Walkabout"
+   ],
+   "text": "Throbbing Gristle called their Hackney rehearsal room the Death Factory, and their label, Industrial Records, gave industrial music its name."
+  },
+  "Tomaga": {
+   "songs": [
+    "Arpeggio Drum Challenge"
+   ],
+   "text": "Tomaga were the London duo of drummer Valentina Magaletti and bassist Tom Relleen, who died in 2020."
+  },
+  "Toumani Diabaté & Ballake Sissoko": {
+   "songs": [
+    "Salaman"
+   ],
+   "text": "Kora players Toumani Diabaté and Ballaké Sissoko are sons of the musicians behind the 1970 album 'Ancient Strings'; their 'New Ancient Strings' (1999) answered it."
+  },
+  "Traumprinz": {
+   "songs": [
+    "Im Rausch Der Tiefe"
+   ],
+   "text": "Traumprinz is one of several names, with Prince of Denmark and DJ Metatron, of an anonymous German producer who gives no interviews."
+  },
+  "Vashti Bunyan": {
+   "songs": [
+    "Diamond Day"
+   ],
+   "text": "Vashti Bunyan wrote 'Just Another Diamond Day' on a long horse-drawn journey to the Hebrides; it sold little in 1970, and her next album came 35 years later."
+  },
+  "Virna Lindt": {
+   "songs": [
+    "I Experienced Love"
+   ],
+   "text": "Virna Lindt was a Swedish singer on London's Compact Organisation label, whose spy-themed pop was produced by Tot Taylor."
+  },
+  "War": {
+   "songs": [
+    "Youngblood (Livin' In the Streets)"
+   ],
+   "text": "War started out as Eric Burdon's backing band, and went on to hits like 'Low Rider' and 'Why Can't We Be Friends?'"
+  },
+  "Whim 'n Rhythm": {
+   "songs": [
+    "Hammond Song"
+   ],
+   "text": "Whim 'n Rhythm is Yale's senior women's a cappella group; 'Hammond Song' is a song by the Roches."
+  },
+  "Wigwam": {
+   "songs": [
+    "Let The World Ramble On"
+   ],
+   "text": "Wigwam were among Finland's first progressive rock bands, recording for Helsinki's Love Records."
+  },
+  "Yardena Arazi": {
+   "songs": [
+    "Ma-Natata-Lee (Extended Dance Version)"
+   ],
+   "text": "Yardena Arazi sang in the Israeli trio Chocolate Menta Mastik, co-hosted the Eurovision Song Contest in Jerusalem in 1979, and sang for Israel at Eurovision in 1988."
+  },
+  "yoshinori sunahara": {
+   "songs": [
+    "lovebeat (deep & long)"
+   ],
+   "text": "Yoshinori Sunahara was a member of the Japanese techno group Denki Groove before going solo; 'Lovebeat' (2001) is his best-known album."
+  },
+  "Молчат Дома, Molchat Doma": {
+   "songs": [
+    "На Дне"
+   ],
+   "text": "Molchat Doma, from Minsk, sing in Russian, and their name means 'the houses are silent'; their song 'Sudno' went viral on TikTok in 2020."
+  },
+  "گوگوش (Googoosh)": {
+   "songs": [
+    "ما به هم نمی رسیم (Ma Beh Ham Nemiresim)"
+   ],
+   "text": "Googoosh was Iran's biggest pop star of the '70s; after the 1979 revolution she was kept from singing for more than 20 years, then toured the world from 2000."
+  }
+ }
+}

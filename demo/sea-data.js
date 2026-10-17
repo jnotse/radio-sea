@@ -1,5 +1,5 @@
 window.SEA_DATA = {
- "generatedAt": "2026-10-17T21:52:50.533Z",
+ "generatedAt": "2026-10-17T22:11:38.865Z",
  "stats": {
   "stations": [
    {
@@ -91274,1156 +91274,1119 @@ window.SEA_DATA = {
  "facts": {
   "genres": {
    "rock": {
-    "title": "Rock music",
-    "url": "https://en.wikipedia.org/wiki/Rock_music",
-    "text": "It has its roots beginning as classic rock and roll, a style that drew from the African-American musical genres of blues and rhythm and blues, as well as from country music."
+    "text": "Rock's fuzz began with broken gear: on Jackie Brenston's 'Rocket 88' (1951), cut with Ike Turner's band, the guitar amp had been damaged on the way to the studio and was stuffed with paper."
    },
    "punk": {
-    "title": "Punk rock",
-    "url": "https://en.wikipedia.org/wiki/Punk_rock",
-    "text": "Punk rock is a genre of rock music that emerged in the mid-1970s. Rooted in 1950s rock and roll and 1960s garage rock, punk bands rejected the overproduction and corporate nature of mainstream arena rock."
+    "text": "The Ramones' first album was recorded in about a week for around $6,400, and most of its 14 songs are under two and a half minutes."
    },
    "electronic": {
-    "title": "Electronic music",
-    "url": "https://en.wikipedia.org/wiki/Electronic_music",
-    "text": "Electronic music broadly is a group of music genres that employ electronic musical instruments, circuitry-based music technology and software, or general-purpose electronics in its creation."
+    "text": "The first all-electronic film score, Louis and Bebe Barron's Forbidden Planet (1956), couldn't be credited as music because of a union rule, so the titles call it 'electronic tonalities'."
    },
    "ambient": {
-    "title": "Ambient music",
-    "url": "https://en.wikipedia.org/wiki/Ambient_music",
-    "text": "Ambient music is a genre of music that emphasizes tone and atmosphere over traditional musical structure or rhythm. The genre evokes an \"atmospheric\", \"visual\", or \"unobtrusive\" quality."
+    "text": "Brian Eno came up with ambient music in 1975, stuck in bed after an accident: a friend left a harp record on too quietly to hear properly, and he found he liked it that way."
    },
    "deep house": {
-    "title": "Deep house",
-    "url": "https://en.wikipedia.org/wiki/Deep_house",
-    "text": "Deep house is a subgenre of house music that originated in the 1980s, initially fusing elements of Chicago house with the lush chords of 1980s jazz-funk and touches of soul music."
+    "text": "Larry Heard, recording as Mr. Fingers, made 'Can You Feel It' in the mid-'80s, and its warm, jazzy chords became the template for deep house."
    },
    "downtempo": {
-    "title": "Downtempo",
-    "url": "https://en.wikipedia.org/wiki/Downtempo",
-    "text": "Downtempo is a broad label for electronic music that features an atmospheric sound and slower beats than would typically be found in dance music."
+    "text": "Downtempo grew out of the chill-out rooms of early-'90s raves, where DJs played slow, dubby records for dancers to come down to."
    },
    "folk, world, & country": {
-    "title": "Folk music",
-    "url": "https://en.wikipedia.org/wiki/Folk_music",
-    "text": "Folk music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former during the 20th-century folk revival. Some types of folk music may be called world music."
+    "text": "Discogs files folk, world and country music under one roof, so a Bulgarian choir, a Malian kora player and a Nashville songwriter can share a shelf."
    },
    "pop": {
-    "title": "Pop music",
-    "url": "https://en.wikipedia.org/wiki/Pop_music",
-    "text": "Pop music, or simply pop, is a genre of popular music that originated in its modern form during the mid-1950s in the United States and the United Kingdom."
+    "text": "Phil Spector's Wall of Sound stacked several guitars, pianos and drummers playing the same parts at once, then sent them through echo chambers at Gold Star Studios in Los Angeles."
    },
    "indie pop": {
-    "title": "Indie pop",
-    "url": "https://en.wikipedia.org/wiki/Indie_pop",
-    "text": "Indie pop is a music genre and subculture that combines guitar pop with a DIY ethic in opposition to the style and tone of mainstream pop music."
+    "text": "Indie pop's jangly scene got a nickname from a cassette: C86, given away by the NME in 1986 with songs by Primal Scream, the Pastels and others."
    },
    "lo-fi": {
-    "title": "Lo-fi music",
-    "url": "https://en.wikipedia.org/wiki/Lo-fi_music",
-    "text": "Low fidelity is a music or production quality in which elements usually regarded as imperfections in the context of a recording or performance are present, sometimes as a deliberate stylistic choice."
+    "text": "Lo-fi wears its cheap gear proudly. R. Stevie Moore had been making home-recorded cassettes since the '70s, and is often called the godfather of DIY pop."
    },
    "shoegaze": {
-    "title": "Shoegaze",
-    "url": "https://en.wikipedia.org/wiki/Shoegaze",
-    "text": "Shoegaze is a subgenre of indie and alternative rock characterised by ethereal soundscapes, obscured vocals, and extensive use of guitar effects and distortion. It was sometimes used interchangeably with \"dream pop\"."
+    "text": "Shoegaze got its name because its guitarists spent gigs staring down at their effects pedals; My Bloody Valentine's 'Loveless' took about two years and many studios to make."
    },
    "house": {
-    "title": "House music",
-    "url": "https://en.wikipedia.org/wiki/House_music",
-    "text": "House music, or simply house, is a type of electronic dance music which is characterized by a repetitive four-on-the-floor beat and a typical tempo of 115–130 beats per minute."
+    "text": "House is named after the Warehouse, a Chicago club where Frankie Knuckles DJed from 1977, mixing disco, soul and European synth records late into the night."
    },
    "techno": {
-    "title": "Techno",
-    "url": "https://en.wikipedia.org/wiki/Techno",
-    "text": "Techno is a genre of electronic music which is generally produced for use in a continuous DJ set, with tempos being in the range from 120 to 150 beats per minute."
+    "text": "Techno's founders, Juan Atkins, Derrick May and Kevin Saunderson, met at school in Belleville near Detroit; May called the music George Clinton and Kraftwerk stuck in an elevator."
    },
    "indie rock": {
-    "title": "Indie rock",
-    "url": "https://en.wikipedia.org/wiki/Indie_rock",
-    "text": "Indie rock is a subgenre of rock music that originated in the United Kingdom, United States and New Zealand in the early to mid-1980s."
+    "text": "'Indie' first meant the label, not the sound: the UK Indie Chart, started in 1980, ranked records sold through independent distributors like Rough Trade."
    },
    "no wave": {
-    "title": "No wave",
-    "url": "https://en.wikipedia.org/wiki/No_wave",
-    "text": "No wave was an avant-garde music and visual art scene that emerged in the late 1970s in Downtown New York City. The term was coined as a rejection of commercial new wave music."
+    "text": "No wave bands like DNA and Teenage Jesus and the Jerks rejected even punk's rules; Brian Eno's 1978 compilation 'No New York' captured the scene."
    },
    "post-punk": {
-    "title": "Post-punk",
-    "url": "https://en.wikipedia.org/wiki/Post-punk",
-    "text": "Post-punk is a loosely defined music genre and period that emerged in the late 1970s in the wake of punk rock."
+    "text": "The cover of Joy Division's 'Unknown Pleasures' (1979) shows radio pulses from the first pulsar ever discovered, CP 1919, taken from an astronomy encyclopedia."
    },
    "art rock": {
-    "title": "Art rock",
-    "url": "https://en.wikipedia.org/wiki/Art_rock",
-    "text": "Art rock is rock music that aims to distinguish the genre from popular entertainment, with the term typically being applied as the middle ground between mainstream and experimental rock."
+    "text": "Andy Warhol managed the Velvet Underground and designed the banana on their first album; early copies let you peel it off to reveal a pink one underneath."
    },
    "abstract": {
-    "title": "Absolute music",
-    "url": "https://en.wikipedia.org/wiki/Absolute_music",
-    "text": "Absolute music is music that is not explicitly \"about\" anything; in contrast to program music, it is non-representational."
+    "text": "In the '90s, London's Mo' Wax label made a scene of abstract beats: instrumental hip hop like DJ Shadow's that wandered wherever its samples led."
    },
    "disco": {
-    "title": "Disco",
-    "url": "https://en.wikipedia.org/wiki/Disco",
-    "text": "Disco is a genre of dance music and a subculture that emerged in the late 1960s from the United States' urban nightlife scene."
+    "text": "The 12-inch single was invented for disco: in 1974 remixer Tom Moulton ran out of 7-inch blanks, cut a song onto a 12-inch, and found the wider grooves played louder."
    },
    "krautrock": {
-    "title": "Krautrock",
-    "url": "https://en.wikipedia.org/wiki/Krautrock",
-    "text": "Krautrock is a broad genre of experimental rock that developed in West Germany in the late 1960s and early 1970s."
+    "text": "Krautrock was a mocking British name for adventurous German bands like Can, Neu! and Faust; Neu!'s steady motorik beat fed into David Bowie's Berlin albums."
    },
    "dub": {
-    "title": "Dub music",
-    "url": "https://en.wikipedia.org/wiki/Dub_music",
-    "text": "Dub is a musical style that grew out of reggae in the late 1960s and early 1970s. It is commonly considered a subgenre of reggae, though it has developed to extend beyond that style."
+    "text": "Dub began in late-'60s Kingston when engineers like King Tubby stripped the vocals off reggae records and drenched what was left in echo, reverb and sudden drop-outs."
    },
    "avantgarde": {
-    "title": "Avant-garde music",
-    "url": "https://en.wikipedia.org/wiki/Avant-garde_music",
-    "text": "Avant-garde music may be distinguished from experimental music by the way it adopts an extreme position within a certain tradition, whereas experimental music lies outside tradition."
+    "text": "Italian Futurist Luigi Russolo built noise machines called intonarumori in 1913 and wrote the manifesto 'The Art of Noises', decades before noise music."
    },
    "darkwave": {
-    "title": "Dark wave",
-    "url": "https://en.wikipedia.org/wiki/Dark_wave",
-    "text": "Dark wave is a music genre that emerged from the new wave and post-punk movement of the late 1970s."
+    "text": "Darkwave was the cold, synth-led side of post-punk, strongest in '80s Germany, France and Belgium, where cassette labels spread it hand to hand."
    },
    "experimental": {
-    "title": "Experimental music",
-    "url": "https://en.wikipedia.org/wiki/Experimental_music",
-    "text": "Experimental music is a general label for any music or music genre that pushes existing boundaries and genre definitions."
+    "text": "John Cage's 4′33″ (1952) is three movements in which the performer plays nothing at all, so the sounds of the room and the audience become the piece."
    },
    "minimal": {
-    "title": "Minimal techno",
-    "url": "https://en.wikipedia.org/wiki/Minimal_techno",
-    "text": "Minimal techno is a subgenre of techno music. It is characterized by a stripped-down aesthetic that exploits the use of repetition and understated development."
+    "text": "Discogs' 'minimal' covers two scenes: the stripped-down techno of Robert Hood and Richie Hawtin in the '90s, and the cold, home-recorded minimal wave synth tapes of the early '80s."
    },
    "synth-pop": {
-    "title": "Synth-pop",
-    "url": "https://en.wikipedia.org/wiki/Synth-pop",
-    "text": "Synth-pop is a music genre that first became prominent in the late 1970s and features the synthesizer as the dominant musical instrument."
+    "text": "Synth-pop alarmed the British Musicians' Union so much that in 1982 it voted to try to ban synthesizers and drum machines from recording sessions."
+   },
+   "synthwave": {
+    "text": "Synthwave is nostalgia for an '80s that never quite existed, borrowed from John Carpenter and Tangerine Dream film scores; the 2011 film Drive made it famous."
    },
    "coldwave": {
-    "title": "Industrial metal",
-    "url": "https://en.wikipedia.org/wiki/Industrial_metal",
-    "text": "Industrial metal is the fusion of heavy metal and industrial music, typically employing repeating metal guitar riffs, sampling, synthesizer or sequencer lines, and distorted vocals."
+    "text": "Coldwave was the chilly, synth-heavy French and Belgian answer to post-punk in the early '80s."
    },
    "new wave": {
-    "title": "New wave music",
-    "url": "https://en.wikipedia.org/wiki/New_wave_music",
-    "text": "New wave is a music genre encompassing pop-oriented styles that emerged in the United States and United Kingdom in the mid-to late 1970s."
+    "text": "'New wave' started as a sales label: in the late '70s it let record companies sell punk-adjacent bands like Blondie and Talking Heads without the scary word 'punk'."
    },
    "nu-disco": {
-    "title": "Nu-disco",
-    "url": "https://en.wikipedia.org/wiki/Nu-disco",
-    "text": "Nu-disco is a 21st-century dance music genre associated with a renewed interest in the late 1970s disco, synthesizer-heavy 1980s European dance music styles, and early 1990s electronic dance music."
+    "text": "Nu-disco's love of re-edits goes back to the '70s, when Walter Gibbons cut up disco tapes with a razor blade to make longer versions for New York DJs."
    },
    "dream pop": {
-    "title": "Dream pop",
-    "url": "https://en.wikipedia.org/wiki/Dream_pop",
-    "text": "Dream pop is a subgenre of alternative rock and neo-psychedelia that emphasizes atmosphere and sonic texture as strongly as it does pop melody."
+    "text": "The London duo A.R. Kane described their own music as dream pop in the late '80s, and the name stuck for hazy, reverb-soaked bands like Cocteau Twins and later Beach House."
+   },
+   "soundtrack": {
+    "text": "Bernard Herrmann scored the shower scene in Psycho for strings alone. Hitchcock had wanted it silent, then heard the shrieking violins and changed his mind."
    },
    "funk / soul": {
-    "title": "Funk",
-    "url": "https://en.wikipedia.org/wiki/Funk",
-    "text": "Funk typically consists of a complex percussive groove with rhythm instruments playing interlocking grooves that create a \"hypnotic\" and \"danceable\" feel."
+    "text": "Funk put the weight on 'the one', the first beat of the bar: James Brown drilled his band to treat every instrument, even the guitar and horns, like a drum."
    },
    "trance": {
-    "title": "Trance music",
-    "url": "https://en.wikipedia.org/wiki/Trance_music",
-    "text": "Trance is a genre of electronic dance music that emerged from the techno and EBM scene in Frankfurt, Germany, in the late 1980s and early 1990s, and quickly spread throughout Europe."
+    "text": "Frankfurt was trance's first capital: in the early '90s, labels like Harthouse and Eye Q, co-founded by Sven Väth, released the long, hypnotic tracks that named it."
+   },
+   "breakbeat": {
+    "text": "Much of breakbeat descends from six seconds of drumming: the Amen break, played by Gregory Coleman on the Winstons' 1969 B-side 'Amen, Brother'."
+   },
+   "euro house": {
+    "text": "Euro house filled '90s charts with a formula: a rapper for the verses and a diva for the chorus, as in Snap!'s 'Rhythm Is a Dancer' and 2 Unlimited's hits."
    },
    "breaks": {
-    "title": "Break (music)",
-    "url": "https://en.wikipedia.org/wiki/Break_(music)",
-    "text": "In popular music, a break is an instrumental or percussion section during a song derived from or related to stop-time – being a \"break\" from the main parts of the song or piece."
+    "text": "Breaks are named after the break in a funk record, the moment the band drops out and only the drums play, which early hip hop DJs looped with two copies of the same record."
    },
    "field recording": {
-    "title": "Field recording",
-    "url": "https://en.wikipedia.org/wiki/Field_recording",
-    "text": "Field recording is the production of audio recordings outside recording studios, and the term applies to recordings of both natural and human-produced sounds."
+    "text": "Soundscape recordist Bernie Krause found that many places he had taped over the decades had fallen quiet, their animals gone: his archive is a record of lost sounds."
    },
    "hip hop": {
-    "title": "Hip-hop",
-    "url": "https://en.wikipedia.org/wiki/Hip-hop",
-    "text": "Hip-hop is a genre of popular music that emerged in the early 1970s alongside an associated subculture in New York City."
+    "text": "Hip hop's birthday is usually given as 11 August 1973, when DJ Kool Herc played a back-to-school party in the Bronx and stretched out the drum breaks of funk records."
    },
    "latin": {
-    "title": "Latin music",
-    "url": "https://en.wikipedia.org/wiki/Latin_music",
-    "text": "It may also include music from other territories where Spanish- and Portuguese-language music is made."
+    "text": "'Salsa' was partly a marketing word: New York's Fania Records spread it in the '70s for the Cuban and Puerto Rican dance music its stars had played for years."
    },
    "drum n bass": {
-    "title": "Drum and bass",
-    "url": "https://en.wikipedia.org/wiki/Drum_and_bass",
-    "text": "Drum and bass, also known as drum 'n' bass, is a genre of electronic dance music that emerged in the United Kingdom in the early 1990s."
+    "text": "Drum and bass speeds up the beats hip hop slowed down: the six-second Amen break, played at around 170 BPM, runs through thousands of jungle and drum and bass tracks."
    },
    "bass music": {
-    "title": "Bass music",
-    "url": "https://en.wikipedia.org/wiki/Bass_music",
-    "text": "Bass music is any of several genres of electronic dance music and hip hop music arising from the 1980s on, focusing on a prominent bass drum and/or bassline sound."
+    "text": "'Bass music' is a catch-all born in the 2000s for the UK sounds that followed dubstep and grime, built to be felt through big sound systems as much as heard."
    },
    "dubstep": {
-    "title": "Dubstep",
-    "url": "https://en.wikipedia.org/wiki/Dubstep",
-    "text": "Dubstep is a genre of electronic dance music or Bass Music that originated in South London in the early 2000s."
+    "text": "Dubstep grew in early-2000s Croydon, around the Big Apple Records shop and the club night FWD>>, before Digital Mystikz made it a bass-heavy meditation at their DMZ nights."
    },
    "jungle": {
-    "title": "Jungle music",
-    "url": "https://en.wikipedia.org/wiki/Jungle_music",
-    "text": "Jungle is a genre of electronic music that developed in the 1990s out of the UK rave scene and Jamaican sound system culture."
+    "text": "Jungle grew up on London's pirate radio in the early '90s, broadcast from tower-block rooftops with transmitters moved often to dodge the authorities."
    },
    "classical": {
-    "title": "Classical music",
-    "url": "https://en.wikipedia.org/wiki/Classical_music",
-    "text": "Classical music is a tradition of art music in the Western world, considered to be distinct from Western folk music or popular music."
+    "text": "The orchestra tunes to the oboe: its steady, penetrating tone carries across the stage, so it plays the A that everyone else matches."
+   },
+   "modern classical": {
+    "text": "Steve Reich found his phasing technique by accident in 1965, when two tape loops of a street preacher drifted out of sync; the result was 'It's Gonna Rain'."
    },
    "new age": {
-    "title": "New-age music",
-    "url": "https://en.wikipedia.org/wiki/New-age_music",
-    "text": "New age is a genre of music intended to create artistic inspiration, relaxation, and optimism."
+    "text": "Windham Hill, a label guitarist William Ackerman started with about $300 from friends in 1976, turned quiet acoustic records into one of new age's biggest sellers."
    },
-   "contemporary": {
-    "title": "Contemporary music",
-    "url": "https://en.wikipedia.org/wiki/Contemporary_music",
-    "text": "Contemporary music is whatever music is produced at the current time. Specifically, it could refer to:"
-   },
-   "vocal": {
-    "title": "Vocal music",
-    "url": "https://en.wikipedia.org/wiki/Vocal_music",
-    "text": "Vocal music is a type of singing performed by one or more singers, either with instrumental accompaniment or without instrumental accompaniment, in which singing provides the main focus of the piece."
+   "neo-classical": {
+    "text": "Stravinsky's ballet 'Pulcinella' (1920) launched neoclassicism, reworking 18th-century pieces then thought to be by Pergolesi."
    },
    "folk": {
-    "title": "Folk music",
-    "url": "https://en.wikipedia.org/wiki/Folk_music",
-    "text": "Folk music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former during the 20th-century folk revival. Some types of folk music may be called world music."
+    "text": "Folk song collector Alan Lomax drove a disc recorder weighing about 300 pounds across the American South in the 1930s, recording singers for the Library of Congress."
    },
    "folk rock": {
-    "title": "Folk rock",
-    "url": "https://en.wikipedia.org/wiki/Folk_rock",
-    "text": "Folk rock is a fusion genre of rock music with heavy influences from English and American folk music. It arose in the United States, Canada, and the United Kingdom in the mid-1960s."
+    "text": "Folk rock arrived in 1965, with the Byrds' electric 'Mr. Tambourine Man' and Bob Dylan going electric at the Newport Folk Festival to boos and cheers."
    },
    "rock & roll": {
-    "title": "Rock and roll",
-    "url": "https://en.wikipedia.org/wiki/Rock_and_roll",
-    "text": "Rock and roll is a genre of popular music that evolved in the United States during the late 1940s and early 1950s."
+    "text": "When Alan Freed popularized 'rock and roll' on his Cleveland radio show in 1951, the phrase was already old slang in blues and gospel songs."
    },
    "psychedelic rock": {
-    "title": "Psychedelic rock",
-    "url": "https://en.wikipedia.org/wiki/Psychedelic_rock",
-    "text": "Psychedelic rock is a subgenre of rock music that originally emerged during the mid-1960s, inspired by psychedelic culture and centered primarily around the influence of psychoactive and hallucinogenic drugs."
+    "text": "The 13th Floor Elevators, from Austin, Texas, called their 1966 debut psychedelic before almost anyone else, and one member played an electric jug."
    },
    "hard house": {
-    "title": "UK hard house",
-    "url": "https://en.wikipedia.org/wiki/UK_hard_house",
-    "text": "UK hard house or simply hard house is a style of electronic dance music that emerged in the early 1990s and is synonymous with its association to the Trade club and the associated DJs there that created the style."
+    "text": "Hard house's pounding beats fuelled late-'90s London nights like Trade, the after-hours club at Turnmills that opened at 3 a.m. on Sunday mornings."
    },
    "dub techno": {
-    "title": "Dub techno",
-    "url": "https://en.wikipedia.org/wiki/Dub_techno",
-    "text": "Dub techno is a subgenre of electronic music that originated in the early 1990s, blending the repetitive, minimal structures of techno with the echo-laden, spacey production techniques of dub music."
+    "text": "Dub techno was built by Basic Channel, Moritz von Oswald and Mark Ernestus, in mid-'90s Berlin; Ernestus also ran the city's Hard Wax record shop."
    },
    "tech house": {
-    "title": "Tech house",
-    "url": "https://en.wikipedia.org/wiki/Tech_house",
-    "text": "Tech house is a house music subgenre that prominently incorporates stylistic features from techno. Tech house originally featured the clean and minimal production style associated with techno from Detroit and the UK."
+    "text": "Tech house took shape in mid-'90s London, at clubs like The End and the Wiggle parties, where DJs blended the groove of house with the cool of techno."
    },
    "tribal house": {
-    "title": "Tribal house",
-    "url": "https://en.wikipedia.org/wiki/Tribal_house",
-    "text": "Tribal house is a subgenre of house music combined with world music rhythms. It is broadly characterized by elements of indigenous musical percussions."
+    "text": "In tribal house the drums lead: congas, toms and chants drive the groove, a sound Danny Tenaglia and Junior Vasquez pushed in '90s New York."
+   },
+   "non-music": {
+    "text": "Discogs files records that aren't music at all as 'non-music': birdsong, speeches, sound effects, even language lessons."
    },
    "jazz": {
-    "title": "Jazz",
-    "url": "https://en.wikipedia.org/wiki/Jazz",
-    "text": "Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana, in the late 19th and early 20th centuries."
+    "text": "The first jazz record was released in 1917 by the Original Dixieland Jass Band of New Orleans, back when the word was still often spelled 'jass'."
    },
    "romantic": {
-    "title": "Romantic music",
-    "url": "https://en.wikipedia.org/wiki/Romantic_music",
-    "text": "Romantic music is a stylistic movement in Western Classical music associated with the period of the 19th century commonly referred to as the Romantic era."
+    "text": "Romantic-era audiences adored virtuosos: fans of Franz Liszt fought over his handkerchiefs and broken piano strings, a frenzy the poet Heinrich Heine called Lisztomania."
    },
    "piano": {
-    "title": "Piano",
-    "url": "https://en.wikipedia.org/wiki/Piano",
-    "text": "A piano is a keyboard instrument that produces sound when its keys are pressed, activating an action mechanism where hammers strike strings."
-   },
-   "solo": {
-    "title": "Solo (music)",
-    "url": "https://en.wikipedia.org/wiki/Solo_(music)",
-    "text": "Performing a solo is \"to solo\", and the performer is known as a soloist."
+    "text": "The piano's full name, pianoforte, means soft-loud: Bartolomeo Cristofori's invention, around 1700, was the first keyboard that played louder the harder you struck it."
    },
    "baroque": {
-    "title": "Baroque music",
-    "url": "https://en.wikipedia.org/wiki/Baroque_music",
-    "text": "Baroque music refers to the period or dominant style of Western classical music composed from about 1600 to 1750."
+    "text": "As a young organist, Bach walked about 250 miles from Arnstadt to Lübeck to hear Dieterich Buxtehude play, and overstayed his leave by months."
    },
    "soul": {
-    "title": "Soul music",
-    "url": "https://en.wikipedia.org/wiki/Soul_music",
-    "text": "Soul music is a popular music genre that originated in African-American communities throughout the United States in the late 1950s and early 1960s."
+    "text": "Soul came out of church: in 1954 Ray Charles turned a gospel song into 'I Got a Woman', and some churchgoers were scandalized to hear the holy sound used for love."
+   },
+   "contemporary r&b": {
+    "text": "Timbaland's stuttering, off-kilter beats for Aaliyah and Missy Elliott in the late '90s made contemporary R&B sound like nothing before it."
    },
    "neo soul": {
-    "title": "Neo soul",
-    "url": "https://en.wikipedia.org/wiki/Neo_soul",
-    "text": "Neo soul is a genre of popular music. It has been noted by music writers for its conscious lyrics."
+    "text": "'Neo soul' was a marketing term coined by Kedar Massenburg, who managed D'Angelo and Erykah Badu in the late '90s."
    },
    "blues": {
-    "title": "Blues",
-    "url": "https://en.wikipedia.org/wiki/Blues",
-    "text": "Blues is a music genre and musical form that originated among African Americans in the Deep South of the United States around the 1860s."
+    "text": "Robert Johnson recorded only 29 songs, in sessions in 1936 and 1937, yet guitarists from Eric Clapton to Keith Richards learned to play from them."
    },
    "doo wop": {
-    "title": "Doo-wop",
-    "url": "https://en.wikipedia.org/wiki/Doo-wop",
-    "text": "Doo-wop is a subgenre of rhythm and blues music that originated in African-American communities during the late 1940s, mainly in the large cities of the United States."
+    "text": "Doo-wop is named after the nonsense syllables its backing singers sang; many groups learned to harmonize on street corners and in stairwells for the echo."
    },
    "rhythm & blues": {
-    "title": "Rhythm and blues",
-    "url": "https://en.wikipedia.org/wiki/Rhythm_and_blues",
-    "text": "Rhythm and blues, frequently abbreviated as R&B or R'n'B, is a genre of popular music that originated within African American communities in the 1940s."
+    "text": "'Rhythm and blues' replaced 'race records' in 1949 when Billboard renamed its chart; the term came from a young Billboard writer, Jerry Wexler, later a famous producer."
    },
    "post bop": {
-    "title": "Post-bop",
-    "url": "https://en.wikipedia.org/wiki/Post-bop",
-    "text": "Post-bop is a jazz term with several possible definitions and usages."
+    "text": "Post-bop kept bebop's language but opened up its forms, as on Wayne Shorter's 'Speak No Evil' and Herbie Hancock's 'Maiden Voyage', both cut for Blue Note in the mid-'60s."
    },
    "soul-jazz": {
-    "title": "Soul jazz",
-    "url": "https://en.wikipedia.org/wiki/Soul_jazz",
-    "text": "Soul jazz or funky jazz is a subgenre of jazz that incorporates strong influences from hard bop, blues, soul, gospel and rhythm and blues."
+    "text": "Soul jazz put the Hammond B-3 organ centre stage: players like Jimmy Smith made it the sound of '60s jazz clubs, often playing the bass lines themselves instead of hiring a bassist."
    },
    "ethereal": {
-    "title": "Ethereal wave",
-    "url": "https://en.wikipedia.org/wiki/Ethereal_wave",
-    "text": "Ethereal wave, also called ethereal darkwave, ethereal goth or simply ethereal, is a subgenre of dark wave music that is variously described as \"gothic\", \"romantic\", and \"otherworldly\"."
+    "text": "Ethereal wave owes much to Cocteau Twins, whose singer Elizabeth Fraser often sang in sounds rather than words, so listeners couldn't make out any lyrics at all."
    },
    "industrial": {
-    "title": "Industrial music",
-    "url": "https://en.wikipedia.org/wiki/Industrial_music",
-    "text": "The term was coined in 1976 by Monte Cazazza and adopted by Throbbing Gristle with the founding of Industrial Records. Other early industrial musicians include NON and Cabaret Voltaire."
+    "text": "Industrial music is named after Throbbing Gristle's label, Industrial Records, founded in 1976 with the slogan 'Industrial Music for Industrial People'."
+   },
+   "post rock": {
+    "text": "Critic Simon Reynolds coined 'post-rock' in 1994, writing about bands like Bark Psychosis and Talk Talk that used rock instruments for anything but rock."
    },
    "hard rock": {
-    "title": "Hard rock",
-    "url": "https://en.wikipedia.org/wiki/Hard_rock",
-    "text": "Hard rock or heavy rock is a heavier subgenre of rock music typified by vocals and electric guitars that are aggressive and distorted relative to traditional rock music."
+    "text": "Deep Purple's 'Smoke on the Water' is about a real fire: in 1971 a flare at a Frank Zappa concert burned down the Montreux casino where the band had planned to record."
    },
    "garage rock": {
-    "title": "Garage rock",
-    "url": "https://en.wikipedia.org/wiki/Garage_rock",
-    "text": "Garage rock is a raw and energetic style of rock and roll that flourished in the mid-1960s, most commonly in the United States and Canada, and has experienced a series of subsequent revivals."
+    "text": "Garage rock was rehearsed in real garages by teenage American bands of the mid-'60s, then rescued from obscurity by Lenny Kaye's 1972 compilation 'Nuggets'."
    },
    "future jazz": {
-    "title": "Nu jazz",
-    "url": "https://en.wikipedia.org/wiki/Nu_jazz",
-    "text": "Nu jazz is a genre of jazz and electronic music. The music blends jazz elements with other musical styles, such as funk, electronic music, and free improvisation."
+    "text": "Future jazz was the late-'90s sound of labels like Munich's Compost and Vienna's G-Stone, where producers mixed jazz with house, downtempo and broken beats."
    },
    "acoustic": {
-    "title": "Acoustic music",
-    "url": "https://en.wikipedia.org/wiki/Acoustic_music",
-    "text": "Acoustic music is music that solely or primarily uses instruments that produce sound through acoustic means, as opposed to electric or electronic means."
+    "text": "Before microphones, records were made acoustically: musicians played into a big horn that cut the sound straight into wax, and singers stepped back for loud notes."
    },
    "drone": {
-    "title": "Drone music",
-    "url": "https://en.wikipedia.org/wiki/Drone_music",
-    "text": "Drone music is a minimalist genre of music that emphasizes the use of sustained sounds, notes, or tone clusters called drones."
+    "text": "La Monte Young's Dream House in New York has filled a room with sustained electronic drones and magenta light, on and off, for decades."
    },
    "country": {
-    "title": "Country music",
-    "url": "https://en.wikipedia.org/wiki/Country_music",
-    "text": "Country music, also known as country and western or simply country, is a music genre originating from the United States. Once called hillbilly music, the term country music was popularized in the 1940s."
+    "text": "The 1927 Bristol sessions, where Ralph Peer recorded the Carter Family and Jimmie Rodgers in the same few days, are called the big bang of country music."
    },
    "j-pop": {
-    "title": "J-pop",
-    "url": "https://en.wikipedia.org/wiki/J-pop",
-    "text": "J-pop is a form of popular music that entered the musical mainstream of Japan in the 1990s. In Japan it is known simply as pops."
+    "text": "The word J-pop was popularized around 1988 by Tokyo radio station J-Wave, to set Western-style Japanese pop apart from older kayōkyoku."
+   },
+   "rnb/swing": {
+    "text": "Discogs' 'RnB/Swing' is the new jack swing era, when producer Teddy Riley set R&B singing over hip hop drum machines in the late '80s."
+   },
+   "rockabilly": {
+    "text": "Elvis Presley's first single, 'That's All Right' (1954), came out of a break at Sun Records, when he started fooling around with an old blues song."
    },
    "idm": {
-    "title": "Intelligent dance music",
-    "url": "https://en.wikipedia.org/wiki/Intelligent_dance_music",
-    "text": "Intelligent dance music is a loose label used to describe experimental forms of electronic music associated with early-1990s ambient techno, \"electronic listening music\" and related forms of electronica."
+    "text": "IDM, 'intelligent dance music', took its name from an internet mailing list started in 1993, inspired by Warp's 'Artificial Intelligence' series. Many of its artists hated the name."
    },
    "leftfield": {
-    "title": "Leftfield",
-    "url": "https://en.wikipedia.org/wiki/Leftfield",
-    "text": "Leftfield are a British electronic music group formed in London in 1989, a duo of Neil Barnes and Paul Daley."
+    "text": "The phrase 'out of left field' comes from baseball, and dance music borrowed it for records too odd for any other shelf."
+   },
+   "jazzdance": {
+    "text": "In '80s London, jazz dancers battled on club floors to fast bebop and Latin jazz spun by DJs like Paul Murphy, a scene that fed straight into acid jazz."
    },
    "country rock": {
-    "title": "Country rock",
-    "url": "https://en.wikipedia.org/wiki/Country_rock",
-    "text": "Country rock is a music genre that fuses rock and country."
+    "text": "Gram Parsons, who called his music Cosmic American Music, steered the Byrds to Nashville for 'Sweetheart of the Rodeo' (1968), a founding country rock album."
    },
    "funk": {
-    "title": "Funk",
-    "url": "https://en.wikipedia.org/wiki/Funk",
-    "text": "Funk typically consists of a complex percussive groove with rhythm instruments playing interlocking grooves that create a \"hypnotic\" and \"danceable\" feel."
+    "text": "Parliament-Funkadelic landed a spaceship, the Mothership, on stage during their late-'70s shows; a replica now sits in the Smithsonian."
    },
    "blues rock": {
-    "title": "Blues rock",
-    "url": "https://en.wikipedia.org/wiki/Blues_rock",
-    "text": "Blues rock is a fusion genre and form of rock and blues music that relies on the chords/scales and instrumental improvisation of blues."
+    "text": "British blues rock was American blues bounced back across the Atlantic; the Rolling Stones took their name from a Muddy Waters song."
    },
    "pop rock": {
-    "title": "Pop rock",
-    "url": "https://en.wikipedia.org/wiki/Pop_rock",
-    "text": "Pop rock is rock music with greater emphasis on professional songwriting and recording craft, and less emphasis on attitude than standard rock music."
+    "text": "The Beatles' producers spent far longer on the mono mixes than the stereo ones until the late '60s, when stereo was still thought a gimmick for hi-fi buffs."
    },
    "electro": {
-    "title": "Electro (music)",
-    "url": "https://en.wikipedia.org/wiki/Electro_(music)",
-    "text": "Electro is a genre of electronic dance music that emerged in the early 1980s. It is defined by the prominent use of the Roland TR-808 drum machine, and draws direct influence from early hip-hop and funk music."
+    "text": "Afrika Bambaataa's 'Planet Rock' (1982), the electro blueprint, borrowed the melody of Kraftwerk's 'Trans-Europe Express' and ran on a Roland TR-808 drum machine."
    },
    "reggae": {
-    "title": "Reggae",
-    "url": "https://en.wikipedia.org/wiki/Reggae",
-    "text": "Reggae is a music genre that originated in Jamaica in the late 1960s. The term also refers to the modern popular music of Jamaica and its diaspora."
+    "text": "Toots and the Maytals' 'Do the Reggay' (1968) was the first popular song to use the word, and helped give the new sound its name."
    },
    "dancehall": {
-    "title": "Dancehall",
-    "url": "https://en.wikipedia.org/wiki/Dancehall",
-    "text": "Dancehall is a genre of Jamaican popular music that originated in the late 1970s. Initially, dancehall was a more sparse version of reggae than the roots style, which had dominated much of the 1970s."
+    "text": "Dancehall's digital era began in 1985 with Wayne Smith's 'Under Mi Sleng Teng', built on a rhythm preset from a cheap Casio keyboard."
+   },
+   "stage & screen": {
+    "text": "Stage and screen music took a leap in 1927: The Jazz Singer, the first feature film with synchronized songs, has Al Jolson saying 'You ain't heard nothin' yet!'"
+   },
+   "score": {
+    "text": "Stanley Kubrick commissioned a full score from Alex North for '2001: A Space Odyssey', then dropped it for the classical pieces he had been using as a guide."
+   },
+   "boogie": {
+    "text": "Boogie was the synth-bass post-disco of the early '80s, the sound of New York labels like Prelude, and the records many hip hop producers later sampled."
+   },
+   "twist": {
+    "text": "Chubby Checker's 'The Twist' topped the Billboard Hot 100 in 1960 and again in 1962, and set off a worldwide dance craze."
+   },
+   "minimal techno": {
+    "text": "Robert Hood's 'Minimal Nation' (1994) stripped Detroit techno down to its bones, and is often called the first minimal techno record."
    },
    "soft rock": {
-    "title": "Soft rock",
-    "url": "https://en.wikipedia.org/wiki/Soft_rock",
-    "text": "Soft rock was prevalent on the radio throughout the 1970s and eventually metamorphosed into a form of the synthesized music of adult contemporary in the 1980s."
+    "text": "Soft rock ruled '70s FM radio, and Fleetwood Mac's 'Rumours' was recorded while both couples in the band were breaking up."
    },
    "free improvisation": {
-    "title": "Free improvisation",
-    "url": "https://en.wikipedia.org/wiki/Free_improvisation",
-    "text": "Free improvisation is a form of improvised music centered on a commitment to non-idiomatic musical expression."
+    "text": "In free improvisation nothing is agreed beforehand. Guitarist Derek Bailey played with almost anyone willing for decades, and wrote the book on it, 'Improvisation' (1980)."
    },
    "sonata": {
-    "title": "Sonata",
-    "url": "https://en.wikipedia.org/wiki/Sonata",
-    "text": "In music, a sonata is a piece that consists of 3 or 4 movements that can be for different musical instruments."
+    "text": "Beethoven never called it the Moonlight Sonata: a critic, Ludwig Rellstab, compared it to moonlight on Lake Lucerne years after the composer died."
+   },
+   "fantasia": {
+    "text": "A fantasia follows the composer's fancy instead of a set form, and Disney's 1940 film Fantasia borrowed the name."
+   },
+   "gangsta": {
+    "text": "N.W.A's 'Straight Outta Compton' (1988) went platinum with almost no radio play, and its most notorious song brought their label a warning letter from the FBI."
    },
    "pop rap": {
-    "title": "Pop rap",
-    "url": "https://en.wikipedia.org/wiki/Pop_rap",
-    "text": "This genre gained mainstream popularity during the 1990s, though the influences and roots of pop rap can trace back to late-1980s hip-hop artists such as Run-DMC, LL Cool J, and Beastie Boys."
+    "text": "The Sugarhill Gang's 'Rapper's Delight' (1979), the first rap hit, rode the bassline of Chic's 'Good Times', replayed by a studio band."
    },
    "trip hop": {
-    "title": "Trip hop",
-    "url": "https://en.wikipedia.org/wiki/Trip_hop",
-    "text": "Trip hop is a music genre defined as a psychedelic fusion of hip-hop and electronica with slow tempos and an atmospheric sound."
+    "text": "Trip hop grew out of Bristol's Wild Bunch sound system, which became Massive Attack. A Mixmag writer coined the name in 1994, and Massive Attack never liked it."
    },
    "choral": {
-    "title": "Choir",
-    "url": "https://en.wikipedia.org/wiki/Choir",
-    "text": "A choir, also known as a chorale or chorus, is a musical ensemble of singers."
+    "text": "Thomas Tallis's motet 'Spem in alium', written around 1570, has 40 separate voice parts, each singing its own line."
    },
    "opera": {
-    "title": "Opera",
-    "url": "https://en.wikipedia.org/wiki/Opera",
-    "text": "Opera is a form of Western theatre in which music is a fundamental component and dramatic roles are taken by singers."
+    "text": "Opera began as an experiment: around 1600, a group of Florentine scholars and musicians, the Camerata, tried to revive ancient Greek drama sung from start to finish."
+   },
+   "balearic": {
+    "text": "Balearic is named after Ibiza, where DJ Alfredo at Amnesia mixed pop, rock and house; four British DJs who heard him in 1987 brought the idea home to London."
    },
    "hardcore hip-hop": {
-    "title": "Hardcore hip-hop",
-    "url": "https://en.wikipedia.org/wiki/Hardcore_hip-hop",
-    "text": "Hardcore hip-hop is a subgenre of hip-hop that developed through the East Coast hip-hop scene in the 1980s."
+    "text": "Run-DMC's bare drum-machine beats and Public Enemy's dense walls of samples set the tone for hardcore hip hop in the '80s."
+   },
+   "thug rap": {
+    "text": "Tupac Shakur had 'THUG LIFE' tattooed across his stomach, and the phrase became a rallying cry for thug rap."
    },
    "alternative rock": {
-    "title": "Alternative rock",
-    "url": "https://en.wikipedia.org/wiki/Alternative_rock",
-    "text": "Alternative rock is a category of rock music that evolved from the independent music underground of the 1970s."
+    "text": "In the '80s alternative rock was college rock: R.E.M., the Replacements and Pixies found their first fans on student-run radio stations."
    },
    "children's": {
-    "title": "Children's music",
-    "url": "https://en.wikipedia.org/wiki/Children%27s_music",
-    "text": "Children's music or kids' music is music composed and performed for children. In European-influenced contexts this means music, usually songs, written specifically for a juvenile audience."
+    "text": "Sesame Street's songwriter Joe Raposo wrote 'Bein' Green' for Kermit the Frog; Frank Sinatra and Ray Charles both recorded it."
    },
    "symphony": {
-    "title": "Symphony",
-    "url": "https://en.wikipedia.org/wiki/Symphony",
-    "text": "A symphony is an extended musical composition in Western classical music, most often for orchestra."
+    "text": "Beethoven's Ninth was the first major symphony to bring in singers, and he helped conduct its 1824 premiere while almost completely deaf."
    },
    "orchestra": {
-    "title": "Orchestra",
-    "url": "https://en.wikipedia.org/wiki/Orchestra",
-    "text": "An orchestra is a large instrumental ensemble typical of classical music or jazz, which combines instruments from different families. There are typically four main sections of instruments:"
+    "text": "Most orchestras tune to an A at 440 vibrations a second, the pitch agreed at an international conference in London in 1939."
    },
    "concerto": {
-    "title": "Concerto",
-    "url": "https://en.wikipedia.org/wiki/Concerto",
-    "text": "A concerto is, since the late Baroque era, mostly understood as an instrumental composition, written for one or more soloists accompanied by an orchestra or other ensemble."
+    "text": "Vivaldi's 'Four Seasons' are four violin concertos, each printed with a sonnet describing what the music paints, down to a barking dog."
+   },
+   "lied": {
+    "text": "Schubert wrote more than 600 Lieder, among them 'Erlkönig', which he set as a teenager, reportedly in a single afternoon."
    },
    "ballad": {
-    "title": "Sentimental ballad",
-    "url": "https://en.wikipedia.org/wiki/Sentimental_ballad",
-    "text": "Ballads are generally melodic enough to capture the listener's attention."
+    "text": "Broadside ballads were printed on single sheets and sold in the streets of 16th- and 17th-century England for a penny, to be sung to tunes everyone already knew."
    },
    "hard bop": {
-    "title": "Hard bop",
-    "url": "https://en.wikipedia.org/wiki/Hard_bop",
-    "text": "Hard bop is a subgenre of jazz that is an extension of bebop."
+    "text": "Many of Blue Note's hard bop classics of the '50s were recorded in the living room of engineer Rudy Van Gelder's parents' house in Hackensack, New Jersey."
    },
    "modal": {
-    "title": "Mode (music)",
-    "url": "https://en.wikipedia.org/wiki/Mode_(music)",
-    "text": "In music theory, the term mode or modus is used in a number of distinct senses, depending on context."
+    "text": "Miles Davis's 'Kind of Blue' (1959), the best-selling jazz album ever, used modes instead of chord changes; the band saw most of the music for the first time at the session."
    },
    "chamber music": {
-    "title": "Chamber music",
-    "url": "https://en.wikipedia.org/wiki/Chamber_music",
-    "text": "Chamber music is a form of classical music that is composed for a small group of instruments—traditionally a group that could fit in a palace chamber or a large room."
-   },
-   "string ensemble": {
-    "title": "String orchestra",
-    "url": "https://en.wikipedia.org/wiki/String_orchestra",
-    "text": "A string orchestra is an orchestra consisting solely of a string section made up of the bowed strings used in Western Classical music."
+    "text": "Chamber music was made for rooms, not halls: Haydn's string quartets were played at home by the amateurs who bought the sheet music."
    },
    "acid jazz": {
-    "title": "Acid jazz",
-    "url": "https://en.wikipedia.org/wiki/Acid_jazz",
-    "text": "Acid jazz is a music genre that combines elements of funk, soul, and hip-hop."
+    "text": "Acid jazz started as a joke: DJ Gilles Peterson and Chris Bangs played jazz-funk at a London club night and called it acid jazz to tease the acid house crowd."
    },
    "jazz-funk": {
-    "title": "Jazz-funk",
-    "url": "https://en.wikipedia.org/wiki/Jazz-funk",
-    "text": "Jazz-funk is a subgenre of jazz music characterized by a strong back beat, electrified sounds, and analog synthesizers. Similar genres to jazz-funk include acid jazz."
+    "text": "Herbie Hancock's 'Head Hunters' (1973), with the clavinet groove of 'Chameleon', became the best-selling jazz album of its time and set the jazz-funk template."
+   },
+   "tribal": {
+    "text": "In tribal house and techno, percussion leads: layered congas, toms and chants drive the groove more than any melody."
    },
    "gospel": {
-    "title": "Gospel music",
-    "url": "https://en.wikipedia.org/wiki/Gospel_music",
-    "text": "Gospel music is a traditional genre of Christian music and a cornerstone of Christian media, characterized by dominant vocals and lyrics that reflect Christian teachings and values."
+    "text": "Thomas A. Dorsey played blues piano as Georgia Tom before becoming the father of gospel music; he wrote 'Take My Hand, Precious Lord' after his wife died in childbirth."
    },
    "favela funk": {
-    "title": "Funk carioca",
-    "url": "https://en.wikipedia.org/wiki/Funk_carioca",
-    "text": "Funk carioca, also known as baile funk, Brazilian funk, or simply funk, is a Brazilian hip hop-influenced music genre from Rio de Janeiro, taking influences from musical styles such as Miami bass and freestyle."
+    "text": "Rio's baile funk grew out of Miami bass records played at favela dances in the '80s, until locals built their own beat, the tamborzão."
    },
    "ghetto": {
-    "title": "Ghetto house",
-    "url": "https://en.wikipedia.org/wiki/Ghetto_house",
-    "text": "Ghetto house or booty house is a subgenre of house music which started being recognized as a distinct style from around 1992 onwards."
+    "text": "Ghetto house was Chicago's raw, fast, chant-driven offshoot of house in the '90s, much of it released on the Dance Mania label."
+   },
+   "overture": {
+    "text": "Tchaikovsky's '1812 Overture' calls for real cannon fire, which is why outdoor performances sometimes bring in the artillery."
    },
    "noise": {
-    "title": "Noise music",
-    "url": "https://en.wikipedia.org/wiki/Noise_music",
-    "text": "Noise music is a subgenre of experimental music that is characterised by its use of unwanted noise as a primary musical element."
+    "text": "Japanese noise artist Merzbow has released hundreds of albums; one box set of his work, the Merzbox, came on 50 CDs."
    },
    "jump blues": {
-    "title": "Jump blues",
-    "url": "https://en.wikipedia.org/wiki/Jump_blues",
-    "text": "Jump blues is an uptempo style of blues with jazz and boogie woogie influence, usually played by small groups and featuring horn instruments."
+    "text": "Louis Jordan's jump blues hits of the '40s, like 'Caldonia', were a direct ancestor of rock and roll; Chuck Berry said he modelled himself on Jordan."
+   },
+   "swing": {
+    "text": "Benny Goodman's 1938 Carnegie Hall concert brought swing, and a racially integrated band, into New York's temple of classical music."
    },
    "big beat": {
-    "title": "Big beat",
-    "url": "https://en.wikipedia.org/wiki/Big_beat",
-    "text": "Big beat is an electronic music genre that usually uses heavy breakbeats and synthesizer-generated loops and patterns – common to acid house/techno."
+    "text": "Big beat, the late-'90s sound of Fatboy Slim and the Chemical Brothers, is named after the Big Beat Boutique, a club night in Brighton."
    },
    "ska": {
-    "title": "Ska",
-    "url": "https://en.wikipedia.org/wiki/Ska",
-    "text": "Ska is a music genre that originated in Jamaica in the late 1950s and was the precursor to rocksteady and reggae. It combined elements of Caribbean mento with American jazz and rhythm and blues."
+    "text": "Ska's quick offbeat gave way to rocksteady around 1966, when, the story goes, a scorching summer made dancers want something slower."
+   },
+   "afro-cuban jazz": {
+    "text": "Afro-Cuban jazz took off in 1947 when Dizzy Gillespie hired Cuban conga player Chano Pozo; their 'Manteca' is still a standard."
    },
    "easy listening": {
-    "title": "Easy listening",
-    "url": "https://en.wikipedia.org/wiki/Easy_listening",
-    "text": "Easy listening is a popular music genre and radio format that was most popular during the 1950s to the 1970s."
+    "text": "Muzak arranged easy-listening music to raise workers' energy at the times of day it dropped, a system the company called Stimulus Progression."
    },
-   "alt-pop": {
-    "title": "Alternative pop",
-    "url": "https://en.wikipedia.org/wiki/Alternative_pop",
-    "text": "Alternative pop is pop music with broad commercial appeal that is made by figures outside the mainstream, or which is considered more original, challenging, or eclectic than traditional pop music."
+   "cool jazz": {
+    "text": "Miles Davis's 'Birth of the Cool' sessions of 1949 and 1950 used a nonet with French horn and tuba, and gave cool jazz its name."
+   },
+   "reggae-pop": {
+    "text": "Millie Small's 'My Boy Lollipop' (1964), one of the first Jamaican hits abroad, sold millions and helped Chris Blackwell build Island Records."
    },
    "classic rock": {
-    "title": "Rock music",
-    "url": "https://en.wikipedia.org/wiki/Rock_music",
-    "text": "It has its roots beginning as classic rock and roll, a style that drew from the African-American musical genres of blues and rhythm and blues, as well as from country music."
+    "text": "Classic rock was invented as a radio format in the '80s, when stations decided rock from the '60s and '70s could be played forever."
    },
    "uk garage": {
-    "title": "UK garage",
-    "url": "https://en.wikipedia.org/wiki/UK_garage",
-    "text": "UK garage, abbreviated as UKG, is a genre of electronic music which originated in England in the early to mid-1990s."
+    "text": "UK garage sped up New York's garage house and added skippy 2-step drums, filling London's Sunday-afternoon clubs, where crowds dressed up to dance."
    },
    "edm": {
-    "title": "Electronic dance music",
-    "url": "https://en.wikipedia.org/wiki/Electronic_dance_music",
-    "text": "Electronic dance music, also referred to as dance music or club music, is a broad range of percussive electronic music genres originally made for nightclubs, raves, and festivals."
+    "text": "'EDM' became the American name for festival-sized dance music in the 2010s, when DJs like Skrillex and Avicii headlined over rock bands."
    },
    "african": {
-    "title": "Music of Africa",
-    "url": "https://en.wikipedia.org/wiki/Music_of_Africa",
-    "text": "The music of Africa is vast and highly diverse, with different regions and nations maintaining distinct musical traditions."
+    "text": "Fela Kuti declared his Lagos compound the independent Kalakuta Republic, and his Afrobeat songs often ran longer than a whole side of an LP."
    },
    "chanson": {
-    "title": "Chanson",
-    "url": "https://en.wikipedia.org/wiki/Chanson",
-    "text": "A chanson is generally any lyric-driven French song."
+    "text": "Édith Piaf was singing on a Paris street corner when nightclub owner Louis Leplée discovered her and named her la Môme Piaf, the little sparrow."
    },
    "beat": {
-    "title": "Beat music",
-    "url": "https://en.wikipedia.org/wiki/Beat_music",
-    "text": "Beat music, British beat, or Merseybeat is a British popular music genre that developed around Liverpool in the late 1950s and early 1960s."
+    "text": "Merseybeat came from Liverpool's Cavern Club, where the Beatles played some 290 times between 1961 and 1963."
    },
    "prog rock": {
-    "title": "Progressive rock",
-    "url": "https://en.wikipedia.org/wiki/Progressive_rock",
-    "text": "Progressive rock is a broad genre of rock music that primarily developed in the United States and United Kingdom through the mid- to late 1960s."
+    "text": "Prog loved the long form: Jethro Tull's 'Thick as a Brick' (1972) is a single song, about 43 minutes long, spread over both sides of the LP."
    },
    "cha-cha": {
-    "title": "Cha-cha-chá (music)",
-    "url": "https://en.wikipedia.org/wiki/Cha-cha-ch%C3%A1_(music)",
-    "text": "Cha-cha-chá is a genre of Cuban music. It has been a popular dance music which developed from the danzón-mambo in the early 1950s, and became widely popular throughout the world."
+    "text": "The cha-cha-chá was created by Cuban violinist Enrique Jorrín in the early '50s; its name imitates the shuffle of dancers' feet."
    },
    "highlife": {
-    "title": "Highlife",
-    "url": "https://en.wikipedia.org/wiki/Highlife",
-    "text": "Highlife is a Ghanaian music genre that originated along the coastal cities of present-day Ghana in the 19th century, during its history as a colony of the British and through its trade routes in coastal areas."
+    "text": "Highlife got its name in 1920s Ghana from the dance bands that played for the elite, in clubs most people couldn't afford: the high life."
    },
    "rhythmic noise": {
-    "title": "Power noise",
-    "url": "https://en.wikipedia.org/wiki/Power_noise",
-    "text": "Power noise is a subgenre of noise and post-industrial music, that originated predominantly in Europe during the 1990s. It draws primary influence from various styles of electronic dance music."
+    "text": "Rhythmic noise turns harsh industrial distortion into pounding dance beats, a scene built in the '90s by German labels like Ant-Zen."
    },
    "power pop": {
-    "title": "Power pop",
-    "url": "https://en.wikipedia.org/wiki/Power_pop",
-    "text": "Power pop is a subgenre of rock music and a form of pop rock based on the early music of bands such as the Beach Boys, the Beatles, the Byrds, and the Who."
+    "text": "Pete Townshend coined 'power pop' in 1967 for the Who's music; in the '70s Big Star made it a cult, selling few records but inspiring countless bands."
    },
    "garage house": {
-    "title": "Garage house",
-    "url": "https://en.wikipedia.org/wiki/Garage_house",
-    "text": "Garage house is an electronic dance music style that was developed alongside Chicago house music."
+    "text": "Garage house is named after the Paradise Garage in New York, where Larry Levan DJed from 1977 to 1987 on a famously powerful custom sound system."
    },
    "comedy": {
-    "title": "Comedy music",
-    "url": "https://en.wikipedia.org/wiki/Comedy_music",
-    "text": "Comedy music or musical comedy is a genre of music that is comedic in nature."
+    "text": "Bob Newhart's 'The Button-Down Mind of Bob Newhart' was the first comedy album to top the Billboard chart, and won the Grammy for Album of the Year in 1961."
    },
    "horrorcore": {
-    "title": "Horrorcore",
-    "url": "https://en.wikipedia.org/wiki/Horrorcore",
-    "text": "Horrorcore is a subgenre of hip-hop based on horror-themed and often darkly transgressive lyrical content and imagery."
+    "text": "Horrorcore set horror-film imagery to rap; the Geto Boys' 1990 album was so shocking that its pressing plant refused to make it."
+   },
+   "memphis rap": {
+    "text": "Memphis rap of the early '90s, from DJ Paul, Juicy J and others, spread on lo-fi cassette tapes, and later shaped trap and phonk."
    },
    "boogaloo": {
-    "title": "Boogaloo",
-    "url": "https://en.wikipedia.org/wiki/Boogaloo",
-    "text": "Boogaloo or bugalú is a modern jazz genre of Latin music and dance which was popular in the United States in the 1960s."
+    "text": "Boogaloo was the Latin soul craze of '60s New York; Joe Cuba's 'Bang Bang' (1966) was a hit built on crowd chants."
    },
    "chicago blues": {
-    "title": "Chicago blues",
-    "url": "https://en.wikipedia.org/wiki/Chicago_blues",
-    "text": "Chicago blues is a form of blues music that developed in Chicago, Illinois. It is based on earlier blues idioms, such as Delta blues, but is performed in an urban style."
+    "text": "Chicago blues went electric because the clubs were loud: Muddy Waters plugged in his guitar to be heard over the crowds after moving north from Mississippi."
+   },
+   "aboriginal": {
+    "text": "The didgeridoo, from northern Australia, is played with circular breathing, so players can hold its drone for minutes without stopping."
    },
    "rocksteady": {
-    "title": "Rocksteady",
-    "url": "https://en.wikipedia.org/wiki/Rocksteady",
-    "text": "Rocksteady is a music genre that originated in Jamaica around 1966. The term rocksteady comes from a popular dance style which is the subject in the Alton Ellis song \"Rocksteady\" and matched the new sound."
+    "text": "Rocksteady lasted barely two years, from about 1966 to 1968, but its slow, bass-led grooves, as on the Paragons' 'The Tide Is High', paved the way for reggae."
+   },
+   "sunshine pop": {
+    "text": "Much of sunshine pop's sound, on records by the Mamas & the Papas and the Association, came from the same Los Angeles session players, the Wrecking Crew."
    },
    "breakcore": {
-    "title": "Breakcore",
-    "url": "https://en.wikipedia.org/wiki/Breakcore",
-    "text": "Breakcore is a style of electronic dance music that emerged from jungle, hardcore, and drum & bass in the mid-to-late 1990s."
+    "text": "Breakcore chops up the Amen break, and anything else, at absurd speeds; Venetian Snares wrote much of his in 7/4 time."
+   },
+   "hardcore": {
+    "text": "'Hardcore' names two scenes: the fast, furious punk of Black Flag and Minor Threat, and the speeding breakbeat rave music of early-'90s Britain."
    },
    "footwork": {
-    "title": "Footwork (genre)",
-    "url": "https://en.wikipedia.org/wiki/Footwork_(genre)",
-    "text": "Footwork, also called juke, or Chicago juke, is a genre of electronic dance music derived from ghetto house with elements of hip-hop, first appearing in Chicago in the late 1990s."
+    "text": "Footwork is Chicago's dance-battle music, around 160 BPM, made for fast feet; DJ Rashad's 'Double Cup' (2013) took it around the world."
+   },
+   "gabber": {
+    "text": "Gabber, Rotterdam's hardcore of the '90s, ran at up to 200 BPM or more; its fans shaved their heads and wore tracksuits."
    },
    "illbient": {
-    "title": "Illbient",
-    "url": "https://en.wikipedia.org/wiki/Illbient",
-    "text": "Illbient is a genre of electronic music and an art movement that originated among hip hop-influenced experimental musicians from New York City in the early 1990s."
+    "text": "Illbient was a 1990s New York scene of dark, dubby ambient music; the name joins hip hop slang 'ill' to ambient, and DJ Spooky was its best-known face."
    },
    "roots reggae": {
-    "title": "Roots reggae",
-    "url": "https://en.wikipedia.org/wiki/Roots_reggae",
-    "text": "It is identified with the life of the ghetto sufferer, and the rural poor."
+    "text": "Roots reggae sang of Rastafari, Africa and the struggles of the poor; Bob Marley and the Wailers' 'Catch a Fire' (1973) took it around the world on Island Records."
+   },
+   "dance-pop": {
+    "text": "Madonna's first single, 'Everybody' (1982), was pushed to dance clubs before radio; she got her break handing a demo to DJ Mark Kamins at New York's Danceteria."
+   },
+   "lovers rock": {
+    "text": "Lovers rock, romantic reggae made in 1970s London, took Janet Kay's 'Silly Games' to No. 2 in the UK in 1979, and its high note is famously hard to hit."
+   },
+   "britpop": {
+    "text": "Britpop's Blur-Oasis chart battle in August 1995 made the evening news; Blur's 'Country House' outsold Oasis's 'Roll With It'."
+   },
+   "hip-house": {
+    "text": "Hip house set rapping over Chicago house; Fast Eddie's 1988 single 'Hip House' gave the blend its name."
    },
    "funaná": {
-    "title": "Funaná",
-    "url": "https://en.wikipedia.org/wiki/Funan%C3%A1",
-    "text": "The funaná [funɐˈna] is a music and dance genre from Cape Verde. Funaná is an accordion-based music."
+    "text": "Funaná, from Cape Verde's Santiago island, is driven by accordion and the ferrinho, an iron bar scraped with a knife; it was frowned on under Portuguese rule."
+   },
+   "ndw": {
+    "text": "Neue Deutsche Welle, German new wave, gave the world Nena's '99 Luftballons', a hit across Europe and America in 1983 and 1984."
    },
    "drill": {
-    "title": "Drill music",
-    "url": "https://en.wikipedia.org/wiki/Drill_music",
-    "text": "Drill music, also known as drill rap or simply drill, is a subgenre of hip-hop music with sonic origins in trap music and lyrical origins in gangsta rap. It began in Chicago, Illinois, United States, in the early 2010s."
+    "text": "Drill began on Chicago's South Side in the early 2010s with Chief Keef; London's drill scene rebuilt it around sliding 808 basslines."
    },
    "trap": {
-    "title": "Trap music",
-    "url": "https://en.wikipedia.org/wiki/Trap_music",
-    "text": "Trap music, also known simply as trap, is a subgenre of hip-hop music that originated in the Southern United States. Lyrical references to trap began appearing in 1991, while the modern sound of trap emerged in 1999."
+    "text": "Trap is named after Atlanta's trap houses, and its rattling hi-hats come from the Roland TR-808, a drum machine first sold in 1980."
+   },
+   "persian pop": {
+    "text": "After the 1979 revolution Persian pop went into exile, and Los Angeles became its capital, nicknamed Tehrangeles."
+   },
+   "ragtime": {
+    "text": "Scott Joplin's 'Maple Leaf Rag' (1899) sold hundreds of thousands of copies as sheet music, earning him a royalty of a cent a copy."
+   },
+   "tango": {
+    "text": "Tango was born in the dance halls of Buenos Aires and Montevideo, and the bandoneón that defines it was a German instrument meant for church music."
+   },
+   "schlager": {
+    "text": "Schlager simply means 'hit' in German. In Sweden the word covers Eurovision-style pop, and ABBA won Eurovision with 'Waterloo' in 1974."
+   },
+   "space-age": {
+    "text": "Space-age pop of the '50s and '60s showed off stereo hi-fi: Esquivel's records bounced instruments from one speaker to the other."
+   },
+   "calypso": {
+    "text": "Calypsonians sang Trinidad's news in sharp-tongued verse, under stage names like Lord Kitchener and the Mighty Sparrow."
+   },
+   "afro-cuban": {
+    "text": "Afro-Cuban music rests on the clave, a two-bar pattern of five strokes that underpins son, rumba and salsa alike."
    },
    "bolero": {
-    "title": "Bolero",
-    "url": "https://en.wikipedia.org/wiki/Bolero",
-    "text": "Bolero is a music genre which originated in eastern Cuba in the late 19th century as part of the trova tradition."
+    "text": "The Cuban bolero isn't Ravel's: it's a slow, romantic song form born in Santiago de Cuba in the 1880s, later loved across Mexico and all of Latin America."
+   },
+   "catalan music": {
+    "text": "Catalan rumba was born among the Gitano communities of Barcelona; Peret's fast, fanning guitar strum, the ventilador, is its trademark."
+   },
+   "copla": {
+    "text": "Copla, Spain's dramatic song of the 1940s and '50s, was the voice of stars like Concha Piquer and Lola Flores."
    },
    "soukous": {
-    "title": "Soukous",
-    "url": "https://en.wikipedia.org/wiki/Soukous",
-    "text": "Soukous is a genre of dance music originating from the Democratic Republic of the Congo and the Republic of the Congo."
+    "text": "Soukous sped up Congolese rumba in the '70s and '80s, and its dazzling high guitar lines made stars of players like Diblo Dibala."
    },
-   "world fusion": {
-    "title": "World music",
-    "url": "https://en.wikipedia.org/wiki/World_music",
-    "text": "World music is an English phrase for styles of music from primarily non-English-speaking countries, including quasi-traditional, intercultural, and traditional music."
+   "rumba": {
+    "text": "Congolese rumba, added to UNESCO's intangible heritage list in 2021, grew from Cuban son records sold in Africa from the 1930s on."
+   },
+   "zouk": {
+    "text": "Zouk was created in the French Caribbean by the band Kassav' around 1980; the word is Creole for a party."
+   },
+   "jazz-rock": {
+    "text": "Miles Davis's 'Bitches Brew' (1970) plugged jazz in; producer Teo Macero built its tracks by editing together tape from long studio jams."
+   },
+   "guajira": {
+    "text": "'Guantanamera', the most famous guajira, sets verses by Cuban poet José Martí to a country melody."
+   },
+   "latin jazz": {
+    "text": "Tito Puente, the King of Latin Music, played timbales standing at the front of his band, and Santana's 'Oye Como Va' is his song."
+   },
+   "europop": {
+    "text": "Eurovision launched Europop's biggest stars: ABBA in 1974, and Céline Dion, who won for Switzerland in 1988."
+   },
+   "novelty": {
+    "text": "Novelty records sped up voices long before Auto-Tune: David Seville's 'Witch Doctor' and his Chipmunks were tapes played back at double speed."
+   },
+   "beguine": {
+    "text": "The beguine comes from Martinique and Guadeloupe, and Cole Porter's 'Begin the Beguine' (1935) made the word famous worldwide."
+   },
+   "bossanova": {
+    "text": "Bossa nova's gentle guitar beat was worked out by João Gilberto, who practised for months in a bathroom because he liked its acoustics."
+   },
+   "samba": {
+    "text": "'Pelo Telefone' (1917), registered by Donga, is called the first recorded samba, and who really wrote it has been argued over ever since."
+   },
+   "marcha carnavalesca": {
+    "text": "Rio's carnival marches, marchinhas, were written for whole streets of revelers to sing; Chiquinha Gonzaga's 'Ó Abre Alas' (1899) is called the first."
+   },
+   "mpb": {
+    "text": "MPB, Música Popular Brasileira, was born on the TV song festivals of the late '60s, where Chico Buarque, Caetano Veloso and Elis Regina competed for prizes."
+   },
+   "samba-canção": {
+    "text": "Samba-canção is samba slowed down for heartbreak, and in 1950s Rio it led the way to bossa nova."
+   },
+   "electro house": {
+    "text": "Benny Benassi's 'Satisfaction' (2002), with its distorted, buzzing bassline, set the template for electro house."
+   },
+   "swingbeat": {
+    "text": "Swingbeat was the British name for new jack swing, the R&B-meets-hip hop sound Teddy Riley built for Guy, Keith Sweat and Bobby Brown's 'My Prerogative'."
    },
    "bachata": {
-    "title": "Bachata (music)",
-    "url": "https://en.wikipedia.org/wiki/Bachata_(music)",
-    "text": "Bachata is a genre of music that evolved in the Dominican Republic in the 20th century."
+    "text": "Bachata was once looked down on as the music of the Dominican countryside and kept off the radio, until Juan Luis Guerra's 'Bachata Rosa' (1990) made it respectable."
+   },
+   "merengue": {
+    "text": "Dictator Rafael Trujillo made merengue the Dominican Republic's national music in the 1930s, and had songs written in his praise."
+   },
+   "séga": {
+    "text": "Séga is the music of Mauritius and Réunion, born among enslaved Africans; its ravanne, a goatskin frame drum, is warmed over a fire to tune it."
+   },
+   "hawaiian": {
+    "text": "Hawaiian steel guitar, played flat with a metal bar, swept America after the 1915 Panama-Pacific Exposition, and later gave country music its steel guitar."
+   },
+   "champeta": {
+    "text": "Champeta grew in Cartagena, Colombia, from African soukous and highlife records, played on huge painted sound systems called picós."
+   },
+   "cumbia": {
+    "text": "Cumbia came from Colombia's Caribbean coast and has been remade everywhere: as chicha in Peru, villera in Argentina and slowed-down rebajada in Monterrey, Mexico."
+   },
+   "son": {
+    "text": "A few days of recording in Havana in 1996 brought Cuban son back to the world: the Buena Vista Social Club album sold millions."
+   },
+   "new beat": {
+    "text": "New beat was born in Belgium around 1987, when a DJ played an EBM record at 33 rpm instead of 45 and the slowed-down groove filled the floor."
+   },
+   "uk funky": {
+    "text": "UK funky was a late-2000s London club sound that mixed house with soca and Afro rhythms."
+   },
+   "hindustani": {
+    "text": "In Hindustani classical music each raga has its time of day, so an evening raga played in the morning is thought out of place."
+   },
+   "conscious": {
+    "text": "Conscious hip hop takes its cue from Grandmaster Flash and the Furious Five's 'The Message' (1982), which described the pressures of life in the inner city."
+   },
+   "heavy metal": {
+    "text": "Black Sabbath's Tony Iommi lost two fingertips in a factory accident, made himself thimbles and slackened his strings, and the heavy, low sound helped create metal."
+   },
+   "mod": {
+    "text": "Mods rode Italian scooters covered in mirrors, wore sharp suits and danced to American soul and R&B; the Who's 'My Generation' was their anthem."
+   },
+   "andalusian classical": {
+    "text": "Andalusian classical music, the nūba, travelled from medieval Al-Andalus to North Africa, where orchestras in Fez and Tetouan still play it."
+   },
+   "electroacoustic": {
+    "text": "Electroacoustic music grew up in radio studios: Pierre Schaeffer's at French radio in Paris, and Karlheinz Stockhausen's at West German radio in Cologne."
+   },
+   "musique concrète": {
+    "text": "Pierre Schaeffer invented musique concrète in 1948 at French radio, composing with recorded sounds; his 'Étude aux chemins de fer' is made of train noises."
+   },
+   "berlin-school": {
+    "text": "The Berlin School is the cosmic, sequencer-driven electronic music of 1970s West Berlin; Klaus Schulze, one of its stars, was Tangerine Dream's first drummer."
+   },
+   "thrash": {
+    "text": "Thrash metal's Big Four, Metallica, Slayer, Megadeth and Anthrax, first shared one bill in 2010; Megadeth's Dave Mustaine had been fired from Metallica in 1983."
+   },
+   "psychedelic": {
+    "text": "The word psychedelic, 'mind-manifesting', was coined in 1956 by psychiatrist Humphry Osmond in letters with the writer Aldous Huxley."
+   },
+   "spoken word": {
+    "text": "Spoken word records have their own Grammy, and one winner was Barack Obama, for reading his memoir 'Dreams from My Father' aloud."
+   },
+   "acid": {
+    "text": "Acid's squelch came from a flop: the Roland TB-303, a bassline machine made for guitarists to practise with, sold poorly until Chicago producers like Phuture twisted its knobs."
+   },
+   "ragga": {
+    "text": "Ragga, short for raggamuffin, is the digital dancehall of the mid-'80s onwards, and its fast toasting fed straight into London's jungle."
+   },
+   "uk street soul": {
+    "text": "UK street soul was home-grown British R&B of the late '80s and '90s, made in bedrooms and pressed on tiny labels, then rediscovered by collectors decades later."
+   },
+   "freestyle": {
+    "text": "Freestyle, the Latin dance pop of '80s New York and Miami, grew out of electro; Shannon's 'Let the Music Play' (1983) is often called its first hit."
+   },
+   "alternative metal": {
+    "text": "Faith No More's 'Epic' (1990) mixed rap, metal and piano, and the fish flopping on a beach in its video upset animal-rights groups."
+   },
+   "speed metal": {
+    "text": "Motörhead said they just played rock and roll, but 'Overkill' (1979), with its pounding double bass drums, pushed metal toward speed."
+   },
+   "glitch": {
+    "text": "Glitch artists make music from errors: the German group Oval painted on CDs to make them skip, then built tracks from the mistakes."
+   },
+   "broken beat": {
+    "text": "Broken beat came from West London in the late '90s, where producers like IG Culture and Bugz in the Attic bent jazz-funk and house into off-kilter rhythms."
+   },
+   "psychobilly": {
+    "text": "The Cramps fused rockabilly with horror movies, and in 1978 played a famous free show at Napa State Hospital, a California psychiatric hospital."
+   },
+   "acid rock": {
+    "text": "Acid rock was the heavy, improvised psychedelia of mid-'60s San Francisco, where the Grateful Dead played writer Ken Kesey's Acid Tests."
+   },
+   "jazzy hip-hop": {
+    "text": "A Tribe Called Quest's 'The Low End Theory' (1991) brought in jazz bassist Ron Carter, who had played in Miles Davis's great '60s quintet."
+   },
+   "fusion": {
+    "text": "In fusion, jazz musicians plugged in: Weather Report and the Mahavishnu Orchestra were formed by players from Miles Davis's electric bands."
+   },
+   "flamenco": {
+    "text": "Paco de Lucía's 'Entre dos aguas' (1973), a rumba improvised in the studio to fill out an album, became flamenco's biggest hit."
+   },
+   "goth rock": {
+    "text": "Bauhaus's nine-minute 'Bela Lugosi's Dead' (1979) is often called the first goth rock record."
+   },
+   "acid house": {
+    "text": "Acid house took its smiley-face logo to Britain's 1988 Second Summer of Love, when raves in fields and warehouses drew thousands of people."
+   },
+   "poetry": {
+    "text": "Allen Ginsberg first read 'Howl' aloud in 1955 at San Francisco's Six Gallery, and Beat poets were soon reading over jazz in clubs and on records."
+   },
+   "ambient house": {
+    "text": "The Orb's 'Little Fluffy Clouds' (1990) samples Rickie Lee Jones describing the skies of her Arizona childhood, a high point of ambient house."
+   },
+   "dub poetry": {
+    "text": "Dub poet Linton Kwesi Johnson recites over reggae basslines, and was only the second living poet ever published in the Penguin Modern Classics series."
+   },
+   "surf": {
+    "text": "Dick Dale's 'Misirlou', the surf guitar classic, is an old Eastern Mediterranean folk tune that he played at breakneck speed."
+   },
+   "aor": {
+    "text": "AOR first meant album-oriented rock, the FM radio format of the '70s that played album tracks instead of singles; later it came to mean polished rock like Journey and Toto."
+   },
+   "dark ambient": {
+    "text": "Dark ambient is ambient music's night side; Lustmord built early records from sounds he recorded in caves, crypts and catacombs."
+   },
+   "free jazz": {
+    "text": "Ornette Coleman's 'Free Jazz' (1961) set two quartets improvising at once, and its sleeve had a window showing a Jackson Pollock painting."
+   },
+   "avant-garde jazz": {
+    "text": "Sun Ra said he came from Saturn, led his Arkestra for four decades, and released many albums on his own label, El Saturn, often in hand-decorated sleeves."
+   },
+   "reggae gospel": {
+    "text": "Reggae gospel sets Christian lyrics to Jamaican riddims, often cut in the same Kingston studios where roots singers praised Jah."
+   },
+   "special effects": {
+    "text": "Radio stations and film makers once bought sound effects on records: the BBC released dozens of effects LPs, from steam trains to crowds and doors."
+   },
+   "progressive house": {
+    "text": "Progressive house was the early-'90s British name for long, deep, building house tracks, with Leftfield among its first names."
+   },
+   "bleep": {
+    "text": "Bleep was Sheffield's early-'90s sound of piercing tones over deep sub-bass, launched on Warp Records by LFO and Sweet Exorcist."
+   },
+   "lounge": {
+    "text": "Martin Denny's band added bird calls to their exotica after hearing frogs croak by the pool at their Honolulu club, and the calls became their trademark."
+   },
+   "bollywood": {
+    "text": "In Bollywood films the actors lip-sync to playback singers; Lata Mangeshkar sang for films across seven decades."
+   },
+   "ragga hiphop": {
+    "text": "Ragga hip hop joins Jamaican toasting to rap, a family reunion of sorts: DJ Kool Herc, who threw the first hip hop parties, was born in Kingston."
+   },
+   "ebm": {
+    "text": "EBM, electronic body music, was named by Belgium's Front 242 for their muscular, sequencer-driven sound."
+   },
+   "italo-disco": {
+    "text": "Italo disco was often sung in English by Italians who barely spoke it, and it took its name from German label ZYX's 'The Best of Italo-Disco' compilations."
+   },
+   "sound collage": {
+    "text": "The Beatles' 'Revolution 9' is a sound collage of tape loops and voices, eight minutes of it on a Number 1 album."
+   },
+   "chillwave": {
+    "text": "Chillwave was named, half as a joke, by a blog in 2009, for the hazy, warm bedroom pop of Washed Out and Toro y Moi."
+   },
+   "kwaito": {
+    "text": "Kwaito arose in Soweto in the early '90s, as apartheid ended: slowed-down house beats, chanted vocals and township slang."
+   },
+   "neofolk": {
+    "text": "Neofolk grew out of post-industrial music in the '80s, when bands like Death in June and Current 93 turned to acoustic guitars."
+   },
+   "italo house": {
+    "text": "Italo house's piano riffs ruled 1989: Black Box's 'Ride on Time' topped the UK chart for six weeks, built on a sampled Loleatta Holloway vocal."
+   },
+   "rapso": {
+    "text": "Rapso, from Trinidad, sets spoken rhyme to calypso and soca rhythms; Lancelot Layne recorded it in the '70s, before rap had reached the island."
+   },
+   "hi nrg": {
+    "text": "Hi-NRG grew from Patrick Cowley's synth disco in San Francisco; his work on Sylvester's 'You Make Me Feel (Mighty Real)' set the template."
+   },
+   "new jack swing": {
+    "text": "Teddy Riley built new jack swing, and its name came from a 1987 Village Voice article by Barry Michael Cooper, who later co-wrote the film New Jack City."
+   },
+   "g-funk": {
+    "text": "G-funk slowed down Parliament-Funkadelic grooves and added whining synth leads; Dr. Dre's 'The Chronic' (1992) made it the sound of West Coast rap."
+   },
+   "soca": {
+    "text": "Soca, the soul of calypso, was created by Trinidad's Lord Shorty in the '70s, who blended Indian rhythms into calypso."
+   },
+   "euro-disco": {
+    "text": "Donna Summer's 'I Feel Love' (1977), made in Munich with Giorgio Moroder, was all synthesizer; Brian Eno told David Bowie it would change club music."
+   },
+   "hard trance": {
+    "text": "Hard trance came out of Germany and Belgium in the mid-'90s, faster and harsher than trance, with acid lines borrowed from techno."
+   },
+   "bhangra": {
+    "text": "Bhangra began as a Punjabi harvest dance, and British-Asian bands in '80s Birmingham and Southall plugged it into synths and drum machines."
    }
   },
   "artists": {
-   "Uranium Club": {
-    "title": "Uranium Club",
-    "url": "https://en.wikipedia.org/wiki/Uranium_Club",
-    "text": "Uranium Club is an American punk rock band based in Minneapolis. The band consists of members Brendan Wells, Harry Wohl, Ian Stemper and Matt Stagner."
-   },
    "Larry Heard": {
-    "title": "Larry Heard",
-    "url": "https://en.wikipedia.org/wiki/Larry_Heard",
-    "text": "Larry Heard is an American DJ, record producer, and musician who has recorded under various names, most notably Mr. Fingers."
+    "text": "Larry Heard was a drummer before he bought a Roland Juno-60 synthesizer and made 'Can You Feel It' as Mr. Fingers."
    },
    "Preoccupations": {
-    "title": "Preoccupations",
-    "url": "https://en.wikipedia.org/wiki/Preoccupations",
-    "text": "Preoccupations is a Canadian post-punk band from Calgary, Alberta, that formed in 2012 under the name Viet Cong."
+    "text": "Preoccupations, from Calgary, were first called Viet Cong and changed their name after protests; two of them had played in the band Women."
    },
    "Larry Heard & Mr. White": {
-    "title": "Larry Heard",
-    "url": "https://en.wikipedia.org/wiki/Larry_Heard",
-    "text": "Larry Heard is an American DJ, record producer, and musician who has recorded under various names, most notably Mr. Fingers."
+    "text": "Mr. White is another of Larry Heard's names, the one he sings under; Heard was a drummer before he made 'Can You Feel It' as Mr. Fingers."
+   },
+   "Paperclip People": {
+    "text": "Paperclip People is one of Detroit producer Carl Craig's names, and Planet E is the label he started in 1991."
    },
    "Public Image Ltd.": {
-    "title": "Public Image Ltd",
-    "url": "https://en.wikipedia.org/wiki/Public_Image_Ltd",
-    "text": "Public Image Ltd are an English post-punk band formed by lead vocalist John Lydon, guitarist Keith Levene, bassist Jah Wobble, and drummer Jim Walker in June 1978."
+    "text": "Public Image Ltd was John Lydon's band after the Sex Pistols; their 'Metal Box' (1979) first came as three 12-inch records in a film canister."
    },
    "Protomartyr": {
-    "title": "Protomartyr (band)",
-    "url": "https://en.wikipedia.org/wiki/Protomartyr_(band)",
-    "text": "Protomartyr is an American post-punk band formed in Detroit, Michigan, in 2010. The band consists of Joe Casey, Greg Ahee, Alex Leonard, and Scott Davidson."
+    "text": "Protomartyr are a Detroit post-punk band; 'The Chuckler' is from 'Relatives in Descent' (2017), their first album for Domino."
    },
    "Crack Cloud": {
-    "title": "Crack Cloud",
-    "url": "https://en.wikipedia.org/wiki/Crack_Cloud",
-    "text": "Crack Cloud are a Canadian musical and multimedia collective currently based in Calgary, Alberta, formed by drummer and frontman Zach Choy."
+    "text": "Crack Cloud is a Vancouver collective led by drummer and singer Zach Choy; many of its members met through addiction recovery and harm-reduction work."
    },
    "Eyedress": {
-    "title": "Eyedress",
-    "url": "https://en.wikipedia.org/wiki/Eyedress",
-    "text": "Idris Ennolandy Vicuña, known professionally as Eyedress, is a Filipino musician who has released albums in various rock, pop and electronic styles. Hailing from Manila, he currently lives in Los Angeles."
-   },
-   "Albert Marcœur": {
-    "title": "Albert Marcœur",
-    "url": "https://en.wikipedia.org/wiki/Albert_Marc%C5%93ur",
-    "text": "Albert Marcœur is a French composer, singer and songwriter. He began his career in the early 1970s."
+    "text": "Eyedress is the Filipino musician Idris Vicuña; 'Jealous' (2020) became a viral hit on TikTok."
    },
    "Sonique": {
-    "title": "Sonique (musician)",
-    "url": "https://en.wikipedia.org/wiki/Sonique_(musician)",
-    "text": "Sonia Marina Clarke, better known by her stage name Sonique, is an English singer, musician and DJ."
+    "text": "Sonique was a London DJ and singer; 'It Feels So Good', first released in 1998, went to No. 1 in the UK in 2000."
    },
-   "Lazar Berman, Liszt": {
-    "title": "Lazar Berman",
-    "url": "https://en.wikipedia.org/wiki/Lazar_Berman",
-    "text": "Lazar Naumovich Berman was a Soviet Russian classical pianist, Honoured Artist of the RSFSR."
+   "Brìghde Chaimbeul": {
+    "text": "Brìghde Chaimbeul, from the Isle of Skye, plays the Scottish smallpipes, a quieter, bellows-blown cousin of the Highland bagpipe."
+   },
+   "The Diablos, Nolan Strong": {
+    "text": "Nolan Strong's high tenor on the Diablos' Detroit records of the '50s was a model for the young Smokey Robinson."
    },
    "Chico Hamilton": {
-    "title": "Chico Hamilton",
-    "url": "https://en.wikipedia.org/wiki/Chico_Hamilton",
-    "text": "Foreststorn \"Chico\" Hamilton was an American jazz drummer and bandleader. He came to prominence as sideman for Lester Young, Gerry Mulligan, Count Basie, and Lena Horne."
+    "text": "Drummer Chico Hamilton's quintet, with a cello in the front line, appears in the film 'Sweet Smell of Success' (1957), and his bands launched Eric Dolphy and Charles Lloyd."
    },
    "Swans": {
-    "title": "Swans (band)",
-    "url": "https://en.wikipedia.org/wiki/Swans_(band)",
-    "text": "Swans are an American experimental rock band formed in 1981 by singer, songwriter and multi-instrumentalist Michael Gira. Initially, their music was known for its sonic brutality and misanthropic lyrics."
+    "text": "Swans, led by Michael Gira, were once known as the loudest band in New York; 'Children of God' (1987) brought in Jarboe's voice and quieter, hymn-like songs."
+   },
+   "Ink Spots": {
+    "text": "The Ink Spots' formula, Bill Kenny's high tenor lead and a spoken bass interlude, inspired the doo-wop groups of the '50s."
+   },
+   "Death": {
+    "text": "Death were three Hackney brothers playing punk in Detroit in 1974, before punk had a name; their tapes sat in an attic until Drag City released them in 2009."
+   },
+   "Молчат Дома, Molchat Doma": {
+    "text": "Molchat Doma, from Minsk, sing in Russian, and their name means 'the houses are silent'; their song 'Sudno' went viral on TikTok in 2020."
+   },
+   "Beethoven Piano Trio No 7 Archduke": {
+    "text": "Rubinstein, Heifetz and Feuermann were nicknamed the Million Dollar Trio; they recorded Beethoven's 'Archduke' Trio in 1941, a year before Feuermann died."
+   },
+   "The Spaniels": {
+    "text": "The Spaniels, from Gary, Indiana, recorded the doo-wop classic 'Goodnite, Sweetheart, Goodnite' in 1954."
+   },
+   "Brighde Chaimbeul": {
+    "text": "Brìghde Chaimbeul, from the Isle of Skye, plays the Scottish smallpipes, a quieter, bellows-blown cousin of the Highland bagpipe."
    },
    "Mira Calix": {
-    "title": "Mira Calix",
-    "url": "https://en.wikipedia.org/wiki/Mira_Calix",
-    "text": "Chantal Francesca Passamonte, known professionally as Mira Calix, was a South African-born British-based audio and visual artist and musician signed to Warp Records. She also worked as Warp's press officer."
+    "text": "Mira Calix was a South African-born composer on Warp Records, where she first worked in the press office; she later made a piece with live insects."
    },
    "The Orioles": {
-    "title": "The Orioles",
-    "url": "https://en.wikipedia.org/wiki/The_Orioles",
-    "text": "The Orioles were an American R&B group in the late 1940s and early 1950s. One of the first vocal groups in R&B, they were early pioneers of the doo-wop sound."
+    "text": "The Orioles, from Baltimore, are often called the first rhythm and blues vocal group, and set off a craze of groups named after birds."
    },
-   "Schubert, Budapest Philharmonic Orchestra, Janos Kovacs": {
-    "title": "Franz Schubert",
-    "url": "https://en.wikipedia.org/wiki/Franz_Schubert",
-    "text": "Franz Peter Schubert was an Austrian composer of the late Classical and early Romantic eras."
+   "Michele Mercure": {
+    "text": "Michele Mercure self-released her synthesizer music on cassette in 1980s Pennsylvania; Freedom to Spend reissued it decades later."
+   },
+   "RAH Band": {
+    "text": "The RAH Band is Richard Anthony Hewson, who arranged the orchestra and choir on the Beatles' 'The Long and Winding Road'."
+   },
+   "Traumprinz": {
+    "text": "Traumprinz is one of several names, with Prince of Denmark and DJ Metatron, of an anonymous German producer who gives no interviews."
    },
    "Alvin Curran": {
-    "title": "Alvin Curran",
-    "url": "https://en.wikipedia.org/wiki/Alvin_Curran",
-    "text": "Alvin Curran is an American composer, performer, improviser, sound artist, and writer. He was born in Providence, Rhode Island, and lives and works in Rome, Italy."
+    "text": "American composer Alvin Curran moved to Rome, where in 1966 he co-founded the live-electronics group Musica Elettronica Viva."
    },
    "Throbbing Gristle": {
-    "title": "Throbbing Gristle",
-    "url": "https://en.wikipedia.org/wiki/Throbbing_Gristle",
-    "text": "Throbbing Gristle were an English music and visual arts group formed in Kingston upon Hull by Genesis P-Orridge and Cosey Fanni Tutti, later joined by Peter \"Sleazy\" Christopherson and Chris Carter."
+    "text": "Throbbing Gristle called their Hackney rehearsal room the Death Factory, and their label, Industrial Records, gave industrial music its name."
    },
-   "Radu Lupu, Franz Schubert": {
-    "title": "Radu Lupu",
-    "url": "https://en.wikipedia.org/wiki/Radu_Lupu",
-    "text": "Radu Lupu was a Romanian pianist. He was widely recognized as one of the greatest pianists of his time."
+   "Ofege": {
+    "text": "Ofege were schoolboys at St Gregory's College in Lagos when they recorded their psychedelic rock album 'Try and Love' in 1973."
    },
-   "Mayumi Kojima": {
-    "title": "Mayumi Kojima",
-    "url": "https://en.wikipedia.org/wiki/Mayumi_Kojima",
-    "text": "Mayumi Kojima is a Japanese Shibuya-kei musician. As of 2015, she has released 10 studio albums, 3 extended plays and several singles."
+   "Clipse, Pharrell Williams": {
+    "text": "Clipse are the Virginia brothers Pusha T and No Malice; 'Mr. Me Too' is from 'Hell Hath No Fury' (2006), produced entirely by the Neptunes."
    },
    "Craig Leon": {
-    "title": "Craig Leon",
-    "url": "https://en.wikipedia.org/wiki/Craig_Leon",
-    "text": "Craig Leon is an American-born record producer, composer and arranger currently living in England."
+    "text": "Craig Leon produced the first albums by the Ramones and Blondie, then made the cosmic synth records 'Nommos' and 'Visiting', inspired by the Dogon people of Mali."
    },
-   "Annabel Lamb": {
-    "title": "Annabel Lamb",
-    "url": "https://en.wikipedia.org/wiki/Annabel_Lamb",
-    "text": "Annabel Lamb is an English singer-songwriter. She has released eight albums beginning with her debut album, Once Bitten."
+   "The Imperials": {
+    "text": "'Tears on My Pillow' (1958) was the first hit for Little Anthony and the Imperials, with Anthony Gourdine's high lead."
    },
    "Lorez Alexandria": {
-    "title": "Lorez Alexandria",
-    "url": "https://en.wikipedia.org/wiki/Lorez_Alexandria",
-    "text": "Lorez Alexandria was an American jazz singer, described as \"one of the most gifted and underrated jazz singers of the twentieth century\"."
+    "text": "Lorez Alexandria sang gospel in Chicago before turning to jazz, and recorded for the city's Argo label in the late '50s."
+   },
+   "DMX, Ja Rule": {
+    "text": "DMX opened his albums with spoken prayers like this one, and his first two albums both went to No. 1 in the same year, 1998."
    },
    "Slowdive, Grouper": {
-    "title": "Slowdive",
-    "url": "https://en.wikipedia.org/wiki/Slowdive",
-    "text": "Slowdive is an English rock band that formed in Reading, Berkshire, in 1989."
+    "text": "Slowdive were dropped by Creation soon after releasing 'Pygmalion' in 1995, and reunited in 2014; 'Kisses' is from 'Everything Is Alive' (2023)."
+   },
+   "Chihei Hatakeyama": {
+    "text": "Chihei Hatakeyama makes slow ambient music from guitar and electronics in Japan, and runs his own label, White Paddy Mountain."
    },
    "Bruno Walter, Beethoven": {
-    "title": "Bruno Walter",
-    "url": "https://en.wikipedia.org/wiki/Bruno_Walter",
-    "text": "Bruno Walter was a German-born conductor, pianist, and composer. Born in Berlin, he left Nazi Germany in 1933."
+    "text": "Conductor Bruno Walter was Gustav Mahler's assistant, and premiered 'Das Lied von der Erde' and Mahler's Ninth Symphony after the composer's death."
    },
-   "Los Thuthanaka": {
-    "title": "Los Thuthanaka",
-    "url": "https://en.wikipedia.org/wiki/Los_Thuthanaka",
-    "text": "Los Thuthanaka is the debut studio album by the American duo Los Thuthanaka, consisting of siblings Chuquimamani-Condori and Joshua Chuquimia Crampton."
+   "Mozart, Strauss, Cristina Gómez Godoy, West-Eastern Divan Orchestra, Daniel Barenboim": {
+    "text": "Richard Strauss wrote his Oboe Concerto in 1945 after an American soldier, the oboist John de Lancie, asked him whether he had ever thought of writing one."
+   },
+   "He Said": {
+    "text": "He Said is the solo project of Graham Lewis, bass player of Wire, recorded for Mute in the mid-'80s."
+   },
+   "The Castaways": {
+    "text": "The Castaways, from Minneapolis, are best known for 'Liar, Liar' (1965), a garage rock classic later collected on 'Nuggets'."
    },
    "McCoy Tyner": {
-    "title": "McCoy Tyner",
-    "url": "https://en.wikipedia.org/wiki/McCoy_Tyner",
-    "text": "Alfred McCoy Tyner was an American jazz pianist and composer known for his work with the John Coltrane Quartet from 1960 to 1965 and his long solo career afterward."
+    "text": "McCoy Tyner was the pianist in John Coltrane's classic quartet, which turned 'My Favorite Things' from The Sound of Music into a modal jazz epic in 1960."
+   },
+   "El Perro Del Mar": {
+    "text": "El Perro del Mar is the Swedish singer Sarah Assbring; her stage name is Spanish for 'the dog of the sea'."
+   },
+   "A Man Called Adam": {
+    "text": "A Man Called Adam is the London duo of Sally Rodgers and Steve Jones; 'Barefoot in the Head' (1990) became a staple of Balearic and chill-out compilations."
    },
    "Maurice Williams & The Zodiacs": {
-    "title": "Maurice Williams and the Zodiacs",
-    "url": "https://en.wikipedia.org/wiki/Maurice_Williams_and_the_Zodiacs",
-    "text": "Maurice Williams and the Zodiacs were an American doo-wop/R&B vocal group in the late 1950s and early 1960s."
+    "text": "'Stay', at about 1 minute 36 seconds, is the shortest single ever to top the Billboard Hot 100; Maurice Williams wrote it as a teenager."
    },
    "T.I., Chris Brown": {
-    "title": "T.I.",
-    "url": "https://en.wikipedia.org/wiki/T.I.",
-    "text": "Clifford Joseph Harris Jr., known professionally as T.I. or Tip, is an American rapper and actor."
+    "text": "T.I.'s 2003 album 'Trap Muzik' helped give trap its name."
+   },
+   "Tomaga": {
+    "text": "Tomaga were the London duo of drummer Valentina Magaletti and bassist Tom Relleen, who died in 2020."
    },
    "Leoš Janáček, Wiener Philharmoniker, Sir Charles Mackerras": {
-    "title": "Leoš Janáček",
-    "url": "https://en.wikipedia.org/wiki/Leo%C5%A1_Jan%C3%A1%C4%8Dek",
-    "text": "Leoš Janáček was a Czech composer, music theorist, folklorist, and teacher. He was inspired by Moravian and other Slavic music, including Eastern European folk music, to create an original, modern musical style."
+    "text": "Janáček wrote his Sinfonietta (1926) for a gymnastics festival; it opens with a fanfare for 13 extra brass players, and Charles Mackerras championed it."
    },
    "Theo Parrish": {
-    "title": "Theo Parrish",
-    "url": "https://en.wikipedia.org/wiki/Theo_Parrish",
-    "text": "Theo Parrish is an American DJ and record producer based in Detroit, Michigan, and known for his genre-spanning DJ sets and unconventional house productions."
+    "text": "Detroit DJ and producer Theo Parrish calls his label Sound Signature, and his rough, filtered house records sound like no one else's."
    },
    "Bonde Do Role": {
-    "title": "Bonde do Rolê",
-    "url": "https://en.wikipedia.org/wiki/Bonde_do_Rol%C3%AA",
-    "text": "Bonde do Rolê was a Brazilian funk carioca-influenced electropop group from Curitiba, Paraná state, and consisted of MC's Pedro D'Eyrot, Laura Taylor, and DJ/MC Rodrigo Gorky."
+    "text": "Bonde do Rolê, from Curitiba in Brazil, were signed by Diplo to his Mad Decent label and took baile funk to indie dance floors in the 2000s."
+   },
+   "Pariah": {
+    "text": "Pariah is London producer Arthur Cayzer, who also plays live techno with Blawan as Karenn; 'Here From Where We Are' (2018) was his ambient debut album."
    },
    "Judy Nylon, Crucial": {
-    "title": "Judy Nylon",
-    "url": "https://en.wikipedia.org/wiki/Judy_Nylon",
-    "text": "Judy Nylon is a multidisciplinary American artist who moved to London in 1970. She was half of the punk rock music group Snatch, which also featured fellow American immigrant Patti Palladin."
-   },
-   "The Jive Bombers": {
-    "title": "The Jive Bombers",
-    "url": "https://en.wikipedia.org/wiki/The_Jive_Bombers",
-    "text": "The Jive Bombers were an American R&B group from New York City."
+    "text": "Judy Nylon was the friend who visited Brian Eno in hospital in 1975 and left the quiet harp record on that led him to ambient music. 'Jailhouse Rock' is from her 'Pal Judy', made with Adrian Sherwood."
    },
    "Nolan Porter": {
-    "title": "Nolan Porter",
-    "url": "https://en.wikipedia.org/wiki/Nolan_Porter",
-    "text": "Nolan Frederick Porter was an American R&B singer and songwriter who recorded two albums and six singles in the early 1970s. His best known song is \"Keep On Keeping On\", which became popular on the northern soul scene."
+    "text": "Nolan Porter's 'If I Could Only Be Sure' became a Northern soul favourite in Britain, and Joy Division borrowed the riff of his 'Keep On Keepin' On' for 'Interzone'."
+   },
+   "The Bug, Magugu": {
+    "text": "The Bug is London producer Kevin Martin, maker of crushing dub and dancehall bass, often with MCs like Flowdan."
    },
    "Eurythmics": {
-    "title": "Eurythmics",
-    "url": "https://en.wikipedia.org/wiki/Eurythmics",
-    "text": "Eurythmics were a British pop duo formed in 1980, consisting of the Scottish vocalist Annie Lennox and the English musician and producer Dave Stewart."
+    "text": "Eurythmics recorded music for the 1984 film of Orwell's 'Nineteen Eighty-Four'; director Michael Radford objected that the studio had added it without his consent."
    },
    "SZA": {
-    "title": "SZA",
-    "url": "https://en.wikipedia.org/wiki/SZA",
-    "text": "Solána Imani Rowe, known professionally as SZA, is an American singer-songwriter."
+    "text": "SZA's 'Kill Bill', from 'SOS' (2022), takes its title from Tarantino's revenge films, and became her first solo No. 1 on the Billboard Hot 100."
    },
    "John Lennon": {
-    "title": "John Lennon",
-    "url": "https://en.wikipedia.org/wiki/John_Lennon",
-    "text": "John Winston Ono Lennon was an English musician, songwriter and activist. He gained global fame as the founder, co-lead vocalist and rhythm guitarist of the Beatles."
+    "text": "'Jealous Guy' began in 1968 as 'Child of Nature', written during the Beatles' stay in Rishikesh, India, before Lennon rewrote it for 'Imagine' (1971)."
    },
    "Fred Again.. & Bia": {
-    "title": "Fred Again",
-    "url": "https://en.wikipedia.org/wiki/Fred_Again",
-    "text": "At the 66th Annual Grammy Awards, he was nominated for Best New Artist, won Best Dance/Electronic Album for his third album Actual Life 3, and won Best Dance/Electronic Recording for his 2023 single \"Rumble\"."
+    "text": "Fred again.. produced for Ed Sheeran and Stormzy before building his own 'Actual Life' albums from voice memos and videos of friends and strangers."
    },
    "Vashti Bunyan": {
-    "title": "Vashti Bunyan",
-    "url": "https://en.wikipedia.org/wiki/Vashti_Bunyan",
-    "text": "Jennifer Vashti Bunyan is an English singer-songwriter. She began her career in the mid-1960s and released a debut album, Just Another Diamond Day, in 1970."
+    "text": "Vashti Bunyan wrote 'Just Another Diamond Day' on a long horse-drawn journey to the Hebrides; it sold little in 1970, and her next album came 35 years later."
+   },
+   "Nara": {
+    "text": "Nara Leão's Copacabana apartment hosted the late-'50s gatherings where bossa nova took shape, and she was later called its muse."
    },
    "Miriam Makeba": {
-    "title": "Miriam Makeba",
-    "url": "https://en.wikipedia.org/wiki/Miriam_Makeba",
-    "text": "Zenzile Miriam Makeba, nicknamed Mama Africa, was a South African singer, songwriter, actress, and civil rights activist."
-   },
-   "Voyou": {
-    "title": "Voyou",
-    "url": "https://en.wikipedia.org/wiki/Voyou",
-    "text": "Thibaud Vanhooland, known professionally as Voyou, is a French singer-songwriter."
+    "text": "Miriam Makeba, Mama Africa, was kept out of South Africa for 30 years after speaking against apartheid, and her 'Pata Pata' (1967) was a worldwide hit."
    },
    "Dana Gillespie": {
-    "title": "Dana Gillespie",
-    "url": "https://en.wikipedia.org/wiki/Dana_Gillespie",
-    "text": "Richenda Antoinette de Winterstein Gillespie, known professionally as Dana Gillespie, is an English actress, singer and songwriter."
+    "text": "Dana Gillespie was a British junior water-skiing champion before she sang; David Bowie gave her his song 'Andy Warhol', and she was Mary Magdalene in the first London 'Jesus Christ Superstar'."
    },
    "Supertramp": {
-    "title": "Supertramp",
-    "url": "https://en.wikipedia.org/wiki/Supertramp",
-    "text": "Supertramp were a British rock band formed in London in 1970. Marked by the individual songwriting of founders Roger Hodgson and Rick Davies, the group were distinguished for blending progressive rock and pop styles."
+    "text": "Supertramp's early years were paid for by a Dutch millionaire, Stanley August Miesegaes, who backed Rick Davies; 'From Now On' is from 'Even in the Quietest Moments' (1977)."
    },
    "Carole King": {
-    "title": "Carole King",
-    "url": "https://en.wikipedia.org/wiki/Carole_King",
-    "text": "Carole King Klein is an American singer-songwriter and musician renowned for her extensive contributions to popular music."
+    "text": "Before 'Tapestry', Carole King co-wrote hits with Gerry Goffin for other singers, such as the Shirelles' 'Will You Love Me Tomorrow'. 'Weekdays' is from 'Fantasy' (1973)."
    },
-   "Ron Carroll": {
-    "title": "Ron Carroll",
-    "url": "https://en.wikipedia.org/wiki/Ron_Carroll",
-    "text": "Ronald Michael Carroll was an American DJ, singer, songwriter, and music producer. He was primarily active on the house music circuit and openly gay."
+   "Rossini’s": {
+    "text": "Rossini's overture to 'La gazza ladra', The Thieving Magpie, opens with snare-drum rolls, and is best known now from Kubrick's 'A Clockwork Orange'."
    },
-   "Don Julian And The Meadowlarks": {
-    "title": "Don Julian (musician)",
-    "url": "https://en.wikipedia.org/wiki/Don_Julian_(musician)",
-    "text": "Don Julian was an American rhythm and blues, funk and soul singer, guitarist and songwriter."
-   },
-   "Trevor Dandy": {
-    "title": "Trevor Dandy",
-    "url": "https://en.wikipedia.org/wiki/Trevor_Dandy",
-    "text": "Trevor Dandy is a Jamaican-born Canadian gospel and funk musician active in the 1970s."
-   },
-   "Aleksi Perälä": {
-    "title": "Aleksi Perälä",
-    "url": "https://en.wikipedia.org/wiki/Aleksi_Per%C3%A4l%C3%A4",
-    "text": "Aleksi Perälä is a Finnish electronic music composer and producer. He has made music since 1988, and performed it live since 1996, switching between hardware and software over the years."
+   "The Cleaners From Venus": {
+    "text": "The Cleaners from Venus was Martin Newell's home-taping pop project in Essex, its albums sold on cassette by mail in the '80s."
    },
    "Jim Stafford": {
-    "title": "Jim Stafford",
-    "url": "https://en.wikipedia.org/wiki/Jim_Stafford",
-    "text": "James Wayne Stafford is an American singer, songwriter, musician, and comedian. Stafford is self-taught on guitar, fiddle, piano, banjo, organ, and harmonica."
+    "text": "Jim Stafford had a 1974 hit with the comic 'Spiders & Snakes', and later had his own TV variety show and a theatre in Branson, Missouri."
    },
    "The Teenagers, Frankie Lymon": {
-    "title": "The Teenagers",
-    "url": "https://en.wikipedia.org/wiki/The_Teenagers",
-    "text": "The Teenagers were an American doo-wop music group, most noted for being one of rock music's earliest successes, presented to international audiences by DJ Alan Freed."
-   },
-   "Nick Hakim": {
-    "title": "Nick Hakim",
-    "url": "https://en.wikipedia.org/wiki/Nick_Hakim",
-    "text": "Nicolas Hakim is an American musician based in Queens, New York, United States. His first EP, Where Will We Go Part 1 & 2, was self-released in 2014."
-   },
-   "Carmen Villain": {
-    "title": "Carmen Villain",
-    "url": "https://en.wikipedia.org/wiki/Carmen_Villain",
-    "text": "Carmen Maria Hillestad, known professionally as Carmen Villain, is a Norwegian-Mexican musical artist."
-   },
-   "Darcy Clay": {
-    "title": "Darcy Clay",
-    "url": "https://en.wikipedia.org/wiki/Darcy_Clay",
-    "text": "Darcy Clay was a New Zealand singer, songwriter and musician, who was made famous in 1997 for his Number 5 hit \"Jesus I Was Evil\", in which he recorded all of the instruments in his bedroom on a 4-track recorder."
+    "text": "Frankie Lymon was 13 when he sang lead on 'Why Do Fools Fall in Love', a hit in 1956."
    },
    "The Monotones": {
-    "title": "The Monotones",
-    "url": "https://en.wikipedia.org/wiki/The_Monotones",
-    "text": "The Monotones were a six-member American doo-wop vocal group in the 1950s."
+    "text": "The Monotones' 'The Book of Love' (1958) was inspired by a toothpaste jingle: 'You'll wonder where the yellow went when you brush your teeth with Pepsodent.'"
    },
    "Ann Peebles": {
-    "title": "Ann Peebles",
-    "url": "https://en.wikipedia.org/wiki/Ann_Peebles",
-    "text": "Ann Lee Peebles is a retired American singer and songwriter who gained popularity for her Memphis soul albums of the 1970s while signed to Hi Records."
+    "text": "Ann Peebles cut her soul records with producer Willie Mitchell at Hi Records in Memphis, Al Green's label; 'I Can't Stand the Rain' (1973) was her biggest hit."
+   },
+   "Joshua Idehen": {
+    "text": "Joshua Idehen is a London poet and singer who fronted Benin City and appeared on Sons of Kemet's 'Your Queen Is a Reptile'."
    },
    "Ramsey Lewis": {
-    "title": "Ramsey Lewis",
-    "url": "https://en.wikipedia.org/wiki/Ramsey_Lewis",
-    "text": "Ramsey Emmanuel Lewis Jr. was an American jazz pianist, composer, and radio personality. Lewis recorded over 80 albums and received five gold records and three Grammy Awards in his career."
+    "text": "The Ramsey Lewis Trio's live 'The In Crowd', recorded at a Washington club, was a Top 5 pop hit in 1965."
    },
    "The Sundays": {
-    "title": "The Sundays",
-    "url": "https://en.wikipedia.org/wiki/The_Sundays",
-    "text": "The Sundays were an English alternative rock band formed in Bristol in 1988. The band's lineup consisted of lead vocalist Harriet Wheeler, guitarist David Gavurin, bassist Paul Brindley, and drummer Patrick Hannan."
-   },
-   "The Blues Busters": {
-    "title": "The Blues Busters",
-    "url": "https://en.wikipedia.org/wiki/The_Blues_Busters",
-    "text": "The Blues Busters was a vocal duo from Jamaica formed in 1960, consisting of Philip James and Lloyd Osbourne Campbell. The Blues Busters was the most consistently popular Jamaican male duo of the early 1960s."
-   },
-   "Odyssey": {
-    "title": "Odyssey (band)",
-    "url": "https://en.wikipedia.org/wiki/Odyssey_(band)",
-    "text": "Odyssey is a vocal trio originally from New York City, who are best known for their disco hits including \"Native New Yorker\", \"Use It Up and Wear It Out\", and \"Going Back to My Roots\"."
-   },
-   "Lloyd Clarke": {
-    "title": "Lloyd Clarke",
-    "url": "https://en.wikipedia.org/wiki/Lloyd_Clarke",
-    "text": "Lloyd Clarke is a Jamaican ska musician. He had a series of hits in the early 1960s."
+    "text": "The Sundays, Harriet Wheeler and David Gavurin, met at Bristol University; their debut 'Reading, Writing and Arithmetic' (1990) went into the UK Top 5."
    },
    "Amy Winehouse": {
-    "title": "Amy Winehouse",
-    "url": "https://en.wikipedia.org/wiki/Amy_Winehouse",
-    "text": "Amy Jade Winehouse was a British singer and songwriter."
-   },
-   "Femtanyl": {
-    "title": "Femtanyl",
-    "url": "https://en.wikipedia.org/wiki/Femtanyl",
-    "text": "Femtanyl are a Canadian-American electronic music duo based in Toronto and Seattle consisting of founding member and lead singer Noelle Stockwood and multi-instrumentalist Juno Callender."
+    "text": "'October Song' is on Amy Winehouse's debut 'Frank' (2003), named partly after Frank Sinatra; she wrote it about Ava, her pet canary, who had died."
    },
    "Brenda Russell": {
-    "title": "Brenda Russell",
-    "url": "https://en.wikipedia.org/wiki/Brenda_Russell",
-    "text": "Brenda Russell is an American-Canadian singer-songwriter, producer, and keyboardist. Russell has a diverse musical range which encompasses R&B, pop, soul, dance, and jazz."
+    "text": "Brenda Russell wrote 'Get Here', which became a worldwide hit for Oleta Adams in 1990."
    },
    "Earth, Wind & Fire": {
-    "title": "Earth, Wind & Fire",
-    "url": "https://en.wikipedia.org/wiki/Earth,_Wind_%26_Fire",
-    "text": "Earth, Wind & Fire is an American band formed in Chicago, Illinois, in 1969. Their music spans multiple genres, including jazz, R&B, soul, funk, disco, pop, Latin and Afro-pop."
-   },
-   "Jim Legxacy": {
-    "title": "Jim Legxacy",
-    "url": "https://en.wikipedia.org/wiki/Jim_Legxacy",
-    "text": "James Folorunso Ifeanyi Olaloye known professionally as Jim Legxacy, is a British rapper, singer, and record producer from Catford, London Borough of Lewisham."
+    "text": "Maurice White named Earth, Wind & Fire after the elements in his astrological chart; 'Reasons' is from 'That's the Way of the World' (1975)."
    },
    "Jah Wobble": {
-    "title": "Jah Wobble",
-    "url": "https://en.wikipedia.org/wiki/Jah_Wobble",
-    "text": "John Joseph Wardle is an English bass guitarist and singer. He was the original bass player in Public Image Ltd in the late 1970s and early 1980s; he left the band after two albums."
+    "text": "Jah Wobble played bass in Public Image Ltd; his stage name came from Sid Vicious slurring his real name, John Wardle."
    },
-   "The Earons": {
-    "title": "The Earons",
-    "url": "https://en.wikipedia.org/wiki/The_Earons",
-    "text": "The Earons are a self-described \"astro-funk\" band from Tampa Bay, Florida. They were inspired by the cosmic mythology of Sun Ra with a bit of Anthony Braxton's mathematica."
-   },
-   "Single Gun Theory": {
-    "title": "Single Gun Theory",
-    "url": "https://en.wikipedia.org/wiki/Single_Gun_Theory",
-    "text": "Single Gun Theory was an Australian electronic dance music band formed in 1986."
+   "War": {
+    "text": "War started out as Eric Burdon's backing band, and went on to hits like 'Low Rider' and 'Why Can't We Be Friends?'"
    },
    "Junior Byles": {
-    "title": "Junior Byles",
-    "url": "https://en.wikipedia.org/wiki/Junior_Byles",
-    "text": "Kenneth Byles, also known as \"Junior Byles\", \"Chubby\", or \"King Chubby\", was a foundation conscious roots reggae singer from Jamaica."
+    "text": "Junior Byles made his best-known records with Lee 'Scratch' Perry, among them 'Curly Locks' and 'Beat Down Babylon'."
+   },
+   "Shackleton": {
+    "text": "Shackleton co-founded the label Skull Disco with Appleblim in 2005, making dark, percussive dubstep; artist Zeke Clough drew its sleeves."
    },
    "Headless Chickens": {
-    "title": "Headless Chickens",
-    "url": "https://en.wikipedia.org/wiki/Headless_Chickens",
-    "text": "The Headless Chickens was a New Zealand band."
+    "text": "Headless Chickens were an Auckland band on New Zealand's Flying Nun label, mixing samplers and guitars; 'Cruise Control' is one of their best-known songs."
    },
    "Deee-Lite": {
-    "title": "Deee-Lite",
-    "url": "https://en.wikipedia.org/wiki/Deee-Lite",
-    "text": "Deee-Lite was an American house and dance music group formed in New York City."
+    "text": "Deee-Lite, Lady Miss Kier, Towa Tei and DJ Dmitry, met in New York; their 'Groove Is in the Heart' (1990) features Bootsy Collins and Q-Tip."
    },
    "Errol Dunkley": {
-    "title": "Errol Dunkley",
-    "url": "https://en.wikipedia.org/wiki/Errol_Dunkley",
-    "text": "Errol Dunkley, sometimes spelled Erroll Dunkley, is a Jamaican reggae musician, born in Kingston, Jamaica."
+    "text": "Errol Dunkley made his first records as a teenager in Kingston, and had a UK Top 20 hit in 1979 with 'O.K. Fred'."
    },
-   "Michael Wycoff": {
-    "title": "Michael Wycoff",
-    "url": "https://en.wikipedia.org/wiki/Michael_Wycoff",
-    "text": "Michael Wycoff was an American R&B singer. He scored several hits on the US R&B chart during the 1980s."
+   "Lush": {
+    "text": "Lush were a London band on 4AD; Cocteau Twins' Robin Guthrie produced their early records."
+   },
+   "The B-52's": {
+    "text": "The B-52's took their name from Southern slang for the tall beehive hairdos Kate Pierson and Cindy Wilson wore."
    },
    "Fehlfarben": {
-    "title": "Fehlfarben",
-    "url": "https://en.wikipedia.org/wiki/Fehlfarben",
-    "text": "Fehlfarben is a Neue Deutsche Welle music band from Düsseldorf, Germany, that was formed in 1979."
+    "text": "'Ein Jahr (Es geht voran)' is from Fehlfarben's 'Monarchie und Alltag' (1980), often named among the best German rock albums; singer Peter Hein kept his office job at Rank Xerox."
    },
-   "EsDeeKid, Rico Ace": {
-    "title": "EsDeeKid",
-    "url": "https://en.wikipedia.org/wiki/EsDeeKid",
-    "text": "EsDeeKid is a British rapper from Liverpool, England. He released his debut mixtape, Rebel, in June 2025."
+   "Mikkel Metal": {
+    "text": "Mikkel Metal is a Danish producer of dub techno, a mainstay of Copenhagen's Echocord label."
    },
-   "The Monn Keys": {
-    "title": "The Monn Keys",
-    "url": "https://en.wikipedia.org/wiki/The_Monn_Keys",
-    "text": "The Monn Keys were a Norwegian musical show group that was active from 1948 until 1964. Founded by Sølvi Wang and Egil Monn-Iversen, the group became well-known in Norway for their jazz and pop music performances."
+   "گوگوش (Googoosh)": {
+    "text": "Googoosh was Iran's biggest pop star of the '70s; after the 1979 revolution she was kept from singing for more than 20 years, then toured the world from 2000."
+   },
+   "Six Brown Brothers": {
+    "text": "The Six Brown Brothers were a vaudeville saxophone sextet who helped make the saxophone a craze in 1910s America."
+   },
+   "Ebenezer Calender": {
+    "text": "Ebenezer Calender led a maringa band in Freetown, Sierra Leone, mixing palm-wine guitar with the rhythms of Caribbean calypso."
    },
    "El Wali": {
-    "title": "El Wali (band)",
-    "url": "https://en.wikipedia.org/wiki/El_Wali_(band)",
-    "text": "El Wali is a Western Saharan folk music group who recorded an album, Tiris, in 1994."
+    "text": "El Wali were the national band of the Sahrawi people of Western Sahara, formed in the refugee camps near Tindouf, Algeria, to sing of their struggle."
    },
    "Eivør": {
-    "title": "Eivør (singer)",
-    "url": "https://en.wikipedia.org/wiki/Eiv%C3%B8r_(singer)",
-    "text": "Eivør Pálsdóttir, known mononymously as Eivør, is a Faroese singer-songwriter. Born and raised in Syðrugøta, she had her first televised performance at the age of 13."
+    "text": "Eivør sings in Faroese and English; she co-wrote the music for the TV series 'The Last Kingdom' and sang on the soundtrack of the game 'God of War'."
    },
    "Alice Babs and her orchestra": {
-    "title": "Alice Babs",
-    "url": "https://en.wikipedia.org/wiki/Alice_Babs",
-    "text": "Hildur Alice Nilson, known by her stage name Alice Babs, was a Swedish singer. She worked in a wide number of genres – Swedish folklore, Elizabethan songs and opera."
+    "text": "Swedish singer Alice Babs later sang in Duke Ellington's Sacred Concerts; Ellington called her the most unique artist he knew."
    },
    "Björk": {
-    "title": "Björk",
-    "url": "https://en.wikipedia.org/wiki/Bj%C3%B6rk",
-    "text": "Björk Guðmundsdóttir is an Icelandic singer, songwriter, composer, record producer and actress. She is regarded as one of the most influential musicians of her era."
+    "text": "'Bachelorette' is from Björk's 'Homogenic' (1997); its video, by Michel Gondry, is about a book that writes itself, telling a story that keeps repeating inside itself."
    },
    "Agustín Barrios": {
-    "title": "Agustín Barrios",
-    "url": "https://en.wikipedia.org/wiki/Agust%C3%ADn_Barrios",
-    "text": "Agustín Pío Barrios was a Paraguayan virtuoso classical guitarist and composer, regarded by some as one of the greatest performers and arguably the most prolific composer for the classical guitar."
-   },
-   "M'Pongo Love": {
-    "title": "M'Pongo Love",
-    "url": "https://en.wikipedia.org/wiki/M%27Pongo_Love",
-    "text": "Aimee Françoise M'Pongo Langu, known professionally as M'Pongo Love, was a Congolese singer and songwriter."
-   },
-   "Gro Anita Schønn": {
-    "title": "Gro Anita Schønn",
-    "url": "https://en.wikipedia.org/wiki/Gro_Anita_Sch%C3%B8nn",
-    "text": "Gro Anita Schønn was a Norwegian singer."
+    "text": "Paraguayan guitarist Agustín Barrios sometimes performed in traditional dress as Nitsuga Mangoré, his first name spelled backwards, and was among the first classical guitarists on record."
    },
    "Virna Lindt": {
-    "title": "Virna Lindt",
-    "url": "https://en.wikipedia.org/wiki/Virna_Lindt",
-    "text": "Virna Lindt is a Swedish singer and record producer. Her debut single \"Attention Stockholm\" became an indie-chart hit in 1982."
+    "text": "Virna Lindt was a Swedish singer on London's Compact Organisation label, whose spy-themed pop was produced by Tot Taylor."
+   },
+   "Toumani Diabaté & Ballake Sissoko": {
+    "text": "Kora players Toumani Diabaté and Ballaké Sissoko are sons of the musicians behind the 1970 album 'Ancient Strings'; their 'New Ancient Strings' (1999) answered it."
+   },
+   "Mario Reis": {
+    "text": "Mario Reis sang samba softly, almost speaking, at a time when singers belted; his intimate style is often heard as a forerunner of bossa nova."
    },
    "José Feliciano": {
-    "title": "José Feliciano",
-    "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Feliciano",
-    "text": "José Montserrate Feliciano García is a Puerto Rican musician. He recorded many international hits, including his rendition of the Doors' \"Light My Fire\" and his self-penned Christmas song \"Feliz Navidad\"."
+    "text": "José Feliciano, blind since birth, took his Latin-flavoured cover of the Doors' 'Light My Fire' into the US Top 5 in 1968 and won two Grammys for it."
    },
-   "Jacintha": {
-    "title": "Jacintha Abisheganaden",
-    "url": "https://en.wikipedia.org/wiki/Jacintha_Abisheganaden",
-    "text": "She is a founding member of the performance company TheatreWorks."
-   },
-   "Pretty Ugly": {
-    "title": "Pretty Ugly",
-    "url": "https://en.wikipedia.org/wiki/Pretty_Ugly",
-    "text": "Pretty Ugly is the fourth studio album by the American punk rock band Lunachicks. It was released by Go-Kart Records in 1997."
-   },
-   "Grace Barbé": {
-    "title": "Grace Barbé",
-    "url": "https://en.wikipedia.org/wiki/Grace_Barb%C3%A9",
-    "text": "Grace Barbé is a Seychellois-born Australian singer-songwriter who also performs with the Afrobeat and psychedelic band of the same name which includes Jamie Searle and Hardy Perrine."
-   },
-   "Frank de Wulf": {
-    "title": "Frank De Wulf",
-    "url": "https://en.wikipedia.org/wiki/Frank_De_Wulf",
-    "text": "Frank De Wulf is a Belgian DJ, musician and record label owner. He is considered one of the pioneers of the Belgian new beat and techno scene."
+   "Wigwam": {
+    "text": "Wigwam were among Finland's first progressive rock bands, recording for Helsinki's Love Records."
    },
    "Seu Jorge": {
-    "title": "Seu Jorge",
-    "url": "https://en.wikipedia.org/wiki/Seu_Jorge",
-    "text": "Jorge Mário da Silva, known as Seu Jorge, is a Brazilian musician, singer, songwriter, and actor."
+    "text": "Seu Jorge sang David Bowie songs in Portuguese, on acoustic guitar, for Wes Anderson's 'The Life Aquatic with Steve Zissou' (2004); Bowie praised them."
+   },
+   "Angela Bowie, Chico Rey": {
+    "text": "Angela Bowie was married to David Bowie from 1970 to 1980, and helped shape the look of his Ziggy Stardust years."
+   },
+   "Don Campau": {
+    "text": "Don Campau was a hub of the '80s home-taping network, trading cassettes by mail with musicians around the world and playing them on his radio show, No Pigeonholes."
+   },
+   "don campau": {
+    "text": "Don Campau was a hub of the '80s home-taping network, trading cassettes by mail with musicians around the world and playing them on his radio show, No Pigeonholes."
+   },
+   "Paul Haig": {
+    "text": "Paul Haig sang in the Edinburgh post-punk band Josef K, named after the hero of Kafka's 'The Trial', before going solo."
+   },
+   "Whim 'n Rhythm": {
+    "text": "Whim 'n Rhythm is Yale's senior women's a cappella group; 'Hammond Song' is a song by the Roches."
+   },
+   "Dub Narcotic Sound System": {
+    "text": "Dub Narcotic Sound System is Calvin Johnson of Beat Happening, who founded K Records in Olympia, Washington; Dub Narcotic was also his home studio."
+   },
+   "Robyn Hitchcock": {
+    "text": "Robyn Hitchcock led the Soft Boys in late-'70s Cambridge before a long solo career of surreal songs; R.E.M.'s Peter Buck later played in his band."
+   },
+   "steve beresford": {
+    "text": "Steve Beresford is a London improviser known for playing toy pianos and toys alongside the piano."
+   },
+   "Leslie Winer": {
+    "text": "Leslie Winer was a model in the '80s before making 'Witch' (1990), a spoken-word dub record often called the first trip hop album."
+   },
+   "Geraint Jarman A'r Cynganeddwyr": {
+    "text": "Geraint Jarman, with his band Y Cynganeddwyr, brought reggae into Welsh-language rock in the late '70s."
+   },
+   "Morgan Fisher": {
+    "text": "Morgan Fisher played keyboards in Mott the Hoople and toured with Queen, then moved to Japan, where he has lived since the '80s."
+   },
+   "Pluto Shervington": {
+    "text": "Pluto Shervington's comic reggae song 'Dat' (1976), about a Rastafarian trying to buy pork without saying the word, was a UK Top 10 hit."
+   },
+   "Yardena Arazi": {
+    "text": "Yardena Arazi sang in the Israeli trio Chocolate Menta Mastik, co-hosted the Eurovision Song Contest in Jerusalem in 1979, and sang for Israel at Eurovision in 1988."
+   },
+   "yoshinori sunahara": {
+    "text": "Yoshinori Sunahara was a member of the Japanese techno group Denki Groove before going solo; 'Lovebeat' (2001) is his best-known album."
    }
   }
  },

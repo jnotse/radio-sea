@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#2b4c80" />
   <title>G-digs — FM Explorer</title>
   <link rel="preload" href="fonts/silkscreen-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <div id="app">
@@ -69,7 +69,7 @@
         <div id="detail-empty">Press a square on the map and Guano will walk there.</div>
         <div id="detail-body" hidden>
           <div class="guano-line"><canvas class="guano-face large" width="32" height="32" aria-hidden="true"></canvas><p id="guano-says"></p></div>
-          <p id="guano-fact" hidden><span id="guano-fact-text"></span> <a id="guano-fact-link" target="_blank" rel="noopener"></a></p>
+          <p id="guano-fact" hidden></p>
           <div class="player-deck">
             <div class="player-display">
               <div class="display-top"><span id="deck-state">READY</span><span id="deck-island"></span></div>
@@ -102,9 +102,9 @@
   <nav class="mobile-nav" aria-label="Explore sections">
     <a href="#map-panel">Map</a><a href="#detail">Player</a><a href="#sidebar">Explore</a>
   </nav>
-  <script src="sea-data.js?v=6"></script>
+  <script src="sea-data.js?v=7"></script>
   <script src="landscape.js?v=5"></script>
   <script src="guano.js?v=5"></script>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
 </body>
 </html>
