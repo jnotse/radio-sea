@@ -96,7 +96,7 @@ class ArtistTests(unittest.TestCase):
 
 class RunTests(unittest.TestCase):
     sea = {'releases': [
-        {'artist': 'Lorez Alexandria', 'name': 'Baltimore Oriole', 'tags': ['jazz', 'station:nts', 'mood:slow']},
+        {'artist': 'Lorez Alexandria', 'name': 'Baltimore Oriole', 'tags': ['jazz', 'station:nts', 'mood:slow', 'channel:4AD']},
         {'artist': 'Solar', 'name': 'Your Secret', 'album': 'Solar', 'tags': ['new wave']},
     ]}
 
