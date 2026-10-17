@@ -1,6 +1,6 @@
 {
- "dump": null,
- "scannedAt": "2026-10-16T21:44:44.122Z",
+ "dump": "discogs_20261001_releases.xml.gz",
+ "scannedAt": "2026-10-17T11:05:33.967Z",
  "releasesScanned": 19492392,
  "songs": {
   "[\"uranium club\",\"god's chest\"]": {
@@ -11,6 +11,7 @@
     "Punk"
    ],
    "year": null,
+   "length": null,
    "source": "artist",
    "releases": []
   },
@@ -24,6 +25,7 @@
     "Downtempo"
    ],
    "year": 1996,
+   "length": 616,
    "source": "track",
    "releases": [
     13131
@@ -40,6 +42,7 @@
     "Shoegaze"
    ],
    "year": 2013,
+   "length": 359,
    "source": "track",
    "releases": [
     13961697
@@ -54,6 +57,7 @@
     "Techno"
    ],
    "year": 2010,
+   "length": null,
    "source": "track",
    "releases": [
     2562117
@@ -67,6 +71,7 @@
     "Indie Rock"
    ],
    "year": 2018,
+   "length": null,
    "source": "track",
    "releases": [
     11735198
@@ -81,6 +86,7 @@
     "House"
    ],
    "year": 2017,
+   "length": null,
    "source": "video",
    "releases": [
     10799078
@@ -96,6 +102,7 @@
     "Art Rock"
    ],
    "year": 2016,
+   "length": null,
    "source": "track",
    "releases": [
     9358515,
@@ -111,6 +118,7 @@
     "House"
    ],
    "year": 2001,
+   "length": 427,
    "source": "track",
    "releases": [
     13734,
@@ -127,6 +135,7 @@
     "Post-Punk"
    ],
    "year": 2017,
+   "length": null,
    "source": "track",
    "releases": [
     10885972,
@@ -143,6 +152,7 @@
     "Deep House"
    ],
    "year": 1996,
+   "length": null,
    "source": "track",
    "releases": [
     7317,
@@ -157,6 +167,7 @@
     "Krautrock"
    ],
    "year": 2018,
+   "length": 225,
    "source": "track",
    "releases": [
     11890327
@@ -171,6 +182,7 @@
     "House"
    ],
    "year": 2016,
+   "length": null,
    "source": "track",
    "releases": [
     8619737
@@ -184,6 +196,7 @@
     "Deep House"
    ],
    "year": 2000,
+   "length": null,
    "source": "track",
    "releases": [
     10560,
@@ -201,6 +214,7 @@
     "Avantgarde"
    ],
    "year": 2014,
+   "length": 274,
    "source": "track",
    "releases": [
     7661531,
@@ -220,6 +234,7 @@
     "Experimental"
    ],
    "year": 1998,
+   "length": 716,
    "source": "track",
    "releases": [
     4177,
@@ -235,6 +250,7 @@
     "Techno"
    ],
    "year": 2008,
+   "length": null,
    "source": "track",
    "releases": [
     1547839
@@ -251,6 +267,7 @@
     "Synth-pop"
    ],
    "year": 2017,
+   "length": 198,
    "source": "track",
    "releases": [
     15836403,
@@ -267,6 +284,7 @@
     "Dub"
    ],
    "year": 1979,
+   "length": 343,
    "source": "track",
    "releases": [
     652274,
@@ -282,6 +300,7 @@
     "Techno"
    ],
    "year": 2026,
+   "length": 382,
    "source": "track",
    "releases": [
     36772543
@@ -295,6 +314,7 @@
     "Post-Punk"
    ],
    "year": 2017,
+   "length": null,
    "source": "track",
    "releases": [
     10900549
@@ -304,6 +324,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -317,6 +338,7 @@
     "Post-Punk"
    ],
    "year": 2026,
+   "length": 136,
    "source": "track",
    "releases": [
     36906231
@@ -326,6 +348,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -337,6 +360,7 @@
     "Punk"
    ],
    "year": null,
+   "length": null,
    "source": "artist",
    "releases": []
   },
@@ -344,6 +368,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -358,6 +383,7 @@
     "Post-Punk"
    ],
    "year": 2020,
+   "length": 181,
    "source": "track",
    "releases": [
     15297813,
@@ -369,6 +395,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -381,6 +408,7 @@
     "Nu-Disco"
    ],
    "year": 2023,
+   "length": 385,
    "source": "track",
    "releases": [
     27766092
@@ -397,6 +425,7 @@
     "Indie Rock"
    ],
    "year": 2020,
+   "length": 122,
    "source": "track",
    "releases": [
     15802626,
@@ -414,6 +443,7 @@
     "Soundtrack"
    ],
    "year": 1982,
+   "length": null,
    "source": "track",
    "releases": [
     368351
@@ -430,6 +460,7 @@
     "Breakbeat"
    ],
    "year": 1999,
+   "length": 241,
    "source": "track",
    "releases": [
     47839,
@@ -449,6 +480,7 @@
     "Field Recording"
    ],
    "year": 1997,
+   "length": 259,
    "source": "track",
    "releases": [
     358293
@@ -465,6 +497,7 @@
     "Breakbeat"
    ],
    "year": null,
+   "length": null,
    "source": "artist",
    "releases": []
   },
@@ -479,6 +512,7 @@
     "Minimal"
    ],
    "year": 1980,
+   "length": 1170,
    "source": "track",
    "releases": [
     3060509
@@ -488,6 +522,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -502,6 +537,7 @@
     "Experimental"
    ],
    "year": 1996,
+   "length": null,
    "source": "video",
    "releases": [
     6951668,
@@ -512,6 +548,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -525,6 +562,7 @@
     "Trance"
    ],
    "year": null,
+   "length": null,
    "source": "artist",
    "releases": []
   },
@@ -538,6 +576,7 @@
     "Tech House"
    ],
    "year": 2019,
+   "length": null,
    "source": "video",
    "releases": [
     13946206
@@ -553,6 +592,7 @@
     "Minimal"
    ],
    "year": 2012,
+   "length": null,
    "source": "track",
    "releases": [
     3783303,
@@ -567,6 +607,7 @@
     "Ambient"
    ],
    "year": 1978,
+   "length": 300,
    "source": "track",
    "releases": [
     877252
@@ -581,6 +622,7 @@
     "House"
    ],
    "year": 2013,
+   "length": 502,
    "source": "track",
    "releases": [
     4506395,
@@ -596,6 +638,7 @@
     "Techno"
    ],
    "year": 1999,
+   "length": null,
    "source": "track",
    "releases": [
     15955
@@ -610,6 +653,7 @@
     "Tribal House"
    ],
    "year": 2009,
+   "length": null,
    "source": "track",
    "releases": [
     1955851
@@ -621,6 +665,7 @@
    ],
    "styles": [],
    "year": 2019,
+   "length": null,
    "source": "track",
    "releases": [
     13453553
@@ -635,6 +680,7 @@
     "Abstract"
    ],
    "year": 2024,
+   "length": 586,
    "source": "track",
    "releases": [
     32108319
@@ -649,6 +695,7 @@
     "New Age"
    ],
    "year": 2025,
+   "length": null,
    "source": "track",
    "releases": [
     32992680
@@ -665,6 +712,7 @@
     "Solo"
    ],
    "year": 1966,
+   "length": 357,
    "source": "track",
    "releases": [
     1228443,
@@ -685,6 +733,7 @@
     "Avantgarde"
    ],
    "year": 1985,
+   "length": 179,
    "source": "track",
    "releases": [
     315061,
@@ -699,6 +748,7 @@
     "Soul"
    ],
    "year": 1991,
+   "length": null,
    "source": "track",
    "releases": [
     1654137
@@ -713,6 +763,7 @@
     "Neo Soul"
    ],
    "year": 2026,
+   "length": null,
    "source": "track",
    "releases": [
     38464794
@@ -729,6 +780,7 @@
     "Rock & Roll"
    ],
    "year": 1954,
+   "length": 180,
    "source": "track",
    "releases": [
     1726573,
@@ -748,6 +800,7 @@
     "Soul-Jazz"
    ],
    "year": 1974,
+   "length": 245,
    "source": "track",
    "releases": [
     1242802
@@ -762,6 +815,7 @@
     "Dub Techno"
    ],
    "year": 2010,
+   "length": null,
    "source": "track",
    "releases": [
     2272225
@@ -777,6 +831,7 @@
     "Indie Rock"
    ],
    "year": 2024,
+   "length": 203,
    "source": "track",
    "releases": [
     33627753
@@ -792,6 +847,7 @@
     "Piano"
    ],
    "year": 1955,
+   "length": 189,
    "source": "track",
    "releases": [
     1746907,
@@ -812,6 +868,7 @@
     "Ambient"
    ],
    "year": 1987,
+   "length": 335,
    "source": "track",
    "releases": [
     305775,
@@ -828,6 +885,7 @@
     "Vocal"
    ],
    "year": 1939,
+   "length": 180,
    "source": "track",
    "releases": [
     1642456,
@@ -848,6 +906,7 @@
     "Garage Rock"
    ],
    "year": 2011,
+   "length": 225,
    "source": "track",
    "releases": [
     2714645,
@@ -865,6 +924,7 @@
     "Future Jazz"
    ],
    "year": 2002,
+   "length": 254,
    "source": "track",
    "releases": [
     81339
@@ -874,6 +934,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -888,6 +949,7 @@
     "Drone"
    ],
    "year": 2026,
+   "length": 191,
    "source": "track",
    "releases": [
     37768692
@@ -903,6 +965,7 @@
     "Minimal"
    ],
    "year": 2024,
+   "length": null,
    "source": "track",
    "releases": [
     30143954
@@ -912,6 +975,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -923,6 +987,7 @@
     "Country"
    ],
    "year": 1960,
+   "length": null,
    "source": "track",
    "releases": [
     6414436
@@ -938,6 +1003,7 @@
     "RnB/Swing"
    ],
    "year": 1996,
+   "length": 286,
    "source": "track",
    "releases": [
     20155879
@@ -947,6 +1013,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -961,6 +1028,7 @@
     "Vocal"
    ],
    "year": 1986,
+   "length": 139,
    "source": "track",
    "releases": [
     2100991,
@@ -979,6 +1047,7 @@
     "Garage Rock"
    ],
    "year": 2009,
+   "length": 170,
    "source": "track",
    "releases": [
     1708703,
@@ -996,6 +1065,7 @@
     "Downtempo"
    ],
    "year": 2000,
+   "length": 211,
    "source": "track",
    "releases": [
     22393
@@ -1007,6 +1077,7 @@
    ],
    "styles": [],
    "year": 2025,
+   "length": null,
    "source": "video",
    "releases": [
     34438771
@@ -1022,6 +1093,7 @@
     "Experimental"
    ],
    "year": 1998,
+   "length": 320,
    "source": "track",
    "releases": [
     3213,
@@ -1038,6 +1110,7 @@
     "Psychedelic Rock"
    ],
    "year": 2015,
+   "length": 257,
    "source": "track",
    "releases": [
     8902827
@@ -1053,6 +1126,7 @@
     "Jazzdance"
    ],
    "year": 1995,
+   "length": null,
    "source": "track",
    "releases": [
     255347
@@ -1069,6 +1143,7 @@
     "Blues Rock"
    ],
    "year": 1996,
+   "length": 360,
    "source": "track",
    "releases": [
     1407433,
@@ -1086,6 +1161,7 @@
     "Soul"
    ],
    "year": 1954,
+   "length": 178,
    "source": "track",
    "releases": [
     1643150,
@@ -1105,6 +1181,7 @@
     "Tech House"
    ],
    "year": null,
+   "length": null,
    "source": "artist",
    "releases": []
   },
@@ -1118,6 +1195,7 @@
     "Soul"
    ],
    "year": null,
+   "length": null,
    "source": "track",
    "releases": [
     1785706,
@@ -1134,6 +1212,7 @@
     "IDM"
    ],
    "year": 1995,
+   "length": 573,
    "source": "track",
    "releases": [
     36891
@@ -1149,6 +1228,7 @@
     "Synth-pop"
    ],
    "year": 1983,
+   "length": 415,
    "source": "track",
    "releases": [
     2484750,
@@ -1163,6 +1243,7 @@
     "Dancehall"
    ],
    "year": 2021,
+   "length": 207,
    "source": "track",
    "releases": [
     18908317
@@ -1179,6 +1260,7 @@
     "Minimal"
    ],
    "year": 2018,
+   "length": 348,
    "source": "track",
    "releases": [
     12793349
@@ -1194,6 +1276,7 @@
     "Ambient"
    ],
    "year": 2019,
+   "length": 236,
    "source": "track",
    "releases": [
     13815695,
@@ -1210,6 +1293,7 @@
     "Baroque"
    ],
    "year": 1941,
+   "length": 646,
    "source": "track",
    "releases": [
     728386,
@@ -1229,6 +1313,7 @@
     "Experimental"
    ],
    "year": 1991,
+   "length": null,
    "source": "track",
    "releases": [
     417839
@@ -1245,6 +1330,7 @@
     "Disco"
    ],
    "year": 1983,
+   "length": 257,
    "source": "track",
    "releases": [
     118627,
@@ -1264,6 +1350,7 @@
     "Tech House"
    ],
    "year": 2005,
+   "length": null,
    "source": "track",
    "releases": [
     429408
@@ -1278,6 +1365,7 @@
     "Twist"
    ],
    "year": 1968,
+   "length": 160,
    "source": "track",
    "releases": [
     1120412,
@@ -1294,6 +1382,7 @@
     "Dub Techno"
    ],
    "year": 2026,
+   "length": 562,
    "source": "track",
    "releases": [
     37372980
@@ -1310,6 +1399,7 @@
     "Soft Rock"
    ],
    "year": 1975,
+   "length": 156,
    "source": "track",
    "releases": [
     2507304
@@ -1325,6 +1415,7 @@
     "Dub"
    ],
    "year": 2001,
+   "length": 453,
    "source": "track",
    "releases": [
     127603,
@@ -1342,6 +1433,7 @@
     "Free Improvisation"
    ],
    "year": null,
+   "length": null,
    "source": "artist",
    "releases": []
   },
@@ -1355,6 +1447,7 @@
     "Experimental"
    ],
    "year": 1982,
+   "length": 178,
    "source": "track",
    "releases": [
     47339,
@@ -1375,6 +1468,7 @@
     "Piano"
    ],
    "year": 1974,
+   "length": 69,
    "source": "track",
    "releases": [
     5289846,
@@ -1395,6 +1489,7 @@
     "New Wave"
    ],
    "year": null,
+   "length": 321,
    "source": "track",
    "releases": [
     37508154
@@ -1404,6 +1499,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -1411,6 +1507,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -1422,6 +1519,7 @@
     "Country"
    ],
    "year": 1963,
+   "length": null,
    "source": "track",
    "releases": [
     16280647
@@ -1437,6 +1535,7 @@
     "Psychedelic Rock"
    ],
    "year": 1973,
+   "length": null,
    "source": "track",
    "releases": [
     1312733
@@ -1451,6 +1550,7 @@
     "Techno"
    ],
    "year": null,
+   "length": null,
    "source": "track",
    "releases": [
     82938
@@ -1464,6 +1564,7 @@
     "Ambient"
    ],
    "year": 1984,
+   "length": null,
    "source": "video",
    "releases": [
     1464862
@@ -1480,6 +1581,7 @@
     "Pop Rap"
    ],
    "year": 2006,
+   "length": 221,
    "source": "track",
    "releases": [
     699489,
@@ -1499,6 +1601,7 @@
     "Contemporary"
    ],
    "year": 2019,
+   "length": 177,
    "source": "track",
    "releases": [
     13575062
@@ -1512,6 +1615,7 @@
     "Ambient"
    ],
    "year": null,
+   "length": 232,
    "source": "track",
    "releases": [
     19076
@@ -1528,6 +1632,7 @@
     "Classical"
    ],
    "year": 1934,
+   "length": 1121,
    "source": "track",
    "releases": [
     2606866,
@@ -1548,6 +1653,7 @@
     "Pop Rock"
    ],
    "year": 1983,
+   "length": 290,
    "source": "track",
    "releases": [
     446941,
@@ -1564,6 +1670,7 @@
     "Deep House"
    ],
    "year": 2001,
+   "length": null,
    "source": "track",
    "releases": [
     9173
@@ -1579,6 +1686,7 @@
     "Balearic"
    ],
    "year": 2024,
+   "length": null,
    "source": "track",
    "releases": [
     32435109,
@@ -1595,6 +1703,7 @@
     "Rhythm & Blues"
    ],
    "year": 1958,
+   "length": 135,
    "source": "track",
    "releases": [
     4795201,
@@ -1610,6 +1719,7 @@
     "House"
    ],
    "year": 2008,
+   "length": null,
    "source": "track",
    "releases": [
     1411344,
@@ -1626,6 +1736,7 @@
     "Vocal"
    ],
    "year": 1968,
+   "length": 174,
    "source": "track",
    "releases": [
     3131950,
@@ -1643,6 +1754,7 @@
     "Techno"
    ],
    "year": 2003,
+   "length": null,
    "source": "track",
    "releases": [
     264045
@@ -1658,6 +1770,7 @@
     "Pop Rap"
    ],
    "year": 1999,
+   "length": 125,
    "source": "track",
    "releases": [
     226712,
@@ -1678,6 +1791,7 @@
     "Alternative Rock"
    ],
    "year": 2023,
+   "length": 237,
    "source": "track",
    "releases": [
     27442044,
@@ -1696,6 +1810,7 @@
     "Experimental"
    ],
    "year": 2025,
+   "length": null,
    "source": "track",
    "releases": [
     33004785
@@ -1712,6 +1827,7 @@
     "Symphony"
    ],
    "year": 1929,
+   "length": 2302,
    "source": "track",
    "releases": [
     894643,
@@ -1725,6 +1841,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -1737,6 +1854,7 @@
     "Soul"
    ],
    "year": 1989,
+   "length": null,
    "source": "track",
    "releases": [
     6314267
@@ -1746,6 +1864,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -1757,6 +1876,7 @@
     "Breakbeat"
    ],
    "year": 2001,
+   "length": null,
    "source": "track",
    "releases": [
     20910
@@ -1768,6 +1888,7 @@
    ],
    "styles": [],
    "year": 2025,
+   "length": 489,
    "source": "track",
    "releases": [
     33599760
@@ -1777,6 +1898,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -1788,6 +1910,7 @@
     "Ambient"
    ],
    "year": 2024,
+   "length": null,
    "source": "track",
    "releases": [
     30937945
@@ -1803,6 +1926,7 @@
     "Concerto"
    ],
    "year": 2014,
+   "length": null,
    "source": "track",
    "releases": [
     7662963,
@@ -1819,6 +1943,7 @@
     "Darkwave"
    ],
    "year": 1986,
+   "length": 370,
    "source": "track",
    "releases": [
     167711,
@@ -1834,6 +1959,7 @@
     "Soul"
    ],
    "year": 1985,
+   "length": 286,
    "source": "track",
    "releases": [
     1666621
@@ -1848,6 +1974,7 @@
     "Pop Rock"
    ],
    "year": 1965,
+   "length": 153,
    "source": "track",
    "releases": [
     1151802,
@@ -1866,6 +1993,7 @@
     "Tech House"
    ],
    "year": 2005,
+   "length": null,
    "source": "video",
    "releases": [
     503529
@@ -1881,6 +2009,7 @@
     "Modal"
    ],
    "year": 1988,
+   "length": 518,
    "source": "track",
    "releases": [
     1042283,
@@ -1896,6 +2025,7 @@
     "Abstract"
    ],
    "year": 2026,
+   "length": 324,
    "source": "track",
    "releases": [
     36499789
@@ -1911,6 +2041,7 @@
     "Leftfield"
    ],
    "year": 2020,
+   "length": 478,
    "source": "track",
    "releases": [
     14992503
@@ -1924,6 +2055,7 @@
     "Ambient"
    ],
    "year": 2023,
+   "length": null,
    "source": "track",
    "releases": [
     28712626
@@ -1939,6 +2071,7 @@
     "String Ensemble"
    ],
    "year": 1960,
+   "length": 1751,
    "source": "track",
    "releases": [
     1913876,
@@ -1959,6 +2092,7 @@
     "Indie Pop"
    ],
    "year": 2012,
+   "length": 263,
    "source": "track",
    "releases": [
     3962942,
@@ -1977,6 +2111,7 @@
     "Ambient"
    ],
    "year": 1990,
+   "length": 343,
    "source": "track",
    "releases": [
     9023,
@@ -1997,6 +2132,7 @@
     "Soul"
    ],
    "year": 1960,
+   "length": 98,
    "source": "track",
    "releases": [
     1026718,
@@ -2010,6 +2146,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -2024,6 +2161,7 @@
     "Disco"
    ],
    "year": 1977,
+   "length": 277,
    "source": "track",
    "releases": [
     2702413,
@@ -2040,6 +2178,7 @@
     "Tribal"
    ],
    "year": 2023,
+   "length": null,
    "source": "track",
    "releases": [
     27347160
@@ -2054,6 +2193,7 @@
     "Pop Rap"
    ],
    "year": 2010,
+   "length": 264,
    "source": "track",
    "releases": [
     2700436,
@@ -2072,6 +2212,7 @@
     "Experimental"
    ],
    "year": 2018,
+   "length": 116,
    "source": "track",
    "releases": [
     11867916
@@ -2087,6 +2228,7 @@
     "Orchestra"
    ],
    "year": 1947,
+   "length": 1385,
    "source": "track",
    "releases": [
     1171679,
@@ -2107,6 +2249,7 @@
     "Leftfield"
    ],
    "year": 1996,
+   "length": null,
    "source": "video",
    "releases": [
     2568897
@@ -2120,6 +2263,7 @@
     "Deep House"
    ],
    "year": 2000,
+   "length": 763,
    "source": "track",
    "releases": [
     2910
@@ -2132,6 +2276,7 @@
    ],
    "styles": [],
    "year": 1962,
+   "length": null,
    "source": "track",
    "releases": [
     9010258,
@@ -2148,6 +2293,7 @@
     "Gospel"
    ],
    "year": 1969,
+   "length": 346,
    "source": "track",
    "releases": [
     2323614,
@@ -2165,6 +2311,7 @@
     "Favela Funk"
    ],
    "year": 2007,
+   "length": 164,
    "source": "track",
    "releases": [
     988121,
@@ -2180,6 +2327,7 @@
     "IDM"
    ],
    "year": 2006,
+   "length": null,
    "source": "track",
    "releases": [
     803871
@@ -2193,6 +2341,7 @@
     "Ambient"
    ],
    "year": 2018,
+   "length": null,
    "source": "track",
    "releases": [
     12246739
@@ -2209,6 +2358,7 @@
     "Orchestra"
    ],
    "year": 1951,
+   "length": 380,
    "source": "track",
    "releases": [
     1787179,
@@ -2229,6 +2379,7 @@
     "Punk"
    ],
    "year": 1982,
+   "length": 230,
    "source": "track",
    "releases": [
     63931,
@@ -2246,6 +2397,7 @@
     "Jump Blues"
    ],
    "year": 1956,
+   "length": 170,
    "source": "track",
    "releases": [
     944658,
@@ -2265,6 +2417,7 @@
     "Funk"
    ],
    "year": 1972,
+   "length": 201,
    "source": "track",
    "releases": [
     636632,
@@ -2278,6 +2431,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -2292,6 +2446,7 @@
     "Dub"
    ],
    "year": 2024,
+   "length": 222,
    "source": "track",
    "releases": [
     34381360,
@@ -2309,6 +2464,7 @@
     "Leftfield"
    ],
    "year": 2003,
+   "length": 278,
    "source": "track",
    "releases": [
     235014
@@ -2323,6 +2479,7 @@
     "Ambient"
    ],
    "year": 2019,
+   "length": 237,
    "source": "track",
    "releases": [
     25280656
@@ -2339,6 +2496,7 @@
     "Piano"
    ],
    "year": 1933,
+   "length": 2880,
    "source": "track",
    "releases": [
     1602017,
@@ -2358,6 +2516,7 @@
     "Soul"
    ],
    "year": 2015,
+   "length": null,
    "source": "video",
    "releases": [
     6764181
@@ -2373,6 +2532,7 @@
     "Big Beat"
    ],
    "year": 1997,
+   "length": 410,
    "source": "track",
    "releases": [
     18800,
@@ -2393,6 +2553,7 @@
     "Ska"
    ],
    "year": 1962,
+   "length": 174,
    "source": "track",
    "releases": [
     1402984,
@@ -2411,6 +2572,7 @@
     "Easy Listening"
    ],
    "year": 1957,
+   "length": 179,
    "source": "track",
    "releases": [
     531151,
@@ -2430,6 +2592,7 @@
     "Experimental"
    ],
    "year": 2017,
+   "length": 191,
    "source": "track",
    "releases": [
     11714838
@@ -2439,6 +2602,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -2453,6 +2617,7 @@
     "New Wave"
    ],
    "year": 1984,
+   "length": 296,
    "source": "track",
    "releases": [
     75525,
@@ -2472,6 +2637,7 @@
     "Hip Hop"
    ],
    "year": 1990,
+   "length": null,
    "source": "video",
    "releases": [
     1102153
@@ -2488,6 +2654,7 @@
     "Alt-Pop"
    ],
    "year": 2022,
+   "length": 153,
    "source": "track",
    "releases": [
     25404283,
@@ -2508,6 +2675,7 @@
     "Rock & Roll"
    ],
    "year": 1971,
+   "length": 253,
    "source": "track",
    "releases": [
     370648,
@@ -2521,6 +2689,7 @@
    "genres": [],
    "styles": [],
    "year": null,
+   "length": null,
    "source": null,
    "releases": []
   },
@@ -2532,6 +2701,7 @@
     "Folk"
    ],
    "year": 2004,
+   "length": 105,
    "source": "track",
    "releases": [
     640394
@@ -2543,6 +2713,7 @@
    ],
    "styles": [],
    "year": 2007,
+   "length": null,
    "source": "track",
    "releases": [
     7532211
@@ -2559,6 +2730,7 @@
     "Gospel"
    ],
    "year": 1968,
+   "length": 119,
    "source": "track",
    "releases": [
     1261435,
@@ -2576,6 +2748,7 @@
     "Chanson"
    ],
    "year": 2023,
+   "length": 231,
    "source": "track",
    "releases": [
     26213477
@@ -2589,6 +2762,7 @@
     "Rhythm & Blues"
    ],
    "year": 1963,
+   "length": 157,
    "source": "track",
    "releases": [
     4940016
@@ -2605,6 +2779,7 @@
     "Psychedelic Rock"
    ],
    "year": 2006,
+   "length": null,
    "source": "track",
    "releases": [
     3055060,
@@ -2619,6 +2794,7 @@
     "Chanson"
    ],
    "year": 2024,
+   "length": 140,
    "source": "track",
    "releases": [
     30482891,
@@ -2636,6 +2812,7 @@
     "Art Rock"
    ],
    "year": 1977,
+   "length": 410,
    "source": "track",
    "releases": [
     372273,
@@ -2656,6 +2833,7 @@
     "Highlife"
    ],
    "year": null,
+   "length": 162,
    "source": "track",
    "releases": [
     5123451,
@@ -2673,6 +2851,7 @@
     "Acoustic"
    ],
    "year": 1973,
+   "length": 165,
    "source": "track",
    "releases": [
     851940,
@@ -2680,6 +2859,1362 @@
     6486217,
     6845322,
     6996952
+   ]
+  },
+  "[\"xterea\",\"track 4\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Experimental",
+    "Rhythmic Noise",
+    "Techno"
+   ],
+   "year": 2025,
+   "length": 158,
+   "source": "track",
+   "releases": [
+    35439403
+   ]
+  },
+  "[\"john roberts\",\"hair\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "length": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"rossini’s\",\"la gazza ladra\"]": {
+   "genres": [
+    "Classical"
+   ],
+   "styles": [
+    "Classical",
+    "Instrumental",
+    "Opera"
+   ],
+   "year": 1960,
+   "length": null,
+   "source": "video",
+   "releases": [
+    4743309,
+    28668871
+   ]
+  },
+  "[\"the cleaners from venus\",\"tukani (monday is grey)\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Lo-Fi",
+    "Pop Rock",
+    "Power Pop"
+   ],
+   "year": 1982,
+   "length": null,
+   "source": "track",
+   "releases": [
+    1023630,
+    2121440,
+    3573986
+   ]
+  },
+  "[\"ron carroll\",\"a new day (h&f dubhouse mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Garage House",
+    "House"
+   ],
+   "year": 1993,
+   "length": 265,
+   "source": "track",
+   "releases": [
+    107796
+   ]
+  },
+  "[\"don julian and the meadowlarks\",\"heaven and paradise\"]": {
+   "genres": [
+    "Rock",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues"
+   ],
+   "year": 1955,
+   "length": 168,
+   "source": "track",
+   "releases": [
+    2029249,
+    4799259,
+    4870636,
+    6578583,
+    13914441
+   ]
+  },
+  "[\"trevor dandy\",\"don't cry little tree\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Gospel"
+   ],
+   "year": 1970,
+   "length": 186,
+   "source": "track",
+   "releases": [
+    6194830
+   ]
+  },
+  "[\"dj shafi\",\"beat bakola\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "length": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"aleksi perälä\",\"uk74r1517130\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Minimal",
+    "Techno"
+   ],
+   "year": 2015,
+   "length": 176,
+   "source": "track",
+   "releases": [
+    8135601
+   ]
+  },
+  "[\"david cordero\",\"zumaia\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": 2024,
+   "length": null,
+   "source": "track",
+   "releases": [
+    32724216
+   ]
+  },
+  "[\"jim stafford\",\"the last chant\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Rock"
+   ],
+   "styles": [
+    "Country",
+    "Comedy",
+    "Country Rock"
+   ],
+   "year": 1974,
+   "length": 200,
+   "source": "track",
+   "releases": [
+    1390653,
+    1538697,
+    2703812,
+    14639134,
+    18940546
+   ]
+  },
+  "[\"waterlillies, spooky\",\"tempted (apple crumble)\"]": {
+   "genres": [
+    "Electronic",
+    "Pop"
+   ],
+   "styles": [
+    "Downtempo",
+    "Synth-pop",
+    "House"
+   ],
+   "year": 1994,
+   "length": 281,
+   "source": "track",
+   "releases": [
+    39817,
+    115420,
+    6412884
+   ]
+  },
+  "[\"kraak & smaak, izo fitzroy, ray mang\",\"velvet seas (ray mang remix)\"]": {
+   "genres": [
+    "Electronic",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Disco",
+    "House",
+    "Nu-Disco"
+   ],
+   "year": 2025,
+   "length": null,
+   "source": "track",
+   "releases": [
+    35462605,
+    38384673
+   ]
+  },
+  "[\"the teenagers, frankie lymon\",\"why do fools fall in love\"]": {
+   "genres": [
+    "Rock",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rock & Roll",
+    "Rhythm & Blues"
+   ],
+   "year": 1955,
+   "length": 136,
+   "source": "track",
+   "releases": [
+    445675,
+    1747833,
+    2877629,
+    2901228,
+    2940286
+   ]
+  },
+  "[\"nick hakim\",\"i can see\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Rhythm & Blues"
+   ],
+   "year": 2026,
+   "length": 344,
+   "source": "track",
+   "releases": [
+    38435550
+   ]
+  },
+  "[\"federsen\",\"gamma\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dub Techno"
+   ],
+   "year": 2011,
+   "length": 467,
+   "source": "track",
+   "releases": [
+    3084953
+   ]
+  },
+  "[\"lil noid\",\"load my clip\"]": {
+   "genres": [
+    "Hip Hop"
+   ],
+   "styles": [
+    "Gangsta",
+    "Hardcore Hip-Hop",
+    "Horrorcore"
+   ],
+   "year": 2015,
+   "length": 205,
+   "source": "track",
+   "releases": [
+    7264331,
+    12065013
+   ]
+  },
+  "[\"carmen villain\",\"subtle bodies\"]": {
+   "genres": [
+    "Electronic",
+    "Classical"
+   ],
+   "styles": [
+    "Ambient",
+    "Dub Techno",
+    "Experimental"
+   ],
+   "year": 2022,
+   "length": 317,
+   "source": "track",
+   "releases": [
+    21914752,
+    22264552
+   ]
+  },
+  "[\"max von der goltz\",\"a fountain to find peace within yourself\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient"
+   ],
+   "year": null,
+   "length": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"darcy clay\",\"and it was easy\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Alternative Rock"
+   ],
+   "year": 1997,
+   "length": null,
+   "source": "track",
+   "releases": [
+    2722725,
+    3327477
+   ]
+  },
+  "[\"the monotones\",\"the book of love\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rock & Roll",
+    "Rhythm & Blues"
+   ],
+   "year": 1958,
+   "length": 135,
+   "source": "track",
+   "releases": [
+    560344,
+    1155425,
+    2140209,
+    3201341,
+    3751034
+   ]
+  },
+  "[\"ann peebles\",\"i feel like breaking up somebody's home\"]": {
+   "genres": [
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Soul",
+    "Rhythm & Blues",
+    "Gospel"
+   ],
+   "year": 1972,
+   "length": 149,
+   "source": "track",
+   "releases": [
+    648532,
+    1207474,
+    1297755,
+    1440896,
+    1917753
+   ]
+  },
+  "[\"jorge\",\"bunch of bees\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "length": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"joshua idehen\",\"this is the place\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Drum n Bass",
+    "House"
+   ],
+   "year": 2026,
+   "length": 196,
+   "source": "track",
+   "releases": [
+    36694873
+   ]
+  },
+  "[\"the cufflinks\",\"guided missiles\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Rock"
+   ],
+   "styles": [
+    "Doo Wop",
+    "Rhythm & Blues"
+   ],
+   "year": null,
+   "length": null,
+   "source": "track",
+   "releases": [
+    7064024
+   ]
+  },
+  "[\"ramsey lewis\",\"look-a-here\"]": {
+   "genres": [
+    "Jazz",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Soul-Jazz",
+    "Boogaloo",
+    "Chicago Blues"
+   ],
+   "year": 1963,
+   "length": 240,
+   "source": "track",
+   "releases": [
+    732021,
+    971656,
+    1153670,
+    1153671,
+    2334052
+   ]
+  },
+  "[\"michel moulinié\",\"l’echo de l’acier\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "Prog Rock",
+    "Ambient",
+    "Electro"
+   ],
+   "year": 1978,
+   "length": 343,
+   "source": "track",
+   "releases": [
+    1670764,
+    16526952
+   ]
+  },
+  "[\"the sundays\",\"you're not the only one i know\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Indie Rock"
+   ],
+   "year": 1990,
+   "length": 230,
+   "source": "track",
+   "releases": [
+    421396,
+    434752,
+    6684458
+   ]
+  },
+  "[\"yvette fauche\",\"crazy for you (bonez funk remix)\"]": {
+   "genres": [
+    "Hip Hop"
+   ],
+   "styles": [
+    "RnB/Swing"
+   ],
+   "year": 1999,
+   "length": null,
+   "source": "track",
+   "releases": [
+    601530,
+    2008390
+   ]
+  },
+  "[\"drifting clouds\",\"rarrandharr\"]": {
+   "genres": [
+    "Electronic",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Aboriginal",
+    "Alt-Pop",
+    "Synth-pop"
+   ],
+   "year": 2026,
+   "length": 188,
+   "source": "track",
+   "releases": [
+    37426227
+   ]
+  },
+  "[\"the blues busters\",\"there's always sunshine\"]": {
+   "genres": [
+    "Reggae",
+    "Blues"
+   ],
+   "styles": [
+    "Ska",
+    "Rocksteady",
+    "Reggae"
+   ],
+   "year": 1962,
+   "length": null,
+   "source": "track",
+   "releases": [
+    2044710,
+    2988689,
+    3652918,
+    3759288,
+    5958133
+   ]
+  },
+  "[\"odyssey\",\"our lives are shaped by what we love\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Folk, World, & Country"
+   ],
+   "styles": [
+    "Soul",
+    "Folk Rock",
+    "Funk"
+   ],
+   "year": 1972,
+   "length": 216,
+   "source": "track",
+   "releases": [
+    1144429,
+    2788668,
+    9432133
+   ]
+  },
+  "[\"synapse\",\"interrupt beyond therapy\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Industrial",
+    "Downtempo"
+   ],
+   "year": 1994,
+   "length": null,
+   "source": "video",
+   "releases": [
+    84608,
+    343054
+   ]
+  },
+  "[\"lloyd clarke\",\"now i know the reason\"]": {
+   "genres": [
+    "Reggae"
+   ],
+   "styles": [
+    "Ska"
+   ],
+   "year": 1962,
+   "length": null,
+   "source": "track",
+   "releases": [
+    1608726
+   ]
+  },
+  "[\"amy winehouse\",\"october song\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Jazz"
+   ],
+   "styles": [
+    "Soul",
+    "Rhythm & Blues",
+    "Soul-Jazz"
+   ],
+   "year": 2003,
+   "length": 205,
+   "source": "track",
+   "releases": [
+    396300,
+    501470,
+    1576593,
+    2061184,
+    4036060
+   ]
+  },
+  "[\"femtanyl\",\"katamari\"]": {
+   "genres": [
+    "Electronic",
+    "Hip Hop"
+   ],
+   "styles": [
+    "Breakcore",
+    "Hardcore",
+    "Footwork"
+   ],
+   "year": 2023,
+   "length": 158,
+   "source": "track",
+   "releases": [
+    28370062,
+    37314720
+   ]
+  },
+  "[\"superette\",\"kiss someone\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "Alternative Rock",
+    "Indie Rock"
+   ],
+   "year": 1996,
+   "length": 190,
+   "source": "track",
+   "releases": [
+    732983,
+    22605698
+   ]
+  },
+  "[\"jad & the\",\"pacific drums (liquid mix)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breaks"
+   ],
+   "year": 2019,
+   "length": 296,
+   "source": "track",
+   "releases": [
+    22998413
+   ]
+  },
+  "[\"the downbeats\",\"midnight love\"]": {
+   "genres": [
+    "Blues",
+    "Reggae"
+   ],
+   "styles": [
+    "Rhythm & Blues"
+   ],
+   "year": null,
+   "length": null,
+   "source": "track",
+   "releases": [
+    6501966
+   ]
+  },
+  "[\"brenda russell\",\"in the thick of it\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Jazz"
+   ],
+   "styles": [
+    "Soul",
+    "Soul-Jazz",
+    "Disco"
+   ],
+   "year": 1979,
+   "length": 236,
+   "source": "track",
+   "releases": [
+    661452,
+    703998,
+    806447,
+    1135343,
+    1527253
+   ]
+  },
+  "[\"succulent\",\"freshly\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dub",
+    "House"
+   ],
+   "year": 2002,
+   "length": 388,
+   "source": "track",
+   "releases": [
+    92120
+   ]
+  },
+  "[\"earth, wind & fire\",\"reasons\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Pop"
+   ],
+   "styles": [
+    "Soul",
+    "Funk",
+    "Disco"
+   ],
+   "year": 1975,
+   "length": 299,
+   "source": "track",
+   "releases": [
+    55583,
+    147242,
+    170315,
+    205841,
+    205851
+   ]
+  },
+  "[\"sub dub\",\"ambrosia\"]": {
+   "genres": [
+    "Electronic",
+    "Reggae"
+   ],
+   "styles": [
+    "Dub",
+    "Illbient",
+    "Tribal"
+   ],
+   "year": 1996,
+   "length": 408,
+   "source": "track",
+   "releases": [
+    91644
+   ]
+  },
+  "[\"jim legxacy\",\"cold lewisham roses\"]": {
+   "genres": [
+    "Hip Hop",
+    "Electronic"
+   ],
+   "styles": [
+    "Garage House",
+    "Jungle"
+   ],
+   "year": null,
+   "length": null,
+   "source": "artist",
+   "releases": []
+  },
+  "[\"jah wobble\",\"invaders of the heart\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "Experimental",
+    "Dub",
+    "New Wave"
+   ],
+   "year": 1983,
+   "length": 275,
+   "source": "track",
+   "releases": [
+    358121,
+    365082,
+    7137287,
+    10057070,
+    28414045
+   ]
+  },
+  "[\"rozie ramati\",\"drown in the clouds of dew\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "length": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"war\",\"youngblood (livin' in the streets)\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Latin"
+   ],
+   "styles": [
+    "Funk",
+    "Rhythm & Blues",
+    "Disco"
+   ],
+   "year": 1978,
+   "length": 547,
+   "source": "track",
+   "releases": [
+    391535,
+    752164,
+    1120085,
+    1199891,
+    1843349
+   ]
+  },
+  "[\"nick, how dancer, gp da zl & leejack\",\"pique da ritmada (feat. nine funk)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "length": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"vox populi!, full circle, alexis le tan, joakim bouaziz\",\"soleymani dub (full circle sannyacid dub)\"]": {
+   "genres": [
+    "Electronic",
+    "Rock"
+   ],
+   "styles": [
+    "Alternative Rock",
+    "Ambient",
+    "Avantgarde"
+   ],
+   "year": 2008,
+   "length": 303,
+   "source": "track",
+   "releases": [
+    1385337,
+    14390264,
+    36900915
+   ]
+  },
+  "[\"the earons\",\"land of hunger\"]": {
+   "genres": [
+    "Electronic",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "Disco",
+    "Dub",
+    "Synth-pop"
+   ],
+   "year": 1984,
+   "length": 426,
+   "source": "track",
+   "releases": [
+    260802,
+    604030,
+    2864414,
+    6252344,
+    9672335
+   ]
+  },
+  "[\"scott young\",\"commix\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Leftfield",
+    "Techno"
+   ],
+   "year": 2015,
+   "length": 390,
+   "source": "track",
+   "releases": [
+    7213522
+   ]
+  },
+  "[\"dove\",\"fallen (dusk)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Downtempo",
+    "House",
+    "Tech House"
+   ],
+   "year": 1991,
+   "length": 476,
+   "source": "track",
+   "releases": [
+    12319,
+    611846
+   ]
+  },
+  "[\"ships of the pharaohs\",\"one (feat. bror havnes)\"]": {
+   "genres": [],
+   "styles": [],
+   "year": null,
+   "length": null,
+   "source": null,
+   "releases": []
+  },
+  "[\"massacooramaan\",\"dancehall princess\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ghetto"
+   ],
+   "year": 2012,
+   "length": null,
+   "source": "track",
+   "releases": [
+    3695291,
+    4374184
+   ]
+  },
+  "[\"single gun theory\",\"words written backwards\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Synth-pop",
+    "Trip Hop"
+   ],
+   "year": 1991,
+   "length": 262,
+   "source": "track",
+   "releases": [
+    147128,
+    3284694
+   ]
+  },
+  "[\"jarren\",\"the way you do\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "House"
+   ],
+   "year": 2024,
+   "length": null,
+   "source": "track",
+   "releases": [
+    31957826
+   ]
+  },
+  "[\"junior byles\",\"fever\"]": {
+   "genres": [
+    "Reggae"
+   ],
+   "styles": [
+    "Roots Reggae",
+    "Dub",
+    "Reggae"
+   ],
+   "year": 1972,
+   "length": 172,
+   "source": "track",
+   "releases": [
+    533939,
+    613219,
+    885447,
+    1778225,
+    3589302
+   ]
+  },
+  "[\"greville\",\"electric push cpu mix\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Ambient",
+    "Downtempo",
+    "Electro"
+   ],
+   "year": 2025,
+   "length": 328,
+   "source": "track",
+   "releases": [
+    34194304
+   ]
+  },
+  "[\"shackleton\",\"hamas rule\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dubstep"
+   ],
+   "year": 2006,
+   "length": 441,
+   "source": "track",
+   "releases": [
+    746804
+   ]
+  },
+  "[\"headless chickens\",\"cruise control\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "Alternative Rock",
+    "Breakbeat",
+    "Disco"
+   ],
+   "year": 1992,
+   "length": 233,
+   "source": "track",
+   "releases": [
+    362187,
+    894618,
+    983981,
+    1466615,
+    1516107
+   ]
+  },
+  "[\"deee-lite\",\"party happening people\"]": {
+   "genres": [
+    "Electronic",
+    "Funk / Soul"
+   ],
+   "styles": [
+    "House",
+    "Downtempo",
+    "Acid Jazz"
+   ],
+   "year": 1994,
+   "length": 238,
+   "source": "track",
+   "releases": [
+    32510,
+    36431,
+    221493,
+    691569,
+    2554918
+   ]
+  },
+  "[\"errol dunkley\",\"a little way different\"]": {
+   "genres": [
+    "Reggae"
+   ],
+   "styles": [
+    "Dub",
+    "Roots Reggae",
+    "Reggae"
+   ],
+   "year": 1972,
+   "length": 186,
+   "source": "track",
+   "releases": [
+    1903314,
+    2218357,
+    3100935,
+    13085793,
+    13121557
+   ]
+  },
+  "[\"dubbyman\",\"the electric days (dub vocoder)\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Abstract",
+    "Electro"
+   ],
+   "year": 2005,
+   "length": null,
+   "source": "track",
+   "releases": [
+    671304
+   ]
+  },
+  "[\"lush\",\"nothing natural\"]": {
+   "genres": [
+    "Rock",
+    "Pop"
+   ],
+   "styles": [
+    "Indie Rock",
+    "Shoegaze",
+    "Alternative Rock"
+   ],
+   "year": 1991,
+   "length": 354,
+   "source": "track",
+   "releases": [
+    384503,
+    384518,
+    411406,
+    1017048,
+    3819996
+   ]
+  },
+  "[\"pal joey\",\"perfectionist\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Deep House",
+    "House",
+    "Downtempo"
+   ],
+   "year": 2013,
+   "length": 269,
+   "source": "track",
+   "releases": [
+    4936194,
+    6913505,
+    30548377
+   ]
+  },
+  "[\"odyssey\",\"don't tell me, tell her\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Electronic"
+   ],
+   "styles": [
+    "Disco",
+    "Soul",
+    "Funk"
+   ],
+   "year": 1980,
+   "length": 272,
+   "source": "track",
+   "releases": [
+    71009,
+    363182,
+    551494,
+    695596,
+    711006
+   ]
+  },
+  "[\"sans soleil\",\"that's the stuff\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Disco",
+    "Downtempo",
+    "House"
+   ],
+   "year": 2006,
+   "length": 331,
+   "source": "track",
+   "releases": [
+    700060
+   ]
+  },
+  "[\"the b-52's\",\"dirty back road\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "New Wave",
+    "Synth-pop",
+    "Alternative Rock"
+   ],
+   "year": 1980,
+   "length": 199,
+   "source": "track",
+   "releases": [
+    151210,
+    403364,
+    499670,
+    886620,
+    1053297
+   ]
+  },
+  "[\"abel lima\",\"faca não\"]": {
+   "genres": [
+    "Folk, World, & Country",
+    "Reggae"
+   ],
+   "styles": [
+    "African",
+    "Funaná"
+   ],
+   "year": 1979,
+   "length": 214,
+   "source": "track",
+   "releases": [
+    5642219
+   ]
+  },
+  "[\"casting spells\",\"teatray in the sky\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breaks",
+    "Deep House",
+    "Dub"
+   ],
+   "year": 2026,
+   "length": 418,
+   "source": "track",
+   "releases": [
+    37302957
+   ]
+  },
+  "[\"the flowers\",\"[life] after dark\"]": {
+   "genres": [
+    "Rock"
+   ],
+   "styles": [
+    "New Wave",
+    "Post-Punk"
+   ],
+   "year": 1979,
+   "length": 254,
+   "source": "track",
+   "releases": [
+    1173857
+   ]
+  },
+  "[\"michael wycoff\",\"looking up to you\"]": {
+   "genres": [
+    "Funk / Soul",
+    "Electronic"
+   ],
+   "styles": [
+    "Disco",
+    "Funk",
+    "Soul"
+   ],
+   "year": 1989,
+   "length": 318,
+   "source": "track",
+   "releases": [
+    554796,
+    935901,
+    1669994,
+    2019299,
+    11184845
+   ]
+  },
+  "[\"safety scissors\",\"blust\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Minimal"
+   ],
+   "year": 2000,
+   "length": null,
+   "source": "track",
+   "releases": [
+    34659
+   ]
+  },
+  "[\"fehlfarben\",\"ein jahr (es geht voran)\"]": {
+   "genres": [
+    "Rock",
+    "Electronic"
+   ],
+   "styles": [
+    "New Wave",
+    "Post-Punk",
+    "NDW"
+   ],
+   "year": 1980,
+   "length": 171,
+   "source": "track",
+   "releases": [
+    99821,
+    203839,
+    436880,
+    489765,
+    541098
+   ]
+  },
+  "[\"kv5\",\"landslide victory vendetta\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Downtempo",
+    "Future Jazz"
+   ],
+   "year": 2002,
+   "length": null,
+   "source": "track",
+   "releases": [
+    186784
+   ]
+  },
+  "[\"mc hellshit & dj carhouse\",\"hit city\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Experimental",
+    "Noise"
+   ],
+   "year": 1996,
+   "length": 158,
+   "source": "track",
+   "releases": [
+    157138
+   ]
+  },
+  "[\"mikkel metal\",\"bodium\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dub",
+    "Dub Techno",
+    "Minimal"
+   ],
+   "year": 2008,
+   "length": 352,
+   "source": "track",
+   "releases": [
+    1447873
+   ]
+  },
+  "[\"the truth\",\"garage dub\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Dub"
+   ],
+   "year": 1999,
+   "length": null,
+   "source": "track",
+   "releases": [
+    211590
+   ]
+  },
+  "[\"esdeekid, rico ace\",\"phantom\"]": {
+   "genres": [
+    "Hip Hop"
+   ],
+   "styles": [
+    "Drill",
+    "Trap"
+   ],
+   "year": 2025,
+   "length": 109,
+   "source": "track",
+   "releases": [
+    35569201,
+    38169210
+   ]
+  },
+  "[\"ras command\",\"razor's edge\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breaks",
+    "Dub",
+    "Dub Techno"
+   ],
+   "year": 1997,
+   "length": 399,
+   "source": "track",
+   "releases": [
+    557827
+   ]
+  },
+  "[\"darso\",\"bandung ciparay\"]": {
+   "genres": [
+    "Folk, World, & Country"
+   ],
+   "styles": [],
+   "year": 2003,
+   "length": null,
+   "source": "track",
+   "releases": [
+    37113753
+   ]
+  },
+  "[\"granite slapper\",\"turgis 45\"]": {
+   "genres": [
+    "Electronic"
+   ],
+   "styles": [
+    "Breakbeat",
+    "Drum n Bass"
+   ],
+   "year": 1997,
+   "length": null,
+   "source": "track",
+   "releases": [
+    1089697
    ]
   }
  }
