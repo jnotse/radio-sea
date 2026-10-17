@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#2b4c80" />
   <title>G-digs — FM Explorer</title>
   <link rel="preload" href="fonts/silkscreen-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
   <div id="app">
@@ -43,19 +43,27 @@
       <div class="console-shell">
         <div class="screen-bezel">
           <div id="map-wrap">
-            <canvas id="sea" aria-label="Music map. Drag to pan or orbit in 3D. Pinch, scroll or use the zoom buttons to zoom. Click or tap a track to play it. Tracks can also be found with search." tabindex="0"></canvas>
-            <div id="map-help"><span class="desktop-hint">CLICK A SQUARE TO PLAY</span><span class="touch-hint">TAP TO PLAY · PINCH TO ZOOM</span></div>
+            <canvas id="sea" aria-label="Music map. Drag to pan or orbit in 3D. Pinch, scroll or use the zoom buttons to zoom. Click or tap a grove to play one of its songs and see the rest. Songs can also be found with search." tabindex="0"></canvas>
+            <div id="map-help"><span class="desktop-hint">CLICK A GROVE TO PLAY FROM IT</span><span class="touch-hint">TAP A GROVE TO PLAY · PINCH TO ZOOM</span></div>
             <div id="map-status" role="status" aria-live="polite" hidden></div>
             <div id="map-controls" aria-label="Map controls">
               <button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button>
               <button id="btn-home" aria-label="Show the whole map" title="Show the whole map">⌂</button>
             </div>
+            <section id="grove-card" aria-labelledby="grove-card-name" hidden>
+              <header><h2 id="grove-card-name"></h2><span id="grove-card-count"></span>
+                <button id="grove-card-close" aria-label="Close the grove's songs">×</button></header>
+              <div id="grove-card-grid" role="group" aria-label="Songs in this grove"></div>
+              <p id="grove-card-more" hidden></p>
+              <p id="grove-card-song" aria-live="polite"></p>
+              <button id="grove-card-another">Another one</button>
+            </section>
             <div id="tooltip" hidden></div>
             <div id="guano-bubble" aria-hidden="true" hidden></div>
           </div>
         </div>
         <div class="console-bottom">
-          <div class="map-legend"><span><i class="legend-track"></i> SONG</span>
+          <div class="map-legend"><span><i class="legend-track"></i> GROVE</span>
             <button id="btn-routes" class="legend-toggle" aria-pressed="true" title="Show or hide trails between related groves"><i class="legend-path"></i> TRAILS</button>
             <button id="btn-topology" class="legend-toggle" aria-pressed="false" title="Switch between the 2D steppe map and the 3D topological space"><i class="legend-cube"></i> 3D MAP</button>
             <span><i class="legend-trail"></i> YOUR PATH</span></div>
@@ -103,8 +111,8 @@
     <a href="#map-panel">Map</a><a href="#detail">Player</a><a href="#sidebar">Explore</a>
   </nav>
   <script src="sea-data.js?v=8"></script>
-  <script src="landscape.js?v=5"></script>
+  <script src="landscape.js?v=6"></script>
   <script src="guano.js?v=5"></script>
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>

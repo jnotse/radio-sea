@@ -5,17 +5,21 @@ A map for wandering through music that real people played on independent radio.
 G-digs collects the tracklists of shows on stations like NTS and The Lot
 Radio, plus picks from Radiooooo, finds each song on YouTube, and lays
 everything out as a Patagonian steppe seen from above. Songs that sound alike
-grow together as groves of bushes (lenga forests, calafate and neneo
-thickets), with the Andes, glacial lakes and rivers in the open ground and
-trails leading to related groves.
+gather in groves, and each grove is its own piece of Patagonia, picked by its
+sound: autumn lenga woods for techno, ñirre woods for house, lupine meadows
+for synth-pop and new wave, a wet vega with lagoons and flamingos for dub and
+reggae, granite outcrops for rock, calafate scrub for breakbeat and hip hop,
+coirón grassland round an estancia for folk, and more. The Andes, glacial
+lakes, rivers and grazing guanacos fill the open ground, with trails leading
+to related groves.
 
-The map reads like an atlas. Far out, it shows regions, stretches of related
-groves named after their biggest ones ("dub · downtempo · drum n bass");
-nearer, each grove is one patch with its sign and how many songs it holds;
-close in, the grove opens and its songs come out as squares. Press a region
-or a grove to fly in to it, and a square to play it. When a song ends the
-music wanders on to the nearest song you haven't heard, so you can leave it
-running.
+The map shows places, not songs, like an atlas. Far out, it shows regions,
+stretches of related groves named after their biggest ones ("dub · downtempo
+· drum n bass"); nearer, each grove has its sign and how many songs it holds.
+Press a region to look closer; press a grove to play one of its songs (one
+you haven't heard, if there is one) and open its card, a little grid of all
+its songs, to pick another. When a song ends the music wanders on to the
+nearest song you haven't heard, so you can leave it running.
 
 Guano, a guanaco drawn from a souvenir plush made in Magallanes, Chile, walks
 the map with you. He trots over to each song as it starts, dances to upbeat

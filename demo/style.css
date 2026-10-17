@@ -127,7 +127,30 @@ input[type="search"]::placeholder { color: var(--dim); }
 .legend-toggle { padding: 3px 7px; font: 7px var(--pixel); color: #f6e2c4; background: #4e3426; border-color: #9a6e4f #2a1b13 #2a1b13 #9a6e4f; }
 .legend-toggle[aria-pressed="false"] { opacity: .55; }
 #btn-topology[aria-pressed="true"] { background: #1f5f72; color: #effffb; border-color: #5cc4bb #0c111d #0c111d #5cc4bb; opacity: 1; }
-.legend-track { display: inline-block; width: 7px; height: 7px; background: #2b2236; outline: 1px solid #f6ead2; }
+.legend-track { display: inline-block; width: 7px; height: 7px; background: #d06a2e; outline: 1px solid #6b4a2a; box-shadow: inset 2px 2px 0 #f0a24a; }
+/* A grove's songs, as a little grid of tiles in the grove's own colours. */
+#grove-card { position: absolute; z-index: 3; top: 30px; right: 8px; width: min(250px, calc(100% - 16px)); max-height: calc(100% - 96px);
+  display: flex; flex-direction: column; gap: 6px; padding: 8px 9px 9px; background: #f1dfb8; color: #3a2a22;
+  border: 2px solid #4a3328; box-shadow: 3px 3px 0 #3a261e66; font: 8px/1.5 var(--pixel); }
+#grove-card[hidden] { display: none; }
+#grove-card header { display: flex; align-items: center; gap: 6px; }
+#grove-card h2 { flex: 1; min-width: 0; margin: 0; font: 10px/1.3 var(--pixel); text-transform: uppercase; overflow-wrap: anywhere; color: #3a2a22; }
+#grove-card-count { color: #8a5a3a; white-space: nowrap; }
+#grove-card-close { width: 22px; height: 22px; padding: 0; font: 14px/1 var(--pixel); color: var(--wood-ink); background: var(--wood);
+  border: 2px solid; border-color: #fff4dc #4a3328 #4a3328 #fff4dc; cursor: pointer; }
+#grove-card-grid { display: grid; grid-template-columns: repeat(auto-fill, 16px); gap: 4px; padding: 3px; overflow-y: auto; min-height: 24px; }
+.song-cell { width: 16px; height: 16px; padding: 0; background: var(--tone); border: 1px solid #3a261e; cursor: pointer;
+  box-shadow: inset 2px 2px 0 #ffffff66, inset -2px -2px 0 #00000040; }
+.song-cell:hover, .song-cell:focus-visible { outline: 2px solid #3a261e; outline-offset: 1px; }
+.song-cell:hover:not(:disabled) { background: var(--tone); }
+#grove-card-close:hover:not(:disabled), #grove-card-another:hover:not(:disabled) { background: #fbecc8; color: var(--wood-ink); }
+.song-cell.heard { opacity: .45; }
+.song-cell.dim { opacity: .18; }
+.song-cell.playing { opacity: 1; outline: 2px solid #fff8ea; outline-offset: 1px; box-shadow: 0 0 0 4px #3a261e, inset 2px 2px 0 #ffffff66; }
+#grove-card-more { margin: 0; color: #8a5a3a; }
+#grove-card-song { margin: 0; min-height: 2.6em; font: 11px/1.3 Tahoma, Verdana, sans-serif; color: #3a2a22; }
+#grove-card-another { align-self: flex-start; padding: 4px 8px; font: 8px var(--pixel); text-transform: uppercase; color: var(--wood-ink); background: var(--wood);
+  border: 2px solid; border-color: #fff4dc #4a3328 #4a3328 #fff4dc; cursor: pointer; }
 .legend-path { display: inline-block; width: 16px; border-top: 2px dashed #e0b989; }
 .legend-cube { display: inline-block; width: 7px; height: 7px; background: #5cc4bb; outline: 1px solid #f0a05a; }
 .legend-trail { display: inline-block; width: 16px; border-top: 2px solid #2b2236; box-shadow: 0 1px #f6ead2; }
@@ -242,6 +265,11 @@ body[data-playback="playing"] .spectrum i:nth-child(3n) { animation-delay: -570m
   #trail button { padding: 8px 0; font-size: 12px; }
   #map-controls button { width: 44px; height: 44px; font-size: 23px; }
   #map-status { max-width: calc(100% - 74px); }
+  #grove-card { top: 28px; right: 6px; width: calc(100% - 66px); max-height: calc(100% - 40px); }
+  #grove-card-grid { grid-template-columns: repeat(auto-fill, 30px); gap: 6px; }
+  .song-cell { width: 30px; height: 30px; min-height: 0; }
+  #grove-card-close { width: 44px; height: 44px; }
+  #grove-card-another { min-height: 40px; font-size: 10px; }
   .legend-toggle { min-height: 26px; }
   .desktop-hint { display: none; }.touch-hint { display: inline; }
   .transport { gap: 6px; }

@@ -118,64 +118,80 @@ async function screenPoint(page, id) {
   }, id);
 }
 
-// Zoomed out, songs are closed into their groves (and groves into regions):
-// pressing one flies in a level. Press the song's place until its square
-// shows, then the square itself.
-// After a press that flies the camera: wait for it to set off, then to stop
-// and for the songs to finish opening or closing.
+// The 2D map shows groves, not songs (and far out, regions of groves). A
+// song is played by pressing its grove, which plays one of its songs and
+// opens a card of them all, then its tile on the card.
 async function settled(page, zoomBefore) {
   const canvas = page.locator('#sea'), zoom = () => canvas.getAttribute('data-zoom');
   if (zoomBefore !== undefined) await expect.poll(zoom).not.toBe(zoomBefore);
   let before = await zoom();
   await expect.poll(async () => { const now = await zoom(); const same = now === before; before = now; return same; },
     { intervals: [150] }).toBe(true);
-  await expect(canvas).toHaveAttribute('data-open', /^[01]$/);
+}
+async function groveOf(page, id) {
+  return page.evaluate((trackId) => {
+    const island = window.SEA_DATA.islands.find((i) => i.memberIds.includes(trackId));
+    const songs = island.memberIds.map((m) => window.SEA_DATA.releases.find((r) => r.id === m));
+    return { id: island.id, name: island.name, size: songs.length,
+      x: songs.reduce((sum, r) => sum + r.x, 0) / songs.length, y: songs.reduce((sum, r) => sum + r.y, 0) / songs.length };
+  }, id);
+}
+async function worldPoint(page, x, y) {
+  return page.evaluate(([wx, wy]) => {
+    const c = document.querySelector('#sea'), rect = c.getBoundingClientRect();
+    return { x: rect.x + rect.width / 2 + (wx - Number(c.dataset.cameraX)) * Number(c.dataset.zoom),
+      y: rect.y + rect.height / 2 + (wy - Number(c.dataset.cameraY)) * Number(c.dataset.zoom) };
+  }, [x, y]);
 }
 async function pressSong(page, id, tap = false) {
-  const canvas = page.locator('#sea');
-  for (let i = 0; i < 3 && await canvas.getAttribute('data-level') !== 'songs'; i += 1) {
-    const p = await screenPoint(page, id), zoom = await canvas.getAttribute('data-zoom');
-    if (tap) await page.touchscreen.tap(p.x, p.y); else await page.mouse.click(p.x, p.y);
+  const canvas = page.locator('#sea'), press = (p) => (tap ? page.touchscreen.tap(p.x, p.y) : page.mouse.click(p.x, p.y));
+  for (let i = 0; i < 2 && await canvas.getAttribute('data-level') === 'regions'; i += 1) {
+    const zoom = await canvas.getAttribute('data-zoom');
+    await press(await screenPoint(page, id));
     await settled(page, zoom);
   }
-  await expect(canvas).toHaveAttribute('data-open', '1');
-  const p = await screenPoint(page, id);
-  if (tap) await page.touchscreen.tap(p.x, p.y); else await page.mouse.click(p.x, p.y);
+  const grove = await groveOf(page, id);
+  await press(await worldPoint(page, grove.x, grove.y));
+  await expect(page.locator('#grove-card')).toBeVisible();
+  await expect(page.locator('#grove-card-name')).toHaveText(grove.name);
+  const tile = page.locator(`#grove-card-grid [data-track-id="${id}"]`);
+  if (tap) await tile.tap(); else await tile.click();
 }
 
-test('zoomed out the map shows groves, not songs; pressing a grove opens it and its songs play', async ({ page }) => {
+test('the map shows groves, not songs: pressing one plays a song from it and lists the rest', async ({ page }) => {
   const errors = []; page.on('pageerror', (e) => errors.push(e.message));
   await page.goto('/');
   const canvas = page.locator('#sea');
   await expect(canvas).toHaveAttribute('data-level', 'groves');
-  await expect(canvas).toHaveAttribute('data-open', '0');
-  await expect(page.locator('#map-help .desktop-hint')).toHaveText('CLICK A GROVE TO OPEN IT');
+  await expect(page.locator('#map-help .desktop-hint')).toHaveText('CLICK A GROVE TO PLAY FROM IT');
+  await expect(page.locator('#grove-card')).toBeHidden();
   // The biggest grove signs first, over its middle.
-  const grove = await page.evaluate(() => {
-    const island = window.SEA_DATA.islands.slice().sort((a, b) => b.memberIds.length - a.memberIds.length)[0];
-    const songs = island.memberIds.map((id) => window.SEA_DATA.releases.find((r) => r.id === id));
-    return { id: island.id, song: songs.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id,
-      x: songs.reduce((sum, r) => sum + r.x, 0) / songs.length, y: songs.reduce((sum, r) => sum + r.y, 0) / songs.length };
-  });
-  const rect = await canvas.boundingBox(), camera = async () => canvas.evaluate((c) => ({ x: Number(c.dataset.cameraX), y: Number(c.dataset.cameraY), zoom: Number(c.dataset.zoom) }));
-  let cam = await camera();
-  await page.mouse.move(rect.x + rect.width / 2 + (grove.x - cam.x) * cam.zoom, rect.y + rect.height / 2 + (grove.y - cam.y) * cam.zoom);
-  await expect(page.locator('#tooltip')).toContainText('Click to open');
-  await page.mouse.click(rect.x + rect.width / 2 + (grove.x - cam.x) * cam.zoom, rect.y + rect.height / 2 + (grove.y - cam.y) * cam.zoom);
-  await settled(page, String(cam.zoom));
-  await expect(canvas).toHaveAttribute('data-level', 'songs');
-  await expect(canvas).toHaveAttribute('data-open', '1');
-  await expect(page.locator('#map-help .desktop-hint')).toHaveText('CLICK A SQUARE TO PLAY');
-  cam = await camera();
-  expect(Math.hypot(cam.x - grove.x, cam.y - grove.y)).toBeLessThan(2);
-  await expect(page.locator('#youtube-player')).toHaveCount(0);
-  const p = await screenPoint(page, grove.song);
-  await page.mouse.click(p.x, p.y);
-  await expectPlaying(page, grove.song);
-  // Zooming back out closes the groves again; further out still, regions.
-  await page.locator('#btn-home').click();
-  await expect(canvas).toHaveAttribute('data-level', 'groves');
-  await expect(canvas).toHaveAttribute('data-open', '0');
+  const island = await page.evaluate(() => window.SEA_DATA.islands.slice().sort((a, b) => b.memberIds.length - a.memberIds.length)[0]);
+  const grove = await groveOf(page, island.memberIds[0]);
+  const point = await worldPoint(page, grove.x, grove.y);
+  await page.mouse.move(point.x, point.y);
+  await expect(page.locator('#tooltip')).toContainText('Click to play one');
+  await page.mouse.click(point.x, point.y);
+  await expect(page.locator('#grove-card')).toBeVisible();
+  await expect(page.locator('#grove-card-name')).toHaveText(grove.name);
+  await expect(page.locator('#grove-card-grid .song-cell')).toHaveCount(Math.min(120, grove.size));
+  // One of its songs plays, framed on the card.
+  const first = await canvas.getAttribute('data-selected');
+  expect(island.memberIds).toContain(first);
+  await expectPlaying(page, first);
+  await expect(page.locator(`#grove-card-grid [data-track-id="${first}"]`)).toHaveClass(/playing/);
+  // Any other tile plays its song; "Another one" picks one not heard yet.
+  const other = island.memberIds.find((id) => id !== first);
+  await page.locator(`#grove-card-grid [data-track-id="${other}"]`).click();
+  await expectPlaying(page, other);
+  await expect(page.locator(`#grove-card-grid [data-track-id="${first}"]`)).toHaveClass(/heard/);
+  await page.locator('#grove-card-another').click();
+  const third = await canvas.getAttribute('data-selected');
+  expect(island.memberIds).toContain(third);
+  expect([first, other]).not.toContain(third);
+  await page.locator('#grove-card-close').click();
+  await expect(page.locator('#grove-card')).toBeHidden();
+  // Further out, regions.
   for (let i = 0; i < 3; i += 1) await page.locator('#zoom-out').click();
   await expect(canvas).toHaveAttribute('data-level', 'regions');
   expect(errors).toEqual([]);
@@ -199,13 +215,10 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
   await expect(page.locator('#youtube-player')).toHaveCount(0);
   await page.locator('#btn-home').click();
   const id = await page.evaluate(() => window.SEA_DATA.releases.find((r) => r.id !== document.querySelector('#sea').dataset.selected).id);
-  let p = await screenPoint(page, id);
+  const p = await screenPoint(page, id);
   await page.mouse.move(p.x, p.y);
   await expect(page.locator('#tooltip')).toBeVisible();
   await pressSong(page, id);
-  p = await screenPoint(page, id);
-  await page.mouse.move(p.x + 1, p.y);
-  await expect(page.locator('#tooltip')).toContainText(' — ');
   await expect(canvas).toHaveAttribute('data-selected', id);
   await expectPlaying(page, id);
 });
@@ -213,7 +226,9 @@ test('wheel zoom is continuous, drag does not select, hover works after drag, ti
 // Clicking a square on the map plays it, not just selects it.
 async function expectPlaying(page, id) {
   const videoId = await page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).youtubeId, id);
-  await expect(page.locator('#youtube-player')).toHaveAttribute('src', new RegExp(`embed/${videoId}\\?`));
+  // The first song makes the player; later ones load into it, so it keeps playing.
+  await expect.poll(() => page.evaluate((video) => document.querySelector('#youtube-player')?.src.includes(`embed/${video}?`) ||
+    window.__transport?.loads.at(-1) === video, videoId)).toBe(true);
   await expect.poll(() => page.evaluate(() => window.__transport?.play ?? 0)).toBeGreaterThan(0);
 }
 
