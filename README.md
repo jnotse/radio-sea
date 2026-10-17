@@ -69,6 +69,12 @@ A grove is named after the genre at least half its songs share, or after
 its two commonest genres when it's a mix. Only a grove where most songs
 have no genres yet is named after the show they were played on.
 
+The 2D steppe has its own genre-led clustering and layout, retaining era,
+mood and radio context for songs without genres. Instruments,
+credits, formats, uploader channels, co-play sequence and spectral audio
+descriptors can inform discovery and the 3D topology without moving its
+groves. Switching views preserves each map's pan and zoom.
+
 ## Tests
 
 ```sh

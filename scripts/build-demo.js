@@ -82,7 +82,7 @@ export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {},
   return {
     ...play,
     genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
-    releaseYear: play.releaseYear ?? found?.year ?? mb?.year ?? video?.year ?? null,
+    releaseYear: play.releaseYear ?? found?.year ?? mb?.year ?? null,
     country: play.country ?? found?.country ?? mb?.country ?? video?.country ?? null,
     length: dz?.length ?? mb?.length ?? found?.length ?? video?.length ?? null,
     bpm: dz?.bpm ?? audio?.bpm ?? null,

@@ -672,7 +672,6 @@ export function layoutTopology3D(releases, similarity, {
     return vals.map((v) => ((v - min) / span) * 2 - 1);
   };
   const normU = normAxis((p) => p.u);
-  const normV = normAxis((p) => p.v);
   const normW = normAxis((p) => p.w ?? 0);
 
   const groups = islands.length > 0
@@ -682,38 +681,38 @@ export function layoutTopology3D(releases, similarity, {
     }))
     : [{ id: 0, memberIds: releases.map((r) => r.id) }];
 
-  // Order islands by mean spectral u so the Fibonacci sphere follows the spectral manifold.
+  // Order islands by their primary spectral diffusion coordinate u so related
+  // sounds start in the same sector of the 3D manifold.
   const orderedGroups = groups.slice().sort((a, b) => {
     const meanU = (ids) => ids.reduce((s, id) => s + (normU[idxById.get(id) ?? 0] ?? 0), 0) / Math.max(1, ids.length);
     return meanU(a.memberIds) - meanU(b.memberIds);
   });
 
-  const shellRadius = Math.max(14, Math.cbrt(n) * 7.5);
-  const goldenRatio = (1 + Math.sqrt(5)) / 2;
   const centres = new Map();
-
   orderedGroups.forEach((group, k) => {
-    const count = orderedGroups.length;
-    const t = count > 1 ? k / (count - 1) : 0.5;
-    const y = 1 - 2 * t;
-    const rSlice = Math.sqrt(Math.max(0, 1 - y * y));
-    const theta = (2 * Math.PI * k) / goldenRatio;
+    const members = group.memberIds.map((id) => byId.get(id)).filter(Boolean);
+    const radius = 2.0 + Math.sqrt(members.length) * 2.0;
+    const angle = k * 2.399963; // golden angle spread in X-Y
+    const distXY = k === 0 ? 0 : 12 * Math.sqrt(k);
+    const meanDens = group.memberIds.reduce((s, id) => s + (dens[idxById.get(id) ?? 0] ?? 0), 0) / Math.max(1, group.memberIds.length);
     const meanW = group.memberIds.reduce((s, id) => s + (normW[idxById.get(id) ?? 0] ?? 0), 0) / Math.max(1, group.memberIds.length);
-    const radialScale = shellRadius * (0.75 + 0.25 * Math.abs(meanW));
+    // Vertical elevation Z reflects topological density/prominence + 3rd spectral eigenvector.
+    const z = (meanDens - 0.12) * 85 + meanW * 18;
 
     centres.set(group.id, {
       id: group.id,
-      members: group.memberIds.map((id) => byId.get(id)).filter(Boolean),
-      x: Math.cos(theta) * rSlice * radialScale,
-      y: Math.sin(theta) * rSlice * radialScale,
-      z: y * radialScale * 0.75,
-      radius: 1.8 + Math.sqrt(group.memberIds.length) * 1.4,
+      members,
+      x: Math.cos(angle) * distXY,
+      y: Math.sin(angle) * distXY,
+      z,
+      radius,
     });
   });
 
   const centreList = [...centres.values()];
-  // 3D nerve relaxation: pull connected islands together, push overlapping islands apart.
-  for (let iter = 0; iter < 50; iter += 1) {
+  // 3D topological nerve relaxation: pull strongly related islands closer in 3D,
+  // while keeping generous open space between unrelated groves.
+  for (let iter = 0; iter < 65; iter += 1) {
     for (let i = 0; i < centreList.length; i += 1) {
       for (let j = i + 1; j < centreList.length; j += 1) {
         const a = centreList[i];
@@ -726,8 +725,8 @@ export function layoutTopology3D(releases, similarity, {
         const uy = dy / dist;
         const uz = dz / dist;
 
-        const wanted = a.radius + b.radius + 3.5;
-        const repel = dist < wanted ? (wanted - dist) * 0.28 : 0;
+        const wanted = a.radius + b.radius + 8.5;
+        const repel = dist < wanted ? (wanted - dist) * 0.3 : 0;
 
         let maxSim = 0;
         let sumSim = 0;
@@ -740,16 +739,16 @@ export function layoutTopology3D(releases, similarity, {
             if (s > maxSim) maxSim = s;
           }
         }
-        const aff = 0.6 * (pairs ? sumSim / pairs : 0) + 0.4 * maxSim;
-        const attract = aff > 0.15 && dist > wanted ? Math.min((aff - 0.15) * 4.5, (dist - wanted) * 0.22) : 0;
+        const aff = 0.65 * (pairs ? sumSim / pairs : 0) + 0.35 * maxSim;
+        const attract = aff > 0.25 && dist > wanted ? Math.min((aff - 0.25) * 5, (dist - wanted) * 0.18) : 0;
         const move = -repel + attract;
         if (move === 0) continue;
         a.x += ux * move;
         a.y += uy * move;
-        a.z += uz * move;
+        a.z += uz * move * 0.5;
         b.x -= ux * move;
         b.y -= uy * move;
-        b.z -= uz * move;
+        b.z -= uz * move * 0.5;
       }
     }
   }
@@ -759,30 +758,25 @@ export function layoutTopology3D(releases, similarity, {
 
   for (const centre of centreList) {
     const ordered = seriateIslandMembers(centre.members, similarity);
-    const ringRadius = centre.radius * 0.72;
-    // Tilt each island's local ring Plane slightly according to its 3D normal.
-    const norm = Math.max(0.1, Math.hypot(centre.x, centre.y, centre.z));
-    const nx = centre.x / norm;
-    const ny = centre.y / norm;
+    const ringRadius = OrderedRingRadius(ordered.length, centre.radius);
 
     ordered.forEach((release, idx) => {
       const i = idxById.get(release.id) ?? 0;
       const angle = (idx / Math.max(1, ordered.length)) * Math.PI * 2;
       const localX = Math.cos(angle) * ringRadius;
       const localY = Math.sin(angle) * ringRadius;
-      const localZ = (dens[i] - 0.5) * 4.0 + normW[i] * 2.2 + (localX * nx + localY * ny) * 0.35;
+      const localZ = (dens[i] - 0.12) * 14 + normW[i] * 3;
 
       let x = centre.x + localX;
       let y = centre.y + localY;
       let z = centre.z + localZ;
 
-      // Pull bridge records 20% toward the primary foreign island they connect to.
       const bridge = bridgeMap.get(release.id);
       if (bridge && centres.has(bridge.targetIslandId)) {
         const target = centres.get(bridge.targetIslandId);
-        x = x * 0.82 + target.x * 0.18;
-        y = y * 0.82 + target.y * 0.18;
-        z = z * 0.82 + target.z * 0.18;
+        x = x * 0.88 + target.x * 0.12;
+        y = y * 0.88 + target.y * 0.12;
+        z = z * 0.88 + target.z * 0.12;
       }
 
       placements3D.set(release.id, {
@@ -794,6 +788,10 @@ export function layoutTopology3D(releases, similarity, {
   }
 
   return placements3D;
+}
+
+function OrderedRingRadius(count, islandRadius) {
+  return count <= 1 ? 0 : islandRadius * 0.72;
 }
 
 /**

@@ -12,7 +12,7 @@
 // mismatch, so sparse radio records are not pushed apart by what nobody knows.
 
 import { keyDistance } from '../layout.js';
-import { isContextTag } from './tags.js';
+import { isContextTag, isGenreTag } from './tags.js';
 import { audioSimilarity } from '../catalog/audio-features.js';
 
 export function buildTagVocabulary(releases) {
@@ -117,7 +117,7 @@ function overlap(listA = [], listB = []) {
  * Returns a similarity function sim(a, b) in [0, 1] plus the vocabulary for
  * introspection.
  */
-export function buildSimilarity(releases) {
+export function buildSimilarity(releases, { richSignals = true } = {}) {
   const pairCache = new Map();
   const vocabulary = buildTagVocabulary(releases);
   const documents = releases.length;
@@ -150,11 +150,11 @@ export function buildSimilarity(releases) {
       bpmScore != null && keyScore != null
         ? (bpmScore + keyScore) / 2
         : bpmScore ?? keyScore;
-    const richAudioScore = audioSimilarity(extractAudioProfile(a), extractAudioProfile(b));
+    const richAudioScore = richSignals ? audioSimilarity(extractAudioProfile(a), extractAudioProfile(b)) : null;
     const audioScore = richAudioScore != null && baseAudioScore != null
       ? 0.5 * baseAudioScore + 0.5 * richAudioScore
       : richAudioScore ?? baseAudioScore;
-    const coplayScore = coplayProximity(a, b);
+    const coplayScore = richSignals ? coplayProximity(a, b) : null;
 
     const parts = [
       [3.0, tagScore],
@@ -176,4 +176,17 @@ export function buildSimilarity(releases) {
     pairCache.set(pair, score);
     return score;
   };
+}
+
+// The 2D map has its own stable feature space. Genres/styles define groves;
+// era/mood tags and radio context help place songs whose genres are unknown.
+// Extra descriptors, uploader channels, spectral audio features and co-play
+// sequence remain available to discovery and TDA without rearranging this map.
+export function buildMapSimilarity(releases) {
+  const mapReleases = releases.map((release) => ({
+    ...release,
+    tags: { all: (release.tags?.all ?? release.styles ?? [])
+      .filter((tag) => isGenreTag(tag) || /^(mood|decade|station|show|show-genre):/.test(tag)) },
+  }));
+  return buildSimilarity(mapReleases, { richSignals: false });
 }

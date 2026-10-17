@@ -37,6 +37,40 @@ test('mapCatalogue is deterministic per seed and places everything uniquely', ()
   assert.equal(cells.size, releases.length, 'no two releases may share a cell');
 });
 
+test('dense 2D groves keep markers apart and keep unrelated groves separate', () => {
+  const dense = Array.from({ length: 72 }, (_, i) => ({
+    id: `dense-${i}`, artist: `Artist ${i}`, styles: [i < 48 ? 'jazz' : 'punk'], year: 1970 + i % 30,
+  }));
+  const sim = (a, b) => a.styles[0] === b.styles[0] ? 1 : 0;
+  const { placements, islands } = mapCatalogue(dense, sim);
+  assert.equal(islands.length, 2);
+  for (const a of dense) {
+    const pa = placements.get(a.id);
+    const others = dense.filter((b) => b.id !== a.id).map((b) => ({
+      b, distance: Math.hypot(pa.x - placements.get(b.id).x, pa.y - placements.get(b.id).y),
+    })).sort((a, b) => a.distance - b.distance);
+    assert.ok(others[0].distance >= 3, `${a.id}: markers must have breathing room`);
+    assert.equal(others[0].b.styles[0], a.styles[0], 'nearest song stays in the same grove');
+  }
+});
+
+test('rich TDA descriptors change 3D analysis without rearranging the 2D map or trails', () => {
+  const base = new RadioSeaDiscovery({ releases, seed: 'independent-map' });
+  const enriched = releases.map((r, i) => ({
+    ...r,
+    tags: { all: [...(r.tags?.all ?? r.styles), `inst:instrument-${i % 3}`, `credit:producer-${i % 2}`,
+      'format:12"', 'channel:Shared curator', 'city:London'] },
+    radioPlays: [{ station: 'radio', show: 'Shared set', sourceUrl: 'https://radio.example/set', position: i }],
+    tracks: r.tracks.map((t) => ({ ...t, brightness: i % 2, pulseClarity: i % 3 / 2 })),
+  }));
+  const rich = new RadioSeaDiscovery({ releases: enriched, seed: 'independent-map' });
+  assert.deepEqual(rich.islands, base.islands);
+  assert.deepEqual(rich.placements, base.placements);
+  assert.deepEqual(rich.depths, base.depths);
+  assert.deepEqual(rich.tradeRoutes(), base.tradeRoutes());
+  assert.notDeepEqual(rich.topology.coordinates, base.topology.coordinates, 'rich signals still inform 3D');
+});
+
 test('the sea preserves meaning: neighbours are more similar than random pairs', () => {
   const { placements } = mapCatalogue(releases, similarity, { seed: 'world-1' });
   const rows = releases.map((r) => ({ r, pos: placements.get(r.id) }));

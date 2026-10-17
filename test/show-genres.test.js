@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { mergeCatalogue } from '../src/catalog/resolve.js';
 import { playToRaw } from '../scripts/build-demo.js';
-import { buildSimilarity } from '../src/mapping/embed.js';
+import { buildMapSimilarity, buildSimilarity } from '../src/mapping/embed.js';
 import { clusterReleases } from '../src/mapping/cartography.js';
 import { explainSimilarity } from '../src/explain.js';
 
@@ -98,4 +98,18 @@ test('unknown tempo, year, label or country never adds similarity', () => {
     play('B', 'Two', { genres: ['doo wop'], station: 'nts', show: 'Other', showGenres: ['Doo Wop'] }),
   ]);
   assert.equal(similarity(releases[0], releases[1]), 0);
+});
+
+test('2D groves use track genres, with show context as fallback for unknown tracks', () => {
+  const { releases } = build([
+    play('A', 'Jazz one', { genres: ['jazz', 'hard bop'], instruments: ['synthesizer'] }),
+    play('B', 'Jazz two', { genres: ['jazz', 'hard bop'], instruments: ['saxophone'] }),
+    play('C', 'Punk one', { genres: ['punk'], instruments: ['synthesizer'] }),
+    play('D', 'Punk two', { genres: ['punk'], instruments: ['saxophone'] }),
+    play('E', 'Unknown one', { show: 'Uncatalogued set', showGenres: [] }),
+    play('F', 'Unknown two', { show: 'Uncatalogued set', showGenres: [] }),
+  ]);
+  const islands = clusterReleases(releases, buildMapSimilarity(releases));
+  assert.deepEqual(islands.map((i) => [i.name, i.members.length]).sort(),
+    [['Uncatalogued set', 2], ['hard bop', 2], ['punk', 2]].sort());
 });
