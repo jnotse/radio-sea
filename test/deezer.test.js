@@ -74,3 +74,28 @@ test('a stopped run keeps what it found and resumes with the rest', async () => 
 test('search queries drop quotes and use the primary artist', () => {
   assert.equal(deezerQuery({ artist: 'T.I., Chris Brown', title: 'Say "Yes"' }), 'artist:"T.I." track:"Say Yes"');
 });
+
+test('preview audio analysis fills in missing BPM and attaches MIR descriptors', async () => {
+  const { fetchImpl } = fakeFetch({
+    '/track/137844667': { ...TRACK, bpm: 0, rank: 24500, preview: 'https://cdnt-preview.dzcdn.net/stream/c-123.mp3' },
+  });
+  const found = await lookupDeezer(
+    { ...play, ids: { deezer: 137844667 } },
+    {
+      fetchImpl,
+      ...fast,
+      analyzePreview: async (url) => ({
+        bpm: 128,
+        key: 'F#',
+        mode: 'minor',
+        brightness: 0.42,
+        pulseClarity: 0.78,
+        previewUrl: url,
+      }),
+    },
+  );
+  assert.equal(found.bpm, 128);
+  assert.equal(found.rank, 24500);
+  assert.equal(found.audio.key, 'F#');
+  assert.equal(found.audio.pulseClarity, 0.78);
+});

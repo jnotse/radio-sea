@@ -16,16 +16,29 @@ import { normalizeCountry } from './filters.js';
 
 const KEY_PITCH = { C: 0, 'C#': 1, Db: 1, D: 2, 'D#': 3, Eb: 3, E: 4, F: 5, 'F#': 6, Gb: 6, G: 7, 'G#': 8, Ab: 8, A: 9, 'A#': 10, Bb: 10, B: 11 };
 
+function parseKey(raw) {
+  if (!raw || typeof raw !== 'string') return null;
+  const m = /^([A-G](?:#|b)?)\s*(m|min|minor|maj|major)?$/i.exec(raw.trim());
+  if (!m) return null;
+  const rootName = m[1][0].toUpperCase() + (m[1][1] ?? '');
+  const pitch = KEY_PITCH[rootName];
+  if (pitch == null) return null;
+  const minor = /^m(in(or)?)?$/i.test(m[2] ?? '');
+  // A minor key shares the key signature of its relative major (+3 semitones).
+  return { circlePitch: minor ? (pitch + 3) % 12 : pitch, minor };
+}
+
 // Distance on the circle of fifths, 0..6 -> 0..1.
 export function keyDistance(keyA, keyB) {
-  const a = KEY_PITCH[keyA];
-  const b = KEY_PITCH[keyB];
-  if (a == null || b == null) return 1;
+  const a = parseKey(keyA);
+  const b = parseKey(keyB);
+  if (!a || !b) return 1;
   const fifthsOrder = [0, 7, 2, 9, 4, 11, 6, 1, 8, 3, 10, 5]; // pitch class by fifths index
-  const ia = fifthsOrder.indexOf(a);
-  const ib = fifthsOrder.indexOf(b);
+  const ia = fifthsOrder.indexOf(a.circlePitch);
+  const ib = fifthsOrder.indexOf(b.circlePitch);
   const step = Math.min((ia - ib + 12) % 12, (ib - ia + 12) % 12);
-  return step / 6;
+  const modeStep = a.minor === b.minor ? 0 : 0.5;
+  return Math.min(1, (step + modeStep) / 6);
 }
 
 function dominantStyle(release) {

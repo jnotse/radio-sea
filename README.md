@@ -39,6 +39,7 @@ push to `main`; GitHub Pages republishes automatically.
 
 ```sh
 npm run catalog:extend    # add new songs from the saved radio tracklists
+npm run catalog:radiooooo # Radiooooo picks: one per country and decade not yet sampled
 npm run catalog:genres    # look up each song's own genres on MusicBrainz
 npm run catalog:deezer    # tempo (BPM), length and loudness from Deezer
 npm run catalog:youtube   # length, album and label from YouTube's video details
@@ -63,8 +64,10 @@ pages one every 15 seconds and pauses whenever YouTube asks it to slow down.
 
 Stations only describe whole shows ("this set is jazz, drum & bass, reggae"),
 not single songs. So songs are grouped by their own genres once they have
-been looked up; a song without any stays with the show it was played on, and
-its grove is named after that show.
+been looked up; a song without any stays with the show it was played on.
+A grove is named after the genre at least half its songs share, or after
+its two commonest genres when it's a mix. Only a grove where most songs
+have no genres yet is named after the show they were played on.
 
 ## Tests
 

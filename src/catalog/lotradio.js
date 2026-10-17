@@ -37,6 +37,7 @@ export function parseLotRadioShowPage(html, { station = 'lotradio' } = {}) {
     const showName = episode.show?.name ?? '';
     const genres = (episode.genres?.items ?? []).map((g) => g.name).filter(Boolean);
     const date = episode.date ? String(episode.date).slice(0, 10) : null;
+    let position = 0;
     for (const track of episode.tracklist) {
       if (!track?.title) continue;
       plays.push({
@@ -45,6 +46,8 @@ export function parseLotRadioShowPage(html, { station = 'lotradio' } = {}) {
         // names the guest.
         show: [showName, episode.title].filter((part, i, all) => part && all.indexOf(part) === i).join(': '),
         date,
+        position: position++,
+        ...(track.timestamp ? { timestamp: track.timestamp } : {}),
         artist: track.artist ?? '',
         title: track.title,
         ids: {},

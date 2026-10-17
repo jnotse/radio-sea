@@ -39,116 +39,163 @@
   const bushOf = (members) => (members >= 8 ? 'lenga' : members >= 4 ? 'calafate' : members >= 2 ? 'neneo' : 'coiron');
 
   /**
-   * Top-down Patagonian steppe for the map, in world units. Every cluster of
-   * songs is a grove of bushes: lenga forest for the big ones, calafate and
-   * neneo thickets for smaller ones, coirón tussocks for single songs. Where
-   * no song is near, the Andes rise in the west with glacial lakes at their
-   * feet, and rivers wind across the steppe. Returns a bitmap with `scale`
-   * pixels per world unit and its world origin.
+   * Top-down Patagonian steppe for the map, in world units, without an edge.
+   * Every cluster of songs is a grove of bushes: lenga forest for the big
+   * ones, calafate and neneo thickets for smaller ones, coirón tussocks for
+   * single songs. Where no song is near, the Andes rise in the west with
+   * glacial lakes at their feet, and rivers wind across the steppe; past the
+   * songs the range and the steppe go on. The land is painted in square tiles
+   * of `scale` pixels per world unit as a view first reaches them, and kept.
    */
   function buildTerrain(data, scale = 2) {
     const songs = data.releases.filter((r) => Number.isFinite(r.x) && Number.isFinite(r.y));
-    const islands = data.islands;
-    const pad = 60; // enough land to fill a tall phone screen at the widest zoom
+    const byId = new Map(songs.map((r) => [r.id, r]));
+    // Pixel (0, 0) lies 60 units north-west of the songs and the range is as
+    // wide as it was when the land was one picture of them, so that land
+    // looks exactly as before.
+    const pad = 60;
     const minX = Math.floor(Math.min(...songs.map((r) => r.x)) - pad), maxX = Math.ceil(Math.max(...songs.map((r) => r.x)) + pad);
-    const minY = Math.floor(Math.min(...songs.map((r) => r.y)) - pad), maxY = Math.ceil(Math.max(...songs.map((r) => r.y)) + pad);
-    const W = (maxX - minX) * scale, H = (maxY - minY) * scale;
-    const toPx = (wx) => Math.round((wx - minX) * scale), toPy = (wy) => Math.round((wy - minY) * scale);
+    const minY = Math.floor(Math.min(...songs.map((r) => r.y)) - pad);
+    const span = maxX - minX;
+    const TILE = 128, MARGIN = 8, FAR = 14, MAX_TILES = 384;
+    const at = (song) => ({ x: Math.round((song.x - minX) * scale), y: Math.round((song.y - minY) * scale) });
+    const spots = songs.map(at);
+    const bushes = data.islands.flatMap((island) => {
+      const members = island.memberIds.map((id) => byId.get(id)).filter(Boolean);
+      return members.map((song) => ({ ...at(song), r: (members.length > 1 ? 4.2 : 2.6) * scale, size: island.memberIds.length }));
+    });
 
-    // How far each pixel is from the nearest song (capped): features keep their distance.
-    const FAR = 14;
-    const clearance = new Float32Array(W * H).fill(FAR);
-    for (const song of songs) {
-      const cx = toPx(song.x), cy = toPy(song.y), reach = FAR * scale;
-      for (let py = Math.max(0, cy - reach); py <= Math.min(H - 1, cy + reach); py += 1) {
-        for (let px = Math.max(0, cx - reach); px <= Math.min(W - 1, cx + reach); px += 1) {
-          const d = Math.hypot(px - cx, py - cy) / scale, i = py * W + px;
-          if (d < clearance[i]) clearance[i] = d;
-        }
-      }
-    }
-    // Which grove each pixel belongs to, and how dense the bushes are there.
-    const density = new Float32Array(W * H), grove = new Int16Array(W * H).fill(-1);
-    for (const island of islands) {
-      const members = island.memberIds.map((id) => songs.find((r) => r.id === id)).filter(Boolean);
-      for (const song of members) {
-        const cx = toPx(song.x), cy = toPy(song.y), r = (members.length > 1 ? 4.2 : 2.6) * scale, reach = Math.ceil(r);
+    /** One tile: pixels [tx, tx + 1) × [ty, ty + 1) in TILE units, worked out with a margin so tiles meet. */
+    function paintTile(tx, ty) {
+      const x0 = tx * TILE - MARGIN, y0 = ty * TILE - MARGIN, W = TILE + 2 * MARGIN, H = W;
+      // How far each pixel is from the nearest song (capped): features keep their distance.
+      const clearance = new Float32Array(W * H).fill(FAR);
+      for (const spot of spots) {
+        const cx = spot.x - x0, cy = spot.y - y0, reach = FAR * scale;
         for (let py = Math.max(0, cy - reach); py <= Math.min(H - 1, cy + reach); py += 1) {
           for (let px = Math.max(0, cx - reach); px <= Math.min(W - 1, cx + reach); px += 1) {
-            const v = 1 - Math.hypot(px - cx, py - cy) / r, i = py * W + px;
-            if (v > density[i]) { density[i] = v; grove[i] = island.memberIds.length; }
+            const d = Math.hypot(px - cx, py - cy) / scale, i = py * W + px;
+            if (d < clearance[i]) clearance[i] = d;
           }
         }
       }
+      // Which grove each pixel belongs to, and how dense the bushes are there.
+      const density = new Float32Array(W * H), grove = new Int16Array(W * H).fill(-1);
+      for (const bush of bushes) {
+        const cx = bush.x - x0, cy = bush.y - y0, reach = Math.ceil(bush.r);
+        for (let py = Math.max(0, cy - reach); py <= Math.min(H - 1, cy + reach); py += 1) {
+          for (let px = Math.max(0, cx - reach); px <= Math.min(W - 1, cx + reach); px += 1) {
+            const v = 1 - Math.hypot(px - cx, py - cy) / bush.r, i = py * W + px;
+            if (v > density[i]) { density[i] = v; grove[i] = bush.size; }
+          }
+        }
+      }
+      // The range runs down the west of the songs and falls away to steppe
+      // beyond it; further east only a few lone massifs rise.
+      const mountain = new Float32Array(W * H);
+      for (let py = 0; py < H; py += 1) {
+        for (let px = 0; px < W; px += 1) {
+          const i = py * W + px, wx = minX + (x0 + px) / scale, wy = minY + (y0 + py) / scale;
+          const west = Math.max(0, 1 - Math.abs(wx - minX) / (span * 0.3));
+          const range = noise(wx / 10, wy / 10, 40) * 0.5 + noise(wx / 3.5, wy / 3.5, 41) * 0.2 + west * 0.75 - 0.75;
+          const massif = (noise(wx / 16, wy / 16, 51) - 0.74) * 2.2 + (noise(wx / 3.5, wy / 3.5, 41) - 0.5) * 0.2;
+          const room = Math.min(1, Math.max(0, (clearance[i] - 7) / 4));
+          mountain[i] = Math.max(range, massif) * room;
+        }
+      }
+
+      const bitmap = document.createElement('canvas');
+      bitmap.width = TILE; bitmap.height = TILE;
+      const g = bitmap.getContext('2d');
+      const image = g.createImageData(TILE, TILE);
+      const paint = (gx, gy, c) => {
+        const px = gx - x0 - MARGIN, py = gy - y0 - MARGIN;
+        if (px < 0 || py < 0 || px >= TILE || py >= TILE) return;
+        const o = (py * TILE + px) * 4; image.data[o] = c[0]; image.data[o + 1] = c[1]; image.data[o + 2] = c[2]; image.data[o + 3] = 255;
+      };
+      for (let py = MARGIN; py < H - MARGIN; py += 1) {
+        for (let px = MARGIN; px < W - MARGIN; px += 1) {
+          const i = py * W + px, gx = x0 + px, gy = y0 + py, room = clearance[i];
+          const wx = minX + gx / scale, wy = minY + gy / scale;
+          const dither = (gx + gy) % 2 === 0;
+          const patch = noise(wx / 4, wy / 4, 42), fine = hash(gx, gy, 43);
+          // Golden steppe with olive and pale straw patches and scattered tufts.
+          let c = patch > 0.68 ? (fine < 0.22 ? COLORS.oliveDark : COLORS.olive)
+            : patch < 0.26 ? (fine < 0.3 ? COLORS.steppe : COLORS.gravel)
+            : fine < (patch < 0.42 ? 0.2 : 0.07) ? COLORS.steppeDark : COLORS.steppe;
+          if (fine > 0.988) c = COLORS.gravelDark;
+          // Mountains, lit orange from the west, with snow and glaciers on top.
+          const m = mountain[i];
+          if (m > 0.02) {
+            const facing = mountain[i - 1] - mountain[i + 1] + (mountain[i - W] - mountain[i + W]) * 0.5;
+            const lit = facing < -0.003, shaded = facing > 0.006;
+            c = m > 0.26 ? (shaded ? COLORS.snowShade : dither && !lit ? COLORS.glacier : COLORS.snow)
+              : m > 0.09 ? (lit ? COLORS.granite : shaded ? COLORS.graniteShade : COLORS.graniteDark)
+              : dither ? COLORS.lengaDark : COLORS.lenga; // lenga forest at the foot of the range
+          }
+          // Glacial lakes in open ground, and rivers winding between the groves.
+          const lake = noise(wx / 11, wy / 11, 44) + (m > 0 ? 0.08 : 0) - Math.max(0, 5.5 - room) * 0.2;
+          if (lake > 0.78 && m < 0.09) c = lake > 0.82 ? (lake > 0.86 && dither ? COLORS.lake : COLORS.lakeLight) : COLORS.shallow;
+          const bend = Math.abs(noise(wx / 30, wy / 30, 45) - 0.5);
+          if (bend < 0.01 && room > 2.5 && m < 0.09) c = bend < 0.005 ? COLORS.lakeLight : COLORS.shallow;
+          paint(gx, gy, c);
+        }
+      }
+      // Groves: bushes on a jittered grid, denser near the songs, lit from the west.
+      const cell = 3;
+      for (let gy = Math.floor(y0 / cell) * cell; gy < y0 + H; gy += cell) {
+        for (let gx = Math.floor(x0 / cell) * cell; gx < x0 + W; gx += cell) {
+          const bx = gx + Math.floor(hash(gx, gy, 46) * cell), by = gy + Math.floor(hash(gx, gy, 47) * cell);
+          const px = bx - x0, py = by - y0;
+          if (px < 0 || py < 0 || px >= W || py >= H) continue;
+          const i = py * W + px;
+          if (grove[i] < 0 || hash(gx, gy, 48) > density[i] * 1.6) continue;
+          const kind = BUSHES[bushOf(grove[i])], base = rgb(kind.base), light = rgb(kind.light), dark = rgb(kind.dark);
+          const r = Math.max(1, kind.size - (hash(gx, gy, 49) > 0.6 ? 1 : 0));
+          paint(bx + r, by + r, COLORS.steppeDark); // shadow falls east
+          for (let dy = -r; dy <= r; dy += 1) {
+            for (let dx = -r; dx <= r; dx += 1) {
+              if (dx * dx + dy * dy > r * r + 0.5) continue;
+              paint(bx + dx, by + dy, dx + dy < -r * 0.6 ? light : dx + dy > r * 0.6 ? dark : base);
+            }
+          }
+          if (kind.berry && hash(gx, gy, 50) > 0.55) paint(bx, by, rgb(kind.berry));
+        }
+      }
+      g.putImageData(image, 0, 0);
+      return bitmap;
     }
 
-    const bitmap = document.createElement('canvas');
-    bitmap.width = W; bitmap.height = H;
-    const g = bitmap.getContext('2d');
-    const image = g.createImageData(W, H);
-    const paint = (px, py, c) => {
-      if (px < 0 || py < 0 || px >= W || py >= H) return;
-      const o = (py * W + px) * 4; image.data[o] = c[0]; image.data[o + 1] = c[1]; image.data[o + 2] = c[2]; image.data[o + 3] = 255;
-    };
-    const span = maxX - minX;
-    const mountainAt = (px, py) => {
-      const wx = minX + px / scale, wy = minY + py / scale;
-      // The range runs down the western edge; further east only a few lone massifs rise.
-      const west = Math.max(0, 1 - (wx - minX) / (span * 0.3));
-      const range = noise(wx / 10, wy / 10, 40) * 0.5 + noise(wx / 3.5, wy / 3.5, 41) * 0.2 + west * 0.75 - 0.75;
-      const massif = (noise(wx / 16, wy / 16, 51) - 0.74) * 2.2 + (noise(wx / 3.5, wy / 3.5, 41) - 0.5) * 0.2;
-      const room = Math.min(1, Math.max(0, (clearance[py * W + px] - 7) / 4));
-      return Math.max(range, massif) * room;
-    };
-    for (let py = 0; py < H; py += 1) {
-      for (let px = 0; px < W; px += 1) {
-        const i = py * W + px, wx = minX + px / scale, wy = minY + py / scale, room = clearance[i];
-        const dither = (px + py) % 2 === 0;
-        const patch = noise(wx / 4, wy / 4, 42), fine = hash(px, py, 43);
-        // Golden steppe with olive and pale straw patches and scattered tufts.
-        let c = patch > 0.68 ? (fine < 0.22 ? COLORS.oliveDark : COLORS.olive)
-          : patch < 0.26 ? (fine < 0.3 ? COLORS.steppe : COLORS.gravel)
-          : fine < (patch < 0.42 ? 0.2 : 0.07) ? COLORS.steppeDark : COLORS.steppe;
-        if (fine > 0.988) c = COLORS.gravelDark;
-        // Mountains, lit orange from the west, with snow and glaciers on top.
-        const m = mountainAt(px, py);
-        if (m > 0.02) {
-          const facing = mountainAt(px - 1, py) - mountainAt(px + 1, py) + (mountainAt(px, py - 1) - mountainAt(px, py + 1)) * 0.5;
-          const lit = facing < -0.003, shaded = facing > 0.006;
-          c = m > 0.26 ? (shaded ? COLORS.snowShade : dither && !lit ? COLORS.glacier : COLORS.snow)
-            : m > 0.09 ? (lit ? COLORS.granite : shaded ? COLORS.graniteShade : COLORS.graniteDark)
-            : dither ? COLORS.lengaDark : COLORS.lenga; // lenga forest at the foot of the range
+    // Painted tiles, least recently drawn first, so a long wander keeps memory in check.
+    const tiles = new Map();
+    /**
+     * Draws the land a camera ({ x, y, zoom } in world units and pixels per
+     * unit) shows on a `width` × `height` canvas. Tiles not painted yet are
+     * painted until `budgetMs` runs out; it returns false if some are left.
+     */
+    function draw(ctx, cam, width, height, budgetMs = Infinity) {
+      const toScreenX = (gx) => Math.round((minX + gx / scale - cam.x) * cam.zoom + width / 2);
+      const toScreenY = (gy) => Math.round((minY + gy / scale - cam.y) * cam.zoom + height / 2);
+      const toPixelX = (sx) => ((sx - width / 2) / cam.zoom + cam.x - minX) * scale;
+      const toPixelY = (sy) => ((sy - height / 2) / cam.zoom + cam.y - minY) * scale;
+      const start = performance.now();
+      let complete = true;
+      for (let ty = Math.floor(toPixelY(0) / TILE); ty <= Math.floor(toPixelY(height) / TILE); ty += 1) {
+        for (let tx = Math.floor(toPixelX(0) / TILE); tx <= Math.floor(toPixelX(width) / TILE); tx += 1) {
+          const key = `${tx},${ty}`;
+          let bitmap = tiles.get(key);
+          if (bitmap) tiles.delete(key);
+          else if (performance.now() - start < budgetMs) bitmap = paintTile(tx, ty);
+          else { complete = false; continue; }
+          tiles.set(key, bitmap);
+          if (tiles.size > MAX_TILES) tiles.delete(tiles.keys().next().value);
+          const left = toScreenX(tx * TILE), top = toScreenY(ty * TILE);
+          ctx.drawImage(bitmap, left, top, toScreenX((tx + 1) * TILE) - left, toScreenY((ty + 1) * TILE) - top);
         }
-        // Glacial lakes in open ground, and rivers winding between the groves.
-        const lake = noise(wx / 11, wy / 11, 44) + (m > 0 ? 0.08 : 0) - Math.max(0, 5.5 - room) * 0.2;
-        if (lake > 0.78 && m < 0.09) c = lake > 0.82 ? (lake > 0.86 && dither ? COLORS.lake : COLORS.lakeLight) : COLORS.shallow;
-        const bend = Math.abs(noise(wx / 30, wy / 30, 45) - 0.5);
-        if (bend < 0.01 && room > 2.5 && m < 0.09) c = bend < 0.005 ? COLORS.lakeLight : COLORS.shallow;
-        paint(px, py, c);
       }
+      return complete;
     }
-    // Groves: bushes on a jittered grid, denser near the songs, lit from the west.
-    const cell = 3;
-    for (let gy = 0; gy < H; gy += cell) {
-      for (let gx = 0; gx < W; gx += cell) {
-        const px = gx + Math.floor(hash(gx, gy, 46) * cell), py = gy + Math.floor(hash(gx, gy, 47) * cell);
-        if (px >= W || py >= H) continue;
-        const i = py * W + px;
-        if (grove[i] < 0 || hash(gx, gy, 48) > density[i] * 1.6) continue;
-        const kind = BUSHES[bushOf(grove[i])], base = rgb(kind.base), light = rgb(kind.light), dark = rgb(kind.dark);
-        const r = Math.max(1, kind.size - (hash(gx, gy, 49) > 0.6 ? 1 : 0));
-        paint(px + r, py + r, COLORS.steppeDark); // shadow falls east
-        for (let dy = -r; dy <= r; dy += 1) {
-          for (let dx = -r; dx <= r; dx += 1) {
-            if (dx * dx + dy * dy > r * r + 0.5) continue;
-            paint(px + dx, py + dy, dx + dy < -r * 0.6 ? light : dx + dy > r * 0.6 ? dark : base);
-          }
-        }
-        if (kind.berry && hash(gx, gy, 50) > 0.55) paint(px, py, rgb(kind.berry));
-      }
-    }
-    g.putImageData(image, 0, 0);
-    return { bitmap, minX, minY, scale, ground: PALETTE.steppe };
+    return { draw, ground: PALETTE.steppe };
   }
 
   /** The towers of Paine at sunset over a turquoise lake and golden steppe. */

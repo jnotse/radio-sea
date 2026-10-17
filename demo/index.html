@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#2b4c80" />
   <title>G-digs — FM Explorer</title>
   <link rel="preload" href="fonts/silkscreen-latin-400.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
   <div id="app">
@@ -30,7 +30,6 @@
           <p id="search-count" class="sub" role="status" aria-live="polite" hidden></p>
           <ul id="search-results" aria-labelledby="search-count" hidden></ul>
         </section>
-        <section><h2>Stations</h2><div id="station-chips" class="chips station-list"></div></section>
         <section><h2>Genres</h2><div id="tag-chips" class="chips"></div></section>
         <section class="explore-actions"><div class="buttons">
           <button id="btn-banger">✳ surprise me</button><button id="btn-clear">clear filters</button>
@@ -40,11 +39,11 @@
     </aside>
 
     <main id="map-panel" class="window" aria-label="Radio map" tabindex="-1">
-      <div class="window-title"><span>the steppe</span><span class="title-stripes" aria-hidden="true"></span></div>
+      <div class="window-title"><span id="map-window-title">the steppe</span><span class="title-stripes" aria-hidden="true"></span></div>
       <div class="console-shell">
         <div class="screen-bezel">
           <div id="map-wrap">
-            <canvas id="sea" aria-label="Music map. Drag to pan. Pinch, scroll or use the zoom buttons to zoom. Click or tap a track to play it. Tracks can also be found with search." tabindex="0"></canvas>
+            <canvas id="sea" aria-label="Music map. Drag to pan or orbit in 3D. Pinch, scroll or use the zoom buttons to zoom. Click or tap a track to play it. Tracks can also be found with search." tabindex="0"></canvas>
             <div id="map-help"><span class="desktop-hint">CLICK A SQUARE TO PLAY</span><span class="touch-hint">TAP TO PLAY · PINCH TO ZOOM</span></div>
             <div id="map-status" role="status" aria-live="polite" hidden></div>
             <div id="map-controls" aria-label="Map controls">
@@ -57,6 +56,7 @@
         <div class="console-bottom">
           <div class="map-legend"><span><i class="legend-track"></i> SONG</span>
             <button id="btn-routes" class="legend-toggle" aria-pressed="true" title="Show or hide trails between related groves"><i class="legend-path"></i> TRAILS</button>
+            <button id="btn-topology" class="legend-toggle" aria-pressed="false" title="Switch between the 2D steppe map and the 3D topological space"><i class="legend-cube"></i> 3D MAP</button>
             <span><i class="legend-trail"></i> YOUR PATH</span></div>
         </div>
       </div>
@@ -100,9 +100,9 @@
   <nav class="mobile-nav" aria-label="Explore sections">
     <a href="#map-panel">Map</a><a href="#detail">Player</a><a href="#sidebar">Explore</a>
   </nav>
-  <script src="sea-data.js"></script>
-  <script src="landscape.js"></script>
-  <script src="guano.js"></script>
-  <script src="app.js"></script>
+  <script src="sea-data.js?v=3"></script>
+  <script src="landscape.js?v=3"></script>
+  <script src="guano.js?v=3"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>

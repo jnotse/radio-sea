@@ -13,6 +13,7 @@
 
 import { keyDistance } from '../layout.js';
 import { isContextTag } from './tags.js';
+import { audioSimilarity } from '../catalog/audio-features.js';
 
 export function buildTagVocabulary(releases) {
   const docFrequency = new Map();
@@ -64,6 +65,45 @@ function firstKey(release) {
   return (release.tracks ?? []).map((t) => t.key).find(Boolean) ?? null;
 }
 
+function extractAudioProfile(release) {
+  const track = (release.tracks ?? [])[0] ?? {};
+  const extra = release.audio ?? track.audio ?? {};
+  return {
+    bpm: meanBpm(release) ?? extra.bpm ?? null,
+    key: firstKey(release) ?? extra.key ?? null,
+    mode: track.mode ?? extra.mode ?? null,
+    chroma: track.chroma ?? extra.chroma ?? null,
+    brightness: track.brightness ?? extra.brightness ?? null,
+    pulseClarity: track.pulseClarity ?? extra.pulseClarity ?? null,
+    bandEnergy: track.bandEnergy ?? extra.bandEnergy ?? null,
+    spectralFlatness: track.spectralFlatness ?? extra.spectralFlatness ?? null,
+    dynamicRange: track.dynamicRange ?? extra.dynamicRange ?? null,
+  };
+}
+
+/**
+ * Co-play proximity in [0, 1] when two tracks were played within 4 positions
+ * of each other in the same radio episode; null otherwise.
+ */
+export function coplayProximity(a, b) {
+  const playsA = a.radioPlays ?? (a.station ? [a] : []);
+  const playsB = b.radioPlays ?? (b.station ? [b] : []);
+  let bestGap = Infinity;
+  for (const pa of playsA) {
+    if (pa.position == null) continue;
+    for (const pb of playsB) {
+      if (pb.position == null) continue;
+      const sameEpisode = (pa.sourceUrl && pb.sourceUrl && pa.sourceUrl === pb.sourceUrl)
+        || (pa.station && pa.station === pb.station && pa.show && pa.show === pb.show && pa.date && pa.date === pb.date);
+      if (!sameEpisode) continue;
+      const gap = Math.abs(pa.position - pb.position);
+      if (gap > 0 && gap < bestGap) bestGap = gap;
+    }
+  }
+  if (bestGap > 4) return null;
+  return (5 - bestGap) / 4; // gap 1 -> 1.0, gap 2 -> 0.75, gap 3 -> 0.5, gap 4 -> 0.25
+}
+
 function overlap(listA = [], listB = []) {
   const clean = (list) => list.filter((x) => x != null && x !== '').map((x) => String(x).toLowerCase());
   const setA = new Set(clean(listA));
@@ -106,10 +146,15 @@ export function buildSimilarity(releases) {
     const bpmScore = bpmA != null && bpmB != null ? Math.max(0, 1 - Math.abs(bpmA - bpmB) / 60) : null;
     const keyScore =
       firstKey(a) && firstKey(b) ? 1 - keyDistance(firstKey(a), firstKey(b)) : null;
-    const audioScore =
+    const baseAudioScore =
       bpmScore != null && keyScore != null
         ? (bpmScore + keyScore) / 2
         : bpmScore ?? keyScore;
+    const richAudioScore = audioSimilarity(extractAudioProfile(a), extractAudioProfile(b));
+    const audioScore = richAudioScore != null && baseAudioScore != null
+      ? 0.5 * baseAudioScore + 0.5 * richAudioScore
+      : richAudioScore ?? baseAudioScore;
+    const coplayScore = coplayProximity(a, b);
 
     const parts = [
       [3.0, tagScore],
@@ -119,6 +164,7 @@ export function buildSimilarity(releases) {
     if (a.year != null && b.year != null) parts.push([1.0, Math.max(0, 1 - Math.abs(a.year - b.year) / 25)]);
     if (a.country && b.country) parts.push([0.6, a.country === b.country ? 1 : 0]);
     if (audioScore != null) parts.push([0.8, audioScore]);
+    if (coplayScore != null) parts.push([0.5, coplayScore]);
 
     let weightSum = 0;
     let total = 0;

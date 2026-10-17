@@ -19,7 +19,8 @@
 
 import { fnv1aHash } from '../fnv1a.js';
 import { mulberry32 } from '../rng.js';
-import { isContextTag, tagLabel } from './tags.js';
+import { isContextTag, isGenreTag, tagLabel } from './tags.js';
+import { analyzeTopology, seriateIslandMembers } from './tda.js';
 
 // Cluster while average linkage stays above this. Measured on the radio
 // catalogue with per-song genres: songs sharing nothing score ~0 (p90 0.16),
@@ -98,32 +99,70 @@ function distinctNames(islands) {
 // An island may only claim a sound that at least half of its tracks really
 // have. Of those, it takes the most specific: the one rarest in the whole
 // catalogue, so doo-wop songs that also carry "rock" make a "doo wop" island.
-// Without such a sound it is named after the show most of them were played
-// on, since that is what grouped them. Station-supplied show genres never
-// name an island: they describe a whole set, not its tracks.
+// A mixed set, where most tracks have genres but none is shared by half, is
+// named after its two commonest. Only when most of its tracks have no genre
+// at all is it named after the show most of them were played on, since that
+// is what grouped them. Station-supplied show genres never name an island:
+// they describe a whole set, not its tracks.
 function islandName(members, documentFrequency = new Map()) {
   const tagsOf = (member) => member.tags?.all ?? member.styles ?? [];
-  const genre = majorityTag(members, (m) => tagsOf(m).filter((t) => !isContextTag(t) && !t.startsWith('mood:')), documentFrequency);
+  const soundOf = (member) => tagsOf(member).filter((t) => isGenreTag(t));
+  const genre = majorityTag(members, soundOf, documentFrequency);
   if (genre) return { name: tagLabel(genre), basis: 'sound' };
+  if (members.filter((m) => soundOf(m).length > 0).length * 2 >= members.length) {
+    return { name: commonestTags(members, soundOf, documentFrequency).slice(0, 2).map(tagLabel).join(' & '), basis: 'mixed' };
+  }
   const show = majorityTag(members, (m) => tagsOf(m).filter((t) => t.startsWith('show:')));
   if (show) return { name: tagLabel(show), basis: 'show' };
   return { name: null, basis: null };
 }
 
-/** Tags at least half the members share; the rarest in the catalogue wins, then the commonest here. */
-function majorityTag(members, tagsOf, documentFrequency = new Map()) {
+function tagCounts(members, tagsOf) {
   const counts = new Map();
   for (const member of members) {
     for (const tag of new Set(tagsOf(member))) counts.set(tag, (counts.get(tag) ?? 0) + 1);
   }
-  const shared = [...counts.entries()].filter(([, count]) => count * 2 >= members.length);
+  return [...counts.entries()];
+}
+
+/** Tags at least half the members share; the rarest in the catalogue wins, then the commonest here. */
+function majorityTag(members, tagsOf, documentFrequency = new Map()) {
+  const shared = tagCounts(members, tagsOf).filter(([, count]) => count * 2 >= members.length);
   const rarity = (tag) => documentFrequency.get(tag) ?? Infinity;
   shared.sort((a, b) => rarity(a[0]) - rarity(b[0]) || b[1] - a[1] || a[0].localeCompare(b[0]));
   return shared[0]?.[0] ?? null;
 }
 
+/** Every tag the members carry, commonest here first; ties go to the rarest in the catalogue. */
+function commonestTags(members, tagsOf, documentFrequency = new Map()) {
+  const rarity = (tag) => documentFrequency.get(tag) ?? Infinity;
+  return tagCounts(members, tagsOf)
+    .sort((a, b) => b[1] - a[1] || rarity(a[0]) - rarity(b[0]) || a[0].localeCompare(b[0]))
+    .map(([tag]) => tag);
+}
+
 function islandRadius(memberCount) {
   return 1.5 + Math.sqrt(memberCount) * 1.7;
+}
+
+/**
+ * Topological affinity between two islands: combines mean cross-island
+ * similarity with the strongest H0 bridge edge between their members.
+ */
+function islandAffinity(similarity, groupA, groupB) {
+  let total = 0;
+  let count = 0;
+  let maxBridge = 0;
+  for (const a of groupA) {
+    for (const b of groupB) {
+      const s = similarity(a, b);
+      total += s;
+      count += 1;
+      if (s > maxBridge) maxBridge = s;
+    }
+  }
+  const avg = count === 0 ? 0 : total / count;
+  return 0.6 * avg + 0.4 * maxBridge;
 }
 
 function arrangeIslands(islands, similarity, rand) {
@@ -137,6 +176,16 @@ function arrangeIslands(islands, similarity, rand) {
       radius: islandRadius(island.members.length),
     };
   });
+
+  // Precompute cross-island topological affinities (mean + H0 bridge strength).
+  const affinities = Array.from({ length: centres.length }, () => new Float64Array(centres.length));
+  for (let i = 0; i < centres.length; i += 1) {
+    for (let j = i + 1; j < centres.length; j += 1) {
+      const aff = islandAffinity(similarity, centres[i].island.members, centres[j].island.members);
+      affinities[i][j] = aff;
+      affinities[j][i] = aff;
+    }
+  }
 
   for (let iter = 0; iter < 60; iter += 1) {
     for (let i = 0; i < centres.length; i += 1) {
@@ -152,10 +201,10 @@ function arrangeIslands(islands, similarity, rand) {
         const wanted = a.radius + b.radius + 4; // open sea between islands
         const repel = dist < wanted ? (wanted - dist) * 0.25 : 0;
 
-        // Attraction: average cross-island similarity pulls archipelagos close,
-        // but only when they really are related.
-        const link = averageLinkage(similarity, a.island.members, b.island.members);
-        const attract = link > 0.35 ? Math.min((link - 0.35) * 6, (dist - wanted) * 0.2) : 0;
+        // Attraction: cross-island similarity + H0 bridge strength pulls
+        // related archipelagos together across the nerve graph.
+        const link = affinities[i][j];
+        const attract = link > 0.15 && dist > wanted ? Math.min((link - 0.15) * 4, (dist - wanted) * 0.2) : 0;
 
         const move = -repel + attract;
         if (move === 0) continue;
@@ -175,9 +224,7 @@ function arrangeIslands(islands, similarity, rand) {
 }
 
 function placeIslandMembers(members, similarity, rand) {
-  const ordered = members
-    .slice()
-    .sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999) || a.id.localeCompare(b.id));
+  const ordered = seriateIslandMembers(members, similarity);
   const radius = islandRadius(ordered.length) * 0.75;
   const points = ordered.map((release, index) => {
     const angle = (index / ordered.length) * Math.PI * 2;
@@ -284,17 +331,22 @@ export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) 
     depths.set(release.id, Number(depth.toFixed(3)));
   }
 
+  const mappedIslands = centres.map((centre) => ({
+    id: centre.island.id,
+    name: centre.island.name,
+    basis: centre.island.basis,
+    memberIds: centre.island.members.map((m) => m.id),
+    centre: { x: Math.round(centre.x), y: Math.round(centre.y) },
+    radius: centre.radius,
+  }));
+
+  const topology = analyzeTopology(releases, similarity, { islands: mappedIslands });
+
   return {
     placements,
-    islands: centres.map((centre) => ({
-      id: centre.island.id,
-      name: centre.island.name,
-      basis: centre.island.basis,
-      memberIds: centre.island.members.map((m) => m.id),
-      centre: { x: Math.round(centre.x), y: Math.round(centre.y) },
-      radius: centre.radius,
-    })),
+    islands: mappedIslands,
     depths,
     similarity,
+    topology,
   };
 }

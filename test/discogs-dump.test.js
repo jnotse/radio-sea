@@ -100,7 +100,7 @@ test('songs get the styles of the releases that list them, counting each album o
   const { scanned, songs } = await scan(dump(RELEASES));
   assert.equal(scanned, RELEASES.length);
   assert.deepEqual(of(songs, 'McCoy Tyner', 'My Favorite Things'),
-    { genres: ['Jazz'], styles: ['Hard Bop', 'Modal', 'Post Bop'], year: 1963, length: 180, source: 'track', releases: [1, 3] });
+    { genres: ['Jazz'], styles: ['Hard Bop', 'Modal', 'Post Bop'], year: 1963, length: 180, label: 'Label', country: 'US', source: 'track', releases: [1, 3] });
   const death = of(songs, 'Death', 'Keep on Knocking');
   assert.deepEqual([death.styles, death.source], [['Garage Rock', 'Proto-Punk'], 'track']);
   assert.ok(!death.styles.includes('Death Metal'), 'the other band called Death must not leak in');
@@ -123,8 +123,44 @@ test('without a listed song, the artist styles are used only when the name is un
 test('own releases outrank compilations, and placeholder artists are never matched', async () => {
   const { songs } = await scan(dump(RELEASES));
   assert.deepEqual(of(songs, 'Preoccupations', 'Espionage'),
-    { genres: ['Rock'], styles: ['Indie Rock', 'Post-Punk'], year: 2018, length: 180, source: 'track', releases: [14] });
+    { genres: ['Rock'], styles: ['Indie Rock', 'Post-Punk'], year: 2018, length: 180, label: 'Label', country: 'US', source: 'track', releases: [14] });
   assert.deepEqual(of(songs, 'Unknown Artist', 'Untitled'), { genres: [], styles: [], year: null, length: null, source: null, releases: [] });
+});
+
+test('extracts labels, country, formats, instruments and production credits from releases and tracks', async () => {
+  const xml = dump([
+    `<release id="99" status="Accepted">
+      <artists><artist><id>10</id><name>McCoy Tyner</name></artist></artists>
+      <title>Live At Newport</title>
+      <labels><label name="Impulse! (2)" catno="A-48"/><label name="Not On Label" catno="none"/></labels>
+      <formats><format name="Vinyl" qty="1"><descriptions><description>12"</description><description>45 RPM</description></descriptions></format></formats>
+      <extraartists>
+        <artist><id>88</id><name>Bob Thiele (2)</name><role>Producer</role></artist>
+        <artist><id>89</id><name>McCoy Tyner</name><role>Piano, Electric Piano [Fender Rhodes]</role></artist>
+      </extraartists>
+      <genres><genre>Jazz</genre></genres>
+      <styles><style>Modal</style></styles>
+      <country>US</country>
+      <released>1963</released>
+      <tracklist>
+        <track>
+          <position>A1</position>
+          <title>My Favorite Things</title>
+          <duration>5:10</duration>
+          <extraartists>
+            <artist><id>90</id><name>Clark Terry</name><role>Trumpet, Congas</role></artist>
+          </extraartists>
+        </track>
+      </tracklist>
+    </release>`,
+  ]);
+  const { songs } = await scan(xml);
+  const matched = of(songs, 'McCoy Tyner', 'My Favorite Things');
+  assert.equal(matched.label, 'Impulse!');
+  assert.equal(matched.country, 'US');
+  assert.deepEqual(matched.formats, ['12"', '45 rpm']);
+  assert.deepEqual(matched.instruments.sort(), ['congas', 'electric piano', 'fender rhodes', 'piano', 'trumpet']);
+  assert.deepEqual(matched.credits, ['Bob Thiele']);
 });
 
 test('the dump streams as gzip or plain XML in any chunk size, and --limit stops early', async () => {

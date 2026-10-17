@@ -5855,6 +5855,2286 @@
     "mood:slow",
     "decade:2020s"
    ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "FRA / 1900s",
+   "date": null,
+   "artist": "Georgel",
+   "title": "Dans mon Aéroplane",
+   "releaseYear": 1908,
+   "country": "FRA",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a4d06fb03d8872a4303"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CAN / 1910s",
+   "date": null,
+   "artist": "Six Brown Brothers",
+   "title": "Pussyfoot March",
+   "releaseYear": 1916,
+   "country": "CAN",
+   "label": "Victor ",
+   "album": "Pussyfoot March / Bull Frog Blues",
+   "ids": {
+    "radiooooo": "5d330a7506fb03d8872a9345"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PHL / 1920s",
+   "date": null,
+   "artist": "Leon C. Pichay",
+   "title": "Ta Ikikitam",
+   "releaseYear": 1929,
+   "country": "PHL",
+   "label": "Columbia",
+   "album": "Ta Ikikitam / Aira de Abra",
+   "ids": {
+    "radiooooo": "68beb35c4aa7fa7192141b1e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "POL / 1930s",
+   "date": null,
+   "artist": "Chór Dana",
+   "title": "Tango Łyczakowskie",
+   "releaseYear": 1930,
+   "country": "POL",
+   "label": "Harmonia Records",
+   "album": "Tango Łyczakowskie",
+   "ids": {
+    "radiooooo": "62fe882b10e72764a6df5b7b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SLE / 1940s",
+   "date": null,
+   "artist": "Ebenezer Calender",
+   "title": "Fire, Fire, Fire",
+   "releaseYear": 1948,
+   "country": "SLE",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a5c06fb03d8872a611b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "WSM / 1950s",
+   "date": null,
+   "artist": "The Tuli Brothers",
+   "title": "Tala Tala Tala",
+   "releaseYear": 1954,
+   "country": "WSM",
+   "label": "Pacific",
+   "album": "Tala Tala Tala / Can't You See I'm Sorry",
+   "ids": {
+    "radiooooo": "6347ec26254f6201fa5454da"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NOR / 1960s",
+   "date": null,
+   "artist": "The Monn Keys",
+   "title": "Dreamsville",
+   "releaseYear": 1960,
+   "country": "NOR",
+   "label": "Omega Records",
+   "album": "Dreamsville",
+   "ids": {
+    "radiooooo": "649d738bfd69de6c79651dda"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NER / 1970s",
+   "date": null,
+   "artist": "Troupe Artistique De Tillabery",
+   "title": "Sahel Vert",
+   "releaseYear": 1978,
+   "country": "NER",
+   "label": "Agence De Coopération Culturelle Et Technique",
+   "album": "Festival National De La Jeunesse Nigerienne Vol 2",
+   "ids": {
+    "radiooooo": "691702597e76ede102247637"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ESH / 1980s",
+   "date": null,
+   "artist": "فرقة الشهيد الولي مصطفى السيد (Mártir Uali Mustafa Al-Sayed)",
+   "title": "حرب الشعوب زين حتى (La Lucha De Los Pueblos Es Bella)",
+   "releaseYear": 1980,
+   "country": "ESH",
+   "label": "Eda",
+   "album": "الفرقة الوطنية للفن الشعبي فرقة الشهيد الولي مصطفى السيد",
+   "ids": {
+    "radiooooo": "6a4e18f7160efc41f0ebafa3"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ESH / 1990s",
+   "date": null,
+   "artist": "El Wali",
+   "title": "The People of El Aaiún",
+   "releaseYear": 1994,
+   "country": "ESH",
+   "label": "Sahel Sounds",
+   "album": "Tiris",
+   "ids": {
+    "radiooooo": "6034ff90de3fd635b5d4f18c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NLD / 2000s",
+   "date": null,
+   "artist": "Black Market Audio",
+   "title": "Via Veneto",
+   "releaseYear": 2001,
+   "country": "NLD",
+   "label": "Supertracks Records",
+   "album": "Autorama",
+   "ids": {
+    "radiooooo": "67cf1621dc6eed6a0b49f9df"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:weird",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "FRO / 2010s",
+   "date": null,
+   "artist": "Eivør",
+   "title": "Verð Mín",
+   "releaseYear": 2015,
+   "country": "FRO",
+   "label": "Tutl",
+   "album": "Slør",
+   "ids": {
+    "radiooooo": "67a4865af6a17a30947c8935"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MNG / 2020s",
+   "date": null,
+   "artist": "168, Cozyslashclot, Bilgun Zayah",
+   "title": "Float - A",
+   "releaseYear": 2020,
+   "country": "MNG",
+   "label": "Cozyslashclot",
+   "album": "Lenin",
+   "ids": {
+    "radiooooo": "66f92fe0b493d95cb3e51a30"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CEY / 1900s",
+   "date": null,
+   "artist": "Hubert Rajapakse",
+   "title": "Danno Budunge",
+   "releaseYear": 1908,
+   "country": "CEY",
+   "label": "",
+   "album": "Gramphone Sinhala",
+   "ids": {
+    "radiooooo": "5d330a7006fb03d8872a8ab4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ESP / 1910s",
+   "date": null,
+   "artist": "Blanquita Suárez",
+   "title": "Fado Blanquita",
+   "releaseYear": 1915,
+   "country": "ESP",
+   "label": "Odeon",
+   "album": "Fado Blanquita / Marinero",
+   "ids": {
+    "radiooooo": "6679d380e339af1fba93295e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "TTO / 1920s",
+   "date": null,
+   "artist": "Lion",
+   "title": "Send Your Children To The Orphan Home",
+   "releaseYear": 1926,
+   "country": "TTO",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a6706fb03d8872a78e7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "YEM / 1930s",
+   "date": null,
+   "artist": "שלמה מוקעה (Shlomo Mokah)",
+   "title": "דוֹדָה  (Dawdahia)",
+   "releaseYear": 1933,
+   "country": "YEM",
+   "label": "Yemenit",
+   "album": null,
+   "ids": {
+    "radiooooo": "5efc83c986ba67251d3f5f41"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SWE / 1940s",
+   "date": null,
+   "artist": "Alice Babs and her orchestra",
+   "title": "Jingle Jangle Jingle",
+   "releaseYear": 1943,
+   "country": "SWE",
+   "label": null,
+   "album": null,
+   "ids": {
+    "radiooooo": "5d330a4f06fb03d8872a47b8"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "YUG / 1950s",
+   "date": null,
+   "artist": "Plesni Orkestar Radio Zagreba",
+   "title": "In The Mood (U Raspoloženju)",
+   "releaseYear": 1958,
+   "country": "YUG",
+   "label": "Jugoton",
+   "album": "U Ritmu Mladosti Broj 1",
+   "ids": {
+    "radiooooo": "5d330a6e06fb03d8872a86ae"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "UZB / 1960s",
+   "date": null,
+   "artist": "Batyr Karimovich Zakirov (accompanied by the Uzbekistan Variety Orchestra)",
+   "title": "I Cry For The Past",
+   "releaseYear": 1961,
+   "country": "UZB",
+   "label": "Gramplastmass",
+   "album": "I Cry For The Past/Bahor",
+   "ids": {
+    "radiooooo": "67d4298fffe3a607867576cb"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ATG / 1970s",
+   "date": null,
+   "artist": "Livie",
+   "title": "Stoned Out Of My Mind",
+   "releaseYear": 1978,
+   "country": "ATG",
+   "label": "Jupiter B",
+   "album": "24 Hours Eternity",
+   "ids": {
+    "radiooooo": "68ad0e2f8cd9994d56e398b5"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "DNK / 1980s",
+   "date": null,
+   "artist": "Les Peel",
+   "title": "Frame Of Mind",
+   "releaseYear": 1983,
+   "country": "DNK",
+   "label": "Media Music The Professional",
+   "album": "Number 23 - First Choice",
+   "ids": {
+    "radiooooo": "6a8d67655bf4587151f0c0c4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ISL / 1990s",
+   "date": null,
+   "artist": "Björk",
+   "title": "Bachelorette",
+   "releaseYear": 1997,
+   "country": "ISL",
+   "label": "One Little Indian",
+   "album": "Homogenic",
+   "ids": {
+    "radiooooo": "5d330a5e06fb03d8872a64ef"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CZE / 2000s",
+   "date": null,
+   "artist": "MIDI Lidi",
+   "title": "Morze",
+   "releaseYear": 2009,
+   "country": "CZE",
+   "label": "X Production",
+   "album": "Hastrmans, Tatrmans & Bubáks",
+   "ids": {
+    "radiooooo": "62ee96b4496daa642674377e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "EGY / 2010s",
+   "date": null,
+   "artist": "مزيكا (Mazzikas)",
+   "title": "جريندايزر (Grendizer)",
+   "releaseYear": 2017,
+   "country": "EGY",
+   "label": "Records DK",
+   "album": "صاحبة السعادة",
+   "ids": {
+    "radiooooo": "5d330a7906fb03d8872a9c44"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:weird",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "UND / 2020s",
+   "date": null,
+   "artist": "Edgard Varèse & Asko Ensemble & Cliff Crego",
+   "title": "Intégrales",
+   "releaseYear": 2024,
+   "country": "UND",
+   "label": null,
+   "album": "Live 3: Edgard Varèse",
+   "ids": {
+    "radiooooo": "6928beaa306fca02dfd5c6c1"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "DEU / 1900s",
+   "date": null,
+   "artist": "Franziska Krug Elfgen",
+   "title": "Faust : Valse",
+   "releaseYear": 1907,
+   "country": "DEU",
+   "label": "Unknown",
+   "album": "Unknown",
+   "ids": {
+    "radiooooo": "618d1db98eb59a32da82cbc0"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ITA / 1910s",
+   "date": null,
+   "artist": "Orch tzigane alcala",
+   "title": "Caroli",
+   "releaseYear": 1919,
+   "country": "ITA",
+   "label": null,
+   "album": "Caroli",
+   "ids": {
+    "radiooooo": "5d330a4e06fb03d8872a45d8"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PRY / 1920s",
+   "date": null,
+   "artist": "Agustín Barrios",
+   "title": "Danza paraguaya",
+   "releaseYear": 1928,
+   "country": "PRY",
+   "label": "Odeon",
+   "album": "The Complete Guitar Recordings 1913-1942",
+   "ids": {
+    "radiooooo": "5d330a6506fb03d8872a73f5"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MDG / 1930s",
+   "date": null,
+   "artist": "Chanteuses royales d'Ambanja",
+   "title": "Chant sakalaves",
+   "releaseYear": 1939,
+   "country": "MDG",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a6606fb03d8872a7579"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "THA / 1940s",
+   "date": null,
+   "artist": "วงปี่พาทย์และคณะประสานเสียงดุริยประณีต (The Duriyapranit Piphat Ensemble & Chorus)",
+   "title": "ระบำดาวดึงส์ (Rabam Dawadoeng)",
+   "releaseYear": 1942,
+   "country": "THA",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a5e06fb03d8872a66a1"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ROU / 1950s",
+   "date": null,
+   "artist": "Song Ensemble of the Romanian Radio Committee",
+   "title": "Construim Socialismul",
+   "releaseYear": 1951,
+   "country": "ROU",
+   "label": "Supraphon",
+   "album": "Construim Socialismul/Cântecul Partizanilor Păcii",
+   "ids": {
+    "radiooooo": "696d39a4e732cbe1feacd8c2"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "GRD / 1960s",
+   "date": null,
+   "artist": "The Mighty Bomber",
+   "title": "Forgive And Forget",
+   "releaseYear": 1966,
+   "country": "GRD",
+   "label": "Telco",
+   "album": "Calypso Jamboree 1966",
+   "ids": {
+    "radiooooo": "68f2f9a7c970d5382ed2eb93"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CBE / 1970s",
+   "date": null,
+   "artist": "M'Pongo Love",
+   "title": "Bakake",
+   "releaseYear": 1974,
+   "country": "CBE",
+   "label": "Editions Kaluila",
+   "album": "Hommage",
+   "ids": {
+    "radiooooo": "63f404a9c881083d2c1ae276"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "IDN / 1980s",
+   "date": null,
+   "artist": "Chaseiro",
+   "title": "Nada Nada Gembira",
+   "releaseYear": 1980,
+   "country": "IDN",
+   "label": "Musica Records",
+   "album": "Chaseiro",
+   "ids": {
+    "radiooooo": "5ea066978949a31b7388cafb"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SYR / 1990s",
+   "date": null,
+   "artist": "Bashir Abdel Aal",
+   "title": "Aridda Wal Noor",
+   "releaseYear": 1998,
+   "country": "SYR",
+   "label": "ARC Music",
+   "album": "The Art Of The Arabian Flute (The Nay)",
+   "ids": {
+    "radiooooo": "5ea17abacf52ae1b18d23d60"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ESP / 2000s",
+   "date": null,
+   "artist": "Crystal Fighters",
+   "title": "I Love London (Kid Cola Remix)",
+   "releaseYear": 2009,
+   "country": "ESP",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a4d06fb03d8872a42f7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PAN / 2010s",
+   "date": null,
+   "artist": "Ralph Weeks",
+   "title": "Something Deep Inside",
+   "releaseYear": 2019,
+   "country": "PAN",
+   "label": "Sally Ruth Records",
+   "album": "Algo Muy Profundo / Something Deep Inside (Single)",
+   "ids": {
+    "radiooooo": "651f9618aabf5b7f3b25971b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SOM / 2020s",
+   "date": null,
+   "artist": "Amina Said Ali & Oskar Schönning",
+   "title": "Jeelkan Kuu Qabo",
+   "releaseYear": 2022,
+   "country": "SOM",
+   "label": "Double Buzz Records",
+   "album": "Jeelkan Kuu Qabo",
+   "ids": {
+    "radiooooo": "666e9f47f80d26184b0e0d5c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "GRL / 1900s",
+   "date": null,
+   "artist": "Ajukutôk'",
+   "title": "Kayak-Song",
+   "releaseYear": 1906,
+   "country": "GRL",
+   "label": "Ulo",
+   "album": "Traditional Greenlandic Music - 55 Recordings From 1905-1984",
+   "ids": {
+    "radiooooo": "69f423decc9dbb12b9a59bac"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "EAH / 1910s",
+   "date": null,
+   "artist": "Alfons Czibulka",
+   "title": "Erczherzog Friderich marsch op. 286",
+   "releaseYear": 1911,
+   "country": "EAH",
+   "label": "Jumbo-Record",
+   "album": "Deutschmeister Jubiläumskonzert",
+   "ids": {
+    "radiooooo": "60c08166e1a32401d100b4f7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PAN / 1920s",
+   "date": null,
+   "artist": "Grupo De \"La Alegría\"",
+   "title": "Qué Bonito Viento Para Navegar",
+   "releaseYear": 1928,
+   "country": "PAN",
+   "label": "RCA Victor",
+   "album": "Qué Bonito Viento Para Navegar / El Tambor De La Alegría",
+   "ids": {
+    "radiooooo": "5d330a6006fb03d8872a6a82"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "TWN / 1930s",
+   "date": null,
+   "artist": "李臨秋 & 鄧雨賢",
+   "title": "四季紅",
+   "releaseYear": 1938,
+   "country": "TWN",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7006fb03d8872a8a3d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "LBN / 1940s",
+   "date": null,
+   "artist": "Sabah",
+   "title": "يا هو يدلك",
+   "releaseYear": 1947,
+   "country": "LBN",
+   "label": "Voix de l'Orient",
+   "album": "يا هو يدلك/يا هو يدلك",
+   "ids": {
+    "radiooooo": "682fbfea01d21b050746d90b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MMR / 1950s",
+   "date": null,
+   "artist": "U Ba Than",
+   "title": "စောင်း (Saung)",
+   "releaseYear": 1953,
+   "country": "MMR",
+   "label": "Folkways",
+   "album": "Burmese Folk and Traditional Music",
+   "ids": {
+    "radiooooo": "6aac372279ed36c30b315c9e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MDA / 1960s",
+   "date": null,
+   "artist": "Норок",
+   "title": "О Чем Плачут Гитары",
+   "releaseYear": 1969,
+   "country": "MDA",
+   "label": "Мелодия ",
+   "album": "О Чем Плачут Гитары / Артист Поет",
+   "ids": {
+    "radiooooo": "5d330a7f06fb03d8872aa735"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NOR / 1970s",
+   "date": null,
+   "artist": "Gro Anita Schønn",
+   "title": "På Ringerike Trenger'u'kke Penger",
+   "releaseYear": 1976,
+   "country": "NOR",
+   "label": "Talent",
+   "album": "Innenfra Og Ut",
+   "ids": {
+    "radiooooo": "5d330a7106fb03d8872a8c2e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SWE / 1980s",
+   "date": null,
+   "artist": "Virna Lindt",
+   "title": "I Experienced Love",
+   "releaseYear": 1984,
+   "country": "SWE",
+   "label": "The Compact Organization",
+   "album": "Shiver",
+   "ids": {
+    "radiooooo": "63c458cb86e6502abcd95c0e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CUB / 1990s",
+   "date": null,
+   "artist": "Tambor Yuka",
+   "title": "Mà Ludgarda",
+   "releaseYear": 1999,
+   "country": "CUB",
+   "label": "Tonga Productions",
+   "album": "Official Retrospective of Cuban Music",
+   "ids": {
+    "radiooooo": "5d330a4a06fb03d8872a3d66"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ZWE / 2000s",
+   "date": null,
+   "artist": "Mbira DzeMuninga",
+   "title": "Shanje",
+   "releaseYear": 2009,
+   "country": "ZWE",
+   "label": "Self-released",
+   "album": "Muninga",
+   "ids": {
+    "radiooooo": "644073f94b91eb78a3086d38"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "HND / 2010s",
+   "date": null,
+   "artist": "Aurelio",
+   "title": "Nando",
+   "releaseYear": 2014,
+   "country": "HND",
+   "label": "Real World Productions",
+   "album": "Lándini",
+   "ids": {
+    "radiooooo": "60317e1ca704d9362f70dc42"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "IMN / 2020s",
+   "date": null,
+   "artist": "Clash Vooar",
+   "title": "Crosh Vollan",
+   "releaseYear": 2024,
+   "country": "IMN",
+   "label": "Self-released",
+   "album": "Pulled by the Stars",
+   "ids": {
+    "radiooooo": "66910868a4a07b0b87661f54"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ARM / 1900s",
+   "date": null,
+   "artist": "Bagrat",
+   "title": "Lezghinka",
+   "releaseYear": 1909,
+   "country": "ARM",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a5006fb03d8872a48d9"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "DNK / 1910s",
+   "date": null,
+   "artist": "Københavns Elite Orkester",
+   "title": "A Waltz Dream",
+   "releaseYear": 1910,
+   "country": "DNK",
+   "label": "Gramophone Concert Record",
+   "album": "A Waltz Dream",
+   "ids": {
+    "radiooooo": "5e613fd58d24e9774f5c55d7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "GRC / 1920s",
+   "date": null,
+   "artist": "Γιώργος Βιδάλης",
+   "title": "Μανάκι μου, μανάκι μου",
+   "releaseYear": 1925,
+   "country": "GRC",
+   "label": "Odeon",
+   "album": null,
+   "ids": {
+    "radiooooo": "5fc36b1106cfa00d5dccdc6c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "HUN / 1930s",
+   "date": null,
+   "artist": "Petre Leșcenco",
+   "title": "Moja Marusitschka",
+   "releaseYear": 1937,
+   "country": "HUN",
+   "label": "Columbia",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7306fb03d8872a8fea"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "RHN / 1940s",
+   "date": null,
+   "artist": "Alick Nkhata",
+   "title": "Nalikwebele Sonka",
+   "releaseYear": 1949,
+   "country": "RHN",
+   "label": "Unknown",
+   "album": "Unknown",
+   "ids": {
+    "radiooooo": "63768af071f3605070325828"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "GOL / 1950s",
+   "date": null,
+   "artist": "E. T. Mensah And His Tempo's Band",
+   "title": "Tea Samba",
+   "releaseYear": 1952,
+   "country": "GOL",
+   "label": "Decca",
+   "album": "Tea Samba",
+   "ids": {
+    "radiooooo": "5d330a6706fb03d8872a786f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "COD / 1960s",
+   "date": null,
+   "artist": "Franco & Marcelle Ebibi",
+   "title": "Je T'attends",
+   "releaseYear": 1964,
+   "country": "COD",
+   "label": "Pathé",
+   "album": "Je T'attends",
+   "ids": {
+    "radiooooo": "664cfe76b4a98767be09225f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SUR / 1970s",
+   "date": null,
+   "artist": "Suzie Poeder, Harold, &  The Satelite",
+   "title": "Nelis Joe Lat Adjing",
+   "releaseYear": 1979,
+   "country": "SUR",
+   "label": "Unice Records",
+   "album": "If You Ever Change Your Mind",
+   "ids": {
+    "radiooooo": "5f9470a786078b65b6477a59"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MNP / 1980s",
+   "date": null,
+   "artist": "Tropicsette",
+   "title": "Patgon Neni",
+   "releaseYear": 1980,
+   "country": "MNP",
+   "label": "Tropicsette Records",
+   "album": "Palasyon Rico",
+   "ids": {
+    "radiooooo": "6670d1d50b33304e4bf3728b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MLI / 1990s",
+   "date": null,
+   "artist": "Toumani Diabaté & Ballake Sissoko",
+   "title": "Salaman",
+   "releaseYear": 1999,
+   "country": "MLI",
+   "label": "Hannibal Records / Rykodisc",
+   "album": "New Ancient Strings ",
+   "ids": {
+    "radiooooo": "5d330a7406fb03d8872a91c5"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PRT / 2000s",
+   "date": null,
+   "artist": "João Coração",
+   "title": "Tem Sido Assim",
+   "releaseYear": 2008,
+   "country": "PRT",
+   "label": "FlorCaveira",
+   "album": "No.1 Lado B - Sessão de Santa Maria dos Olivais",
+   "ids": {
+    "radiooooo": "68d91cfd4223791519199922"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PER / 2010s",
+   "date": null,
+   "artist": "Aristidez",
+   "title": "Trepanación",
+   "releaseYear": 2017,
+   "country": "PER",
+   "label": "Disque Discos",
+   "album": "Malas Posturas",
+   "ids": {
+    "radiooooo": "6131d89fe815a110822d4f33"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "HWA / 2020s",
+   "date": null,
+   "artist": "Mike Kahikina",
+   "title": "Hawai‘i's Beautiful",
+   "releaseYear": 2021,
+   "country": "HWA",
+   "label": "Aloha Got Soul",
+   "album": "Hawai'i's Beautiful",
+   "ids": {
+    "radiooooo": "65c09f204e10356c2c98d3dc"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "AUT / 1900s",
+   "date": null,
+   "artist": "Arthur Pryor's Band",
+   "title": "National Hymn of Austria (\"Gott erhalte Franz den Kaiser\")",
+   "releaseYear": 1904,
+   "country": "AUT",
+   "label": "Victor",
+   "album": "National Hymn of Austria (\"Gott erhalte Franz den Kaiser\")/National Hymn of Austria (\"Gott erhalte Franz den Kaiser\")",
+   "ids": {
+    "radiooooo": "68381a5b73597e05232f0d5f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MEX / 1910s",
+   "date": null,
+   "artist": "Trio Instrumental Arriaga",
+   "title": "Esperanza, angélica y Sofía",
+   "releaseYear": 1910,
+   "country": "MEX",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a6406fb03d8872a71f9"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BRA / 1920s",
+   "date": null,
+   "artist": "Mario Reis",
+   "title": "Jura",
+   "releaseYear": 1928,
+   "country": "BRA",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a4606fb03d8872a33e8"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MMR / 1930s",
+   "date": null,
+   "artist": "Daw Tin Ohn",
+   "title": "ထိဝက",
+   "releaseYear": 1932,
+   "country": "MMR",
+   "label": "Columbia",
+   "album": "ထိဝက (စ)/ထိဝက (ဆုံး)",
+   "ids": {
+    "radiooooo": "69f5837e3f35c348c4160a38"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CEY / 1940s",
+   "date": null,
+   "artist": "Sunil Santha",
+   "title": "Sarada Walaa Gaba",
+   "releaseYear": 1947,
+   "country": "CEY",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a6d06fb03d8872a83cc"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "AOF / 1950s",
+   "date": null,
+   "artist": "Ladji Kone's Band",
+   "title": "Mamadou Konate",
+   "releaseYear": 1953,
+   "country": "AOF",
+   "label": "Philips",
+   "album": "Mamadou Konate / Dédé Tikalama",
+   "ids": {
+    "radiooooo": "607868bddfc9813c6902e98c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PRI / 1960s",
+   "date": null,
+   "artist": "José Feliciano",
+   "title": "Light My Fire",
+   "releaseYear": 1968,
+   "country": "PRI",
+   "label": "RCA Victor",
+   "album": "Feliciano!",
+   "ids": {
+    "radiooooo": "614c8cd51465f04ea5c6ee0f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SCG / 1970s",
+   "date": null,
+   "artist": "Kornelije",
+   "title": "Daljine",
+   "releaseYear": 1977,
+   "country": "SCG",
+   "label": "PGP RTB",
+   "album": "Između Svetlosti I Tame",
+   "ids": {
+    "radiooooo": "656bf503be54fb2973dd6fd4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SGP / 1980s",
+   "date": null,
+   "artist": "Jacintha",
+   "title": "Bad News",
+   "releaseYear": 1983,
+   "country": "SGP",
+   "label": "WEA ",
+   "album": "Silence",
+   "ids": {
+    "radiooooo": "5ea40a7c8949a31b738a21dd"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "URY / 1990s",
+   "date": null,
+   "artist": "Príncipe",
+   "title": "Pensamiento de Caracol",
+   "releaseYear": 1991,
+   "country": "URY",
+   "label": "Ayuí",
+   "album": "La Fuente De La Juventud",
+   "ids": {
+    "radiooooo": "6a445497a26765261208fc84"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ITA / 2000s",
+   "date": null,
+   "artist": "Stylophonic",
+   "title": "The Dancefloor",
+   "releaseYear": 2006,
+   "country": "ITA",
+   "label": "",
+   "album": "Beatbox Show",
+   "ids": {
+    "radiooooo": "5d330a4f06fb03d8872a46da"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "HRV / 2010s",
+   "date": null,
+   "artist": "Svemirko",
+   "title": "Žena od vanilije",
+   "releaseYear": 2017,
+   "country": "HRV",
+   "label": "više manje zauvijek",
+   "album": "Vanilija",
+   "ids": {
+    "radiooooo": "602945aabf42c02808fed2eb"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "JOR / 2020s",
+   "date": null,
+   "artist": "Big Murk feat. Rknddn & Dakn",
+   "title": "Gasolina",
+   "releaseYear": 2022,
+   "country": "JOR",
+   "label": "1036551 Records DK",
+   "album": "Single",
+   "ids": {
+    "radiooooo": "65502598bf75921536ff732e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "YUG / 1900s",
+   "date": null,
+   "artist": "Оркестар VII пеш. пука \"Краља Петра I\"",
+   "title": "Арапско кокоњеште",
+   "releaseYear": 1903,
+   "country": "YUG",
+   "label": "Victor Records",
+   "album": "Arapsko Kokonješte",
+   "ids": {
+    "radiooooo": "5ff185dbf0992e3341307afe"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BEL / 1910s",
+   "date": null,
+   "artist": "Alice Verlet",
+   "title": "La Brabançonne (Belgian National Anthem)",
+   "releaseYear": 1917,
+   "country": "BEL",
+   "label": "Edison Gold Moulded Records",
+   "album": "La Brabanconne / The Marseillaise",
+   "ids": {
+    "radiooooo": "5f8f1c84526998659b604f82"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BGR / 1920s",
+   "date": null,
+   "artist": "Atanas Sotirov orchestra \"Zlatnogo Tsiganche\"",
+   "title": "Lotos",
+   "releaseYear": 1928,
+   "country": "BGR",
+   "label": "Odeon",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7f06fb03d8872aa87f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "DOM / 1930s",
+   "date": null,
+   "artist": "Eduardo Brito",
+   "title": "El que quiera ser hombre",
+   "releaseYear": null,
+   "country": "DOM",
+   "label": "",
+   "album": "Mémorias",
+   "ids": {
+    "radiooooo": "5d330a6206fb03d8872a6e98"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "DZA / 1940s",
+   "date": null,
+   "artist": "Salim Halali and his Orchestra",
+   "title": "اضرب كاسي",
+   "releaseYear": 1947,
+   "country": "DZA",
+   "label": "Pathé",
+   "album": "اضرب كاسي/اعطيني",
+   "ids": {
+    "radiooooo": "68663abf039d6d14cf14980a"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MTQ / 1950s",
+   "date": null,
+   "artist": "Sam Castendet",
+   "title": "La Rue Zabyme",
+   "releaseYear": 1950,
+   "country": "MTQ",
+   "label": "Columbia",
+   "album": "Touloulou / La Rue Zabyme",
+   "ids": {
+    "radiooooo": "5d330a5306fb03d8872a4e75"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "FRO / 1960s",
+   "date": null,
+   "artist": "The Faroe Boys",
+   "title": "Heimkoman",
+   "releaseYear": 1964,
+   "country": "FRO",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7d06fb03d8872aa33f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NPL / 1970s",
+   "date": null,
+   "artist": "(मीरा राणा र गोपाल योञ्जन) Meera Rana & Gopal Yonjan",
+   "title": "सानुमा सानु भन्दामा (Saanumaa Saanu Bhandaamaa)",
+   "releaseYear": 1976,
+   "country": "NPL",
+   "label": "Ratna Records",
+   "album": "Nepalese Songs & Melodies",
+   "ids": {
+    "radiooooo": "5d330a7e06fb03d8872aa523"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:weird",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NGA / 1980s",
+   "date": null,
+   "artist": "Zik Emmy",
+   "title": "My Angel",
+   "releaseYear": 1987,
+   "country": "NGA",
+   "label": "Coconut",
+   "album": "Perfect Change",
+   "ids": {
+    "radiooooo": "60b74679009649015f88f95c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "DOM / 1990s",
+   "date": null,
+   "artist": "Raulín Rodríguez",
+   "title": "Que Vuelva",
+   "releaseYear": 1994,
+   "country": "DOM",
+   "label": "Platano Records",
+   "album": "Medicina de Amor",
+   "ids": {
+    "radiooooo": "632edbc3b15579100c024923"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MYS / 2000s",
+   "date": null,
+   "artist": "Pretty Ugly",
+   "title": "CD Bagasi Honey",
+   "releaseYear": 2001,
+   "country": "MYS",
+   "label": "KRU Music",
+   "album": "Abstrak Versi Fantasi",
+   "ids": {
+    "radiooooo": "6358cc8b8a90b70221a84210"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SYC / 2010s",
+   "date": null,
+   "artist": "Grace Barbé",
+   "title": "Zis Nou De",
+   "releaseYear": 2013,
+   "country": "SYC",
+   "label": "Afrotropik Records",
+   "album": "Welele!",
+   "ids": {
+    "radiooooo": "687f2a3b9279b73174112843"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MYS / 2020s",
+   "date": null,
+   "artist": "Daaliah",
+   "title": "RUN NICKI RUN",
+   "releaseYear": 2021,
+   "country": "MYS",
+   "label": "Self-released",
+   "album": "RUN NICKI RUN",
+   "ids": {
+    "radiooooo": "62d7cf97c7aa9d5a79b795de"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "HUN / 1900s",
+   "date": null,
+   "artist": "Berkes Béla Ifj. Cigányzenekara",
+   "title": "Korcsmárosné, szép csaplárné és csárdás",
+   "releaseYear": 1908,
+   "country": "HUN",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a6406fb03d8872a72a9"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:weird",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "RUS / 1910s",
+   "date": null,
+   "artist": "Bim and Bom",
+   "title": "Дуракамъ Законъ Не Писанъ",
+   "releaseYear": 1910,
+   "country": "RUS",
+   "label": "Russian Joint-Stock Gramophone Company",
+   "album": "Нѣмой На Судѣ/Дуракамъ Законъ Не Писанъ",
+   "ids": {
+    "radiooooo": "68c97846b3f94aa59e8219d7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:weird",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "LVA / 1920s",
+   "date": null,
+   "artist": "Jānis Āre",
+   "title": "Ardievu, dakter Spundze!",
+   "releaseYear": 1928,
+   "country": "LVA",
+   "label": "Homocord",
+   "album": null,
+   "ids": {
+    "radiooooo": "5eb85ed309c0027ac6816545"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "THA / 1930s",
+   "date": null,
+   "artist": "จำรัส สุวคนธ์ และ เกษม มิลินทจินดา (Chamras Suwakon & Kasem Milintachinda)",
+   "title": "ฝันไปว่า (Făn Bpai Wâa)",
+   "releaseYear": 1938,
+   "country": "THA",
+   "label": "ศรีกรุง",
+   "album": "ในสวนรัก",
+   "ids": {
+    "radiooooo": "6915c6b8d34383f7cc819e42"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "KOR / 1940s",
+   "date": null,
+   "artist": "옥잠화 (Ok Jam-Hwa)",
+   "title": "양산도 봄바람 (Yangsan-do Spring Breeze)",
+   "releaseYear": 1943,
+   "country": "KOR",
+   "label": "Columbia",
+   "album": "양산도 봄바람 / 제3 아리랑",
+   "ids": {
+    "radiooooo": "5e4cf21b26345807167e4df4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PYF / 1950s",
+   "date": null,
+   "artist": "The Polynesians",
+   "title": "Kou Kino Mambo",
+   "releaseYear": 1959,
+   "country": "PYF",
+   "label": "Crown Records/ Astor",
+   "album": "Blue Hawaii",
+   "ids": {
+    "radiooooo": "6088094188e68b3d2f4dbdfa"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "JOR / 1960s",
+   "date": null,
+   "artist": "ميادة (Mayada)",
+   "title": "ياي .. ياي .. ياي (Ya..Ya..Ya..)",
+   "releaseYear": 1960,
+   "country": "JOR",
+   "label": "Brotherphone",
+   "album": "ياي .. ياي .. ياي",
+   "ids": {
+    "radiooooo": "648821465053a5195de1f344"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "FIN / 1970s",
+   "date": null,
+   "artist": "Wigwam",
+   "title": "Let The World Ramble On",
+   "releaseYear": 1970,
+   "country": "FIN",
+   "label": "Love Records",
+   "album": "Tombstone Valentine",
+   "ids": {
+    "radiooooo": "632483506cf9d5998c17bdd2"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "COL / 1980s",
+   "date": null,
+   "artist": "Son Palenque",
+   "title": "Azuca y Limon",
+   "releaseYear": 1985,
+   "country": "COL",
+   "label": "",
+   "album": "Ane Jue Ellos Son",
+   "ids": {
+    "radiooooo": "5d330a6206fb03d8872a6d17"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BEL / 1990s",
+   "date": null,
+   "artist": "Frank de Wulf",
+   "title": "Reforced",
+   "releaseYear": 1990,
+   "country": "BEL",
+   "label": "Music Man Records",
+   "album": "The B-Sides Volume One",
+   "ids": {
+    "radiooooo": "5d330a4c06fb03d8872a41da"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BRA / 2000s",
+   "date": null,
+   "artist": "Seu Jorge",
+   "title": "Rock N'Roll Suicide",
+   "releaseYear": 2004,
+   "country": "BRA",
+   "label": "CHRYSALIS MUSIC LTD",
+   "album": "The Life Aquatic With Steve Zissou",
+   "ids": {
+    "radiooooo": "5d330a4606fb03d8872a3525"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BHR / 2010s",
+   "date": null,
+   "artist": "Dar Disku",
+   "title": "Ya Mahmud",
+   "releaseYear": 2019,
+   "country": "BHR",
+   "label": "Dar Disku Records",
+   "album": "Dar Disku 001",
+   "ids": {
+    "radiooooo": "61baf1b956dad84a437f1282"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "MUS / 2020s",
+   "date": null,
+   "artist": "GЯEG",
+   "title": "Eau Coulée Smart City",
+   "releaseYear": 2021,
+   "country": "MUS",
+   "label": "lavibe",
+   "album": "Eau Coulée Smart City",
+   "ids": {
+    "radiooooo": "63fc80d8f111ddc3359855c7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "BRI / 1900s",
+   "date": null,
+   "artist": "Moujodeen Khan",
+   "title": "Multani",
+   "releaseYear": 1904,
+   "country": "BRI",
+   "label": "Gramophone Concert Record",
+   "album": "Multani",
+   "ids": {
+    "radiooooo": "668cf22124a7404804f26c13"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ATA / 1910s",
+   "date": null,
+   "artist": "Cheryl E Leonard",
+   "title": "Storm on Gamage Point",
+   "releaseYear": 1910,
+   "country": "ATA",
+   "label": "",
+   "album": "Field Recordings from Palmer Station, Antarctica",
+   "ids": {
+    "radiooooo": "5d330a6906fb03d8872a7b6c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ROU / 1920s",
+   "date": null,
+   "artist": "Jancu Marinescu",
+   "title": "Adio de Cavadia",
+   "releaseYear": 1924,
+   "country": "ROU",
+   "label": "Perfection Concert Record",
+   "album": "Adio De Cavadia / Inșirați",
+   "ids": {
+    "radiooooo": "66846010bc252b37eab19e38"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "SGP / 1930s",
+   "date": null,
+   "artist": "Miss Nancy and D. Lincoln's Orchestra",
+   "title": "Stambol Junjongan Hati",
+   "releaseYear": 1936,
+   "country": "SGP",
+   "label": "His Masters Voice",
+   "album": "Stambol Junjongan Hati",
+   "ids": {
+    "radiooooo": "5d330a7806fb03d8872a9a0e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "URY / 1940s",
+   "date": null,
+   "artist": "Panchito Maquieira and his Typical Orchestra",
+   "title": "La Cumparsita",
+   "releaseYear": 1946,
+   "country": "URY",
+   "label": "Sondor",
+   "album": "La Cumparsita/Unknown",
+   "ids": {
+    "radiooooo": "6a333bce7200fb55fe517b7d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1940s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "LBY / 1950s",
+   "date": null,
+   "artist": "Troupe Chaoueche Saad",
+   "title": "Goumri Oueld Eddounane",
+   "releaseYear": 1952,
+   "country": "LBY",
+   "label": "Folkways",
+   "album": "Folk Music of the Mediterranean",
+   "ids": {
+    "radiooooo": "668a3136f82dc0383f73ad2d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "NGA / 1960s",
+   "date": null,
+   "artist": "E.C. Arinze & His Music",
+   "title": "Lumumba Calypso",
+   "releaseYear": 1961,
+   "country": "NGA",
+   "label": "Decca",
+   "album": "Lumumba Calypso / Sisi Sisi",
+   "ids": {
+    "radiooooo": "641c6ccbf111ddc3359bb87b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "LTU / 1970s",
+   "date": null,
+   "artist": "Nerija",
+   "title": "Paprastas Motyvas",
+   "releaseYear": 1973,
+   "country": "LTU",
+   "label": "Мелодия",
+   "album": "Nerija",
+   "ids": {
+    "radiooooo": "62fc02d3fb09406458a1ca84"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "HTI / 1980s",
+   "date": null,
+   "artist": "Altieri Dorival",
+   "title": "Coq La",
+   "releaseYear": 1980,
+   "country": "HTI",
+   "label": "Chancy Records",
+   "album": "Min Bois",
+   "ids": {
+    "radiooooo": "6a2bc9b1240330f03407f6b9"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "GNB / 1990s",
+   "date": null,
+   "artist": "Bidinte",
+   "title": "Candjura",
+   "releaseYear": 1998,
+   "country": "GNB",
+   "label": "Nubenegra",
+   "album": "Kumura",
+   "ids": {
+    "radiooooo": "6889f54b692db8329086c03b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "ZAF / 2000s",
+   "date": null,
+   "artist": "Tiyiselani Vomaseve",
+   "title": "Naxaniseka",
+   "releaseYear": 2009,
+   "country": "ZAF",
+   "label": null,
+   "album": "Vangoma Vol: 3",
+   "ids": {
+    "radiooooo": "5d330a4706fb03d8872a3664"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PHL / 2010s",
+   "date": null,
+   "artist": "Arvey",
+   "title": "Dalaga",
+   "releaseYear": 2019,
+   "country": "PHL",
+   "label": null,
+   "album": "Dalaga",
+   "ids": {
+    "radiooooo": "5ec88c85f62fee536d2b573d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2010s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CAN / 2020s",
+   "date": null,
+   "artist": "Saya Gray",
+   "title": "ANNIE, I SING FOR..",
+   "releaseYear": 2023,
+   "country": "CAN",
+   "label": "Dirty Hit",
+   "album": "QWERTY",
+   "ids": {
+    "radiooooo": "654de8a0ff9da6a42244fdfc"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "CHN / 1900s",
+   "date": null,
+   "artist": "Unknown Artists",
+   "title": "遊龍戲鳳 = Yu lung hsi fêng (Wandering Dragon Plays with Phoenix)",
+   "releaseYear": 1901,
+   "country": "CHN",
+   "label": null,
+   "album": "Part One of Twelve, 41-41a (scy 2768-2769)",
+   "ids": {
+    "radiooooo": "609ea1e06cbe365eb2898ad6"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "PRT / 1910s",
+   "date": null,
+   "artist": "Manuel Carvalho",
+   "title": "Mulher Ingrata (Untrue Wife)",
+   "releaseYear": 1917,
+   "country": "PRT",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7d06fb03d8872aa30d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ]
+  },
+  {
+   "station": "radiooooo",
+   "show": "GTM / 1920s",
+   "date": null,
+   "artist": "Marimba Royal De Los Hermanos Hurtado",
+   "title": "Alma Chapina",
+   "releaseYear": 1924,
+   "country": "GTM",
+   "label": "Victor",
+   "album": "Alma Chapina",
+   "ids": {
+    "radiooooo": "6231be9d03e8c60134773168"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1920s"
+   ]
   }
  ],
  "resolved": [
@@ -13064,9 +15344,1459 @@
     "confirmed": true,
     "checkedAt": "2026-10-16T23:58:02.513Z"
    }
+  },
+  {
+   "station": "radiooooo",
+   "show": "IRN / 1970s",
+   "date": null,
+   "artist": "گوگوش (Googoosh)",
+   "title": "ما به هم نمی رسیم (Ma Beh Ham Nemiresim)",
+   "releaseYear": 1978,
+   "country": "IRN",
+   "label": "آکائی",
+   "album": "گوگوش - داریوش",
+   "ids": {
+    "radiooooo": "629b2b7613ac582821e3f616"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ],
+   "youtube": {
+    "videoId": "JvQsaHJh5M0",
+    "url": "https://www.youtube.com/watch?v=JvQsaHJh5M0",
+    "title": "گوگوش – ما به هم نمی‌رسیم | آفرو هاوس",
+    "channel": "Taza music ",
+    "query": "گوگوش (Googoosh) ما به هم نمی رسیم (Ma Beh Ham Nemiresim)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:32:32.806Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "FRA / 1900s",
+   "date": null,
+   "artist": "Georgel",
+   "title": "Dans mon Aéroplane",
+   "releaseYear": 1908,
+   "country": "FRA",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a4d06fb03d8872a4303"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1900s"
+   ],
+   "youtube": {
+    "videoId": "JXxQtCcbXI0",
+    "url": "https://www.youtube.com/watch?v=JXxQtCcbXI0",
+    "title": "Georgel  \" Dans mon aéroplane \"   1909",
+    "channel": "lysgauty1 collection disques David Silvestre",
+    "query": "Georgel Dans mon Aéroplane",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:32:38.222Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "CAN / 1910s",
+   "date": null,
+   "artist": "Six Brown Brothers",
+   "title": "Pussyfoot March",
+   "releaseYear": 1916,
+   "country": "CAN",
+   "label": "Victor ",
+   "album": "Pussyfoot March / Bull Frog Blues",
+   "ids": {
+    "radiooooo": "5d330a7506fb03d8872a9345"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1910s"
+   ],
+   "youtube": {
+    "videoId": "dPlRcfzB74Q",
+    "url": "https://www.youtube.com/watch?v=dPlRcfzB74Q",
+    "title": "Six Brown Brothers: Pussyfoot March (1916)",
+    "channel": "n78de",
+    "query": "Six Brown Brothers Pussyfoot March",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:34:42.356Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "POL / 1930s",
+   "date": null,
+   "artist": "Chór Dana",
+   "title": "Tango Łyczakowskie",
+   "releaseYear": 1930,
+   "country": "POL",
+   "label": "Harmonia Records",
+   "album": "Tango Łyczakowskie",
+   "ids": {
+    "radiooooo": "62fe882b10e72764a6df5b7b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ],
+   "youtube": {
+    "videoId": "acv-euqt1sY",
+    "url": "https://www.youtube.com/watch?v=acv-euqt1sY",
+    "title": "Przedwojenny Lwów: Chór Dana - Tango Łyczakowskie, 1930",
+    "channel": "240252",
+    "query": "Chór Dana Tango Łyczakowskie",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:34:45.876Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "SLE / 1940s",
+   "date": null,
+   "artist": "Ebenezer Calender",
+   "title": "Fire, Fire, Fire",
+   "releaseYear": 1948,
+   "country": "SLE",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a5c06fb03d8872a611b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ],
+   "youtube": {
+    "videoId": "0jySUX8Pf98",
+    "url": "https://www.youtube.com/watch?v=0jySUX8Pf98",
+    "title": "Ebenezer Calendar & his Maringar Band - Fire Fire Fire.",
+    "channel": "El rap del calypso ",
+    "query": "Ebenezer Calender Fire, Fire, Fire",
+    "matchScore": 0.85,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:34:47.754Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "WSM / 1950s",
+   "date": null,
+   "artist": "The Tuli Brothers",
+   "title": "Tala Tala Tala",
+   "releaseYear": 1954,
+   "country": "WSM",
+   "label": "Pacific",
+   "album": "Tala Tala Tala / Can't You See I'm Sorry",
+   "ids": {
+    "radiooooo": "6347ec26254f6201fa5454da"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ],
+   "youtube": {
+    "videoId": "1e8mkdYSCeo",
+    "url": "https://www.youtube.com/watch?v=1e8mkdYSCeo",
+    "title": "Tala Tala Tala (1954) - The Tuli Brothers (Willie Miller & Henry Hunkin)",
+    "channel": "Amnesiac Archive",
+    "query": "The Tuli Brothers Tala Tala Tala",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:34:49.783Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "NOR / 1960s",
+   "date": null,
+   "artist": "The Monn Keys",
+   "title": "Dreamsville",
+   "releaseYear": 1960,
+   "country": "NOR",
+   "label": "Omega Records",
+   "album": "Dreamsville",
+   "ids": {
+    "radiooooo": "649d738bfd69de6c79651dda"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtube": {
+    "videoId": "E4V6ZsiStRU",
+    "url": "https://www.youtube.com/watch?v=E4V6ZsiStRU",
+    "title": "The Monn Keys - Dreamsville",
+    "channel": "LittleMissLounge",
+    "query": "The Monn Keys Dreamsville",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:38:54.017Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "ESH / 1990s",
+   "date": null,
+   "artist": "El Wali",
+   "title": "The People of El Aaiún",
+   "releaseYear": 1994,
+   "country": "ESH",
+   "label": "Sahel Sounds",
+   "album": "Tiris",
+   "ids": {
+    "radiooooo": "6034ff90de3fd635b5d4f18c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1990s"
+   ],
+   "youtube": {
+    "videoId": "jXIxMEMussU",
+    "url": "https://www.youtube.com/watch?v=jXIxMEMussU",
+    "title": "El Wali - The People of El Aaiún (from Tiris)",
+    "channel": "Sahel Sounds",
+    "query": "El Wali The People of El Aaiún",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:26.530Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "FRO / 2010s",
+   "date": null,
+   "artist": "Eivør",
+   "title": "Verð Mín",
+   "releaseYear": 2015,
+   "country": "FRO",
+   "label": "Tutl",
+   "album": "Slør",
+   "ids": {
+    "radiooooo": "67a4865af6a17a30947c8935"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ],
+   "youtube": {
+    "videoId": "4_FIwLoIHBY",
+    "url": "https://www.youtube.com/watch?v=4_FIwLoIHBY",
+    "title": "Eivør - Verð Mín (Lyric Video)",
+    "channel": "Eivør",
+    "query": "Eivør Verð Mín",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:27.323Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MNG / 2020s",
+   "date": null,
+   "artist": "168, Cozyslashclot, Bilgun Zayah",
+   "title": "Float - A",
+   "releaseYear": 2020,
+   "country": "MNG",
+   "label": "Cozyslashclot",
+   "album": "Lenin",
+   "ids": {
+    "radiooooo": "66f92fe0b493d95cb3e51a30"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ],
+   "youtube": {
+    "videoId": "i5mZeFUJxc0",
+    "url": "https://www.youtube.com/watch?v=i5mZeFUJxc0",
+    "title": "@baatarfly ft. Cozyslashclot & Bilgun Zayah - Float - A (Official Audio)",
+    "channel": "168",
+    "query": "168, Cozyslashclot, Bilgun Zayah Float - A",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:27.830Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "CEY / 1900s",
+   "date": null,
+   "artist": "Hubert Rajapakse",
+   "title": "Danno Budunge",
+   "releaseYear": 1908,
+   "country": "CEY",
+   "label": "",
+   "album": "Gramphone Sinhala",
+   "ids": {
+    "radiooooo": "5d330a7006fb03d8872a8ab4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1900s"
+   ],
+   "youtube": {
+    "videoId": "xcRYyrlthEM",
+    "url": "https://www.youtube.com/watch?v=xcRYyrlthEM",
+    "title": "🔴 Danno Budunge Original | 1908 | Hubert Rajapakse | දන්නෝ බුදුන්ගේ මුල් ගීතය | හියුබට් රාජපක්ෂ",
+    "channel": "SilkRoute",
+    "query": "Hubert Rajapakse Danno Budunge",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:28.266Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "TTO / 1920s",
+   "date": null,
+   "artist": "Lion",
+   "title": "Send Your Children To The Orphan Home",
+   "releaseYear": 1926,
+   "country": "TTO",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a6706fb03d8872a78e7"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ],
+   "youtube": {
+    "videoId": "0hCaaVBdUDE",
+    "url": "https://www.youtube.com/watch?v=0hCaaVBdUDE",
+    "title": "The Lion : Send Your Children to the Orphan Home",
+    "channel": "Mr Kleeg",
+    "query": "Lion Send Your Children To The Orphan Home",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:29.135Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "YEM / 1930s",
+   "date": null,
+   "artist": "שלמה מוקעה (Shlomo Mokah)",
+   "title": "דוֹדָה  (Dawdahia)",
+   "releaseYear": 1933,
+   "country": "YEM",
+   "label": "Yemenit",
+   "album": null,
+   "ids": {
+    "radiooooo": "5efc83c986ba67251d3f5f41"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1930s"
+   ],
+   "youtube": {
+    "videoId": "YAWDul1e9zY",
+    "url": "https://www.youtube.com/watch?v=YAWDul1e9zY",
+    "title": "Dawdahia - Shlomo Mokah",
+    "channel": "Grizzly876",
+    "query": "Shlomo Mokah Dawdahia",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:30.094Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "SWE / 1940s",
+   "date": null,
+   "artist": "Alice Babs and her orchestra",
+   "title": "Jingle Jangle Jingle",
+   "releaseYear": 1943,
+   "country": "SWE",
+   "label": null,
+   "album": null,
+   "ids": {
+    "radiooooo": "5d330a4f06fb03d8872a47b8"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ],
+   "youtube": {
+    "videoId": "cJYnGLtMzS0",
+    "url": "https://www.youtube.com/watch?v=cJYnGLtMzS0",
+    "title": "Alice Babs and her orchestra - Jingle Jangle Jingle 1943 (english lyrics)",
+    "channel": "scala78",
+    "query": "Alice Babs and her orchestra Jingle Jangle Jingle",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:30.656Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "DNK / 1980s",
+   "date": null,
+   "artist": "Les Peel",
+   "title": "Frame Of Mind",
+   "releaseYear": 1983,
+   "country": "DNK",
+   "label": "Media Music The Professional",
+   "album": "Number 23 - First Choice",
+   "ids": {
+    "radiooooo": "6a8d67655bf4587151f0c0c4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ],
+   "youtube": {
+    "videoId": "SaaFMhenkg4",
+    "url": "https://www.youtube.com/watch?v=SaaFMhenkg4",
+    "title": "Les Peel (Jutta Birgit Hansen) - Frame Of Mind",
+    "channel": "Alex B",
+    "query": "Les Peel Frame Of Mind",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:32.317Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "ISL / 1990s",
+   "date": null,
+   "artist": "Björk",
+   "title": "Bachelorette",
+   "releaseYear": 1997,
+   "country": "ISL",
+   "label": "One Little Indian",
+   "album": "Homogenic",
+   "ids": {
+    "radiooooo": "5d330a5e06fb03d8872a64ef"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ],
+   "youtube": {
+    "videoId": "JNJv-Ebi67I",
+    "url": "https://www.youtube.com/watch?v=JNJv-Ebi67I",
+    "title": "björk : bachelorette",
+    "channel": "björk",
+    "query": "Björk Bachelorette",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:32.804Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "CZE / 2000s",
+   "date": null,
+   "artist": "MIDI Lidi",
+   "title": "Morze",
+   "releaseYear": 2009,
+   "country": "CZE",
+   "label": "X Production",
+   "album": "Hastrmans, Tatrmans & Bubáks",
+   "ids": {
+    "radiooooo": "62ee96b4496daa642674377e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ],
+   "youtube": {
+    "videoId": "lW7dMFJGTsY",
+    "url": "https://www.youtube.com/watch?v=lW7dMFJGTsY",
+    "title": "Midi Lidi - Morze",
+    "channel": "TheMooflon",
+    "query": "MIDI Lidi Morze",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:33.333Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "PRY / 1920s",
+   "date": null,
+   "artist": "Agustín Barrios",
+   "title": "Danza paraguaya",
+   "releaseYear": 1928,
+   "country": "PRY",
+   "label": "Odeon",
+   "album": "The Complete Guitar Recordings 1913-1942",
+   "ids": {
+    "radiooooo": "5d330a6506fb03d8872a73f5"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ],
+   "youtube": {
+    "videoId": "wDY-5qDZy9M",
+    "url": "https://www.youtube.com/watch?v=wDY-5qDZy9M",
+    "title": "Andrea González Caballero plays Danza Paraguaya by Agustín Barrios on a 2015 Stefan Nitschke",
+    "channel": "SiccasGuitars",
+    "query": "Agustín Barrios Danza paraguaya",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:35.608Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "THA / 1940s",
+   "date": null,
+   "artist": "วงปี่พาทย์และคณะประสานเสียงดุริยประณีต (The Duriyapranit Piphat Ensemble & Chorus)",
+   "title": "ระบำดาวดึงส์ (Rabam Dawadoeng)",
+   "releaseYear": 1942,
+   "country": "THA",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a5e06fb03d8872a66a1"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1940s"
+   ],
+   "youtube": {
+    "videoId": "LALfP2oQ20w",
+    "url": "https://www.youtube.com/watch?v=LALfP2oQ20w",
+    "title": "The Duriyapranit Piphat Ensemble and Chorus - Rabam Dawadoeng, Part 2 (Thailand)",
+    "channel": "gffgfggftyrhghgg",
+    "query": "The Duriyapranit Piphat Ensemble & Chorus Rabam Dawadoeng",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:36.733Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "GRD / 1960s",
+   "date": null,
+   "artist": "The Mighty Bomber",
+   "title": "Forgive And Forget",
+   "releaseYear": 1966,
+   "country": "GRD",
+   "label": "Telco",
+   "album": "Calypso Jamboree 1966",
+   "ids": {
+    "radiooooo": "68f2f9a7c970d5382ed2eb93"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtube": {
+    "videoId": "9MhFxoyL7M4",
+    "url": "https://www.youtube.com/watch?v=9MhFxoyL7M4",
+    "title": "The Mighty Bomber ~ Forgive And Forget",
+    "channel": "Prem Sookram ",
+    "query": "The Mighty Bomber Forgive And Forget",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:37.587Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "CBE / 1970s",
+   "date": null,
+   "artist": "M'Pongo Love",
+   "title": "Bakake",
+   "releaseYear": 1974,
+   "country": "CBE",
+   "label": "Editions Kaluila",
+   "album": "Hommage",
+   "ids": {
+    "radiooooo": "63f404a9c881083d2c1ae276"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ],
+   "youtube": {
+    "videoId": "V-eyavKcwMQ",
+    "url": "https://www.youtube.com/watch?v=V-eyavKcwMQ",
+    "title": "MPONGO LOVE   BAKAKE",
+    "channel": "Sandy Love  (Sandra M'Pongo Love)",
+    "query": "M'Pongo Love Bakake",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:38.077Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "IDN / 1980s",
+   "date": null,
+   "artist": "Chaseiro",
+   "title": "Nada Nada Gembira",
+   "releaseYear": 1980,
+   "country": "IDN",
+   "label": "Musica Records",
+   "album": "Chaseiro",
+   "ids": {
+    "radiooooo": "5ea066978949a31b7388cafb"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1980s"
+   ],
+   "youtube": {
+    "videoId": "mTdmsNZSnSw",
+    "url": "https://www.youtube.com/watch?v=mTdmsNZSnSw",
+    "title": "Chaseiro - Nada Nada Gembira @5th_Kampoeng_Jazz_2013",
+    "channel": "Hillery Mamora",
+    "query": "Chaseiro Nada Nada Gembira",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:38.549Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "PAN / 2010s",
+   "date": null,
+   "artist": "Ralph Weeks",
+   "title": "Something Deep Inside",
+   "releaseYear": 2019,
+   "country": "PAN",
+   "label": "Sally Ruth Records",
+   "album": "Algo Muy Profundo / Something Deep Inside (Single)",
+   "ids": {
+    "radiooooo": "651f9618aabf5b7f3b25971b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ],
+   "youtube": {
+    "videoId": "3JPcno-j9rg",
+    "url": "https://www.youtube.com/watch?v=3JPcno-j9rg",
+    "title": "Ralph Weeks - Something Deep Inside [Audio]",
+    "channel": "Names You Can Trust",
+    "query": "Ralph Weeks Something Deep Inside",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:39.754Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "PAN / 1920s",
+   "date": null,
+   "artist": "Grupo De \"La Alegría\"",
+   "title": "Qué Bonito Viento Para Navegar",
+   "releaseYear": 1928,
+   "country": "PAN",
+   "label": "RCA Victor",
+   "album": "Qué Bonito Viento Para Navegar / El Tambor De La Alegría",
+   "ids": {
+    "radiooooo": "5d330a6006fb03d8872a6a82"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ],
+   "youtube": {
+    "videoId": "B6jLbVXrsQo",
+    "url": "https://www.youtube.com/watch?v=B6jLbVXrsQo",
+    "title": "Grupo de La Alegría - Qué Bonito Viento Para Navegar - Victor 423-0026",
+    "channel": "Frontera Collection",
+    "query": "Grupo De \"La Alegría\" Qué Bonito Viento Para Navegar",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:41.075Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "TWN / 1930s",
+   "date": null,
+   "artist": "李臨秋 & 鄧雨賢",
+   "title": "四季紅",
+   "releaseYear": 1938,
+   "country": "TWN",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7006fb03d8872a8a3d"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1930s"
+   ],
+   "youtube": {
+    "videoId": "B1P_B-rq-eI",
+    "url": "https://www.youtube.com/watch?v=B1P_B-rq-eI",
+    "title": "四季紅/詞:李臨秋/曲:鄧雨賢/演唱者:純純,豔豔",
+    "channel": "陳禹安",
+    "query": "李臨秋 & 鄧雨賢 四季紅",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:41.507Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MMR / 1950s",
+   "date": null,
+   "artist": "U Ba Than",
+   "title": "စောင်း (Saung)",
+   "releaseYear": 1953,
+   "country": "MMR",
+   "label": "Folkways",
+   "album": "Burmese Folk and Traditional Music",
+   "ids": {
+    "radiooooo": "6aac372279ed36c30b315c9e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1950s"
+   ],
+   "youtube": {
+    "videoId": "OsdH4UmuFGA",
+    "url": "https://www.youtube.com/watch?v=OsdH4UmuFGA",
+    "title": "Traditional Myanmar Harp( Saung) U Ba Than စောင်း ဦးဘသန်း",
+    "channel": "Ukyawရဲ့ဂီတဗိမာန်",
+    "query": "U Ba Than စောင်း (Saung)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:42.361Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MDA / 1960s",
+   "date": null,
+   "artist": "Норок",
+   "title": "О Чем Плачут Гитары",
+   "releaseYear": 1969,
+   "country": "MDA",
+   "label": "Мелодия ",
+   "album": "О Чем Плачут Гитары / Артист Поет",
+   "ids": {
+    "radiooooo": "5d330a7f06fb03d8872aa735"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtube": {
+    "videoId": "dWHcK6M_aRk",
+    "url": "https://www.youtube.com/watch?v=dWHcK6M_aRk",
+    "title": "ВИА Норок О чем плачут гитары (на русском)",
+    "channel": "Сергей",
+    "query": "Норок О Чем Плачут Гитары",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:42.925Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "NOR / 1970s",
+   "date": null,
+   "artist": "Gro Anita Schønn",
+   "title": "På Ringerike Trenger'u'kke Penger",
+   "releaseYear": 1976,
+   "country": "NOR",
+   "label": "Talent",
+   "album": "Innenfra Og Ut",
+   "ids": {
+    "radiooooo": "5d330a7106fb03d8872a8c2e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1970s"
+   ],
+   "youtube": {
+    "videoId": "fLht81l4vZo",
+    "url": "https://www.youtube.com/watch?v=fLht81l4vZo",
+    "title": "Gro Anita Schönn Pa Ringerike Trenger u kke Penger",
+    "channel": "Tyron M",
+    "query": "Gro Anita Schønn På Ringerike Trenger'u'kke Penger",
+    "matchScore": 0.8999999999999999,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:43.410Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "SWE / 1980s",
+   "date": null,
+   "artist": "Virna Lindt",
+   "title": "I Experienced Love",
+   "releaseYear": 1984,
+   "country": "SWE",
+   "label": "The Compact Organization",
+   "album": "Shiver",
+   "ids": {
+    "radiooooo": "63c458cb86e6502abcd95c0e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ],
+   "youtube": {
+    "videoId": "1pf2xAtQUjM",
+    "url": "https://www.youtube.com/watch?v=1pf2xAtQUjM",
+    "title": "Virna Lindt ‎– I Experienced Love (1984)",
+    "channel": "MT",
+    "query": "Virna Lindt I Experienced Love",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:44.106Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "HND / 2010s",
+   "date": null,
+   "artist": "Aurelio",
+   "title": "Nando",
+   "releaseYear": 2014,
+   "country": "HND",
+   "label": "Real World Productions",
+   "album": "Lándini",
+   "ids": {
+    "radiooooo": "60317e1ca704d9362f70dc42"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ],
+   "youtube": {
+    "videoId": "MbAOOYLlNwU",
+    "url": "https://www.youtube.com/watch?v=MbAOOYLlNwU",
+    "title": "aurelio nando",
+    "channel": "dada dodod",
+    "query": "Aurelio Nando",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:45.237Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "GRC / 1920s",
+   "date": null,
+   "artist": "Γιώργος Βιδάλης",
+   "title": "Μανάκι μου, μανάκι μου",
+   "releaseYear": 1925,
+   "country": "GRC",
+   "label": "Odeon",
+   "album": null,
+   "ids": {
+    "radiooooo": "5fc36b1106cfa00d5dccdc6c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ],
+   "youtube": {
+    "videoId": "C0Inb2O2Hho",
+    "url": "https://www.youtube.com/watch?v=C0Inb2O2Hho",
+    "title": "Μανάκι μου - Γιώργος Βιδάλης 1925",
+    "channel": "sekarius87",
+    "query": "Γιώργος Βιδάλης Μανάκι μου, μανάκι μου",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:46.723Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "COD / 1960s",
+   "date": null,
+   "artist": "Franco & Marcelle Ebibi",
+   "title": "Je T'attends",
+   "releaseYear": 1964,
+   "country": "COD",
+   "label": "Pathé",
+   "album": "Je T'attends",
+   "ids": {
+    "radiooooo": "664cfe76b4a98767be09225f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtube": {
+    "videoId": "Zc9Xht29plg",
+    "url": "https://www.youtube.com/watch?v=Zc9Xht29plg",
+    "title": "O.K. Jazz - Je T'attends (Franco & Marcelle Ebibi) 1965",
+    "channel": "Planet Ilunga",
+    "query": "Franco & Marcelle Ebibi Je T'attends",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:48.233Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MNP / 1980s",
+   "date": null,
+   "artist": "Tropicsette",
+   "title": "Patgon Neni",
+   "releaseYear": 1980,
+   "country": "MNP",
+   "label": "Tropicsette Records",
+   "album": "Palasyon Rico",
+   "ids": {
+    "radiooooo": "6670d1d50b33304e4bf3728b"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ],
+   "youtube": {
+    "videoId": "XyLQRc1tW18",
+    "url": "https://www.youtube.com/watch?v=XyLQRc1tW18",
+    "title": "Tropicsette   Patgon Neni",
+    "channel": "Sa Gi'tetu Yu",
+    "query": "Tropicsette Patgon Neni",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:48.898Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MLI / 1990s",
+   "date": null,
+   "artist": "Toumani Diabaté & Ballake Sissoko",
+   "title": "Salaman",
+   "releaseYear": 1999,
+   "country": "MLI",
+   "label": "Hannibal Records / Rykodisc",
+   "album": "New Ancient Strings ",
+   "ids": {
+    "radiooooo": "5d330a7406fb03d8872a91c5"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ],
+   "youtube": {
+    "videoId": "LKifX2qwRCY",
+    "url": "https://www.youtube.com/watch?v=LKifX2qwRCY",
+    "title": "Toumani Diabaté & Ballaké Sissoko - Salaman (Official Visualiser)",
+    "channel": "Chrysalis Records",
+    "query": "Toumani Diabaté & Ballake Sissoko Salaman",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:49.480Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "PER / 2010s",
+   "date": null,
+   "artist": "Aristidez",
+   "title": "Trepanación",
+   "releaseYear": 2017,
+   "country": "PER",
+   "label": "Disque Discos",
+   "album": "Malas Posturas",
+   "ids": {
+    "radiooooo": "6131d89fe815a110822d4f33"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2010s"
+   ],
+   "youtube": {
+    "videoId": "n91-w65ZhTw",
+    "url": "https://www.youtube.com/watch?v=n91-w65ZhTw",
+    "title": "Aristidez - Trepanación (Original Mix)",
+    "channel": "T'uxpa feed",
+    "query": "Aristidez Trepanación",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:50.222Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "BRA / 1920s",
+   "date": null,
+   "artist": "Mario Reis",
+   "title": "Jura",
+   "releaseYear": 1928,
+   "country": "BRA",
+   "label": "",
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a4606fb03d8872a33e8"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1920s"
+   ],
+   "youtube": {
+    "videoId": "JA4qVgAWRqQ",
+    "url": "https://www.youtube.com/watch?v=JA4qVgAWRqQ",
+    "title": "JURA - MARIO REIS",
+    "channel": "Antônio Bocaiúva",
+    "query": "Mario Reis Jura",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:51.732Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "PRI / 1960s",
+   "date": null,
+   "artist": "José Feliciano",
+   "title": "Light My Fire",
+   "releaseYear": 1968,
+   "country": "PRI",
+   "label": "RCA Victor",
+   "album": "Feliciano!",
+   "ids": {
+    "radiooooo": "614c8cd51465f04ea5c6ee0f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtube": {
+    "videoId": "nt4WlmwD8Wg",
+    "url": "https://www.youtube.com/watch?v=nt4WlmwD8Wg",
+    "title": "Jose Feliciano - Light My Fire (1968)",
+    "channel": "moondoggy",
+    "query": "José Feliciano Light My Fire",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:53.159Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "SCG / 1970s",
+   "date": null,
+   "artist": "Kornelije",
+   "title": "Daljine",
+   "releaseYear": 1977,
+   "country": "SCG",
+   "label": "PGP RTB",
+   "album": "Između Svetlosti I Tame",
+   "ids": {
+    "radiooooo": "656bf503be54fb2973dd6fd4"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1970s"
+   ],
+   "youtube": {
+    "videoId": "d2UC5VWL5OY",
+    "url": "https://www.youtube.com/watch?v=d2UC5VWL5OY",
+    "title": "Kornelije Kovac - Daljine - (Audio 1977) HD",
+    "channel": "PGP RTS",
+    "query": "Kornelije Daljine",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:53.651Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "SGP / 1980s",
+   "date": null,
+   "artist": "Jacintha",
+   "title": "Bad News",
+   "releaseYear": 1983,
+   "country": "SGP",
+   "label": "WEA ",
+   "album": "Silence",
+   "ids": {
+    "radiooooo": "5ea40a7c8949a31b738a21dd"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1980s"
+   ],
+   "youtube": {
+    "videoId": "qw2Tm-VbRtg",
+    "url": "https://www.youtube.com/watch?v=qw2Tm-VbRtg",
+    "title": "Jacintha - Bad News",
+    "channel": "Dick Lee Music",
+    "query": "Jacintha Bad News",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:54.093Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "URY / 1990s",
+   "date": null,
+   "artist": "Príncipe",
+   "title": "Pensamiento de Caracol",
+   "releaseYear": 1991,
+   "country": "URY",
+   "label": "Ayuí",
+   "album": "La Fuente De La Juventud",
+   "ids": {
+    "radiooooo": "6a445497a26765261208fc84"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ],
+   "youtube": {
+    "videoId": "RMRltC8ZfSk",
+    "url": "https://www.youtube.com/watch?v=RMRltC8ZfSk",
+    "title": "Gustavo Pena ''Príncipe'' - Pensamiento de caracol",
+    "channel": "Georgina De Santis",
+    "query": "Príncipe Pensamiento de Caracol",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:54.580Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "ITA / 2000s",
+   "date": null,
+   "artist": "Stylophonic",
+   "title": "The Dancefloor",
+   "releaseYear": 2006,
+   "country": "ITA",
+   "label": "",
+   "album": "Beatbox Show",
+   "ids": {
+    "radiooooo": "5d330a4f06fb03d8872a46da"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ],
+   "youtube": {
+    "videoId": "IYisdoABMTk",
+    "url": "https://www.youtube.com/watch?v=IYisdoABMTk",
+    "title": "Dancefloor  *  Stylophonic",
+    "channel": "miizhastroem",
+    "query": "Stylophonic The Dancefloor",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:55.154Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "HRV / 2010s",
+   "date": null,
+   "artist": "Svemirko",
+   "title": "Žena od vanilije",
+   "releaseYear": 2017,
+   "country": "HRV",
+   "label": "više manje zauvijek",
+   "album": "Vanilija",
+   "ids": {
+    "radiooooo": "602945aabf42c02808fed2eb"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2010s"
+   ],
+   "youtube": {
+    "videoId": "RBTtp3L_mA0",
+    "url": "https://www.youtube.com/watch?v=RBTtp3L_mA0",
+    "title": "Svemirko - Žena od vanilije",
+    "channel": "više manje zauvijek",
+    "query": "Svemirko Žena od vanilije",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:55.573Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "JOR / 2020s",
+   "date": null,
+   "artist": "Big Murk feat. Rknddn & Dakn",
+   "title": "Gasolina",
+   "releaseYear": 2022,
+   "country": "JOR",
+   "label": "1036551 Records DK",
+   "album": "Single",
+   "ids": {
+    "radiooooo": "65502598bf75921536ff732e"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2020s"
+   ],
+   "youtube": {
+    "videoId": "K9X_EalUtEA",
+    "url": "https://www.youtube.com/watch?v=K9X_EalUtEA",
+    "title": "Big Murk, Rknddn, Dakn - Gasolina (Music Video)",
+    "channel": "Big Murk",
+    "query": "Big Murk feat. Rknddn & Dakn Gasolina",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:55.927Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "BEL / 1910s",
+   "date": null,
+   "artist": "Alice Verlet",
+   "title": "La Brabançonne (Belgian National Anthem)",
+   "releaseYear": 1917,
+   "country": "BEL",
+   "label": "Edison Gold Moulded Records",
+   "album": "La Brabanconne / The Marseillaise",
+   "ids": {
+    "radiooooo": "5f8f1c84526998659b604f82"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1910s"
+   ],
+   "youtube": {
+    "videoId": "ZHFnXe6X7RA",
+    "url": "https://www.youtube.com/watch?v=ZHFnXe6X7RA",
+    "title": "\"La Brabanconne\" = Belgian national anthem (Belgium) Alice Verlet = composer François van Campenhout",
+    "channel": "Tim Gracyk",
+    "query": "Alice Verlet La Brabançonne (Belgian National Anthem)",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:56.736Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MTQ / 1950s",
+   "date": null,
+   "artist": "Sam Castendet",
+   "title": "La Rue Zabyme",
+   "releaseYear": 1950,
+   "country": "MTQ",
+   "label": "Columbia",
+   "album": "Touloulou / La Rue Zabyme",
+   "ids": {
+    "radiooooo": "5d330a5306fb03d8872a4e75"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:1950s"
+   ],
+   "youtube": {
+    "videoId": "kU1gHzhIrrY",
+    "url": "https://www.youtube.com/watch?v=kU1gHzhIrrY",
+    "title": "Sam Castandet et son Orchestre Antillais - La Rue Zabyme",
+    "channel": "BuyHome",
+    "query": "Sam Castendet La Rue Zabyme",
+    "matchScore": 0.85,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:58.345Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "FRO / 1960s",
+   "date": null,
+   "artist": "The Faroe Boys",
+   "title": "Heimkoman",
+   "releaseYear": 1964,
+   "country": "FRO",
+   "label": null,
+   "album": "",
+   "ids": {
+    "radiooooo": "5d330a7d06fb03d8872aa33f"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1960s"
+   ],
+   "youtube": {
+    "videoId": "Oh3n7sfpt1c",
+    "url": "https://www.youtube.com/watch?v=Oh3n7sfpt1c",
+    "title": "Faroe Boys - Heimkoman",
+    "channel": "Tóki Brattalíð",
+    "query": "The Faroe Boys Heimkoman",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:58.708Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "NGA / 1980s",
+   "date": null,
+   "artist": "Zik Emmy",
+   "title": "My Angel",
+   "releaseYear": 1987,
+   "country": "NGA",
+   "label": "Coconut",
+   "album": "Perfect Change",
+   "ids": {
+    "radiooooo": "60b74679009649015f88f95c"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1980s"
+   ],
+   "youtube": {
+    "videoId": "f6_t1jS1Syc",
+    "url": "https://www.youtube.com/watch?v=f6_t1jS1Syc",
+    "title": "ZIK EMMY My Angel 1987 coconut Rec",
+    "channel": "FUNKNIGERIA",
+    "query": "Zik Emmy My Angel",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:39:59.765Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "DOM / 1990s",
+   "date": null,
+   "artist": "Raulín Rodríguez",
+   "title": "Que Vuelva",
+   "releaseYear": 1994,
+   "country": "DOM",
+   "label": "Platano Records",
+   "album": "Medicina de Amor",
+   "ids": {
+    "radiooooo": "632edbc3b15579100c024923"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:1990s"
+   ],
+   "youtube": {
+    "videoId": "UohyLatLJ0o",
+    "url": "https://www.youtube.com/watch?v=UohyLatLJ0o",
+    "title": "Raulin Rodriguez-Que Vuelva",
+    "channel": "TheBombers27",
+    "query": "Raulín Rodríguez Que Vuelva",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:40:00.374Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "MYS / 2000s",
+   "date": null,
+   "artist": "Pretty Ugly",
+   "title": "CD Bagasi Honey",
+   "releaseYear": 2001,
+   "country": "MYS",
+   "label": "KRU Music",
+   "album": "Abstrak Versi Fantasi",
+   "ids": {
+    "radiooooo": "6358cc8b8a90b70221a84210"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:fast",
+    "decade:2000s"
+   ],
+   "youtube": {
+    "videoId": "vSk-akUTlbE",
+    "url": "https://www.youtube.com/watch?v=vSk-akUTlbE",
+    "title": "Pretty Ugly - Cd Bagasi Honey (Official Music Video)",
+    "channel": "MOJO",
+    "query": "Pretty Ugly CD Bagasi Honey",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:40:00.931Z"
+   }
+  },
+  {
+   "station": "radiooooo",
+   "show": "SYC / 2010s",
+   "date": null,
+   "artist": "Grace Barbé",
+   "title": "Zis Nou De",
+   "releaseYear": 2013,
+   "country": "SYC",
+   "label": "Afrotropik Records",
+   "album": "Welele!",
+   "ids": {
+    "radiooooo": "687f2a3b9279b73174112843"
+   },
+   "sourceUrl": "https://app.radiooooo.com/",
+   "tags": [
+    "mood:slow",
+    "decade:2010s"
+   ],
+   "youtube": {
+    "videoId": "-fiKoGJ_gg4",
+    "url": "https://www.youtube.com/watch?v=-fiKoGJ_gg4",
+    "title": "Zis Nou De - Grace Barbé - Welele! Album Launch",
+    "channel": "Grace Barbe",
+    "query": "Grace Barbé Zis Nou De",
+    "matchScore": 1,
+    "confirmed": true,
+    "checkedAt": "2026-10-17T15:40:01.428Z"
+   }
   }
  ],
- "dropped": 82,
+ "dropped": 126,
  "attemptedKeys": [
   "[\"uranium club\",\"god's chest\"]",
   "[\"larry heard\",\"micro-gravity\"]",
@@ -13273,7 +17003,6 @@
   "[\"dj razor blade and the h.i.n.c.\",\"detroit’s in the house\"]",
   "[\"sen & avenger\",\"rhythm traxx\"]",
   "[\"sza\",\"kill bill\"]",
-  "[\"neil sedaka\",\"next door to an angel\"]",
   "[\"john lennon\",\"jealous guy\"]",
   "[\"fred again.. & bia\",\"..feisty\"]",
   "[\"vashti bunyan\",\"diamond day\"]",
@@ -13284,10 +17013,8 @@
   "[\"dana gillespie\",\"souvenirs of stefan\"]",
   "[\"voyou\",\"enfin\"]",
   "[\"supertramp\",\"from now on\"]",
-  "[\"گوگوش (googoosh)\",\"ما به هم نمی رسیم (ma beh ham nemiresim)\"]",
   "[\"g.g. vikey\",\"je vous remercie\"]",
   "[\"carole king\",\"weekdays\"]",
-  "[\"حسن كاي (hasan kai)\",\"asia west\"]",
   "[\"xterea\",\"track 4\"]",
   "[\"john roberts\",\"hair\"]",
   "[\"sachi kobayashi\",\"weathervane\"]",
@@ -13398,6 +17125,103 @@
   "[\"ras command\",\"razor's edge\"]",
   "[\"darso\",\"bandung ciparay\"]",
   "[\"o of m with coppé\",\"fire in the fields\"]",
-  "[\"granite slapper\",\"turgis 45\"]"
+  "[\"granite slapper\",\"turgis 45\"]",
+  "[\"neil sedaka\",\"next door to an angel\"]",
+  "[\"گوگوش (googoosh)\",\"ما به هم نمی رسیم (ma beh ham nemiresim)\"]",
+  "[\"حسن كاي (hasan kai)\",\"asia west\"]",
+  "[\"georgel\",\"dans mon aéroplane\"]",
+  "[\"six brown brothers\",\"pussyfoot march\"]",
+  "[\"leon c. pichay\",\"ta ikikitam\"]",
+  "[\"chór dana\",\"tango łyczakowskie\"]",
+  "[\"ebenezer calender\",\"fire, fire, fire\"]",
+  "[\"the tuli brothers\",\"tala tala tala\"]",
+  "[\"the monn keys\",\"dreamsville\"]",
+  "[\"troupe artistique de tillabery\",\"sahel vert\"]",
+  "[\"فرقة الشهيد الولي مصطفى السيد (mártir uali mustafa al-sayed)\",\"حرب الشعوب زين حتى (la lucha de los pueblos es bella)\"]",
+  "[\"el wali\",\"the people of el aaiún\"]",
+  "[\"black market audio\",\"via veneto\"]",
+  "[\"eivør\",\"verð mín\"]",
+  "[\"168, cozyslashclot, bilgun zayah\",\"float - a\"]",
+  "[\"hubert rajapakse\",\"danno budunge\"]",
+  "[\"blanquita suárez\",\"fado blanquita\"]",
+  "[\"lion\",\"send your children to the orphan home\"]",
+  "[\"שלמה מוקעה (shlomo mokah)\",\"דוֹדָה (dawdahia)\"]",
+  "[\"alice babs and her orchestra\",\"jingle jangle jingle\"]",
+  "[\"plesni orkestar radio zagreba\",\"in the mood (u raspoloženju)\"]",
+  "[\"batyr karimovich zakirov (accompanied by the uzbekistan variety orchestra)\",\"i cry for the past\"]",
+  "[\"livie\",\"stoned out of my mind\"]",
+  "[\"les peel\",\"frame of mind\"]",
+  "[\"björk\",\"bachelorette\"]",
+  "[\"midi lidi\",\"morze\"]",
+  "[\"مزيكا (mazzikas)\",\"جريندايزر (grendizer)\"]",
+  "[\"edgard varèse & asko ensemble & cliff crego\",\"intégrales\"]",
+  "[\"franziska krug elfgen\",\"faust : valse\"]",
+  "[\"orch tzigane alcala\",\"caroli\"]",
+  "[\"agustín barrios\",\"danza paraguaya\"]",
+  "[\"chanteuses royales d'ambanja\",\"chant sakalaves\"]",
+  "[\"วงปี่พาทย์และคณะประสานเสียงดุริยประณีต (the duriyapranit piphat ensemble & chorus)\",\"ระบําดาวดึงส์ (rabam dawadoeng)\"]",
+  "[\"song ensemble of the romanian radio committee\",\"construim socialismul\"]",
+  "[\"the mighty bomber\",\"forgive and forget\"]",
+  "[\"m'pongo love\",\"bakake\"]",
+  "[\"chaseiro\",\"nada nada gembira\"]",
+  "[\"bashir abdel aal\",\"aridda wal noor\"]",
+  "[\"crystal fighters\",\"i love london (kid cola remix)\"]",
+  "[\"ralph weeks\",\"something deep inside\"]",
+  "[\"amina said ali & oskar schönning\",\"jeelkan kuu qabo\"]",
+  "[\"ajukutôk'\",\"kayak-song\"]",
+  "[\"alfons czibulka\",\"erczherzog friderich marsch op. 286\"]",
+  "[\"grupo de \\\"la alegría\\\"\",\"qué bonito viento para navegar\"]",
+  "[\"李臨秋 & 鄧雨賢\",\"四季紅\"]",
+  "[\"sabah\",\"يا هو يدلك\"]",
+  "[\"u ba than\",\"စောင်း (saung)\"]",
+  "[\"норок\",\"о чем плачут гитары\"]",
+  "[\"gro anita schønn\",\"på ringerike trenger'u'kke penger\"]",
+  "[\"virna lindt\",\"i experienced love\"]",
+  "[\"tambor yuka\",\"mà ludgarda\"]",
+  "[\"mbira dzemuninga\",\"shanje\"]",
+  "[\"aurelio\",\"nando\"]",
+  "[\"clash vooar\",\"crosh vollan\"]",
+  "[\"bagrat\",\"lezghinka\"]",
+  "[\"københavns elite orkester\",\"a waltz dream\"]",
+  "[\"γιώργος βιδάλης\",\"μανάκι μου, μανάκι μου\"]",
+  "[\"petre leșcenco\",\"moja marusitschka\"]",
+  "[\"alick nkhata\",\"nalikwebele sonka\"]",
+  "[\"e. t. mensah and his tempo's band\",\"tea samba\"]",
+  "[\"franco & marcelle ebibi\",\"je t'attends\"]",
+  "[\"suzie poeder, harold, & the satelite\",\"nelis joe lat adjing\"]",
+  "[\"tropicsette\",\"patgon neni\"]",
+  "[\"toumani diabaté & ballake sissoko\",\"salaman\"]",
+  "[\"joão coração\",\"tem sido assim\"]",
+  "[\"aristidez\",\"trepanación\"]",
+  "[\"mike kahikina\",\"hawai‘i's beautiful\"]",
+  "[\"arthur pryor's band\",\"national hymn of austria (\\\"gott erhalte franz den kaiser\\\")\"]",
+  "[\"trio instrumental arriaga\",\"esperanza, angélica y sofía\"]",
+  "[\"mario reis\",\"jura\"]",
+  "[\"daw tin ohn\",\"ထိဝက\"]",
+  "[\"sunil santha\",\"sarada walaa gaba\"]",
+  "[\"ladji kone's band\",\"mamadou konate\"]",
+  "[\"josé feliciano\",\"light my fire\"]",
+  "[\"kornelije\",\"daljine\"]",
+  "[\"jacintha\",\"bad news\"]",
+  "[\"príncipe\",\"pensamiento de caracol\"]",
+  "[\"stylophonic\",\"the dancefloor\"]",
+  "[\"svemirko\",\"žena od vanilije\"]",
+  "[\"big murk feat. rknddn & dakn\",\"gasolina\"]",
+  "[\"оркестар vii пеш. пука \\\"краља петра i\\\"\",\"арапско кокоњеште\"]",
+  "[\"alice verlet\",\"la brabançonne (belgian national anthem)\"]",
+  "[\"atanas sotirov orchestra \\\"zlatnogo tsiganche\\\"\",\"lotos\"]",
+  "[\"eduardo brito\",\"el que quiera ser hombre\"]",
+  "[\"salim halali and his orchestra\",\"اضرب كاسي\"]",
+  "[\"sam castendet\",\"la rue zabyme\"]",
+  "[\"the faroe boys\",\"heimkoman\"]",
+  "[\"(मीरा राणा र गोपाल योञ्जन) meera rana & gopal yonjan\",\"सानुमा सानु भन्दामा (saanumaa saanu bhandaamaa)\"]",
+  "[\"zik emmy\",\"my angel\"]",
+  "[\"raulín rodríguez\",\"que vuelva\"]",
+  "[\"pretty ugly\",\"cd bagasi honey\"]",
+  "[\"grace barbé\",\"zis nou de\"]",
+  "[\"daaliah\",\"run nicki run\"]",
+  "[\"berkes béla ifj. cigányzenekara\",\"korcsmárosné, szép csaplárné és csárdás\"]",
+  "[\"bim and bom\",\"дуракамъ законъ не писанъ\"]",
+  "[\"jānis āre\",\"ardievu, dakter spundze!\"]"
  ]
 }

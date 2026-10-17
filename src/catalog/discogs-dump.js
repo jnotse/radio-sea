@@ -21,13 +21,81 @@ import { createGunzip } from 'node:zlib';
 import { songKey } from './extend.js';
 import { canonicalArtist, canonicalTitle, decodeEntities } from './text.js';
 
-const MAX_GENRES = 2;
-const MAX_STYLES = 3;
+const MAX_GENRES = 3;
+const MAX_STYLES = 5;
+const MAX_FORMATS = 3;
+const MAX_INSTRUMENTS = 5;
+const MAX_CREDITS = 3;
 const VARIOUS = 'various';
 const PLACEHOLDER_ARTISTS = new Set([VARIOUS, 'unknown artist', 'unknown', 'anonymous', 'no artist']);
+const PLACEHOLDER_LABELS = new Set(['not on label', 'none', 'unknown', 'unknown label', 'no label', '-']);
+
+const INSTRUMENT_PATTERNS = [
+  ['fender rhodes', /\brhodes\b/i],
+  ['wurlitzer', /\bwurlitzer\b/i],
+  ['clavinet', /\bclavinet\b/i],
+  ['harpsichord', /\bharpsichord\b/i],
+  ['electric piano', /\belectric piano\b/i],
+  ['piano', /\bpiano\b/i],
+  ['organ', /\b(?:organ|hammond|farfisa|vox continental)\b/i],
+  ['synthesizer', /\b(?:synth|synthesizer|moog|minimoog|arp|juno|jupiter|prophet|dx7|oberheim|mellotron)\b/i],
+  ['vibraphone', /\b(?:vibraphone|vibes)\b/i],
+  ['marimba', /\b(?:marimba|xylophone|balafon)\b/i],
+  ['kalimba', /\b(?:kalimba|mbira|sanza)\b/i],
+  ['saxophone', /\b(?:sax|saxophone)\b/i],
+  ['flute', /\bflute\b/i],
+  ['trumpet', /\b(?:trumpet|cornet|flugelhorn)\b/i],
+  ['trombone', /\btrombone\b/i],
+  ['clarinet', /\b(?:clarinet|oboe|bassoon)\b/i],
+  ['harmonica', /\bharmonica\b/i],
+  ['violin', /\b(?:violin|fiddle)\b/i],
+  ['cello', /\bcello\b/i],
+  ['strings', /\bstrings\b/i],
+  ['harp', /\bharp\b/i],
+  ['kora', /\b(?:kora|ngoni)\b/i],
+  ['sitar', /\b(?:sitar|oud|bouzouki|tanpura)\b/i],
+  ['steel drums', /\bsteel\s*(?:drum|pan)s?\b/i],
+  ['double bass', /\b(?:double bass|upright bass|contrabass|acoustic bass)\b/i],
+  ['bass guitar', /\b(?:bass guitar|electric bass|fretless bass)\b/i],
+  ['congas', /\bcongas?\b/i],
+  ['bongos', /\bbongos?\b/i],
+  ['talking drum', /\btalking drum\b/i],
+  ['tabla', /\btabla\b/i],
+  ['drum machine', /\b(?:drum machine|drum programming|rhythm machine|tr-?808|tr-?909|linndrum|mpc|sp-?1200)\b/i],
+  ['turntables', /\b(?:turntables|scratching|dj mix)\b/i],
+  ['percussion', /\b(?:percussion|timbales|shaker|tambourine|cowbell|agogo|berimbau|cuica|djembe|guiro)\b/i],
+  ['drums', /\bdrums\b/i],
+  ['guitar', /\b(?:guitar|12-string|pedal steel|banjo|mandolin)\b/i],
+  ['vocals', /\b(?:vocals?|lead vocals?|backing vocals?|voice|choir|chant)\b/i],
+];
+
+const CREDIT_ROLE_PATTERN = /\b(?:producer|co-producer|produced by|remix|remixed by|mixed by|arranged by|arranger|conductor)\b/i;
+
+const FORMAT_MAP = new Map([
+  ['12"', '12"'],
+  ['7"', '7"'],
+  ['10"', '10"'],
+  ['lp', 'lp'],
+  ['45 rpm', '45 rpm'],
+  ['33 ⅓ rpm', '33 rpm'],
+  ['33 1/3 rpm', '33 rpm'],
+  ['78 rpm', '78 rpm'],
+  ['cassette', 'cassette'],
+  ['reel-to-reel', 'reel-to-reel'],
+  ['shellac', 'shellac'],
+  ['flexi-disc', 'flexi-disc'],
+  ['white label', 'white label'],
+  ['test pressing', 'test pressing'],
+  ['promo', 'promo'],
+  ['acetate', 'acetate'],
+]);
 
 const first = (text, pattern) => text.match(pattern)?.[1] ?? null;
 const every = (text, pattern) => [...text.matchAll(pattern)].map((m) => decodeEntities(m[1]));
+
+function cleanDisambiguation(name) {
+  return String(name ?? '').replace(/\s+\(\d+\)$/, '').trim();
+}
 
 function credits(block) {
   if (!block) return [];
@@ -35,6 +103,55 @@ function credits(block) {
     id: Number(first(part, /<id>(\d+)<\/id>/)),
     names: [first(part, /<name>([^<]*)<\/name>/), first(part, /<anv>([^<]+)<\/anv>/)].filter(Boolean).map(decodeEntities),
   }));
+}
+
+/** Extract instruments and key production/arrangement credits from an `<extraartists>` block. */
+export function parseExtraArtists(block) {
+  if (!block) return { instruments: [], credits: [] };
+  const instruments = new Set();
+  const creditNames = new Set();
+  for (const part of block.split('<artist>').slice(1)) {
+    const role = decodeEntities(first(part, /<role>([^<]*)<\/role>/) ?? '');
+    if (!role) continue;
+    const rawName = decodeEntities(first(part, /<name>([^<]*)<\/name>/) ?? first(part, /<anv>([^<]+)<\/anv>/) ?? '');
+    const name = cleanDisambiguation(rawName);
+    for (const [label, pattern] of INSTRUMENT_PATTERNS) {
+      if (pattern.test(role)) instruments.add(label);
+    }
+    if (name && !PLACEHOLDER_ARTISTS.has(name.toLowerCase()) && CREDIT_ROLE_PATTERN.test(role)) {
+      creditNames.add(name);
+    }
+  }
+  return { instruments: [...instruments], credits: [...creditNames] };
+}
+
+function parseLabels(head) {
+  const block = first(head, /<labels>([\s\S]*?)<\/labels>/);
+  if (!block) return [];
+  const out = [];
+  for (const raw of every(block, /<label\b[^>]*?\bname="([^"]+)"/g)) {
+    const clean = cleanDisambiguation(raw);
+    const lower = clean.toLowerCase();
+    if (clean && !PLACEHOLDER_LABELS.has(lower) && !lower.startsWith('not on label') && !out.includes(clean)) {
+      out.push(clean);
+    }
+  }
+  return out;
+}
+
+function parseFormats(head) {
+  const block = first(head, /<formats>([\s\S]*?)<\/formats>/);
+  if (!block) return [];
+  const rawTokens = [
+    ...every(block, /<format\b[^>]*?\bname="([^"]+)"/g),
+    ...every(block, /<description>([^<]+)<\/description>/g),
+  ];
+  const out = [];
+  for (const token of rawTokens) {
+    const mapped = FORMAT_MAP.get(token.trim().toLowerCase());
+    if (mapped && !out.includes(mapped)) out.push(mapped);
+  }
+  return out;
 }
 
 /** Discogs disambiguates shared names as "Death (2)"; compare the plain name. */
@@ -55,6 +172,9 @@ export function parseDumpRelease(xml) {
   const tracklist = tracklistAt >= 0 ? xml.slice(tracklistAt, xml.indexOf('</tracklist>', tracklistAt)) : '';
   const master = xml.match(/<master_id is_main_release="(?:true|false)">(\d+)<\/master_id>/);
   const year = Number(first(xml, /<released>(\d{4})/));
+  const rawCountry = decodeEntities(first(head, /<country>([^<]+)<\/country>/) ?? '').trim();
+  const country = rawCountry && rawCountry.toLowerCase() !== 'unknown' ? rawCountry : null;
+  const extra = parseExtraArtists(first(head, /<extraartists>([\s\S]*?)<\/extraartists>/));
   return {
     id: Number(first(xml, /<release id="(\d+)"/)),
     artists: credits(first(head, /<artists>([\s\S]*?)<\/artists>/)),
@@ -62,13 +182,23 @@ export function parseDumpRelease(xml) {
     genres: every(xml, /<genre>([^<]*)<\/genre>/g),
     styles: every(xml, /<style>([^<]*)<\/style>/g),
     year: year >= 1900 ? year : null,
+    country,
+    labels: parseLabels(head),
+    formats: parseFormats(head),
+    instruments: extra.instruments,
+    credits: extra.credits,
     masterId: master ? Number(master[1]) : null,
     // Index tracks nest sub-tracks, so split at each opening tag instead of pairing tags.
-    tracks: tracklist.split('<track>').slice(1).map((part) => ({
-      title: decodeEntities(first(part, /<title>([^<]*)<\/title>/) ?? ''),
-      length: seconds(first(part, /<duration>([^<]*)<\/duration>/)),
-      artists: credits(first(part, /<artists>([\s\S]*?)<\/artists>/)),
-    })),
+    tracks: tracklist.split('<track>').slice(1).map((part) => {
+      const trackExtra = parseExtraArtists(first(part, /<extraartists>([\s\S]*?)<\/extraartists>/));
+      return {
+        title: decodeEntities(first(part, /<title>([^<]*)<\/title>/) ?? ''),
+        length: seconds(first(part, /<duration>([^<]*)<\/duration>/)),
+        artists: credits(first(part, /<artists>([\s\S]*?)<\/artists>/)),
+        instruments: trackExtra.instruments,
+        credits: trackExtra.credits,
+      };
+    }),
     videoIds: [...xml.matchAll(/<video src="[^"]*?(?:[?&]v=|youtu\.be\/)([\w-]{11})/g)].map((m) => m[1]),
   };
 }
@@ -145,9 +275,22 @@ export function createDiscogsMatcher(plays) {
             titles ??= titleKeys(track.title);
             if (![...song.titles].some((title) => titles.has(title))) continue;
             if (key === song.primary) song.artistIds.add(id);
-            // A compilation's year is not the song's.
+            // A compilation's year, label, country and format are not the song's.
             const own = releaseArtists.some((artist) => artist.key === key);
-            if (!song.groups.has(group)) song.groups.set(group, { ...found, own, year: own ? release.year : null, length: track.length, via: 'track' });
+            if (!song.groups.has(group)) {
+              song.groups.set(group, {
+                ...found,
+                own,
+                year: own ? release.year : null,
+                country: own ? (release.country ?? null) : null,
+                labels: own ? (release.labels ?? []) : [],
+                formats: own ? (release.formats ?? []) : [],
+                instruments: [...new Set([...(own ? (release.instruments ?? []) : []), ...(track.instruments ?? [])])],
+                credits: [...new Set([...(own ? (release.credits ?? []) : []), ...(track.credits ?? [])])],
+                length: track.length,
+                via: 'track',
+              });
+            }
           }
         }
       }
@@ -155,7 +298,18 @@ export function createDiscogsMatcher(plays) {
       for (const videoId of release.videoIds) {
         const song = songs.get(byVideo.get(videoId));
         const own = Boolean(song) && releaseArtists.some((artist) => song.names.has(artist.key));
-        if (song && !song.groups.has(group)) song.groups.set(group, { ...found, own, via: 'video' });
+        if (song && !song.groups.has(group)) {
+          song.groups.set(group, {
+            ...found,
+            own,
+            country: own ? (release.country ?? null) : null,
+            labels: own ? (release.labels ?? []) : [],
+            formats: own ? (release.formats ?? []) : [],
+            instruments: own ? (release.instruments ?? []) : [],
+            credits: own ? (release.credits ?? []) : [],
+            via: 'video',
+          });
+        }
       }
     },
 
@@ -169,16 +323,38 @@ export function createDiscogsMatcher(plays) {
         const matched = [...song.groups.values()];
         const groups = matched.some((group) => group.own) ? matched.filter((group) => group.own) : matched;
         if (groups.length) {
-          const styles = new Map(), genres = new Map();
-          for (const group of groups) { count(styles, group.styles); count(genres, group.genres); }
+          const styles = new Map(), genres = new Map(), labels = new Map(), countries = new Map();
+          const formats = new Map(), instruments = new Map(), creditNames = new Map();
+          for (const group of groups) {
+            count(styles, group.styles);
+            count(genres, group.genres);
+            count(labels, group.labels ?? []);
+            if (group.country) count(countries, [group.country]);
+            count(formats, group.formats ?? []);
+            count(instruments, group.instruments ?? []);
+            count(creditNames, group.credits ?? []);
+          }
           const years = groups.map((group) => group.year).filter(Boolean);
           const lengths = groups.map((group) => group.length).filter(Boolean).sort((a, b) => a - b);
-          out[key] = { genres: top(genres, MAX_GENRES), styles: top(styles, MAX_STYLES),
+          const topLabel = top(labels, 1)[0] ?? null;
+          const topCountry = top(countries, 1)[0] ?? null;
+          const topFormats = top(formats, MAX_FORMATS);
+          const topInstruments = top(instruments, MAX_INSTRUMENTS);
+          const topCredits = top(creditNames, MAX_CREDITS);
+          out[key] = {
+            genres: top(genres, MAX_GENRES),
+            styles: top(styles, MAX_STYLES),
             year: years.length ? Math.min(...years) : null,
             // The middle of the listed lengths: edits and extended mixes pull both ways.
             length: lengths.length ? lengths[Math.floor((lengths.length - 1) / 2)] : null,
+            ...(topLabel ? { label: topLabel } : {}),
+            ...(topCountry ? { country: topCountry } : {}),
+            ...(topFormats.length ? { formats: topFormats } : {}),
+            ...(topInstruments.length ? { instruments: topInstruments } : {}),
+            ...(topCredits.length ? { credits: topCredits } : {}),
             source: groups.some((group) => group.via === 'track') ? 'track' : 'video',
-            releases: groups.map((group) => group.releaseId).slice(0, 5) };
+            releases: groups.map((group) => group.releaseId).slice(0, 5),
+          };
           continue;
         }
         const byId = tallies.get(song.primary) ?? new Map();

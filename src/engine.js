@@ -32,12 +32,13 @@ export class RadioSeaDiscovery {
     this.reactions = new ReactionRegistry();
     this.navigation = new NavigationGraph();
 
-    // Our own pipeline: feature-space similarity -> emergent islands -> sea.
+    // Our own pipeline: feature-space similarity -> emergent islands & TDA -> sea.
     this.similarityFn = buildSimilarity(releases);
-    const { placements, islands, depths } = mapCatalogue(releases, this.similarityFn, { seed });
+    const { placements, islands, depths, topology } = mapCatalogue(releases, this.similarityFn, { seed });
     this.placements = placements;
     this.islands = islands;
     this.depths = depths;
+    this.topology = topology;
 
     this.state = {
       releases,
@@ -73,6 +74,16 @@ export class RadioSeaDiscovery {
   /** 0 = mainstream-ish / well connected, 1 = deep cut. */
   depthOf(releaseId) {
     return this.depths.get(releaseId) ?? null;
+  }
+
+  /** Cross-island bridge releases ranked by topological bridge score. */
+  bridges() {
+    return this.topology?.bridges ?? [];
+  }
+
+  /** 1-dimensional persistent homology cycles (topological loops of songs). */
+  cycles() {
+    return this.topology?.persistence?.h1 ?? [];
   }
 
   /** Why are these two releases similar (or not)? */

@@ -8,6 +8,8 @@
 //   node scripts/build-demo.js --deezer   # tempo (BPM), length and loudness from Deezer
 //   node scripts/build-demo.js --youtube-meta  # length, album and label from YouTube
 //                                         (Data API if YOUTUBE_API_KEY is set, else watch pages)
+//   node scripts/build-demo.js --radiooooo [--max 120]  # one Radiooooo song per country
+//                                         and decade not yet sampled, matched on YouTube
 //   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
 //   add --delay 8 to wait 8 s between YouTube lookups where YouTube limits searches
 //
@@ -25,8 +27,8 @@ import { candidateMatch } from '../src/catalog/youtube.js';
 import { extendRadioCache, songKey } from '../src/catalog/extend.js';
 import { lookupGenresForPlays } from '../src/catalog/genres.js';
 import { lookupDeezerForPlays } from '../src/catalog/deezer.js';
-import { lookupYoutubeMeta } from '../src/catalog/youtube-meta.js';
-import { fetchRadioooooPlays } from '../src/catalog/radiooooo.js';
+import { lookupYoutubeMeta, isCuratorChannel } from '../src/catalog/youtube-meta.js';
+import { fetchRadioooooPlaces, spreadPlaces, sampleRadioooooPlaces, placeOf, placeKey } from '../src/catalog/radiooooo.js';
 import { decodeEntities } from '../src/catalog/text.js';
 
 export function interleavePlays(plays, limit) {
@@ -52,6 +54,9 @@ const maxTracks = argValue('max', 40);
 const maxEpisodes = argValue('episodes', 4);
 // Seconds between YouTube lookups; raise it where YouTube limits searches.
 const delayMs = argValue('delay', 1.1) * 1000;
+// With a YouTube Data API key, songs are matched through the API (no bot
+// checks, a daily quota) instead of YouTube's search pages.
+const youtubeApiKey = process.env.YOUTUBE_API_KEY || null;
 
 // A track's own genres (looked up per recording) and per-track tags such as
 // Radiooooo's mood and decade are sound tags. The genres a station lists for a
@@ -64,19 +69,38 @@ const delayMs = argValue('delay', 1.1) * 1000;
 export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {}, youtube = {}) {
   const key = songKey(play);
   const found = discogs[key];
+  const mb = musicbrainz[key];
+  const dz = deezer[key];
   const video = youtube[play.youtube?.videoId];
-  const fromDiscogs = found ? [...found.genres, ...found.styles] : [];
-  const genres = fromDiscogs.length ? fromDiscogs : musicbrainz[key]?.genres ?? [];
-  return { ...play, genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
-    releaseYear: play.releaseYear ?? found?.year ?? null,
-    length: deezer[key]?.length ?? musicbrainz[key]?.length ?? found?.length ?? video?.length ?? null,
-    bpm: deezer[key]?.bpm ?? null,
+  const fromDiscogs = found ? [...(found.genres ?? []), ...(found.styles ?? [])] : [];
+  const fromMb = [...(mb?.genres ?? []), ...(mb?.tags ?? [])];
+  const genres = fromDiscogs.length ? fromDiscogs : fromMb.length ? fromMb : (video?.styles ?? []);
+  const instruments = [...new Set([...(found?.instruments ?? []), ...(mb?.instruments ?? [])])];
+  const credits = [...new Set([...(found?.credits ?? []), ...(mb?.credits ?? []), ...(video?.credits ?? [])])];
+  const formats = [...new Set([...(found?.formats ?? []), ...(video?.formats ?? [])])];
+  const audio = dz?.audio ?? play.audio ?? null;
+  return {
+    ...play,
+    genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
+    releaseYear: play.releaseYear ?? found?.year ?? mb?.year ?? video?.year ?? null,
+    country: play.country ?? found?.country ?? mb?.country ?? video?.country ?? null,
+    length: dz?.length ?? mb?.length ?? found?.length ?? video?.length ?? null,
+    bpm: dz?.bpm ?? audio?.bpm ?? null,
+    ...(play.key ?? audio?.key ? { key: play.key ?? audio.key } : {}),
+    ...(audio ? { audio } : {}),
     album: play.album ?? video?.album ?? null,
-    label: play.label ?? video?.label ?? null };
+    label: play.label ?? found?.label ?? video?.label ?? null,
+    ...(instruments.length ? { instruments } : {}),
+    ...(credits.length ? { credits } : {}),
+    ...(formats.length ? { formats } : {}),
+    ...(video?.channel ? { channel: video.channel } : {}),
+    ...(video?.views != null ? { views: video.views } : {}),
+  };
 }
 
 export function playToRaw(play) {
   const show = decodeEntities(play.show);
+  const audio = play.audio ?? null;
   return {
     source: 'radio',
     sourceId: `${play.station}|${play.show}|${play.artist}|${play.title}`,
@@ -86,17 +110,43 @@ export function playToRaw(play) {
     label: play.label ?? null,
     year: play.releaseYear ?? null, // Never treat broadcast date as release year.
     country: play.country ?? null,
-    format: 'Radio',
+    format: play.formats?.[0] ?? 'Radio',
     rating: null,
+    ...(play.views != null ? { views: play.views } : {}),
+    ...(play.position != null ? { position: play.position } : {}),
     tags: {
-      genres: [...(play.genres ?? []), ...(play.tags ?? [])],
+      genres: [
+        ...(play.genres ?? []),
+        ...(play.tags ?? []),
+        ...(play.instruments ?? []).map((inst) => `inst:${inst.toLowerCase()}`),
+        ...(play.credits ?? []).map((credit) => `credit:${credit.toLowerCase()}`),
+        ...(play.formats ?? []).map((fmt) => `format:${fmt.toLowerCase()}`),
+      ],
       styles: [`station:${play.station}`],
       descriptors: [
         ...(show ? [`show:${show}`] : []),
         ...(play.showGenres ?? []).slice(0, 4).map((genre) => `show-genre:${genre}`),
+        ...(play.showMoods ?? []).slice(0, 3).map((mood) => `mood:${mood.toLowerCase()}`),
+        ...(play.showLocation ? [`city:${play.showLocation}`] : []),
+        ...(isCuratorChannel(play.channel, play.artist) ? [`channel:${play.channel}`] : []),
       ],
     },
-    tracks: [{ title: play.title, duration: play.length ?? null, bpm: play.bpm ?? null, key: null, album: play.album ?? null }],
+    tracks: [{
+      title: play.title,
+      duration: play.length ?? null,
+      bpm: play.bpm ?? null,
+      key: play.key ?? audio?.key ?? null,
+      album: play.album ?? null,
+      ...(audio ? {
+        mode: audio.mode ?? null,
+        chroma: audio.chroma ?? null,
+        brightness: audio.brightness ?? null,
+        pulseClarity: audio.pulseClarity ?? null,
+        bandEnergy: audio.bandEnergy ?? null,
+        spectralFlatness: audio.spectralFlatness ?? null,
+        dynamicRange: audio.dynamicRange ?? null,
+      } : {}),
+    }],
     urls: { youtube: play.youtube.url },
     youtubeId: play.youtube.videoId,
     station: play.station,
@@ -122,18 +172,29 @@ async function main() {
     plays = cached.plays;
     console.log(`reusing cached resolution: ${resolved.length} tracks (dropped ${dropped})`);
     if (args.includes('--radiooooo')) {
-      console.log('Sampling public Radiooooo selections (metadata only; no audio requests)…');
-      const incoming = await fetchRadioooooPlays({ samples: argValue('max', 16) });
+      console.log('Asking Radiooooo for one song per country and decade (metadata only; no audio requests)…');
+      const places = await fetchRadioooooPlaces();
+      const sampled = new Set(cached.plays.map(placeOf).filter(Boolean).map(placeKey));
+      console.log(`  ${places.length} countries-in-decades on Radiooooo, ${sampled.size} sampled before`);
+      const { plays: incoming, error } = await sampleRadioooooPlaces(spreadPlaces(places, { skip: sampled }), {
+        max: argValue('max', 120),
+        onPick: ({ place, play }) => console.log(`  ${placeKey(place)}: ${play ? `${play.artist} — ${play.title}` : 'nothing new'}`),
+      });
+      if (error) console.log(`Stopped early: ${error.message}`);
       console.log(`Received ${incoming.length} distinct public selections. Resolving YouTube matches…`);
       const keys = new Set(cached.plays.map((p) => `${p.station}|${p.ids?.radiooooo ?? ''}|${p.artist}|${p.title}`));
       cached.plays.push(...incoming.filter((p) => !keys.has(`${p.station}|${p.ids?.radiooooo ?? ''}|${p.artist}|${p.title}`)));
       plays = cached.plays;
     }
     if (args.includes('--extend') || args.includes('--radiooooo')) {
+      console.log(youtubeApiKey ? 'Matching on YouTube through the Data API (YOUTUBE_API_KEY)…'
+        : `Matching on YouTube's search pages, one every ${delayMs / 1000} s…`);
       const result = await extendRadioCache(cached, {
-        limit: argValue('max', 160),
+        // Every new Radiooooo pick is looked up: --max already capped the sample.
+        limit: args.includes('--radiooooo') ? Infinity : argValue('max', 160),
         stations: args.includes('--radiooooo') ? ['radiooooo'] : null,
         delayMs,
+        apiKey: youtubeApiKey,
         onBackoff: ({ waitMs, error }) => console.log(`  YouTube refused (${error.message}); waiting ${waitMs / 60000} min before retrying…`),
         checkpoint: async (cache) => {
           await writeFile(`${cacheFile}.next`, JSON.stringify(cache, null, 1));
@@ -150,7 +211,7 @@ async function main() {
     if (args.includes('--repair')) {
       const sample = [...resolved, ...interleavePlays(plays, maxTracks)].filter((p, i, all) =>
         all.findIndex((other) => other.station === p.station && other.artist === p.artist && other.title === p.title) === i);
-      const result = await resolvePlaysToYoutube(sample, { delayMs, onProgress: ({ index, total, play, youtube }) =>
+      const result = await resolvePlaysToYoutube(sample, { delayMs, apiKey: youtubeApiKey, onProgress: ({ index, total, play, youtube }) =>
         console.log(`  ${index}/${total} ${youtube ? 'matched' : 'excluded'}: ${play.artist} — ${play.title}`) });
       resolved = result.resolved;
       dropped = result.dropped;
@@ -170,7 +231,7 @@ async function main() {
     // Round-robin across stations so one station's block does not eat the quota.
     const mixed = interleavePlays(plays, maxTracks);
 
-    ({ resolved, dropped } = await resolvePlaysToYoutube(mixed, { delayMs }));
+    ({ resolved, dropped } = await resolvePlaysToYoutube(mixed, { delayMs, apiKey: youtubeApiKey }));
     console.log(`  resolved ${resolved.length}, dropped ${dropped} (no valid YouTube link)`);
     await writeFile(cacheFile, JSON.stringify({ plays, resolved, dropped }, null, 1));
     console.log(`  cached to ${cacheFile}`);
@@ -292,6 +353,7 @@ async function main() {
     })),
     releases: releases.map((release) => {
       const placement = engine.mapPlacement(release.id);
+      const coord3d = engine.topology?.coordinates?.find((c) => c.id === release.id);
       return {
         id: release.id,
         name: release.name,
@@ -317,10 +379,18 @@ async function main() {
         depth: engine.depthOf(release.id),
         x: placement.x,
         y: placement.y,
+        tx: coord3d?.tx ?? placement.x,
+        ty: coord3d?.ty ?? placement.y,
+        tz: coord3d?.tz ?? 0,
         neighbours: neighbours.get(release.id),
       };
     }),
     tradeRoutes,
+    topology: {
+      cycles: engine.cycles(),
+      bridges: engine.bridges().slice(0, 30),
+      mapper: engine.topology?.mapper ?? { nodes: [], edges: [], triangles: [], bridges: [] },
+    },
   };
 
   for (const r of payload.releases) {
