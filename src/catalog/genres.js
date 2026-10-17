@@ -13,7 +13,7 @@
 // later; it is never recorded as "no genres".
 
 import { songKey } from './extend.js';
-import { titleSimilarity, artistSimilarity } from './text.js';
+import { titleSimilarity, artistSimilarity, normalizeIsrc } from './text.js';
 
 const API = 'https://musicbrainz.org/ws/2';
 const HEADERS = { 'User-Agent': 'radio-sea/0.1 ( https://github.com/jnotse/radio-sea )', Accept: 'application/json' };
@@ -73,9 +73,10 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
 
   let recording = null;
   if (play.ids?.musicbrainz) recording = await recordingById(play.ids.musicbrainz);
-  if (!recording && play.ids?.isrc) {
+  const isrc = normalizeIsrc(play.ids?.isrc);
+  if (!recording && isrc) {
     // ISRC listings may omit artist credits; the recording lookup checks the artist.
-    const listed = await get(`/isrc/${encodeURIComponent(play.ids.isrc)}?fmt=json`);
+    const listed = await get(`/isrc/${isrc}?fmt=json`);
     const hit = (listed?.recordings ?? []).find((r) => titleSimilarity(play.title, r.title ?? '') >= 0.6);
     if (hit) recording = await recordingById(hit.id);
   }

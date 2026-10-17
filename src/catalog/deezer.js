@@ -9,7 +9,7 @@
 // stops the run so it can resume; it is never recorded as "no data".
 
 import { songKey } from './extend.js';
-import { titleSimilarity, artistSimilarity } from './text.js';
+import { titleSimilarity, artistSimilarity, normalizeIsrc } from './text.js';
 
 const API = 'https://api.deezer.com';
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -45,9 +45,10 @@ async function getJson(path, fetchImpl) {
 export async function lookupDeezer(play, { fetchImpl = fetch, pause = () => wait(150) } = {}) {
   const get = async (path) => { await pause(); return getJson(path, fetchImpl); };
   const checked = (track) => (track && deezerMatches(play, track) ? track : null);
+  const isrc = normalizeIsrc(play.ids?.isrc);
   let track = null;
   if (play.ids?.deezer) track = checked(await get(`/track/${encodeURIComponent(play.ids.deezer)}`));
-  if (!track && play.ids?.isrc) track = checked(await get(`/track/isrc:${encodeURIComponent(play.ids.isrc)}`));
+  if (!track && isrc) track = checked(await get(`/track/isrc:${isrc}`));
   if (!track) {
     const found = await get(`/search?q=${encodeURIComponent(deezerQuery(play))}&limit=5`);
     const hit = (found?.data ?? []).find((t) => deezerMatches(play, t));

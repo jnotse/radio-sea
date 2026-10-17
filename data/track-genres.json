@@ -3,7 +3,8 @@
   "genres": [],
   "source": null,
   "recording": "7513ebc4-a9ae-4143-97b8-be178c826aa2",
-  "checkedAt": "2026-10-16T21:15:13.876Z"
+  "length": 258,
+  "checkedAt": "2026-10-17T00:00:07.008Z"
  },
  "[\"larry heard\",\"micro-gravity\"]": {
   "genres": [
@@ -13,19 +14,22 @@
   ],
   "source": "recording",
   "recording": "e8196c2a-23cf-4810-be8e-39818ff86695",
-  "checkedAt": "2026-10-16T21:15:18.567Z"
+  "length": 615,
+  "checkedAt": "2026-10-17T00:00:10.054Z"
  },
  "[\"bedroom\",\"in my head\"]": {
   "genres": [],
   "source": null,
   "recording": "e4aeff51-f505-4989-927a-acf226d6172d",
-  "checkedAt": "2026-10-16T21:15:22.603Z"
+  "length": 355,
+  "checkedAt": "2026-10-17T00:00:14.142Z"
  },
  "[\"marcello napoletano\",\"this moment must be the movement\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:15:23.894Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:00:15.405Z"
  },
  "[\"preoccupations\",\"espionage\"]": {
   "genres": [
@@ -35,19 +39,22 @@
   ],
   "source": "artist",
   "recording": "1b90ab50-fcaa-4c7f-813c-1975e0dd3194",
-  "checkedAt": "2026-10-16T21:15:28.911Z"
+  "length": 268,
+  "checkedAt": "2026-10-17T00:00:24.287Z"
  },
  "[\"larry heard & mr. white\",\"virtual emotion (dub)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:15:32.520Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:00:25.781Z"
  },
  "[\"duds\",\"no remark\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:15:35.181Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:00:28.299Z"
  },
  "[\"larry heard\",\"praise (fingers tribal mix)\"]": {
   "genres": [
@@ -57,7 +64,8 @@
   ],
   "source": "artist",
   "recording": "2011699c-9204-4e82-a5fb-605f67598809",
-  "checkedAt": "2026-10-16T21:15:42.130Z"
+  "length": 427,
+  "checkedAt": "2026-10-17T00:00:34.324Z"
  },
  "[\"omni\",\"southbound station\"]": {
   "genres": [
@@ -67,49 +75,57 @@
   ],
   "source": "artist",
   "recording": "2d1af22d-1f63-4093-a636-b764c9e999d0",
-  "checkedAt": "2026-10-16T21:15:45.662Z"
+  "length": 162,
+  "checkedAt": "2026-10-17T00:00:37.034Z"
  },
  "[\"morning kids\",\"free lovin' (original mix)\"]": {
   "genres": [],
   "source": null,
   "recording": "86c63dc7-37dd-41f1-8713-6c3fa394fdcb",
-  "checkedAt": "2026-10-16T21:15:50.263Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:00:44.582Z"
  },
  "[\"scottibrains\",\"sustained threat (full version)\"]": {
   "genres": [],
   "source": null,
   "recording": "fa0eeb6f-cc0a-4c57-81f1-deb110c2b6e9",
-  "checkedAt": "2026-10-16T21:15:54.003Z"
+  "length": 296,
+  "checkedAt": "2026-10-17T00:00:49.972Z"
  },
  "[\"strong souls\",\"sensual (let's work mix)\"]": {
   "genres": [],
   "source": null,
   "recording": "950a0a64-02f4-4d1f-b093-c0a1033e7627",
-  "checkedAt": "2026-10-16T21:16:00.224Z"
+  "length": 348,
+  "checkedAt": "2026-10-17T00:00:54.295Z"
  },
  "[\"the rurals\",\"so alive\"]": {
   "genres": [],
   "source": null,
-  "recording": "92259a18-6d37-486f-b4df-6a415576e87c",
-  "checkedAt": "2026-10-16T21:16:06.767Z"
+  "recording": "e60a7a55-e078-4669-a6e4-67a771b41196",
+  "length": 354,
+  "checkedAt": "2026-10-17T00:01:03.327Z"
  },
  "[\"exek\",\"a hedonist\"]": {
   "genres": [],
   "source": null,
   "recording": "142c5f75-c567-45f5-ba2c-d2d724f1de72",
-  "checkedAt": "2026-10-16T21:16:09.323Z"
+  "length": 314,
+  "checkedAt": "2026-10-17T00:01:11.999Z"
  },
  "[\"paperclip people\",\"4 my peepz (dubfire rework)\"]": {
   "genres": [],
   "source": null,
-  "recording": "415b06cb-62c2-4b43-bf08-c9fe0c185f09",
-  "checkedAt": "2026-10-16T21:16:13.305Z"
+  "recording": "049c8e7e-1c70-462c-8af3-87dbba910125",
+  "length": 379,
+  "checkedAt": "2026-10-17T00:01:15.894Z"
  },
  "[\"paul ritch\",\"walk the line\"]": {
   "genres": [],
   "source": null,
-  "recording": "08f4a388-30d4-416c-9133-1bc52884d655",
-  "checkedAt": "2026-10-16T21:16:23.423Z"
+  "recording": "7c252c29-053f-42bb-804f-9fa62206dced",
+  "length": 473,
+  "checkedAt": "2026-10-17T00:01:19.699Z"
  },
  "[\"vestron vulture\",\"phantom\"]": {
   "genres": [
@@ -119,7 +135,8 @@
   ],
   "source": "artist",
   "recording": "59fdf1bc-4fa9-40bc-af19-73cb36e4ffeb",
-  "checkedAt": "2026-10-16T21:16:29.433Z"
+  "length": 198,
+  "checkedAt": "2026-10-17T00:01:30.210Z"
  },
  "[\"public image ltd.\",\"religion ii\"]": {
   "genres": [
@@ -128,13 +145,15 @@
   ],
   "source": "recording",
   "recording": "fc4b095e-b200-4ae1-a16d-1eb58006a549",
-  "checkedAt": "2026-10-16T21:16:30.696Z"
+  "length": 352,
+  "checkedAt": "2026-10-17T00:01:31.476Z"
  },
  "[\"bours?\",\"blind pick\"]": {
   "genres": [],
   "source": null,
   "recording": "c755d306-d813-48fb-a35e-1a5f1b561fc1",
-  "checkedAt": "2026-10-16T21:16:36.723Z"
+  "length": 383,
+  "checkedAt": "2026-10-17T00:01:35.282Z"
  },
  "[\"protomartyr\",\"the chuckler\"]": {
   "genres": [
@@ -144,13 +163,15 @@
   ],
   "source": "artist",
   "recording": "68bf7ad2-8c1b-4268-89ca-72dd352694f6",
-  "checkedAt": "2026-10-16T21:16:41.449Z"
+  "length": 223,
+  "checkedAt": "2026-10-17T00:01:37.798Z"
  },
  "[\"artonal\",\"when i feel like this\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:16:42.716Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:01:39.065Z"
  },
  "[\"french police\",\"vampiro\"]": {
   "genres": [
@@ -160,25 +181,29 @@
   ],
   "source": "artist",
   "recording": "38d06fee-7525-4042-a4f2-851f55ddf5cc",
-  "checkedAt": "2026-10-16T21:16:54.144Z"
+  "length": 136,
+  "checkedAt": "2026-10-17T00:01:46.924Z"
  },
  "[\"khas\",\"run silent\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:16:57.551Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:01:50.319Z"
  },
  "[\"uranium club\",\"operation pt.ii\"]": {
   "genres": [],
   "source": null,
   "recording": "7cfe6ea6-d6f6-4c27-870e-7494ffc2abbc",
-  "checkedAt": "2026-10-16T21:16:59.054Z"
+  "length": 149,
+  "checkedAt": "2026-10-17T00:01:51.592Z"
  },
  "[\"disguised\",\"korrupt\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:06.584Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:01:54.266Z"
  },
  "[\"crack cloud\",\"tunnel vision\"]": {
   "genres": [
@@ -187,19 +212,22 @@
   ],
   "source": "artist",
   "recording": "92c1d476-e1eb-461a-b983-e47823b547a7",
-  "checkedAt": "2026-10-16T21:17:15.423Z"
+  "length": 278,
+  "checkedAt": "2026-10-17T00:01:56.803Z"
  },
  "[\"isaiah\",\"disharmonized\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:16.686Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:04.339Z"
  },
  "[\"cc:disco!\",\"chez moi (waiting for you) [feat. confidence man] [sally c remix]\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:17.962Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:05.630Z"
  },
  "[\"eyedress\",\"jealous\"]": {
   "genres": [
@@ -208,7 +236,8 @@
   ],
   "source": "recording",
   "recording": "82a51cd9-d106-496b-867e-bde37fa99da9",
-  "checkedAt": "2026-10-16T21:17:19.317Z"
+  "length": 122,
+  "checkedAt": "2026-10-17T00:02:06.981Z"
  },
  "[\"albert marcœur\",\"deux lions au soleil\"]": {
   "genres": [
@@ -218,7 +247,8 @@
   ],
   "source": "artist",
   "recording": "f33ac2fc-a623-4149-a42d-2a5d54e16e4e",
-  "checkedAt": "2026-10-16T21:17:29.428Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:10.908Z"
  },
  "[\"sonique\",\"it feels so good (the conductor & the cowboy amnesia mix)\"]": {
   "genres": [
@@ -227,110 +257,128 @@
    "eurodance"
   ],
   "source": "artist",
-  "recording": "9bad4148-d6c7-476a-8f1c-f9a3b92137ed",
-  "checkedAt": "2026-10-16T21:17:33.423Z"
+  "recording": "ddfd2357-9e0d-40af-b1a8-90e7ea14de34",
+  "length": 186,
+  "checkedAt": "2026-10-17T00:02:17.226Z"
  },
  "[\"spear\",\"the first breath after death\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:34.710Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:18.488Z"
  },
  "[\"doctor jeep\",\"dia de los muertos\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:35.976Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:19.777Z"
  },
  "[\"roberto donnini\",\"t 1 a\"]": {
   "genres": [],
   "source": null,
   "recording": "eef05215-bc2c-4b12-b4bc-2307a6a7ee9e",
-  "checkedAt": "2026-10-16T21:17:42.026Z"
+  "length": 1184,
+  "checkedAt": "2026-10-17T00:02:23.569Z"
  },
  "[\"mila necchella\",\"aetherfall\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:45.460Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:24.830Z"
  },
  "[\"ігор цимбровський\",\"троянди поету\"]": {
   "genres": [],
   "source": null,
   "recording": "85cce980-e5ac-486b-aca8-d6e9212a04bb",
-  "checkedAt": "2026-10-16T21:17:49.452Z"
+  "length": 432,
+  "checkedAt": "2026-10-17T00:02:34.901Z"
  },
  "[\"blanka (es)\",\"say it with me\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:50.738Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:38.314Z"
  },
  "[\"kara okay\",\"let me lose my mind\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:17:52.002Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:41.714Z"
  },
  "[\"unknown artist\",\"untitled\"]": {
   "genres": [],
   "source": null,
-  "recording": "47fa29d6-a2e4-481d-8fbf-6cdecb1e3d77",
-  "checkedAt": "2026-10-16T21:17:58.010Z"
+  "recording": "4953aa24-2243-4e7d-ba4e-95d5d217deeb",
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:47.718Z"
  },
  "[\"fabrizio lapiana\",\"freckles (beatless)\"]": {
   "genres": [],
   "source": null,
-  "recording": "af6cf117-82b4-4087-b1e2-44d46286aeb7",
-  "checkedAt": "2026-10-16T21:18:03.989Z"
+  "recording": "1e3691a3-c58a-46e8-9d5c-5577e4542ba2",
+  "length": 379,
+  "checkedAt": "2026-10-17T00:02:51.517Z"
  },
  "[\"richard davis\",\"methane sea-aftermath\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:18:07.395Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:02:52.788Z"
  },
  "[\"point g\",\"indian (revamp)\"]": {
   "genres": [],
   "source": null,
   "recording": "d97995b6-fa3d-4823-ad9e-715d0645505a",
-  "checkedAt": "2026-10-16T21:18:13.730Z"
+  "length": 502,
+  "checkedAt": "2026-10-17T00:03:02.846Z"
  },
  "[\"claude young\",\"welcome\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:18:15.000Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:03:10.370Z"
  },
  "[\"the royal we\",\"party guilt (matt styles club mix)\"]": {
   "genres": [],
   "source": null,
   "recording": "d52ac25c-4b54-4559-b25d-bdef9897531a",
-  "checkedAt": "2026-10-16T21:18:18.907Z"
+  "length": 198,
+  "checkedAt": "2026-10-17T00:03:16.687Z"
  },
  "[\"brìghde chaimbeul\",\"ruidhle mo nighean donn\"]": {
   "genres": [],
   "source": null,
   "recording": "36b5571a-3dc3-4b18-aeb1-808a547607f1",
-  "checkedAt": "2026-10-16T21:18:25.154Z"
+  "length": 107,
+  "checkedAt": "2026-10-17T00:03:38.519Z"
  },
  "[\"irene bianco\",\"hvid//\"]": {
   "genres": [],
   "source": null,
   "recording": "7acdaf9b-fbb9-43d3-b300-5bc10e1f8463",
-  "checkedAt": "2026-10-16T21:18:32.502Z"
+  "length": 586,
+  "checkedAt": "2026-10-17T00:03:44.086Z"
  },
  "[\"ocean moon\",\"angel falls\"]": {
   "genres": [],
   "source": null,
   "recording": "38d2d7ae-5996-4377-94e5-a22b7f982471",
-  "checkedAt": "2026-10-16T21:18:37.801Z"
+  "length": 299,
+  "checkedAt": "2026-10-17T00:03:49.233Z"
  },
  "[\"lazar berman, liszt\",\"le mal du pays\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:18:39.118Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:03:50.508Z"
  },
  "[\"vox populi!\",\"trois gouttes de sang\"]": {
   "genres": [
@@ -339,26 +387,30 @@
    "experimental"
   ],
   "source": "artist",
-  "recording": "39075945-6cb3-408e-aed1-54191d2fa2ce",
-  "checkedAt": "2026-10-16T21:18:44.302Z"
+  "recording": "9459c41f-8788-4237-a9b1-f27ed4df6384",
+  "length": 179,
+  "checkedAt": "2026-10-17T00:03:57.726Z"
  },
  "[\"janice edwards\",\"time for me\"]": {
   "genres": [],
   "source": null,
   "recording": "524ba944-f940-47eb-97a7-a734fb907723",
-  "checkedAt": "2026-10-16T21:18:48.095Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:04:03.883Z"
  },
  "[\"megiapa\",\"black gold of the sun\"]": {
   "genres": [],
   "source": null,
   "recording": "757b9a6e-ca32-45ed-be71-fa7ab60c8925",
-  "checkedAt": "2026-10-16T21:18:54.117Z"
+  "length": 196,
+  "checkedAt": "2026-10-17T00:04:07.642Z"
  },
  "[\"the diablos, nolan strong\",\"the wind\"]": {
   "genres": [],
   "source": null,
   "recording": "88d1af21-58c3-498d-8403-e014b8450c8b",
-  "checkedAt": "2026-10-16T21:18:59.637Z"
+  "length": 184,
+  "checkedAt": "2026-10-17T00:04:11.918Z"
  },
  "[\"chico hamilton\",\"gengis\"]": {
   "genres": [
@@ -367,25 +419,29 @@
   ],
   "source": "artist",
   "recording": "3736c9a8-584e-471f-8f1d-4d15698ae027",
-  "checkedAt": "2026-10-16T21:19:03.630Z"
+  "length": 251,
+  "checkedAt": "2026-10-17T00:04:15.939Z"
  },
  "[\"northworks\",\"out\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:19:05.042Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:04:17.256Z"
  },
  "[\"detente\",\"1994\"]": {
   "genres": [],
   "source": null,
   "recording": "eceb1b79-5bd9-4d92-80bf-1335bbd74584",
-  "checkedAt": "2026-10-16T21:19:10.338Z"
+  "length": 203,
+  "checkedAt": "2026-10-17T00:04:39.155Z"
  },
  "[\"schumann, robert, backhaus, wilhelm, the vienna philharmonic orchestra, wand, günter\",\"vogel als prophet\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:19:11.608Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:04:41.681Z"
  },
  "[\"swans\",\"in my garden\"]": {
   "genres": [
@@ -395,7 +451,8 @@
   ],
   "source": "recording",
   "recording": "4a72a327-7a85-49a4-9593-25670cbeba94",
-  "checkedAt": "2026-10-16T21:19:15.019Z"
+  "length": 335,
+  "checkedAt": "2026-10-17T00:04:45.265Z"
  },
  "[\"ink spots\",\"it's funny to everyone but me\"]": {
   "genres": [
@@ -405,7 +462,8 @@
   ],
   "source": "artist",
   "recording": "a4327f2d-5054-4e48-af26-451208665a52",
-  "checkedAt": "2026-10-16T21:19:17.623Z"
+  "length": 176,
+  "checkedAt": "2026-10-17T00:04:47.823Z"
  },
  "[\"death\",\"the change\"]": {
   "genres": [
@@ -415,55 +473,64 @@
   ],
   "source": "artist",
   "recording": "98110c29-a740-43de-8853-d46a02fa2127",
-  "checkedAt": "2026-10-16T21:19:21.469Z"
+  "length": 225,
+  "checkedAt": "2026-10-17T00:04:56.371Z"
  },
  "[\"copshow\",\"beautiful witness\"]": {
   "genres": [],
   "source": null,
   "recording": "fc54827d-7c53-43a0-8b06-07cc3b4bd896",
-  "checkedAt": "2026-10-16T21:19:31.686Z"
+  "length": 254,
+  "checkedAt": "2026-10-17T00:05:06.438Z"
  },
  "[\"молчат дома, molchat doma\",\"на дне\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:19:35.712Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:05:16.517Z"
  },
  "[\"victoria mingot\",\"iterniti\"]": {
   "genres": [],
   "source": null,
   "recording": "8c32ee94-2aee-46a4-92a4-029d7d842c94",
-  "checkedAt": "2026-10-16T21:19:39.578Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:05:22.473Z"
  },
  "[\"carme lópez\",\"epilogue: inflorescencia\"]": {
   "genres": [],
   "source": null,
   "recording": "bd0708a1-c5e2-4991-bd9d-e2dccbaf998a",
-  "checkedAt": "2026-10-16T21:19:43.570Z"
+  "length": 229,
+  "checkedAt": "2026-10-17T00:05:28.428Z"
  },
  "[\"beethoven piano trio no 7 archduke\",\"i (rubinstein, heifetz, feuermann)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:19:46.982Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:05:29.695Z"
  },
  "[\"eddie miller and his band\",\"ghost town\"]": {
   "genres": [],
   "source": null,
   "recording": "da536782-f97c-49f2-a6df-aaf5d2e4c7d7",
-  "checkedAt": "2026-10-16T21:19:49.745Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:05:38.473Z"
  },
  "[\"bluesette\",\"mood for love\"]": {
   "genres": [],
   "source": null,
   "recording": "b3fb944e-2737-4847-a105-88ee567dd189",
-  "checkedAt": "2026-10-16T21:19:53.554Z"
+  "length": 286,
+  "checkedAt": "2026-10-17T00:05:42.428Z"
  },
  "[\"retrocity\",\"africa\"]": {
   "genres": [],
   "source": null,
   "recording": "23643413-8564-4ca5-b365-26cd069ae146",
-  "checkedAt": "2026-10-16T21:19:56.350Z"
+  "length": 281,
+  "checkedAt": "2026-10-17T00:05:44.937Z"
  },
  "[\"the spaniels\",\"three little words\"]": {
   "genres": [
@@ -472,7 +539,8 @@
   ],
   "source": "artist",
   "recording": "6bf6b680-252c-468a-b013-9949a237c8a0",
-  "checkedAt": "2026-10-16T21:20:00.371Z"
+  "length": 266,
+  "checkedAt": "2026-10-17T00:05:48.990Z"
  },
  "[\"death\",\"keep on knocking\"]": {
   "genres": [
@@ -482,19 +550,22 @@
   ],
   "source": "recording",
   "recording": "7b62d78d-2664-4456-9852-d957ea890d96",
-  "checkedAt": "2026-10-16T21:20:02.940Z"
+  "length": 170,
+  "checkedAt": "2026-10-17T00:05:53.664Z"
  },
  "[\"estelle montenegro\",\"lost inside\"]": {
   "genres": [],
   "source": null,
   "recording": "0bb8e7b9-ce37-4492-a3ed-ea2301be42b5",
-  "checkedAt": "2026-10-16T21:20:06.870Z"
+  "length": 211,
+  "checkedAt": "2026-10-17T00:06:03.709Z"
  },
  "[\"brighde chaimbeul\",\"duan\"]": {
   "genres": [],
   "source": null,
   "recording": "5def1715-74f2-4cb8-9d42-fdf2ebee1ffc",
-  "checkedAt": "2026-10-16T21:20:11.607Z"
+  "length": 236,
+  "checkedAt": "2026-10-17T00:06:12.588Z"
  },
  "[\"mira calix\",\"ms. meteo\"]": {
   "genres": [
@@ -504,7 +575,8 @@
   ],
   "source": "artist",
   "recording": "ea99b63b-17b3-41d7-9bf6-b8b0a1633cb7",
-  "checkedAt": "2026-10-16T21:20:17.737Z"
+  "length": 545,
+  "checkedAt": "2026-10-17T00:06:16.473Z"
  },
  "[\"los espiritus\",\"alto valle\"]": {
   "genres": [
@@ -514,19 +586,22 @@
   ],
   "source": "artist",
   "recording": "16ae99a3-8f2c-4e1d-99d0-e66e5b990beb",
-  "checkedAt": "2026-10-16T21:20:23.137Z"
+  "length": 256,
+  "checkedAt": "2026-10-17T00:06:27.761Z"
  },
  "[\"fukutomi yukihiro\",\"50 ways\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:20:25.685Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:06:30.265Z"
  },
  "[\"cheeseslider\",\"sweatmajor\"]": {
   "genres": [],
   "source": null,
   "recording": "2a85e02e-c626-464f-bb17-da81eac16a59",
-  "checkedAt": "2026-10-16T21:20:31.783Z"
+  "length": 361,
+  "checkedAt": "2026-10-17T00:06:42.556Z"
  },
  "[\"the orioles\",\"it's too soon to know\"]": {
   "genres": [
@@ -534,13 +609,15 @@
   ],
   "source": "artist",
   "recording": "71fd698c-4db4-43a3-8d3c-91baf93be23a",
-  "checkedAt": "2026-10-16T21:20:35.037Z"
+  "length": 125,
+  "checkedAt": "2026-10-17T00:06:45.947Z"
  },
  "[\"sasho uzun\",\"da rhythm\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:20:36.302Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:06:47.205Z"
  },
  "[\"alice swoboda\",\"potter's field\"]": {
   "genres": [
@@ -550,7 +627,8 @@
   ],
   "source": "recording",
   "recording": "ae732a68-ec7a-4aa8-8dd7-37153b1ac3c0",
-  "checkedAt": "2026-10-16T21:20:39.025Z"
+  "length": 190,
+  "checkedAt": "2026-10-17T00:06:49.743Z"
  },
  "[\"2000 and one\",\"sunk ice\"]": {
   "genres": [
@@ -560,7 +638,8 @@
   ],
   "source": "artist",
   "recording": "74ac37d3-ea56-407b-b4ac-8534cf66c012",
-  "checkedAt": "2026-10-16T21:20:42.971Z"
+  "length": 573,
+  "checkedAt": "2026-10-17T00:06:53.819Z"
  },
  "[\"nagamatzu\",\"faith\"]": {
   "genres": [
@@ -570,47 +649,54 @@
   ],
   "source": "artist",
   "recording": "56d54179-2ea1-4df2-8f41-594ed4732f6c",
-  "checkedAt": "2026-10-16T21:20:46.802Z"
+  "length": 412,
+  "checkedAt": "2026-10-17T00:06:59.846Z"
  },
  "[\"rider shafique\",\"when will we learn\"]": {
   "genres": [],
   "source": null,
   "recording": "9eb325a3-dc81-4437-95ea-cd44775ad872",
-  "checkedAt": "2026-10-16T21:20:52.937Z"
+  "length": 207,
+  "checkedAt": "2026-10-17T00:07:05.787Z"
  },
  "[\"michele mercure\",\"time piece\"]": {
   "genres": [],
   "source": null,
   "recording": "222fe7cc-ea13-4c5e-922d-8b4b4dd5dd8c",
-  "checkedAt": "2026-10-16T21:20:56.808Z"
+  "length": 348,
+  "checkedAt": "2026-10-17T00:07:15.845Z"
  },
  "[\"private agenda, coral sea\",\"bounty (coral sea mix)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:21:00.239Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:07:17.185Z"
  },
  "[\"schubert, budapest philharmonic orchestra, janos kovacs\",\"rosamunde\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:21:01.527Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:07:20.593Z"
  },
  "[\"inrain\",\"grow\"]": {
   "genres": [],
   "source": null,
   "recording": "cb476f61-ebb1-4764-89ad-6768658b016d",
-  "checkedAt": "2026-10-16T21:21:05.411Z"
+  "length": 181,
+  "checkedAt": "2026-10-17T00:07:26.590Z"
  },
  "[\"rah band\",\"sam the samba man\"]": {
   "genres": [
-   "boogie",
-   "brit funk",
-   "electro-funk"
+   "disco",
+   "electro",
+   "electronic"
   ],
-  "source": "artist",
-  "recording": "79bdbffd-f5d2-43be-925e-b1d2429b1b64",
-  "checkedAt": "2026-10-16T21:21:10.626Z"
+  "source": "recording",
+  "recording": "922a1274-b355-4ad2-bf7b-600719beb664",
+  "length": 442,
+  "checkedAt": "2026-10-17T00:07:32.504Z"
  },
  "[\"zdar\",\"how do u see me now\"]": {
   "genres": [
@@ -620,31 +706,36 @@
   ],
   "source": "recording",
   "recording": "b7944c3f-adef-4c84-9fa0-28d4c4c833fb",
-  "checkedAt": "2026-10-16T21:21:11.890Z"
+  "length": 259,
+  "checkedAt": "2026-10-17T00:07:33.936Z"
  },
  "[\"ronnie and the hi-lites\",\"i wish that we were married\"]": {
   "genres": [],
   "source": null,
   "recording": "e7c322e3-dc65-4cd5-a317-fbf864e906fc",
-  "checkedAt": "2026-10-16T21:21:14.418Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:07:38.606Z"
  },
  "[\"traumprinz\",\"im rausch der tiefe\"]": {
   "genres": [],
   "source": null,
   "recording": "88972869-a081-4246-8eca-774809e59ee2",
-  "checkedAt": "2026-10-16T21:21:18.253Z"
+  "length": 563,
+  "checkedAt": "2026-10-17T00:07:44.623Z"
  },
  "[\"ted lucas\",\"plain and sane and simple melody\"]": {
   "genres": [],
   "source": null,
   "recording": "77649da0-1378-4ae4-bf99-c1985f0359ae",
-  "checkedAt": "2026-10-16T21:21:22.065Z"
+  "length": 159,
+  "checkedAt": "2026-10-17T00:07:50.602Z"
  },
  "[\"a rocket in dub\",\"rocket no. 2\"]": {
   "genres": [],
   "source": null,
   "recording": "71a03988-7eeb-4aea-8f85-c8c0d788d7f3",
-  "checkedAt": "2026-10-16T21:21:32.191Z"
+  "length": 507,
+  "checkedAt": "2026-10-17T00:07:56.649Z"
  },
  "[\"alvin curran\",\"canti e vedute dal giardino magnetico\"]": {
   "genres": [
@@ -653,75 +744,83 @@
    "musique concrète"
   ],
   "source": "artist",
-  "recording": "f7d52913-545a-4d43-9fe0-1e3db57f4882",
-  "checkedAt": "2026-10-16T21:21:38.129Z"
+  "recording": "3d987091-1d5d-49b2-8740-5568d281bf12",
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:02.671Z"
  },
  "[\"throbbing gristle\",\"walkabout\"]": {
   "genres": [
-   "industrial",
-   "electronic",
-   "experimental"
+   "industrial"
   ],
-  "source": "artist",
-  "recording": "6ba5d3c9-ef4f-48e9-8760-6fa6fecb2b90",
-  "checkedAt": "2026-10-16T21:21:48.215Z"
+  "source": "recording",
+  "recording": "0c32462e-1f98-4e32-8983-0b67e0556fc3",
+  "length": 180,
+  "checkedAt": "2026-10-17T00:08:05.370Z"
  },
  "[\"radu lupu, franz schubert\",\"piano sonata in a minor, d 845\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:21:51.618Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:06.634Z"
  },
  "[\"solar\",\"your secret\"]": {
   "genres": [],
   "source": null,
   "recording": "5472a9d6-5ab6-4971-8f06-406ce82e1b22",
-  "checkedAt": "2026-10-16T21:21:56.663Z"
+  "length": 321,
+  "checkedAt": "2026-10-17T00:08:13.802Z"
  },
  "[\"mayumi kojima\",\"ai no mirju (mirage of love)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:21:57.935Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:15.062Z"
  },
  "[\"obost\",\"don’t want to be alone (richard sen remix)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:21:59.202Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:16.338Z"
  },
  "[\"eddy bailes & the cadillacs\",\"if this is sin\"]": {
   "genres": [],
   "source": null,
   "recording": "061cef0b-2c08-46da-b8b8-793e6e01ce23",
-  "checkedAt": "2026-10-16T21:22:04.331Z"
+  "length": 177,
+  "checkedAt": "2026-10-17T00:08:21.667Z"
  },
  "[\"ofege\",\"it's not easy\"]": {
   "genres": [
-   "psychedelic rock",
-   "rock"
+   "psychedelic rock"
   ],
-  "source": "recording",
-  "recording": "a22c2bbd-7b4a-46ed-82aa-7ad89a3bafad",
-  "checkedAt": "2026-10-16T21:22:09.031Z"
+  "source": "artist",
+  "recording": "13d66318-b6b6-4b92-94a3-38e835782c6c",
+  "length": 265,
+  "checkedAt": "2026-10-17T00:08:25.486Z"
  },
  "[\"rhythm maker\",\"herzog\"]": {
   "genres": [],
   "source": null,
   "recording": "4c6192fd-1c41-4830-81a4-d5c68df7792e",
-  "checkedAt": "2026-10-16T21:22:12.848Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:30.054Z"
  },
  "[\"enno velthuys\",\"7\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:22:14.110Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:31.314Z"
  },
  "[\"clipse, pharrell williams\",\"mr. me too (instrumental)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:22:24.178Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:35.106Z"
  },
  "[\"craig leon\",\"the earliest trace\"]": {
   "genres": [
@@ -729,20 +828,23 @@
    "tribal ambient"
   ],
   "source": "artist",
-  "recording": "2cdcf656-152a-4fe5-b146-457d80cf6d9a",
-  "checkedAt": "2026-10-16T21:22:30.150Z"
+  "recording": "3eb43004-b5ca-4b5c-bc96-93bb1434f40b",
+  "length": 177,
+  "checkedAt": "2026-10-17T00:08:39.002Z"
  },
  "[\"tal, triola, www.jz-arkh.co.uk, donnacha costello, dettinger, novisad, ulf lohmann, markus guentner, all\",\"java\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:22:40.278Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:42.947Z"
  },
  "[\"karajan, wiener philharmoniker, mozart, beethoven, schubert, brahms, r. strauss\",\"der rosenkavalier\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:22:43.695Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:08:44.295Z"
  },
  "[\"annabel lamb\",\"no cure\"]": {
   "genres": [
@@ -750,32 +852,37 @@
    "singer-songwriter"
   ],
   "source": "artist",
-  "recording": "f223b771-c7d3-49c2-a2e3-a83abdbb8b40",
-  "checkedAt": "2026-10-16T21:22:49.118Z"
+  "recording": "613b6326-01bd-4115-ba2e-d0ff6ec8b0d3",
+  "length": 290,
+  "checkedAt": "2026-10-17T00:08:50.932Z"
  },
  "[\"chris gray\",\"for being you (version)\"]": {
   "genres": [],
   "source": null,
   "recording": "d7dd04fd-3396-4690-9284-565ae16bfa78",
-  "checkedAt": "2026-10-16T21:22:52.947Z"
+  "length": 216,
+  "checkedAt": "2026-10-17T00:08:55.023Z"
  },
  "[\"glok, timothy clerkin\",\"the witching hour (richard sen remix)\"]": {
   "genres": [],
   "source": null,
   "recording": "cd9f9cbb-f918-4184-840b-d327bba3c5ce",
-  "checkedAt": "2026-10-16T21:22:58.100Z"
+  "length": 487,
+  "checkedAt": "2026-10-17T00:09:00.481Z"
  },
  "[\"the imperials\",\"tears on my pillow\"]": {
   "genres": [],
   "source": null,
   "recording": "fdf64d4c-267a-4fa8-bc81-ead7acc283f6",
-  "checkedAt": "2026-10-16T21:23:12.924Z"
+  "length": 137,
+  "checkedAt": "2026-10-17T00:09:20.142Z"
  },
  "[\"rob pearson, robin ball\",\"the right vibes (original mix)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:14.194Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:21.406Z"
  },
  "[\"lorez alexandria\",\"i'm wishin'\"]": {
   "genres": [
@@ -785,25 +892,29 @@
   ],
   "source": "artist",
   "recording": "bf0e79ab-aedd-4f33-b487-6e5ac4920b08",
-  "checkedAt": "2026-10-16T21:23:18.018Z"
+  "length": 181,
+  "checkedAt": "2026-10-17T00:09:25.819Z"
  },
  "[\"ilk\",\"qwerks\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:19.291Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:27.100Z"
  },
  "[\"dmx, ja rule\",\"prayer iii\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:20.607Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:34.649Z"
  },
  "[\"slowdive, grouper\",\"kisses (sky ii)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:21.883Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:35.945Z"
  },
  "[\"chihei hatakeyama\",\"frozen flowers\"]": {
   "genres": [
@@ -812,37 +923,43 @@
   ],
   "source": "artist",
   "recording": "70476300-16c9-440b-b1c3-60cc6ef99735",
-  "checkedAt": "2026-10-16T21:23:27.153Z"
+  "length": 127,
+  "checkedAt": "2026-10-17T00:09:43.315Z"
  },
  "[\"bruno walter, beethoven\",\"symphony no. 7 in a major, op. 92\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:28.444Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:46.740Z"
  },
  "[\"rinascita\",\"enigma eden\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:29.706Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:50.222Z"
  },
  "[\"all access\",\"tell me what you want\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:31.037Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:51.550Z"
  },
  "[\"rob pearson & robin ball\",\"the right vibe (radio edit)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:32.315Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:52.951Z"
  },
  "[\"interloper\",\"suck'n'dub\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:35.721Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:09:54.279Z"
  },
  "[\"los thuthanaka\",\"salay “titi ch’iri siqititi”\"]": {
   "genres": [
@@ -852,25 +969,29 @@
   ],
   "source": "recording",
   "recording": "298fd300-3717-4ada-a5b4-37fe4f6066ba",
-  "checkedAt": "2026-10-16T21:23:38.345Z"
+  "length": 489,
+  "checkedAt": "2026-10-17T00:09:56.889Z"
  },
  "[\"pat’s soundhouse\",\"last sunrise\"]": {
   "genres": [],
   "source": null,
   "recording": "3ae50c4d-c980-4b9d-ab4e-642e59ed73f8",
-  "checkedAt": "2026-10-16T21:23:48.572Z"
+  "length": 237,
+  "checkedAt": "2026-10-17T00:10:01.008Z"
  },
  "[\"mark templeton\",\"lily of the valley\"]": {
   "genres": [],
   "source": null,
   "recording": "32cb4b71-6ea9-4624-af0f-57e43b53f035",
-  "checkedAt": "2026-10-16T21:23:54.557Z"
+  "length": 82,
+  "checkedAt": "2026-10-17T00:10:05.080Z"
  },
  "[\"mozart, strauss, cristina gómez godoy, west-eastern divan orchestra, daniel barenboim\",\"oboe concerto in d major, trv 292\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:23:57.966Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:06.584Z"
  },
  "[\"he said\",\"pump\"]": {
   "genres": [
@@ -879,25 +1000,31 @@
   ],
   "source": "artist",
   "recording": "3c0cacb0-5963-488b-8ac1-a96879a1bec0",
-  "checkedAt": "2026-10-16T21:24:00.501Z"
+  "length": 302,
+  "checkedAt": "2026-10-17T00:10:09.267Z"
  },
  "[\"will king\",\"can we talk\"]": {
   "genres": [],
   "source": null,
   "recording": "93907f0a-55e3-4e12-89ff-0b8cc97575e8",
-  "checkedAt": "2026-10-16T21:24:04.479Z"
+  "length": 286,
+  "checkedAt": "2026-10-17T00:10:15.342Z"
  },
  "[\"the castaways\",\"sam\"]": {
-  "genres": [],
-  "source": null,
-  "recording": "683eeb89-3045-4e0f-9b27-2c213788b2ef",
-  "checkedAt": "2026-10-16T21:24:11.755Z"
+  "genres": [
+   "rock"
+  ],
+  "source": "recording",
+  "recording": "119c9a81-a471-4ce3-9201-ff69ffddaf28",
+  "length": 153,
+  "checkedAt": "2026-10-17T00:10:21.365Z"
  },
  "[\"dav (croatia)\",\"headspin (original mix)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:13.017Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:24.782Z"
  },
  "[\"mccoy tyner\",\"my favorite things\"]": {
   "genres": [
@@ -905,31 +1032,36 @@
   ],
   "source": "recording",
   "recording": "24ca83db-d907-41fe-b910-2af3f0ff6d12",
-  "checkedAt": "2026-10-16T21:24:17.713Z"
+  "length": 521,
+  "checkedAt": "2026-10-17T00:10:27.479Z"
  },
  "[\"xterea\",\"i'll call you later\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:19.032Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:28.741Z"
  },
  "[\"andrea taeggi\",\"cuttleburrs\"]": {
   "genres": [],
   "source": null,
   "recording": "49681dfb-08c9-4f3d-b18d-8563b3606dca",
-  "checkedAt": "2026-10-16T21:24:25.191Z"
+  "length": 478,
+  "checkedAt": "2026-10-17T00:10:34.823Z"
  },
  "[\"green-house\",\"coquina\"]": {
   "genres": [],
   "source": null,
   "recording": "7be97f55-e66d-4ca9-9a79-45574370ede4",
-  "checkedAt": "2026-10-16T21:24:27.781Z"
+  "length": 287,
+  "checkedAt": "2026-10-17T00:10:37.657Z"
  },
  "[\"mendelssohn, the cleveland quartet\",\"octet in e-flat major, op. 20\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:29.060Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:38.939Z"
  },
  "[\"el perro del mar\",\"walk on by\"]": {
   "genres": [
@@ -939,7 +1071,8 @@
   ],
   "source": "recording",
   "recording": "10c0b571-9e2b-480c-a2c6-dc3ebf6c2e5d",
-  "checkedAt": "2026-10-16T21:24:30.397Z"
+  "length": 263,
+  "checkedAt": "2026-10-17T00:10:40.436Z"
  },
  "[\"a man called adam\",\"barefoot in the head (radio edit)\"]": {
   "genres": [
@@ -947,7 +1080,8 @@
   ],
   "source": "artist",
   "recording": "4048d47a-5907-47be-98b6-b4479349f128",
-  "checkedAt": "2026-10-16T21:24:35.228Z"
+  "length": 238,
+  "checkedAt": "2026-10-17T00:10:43.325Z"
  },
  "[\"maurice williams & the zodiacs\",\"stay\"]": {
   "genres": [
@@ -955,31 +1089,36 @@
   ],
   "source": "recording",
   "recording": "92529f7c-6a18-41e4-959f-18e59e3f798f",
-  "checkedAt": "2026-10-16T21:24:37.236Z"
+  "length": 97,
+  "checkedAt": "2026-10-17T00:10:47.618Z"
  },
  "[\"missy zeze & presslaboys\",\"e.f.x (european fusion x-perience) (electro monkey mix)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:38.497Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:48.968Z"
  },
  "[\"the diddys\",\"intergalactic love song\"]": {
   "genres": [],
   "source": null,
   "recording": "a1e0c45d-b551-4b0c-8f96-4599def1bd2c",
-  "checkedAt": "2026-10-16T21:24:42.528Z"
+  "length": 277,
+  "checkedAt": "2026-10-17T00:10:55.184Z"
  },
  "[\"gaia tones\",\"deep\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:43.801Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:56.440Z"
  },
  "[\"t.i., chris brown\",\"get back up\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:46.389Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:10:59.537Z"
  },
  "[\"tomaga\",\"arpeggio drum challenge\"]": {
   "genres": [
@@ -987,19 +1126,22 @@
   ],
   "source": "artist",
   "recording": "218a19c8-c62e-4d7d-aa8c-ba93f20ec337",
-  "checkedAt": "2026-10-16T21:24:52.561Z"
+  "length": 116,
+  "checkedAt": "2026-10-17T00:11:03.914Z"
  },
  "[\"leoš janáček, wiener philharmoniker, sir charles mackerras\",\"sinfonietta\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:53.871Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:11:05.298Z"
  },
  "[\"7th plain\",\"untitled a4\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:24:55.132Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:11:08.693Z"
  },
  "[\"theo parrish\",\"how i feel\"]": {
   "genres": [
@@ -1009,13 +1151,15 @@
   ],
   "source": "artist",
   "recording": "79d5c7bf-7798-47e7-bf59-51eba2475653",
-  "checkedAt": "2026-10-16T21:24:57.865Z"
+  "length": 761,
+  "checkedAt": "2026-10-17T00:11:11.623Z"
  },
  "[\"bernadette carroll\",\"laughing on the outside\"]": {
   "genres": [],
   "source": null,
   "recording": "015d4d82-2a26-4b46-9afb-137600c9056c",
-  "checkedAt": "2026-10-16T21:25:01.190Z"
+  "length": 140,
+  "checkedAt": "2026-10-17T00:11:15.204Z"
  },
  "[\"the brothers & sisters\",\"all along the watchtower\"]": {
   "genres": [
@@ -1023,7 +1167,8 @@
   ],
   "source": "recording",
   "recording": "be3b1dea-6d34-4751-b349-48f91c59a29d",
-  "checkedAt": "2026-10-16T21:25:03.753Z"
+  "length": 208,
+  "checkedAt": "2026-10-17T00:11:17.898Z"
  },
  "[\"bonde do role\",\"divine gosa\"]": {
   "genres": [
@@ -1033,13 +1178,15 @@
   ],
   "source": "recording",
   "recording": "8160a96d-5f60-410c-a703-385e5e7ef84c",
-  "checkedAt": "2026-10-16T21:25:06.503Z"
+  "length": 167,
+  "checkedAt": "2026-10-17T00:11:20.468Z"
  },
  "[\"band ane\",\"undoubtedly\"]": {
   "genres": [],
   "source": null,
   "recording": "098241c1-83d2-47b0-896b-5dee7df46f28",
-  "checkedAt": "2026-10-16T21:25:10.446Z"
+  "length": 157,
+  "checkedAt": "2026-10-17T00:11:24.386Z"
  },
  "[\"pariah\",\"seed bank\"]": {
   "genres": [
@@ -1048,19 +1195,22 @@
   ],
   "source": "artist",
   "recording": "1f5879d5-4bde-424f-bd73-401822acdf2a",
-  "checkedAt": "2026-10-16T21:25:15.207Z"
+  "length": 258,
+  "checkedAt": "2026-10-17T00:11:26.963Z"
  },
  "[\"mozart, neville marriner, academy of st. martin-in-the-fields\",\"don giovanni, k. 527\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:25:16.521Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:11:34.584Z"
  },
  "[\"judy nylon, crucial\",\"jailhouse rock\"]": {
   "genres": [],
   "source": null,
   "recording": "5309d001-7899-434e-8fbc-20e0016e2e93",
-  "checkedAt": "2026-10-16T21:25:20.465Z"
+  "length": 228,
+  "checkedAt": "2026-10-17T00:11:38.529Z"
  },
  "[\"the jive bombers\",\"bad boy\"]": {
   "genres": [
@@ -1069,7 +1219,8 @@
   ],
   "source": "recording",
   "recording": "8d66fde0-c289-42a5-8d89-99a319b3a60e",
-  "checkedAt": "2026-10-16T21:25:24.697Z"
+  "length": 173,
+  "checkedAt": "2026-10-17T00:11:43.002Z"
  },
  "[\"nolan porter\",\"if i could only be sure\"]": {
   "genres": [
@@ -1077,14 +1228,16 @@
    "soul"
   ],
   "source": "artist",
-  "recording": "86d3409d-6c1c-454e-af58-418b92b803b6",
-  "checkedAt": "2026-10-16T21:25:28.788Z"
+  "recording": "51d1003f-4db4-4da1-be4b-6d81b8e2f000",
+  "length": 198,
+  "checkedAt": "2026-10-17T00:11:53.440Z"
  },
  "[\"e world\",\"dirge (part 2)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:25:30.290Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:11:56.837Z"
  },
  "[\"the bug, magugu\",\"deep in a mud\"]": {
   "genres": [
@@ -1094,13 +1247,15 @@
   ],
   "source": "artist",
   "recording": "da1e413b-7e07-4365-a5ba-1822f2865365",
-  "checkedAt": "2026-10-16T21:25:34.547Z"
+  "length": 223,
+  "checkedAt": "2026-10-17T00:12:02.898Z"
  },
  "[\"crescent\",\"mica\"]": {
   "genres": [],
   "source": null,
   "recording": "9803641c-a200-4ffa-a38c-0d143bbb53ea",
-  "checkedAt": "2026-10-16T21:25:37.271Z"
+  "length": 278,
+  "checkedAt": "2026-10-17T00:12:05.704Z"
  },
  "[\"ann annie\",\"in motion\"]": {
   "genres": [
@@ -1110,31 +1265,36 @@
   ],
   "source": "artist",
   "recording": "ee137642-092c-4870-85ec-910dd3e5ad78",
-  "checkedAt": "2026-10-16T21:25:40.040Z"
+  "length": 237,
+  "checkedAt": "2026-10-17T00:12:08.392Z"
  },
  "[\"brahms, curzon, london symphony, szell\",\"piano concerto no. 1 in d minor, op. 15\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:25:41.379Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:12:09.749Z"
  },
  "[\"chicago party\",\"paris ross (wbmx rap)\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:25:42.677Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:12:11.265Z"
  },
  "[\"bronx dogs\",\"tribute to jazzy jay\"]": {
   "genres": [],
   "source": null,
   "recording": "90fbc977-2505-4615-b622-4e6297217d19",
-  "checkedAt": "2026-10-16T21:25:46.684Z"
+  "length": 410,
+  "checkedAt": "2026-10-17T00:12:21.542Z"
  },
  "[\"the jiving juniors\",\"valerie\"]": {
   "genres": [],
   "source": null,
   "recording": "7056990e-10f8-4331-a03f-0c4800352ebb",
-  "checkedAt": "2026-10-16T21:25:51.964Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:12:28.902Z"
  },
  "[\"lorez alexandria\",\"baltimore oriole\"]": {
   "genres": [
@@ -1143,20 +1303,23 @@
    "vocal jazz"
   ],
   "source": "artist",
-  "recording": "5f14b7d6-ec47-418b-b580-c8a9dd7cd8b7",
-  "checkedAt": "2026-10-16T21:25:54.613Z"
+  "recording": "1f434e68-7e26-4248-b556-9a7e053b2952",
+  "length": 194,
+  "checkedAt": "2026-10-17T00:12:31.563Z"
  },
  "[\"earthly\",\"brighter\"]": {
   "genres": [],
   "source": null,
   "recording": "3353db12-10a3-4661-a4f3-6c55f6fcc043",
-  "checkedAt": "2026-10-16T21:26:02.142Z"
+  "length": 191,
+  "checkedAt": "2026-10-17T00:12:36.910Z"
  },
  "[\"suso size\",\"anti-stress for babies and families\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:26:04.744Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:12:41.942Z"
  },
  "[\"eurythmics\",\"for the love of big brother\"]": {
   "genres": [
@@ -1166,22 +1329,26 @@
   ],
   "source": "recording",
   "recording": "9b768765-8c3a-425d-8a51-ed0b34b07e7d",
-  "checkedAt": "2026-10-16T21:26:08.772Z"
+  "length": 306,
+  "checkedAt": "2026-10-17T00:12:45.935Z"
  },
  "[\"dj razor blade and the h.i.n.c.\",\"detroit’s in the house\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:26:10.113Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:12:47.271Z"
  },
  "[\"sza\",\"kill bill\"]": {
   "genres": [
-   "pop",
-   "soul"
+   "contemporary r&b",
+   "electronic",
+   "r&b"
   ],
-  "source": "recording",
-  "recording": "52dc5433-ce6f-4946-8b71-333e66bd37b8",
-  "checkedAt": "2026-10-16T21:26:12.810Z"
+  "source": "artist",
+  "recording": "7b9e39be-cfd7-4cc6-a047-d2b785b25b8f",
+  "length": 154,
+  "checkedAt": "2026-10-17T00:12:51.539Z"
  },
  "[\"john lennon\",\"jealous guy\"]": {
   "genres": [
@@ -1191,7 +1358,8 @@
   ],
   "source": "artist",
   "recording": "9261cea2-faf5-40b1-b0bb-3e4eacb23778",
-  "checkedAt": "2026-10-16T21:26:17.403Z"
+  "length": 250,
+  "checkedAt": "2026-10-17T00:12:55.626Z"
  },
  "[\"fred again.. & bia\",\"..feisty\"]": {
   "genres": [
@@ -1201,7 +1369,8 @@
   ],
   "source": "artist",
   "recording": "bdd65fab-0452-485c-9bfb-615dd05c9c5b",
-  "checkedAt": "2026-10-16T21:26:21.480Z"
+  "length": 160,
+  "checkedAt": "2026-10-17T00:12:59.869Z"
  },
  "[\"vashti bunyan\",\"diamond day\"]": {
   "genres": [
@@ -1211,7 +1380,8 @@
   ],
   "source": "recording",
   "recording": "66061567-5efc-4d55-8898-83ee71075411",
-  "checkedAt": "2026-10-16T21:26:24.278Z"
+  "length": 107,
+  "checkedAt": "2026-10-17T00:13:02.501Z"
  },
  "[\"nara\",\"funeral de um lavrador\"]": {
   "genres": [
@@ -1221,15 +1391,17 @@
   ],
   "source": "artist",
   "recording": "f5ee3b0e-c012-41e5-b98d-5be576dc77e8",
-  "checkedAt": "2026-10-16T21:26:28.469Z"
+  "length": 130,
+  "checkedAt": "2026-10-17T00:13:08.564Z"
  },
  "[\"miriam makeba\",\"house of the rising sun\"]": {
   "genres": [
    "marabi"
   ],
   "source": "artist",
-  "recording": "6c279b60-0c91-4205-87d4-6782a33ca2b3",
-  "checkedAt": "2026-10-16T21:26:34.592Z"
+  "recording": "3a872659-c70d-4037-89f6-a724fe5f72d7",
+  "length": 121,
+  "checkedAt": "2026-10-17T00:13:14.752Z"
  },
  "[\"voyou\",\"une île\"]": {
   "genres": [
@@ -1237,13 +1409,15 @@
   ],
   "source": "artist",
   "recording": "4d5027e1-48f5-424a-8cc0-6f78501b9323",
-  "checkedAt": "2026-10-16T21:26:38.588Z"
+  "length": 266,
+  "checkedAt": "2026-10-17T00:13:19.107Z"
  },
  "[\"little emmett sutton\",\"mom, won't you teach me to monkey\"]": {
   "genres": [],
   "source": null,
   "recording": "4acb53c6-59cb-48ad-8394-05b9a21cf30c",
-  "checkedAt": "2026-10-16T21:26:42.578Z"
+  "length": 187,
+  "checkedAt": "2026-10-17T00:13:23.353Z"
  },
  "[\"dana gillespie\",\"souvenirs of stefan\"]": {
   "genres": [
@@ -1253,7 +1427,8 @@
   ],
   "source": "artist",
   "recording": "6c63ba50-2069-4823-a663-f5d664079a37",
-  "checkedAt": "2026-10-16T21:26:46.400Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:13:28.561Z"
  },
  "[\"voyou\",\"enfin\"]": {
   "genres": [
@@ -1261,32 +1436,735 @@
   ],
   "source": "artist",
   "recording": "8bc294f4-ab2e-467b-8b3f-39e11a4a4ff8",
-  "checkedAt": "2026-10-16T21:26:55.589Z"
+  "length": 141,
+  "checkedAt": "2026-10-17T00:13:34.068Z"
  },
  "[\"supertramp\",\"from now on\"]": {
   "genres": [
-   "classic rock",
+   "progressive rock",
    "rock",
-   "pop"
+   "art rock"
   ],
-  "source": "recording",
-  "recording": "086e433d-3091-437b-84b2-48a2656472ea",
-  "checkedAt": "2026-10-16T21:26:58.153Z"
+  "source": "artist",
+  "recording": "57012d49-9338-4efb-a89b-d3d9c5fb866a",
+  "length": 416,
+  "checkedAt": "2026-10-17T00:13:38.545Z"
  },
  "[\"g.g. vikey\",\"je vous remercie\"]": {
   "genres": [],
   "source": null,
   "recording": null,
-  "checkedAt": "2026-10-16T21:26:59.486Z"
+  "length": null,
+  "checkedAt": "2026-10-17T00:13:46.311Z"
  },
  "[\"carole king\",\"weekdays\"]": {
   "genres": [
    "blue-eyed soul",
-   "folk rock",
+   "folk pop",
+   "folk rock"
+  ],
+  "source": "recording",
+  "recording": "c71e5a3c-4efa-4e43-b9e8-ab7db81036b3",
+  "length": 165,
+  "checkedAt": "2026-10-17T00:13:49.496Z"
+ },
+ "[\"xterea\",\"track 4\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "da6e57d4-d568-47f7-8911-d655dce96e64",
+  "length": 170,
+  "checkedAt": "2026-10-17T00:13:53.391Z"
+ },
+ "[\"john roberts\",\"hair\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "41d3684a-5ea9-4af9-bb48-29761eba5c52",
+  "length": 60,
+  "checkedAt": "2026-10-17T00:13:57.880Z"
+ },
+ "[\"rossini’s\",\"la gazza ladra\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T00:13:59.645Z"
+ },
+ "[\"the cleaners from venus\",\"tukani (monday is grey)\"]": {
+  "genres": [
+   "jangle pop",
+   "indie pop",
+   "lo-fi"
+  ],
+  "source": "artist",
+  "recording": "a987d75a-d6d4-491a-ac50-7d0bb916a286",
+  "length": 329,
+  "checkedAt": "2026-10-17T00:14:02.401Z"
+ },
+ "[\"ron carroll\",\"a new day (h&f dubhouse mix)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T00:14:05.128Z"
+ },
+ "[\"don julian and the meadowlarks\",\"heaven and paradise\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "06435b7f-b9ca-4076-adab-8baafdf2c98b",
+  "length": 172,
+  "checkedAt": "2026-10-17T00:14:13.051Z"
+ },
+ "[\"trevor dandy\",\"don't cry little tree\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "e3e1462c-0f31-4fcd-875c-f71524e96818",
+  "length": 191,
+  "checkedAt": "2026-10-17T00:14:17.935Z"
+ },
+ "[\"dj shafi\",\"beat bakola\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T00:14:19.420Z"
+ },
+ "[\"aleksi perälä\",\"uk74r1517130\"]": {
+  "genres": [
+   "ambient techno",
+   "idm",
+   "ambient"
+  ],
+  "source": "artist",
+  "recording": "64848ce7-fbfd-443d-aba1-b5c13e2edc5f",
+  "length": 176,
+  "checkedAt": "2026-10-17T00:14:23.605Z"
+ },
+ "[\"david cordero\",\"zumaia\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T00:14:26.166Z"
+ },
+ "[\"jim stafford\",\"the last chant\"]": {
+  "genres": [
+   "country",
    "pop"
   ],
   "source": "recording",
-  "recording": "82302f45-5478-42eb-87c6-d67994ce323f",
-  "checkedAt": "2026-10-16T21:27:02.185Z"
+  "recording": "761d553e-5bb4-4e1c-b5c5-65bf380f8528",
+  "length": 203,
+  "checkedAt": "2026-10-17T00:14:27.460Z"
+ },
+ "[\"waterlillies, spooky\",\"tempted (apple crumble)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "89028428-f681-4269-8d28-b0601c394da1",
+  "length": 512,
+  "checkedAt": "2026-10-17T00:14:34.186Z"
+ },
+ "[\"kraak & smaak, izo fitzroy, ray mang\",\"velvet seas (ray mang remix)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T00:14:35.451Z"
+ },
+ "[\"the teenagers, frankie lymon\",\"why do fools fall in love\"]": {
+  "genres": [
+   "doo-wop",
+   "pop",
+   "r&b"
+  ],
+  "source": "recording",
+  "recording": "28545124-7dc4-4be9-a82e-2e1ca8da56df",
+  "length": 139,
+  "checkedAt": "2026-10-17T00:14:37.670Z"
+ },
+ "[\"nick hakim\",\"i can see\"]": {
+  "genres": [
+   "neo soul",
+   "psychedelic soul"
+  ],
+  "source": "artist",
+  "recording": "2dd5cb54-5926-4fec-b649-2fb2ea45bb9c",
+  "length": 344,
+  "checkedAt": "2026-10-17T00:14:41.748Z"
+ },
+ "[\"federsen\",\"gamma\"]": {
+  "genres": [
+   "dub techno",
+   "electronic"
+  ],
+  "source": "recording",
+  "recording": "d684f1b4-ea77-4ffa-8423-7f2cd6aabd8b",
+  "length": 467,
+  "checkedAt": "2026-10-17T00:14:44.301Z"
+ },
+ "[\"lil noid\",\"load my clip\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "ab658a18-faea-460f-8164-f15023511fe2",
+  "length": 205,
+  "checkedAt": "2026-10-17T00:14:49.414Z"
+ },
+ "[\"carmen villain\",\"subtle bodies\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "44041ead-8bde-487f-95a0-b1b5a6bf1154",
+  "length": 317,
+  "checkedAt": "2026-10-17T00:14:53.416Z"
+ },
+ "[\"max von der goltz\",\"a fountain to find peace within yourself\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:43:54.750Z"
+ },
+ "[\"darcy clay\",\"and it was easy\"]": {
+  "genres": [
+   "alternative rock",
+   "rock"
+  ],
+  "source": "recording",
+  "recording": "fc3cb02f-28ea-4c20-9693-1d4aa651b5ff",
+  "length": 169,
+  "checkedAt": "2026-10-17T10:43:58.829Z"
+ },
+ "[\"the monotones\",\"the book of love\"]": {
+  "genres": [
+   "doo-wop"
+  ],
+  "source": "artist",
+  "recording": "49a5d028-3014-4374-a00d-4d6d2aa84a42",
+  "length": 142,
+  "checkedAt": "2026-10-17T10:44:01.376Z"
+ },
+ "[\"ann peebles\",\"i feel like breaking up somebody's home\"]": {
+  "genres": [
+   "r&b",
+   "soul",
+   "gospel"
+  ],
+  "source": "recording",
+  "recording": "ff14ff12-65df-4f38-9d56-5bba2788c08e",
+  "length": 150,
+  "checkedAt": "2026-10-17T10:44:04.090Z"
+ },
+ "[\"jorge\",\"bunch of bees\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:44:05.370Z"
+ },
+ "[\"joshua idehen\",\"this is the place\"]": {
+  "genres": [
+   "spoken word"
+  ],
+  "source": "artist",
+  "recording": "8797be8f-340b-4175-b015-85efd59cc85e",
+  "length": 196,
+  "checkedAt": "2026-10-17T10:44:09.511Z"
+ },
+ "[\"the cufflinks\",\"guided missiles\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:44:12.312Z"
+ },
+ "[\"ramsey lewis\",\"look-a-here\"]": {
+  "genres": [
+   "jazz",
+   "jazz-funk",
+   "pop"
+  ],
+  "source": "artist",
+  "recording": "ee20b1c3-1366-4bb2-8d72-8e94fb76310b",
+  "length": 192,
+  "checkedAt": "2026-10-17T10:44:16.441Z"
+ },
+ "[\"michel moulinié\",\"l’echo de l’acier\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "8e0ea5b3-b0a6-408f-b7a1-22897a0a4069",
+  "length": 343,
+  "checkedAt": "2026-10-17T10:44:20.402Z"
+ },
+ "[\"the sundays\",\"you're not the only one i know\"]": {
+  "genres": [
+   "indie rock",
+   "rock",
+   "alternative rock"
+  ],
+  "source": "recording",
+  "recording": "5b1b0598-a851-4be9-bc87-afc4f858c8b3",
+  "length": 231,
+  "checkedAt": "2026-10-17T10:44:21.697Z"
+ },
+ "[\"yvette fauche\",\"crazy for you (bonez funk remix)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:44:23.012Z"
+ },
+ "[\"drifting clouds\",\"rarrandharr\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "43af0b21-5858-4a22-87a8-8bf4b57512da",
+  "length": 188,
+  "checkedAt": "2026-10-17T10:44:29.315Z"
+ },
+ "[\"the blues busters\",\"there's always sunshine\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "e61dc3b2-87cc-48af-a212-bab4c3ef2359",
+  "length": 183,
+  "checkedAt": "2026-10-17T10:44:34.830Z"
+ },
+ "[\"odyssey\",\"our lives are shaped by what we love\"]": {
+  "genres": [
+   "disco",
+   "funk",
+   "soul"
+  ],
+  "source": "artist",
+  "recording": "5d3c8be7-0754-4d29-b71d-d690b5077d3d",
+  "length": 64,
+  "checkedAt": "2026-10-17T10:44:38.990Z"
+ },
+ "[\"synapse\",\"interrupt beyond therapy\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:44:40.367Z"
+ },
+ "[\"lloyd clarke\",\"now i know the reason\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "41182256-f6cb-4b40-a07e-c3d116e35fd8",
+  "length": 181,
+  "checkedAt": "2026-10-17T10:44:45.519Z"
+ },
+ "[\"amy winehouse\",\"october song\"]": {
+  "genres": [
+   "soul",
+   "contemporary r&b",
+   "jazz"
+  ],
+  "source": "artist",
+  "recording": "dd9e5724-a78e-4e11-9bea-4cb3034cfb5b",
+  "length": 222,
+  "checkedAt": "2026-10-17T10:44:49.519Z"
+ },
+ "[\"femtanyl\",\"katamari\"]": {
+  "genres": [
+   "breakcore",
+   "digital hardcore"
+  ],
+  "source": "artist",
+  "recording": "bc00afb6-c908-43c3-817c-fe93cdb41fa9",
+  "length": 158,
+  "checkedAt": "2026-10-17T10:44:53.814Z"
+ },
+ "[\"superette\",\"kiss someone\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "761dcf78-54af-47a1-8a11-50355af38482",
+  "length": 189,
+  "checkedAt": "2026-10-17T10:44:57.855Z"
+ },
+ "[\"jad & the\",\"pacific drums (liquid mix)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "7ae60b01-c934-4990-934c-841380baa2eb",
+  "length": 296,
+  "checkedAt": "2026-10-17T10:45:08.238Z"
+ },
+ "[\"the downbeats\",\"midnight love\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "2cd819c9-67d4-419f-ae62-d1e1b433f6b0",
+  "length": 166,
+  "checkedAt": "2026-10-17T10:45:18.484Z"
+ },
+ "[\"brenda russell\",\"in the thick of it\"]": {
+  "genres": [
+   "funk",
+   "pop",
+   "r&b"
+  ],
+  "source": "artist",
+  "recording": "53b1b833-93bc-475c-9e6b-7a39f9f29609",
+  "length": 239,
+  "checkedAt": "2026-10-17T10:45:22.551Z"
+ },
+ "[\"succulent\",\"freshly\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:45:23.865Z"
+ },
+ "[\"earth, wind & fire\",\"reasons\"]": {
+  "genres": [
+   "soul",
+   "ballad",
+   "disco"
+  ],
+  "source": "recording",
+  "recording": "e72de59e-fd5f-4a2f-bdb4-bb1732d2536b",
+  "length": 500,
+  "checkedAt": "2026-10-17T10:45:28.710Z"
+ },
+ "[\"sub dub\",\"ambrosia\"]": {
+  "genres": [
+   "ambient dub",
+   "dub techno"
+  ],
+  "source": "artist",
+  "recording": "7d6443e6-042f-407c-8f82-b9b750c9c943",
+  "length": 408,
+  "checkedAt": "2026-10-17T10:45:32.745Z"
+ },
+ "[\"jim legxacy\",\"cold lewisham roses\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "da329aa7-70c8-4568-bb98-5f63db9c07a9",
+  "length": 160,
+  "checkedAt": "2026-10-17T10:45:36.806Z"
+ },
+ "[\"jah wobble\",\"invaders of the heart\"]": {
+  "genres": [
+   "dub",
+   "post-punk",
+   "electronic"
+  ],
+  "source": "artist",
+  "recording": "758cb959-38aa-4630-89fd-795319225206",
+  "length": 190,
+  "checkedAt": "2026-10-17T10:45:40.691Z"
+ },
+ "[\"rozie ramati\",\"drown in the clouds of dew\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "65eb1653-bd62-46b1-8375-e913b6681044",
+  "length": 92,
+  "checkedAt": "2026-10-17T10:45:44.675Z"
+ },
+ "[\"war\",\"youngblood (livin' in the streets)\"]": {
+  "genres": [
+   "psychedelic rock",
+   "funk",
+   "rock"
+  ],
+  "source": "artist",
+  "recording": "16c94681-8c13-46d3-abaa-86f813f8eca1",
+  "length": 642,
+  "checkedAt": "2026-10-17T10:45:48.598Z"
+ },
+ "[\"nick, how dancer, gp da zl & leejack\",\"pique da ritmada (feat. nine funk)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:45:49.902Z"
+ },
+ "[\"vox populi!, full circle, alexis le tan, joakim bouaziz\",\"soleymani dub (full circle sannyacid dub)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:45:51.246Z"
+ },
+ "[\"the earons\",\"land of hunger\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "4c74afce-6e49-4a5c-9882-c9eec8359f63",
+  "length": 423,
+  "checkedAt": "2026-10-17T10:45:55.182Z"
+ },
+ "[\"scott young\",\"commix\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:45:56.525Z"
+ },
+ "[\"dove\",\"fallen (dusk)\"]": {
+  "genres": [
+   "deep house",
+   "downtempo",
+   "electronic"
+  ],
+  "source": "recording",
+  "recording": "76b47364-1867-46a5-923b-a2c739a25381",
+  "length": 311,
+  "checkedAt": "2026-10-17T10:45:59.122Z"
+ },
+ "[\"ships of the pharaohs\",\"one (feat. bror havnes)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:46:00.407Z"
+ },
+ "[\"massacooramaan\",\"dancehall princess\"]": {
+  "genres": [
+   "electronic"
+  ],
+  "source": "recording",
+  "recording": "39f750eb-ebba-4384-aaa6-22269fe651ae",
+  "length": 320,
+  "checkedAt": "2026-10-17T10:46:01.687Z"
+ },
+ "[\"single gun theory\",\"words written backwards\"]": {
+  "genres": [
+   "downtempo",
+   "dream pop",
+   "electronic"
+  ],
+  "source": "artist",
+  "recording": "f931aa7d-47bd-40dc-8b8d-4871a090fcc9",
+  "length": 263,
+  "checkedAt": "2026-10-17T10:46:04.420Z"
+ },
+ "[\"jarren\",\"the way you do\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "f84c3956-8f78-4316-926a-acdbdb86004e",
+  "length": 342,
+  "checkedAt": "2026-10-17T10:46:08.307Z"
+ },
+ "[\"junior byles\",\"fever\"]": {
+  "genres": [
+   "reggae",
+   "roots reggae"
+  ],
+  "source": "artist",
+  "recording": "5e065225-cc45-46bb-baa6-bf5ea59689c2",
+  "length": 174,
+  "checkedAt": "2026-10-17T10:46:12.308Z"
+ },
+ "[\"greville\",\"electric push cpu mix\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:46:13.612Z"
+ },
+ "[\"shackleton\",\"hamas rule\"]": {
+  "genres": [
+   "dubstep",
+   "post-dubstep",
+   "tribal ambient"
+  ],
+  "source": "artist",
+  "recording": "8c4469a0-24e5-4e61-b13b-55a27abe7410",
+  "length": 443,
+  "checkedAt": "2026-10-17T10:46:17.775Z"
+ },
+ "[\"headless chickens\",\"cruise control\"]": {
+  "genres": [
+   "rock"
+  ],
+  "source": "artist",
+  "recording": "b106deb5-fc20-4bfb-aa23-87b7516bef3c",
+  "length": 275,
+  "checkedAt": "2026-10-17T10:46:20.534Z"
+ },
+ "[\"deee-lite\",\"party happening people\"]": {
+  "genres": [
+   "house",
+   "dance",
+   "dance-pop"
+  ],
+  "source": "artist",
+  "recording": "bccb1df8-52db-46b6-9c2f-f0cebed0577a",
+  "length": 238,
+  "checkedAt": "2026-10-17T10:46:24.542Z"
+ },
+ "[\"errol dunkley\",\"a little way different\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "0e4c4bc0-ece8-4e8c-b908-55f2258ba860",
+  "length": 178,
+  "checkedAt": "2026-10-17T10:46:28.666Z"
+ },
+ "[\"dubbyman\",\"the electric days (dub vocoder)\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "a9bcc2b7-2c13-4bd4-a07b-d3e49b5cfa0b",
+  "length": null,
+  "checkedAt": "2026-10-17T10:46:32.656Z"
+ },
+ "[\"lush\",\"nothing natural\"]": {
+  "genres": [
+   "shoegaze",
+   "dream pop",
+   "rock"
+  ],
+  "source": "artist",
+  "recording": "3717822a-4ce7-4e44-996f-40a5b1019eed",
+  "length": 347,
+  "checkedAt": "2026-10-17T10:46:35.234Z"
+ },
+ "[\"pal joey\",\"perfectionist\"]": {
+  "genres": [
+   "jazz"
+  ],
+  "source": "artist",
+  "recording": "ec694f55-982e-4c46-a4dd-c1804a081112",
+  "length": 274,
+  "checkedAt": "2026-10-17T10:46:40.936Z"
+ },
+ "[\"odyssey\",\"don't tell me, tell her\"]": {
+  "genres": [
+   "disco",
+   "funk",
+   "soul"
+  ],
+  "source": "artist",
+  "recording": "a3b1f499-17ba-4096-88aa-ed0f5c4d3918",
+  "length": 317,
+  "checkedAt": "2026-10-17T10:46:43.616Z"
+ },
+ "[\"sans soleil\",\"that's the stuff\"]": {
+  "genres": [
+   "ambient"
+  ],
+  "source": "artist",
+  "recording": "50d1ce20-91e0-40b6-960b-59ba1b0873cf",
+  "length": 331,
+  "checkedAt": "2026-10-17T10:46:50.028Z"
+ },
+ "[\"the b-52's\",\"dirty back road\"]": {
+  "genres": [
+   "pop rock",
+   "new wave",
+   "dance-pop"
+  ],
+  "source": "artist",
+  "recording": "3fd914f0-3153-4109-887a-54d7a9ec4d71",
+  "length": null,
+  "checkedAt": "2026-10-17T10:46:58.081Z"
+ },
+ "[\"abel lima\",\"faca não\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "de2ef7f2-63db-428f-a64f-fbb0fcec7481",
+  "length": 212,
+  "checkedAt": "2026-10-17T10:47:04.219Z"
+ },
+ "[\"casting spells\",\"teatray in the sky\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "5e0a78b5-a228-4ac8-a305-b8937b9cee57",
+  "length": 418,
+  "checkedAt": "2026-10-17T10:47:08.487Z"
+ },
+ "[\"the flowers\",\"[life] after dark\"]": {
+  "genres": [
+   "punk"
+  ],
+  "source": "artist",
+  "recording": "274f4f78-c5ad-4073-b8d5-59b5be91699e",
+  "length": 254,
+  "checkedAt": "2026-10-17T10:47:12.392Z"
+ },
+ "[\"michael wycoff\",\"looking up to you\"]": {
+  "genres": [
+   "club",
+   "dance",
+   "funk"
+  ],
+  "source": "recording",
+  "recording": "22bf2594-f829-4d31-8286-0a853a00bc79",
+  "length": 320,
+  "checkedAt": "2026-10-17T10:47:15.138Z"
+ },
+ "[\"safety scissors\",\"blust\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "ee57de1b-26b8-4f2a-aac8-d911fde4d46c",
+  "length": 374,
+  "checkedAt": "2026-10-17T10:47:19.006Z"
+ },
+ "[\"fehlfarben\",\"ein jahr (es geht voran)\"]": {
+  "genres": [
+   "neue deutsche welle",
+   "punk"
+  ],
+  "source": "artist",
+  "recording": "5f060425-4501-41fc-813c-2e8c6ae16036",
+  "length": 168,
+  "checkedAt": "2026-10-17T10:47:21.659Z"
+ },
+ "[\"kv5\",\"landslide victory vendetta\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "c9a099c3-5740-411c-a668-236626c68d08",
+  "length": 434,
+  "checkedAt": "2026-10-17T10:47:25.574Z"
+ },
+ "[\"mc hellshit & dj carhouse\",\"hit city\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "cf523325-279b-4b3f-b4f8-f84983b20885",
+  "length": 159,
+  "checkedAt": "2026-10-17T10:47:29.538Z"
+ },
+ "[\"mikkel metal\",\"bodium\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "2e320093-5078-4e1d-a922-fb4ed84c2463",
+  "length": 353,
+  "checkedAt": "2026-10-17T10:47:33.551Z"
+ },
+ "[\"the truth\",\"garage dub\"]": {
+  "genres": [
+   "dub",
+   "reggae"
+  ],
+  "source": "recording",
+  "recording": "eaf2d1dc-683b-4815-afc5-261777057ba1",
+  "length": 378,
+  "checkedAt": "2026-10-17T10:47:36.293Z"
+ },
+ "[\"esdeekid, rico ace\",\"phantom\"]": {
+  "genres": [
+   "jerk",
+   "rage",
+   "hardcore hip hop"
+  ],
+  "source": "artist",
+  "recording": "1e9bba61-2d50-4cc2-93c1-9951ff7d9f6d",
+  "length": 109,
+  "checkedAt": "2026-10-17T10:47:40.393Z"
+ },
+ "[\"ras command\",\"razor's edge\"]": {
+  "genres": [],
+  "source": null,
+  "recording": "6a2d2b63-be7f-4862-9f17-7820217bf08b",
+  "length": 399,
+  "checkedAt": "2026-10-17T10:47:44.477Z"
+ },
+ "[\"darso\",\"bandung ciparay\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:47:45.756Z"
+ },
+ "[\"granite slapper\",\"turgis 45\"]": {
+  "genres": [],
+  "source": null,
+  "recording": null,
+  "length": null,
+  "checkedAt": "2026-10-17T10:47:47.045Z"
  }
 }

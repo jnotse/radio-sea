@@ -10,12 +10,12 @@ function text(node) {
   return node?.simpleText ?? node?.runs?.map((r) => r.text ?? '').join('') ?? '';
 }
 
-/** Read individual renderers, so a video ID can never borrow another title. */
-export function extractSearchResults(html) {
-  const match = /(?:var\s+ytInitialData\s*=|window\["ytInitialData"\]\s*=)\s*/.exec(html);
-  if (!match) return [];
+/** The JSON object a YouTube page assigns after `pattern`, or undefined. */
+export function readPageJson(html, pattern) {
+  const match = pattern.exec(html);
+  if (!match) return undefined;
   const start = html.indexOf('{', match.index + match[0].length);
-  let depth = 0, quoted = false, escaped = false, data;
+  let depth = 0, quoted = false, escaped = false;
   for (let i = start; start >= 0 && i < html.length; i++) {
     const ch = html[i];
     if (quoted) {
@@ -25,10 +25,16 @@ export function extractSearchResults(html) {
     } else if (ch === '"') quoted = true;
     else if (ch === '{') depth++;
     else if (ch === '}' && --depth === 0) {
-      try { data = JSON.parse(html.slice(start, i + 1)); } catch {}
-      break;
+      try { return JSON.parse(html.slice(start, i + 1)); } catch { return undefined; }
     }
   }
+  return undefined;
+}
+
+/** Read individual renderers, so a video ID can never borrow another title. */
+export function extractSearchResults(html) {
+  const data = readPageJson(html, /(?:var\s+ytInitialData\s*=|window\["ytInitialData"\]\s*=)\s*/);
+  if (!data) return [];
   const results = [], seen = new Set();
   function walk(node) {
     if (!node || typeof node !== 'object') return;
@@ -83,7 +89,7 @@ export function candidateMatch(play, candidate) {
  */
 export class YoutubeUnavailable extends Error {}
 
-async function request(url, { fetchImpl, retries = 2, delayMs = 900, headers } = {}) {
+export async function request(url, { fetchImpl, retries = 2, delayMs = 900, headers } = {}) {
   for (let i = 0; ; i++) {
     let res;
     try { res = await fetchImpl(url, { headers, signal: AbortSignal.timeout(20000) }); }

@@ -53,14 +53,24 @@ test('untagged recordings fall back to the artist, looked up once per artist', a
 });
 
 test('ISRC is tried when there is no recording ID, then strict search', async () => {
-  const withIsrc = fakeFetch({ '/isrc/USX1': { recordings: [{ id: 'rec-1', title: 'My Favorite Things' }] },
+  const withIsrc = fakeFetch({ '/isrc/USX120000001': { recordings: [{ id: 'rec-1', title: 'My Favorite Things' }] },
     '/recording/rec-1': { ...RECORDING, genres: [{ name: 'jazz', count: 1 }] } });
-  assert.deepEqual((await lookupTrackGenres({ ...play, ids: { isrc: 'USX1' } }, { fetchImpl: withIsrc.fetchImpl, ...fast })).genres, ['jazz']);
+  assert.deepEqual((await lookupTrackGenres({ ...play, ids: { isrc: 'USX120000001' } }, { fetchImpl: withIsrc.fetchImpl, ...fast })).genres, ['jazz']);
 
   const bySearch = fakeFetch({ '/recording?query=': { recordings: [{ ...RECORDING, score: 100 }] },
     '/recording/rec-1': { ...RECORDING, genres: [{ name: 'jazz', count: 1 }] } });
   assert.deepEqual((await lookupTrackGenres(play, { fetchImpl: bySearch.fetchImpl, ...fast })).genres, ['jazz']);
   assert.ok(decodeURIComponent(bySearch.calls[0]).includes('recording:"My Favorite Things" AND artist:"McCoy Tyner"'));
+});
+
+test('ISRCs written lowercase or hyphenated are normalized; malformed ones are skipped', async () => {
+  const { fetchImpl, calls } = fakeFetch({ '/isrc/USY282016137': { recordings: [{ id: 'rec-1', title: 'My Favorite Things' }] },
+    '/recording/rec-1': { ...RECORDING, genres: [{ name: 'jazz', count: 1 }] } });
+  assert.deepEqual((await lookupTrackGenres({ ...play, ids: { isrc: 'usy-28-20-16137' } }, { fetchImpl, ...fast })).genres, ['jazz']);
+  assert.ok(calls[0].startsWith('/isrc/USY282016137'));
+  const skipped = fakeFetch({});
+  await lookupTrackGenres({ ...play, ids: { isrc: 'not an isrc' } }, { fetchImpl: skipped.fetchImpl, ...fast });
+  assert.ok(!skipped.calls.some((c) => c.startsWith('/isrc/')));
 });
 
 test('a search hit for another artist or song is not accepted', async () => {

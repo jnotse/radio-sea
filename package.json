@@ -14,7 +14,8 @@
     "catalog:radiooooo": "node scripts/build-demo.js --radiooooo",
     "catalog:genres": "node scripts/build-demo.js --genres",
     "catalog:discogs": "node scripts/discogs-import.js",
-    "catalog:deezer": "node scripts/build-demo.js --deezer"
+    "catalog:deezer": "node scripts/build-demo.js --deezer",
+    "catalog:youtube": "node scripts/build-demo.js --youtube-meta"
   },
   "devDependencies": {
     "@playwright/test": "^1.64.1"

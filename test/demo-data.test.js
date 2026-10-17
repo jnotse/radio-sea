@@ -57,3 +57,15 @@ test('length prefers measured recordings over sleeve listings; tempo comes from 
   const [release] = mergeCatalogue([playToRaw(both)]).releases;
   assert.deepEqual([release.tracks[0].duration, release.tracks[0].bpm], [818, 132]);
 });
+
+test('YouTube fills in length, album and label last, and they reach the map', () => {
+  const song = { ...sample, artist: 'Uranium Club', title: "God's Chest", youtube: { ...sample.youtube, videoId: 'VxuNvoiel2g' } };
+  const key = songKey(song);
+  const youtube = { VxuNvoiel2g: { length: 258, album: 'All Of Them Naturals', label: 'Static Shock' } };
+  const alone = withOwnGenres(song, {}, {}, {}, youtube);
+  assert.deepEqual([alone.length, alone.album, alone.label], [258, 'All Of Them Naturals', 'Static Shock']);
+  assert.equal(withOwnGenres(song, {}, { [key]: { genres: [], length: 125 } }, {}, youtube).length, 125, 'catalogue lengths come first');
+  assert.equal(withOwnGenres({ ...song, label: 'Own Label' }, {}, {}, {}, youtube).label, 'Own Label');
+  const [release] = mergeCatalogue([playToRaw(alone)]).releases;
+  assert.deepEqual([release.tracks[0].album, release.label], ['All Of Them Naturals', 'Static Shock']);
+});

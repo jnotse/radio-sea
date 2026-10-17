@@ -65,3 +65,9 @@ export function artistSimilarity(a, b) {
   const setB = tokens(canonicalArtist(b));
   return jaccard(setA, setB);
 }
+
+/** ISRC in its standard form (tracklists sometimes write it lowercase or hyphenated), or null if malformed. */
+export function normalizeIsrc(value) {
+  const isrc = String(value ?? '').toUpperCase().replace(/[\s-]/g, '');
+  return /^[A-Z]{2}[A-Z0-9]{3}\d{7}$/.test(isrc) ? isrc : null;
+}

@@ -586,6 +586,8 @@
     $('d-meta').replaceChildren(node('span', genres(r).join(' · ') || 'No genres found for this song'));
     const facts = [r.year, r.country, r.length ? formatTime(r.length) : null, r.bpm ? `${r.bpm} BPM` : null].filter(Boolean);
     if (facts.length) $('d-meta').append(node('span', facts.join(' · ')));
+    const release = r.album && r.label ? `From ${r.album}, on ${r.label}` : r.album ? `From ${r.album}` : r.label ? `On ${r.label}` : '';
+    if (release) $('d-meta').append(node('span', release));
     $('d-meta').append(node('span', islandLabel(r.islandId, true)));
     if (changed) { if (continueInPlayer && validVideo(r)) loadInPlayer(r); else preparePlayer(r); }
     $('d-sources').replaceChildren();

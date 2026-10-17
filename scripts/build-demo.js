@@ -6,6 +6,8 @@
 //   node scripts/build-demo.js --genres   # look up per-track genres (MusicBrainz)
 //   node scripts/discogs-import.js <dump>  # genres, styles and years from a Discogs dump
 //   node scripts/build-demo.js --deezer   # tempo (BPM), length and loudness from Deezer
+//   node scripts/build-demo.js --youtube-meta  # length, album and label from YouTube
+//                                         (Data API if YOUTUBE_API_KEY is set, else watch pages)
 //   node scripts/build-demo.js --reuse    # rebuild the map from the caches only
 //   add --delay 8 to wait 8 s between YouTube lookups where YouTube limits searches
 //
@@ -23,6 +25,7 @@ import { candidateMatch } from '../src/catalog/youtube.js';
 import { extendRadioCache, songKey } from '../src/catalog/extend.js';
 import { lookupGenresForPlays } from '../src/catalog/genres.js';
 import { lookupDeezerForPlays } from '../src/catalog/deezer.js';
+import { lookupYoutubeMeta } from '../src/catalog/youtube-meta.js';
 import { fetchRadioooooPlays } from '../src/catalog/radiooooo.js';
 import { decodeEntities } from '../src/catalog/text.js';
 
@@ -56,16 +59,20 @@ const delayMs = argValue('delay', 1.1) * 1000;
 // Each song's own genres: Discogs genres and styles of the releases that list
 // it first, then MusicBrainz. Lowercase, so the two vocabularies line up.
 // Length comes from Deezer or MusicBrainz (measured recordings) before
-// Discogs (listed on sleeves); tempo only from Deezer.
-export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {}) {
+// Discogs (listed on sleeves), then the YouTube video; tempo only from
+// Deezer. Album and label come from YouTube's description of label uploads.
+export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {}, youtube = {}) {
   const key = songKey(play);
   const found = discogs[key];
+  const video = youtube[play.youtube?.videoId];
   const fromDiscogs = found ? [...found.genres, ...found.styles] : [];
   const genres = fromDiscogs.length ? fromDiscogs : musicbrainz[key]?.genres ?? [];
   return { ...play, genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
     releaseYear: play.releaseYear ?? found?.year ?? null,
-    length: deezer[key]?.length ?? musicbrainz[key]?.length ?? found?.length ?? null,
-    bpm: deezer[key]?.bpm ?? null };
+    length: deezer[key]?.length ?? musicbrainz[key]?.length ?? found?.length ?? video?.length ?? null,
+    bpm: deezer[key]?.bpm ?? null,
+    album: play.album ?? video?.album ?? null,
+    label: play.label ?? video?.label ?? null };
 }
 
 export function playToRaw(play) {
@@ -89,7 +96,7 @@ export function playToRaw(play) {
         ...(play.showGenres ?? []).slice(0, 4).map((genre) => `show-genre:${genre}`),
       ],
     },
-    tracks: [{ title: play.title, duration: play.length ?? null, bpm: play.bpm ?? null, key: null }],
+    tracks: [{ title: play.title, duration: play.length ?? null, bpm: play.bpm ?? null, key: null, album: play.album ?? null }],
     urls: { youtube: play.youtube.url },
     youtubeId: play.youtube.videoId,
     station: play.station,
@@ -108,7 +115,7 @@ async function main() {
   let plays = [];
   let errors = [];
 
-  if (['--reuse', '--repair', '--extend', '--radiooooo', '--genres', '--deezer'].some((flag) => args.includes(flag))) {
+  if (['--reuse', '--repair', '--extend', '--radiooooo', '--genres', '--deezer', '--youtube-meta'].some((flag) => args.includes(flag))) {
     const cached = JSON.parse(await readFile(cacheFile, 'utf8'));
     resolved = cached.resolved;
     dropped = cached.dropped;
@@ -209,7 +216,34 @@ async function main() {
     deezer = result.cache;
     if (result.error) console.log(`Stopped after ${result.done}/${result.total}: ${result.error.message}. Run again to continue.`);
   }
-  const withGenres = resolved.map((play) => withOwnGenres(play, discogs, trackGenres, deezer));
+  const youtubeFile = join(dirname(cacheFile), 'youtube-meta.json');
+  let youtubeMeta = {};
+  try { youtubeMeta = JSON.parse(await readFile(youtubeFile, 'utf8')); } catch { /* none read yet */ }
+  if (args.includes('--youtube-meta')) {
+    const apiKey = process.env.YOUTUBE_API_KEY || null;
+    const pageDelayMs = args.includes('--delay') ? delayMs : 15000;
+    console.log(apiKey ? 'Reading video details from the YouTube Data API…'
+      : `Reading YouTube watch pages (no YOUTUBE_API_KEY set), one every ${pageDelayMs / 1000} s…`);
+    const byVideo = new Map(resolved.map((play) => [play.youtube.videoId, play]));
+    const result = await lookupYoutubeMeta([...byVideo.keys()], {
+      cache: youtubeMeta,
+      apiKey,
+      delayMs: pageDelayMs,
+      checkpoint: async (cache) => {
+        await writeFile(`${youtubeFile}.next`, JSON.stringify(cache, null, 1));
+        await rename(`${youtubeFile}.next`, youtubeFile);
+      },
+      onBackoff: ({ error, waitMs }) => console.log(`  ${error.message}; waiting ${waitMs / 60000} min`),
+      onProgress: ({ index, total, videoId, length, album, found }) => {
+        const play = byVideo.get(videoId);
+        console.log(`  ${index}/${total} ${found ? `${length ?? '?'}s${album ? `, from ${album}` : ''}` : 'video not found'}: ${play.artist} — ${play.title}`);
+      },
+    });
+    youtubeMeta = result.cache;
+    if (result.error) console.log(`Stopped after ${result.done}/${result.total}: ${result.error.message}. Run again to continue.`);
+  }
+  const withGenres = resolved.map((play) => withOwnGenres(play, discogs, trackGenres, deezer, youtubeMeta));
+  console.log(`  ${withGenres.filter((p) => p.album).length}/${withGenres.length} tracks name their album`);
   console.log(`  ${withGenres.filter((p) => p.length).length}/${withGenres.length} tracks have a length, ${withGenres.filter((p) => p.bpm).length} a tempo`);
   const fromDiscogs = resolved.filter((play) => discogs[songKey(play)]?.styles.length || discogs[songKey(play)]?.genres.length).length;
   console.log(`  ${withGenres.filter((p) => p.genres.length).length}/${withGenres.length} tracks have their own genres (${fromDiscogs} from Discogs)`);
@@ -265,6 +299,8 @@ async function main() {
         year: release.year,
         country: release.country,
         length: release.tracks?.[0]?.duration ?? null,
+        album: release.tracks?.[0]?.album ?? null,
+        label: release.label ?? null,
         bpm: release.tracks?.[0]?.bpm ?? null,
         station: release.station,
         stations: release.stations,
