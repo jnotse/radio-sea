@@ -961,7 +961,7 @@
     if (changed) { if (continueInPlayer && validVideo(r)) loadInPlayer(r); else preparePlayer(r); }
     $('d-sources').replaceChildren();
     for (const p of r.radioPlays ?? [{ station: r.station, show: r.show, date: r.date, sourceUrl: r.sourceUrl }]) {
-      const li = node('li'), label = `${stationNames.get(p.station) ?? p.station ?? 'Radio'} · ${p.show ?? ''} · ${p.date?.slice(0, 10) ?? ''}`;
+      const li = node('li'), label = [stationNames.get(p.station) ?? p.station ?? 'Radio', p.show, p.date?.slice(0, 10)].filter(Boolean).join(' · ');
       li.append(link(p.sourceUrl, label)); $('d-sources').append(li);
     }
     $('d-neighbours').replaceChildren();

@@ -94,6 +94,21 @@ explicit `--retry-unmatched` can revisit legacy exclusions without deleting
 accepted songs. Embedding metadata is not a guarantee of playback in every
 region or browser.
 
+### Record channels on YouTube
+
+Every record a YouTube channel has uploaded can join the map, such as
+[floor length skirt(s)](https://www.youtube.com/@floorlengthskirts). Their
+uploads are titled "artist - title (year)" and link the record's Discogs page,
+so each song is matched to exactly that record by the next Discogs import:
+
+```sh
+YOUTUBE_API_KEY=… node scripts/build-demo.js --channel floorlengthskirts
+npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz
+```
+
+A new channel is added to `RADIO_STATIONS` in `src/catalog/radio.js` (kind
+`youtube`) first. Rerunning `--channel` only adds uploads that are new.
+
 ### Guano's facts from Wikipedia
 
 While a song plays, Guano now and then tells you something about its artist
