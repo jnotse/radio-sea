@@ -172,7 +172,7 @@ class Lookup:
 
 def map_contents(sea):
     """Genre tags and artists on the map, with each artist's songs, albums and labels."""
-    context = re.compile(r'^(show|station|show-genre|mood|decade):')
+    context = re.compile(r'^(show|station|show-genre|mood|decade|channel):')
     genres, artists = set(), {}
     for r in sea['releases']:
         genres.update(t for t in r.get('tags', []) if not context.match(t))
