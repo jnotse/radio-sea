@@ -27,7 +27,7 @@ import { candidateMatch } from '../src/catalog/youtube.js';
 import { extendRadioCache, songKey } from '../src/catalog/extend.js';
 import { lookupGenresForPlays } from '../src/catalog/genres.js';
 import { lookupDeezerForPlays } from '../src/catalog/deezer.js';
-import { lookupYoutubeMeta } from '../src/catalog/youtube-meta.js';
+import { lookupYoutubeMeta, isCuratorChannel } from '../src/catalog/youtube-meta.js';
 import { fetchRadioooooPlaces, spreadPlaces, sampleRadioooooPlaces, placeOf, placeKey } from '../src/catalog/radiooooo.js';
 import { decodeEntities } from '../src/catalog/text.js';
 
@@ -69,19 +69,38 @@ const youtubeApiKey = process.env.YOUTUBE_API_KEY || null;
 export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {}, youtube = {}) {
   const key = songKey(play);
   const found = discogs[key];
+  const mb = musicbrainz[key];
+  const dz = deezer[key];
   const video = youtube[play.youtube?.videoId];
-  const fromDiscogs = found ? [...found.genres, ...found.styles] : [];
-  const genres = fromDiscogs.length ? fromDiscogs : musicbrainz[key]?.genres ?? [];
-  return { ...play, genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
-    releaseYear: play.releaseYear ?? found?.year ?? null,
-    length: deezer[key]?.length ?? musicbrainz[key]?.length ?? found?.length ?? video?.length ?? null,
-    bpm: deezer[key]?.bpm ?? null,
+  const fromDiscogs = found ? [...(found.genres ?? []), ...(found.styles ?? [])] : [];
+  const fromMb = [...(mb?.genres ?? []), ...(mb?.tags ?? [])];
+  const genres = fromDiscogs.length ? fromDiscogs : fromMb.length ? fromMb : (video?.styles ?? []);
+  const instruments = [...new Set([...(found?.instruments ?? []), ...(mb?.instruments ?? [])])];
+  const credits = [...new Set([...(found?.credits ?? []), ...(mb?.credits ?? []), ...(video?.credits ?? [])])];
+  const formats = [...new Set([...(found?.formats ?? []), ...(video?.formats ?? [])])];
+  const audio = dz?.audio ?? play.audio ?? null;
+  return {
+    ...play,
+    genres: [...new Set(genres.map((genre) => genre.toLowerCase()))],
+    releaseYear: play.releaseYear ?? found?.year ?? mb?.year ?? video?.year ?? null,
+    country: play.country ?? found?.country ?? mb?.country ?? video?.country ?? null,
+    length: dz?.length ?? mb?.length ?? found?.length ?? video?.length ?? null,
+    bpm: dz?.bpm ?? audio?.bpm ?? null,
+    ...(play.key ?? audio?.key ? { key: play.key ?? audio.key } : {}),
+    ...(audio ? { audio } : {}),
     album: play.album ?? video?.album ?? null,
-    label: play.label ?? video?.label ?? null };
+    label: play.label ?? found?.label ?? video?.label ?? null,
+    ...(instruments.length ? { instruments } : {}),
+    ...(credits.length ? { credits } : {}),
+    ...(formats.length ? { formats } : {}),
+    ...(video?.channel ? { channel: video.channel } : {}),
+    ...(video?.views != null ? { views: video.views } : {}),
+  };
 }
 
 export function playToRaw(play) {
   const show = decodeEntities(play.show);
+  const audio = play.audio ?? null;
   return {
     source: 'radio',
     sourceId: `${play.station}|${play.show}|${play.artist}|${play.title}`,
@@ -91,17 +110,43 @@ export function playToRaw(play) {
     label: play.label ?? null,
     year: play.releaseYear ?? null, // Never treat broadcast date as release year.
     country: play.country ?? null,
-    format: 'Radio',
+    format: play.formats?.[0] ?? 'Radio',
     rating: null,
+    ...(play.views != null ? { views: play.views } : {}),
+    ...(play.position != null ? { position: play.position } : {}),
     tags: {
-      genres: [...(play.genres ?? []), ...(play.tags ?? [])],
+      genres: [
+        ...(play.genres ?? []),
+        ...(play.tags ?? []),
+        ...(play.instruments ?? []).map((inst) => `inst:${inst.toLowerCase()}`),
+        ...(play.credits ?? []).map((credit) => `credit:${credit.toLowerCase()}`),
+        ...(play.formats ?? []).map((fmt) => `format:${fmt.toLowerCase()}`),
+      ],
       styles: [`station:${play.station}`],
       descriptors: [
         ...(show ? [`show:${show}`] : []),
         ...(play.showGenres ?? []).slice(0, 4).map((genre) => `show-genre:${genre}`),
+        ...(play.showMoods ?? []).slice(0, 3).map((mood) => `mood:${mood.toLowerCase()}`),
+        ...(play.showLocation ? [`city:${play.showLocation}`] : []),
+        ...(isCuratorChannel(play.channel, play.artist) ? [`channel:${play.channel}`] : []),
       ],
     },
-    tracks: [{ title: play.title, duration: play.length ?? null, bpm: play.bpm ?? null, key: null, album: play.album ?? null }],
+    tracks: [{
+      title: play.title,
+      duration: play.length ?? null,
+      bpm: play.bpm ?? null,
+      key: play.key ?? audio?.key ?? null,
+      album: play.album ?? null,
+      ...(audio ? {
+        mode: audio.mode ?? null,
+        chroma: audio.chroma ?? null,
+        brightness: audio.brightness ?? null,
+        pulseClarity: audio.pulseClarity ?? null,
+        bandEnergy: audio.bandEnergy ?? null,
+        spectralFlatness: audio.spectralFlatness ?? null,
+        dynamicRange: audio.dynamicRange ?? null,
+      } : {}),
+    }],
     urls: { youtube: play.youtube.url },
     youtubeId: play.youtube.videoId,
     station: play.station,
@@ -308,6 +353,7 @@ async function main() {
     })),
     releases: releases.map((release) => {
       const placement = engine.mapPlacement(release.id);
+      const coord3d = engine.topology?.coordinates?.find((c) => c.id === release.id);
       return {
         id: release.id,
         name: release.name,
@@ -333,10 +379,18 @@ async function main() {
         depth: engine.depthOf(release.id),
         x: placement.x,
         y: placement.y,
+        tx: coord3d?.tx ?? placement.x,
+        ty: coord3d?.ty ?? placement.y,
+        tz: coord3d?.tz ?? 0,
         neighbours: neighbours.get(release.id),
       };
     }),
     tradeRoutes,
+    topology: {
+      cycles: engine.cycles(),
+      bridges: engine.bridges().slice(0, 30),
+      mapper: engine.topology?.mapper ?? { nodes: [], edges: [], triangles: [], bridges: [] },
+    },
   };
 
   for (const r of payload.releases) {

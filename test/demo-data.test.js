@@ -69,3 +69,40 @@ test('YouTube fills in length, album and label last, and they reach the map', ()
   const [release] = mergeCatalogue([playToRaw(alone)]).releases;
   assert.deepEqual([release.tracks[0].album, release.label], ['All Of Them Naturals', 'Static Shock']);
 });
+
+test('richer descriptors (instruments, credits, formats, curator channels and co-play sequence) flow into similarity and explainability', () => {
+  const songA = {
+    ...sample,
+    artist: 'Larry Heard',
+    title: 'Micro-Gravity',
+    position: 3,
+    youtube: { videoId: 'H_AKKQ-f9LM', url: 'https://www.youtube.com/watch?v=H_AKKQ-f9LM' },
+  };
+  const songB = {
+    ...sample,
+    artist: 'Mr. Fingers',
+    title: 'Mystery of Love',
+    position: 4,
+    youtube: { videoId: 'FiCEdQl91v4', url: 'https://www.youtube.com/watch?v=FiCEdQl91v4' },
+  };
+  const keyA = songKey(songA);
+  const keyB = songKey(songB);
+  const discogs = {
+    [keyA]: { genres: ['Electronic'], styles: ['Deep House'], year: 1996, label: 'Alleviated', country: 'US', formats: ['12"'], instruments: ['synthesizer', 'fender rhodes'], credits: ['Larry Heard'] },
+    [keyB]: { genres: ['Electronic'], styles: ['Deep House'], year: 1985, label: 'Alleviated', country: 'US', formats: ['12"'], instruments: ['synthesizer', 'fender rhodes'], credits: ['Larry Heard'] },
+  };
+  const youtube = {
+    'H_AKKQ-f9LM': { length: 621, channel: 'Shindō Vibrations', views: 35000 },
+    'FiCEdQl91v4': { length: 412, channel: 'Shindō Vibrations', views: 1500 },
+  };
+
+  const enrichedA = withOwnGenres(songA, discogs, {}, {}, youtube);
+  const enrichedB = withOwnGenres(songB, discogs, {}, {}, youtube);
+  const { releases } = mergeCatalogue([playToRaw(enrichedA), playToRaw(enrichedB)]);
+  assert.equal(releases[0].country, 'US');
+  assert.equal(releases[0].label, 'Alleviated');
+  assert.ok(releases[0].tags.all.includes('inst:fender rhodes'));
+  assert.ok(releases[0].tags.all.includes('credit:larry heard'));
+  assert.ok(releases[0].tags.all.includes('format:12"'));
+  assert.ok(releases[0].tags.all.includes('channel:Shindō Vibrations'));
+});

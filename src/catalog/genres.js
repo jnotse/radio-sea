@@ -18,6 +18,12 @@ import { titleSimilarity, artistSimilarity, normalizeIsrc } from './text.js';
 const API = 'https://musicbrainz.org/ws/2';
 const HEADERS = { 'User-Agent': 'radio-sea/0.1 ( https://github.com/jnotse/radio-sea )', Accept: 'application/json' };
 const MAX_GENRES = 3;
+const MAX_TAGS = 4;
+const NOISE_TAGS = new Set([
+  'seen live', 'favorites', 'favourites', 'favorite', 'favourite', 'owned',
+  'check', 'spotify', 'awesome', 'love', 'loved', 'good', 'best', 'my music',
+]);
+const NON_COUNTRIES = new Set(['XW', 'XE', 'XU']);
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /** The most-voted genres of a recording or artist, lowercase as MusicBrainz names them. */
@@ -27,6 +33,58 @@ export function topGenres(entity, limit = MAX_GENRES) {
     .sort((a, b) => (b.count ?? 0) - (a.count ?? 0) || a.name.localeCompare(b.name))
     .slice(0, limit)
     .map((genre) => genre.name.toLowerCase());
+}
+
+/** Community folksonomy tags not already in `genres`, excluding personal bookmark tags. */
+export function topTags(entity, exclude = [], limit = MAX_TAGS) {
+  const skip = new Set([...exclude.map((g) => g.toLowerCase()), ...NOISE_TAGS]);
+  return [...(entity?.tags ?? [])]
+    .map((tag) => ({ name: String(tag?.name ?? '').trim().toLowerCase(), count: tag?.count ?? 1 }))
+    .filter((tag) => tag.name.length > 1 && tag.count > 0 && !skip.has(tag.name) && !/^\d+$/.test(tag.name))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+    .slice(0, limit)
+    .map((tag) => tag.name);
+}
+
+function releaseYear(recording) {
+  const dates = [
+    recording?.['first-release-date'],
+    ...(recording?.releases ?? []).map((r) => r?.date),
+  ].filter(Boolean);
+  const years = dates
+    .map((d) => Number(String(d).match(/^(\d{4})/)?.[1]))
+    .filter((y) => y >= 1900 && y <= new Date().getFullYear() + 1);
+  return years.length ? Math.min(...years) : null;
+}
+
+function releaseCountry(recording, artist = null) {
+  for (const rel of recording?.releases ?? []) {
+    const code = String(rel?.country ?? '').trim().toUpperCase();
+    if (code && !NON_COUNTRIES.has(code)) return code;
+  }
+  const artistCountry = String(artist?.country ?? artist?.area?.['iso-3166-1-codes']?.[0] ?? '').trim().toUpperCase();
+  return artistCountry && !NON_COUNTRIES.has(artistCountry) ? artistCountry : null;
+}
+
+function recordingRelations(recording) {
+  const instruments = new Set();
+  const credits = new Set();
+  for (const rel of recording?.relations ?? []) {
+    const type = String(rel?.type ?? '').toLowerCase();
+    if (type === 'instrument' || type === 'vocal') {
+      for (const attr of rel?.attributes ?? []) {
+        const clean = String(attr ?? '').trim().toLowerCase();
+        if (clean && clean !== 'lead vocals' && clean !== 'background vocals') instruments.add(clean);
+        else if (clean.includes('vocal')) instruments.add('vocals');
+      }
+    } else if (['producer', 'remixer', 'arranger', 'mix'].includes(type) && rel?.artist?.name) {
+      credits.add(String(rel.artist.name).trim());
+    }
+  }
+  return {
+    instruments: [...instruments].slice(0, 5),
+    credits: [...credits].slice(0, 3),
+  };
 }
 
 function creditName(recording) {
@@ -67,7 +125,7 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
   backoff = (attempt) => wait(2000 * 2 ** attempt), artistGenres = new Map() } = {}) {
   const get = async (path) => { await pause(); return getJson(path, fetchImpl, backoff); };
   const recordingById = async (id) => {
-    const recording = await get(`/recording/${encodeURIComponent(id)}?inc=genres+artist-credits&fmt=json`);
+    const recording = await get(`/recording/${encodeURIComponent(id)}?inc=genres+tags+artist-credits+releases+artist-rels&fmt=json`);
     return recording && recordingMatches(play, recording, { minScore: 0 }) ? recording : null;
   };
 
@@ -88,15 +146,65 @@ export async function lookupTrackGenres(play, { fetchImpl = fetch, pause = () =>
   if (!recording) return { genres: [], source: null, recording: null, length: null };
 
   const length = recording.length > 0 ? Math.round(recording.length / 1000) : null;
+  const year = releaseYear(recording);
+  const { instruments, credits } = recordingRelations(recording);
   const own = topGenres(recording);
-  if (own.length) return { genres: own, source: 'recording', recording: recording.id, length };
-  const artistId = recording['artist-credit']?.[0]?.artist?.id;
-  if (!artistId) return { genres: [], source: null, recording: recording.id, length };
-  if (!artistGenres.has(artistId)) {
-    artistGenres.set(artistId, topGenres(await get(`/artist/${encodeURIComponent(artistId)}?inc=genres&fmt=json`)));
+  if (own.length) {
+    const tags = topTags(recording, own);
+    const country = releaseCountry(recording);
+    return {
+      genres: own,
+      source: 'recording',
+      recording: recording.id,
+      length,
+      ...(tags.length ? { tags } : {}),
+      ...(year ? { year } : {}),
+      ...(country ? { country } : {}),
+      ...(instruments.length ? { instruments } : {}),
+      ...(credits.length ? { credits } : {}),
+    };
   }
-  const fromArtist = artistGenres.get(artistId);
-  return { genres: fromArtist, source: fromArtist.length ? 'artist' : null, recording: recording.id, length };
+  const artistId = recording['artist-credit']?.[0]?.artist?.id;
+  if (!artistId) {
+    const tags = topTags(recording);
+    const country = releaseCountry(recording);
+    return {
+      genres: [],
+      source: null,
+      recording: recording.id,
+      length,
+      ...(tags.length ? { tags } : {}),
+      ...(year ? { year } : {}),
+      ...(country ? { country } : {}),
+      ...(instruments.length ? { instruments } : {}),
+      ...(credits.length ? { credits } : {}),
+    };
+  }
+  if (!artistGenres.has(artistId)) {
+    const artist = await get(`/artist/${encodeURIComponent(artistId)}?inc=genres+tags&fmt=json`);
+    const genres = topGenres(artist);
+    artistGenres.set(artistId, {
+      genres,
+      tags: topTags(artist, genres),
+      country: releaseCountry(null, artist),
+    });
+  }
+  const cachedArtist = artistGenres.get(artistId);
+  const fromArtist = Array.isArray(cachedArtist) ? cachedArtist : cachedArtist.genres;
+  const artistTags = Array.isArray(cachedArtist) ? [] : cachedArtist.tags;
+  const tags = [...new Set([...topTags(recording, fromArtist), ...artistTags])].slice(0, MAX_TAGS);
+  const country = releaseCountry(recording) ?? (Array.isArray(cachedArtist) ? null : cachedArtist.country);
+  return {
+    genres: fromArtist,
+    source: fromArtist.length ? 'artist' : null,
+    recording: recording.id,
+    length,
+    ...(tags.length ? { tags } : {}),
+    ...(year ? { year } : {}),
+    ...(country ? { country } : {}),
+    ...(instruments.length ? { instruments } : {}),
+    ...(credits.length ? { credits } : {}),
+  };
 }
 
 /**

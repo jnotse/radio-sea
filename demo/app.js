@@ -10,8 +10,12 @@
   const releases = DATA.releases.filter((r) => Number.isFinite(r.x) && Number.isFinite(r.y));
   const byId = new Map(releases.map((r) => [r.id, r]));
   const islands = new Map(DATA.islands.map((i) => [i.id, i]));
+  const bridgeIds = new Set((DATA.topology?.bridges ?? []).map((b) => b.id));
   const stationNames = new Map(DATA.stats.stations.map((s) => [s.id, s.label]));
-  const state = { cam: { x: 0, y: 0, zoom: 8 }, selected: null, hovered: null,
+  const pos3 = (r) => ({ x: r.tx ?? r.x, y: r.ty ?? r.y, z: r.tz ?? ((0.5 - (r.depth ?? 0.5)) * 18) });
+  const state = { cam: { x: 0, y: 0, zoom: 8 },
+    cam3d: { yaw: -0.65, pitch: 0.42, zoom: 10, x: 0, y: 0, z: 0 },
+    viewMode: '2d', selected: null, hovered: null,
     trail: [], tags: new Set(), query: '', showRoutes: true };
   const pointers = new Map();
   const terrain = window.RadioSeaLandscape.buildTerrain(DATA);
@@ -41,7 +45,7 @@
   // A song's own genres. Station, show and show-genre tags describe where it
   // was heard; mood and decade tags are not genres.
   function genres(r) {
-    return (r.tags ?? []).filter((t) => !/^(show|station|show-genre|mood|decade):/.test(t));
+    return (r.tags ?? []).filter((t) => !/^(show|station|show-genre|channel|city|mood|decade|inst|credit|format):/.test(t));
   }
   function passesFilter(r) {
     return !!r && [...state.tags].every((t) => (r.tags ?? []).includes(t)) &&
@@ -108,15 +112,63 @@
   const minZoom = () => Math.max(MIN_ZOOM, fittedZoom() / 2);
   const toScreen = (x, y) => ({ x: (x - state.cam.x) * state.cam.zoom + canvas.clientWidth / 2,
     y: (y - state.cam.y) * state.cam.zoom + canvas.clientHeight / 2 });
+  function project3D(wx, wy, wz, w = canvas.clientWidth, h = canvas.clientHeight) {
+    const dx = wx - state.cam3d.x, dy = wy - state.cam3d.y, dz = wz - state.cam3d.z;
+    const cy = Math.cos(state.cam3d.yaw), sy = Math.sin(state.cam3d.yaw);
+    const cp = Math.cos(state.cam3d.pitch), sp = Math.sin(state.cam3d.pitch);
+    const x1 = dx * cy - dy * sy;
+    const y1 = dx * sy + dy * cy;
+    const z2 = y1 * sp + dz * cp;
+    const depth = Math.max(8, 95 + (y1 * cp - dz * sp));
+    const perspective = 95 / depth;
+    const scale = state.cam3d.zoom * perspective;
+    return { x: w / 2 + x1 * scale, y: h / 2 - z2 * scale, depth, perspective, scale };
+  }
+  function screenPos(r, w = canvas.clientWidth, h = canvas.clientHeight) {
+    if (state.viewMode === '3d') { const p = pos3(r); return project3D(p.x, p.y, p.z, w, h); }
+    return toScreen(r.x, r.y);
+  }
   function cancelFly() { if (animation !== null) cancelAnimationFrame(animation); animation = null; }
   function fitView() {
     cancelFly();
+    if (state.viewMode === '3d') {
+      const pts = releases.map(pos3);
+      const minX = Math.min(...pts.map((p) => p.x)), maxX = Math.max(...pts.map((p) => p.x));
+      const minY = Math.min(...pts.map((p) => p.y)), maxY = Math.max(...pts.map((p) => p.y));
+      const minZ = Math.min(...pts.map((p) => p.z)), maxZ = Math.max(...pts.map((p) => p.z));
+      const span = Math.max(12, Math.hypot(maxX - minX, maxY - minY, maxZ - minZ));
+      Object.assign(state.cam3d, {
+        x: (minX + maxX) / 2, y: (minY + maxY) / 2, z: (minZ + maxZ) / 2,
+        yaw: -0.65, pitch: 0.42,
+        zoom: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.min(canvas.clientWidth, canvas.clientHeight) / (span * 0.72))),
+      });
+      draw(); return;
+    }
     Object.assign(state.cam, { x: (songBounds.minX + songBounds.maxX) / 2, y: (songBounds.minY + songBounds.maxY) / 2,
       zoom: fittedZoom() });
     draw();
   }
   function flyTo(r) {
     cancelFly();
+    if (state.viewMode === '3d') {
+      const target = pos3(r);
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        Object.assign(state.cam3d, { x: target.x, y: target.y, z: target.z, zoom: Math.max(state.cam3d.zoom, 11) });
+        draw(); return;
+      }
+      const from = { ...state.cam3d }, start = performance.now(), targetZoom = Math.max(from.zoom, 11);
+      function step3d(now) {
+        const t = Math.min(1, (now - start) / 300), e = 1 - (1 - t) ** 3;
+        Object.assign(state.cam3d, {
+          x: from.x + (target.x - from.x) * e,
+          y: from.y + (target.y - from.y) * e,
+          z: from.z + (target.z - from.z) * e,
+          zoom: from.zoom + (targetZoom - from.zoom) * e,
+        });
+        draw(); animation = t < 1 ? requestAnimationFrame(step3d) : null;
+      }
+      animation = requestAnimationFrame(step3d); return;
+    }
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       Object.assign(state.cam, { x: r.x, y: r.y, zoom: Math.max(state.cam.zoom, 14) }); draw(); return;
     }
@@ -131,19 +183,172 @@
   }
   function zoomAt(factor, x = canvas.clientWidth / 2, y = canvas.clientHeight / 2) {
     cancelFly();
+    if (state.viewMode === '3d') {
+      state.cam3d.zoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, state.cam3d.zoom * factor));
+      draw(); return;
+    }
     const old = state.cam.zoom, next = Math.min(MAX_ZOOM, Math.max(minZoom(), old * factor));
     state.cam.x += (x - canvas.clientWidth / 2) * (1 / old - 1 / next);
     state.cam.y += (y - canvas.clientHeight / 2) * (1 / old - 1 / next);
     state.cam.zoom = next; draw();
   }
+  function draw3D(w, h) {
+    // Deep Patagonia night-dusk sky with pixel stars and a 3D topological compass floor.
+    const grad = ctx.createLinearGradient(0, 0, 0, h);
+    grad.addColorStop(0, '#101726');
+    grad.addColorStop(0.6, '#1a253d');
+    grad.addColorStop(1, '#261f33');
+    ctx.fillStyle = grad; ctx.fillRect(0, 0, w, h);
+
+    // Deterministic pixel stars in the upper dusk sky.
+    ctx.fillStyle = '#f3e7d066';
+    for (let i = 0; i < 42; i += 1) {
+      const sx = ((i * 97 + 31) % 997) / 997 * w;
+      const sy = ((i * 53 + 17) % 991) / 991 * (h * 0.55);
+      ctx.fillRect(Math.round(sx), Math.round(sy), i % 5 === 0 ? 2 : 1, i % 5 === 0 ? 2 : 1);
+    }
+
+    const pts3 = releases.map(pos3);
+    const baseZ = Math.min(...pts3.map((p) => p.z)) - 3;
+    const maxR = Math.max(14, ...pts3.map((p) => Math.hypot(p.x, p.y)));
+
+    // 3D base reference rings and radial axes on the z = baseZ plane.
+    ctx.strokeStyle = '#5cc4bb22'; ctx.lineWidth = 1;
+    for (const frac of [0.45, 0.85, 1.15]) {
+      const r = maxR * frac;
+      ctx.beginPath();
+      for (let s = 0; s <= 36; s += 1) {
+        const a = (s / 36) * Math.PI * 2;
+        const p = project3D(Math.cos(a) * r, Math.sin(a) * r, baseZ, w, h);
+        if (s === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
+      }
+      ctx.stroke();
+    }
+    for (let a = 0; a < Math.PI; a += Math.PI / 4) {
+      const p1 = project3D(Math.cos(a) * maxR * 1.15, Math.sin(a) * maxR * 1.15, baseZ, w, h);
+      const p2 = project3D(-Math.cos(a) * maxR * 1.15, -Math.sin(a) * maxR * 1.15, baseZ, w, h);
+      ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+    }
+
+    // Mapper nerve centroids (0-simplices) & 2-simplices (triangles).
+    const mapperNodes = new Map();
+    for (const mNode of DATA.topology?.mapper?.nodes ?? []) {
+      const members = mNode.memberIds.map((id) => byId.get(id)).filter(Boolean);
+      if (!members.length) continue;
+      const sum = members.reduce((acc, r) => { const p = pos3(r); return { x: acc.x + p.x, y: acc.y + p.y, z: acc.z + p.z }; }, { x: 0, y: 0, z: 0 });
+      mapperNodes.set(mNode.id, { x: sum.x / members.length, y: sum.y / members.length, z: sum.z / members.length });
+    }
+    if (state.showRoutes) {
+      // 2-simplices: translucent nerve triangles where three Mapper clusters intersect.
+      for (const tri of DATA.topology?.mapper?.triangles ?? []) {
+        const [a, b, c] = tri.nodes.map((id) => mapperNodes.get(id));
+        if (!a || !b || !c) continue;
+        const pa = project3D(a.x, a.y, a.z, w, h), pb = project3D(b.x, b.y, b.z, w, h), pc = project3D(c.x, c.y, c.z, w, h);
+        ctx.fillStyle = '#5cc4bb1c'; ctx.strokeStyle = '#5cc4bb44';
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.lineTo(pc.x, pc.y); ctx.closePath();
+        ctx.fill(); ctx.stroke();
+      }
+      // 1-simplices: Mapper nerve edges.
+      ctx.strokeStyle = '#5cc4bb40';
+      for (const edge of DATA.topology?.mapper?.edges ?? []) {
+        const a = mapperNodes.get(edge.from), b = mapperNodes.get(edge.to);
+        if (!a || !b) continue;
+        const pa = project3D(a.x, a.y, a.z, w, h), pb = project3D(b.x, b.y, b.z, w, h);
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+      // Trade routes & H0 persistence bridge edges between songs.
+      for (const r of DATA.tradeRoutes) {
+        const a = byId.get(r.from), b = byId.get(r.to);
+        if (!passesFilter(a) || !passesFilter(b)) continue;
+        const pa = screenPos(a, w, h), pb = screenPos(b, w, h);
+        ctx.strokeStyle = r.bridge ? '#5cc4bb99' : '#e0b98977';
+        ctx.setLineDash(r.bridge ? [] : [2, 4]);
+        ctx.beginPath(); ctx.moveTo(pa.x, pa.y); ctx.lineTo(pb.x, pb.y); ctx.stroke();
+      }
+      ctx.setLineDash([]);
+
+      // H1 persistent homology cycles: closed topological loops of songs.
+      for (const cycle of (DATA.topology?.cycles ?? []).slice(0, 6)) {
+        const ring = cycle.cycle.map((id) => byId.get(id)).filter((r) => passesFilter(r));
+        if (ring.length < 3) continue;
+        const active = ring.some((r) => r.id === state.selected || r.id === state.hovered);
+        ctx.strokeStyle = active ? '#f0a05aee' : '#d8b04e66';
+        ctx.lineWidth = active ? 2 : 1;
+        ctx.setLineDash(active ? [] : [3, 3]);
+        ctx.beginPath();
+        ring.forEach((r, idx) => {
+          const p = screenPos(r, w, h);
+          if (idx === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
+        });
+        ctx.closePath(); ctx.stroke();
+      }
+      ctx.lineWidth = 1; ctx.setLineDash([]);
+    }
+
+    if (state.trail.length > 1) {
+      ctx.strokeStyle = '#f0a05a'; ctx.lineWidth = 2; ctx.beginPath();
+      state.trail.slice(-40).forEach((id, i) => {
+        const r = byId.get(id), p = screenPos(r, w, h);
+        if (i) ctx.lineTo(p.x, p.y); else ctx.moveTo(p.x, p.y);
+      }); ctx.stroke(); ctx.lineWidth = 1;
+    }
+
+    // Painter's algorithm: sort songs back-to-front by 3D depth.
+    const projected = releases.map((r) => {
+      const p3 = pos3(r);
+      return { r, p3, proj: project3D(p3.x, p3.y, p3.z, w, h) };
+    }).sort((a, b) => b.proj.depth - a.proj.depth);
+
+    for (const { r, p3, proj } of projected) {
+      const p = { x: Math.round(proj.x), y: Math.round(proj.y) };
+      const size = Math.round(Math.max(5, Math.min(16, state.cam3d.zoom * proj.perspective * 0.85)));
+      const matched = passesFilter(r);
+      const isBridge = bridgeIds.has(r.id);
+      ctx.globalAlpha = matched ? Math.max(0.35, Math.min(1, proj.perspective * 1.1)) : 0.15;
+
+      // Vertical elevation stalk to the base plane for selected, hovered, or bridge tracks.
+      if (matched && (r.id === state.selected || r.id === state.hovered || isBridge)) {
+        const floor = project3D(p3.x, p3.y, baseZ, w, h);
+        ctx.strokeStyle = r.id === state.selected ? '#f0a05a88' : '#5cc4bb38';
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(floor.x, floor.y); ctx.stroke();
+      }
+
+      // Bridge songs get a turquoise outer frame to mark cross-grove connectors.
+      ctx.fillStyle = isBridge ? '#5cc4bb' : '#f6ead2';
+      ctx.fillRect(Math.round(p.x - size / 2) - 1, Math.round(p.y - size / 2) - 1, size + 2, size + 2);
+      ctx.fillStyle = '#2b2236';
+      ctx.fillRect(Math.round(p.x - size / 2), Math.round(p.y - size / 2), size, size);
+      if (size >= 7) {
+        ctx.fillStyle = isBridge ? '#a7dbea' : '#f0a05a';
+        ctx.fillRect(p.x - 1, p.y - 1, 2, 2);
+      }
+      if (r.id === state.selected || r.id === state.hovered) {
+        ctx.strokeStyle = '#fff8ea'; ctx.lineWidth = 2;
+        ctx.strokeRect(Math.round(p.x - size / 2 - 4), Math.round(p.y - size / 2 - 4), size + 8, size + 8);
+        ctx.lineWidth = 1;
+        if (r.id === state.selected) {
+          ctx.fillStyle = '#2b2236'; ctx.fillRect(p.x, p.y - size / 2 - 14, 2, 10);
+          ctx.fillStyle = '#ef7d3c'; ctx.fillRect(p.x + 2, p.y - size / 2 - 14, 6, 4);
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+    drawIslandLabels(w, h);
+  }
   function draw() {
     const w = canvas.clientWidth, h = canvas.clientHeight;
     if (!w || !h) return;
     ctx.clearRect(0, 0, w, h);
-    canvas.dataset.zoom = String(state.cam.zoom);
-    canvas.dataset.cameraX = String(state.cam.x); canvas.dataset.cameraY = String(state.cam.y);
+    canvas.dataset.view = state.viewMode;
+    canvas.dataset.zoom = String(state.viewMode === '3d' ? state.cam3d.zoom : state.cam.zoom);
+    canvas.dataset.cameraX = String(state.viewMode === '3d' ? state.cam3d.yaw : state.cam.x);
+    canvas.dataset.cameraY = String(state.viewMode === '3d' ? state.cam3d.pitch : state.cam.y);
     canvas.dataset.selected = state.selected ?? '';
     canvas.dataset.matching = String(pool().length);
+    if (state.viewMode === '3d') {
+      draw3D(w, h);
+      return;
+    }
     // Patagonian steppe seen from above, each cluster of songs a grove of
     // bushes. The terrain is painted once in world space and scaled with the
     // camera, so its pixels grow as you zoom.
@@ -202,8 +407,9 @@
     const current = byId.get(state.selected)?.islandId;
     const order = DATA.islands.filter((island) => island.memberIds.length > 1)
       .sort((a, b) => (b.id === current) - (a.id === current) || b.memberIds.length - a.memberIds.length);
-    const size = Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78))) + 6;
-    const songs = releases.map((r) => toScreen(r.x, r.y));
+    const activeZoom = state.viewMode === '3d' ? state.cam3d.zoom : state.cam.zoom;
+    const size = Math.round(Math.max(6, Math.min(14, activeZoom * .78))) + 6;
+    const songs = releases.map((r) => screenPos(r, w, h));
     // The hint, status and zoom buttons float over the map; signs stay clear of them.
     const frame = canvas.getBoundingClientRect();
     const placed = ['map-help', 'map-status', 'map-controls'].map($).filter((el) => el && !el.hidden).map((el) => {
@@ -217,7 +423,7 @@
     for (const island of order) {
       const name = island.name.trim().toUpperCase();
       const label = name.length > 26 ? `${name.slice(0, 25).trimEnd()}…` : name;
-      const members = island.memberIds.map((id) => byId.get(id)).filter(Boolean).map((r) => toScreen(r.x, r.y));
+      const members = island.memberIds.map((id) => byId.get(id)).filter(Boolean).map((r) => screenPos(r, w, h));
       const cx = members.reduce((sum, p) => sum + p.x, 0) / members.length;
       const top = Math.min(...members.map((p) => p.y)), bottom = Math.max(...members.map((p) => p.y));
       const width = ctx.measureText(label).width + 10;
@@ -241,9 +447,10 @@
   document.fonts?.ready.then(draw);
   function tileAt(event) {
     const rect = canvas.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
-    let best = null, distance = event.pointerType === 'touch' ? 22 : Math.max(7, Math.min(11, state.cam.zoom * .5));
+    const activeZoom = state.viewMode === '3d' ? state.cam3d.zoom : state.cam.zoom;
+    let best = null, distance = event.pointerType === 'touch' ? 22 : Math.max(7, Math.min(12, activeZoom * .5));
     for (const r of pool()) {
-      const p = toScreen(r.x, r.y), d = Math.hypot(p.x - x, p.y - y);
+      const p = screenPos(r), d = Math.hypot(p.x - x, p.y - y);
       if (d < distance) { best = r; distance = d; }
     }
     return best;
@@ -263,9 +470,14 @@
   canvas.addEventListener('pointermove', (e) => {
     const pointer = pointers.get(e.pointerId);
     if (pointer && pointers.size > 1) {
-      const before = pinchPoints(), old = state.cam.zoom;
+      const before = pinchPoints();
       pointer.x = e.clientX; pointer.y = e.clientY;
       const after = pinchPoints(), rect = canvas.getBoundingClientRect();
+      if (state.viewMode === '3d') {
+        state.cam3d.zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, state.cam3d.zoom * after.distance / before.distance));
+        canvas.classList.add('dragging'); draw(); return;
+      }
+      const old = state.cam.zoom;
       const next = Math.max(minZoom(), Math.min(MAX_ZOOM, old * after.distance / before.distance));
       // Keep the world position under the fingers stable while pinching/panning.
       state.cam.x += (before.x - rect.left - rect.width / 2) / old - (after.x - rect.left - rect.width / 2) / next;
@@ -276,8 +488,13 @@
       if (Math.hypot(e.clientX - pointer.startX, e.clientY - pointer.startY) > 5) pointer.moved = true;
       if (pointer.moved) {
         canvas.classList.add('dragging');
-        state.cam.x -= (e.clientX - pointer.x) / state.cam.zoom;
-        state.cam.y -= (e.clientY - pointer.y) / state.cam.zoom;
+        if (state.viewMode === '3d') {
+          state.cam3d.yaw += (e.clientX - pointer.x) * 0.008;
+          state.cam3d.pitch = Math.max(-1.25, Math.min(1.25, state.cam3d.pitch + (e.clientY - pointer.y) * 0.007));
+        } else {
+          state.cam.x -= (e.clientX - pointer.x) / state.cam.zoom;
+          state.cam.y -= (e.clientY - pointer.y) / state.cam.zoom;
+        }
         draw();
       }
       pointer.x = e.clientX; pointer.y = e.clientY; return;
@@ -313,6 +530,10 @@
     if (e.key === '+' || e.key === '=') zoomAt(1.2);
     else if (e.key === '-') zoomAt(1 / 1.2);
     else if (e.key === 'Home') fitView();
+    else if (state.viewMode === '3d' && e.key === 'ArrowLeft') { state.cam3d.yaw -= 0.12; draw(); }
+    else if (state.viewMode === '3d' && e.key === 'ArrowRight') { state.cam3d.yaw += 0.12; draw(); }
+    else if (state.viewMode === '3d' && e.key === 'ArrowUp') { state.cam3d.pitch = Math.min(1.25, state.cam3d.pitch + 0.1); draw(); }
+    else if (state.viewMode === '3d' && e.key === 'ArrowDown') { state.cam3d.pitch = Math.max(-1.25, state.cam3d.pitch - 0.1); draw(); }
     else return;
     e.preventDefault();
   });
@@ -617,6 +838,19 @@
     state.showRoutes = !state.showRoutes;
     $('btn-routes').setAttribute('aria-pressed', String(state.showRoutes)); draw();
   };
+  if ($('btn-topology')) {
+    $('btn-topology').onclick = () => {
+      state.viewMode = state.viewMode === '3d' ? '2d' : '3d';
+      const is3d = state.viewMode === '3d';
+      $('btn-topology').setAttribute('aria-pressed', String(is3d));
+      if ($('map-window-title')) $('map-window-title').textContent = is3d ? '3d topology · nerve & cycles' : 'the steppe';
+      const desktopHint = document.querySelector('#map-help .desktop-hint');
+      const touchHint = document.querySelector('#map-help .touch-hint');
+      if (desktopHint) desktopHint.textContent = is3d ? 'DRAG TO ORBIT 3D · CLICK TO PLAY' : 'CLICK A SQUARE TO PLAY';
+      if (touchHint) touchHint.textContent = is3d ? 'DRAG TO ORBIT 3D · TAP TO PLAY' : 'TAP TO PLAY · PINCH TO ZOOM';
+      fitView();
+    };
+  }
   $('btn-home').onclick = fitView;
   $('zoom-in').onclick = () => zoomAt(1.25);
   $('zoom-out').onclick = () => zoomAt(1 / 1.25);

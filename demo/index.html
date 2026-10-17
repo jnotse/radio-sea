@@ -39,11 +39,11 @@
     </aside>
 
     <main id="map-panel" class="window" aria-label="Radio map" tabindex="-1">
-      <div class="window-title"><span>the steppe</span><span class="title-stripes" aria-hidden="true"></span></div>
+      <div class="window-title"><span id="map-window-title">the steppe</span><span class="title-stripes" aria-hidden="true"></span></div>
       <div class="console-shell">
         <div class="screen-bezel">
           <div id="map-wrap">
-            <canvas id="sea" aria-label="Music map. Drag to pan. Pinch, scroll or use the zoom buttons to zoom. Click or tap a track to play it. Tracks can also be found with search." tabindex="0"></canvas>
+            <canvas id="sea" aria-label="Music map. Drag to pan or orbit in 3D. Pinch, scroll or use the zoom buttons to zoom. Click or tap a track to play it. Tracks can also be found with search." tabindex="0"></canvas>
             <div id="map-help"><span class="desktop-hint">CLICK A SQUARE TO PLAY</span><span class="touch-hint">TAP TO PLAY · PINCH TO ZOOM</span></div>
             <div id="map-status" role="status" aria-live="polite" hidden></div>
             <div id="map-controls" aria-label="Map controls">
@@ -56,6 +56,7 @@
         <div class="console-bottom">
           <div class="map-legend"><span><i class="legend-track"></i> SONG</span>
             <button id="btn-routes" class="legend-toggle" aria-pressed="true" title="Show or hide trails between related groves"><i class="legend-path"></i> TRAILS</button>
+            <button id="btn-topology" class="legend-toggle" aria-pressed="false" title="Switch between the 2D steppe map and the 3D topological space"><i class="legend-cube"></i> 3D MAP</button>
             <span><i class="legend-trail"></i> YOUR PATH</span></div>
         </div>
       </div>

@@ -39,6 +39,69 @@ export function parseTopicDescription(text) {
   };
 }
 
+/**
+ * Structured sleeve/Discogs-style metadata often written in vinyl-rip YouTube
+ * descriptions ("Label: ...", "Country: ...", "Year: ...", "Style: ...", "Format: ...").
+ */
+export function parseVinylDescription(text) {
+  const lines = String(text ?? '').split('\n').map((line) => line.trim()).filter(Boolean);
+  const out = { album: null, label: null, year: null, released: null, country: null, styles: [], formats: [], credits: [] };
+  if (!lines.length || /^Provided to YouTube by /.test(lines[0])) return out;
+
+  const splitValues = (val) => val.split(/[,;/]/).map((s) => s.trim()).filter(Boolean);
+  for (const line of lines) {
+    const kv = /^([A-Za-z ]{3,16})\s*:\s*(.+)$/.exec(line);
+    if (!kv) continue;
+    const key = kv[1].trim().toLowerCase();
+    const value = kv[2].trim();
+    if (!value) continue;
+
+    if ((key === 'label' || key === 'record label') && !out.label) {
+      // Strip catalog number suffix like "Mathematics Recordings – MATH042" or "Impulse! (A-48)".
+      const cleanLabel = value.split(/\s+[-–—]\s+/)[0].replace(/\s*\[[^\]]*\]\s*$/, '').trim();
+      if (cleanLabel && !/^not on label$/i.test(cleanLabel)) out.label = cleanLabel;
+    } else if ((key === 'album' || key === 'lp' || key === 'ep') && !out.album) {
+      out.album = value;
+    } else if ((key === 'country' || key === 'origin') && !out.country) {
+      out.country = value;
+    } else if ((key === 'year' || key === 'released' || key === 'release date' || key === 'date') && !out.year) {
+      const fullDate = /^(\d{4}-\d{2}-\d{2})/.exec(value);
+      if (fullDate) out.released = fullDate[1];
+      const y = /\b(19\d{2}|20\d{2})\b/.exec(value);
+      if (y) out.year = Number(y[1]);
+    } else if (key === 'style' || key === 'styles' || key === 'genre' || key === 'genres') {
+      for (const s of splitValues(value)) {
+        const lower = s.toLowerCase();
+        if (lower && !out.styles.includes(lower)) out.styles.push(lower);
+      }
+    } else if (key === 'format') {
+      for (const f of splitValues(value)) {
+        const lower = f.toLowerCase();
+        if (['12"', '7"', '10"', 'lp', '45 rpm', '33 rpm', 'cassette', 'white label', 'promo'].includes(lower) && !out.formats.includes(lower)) {
+          out.formats.push(lower);
+        }
+      }
+    } else if (key === 'producer' || key === 'produced by' || key === 'remix' || key === 'remixed by') {
+      for (const c of splitValues(value)) {
+        if (c && !out.credits.includes(c)) out.credits.push(c);
+      }
+    }
+  }
+  return out;
+}
+
+/** True when a YouTube channel is a community/digger curator rather than an artist Topic/VEVO channel. */
+export function isCuratorChannel(channel, artist = '') {
+  if (!channel || typeof channel !== 'string') return false;
+  const trimmed = channel.trim();
+  if (!trimmed || /\s-\s*Topic$/i.test(trimmed) || /VEVO$/i.test(trimmed)) return false;
+  const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const nc = norm(trimmed.replace(/\b(official|music|channel|records|recordings|tv)\b/gi, ''));
+  const na = norm(artist);
+  if (!nc || (na && (nc === na || nc.includes(na) || na.includes(nc)))) return false;
+  return true;
+}
+
 /** Seconds in an ISO 8601 duration such as "PT4M18S". */
 export function isoSeconds(duration) {
   const m = /^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$/.exec(String(duration ?? ''));
@@ -47,12 +110,25 @@ export function isoSeconds(duration) {
   return total > 0 ? total : null;
 }
 
-const facts = ({ length, channel, views, description }) => ({
-  length: Number(length) > 0 ? Number(length) : null,
-  channel: channel ?? null,
-  views: Number(views) >= 0 && views != null ? Number(views) : null,
-  ...parseTopicDescription(description),
-});
+const facts = ({ length, channel, views, description }) => {
+  const topic = parseTopicDescription(description);
+  const vinyl = !topic.album && !topic.label && !topic.year && !topic.released
+    ? parseVinylDescription(description)
+    : null;
+  return {
+    length: Number(length) > 0 ? Number(length) : null,
+    channel: channel ?? null,
+    views: Number(views) >= 0 && views != null ? Number(views) : null,
+    album: topic.album ?? vinyl?.album ?? null,
+    label: topic.label ?? vinyl?.label ?? null,
+    year: topic.year ?? vinyl?.year ?? null,
+    released: topic.released ?? vinyl?.released ?? null,
+    ...(vinyl?.country ? { country: vinyl.country } : {}),
+    ...(vinyl?.styles?.length ? { styles: vinyl.styles } : {}),
+    ...(vinyl?.formats?.length ? { formats: vinyl.formats } : {}),
+    ...(vinyl?.credits?.length ? { credits: vinyl.credits } : {}),
+  };
+};
 
 /** Facts from one Data API `videos` item. */
 export function fromApiItem(item) {

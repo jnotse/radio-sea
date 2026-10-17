@@ -108,12 +108,14 @@ input[type="search"]::placeholder { color: var(--dim); }
 #tooltip { position: absolute; z-index: 4; pointer-events: none; padding: 6px 8px; max-width: 250px;
   border: 2px solid #4a3328; background: var(--wood); color: var(--wood-ink); font: 11px var(--mono); }
 .console-bottom { display: flex; justify-content: center; align-items: center; }
-.map-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; justify-content: center; color: #f6e2c4; font: 7px var(--pixel); }
+.map-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; justify-content: center; color: #f6e2c4; font: 7px var(--pixel); }
 .map-legend span, .legend-toggle { display: flex; align-items: center; gap: 6px; }
 .legend-toggle { padding: 3px 7px; font: 7px var(--pixel); color: #f6e2c4; background: #4e3426; border-color: #9a6e4f #2a1b13 #2a1b13 #9a6e4f; }
 .legend-toggle[aria-pressed="false"] { opacity: .55; }
+#btn-topology[aria-pressed="true"] { background: #1f5f72; color: #effffb; border-color: #5cc4bb #0c111d #0c111d #5cc4bb; opacity: 1; }
 .legend-track { display: inline-block; width: 7px; height: 7px; background: #2b2236; outline: 1px solid #f6ead2; }
 .legend-path { display: inline-block; width: 16px; border-top: 2px dashed #e0b989; }
+.legend-cube { display: inline-block; width: 7px; height: 7px; background: #5cc4bb; outline: 1px solid #f0a05a; }
 .legend-trail { display: inline-block; width: 16px; border-top: 2px solid #2b2236; box-shadow: 0 1px #f6ead2; }
 
 /* The player: a glacial-lake display above granite transport keys. */
@@ -247,6 +249,8 @@ body[data-playback="playing"] .spectrum i:nth-child(3n) { animation-delay: -570m
 }
 @media (max-width: 520px) {
   #sidebar .panel-content { grid-template-columns: minmax(0,1fr); gap: 18px; }
+  .map-legend { gap: 4px 8px; }
+  .legend-toggle { padding: 3px 5px; }
 }
 @media (max-width: 1000px) and (orientation: landscape) and (max-height: 500px) {
   #map-panel { height: 86vh; height: max(300px, 86svh); }

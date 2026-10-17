@@ -48,12 +48,21 @@ function mergeInto(base, incoming) {
   base.country ??= incoming.country;
   base.year ??= incoming.year;
   base.format ??= incoming.format;
+  if (incoming.views != null) {
+    base.views = base.views != null ? Math.min(base.views, incoming.views) : incoming.views;
+  }
   base.rating = Math.max(base.rating ?? 0, incoming.rating ?? 0) || null;
   for (const track of incoming.tracks) {
-    const duplicate = base.tracks.some(
+    const existing = base.tracks.find(
       (t) => normalizeText(t.title) === normalizeText(track.title),
     );
-    if (!duplicate) base.tracks.push(track);
+    if (!existing) {
+      base.tracks.push(track);
+    } else {
+      for (const [k, v] of Object.entries(track)) {
+        if (existing[k] == null && v != null) existing[k] = v;
+      }
+    }
   }
   Object.assign(base.urls, incoming.urls);
   for (const play of incoming.radioPlays) {
@@ -88,6 +97,7 @@ export function mergeCatalogue(rawReleases) {
       country: raw.country ?? null,
       format: raw.format ?? null,
       rating: raw.rating ?? null,
+      ...(raw.views != null ? { views: raw.views } : {}),
       tags: {
         genres: [...(raw.tags?.genres ?? [])],
         styles: [...(raw.tags?.styles ?? [])],
@@ -100,6 +110,7 @@ export function mergeCatalogue(rawReleases) {
         show: raw.show ?? '',
         date: raw.date ?? null,
         sourceUrl: raw.sourceUrl ?? null,
+        ...(raw.position != null ? { position: raw.position } : {}),
       }] : [])).map((p) => ({ ...p })),
       sources: [{ source: raw.source, sourceId: raw.sourceId }],
       mergedCount: 1,

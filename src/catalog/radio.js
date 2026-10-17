@@ -37,11 +37,13 @@ export async function fetchNtsSchedule({ channel = 1, pastDays = 3, fetchImpl = 
   );
 }
 
-export function parseNtsTracklist(json, { show = '', date = null, episodeUrl = null, genres = [] } = {}) {
-  return (json.results ?? []).map((track) => ({
+export function parseNtsTracklist(json, { show = '', date = null, episodeUrl = null, genres = [], moods = [], location = null } = {}) {
+  return (json.results ?? []).map((track, index) => ({
     station: 'nts',
     show,
     date,
+    position: index,
+    ...(track.offset != null ? { offset: track.offset } : {}),
     artist: track.artist ?? '',
     title: track.title ?? '',
     ids: {
@@ -51,6 +53,8 @@ export function parseNtsTracklist(json, { show = '', date = null, episodeUrl = n
     },
     sourceUrl: episodeUrl,
     showGenres: genres,
+    ...(moods.length ? { showMoods: moods } : {}),
+    ...(location ? { showLocation: location } : {}),
   }));
 }
 
@@ -68,16 +72,20 @@ export async function fetchNtsPlays({ channel = 1, pastDays = 3, maxEpisodes = 1
     // Episode details carry the show's genre and mood tags. They describe the
     // whole show, so they are kept apart from any track's own genres.
     let genres = [];
+    let moods = [];
+    let location = null;
     try {
       const detail = await fetchImpl(broadcast.episodeUrl, { headers: NTS_HEADERS });
       if (detail.ok) {
         const json = await detail.json();
         const names = (list) => (list ?? []).map((g) => (typeof g === 'string' ? g : g.value ?? g.name)).filter(Boolean);
-        genres = [...names(json.genres), ...names(json.moods)];
+        moods = names(json.moods);
+        genres = [...names(json.genres), ...moods];
+        location = json.location_long ?? json.location_short ?? null;
       }
     } catch {}
 
-    plays.push(...parseNtsTracklist(await res.json(), { ...broadcast, genres }));
+    plays.push(...parseNtsTracklist(await res.json(), { ...broadcast, genres, moods, location }));
   }
   return plays;
 }
@@ -88,10 +96,11 @@ export function parseMixcloudCloudcast(cloudcast, station) {
   const showGenres = (cloudcast.tags ?? []).map((t) => t.name ?? t).filter(Boolean);
   return (cloudcast.sections ?? [])
     .filter((section) => section.track)
-    .map((section) => ({
+    .map((section, index) => ({
       station,
       show: cloudcast.name ?? '',
       date: cloudcast.created_time ? String(cloudcast.created_time).slice(0, 10) : null,
+      position: index,
       artist: section.track.artist?.name ?? '',
       title: section.track.name ?? '',
       ids: {},

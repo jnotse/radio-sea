@@ -51,6 +51,11 @@ test('loaded snapshot has complete records, no playlist, and working filters', a
   await page.locator('#btn-clear').click();
   await expect(page.locator('#sea')).toHaveAttribute('data-matching', String(total));
   await expect(page.locator('#map-status')).toBeHidden();
+  await page.locator('#btn-topology').click();
+  await expect(page.locator('#sea')).toHaveAttribute('data-view', '3d');
+  await expect(page.locator('#btn-topology')).toHaveAttribute('aria-pressed', 'true');
+  await page.locator('#btn-topology').click();
+  await expect(page.locator('#sea')).toHaveAttribute('data-view', '2d');
   expect(errors).toEqual([]);
 });
 

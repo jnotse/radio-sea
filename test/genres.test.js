@@ -29,6 +29,29 @@ test('topGenres keeps the most-voted genres', () => {
   ['hard bop', 'jazz', 'post-bop']);
 });
 
+test('extracts folksonomy tags, earliest release year, country, instruments and credits from MusicBrainz', async () => {
+  const { fetchImpl } = fakeFetch({
+    '/recording/rec-1': {
+      ...RECORDING,
+      'first-release-date': '1963-08',
+      genres: [{ name: 'jazz', count: 4 }],
+      tags: [{ name: 'modal jazz', count: 3 }, { name: 'seen live', count: 9 }, { name: 'spiritual', count: 2 }],
+      releases: [{ country: 'XW', date: '2010' }, { country: 'US', date: '1963-08-01' }],
+      relations: [
+        { type: 'instrument', attributes: ['piano', 'Fender Rhodes'] },
+        { type: 'producer', artist: { name: 'Bob Thiele' } },
+      ],
+    },
+  });
+  const found = await lookupTrackGenres({ ...play, ids: { musicbrainz: 'rec-1' } }, { fetchImpl, ...fast });
+  assert.deepEqual(found.genres, ['jazz']);
+  assert.deepEqual(found.tags, ['modal jazz', 'spiritual']);
+  assert.equal(found.year, 1963);
+  assert.equal(found.country, 'US');
+  assert.deepEqual(found.instruments, ['piano', 'fender rhodes']);
+  assert.deepEqual(found.credits, ['Bob Thiele']);
+});
+
 test('recording genres win; the ID from the tracklist is used directly', async () => {
   const { fetchImpl, calls } = fakeFetch({
     '/recording/rec-1': { ...RECORDING, genres: [{ name: 'jazz', count: 4 }, { name: 'hard bop', count: 2 }] },

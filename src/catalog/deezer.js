@@ -42,7 +42,7 @@ async function getJson(path, fetchImpl) {
 }
 
 /** { deezer, bpm, length, gain } for one play, or nulls when Deezer has no matching track. */
-export async function lookupDeezer(play, { fetchImpl = fetch, pause = () => wait(150) } = {}) {
+export async function lookupDeezer(play, { fetchImpl = fetch, pause = () => wait(150), analyzePreview = null } = {}) {
   const get = async (path) => { await pause(); return getJson(path, fetchImpl); };
   const checked = (track) => (track && deezerMatches(play, track) ? track : null);
   const isrc = normalizeIsrc(play.ids?.isrc);
@@ -56,11 +56,18 @@ export async function lookupDeezer(play, { fetchImpl = fetch, pause = () => wait
     if (hit) track = checked(await get(`/track/${hit.id}`));
   }
   if (!track) return { deezer: null, bpm: null, length: null, gain: null };
+  const audio = typeof analyzePreview === 'function' && track.preview
+    ? await analyzePreview(track.preview, track)
+    : null;
+  const bpm = track.bpm > 0 ? Math.round(track.bpm) : audio?.bpm ?? null;
   return {
     deezer: track.id,
-    bpm: track.bpm > 0 ? Math.round(track.bpm) : null,
+    bpm,
     length: track.duration > 0 ? track.duration : null,
     gain: Number.isFinite(track.gain) ? track.gain : null,
+    ...(track.rank > 0 ? { rank: track.rank } : {}),
+    ...(track.preview ? { preview: track.preview } : {}),
+    ...(audio ? { audio } : {}),
   };
 }
 
