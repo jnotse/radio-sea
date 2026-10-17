@@ -1,5 +1,5 @@
 window.SEA_DATA = {
- "generatedAt": "2026-10-17T11:07:12.720Z",
+ "generatedAt": "2026-10-17T11:13:07.232Z",
  "stats": {
   "stations": [
    {
@@ -27,7 +27,7 @@ window.SEA_DATA = {
   "resolved": 261,
   "dropped": 82,
   "merged": 261,
-  "islands": 52
+  "islands": 55
  },
  "islands": [
   {
@@ -61,19 +61,19 @@ window.SEA_DATA = {
    "name": "electronic",
    "basis": "sound",
    "memberIds": [
-    "rel-038",
-    "rel-031",
-    "rel-035",
     "rel-033",
-    "rel-037",
-    "rel-027",
-    "rel-028",
     "rel-015",
     "rel-021",
     "rel-016",
     "rel-023",
     "rel-019",
-    "rel-025"
+    "rel-025",
+    "rel-027",
+    "rel-028",
+    "rel-031",
+    "rel-037",
+    "rel-035",
+    "rel-038"
    ],
    "centre": {
     "x": -13,
@@ -83,56 +83,6 @@ window.SEA_DATA = {
   },
   {
    "id": 2,
-   "name": "experimental",
-   "basis": "sound",
-   "memberIds": [
-    "rel-114",
-    "rel-103",
-    "rel-082",
-    "rel-163",
-    "rel-131",
-    "rel-197",
-    "rel-156",
-    "rel-072",
-    "rel-141",
-    "rel-046",
-    "rel-122",
-    "rel-063",
-    "rel-181"
-   ],
-   "centre": {
-    "x": 2,
-    "y": -24
-   },
-   "radius": 7.629437168288781
-  },
-  {
-   "id": 3,
-   "name": "romantic",
-   "basis": "sound",
-   "memberIds": [
-    "rel-124",
-    "rel-158",
-    "rel-133",
-    "rel-056",
-    "rel-094",
-    "rel-048",
-    "rel-064",
-    "rel-116",
-    "rel-084",
-    "rel-105",
-    "rel-182",
-    "rel-142",
-    "rel-150"
-   ],
-   "centre": {
-    "x": 18,
-    "y": 24
-   },
-   "radius": 7.629437168288781
-  },
-  {
-   "id": 4,
    "name": "5 GATE TEMPLE w/ Devon Rexi (R)",
    "basis": "show",
    "memberIds": [
@@ -151,13 +101,110 @@ window.SEA_DATA = {
     "rel-187"
    ],
    "centre": {
-    "x": -33,
-    "y": -6
+    "x": 2,
+    "y": -24
    },
    "radius": 7.629437168288781
   },
   {
+   "id": 3,
+   "name": "romantic",
+   "basis": "sound",
+   "memberIds": [
+    "rel-133",
+    "rel-182",
+    "rel-142",
+    "rel-150",
+    "rel-124",
+    "rel-116",
+    "rel-158",
+    "rel-056",
+    "rel-094",
+    "rel-048",
+    "rel-064",
+    "rel-084",
+    "rel-105"
+   ],
+   "centre": {
+    "x": 18,
+    "y": 24
+   },
+   "radius": 7.629437168288781
+  },
+  {
+   "id": 4,
+   "name": "experimental",
+   "basis": "sound",
+   "memberIds": [
+    "rel-103",
+    "rel-082",
+    "rel-163",
+    "rel-131",
+    "rel-197",
+    "rel-156",
+    "rel-046",
+    "rel-122",
+    "rel-063",
+    "rel-181",
+    "rel-072",
+    "rel-141"
+   ],
+   "centre": {
+    "x": -33,
+    "y": -6
+   },
+   "radius": 7.388972745734183
+  },
+  {
    "id": 5,
+   "name": "doo wop",
+   "basis": "sound",
+   "memberIds": [
+    "rel-145",
+    "rel-088",
+    "rel-068",
+    "rel-152",
+    "rel-200",
+    "rel-052",
+    "rel-193",
+    "rel-204",
+    "rel-109",
+    "rel-185",
+    "rel-076",
+    "rel-136"
+   ],
+   "centre": {
+    "x": 33,
+    "y": -21
+   },
+   "radius": 7.388972745734183
+  },
+  {
+   "id": 6,
+   "name": "SOUP TO NUTS W/ ANU",
+   "basis": "show",
+   "memberIds": [
+    "rel-184",
+    "rel-118",
+    "rel-126",
+    "rel-050",
+    "rel-096",
+    "rel-074",
+    "rel-225",
+    "rel-208",
+    "rel-066",
+    "rel-202",
+    "rel-191",
+    "rel-240"
+   ],
+   "centre": {
+    "x": -10,
+    "y": 42
+   },
+   "radius": 7.388972745734183
+  },
+  {
+   "id": 7,
    "name": "deep house",
    "basis": "sound",
    "memberIds": [
@@ -174,13 +221,13 @@ window.SEA_DATA = {
     "rel-012"
    ],
    "centre": {
-    "x": 33,
-    "y": -21
+    "x": -22,
+    "y": -41
    },
    "radius": 7.138262143604179
   },
   {
-   "id": 6,
+   "id": 8,
    "name": "post-punk",
    "basis": "sound",
    "memberIds": [
@@ -192,41 +239,18 @@ window.SEA_DATA = {
     "rel-061",
     "rel-007",
     "rel-026",
-    "rel-014",
     "rel-017",
+    "rel-014",
     "rel-020"
    ],
    "centre": {
-    "x": -10,
-    "y": 42
+    "x": 45,
+    "y": 17
    },
    "radius": 7.138262143604179
   },
   {
-   "id": 7,
-   "name": "SOUP TO NUTS W/ ANU",
-   "basis": "show",
-   "memberIds": [
-    "rel-184",
-    "rel-166",
-    "rel-118",
-    "rel-126",
-    "rel-050",
-    "rel-096",
-    "rel-074",
-    "rel-225",
-    "rel-208",
-    "rel-066",
-    "rel-202"
-   ],
-   "centre": {
-    "x": -22,
-    "y": -41
-   },
-   "radius": 7.138262143604179
-  },
-  {
-   "id": 8,
+   "id": 9,
    "name": "jazz",
    "basis": "sound",
    "memberIds": [
@@ -243,48 +267,26 @@ window.SEA_DATA = {
     "rel-232"
    ],
    "centre": {
-    "x": 45,
-    "y": 17
+    "x": -48,
+    "y": 19
    },
    "radius": 7.138262143604179
   },
   {
-   "id": 9,
-   "name": "tech house",
+   "id": 10,
+   "name": "deep house (2)",
    "basis": "sound",
    "memberIds": [
+    "rel-039",
+    "rel-089",
     "rel-044",
+    "rel-110",
+    "rel-077",
+    "rel-128",
     "rel-040",
     "rel-119",
     "rel-042",
-    "rel-137",
-    "rel-112",
-    "rel-087",
-    "rel-110",
-    "rel-077",
-    "rel-128"
-   ],
-   "centre": {
-    "x": -48,
-    "y": 19
-   },
-   "radius": 6.875872022286245
-  },
-  {
-   "id": 10,
-   "name": "doo wop",
-   "basis": "sound",
-   "memberIds": [
-    "rel-088",
-    "rel-152",
-    "rel-200",
-    "rel-052",
-    "rel-193",
-    "rel-204",
-    "rel-109",
-    "rel-185",
-    "rel-076",
-    "rel-136"
+    "rel-137"
    ],
    "centre": {
     "x": 23,
@@ -336,6 +338,26 @@ window.SEA_DATA = {
   },
   {
    "id": 13,
+   "name": "electronic (2)",
+   "basis": "sound",
+   "memberIds": [
+    "rel-108",
+    "rel-209",
+    "rel-192",
+    "rel-160",
+    "rel-067",
+    "rel-075",
+    "rel-097",
+    "rel-135"
+   ],
+   "centre": {
+    "x": 61,
+    "y": -14
+   },
+   "radius": 6.3083261120685235
+  },
+  {
+   "id": 14,
    "name": "alternative rock",
    "basis": "sound",
    "memberIds": [
@@ -347,26 +369,6 @@ window.SEA_DATA = {
     "rel-239",
     "rel-199",
     "rel-216"
-   ],
-   "centre": {
-    "x": 61,
-    "y": -14
-   },
-   "radius": 6.3083261120685235
-  },
-  {
-   "id": 14,
-   "name": "downtempo",
-   "basis": "sound",
-   "memberIds": [
-    "rel-246",
-    "rel-060",
-    "rel-254",
-    "rel-085",
-    "rel-135",
-    "rel-231",
-    "rel-191",
-    "rel-240"
    ],
    "centre": {
     "x": -38,
@@ -395,25 +397,6 @@ window.SEA_DATA = {
   },
   {
    "id": 16,
-   "name": "Low Life Loves You w/ Bill Brewster & Richard Sen",
-   "basis": "show",
-   "memberIds": [
-    "rel-108",
-    "rel-209",
-    "rel-192",
-    "rel-051",
-    "rel-067",
-    "rel-075",
-    "rel-097"
-   ],
-   "centre": {
-    "x": 53,
-    "y": 45
-   },
-   "radius": 5.997777228809804
-  },
-  {
-   "id": 17,
    "name": "minimal",
    "basis": "sound",
    "memberIds": [
@@ -425,13 +408,13 @@ window.SEA_DATA = {
     "rel-043"
    ],
    "centre": {
-    "x": -71,
-    "y": 3
+    "x": 53,
+    "y": 45
    },
    "radius": 5.664132562731402
   },
   {
-   "id": 18,
+   "id": 17,
    "name": "pop rap",
    "basis": "sound",
    "memberIds": [
@@ -442,13 +425,13 @@ window.SEA_DATA = {
     "rel-140"
    ],
    "centre": {
-    "x": 53,
-    "y": -52
+    "x": -71,
+    "y": 3
    },
    "radius": 5.301315561749643
   },
   {
-   "id": 19,
+   "id": 18,
    "name": "garage rock",
    "basis": "sound",
    "memberIds": [
@@ -458,6 +441,22 @@ window.SEA_DATA = {
     "rel-069"
    ],
    "centre": {
+    "x": 53,
+    "y": -52
+   },
+   "radius": 4.9
+  },
+  {
+   "id": 19,
+   "name": "electro",
+   "basis": "sound",
+   "memberIds": [
+    "rel-147",
+    "rel-166",
+    "rel-237",
+    "rel-242"
+   ],
+   "centre": {
     "x": -4,
     "y": 76
    },
@@ -465,22 +464,6 @@ window.SEA_DATA = {
   },
   {
    "id": 20,
-   "name": "breakbeat",
-   "basis": "sound",
-   "memberIds": [
-    "rel-147",
-    "rel-160",
-    "rel-120",
-    "rel-261"
-   ],
-   "centre": {
-    "x": -50,
-    "y": -59
-   },
-   "radius": 4.9
-  },
-  {
-   "id": 21,
    "name": "folk",
    "basis": "sound",
    "memberIds": [
@@ -490,13 +473,13 @@ window.SEA_DATA = {
     "rel-175"
    ],
    "centre": {
-    "x": 78,
-    "y": 10
+    "x": -50,
+    "y": -59
    },
    "radius": 4.9
   },
   {
-   "id": 22,
+   "id": 21,
    "name": "ska",
    "basis": "sound",
    "memberIds": [
@@ -506,19 +489,34 @@ window.SEA_DATA = {
     "rel-213"
    ],
    "centre": {
-    "x": -66,
-    "y": 46
+    "x": 78,
+    "y": 10
    },
    "radius": 4.9
   },
   {
-   "id": 23,
+   "id": 22,
    "name": "synth-pop",
    "basis": "sound",
    "memberIds": [
     "rel-018",
     "rel-086",
     "rel-229"
+   ],
+   "centre": {
+    "x": -66,
+    "y": 46
+   },
+   "radius": 4.444486372867091
+  },
+  {
+   "id": 23,
+   "name": "industrial",
+   "basis": "sound",
+   "memberIds": [
+    "rel-093",
+    "rel-057",
+    "rel-212"
    ],
    "centre": {
     "x": 18,
@@ -528,12 +526,12 @@ window.SEA_DATA = {
   },
   {
    "id": 24,
-   "name": "idm",
+   "name": "breaks",
    "basis": "sound",
    "memberIds": [
-    "rel-148",
-    "rel-079",
-    "rel-143"
+    "rel-112",
+    "rel-217",
+    "rel-249"
    ],
    "centre": {
     "x": 42,
@@ -543,12 +541,12 @@ window.SEA_DATA = {
   },
   {
    "id": 25,
-   "name": "chanson",
+   "name": "idm",
    "basis": "sound",
    "memberIds": [
-    "rel-167",
-    "rel-173",
-    "rel-176"
+    "rel-148",
+    "rel-079",
+    "rel-143"
    ],
    "centre": {
     "x": -82,
@@ -588,12 +586,12 @@ window.SEA_DATA = {
   },
   {
    "id": 28,
-   "name": "industrial",
+   "name": "darkwave",
    "basis": "sound",
    "memberIds": [
-    "rel-212",
-    "rel-057",
-    "rel-093"
+    "rel-234",
+    "rel-080",
+    "rel-125"
    ],
    "centre": {
     "x": -31,
@@ -603,12 +601,12 @@ window.SEA_DATA = {
   },
   {
    "id": 29,
-   "name": "darkwave",
+   "name": "future jazz",
    "basis": "sound",
    "memberIds": [
-    "rel-234",
-    "rel-080",
-    "rel-125"
+    "rel-246",
+    "rel-060",
+    "rel-254"
    ],
    "centre": {
     "x": 82,
@@ -660,11 +658,11 @@ window.SEA_DATA = {
   },
   {
    "id": 33,
-   "name": "tech house (2)",
+   "name": "neo soul",
    "basis": "sound",
    "memberIds": [
-    "rel-039",
-    "rel-089"
+    "rel-051",
+    "rel-167"
    ],
    "centre": {
     "x": -79,
@@ -674,11 +672,11 @@ window.SEA_DATA = {
   },
   {
    "id": 34,
-   "name": "vocal",
+   "name": "tech house",
    "basis": "sound",
    "memberIds": [
-    "rel-058",
-    "rel-068"
+    "rel-087",
+    "rel-231"
    ],
    "centre": {
     "x": 100,
@@ -702,11 +700,11 @@ window.SEA_DATA = {
   },
   {
    "id": 36,
-   "name": "garage rock (2)",
+   "name": "drum n bass",
    "basis": "sound",
    "memberIds": [
-    "rel-127",
-    "rel-145"
+    "rel-120",
+    "rel-261"
    ],
    "centre": {
     "x": 0,
@@ -730,11 +728,11 @@ window.SEA_DATA = {
   },
   {
    "id": 38,
-   "name": "cha-cha",
+   "name": "chanson",
    "basis": "sound",
    "memberIds": [
-    "rel-178",
-    "rel-248"
+    "rel-173",
+    "rel-176"
    ],
    "centre": {
     "x": -106,
@@ -744,11 +742,11 @@ window.SEA_DATA = {
   },
   {
    "id": 39,
-   "name": "drum n bass",
+   "name": "cha-cha",
    "basis": "sound",
    "memberIds": [
-    "rel-203",
-    "rel-235"
+    "rel-178",
+    "rel-248"
    ],
    "centre": {
     "x": 86,
@@ -758,11 +756,11 @@ window.SEA_DATA = {
   },
   {
    "id": 40,
-   "name": "breaks",
+   "name": "drum n bass (2)",
    "basis": "sound",
    "memberIds": [
-    "rel-217",
-    "rel-249"
+    "rel-203",
+    "rel-235"
    ],
    "centre": {
     "x": -20,
@@ -786,24 +784,23 @@ window.SEA_DATA = {
   },
   {
    "id": 42,
-   "name": "electro",
+   "name": "field recording",
    "basis": "sound",
    "memberIds": [
-    "rel-237",
-    "rel-242"
+    "rel-032"
    ],
    "centre": {
     "x": 108,
     "y": 30
    },
-   "radius": 3.9041630560342617
+   "radius": 3.2
   },
   {
    "id": 43,
-   "name": "field recording",
+   "name": "vocal",
    "basis": "sound",
    "memberIds": [
-    "rel-032"
+    "rel-058"
    ],
    "centre": {
     "x": -102,
@@ -813,10 +810,10 @@ window.SEA_DATA = {
   },
   {
    "id": 44,
-   "name": "hard bop",
+   "name": "ethereal",
    "basis": "sound",
    "memberIds": [
-    "rel-129"
+    "rel-085"
    ],
    "centre": {
     "x": 40,
@@ -826,10 +823,10 @@ window.SEA_DATA = {
   },
   {
    "id": 45,
-   "name": "indie pop",
+   "name": "dream pop",
    "basis": "sound",
    "memberIds": [
-    "rel-134"
+    "rel-114"
    ],
    "centre": {
     "x": 43,
@@ -839,10 +836,10 @@ window.SEA_DATA = {
   },
   {
    "id": 46,
-   "name": "edm",
+   "name": "garage rock (2)",
    "basis": "sound",
    "memberIds": [
-    "rel-169"
+    "rel-127"
    ],
    "centre": {
     "x": -107,
@@ -852,10 +849,10 @@ window.SEA_DATA = {
   },
   {
    "id": 47,
-   "name": "power pop",
+   "name": "hard bop",
    "basis": "sound",
    "memberIds": [
-    "rel-183"
+    "rel-129"
    ],
    "centre": {
     "x": 113,
@@ -865,10 +862,10 @@ window.SEA_DATA = {
   },
   {
    "id": 48,
-   "name": "rhythm & blues",
+   "name": "indie pop",
    "basis": "sound",
    "memberIds": [
-    "rel-194"
+    "rel-134"
    ],
    "centre": {
     "x": -60,
@@ -878,10 +875,10 @@ window.SEA_DATA = {
   },
   {
    "id": 49,
-   "name": "prog rock",
+   "name": "edm",
    "basis": "sound",
    "memberIds": [
-    "rel-206"
+    "rel-169"
    ],
    "centre": {
     "x": -25,
@@ -891,10 +888,10 @@ window.SEA_DATA = {
   },
   {
    "id": 50,
-   "name": "jungle",
+   "name": "power pop",
    "basis": "sound",
    "memberIds": [
-    "rel-223"
+    "rel-183"
    ],
    "centre": {
     "x": 100,
@@ -904,14 +901,53 @@ window.SEA_DATA = {
   },
   {
    "id": 51,
+   "name": "rhythm & blues",
+   "basis": "sound",
+   "memberIds": [
+    "rel-194"
+   ],
+   "centre": {
+    "x": -122,
+    "y": 15
+   },
+   "radius": 3.2
+  },
+  {
+   "id": 52,
+   "name": "prog rock",
+   "basis": "sound",
+   "memberIds": [
+    "rel-206"
+   ],
+   "centre": {
+    "x": 81,
+    "y": -95
+   },
+   "radius": 3.2
+  },
+  {
+   "id": 53,
+   "name": "jungle",
+   "basis": "sound",
+   "memberIds": [
+    "rel-223"
+   ],
+   "centre": {
+    "x": 5,
+    "y": 127
+   },
+   "radius": 3.2
+  },
+  {
+   "id": 54,
    "name": "ghetto",
    "basis": "sound",
    "memberIds": [
     "rel-233"
    ],
    "centre": {
-    "x": -122,
-    "y": 15
+    "x": -90,
+    "y": -91
    },
    "radius": 3.2
   }
@@ -956,10 +992,10 @@ window.SEA_DATA = {
    "youtubeTitle": "God's Chest",
    "youtubeCheckedAt": "2026-10-16T18:35:54.935Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 19,
+   "islandId": 18,
    "depth": 0.97,
-   "x": -6,
-   "y": 74,
+   "x": 50,
+   "y": -54,
    "neighbours": [
     {
      "id": "rel-024",
@@ -969,7 +1005,8 @@ window.SEA_DATA = {
      "reasons": [
       "shared tags: rock, punk",
       "played on the same show: SHAMOS",
-      "same artist: Uranium Club"
+      "same artist: Uranium Club",
+      "same label: Static Shock"
      ]
     },
     {
@@ -1033,10 +1070,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Larry Heard - Micro Gravity",
    "youtubeCheckedAt": "2026-10-16T18:35:57.216Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.87,
-   "x": 37,
-   "y": -20,
+   "x": -18,
+   "y": -40,
    "neighbours": [
     {
      "id": "rel-070",
@@ -1116,10 +1153,10 @@ window.SEA_DATA = {
    "youtubeTitle": "bedroom - in my head",
    "youtubeCheckedAt": "2026-10-16T18:35:59.093Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.913,
-   "x": -5,
-   "y": 41,
+   "x": 50,
+   "y": 17,
    "neighbours": [
     {
      "id": "rel-061",
@@ -1160,9 +1197,9 @@ window.SEA_DATA = {
    "artist": "Marcello Napoletano",
    "year": 2010,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 423,
+   "album": "The Space Voodoo",
+   "label": "Mathematics Recordings",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -1194,10 +1231,10 @@ window.SEA_DATA = {
    "youtubeTitle": "This Moment Must Be The Movement",
    "youtubeCheckedAt": "2026-10-16T18:36:00.847Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 17,
-   "depth": 0.882,
-   "x": -72,
-   "y": 7,
+   "islandId": 16,
+   "depth": 0.884,
+   "x": 52,
+   "y": 48,
    "neighbours": [
     {
      "id": "rel-043",
@@ -1272,10 +1309,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Preoccupations - Espionage (Official Audio)",
    "youtubeCheckedAt": "2026-10-16T18:36:02.749Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.91,
-   "x": -14,
-   "y": 41,
+   "x": 41,
+   "y": 17,
    "neighbours": [
     {
      "id": "rel-061",
@@ -1315,7 +1352,7 @@ window.SEA_DATA = {
    "artist": "Larry Heard & Mr. White",
    "year": 2017,
    "country": null,
-   "length": null,
+   "length": 412,
    "album": null,
    "label": null,
    "bpm": null,
@@ -1349,10 +1386,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Larry Heard presents Mr. White - Virtual Emotion (Dub) [ML2236]",
    "youtubeCheckedAt": "2026-10-16T18:36:05.857Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.877,
-   "x": 37,
-   "y": -24,
+   "x": -18,
+   "y": -44,
    "neighbours": [
     {
      "id": "rel-012",
@@ -1395,7 +1432,7 @@ window.SEA_DATA = {
    "artist": "Duds",
    "year": 2016,
    "country": null,
-   "length": null,
+   "length": 115,
    "album": null,
    "label": null,
    "bpm": null,
@@ -1430,10 +1467,10 @@ window.SEA_DATA = {
    "youtubeTitle": "DUDS - No Remark / A01 \"Wet Reduction\" EP / Maternal Voice (2016)",
    "youtubeCheckedAt": "2026-10-16T18:36:08.680Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.916,
-   "x": -9,
-   "y": 45,
+   "x": 47,
+   "y": 20,
    "neighbours": [
     {
      "id": "rel-026",
@@ -1508,10 +1545,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Larry Heard - Praise Fingers (Fingers Tribal Mix) [ML2247]",
    "youtubeCheckedAt": "2026-10-16T18:36:11.612Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.877,
-   "x": 31,
-   "y": -20,
+   "x": -24,
+   "y": -40,
    "neighbours": [
     {
      "id": "rel-012",
@@ -1588,10 +1625,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Omni \"Southbound Station\" (Official Video)",
    "youtubeCheckedAt": "2026-10-16T18:36:14.596Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.907,
-   "x": -12,
-   "y": 45,
+   "x": 44,
+   "y": 21,
    "neighbours": [
     {
      "id": "rel-061",
@@ -1632,7 +1669,7 @@ window.SEA_DATA = {
    "artist": "Morning Kids",
    "year": 1996,
    "country": null,
-   "length": null,
+   "length": 416,
    "album": null,
    "label": null,
    "bpm": null,
@@ -1667,10 +1704,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Morning Kids - Free Lovin' (Housedream) (1996)",
    "youtubeCheckedAt": "2026-10-16T18:36:17.556Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.882,
-   "x": 37,
-   "y": -18,
+   "x": -18,
+   "y": -38,
    "neighbours": [
     {
      "id": "rel-008",
@@ -1714,8 +1751,8 @@ window.SEA_DATA = {
    "year": 2018,
    "country": null,
    "length": 296,
-   "album": null,
-   "label": null,
+   "album": "Sustained Threat",
+   "label": "Speedy Wunderground",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -1747,7 +1784,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:20.207Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
    "islandId": 30,
-   "depth": 0.92,
+   "depth": 0.922,
    "x": -94,
    "y": 24,
    "neighbours": [
@@ -1764,7 +1801,7 @@ window.SEA_DATA = {
      "id": "rel-073",
      "name": "Alto Valle",
      "artist": "Los Espiritus",
-     "score": 0.5533196804712556,
+     "score": 0.5164317017731719,
      "reasons": [
       "shared tags: rock, krautrock",
       "both shows tagged: Post Punk",
@@ -1824,10 +1861,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Strong Souls - Sensual (Let's Work mix)",
    "youtubeCheckedAt": "2026-10-16T18:36:22.753Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.876,
-   "x": 35,
-   "y": -25,
+   "x": -20,
+   "y": -45,
    "neighbours": [
     {
      "id": "rel-006",
@@ -1871,8 +1908,8 @@ window.SEA_DATA = {
    "year": 2000,
    "country": null,
    "length": 354,
-   "album": null,
-   "label": null,
+   "album": "Farmyard Flavours",
+   "label": "peng records",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -1903,10 +1940,10 @@ window.SEA_DATA = {
    "youtubeTitle": "So Alive",
    "youtubeCheckedAt": "2026-10-16T18:36:30.498Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-16-1100",
-   "islandId": 5,
-   "depth": 0.887,
-   "x": 34,
-   "y": -18,
+   "islandId": 7,
+   "depth": 0.888,
+   "x": -21,
+   "y": -38,
    "neighbours": [
     {
      "id": "rel-144",
@@ -1985,10 +2022,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Exek - A Hedonist",
    "youtubeCheckedAt": "2026-10-16T18:36:33.374Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.9,
-   "x": -6,
-   "y": 44,
+   "x": 49,
+   "y": 20,
    "neighbours": [
     {
      "id": "rel-061",
@@ -2030,8 +2067,8 @@ window.SEA_DATA = {
    "year": 1998,
    "country": null,
    "length": 379,
-   "album": null,
-   "label": null,
+   "album": "Mixmag presents Carl Craig - Life On Planet E",
+   "label": "Planet E Communications, Inc.",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -2061,7 +2098,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:36:36.233Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
-   "depth": 0.87,
+   "depth": 0.873,
    "x": -11,
    "y": 12,
    "neighbours": [
@@ -2084,9 +2121,9 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-025",
-     "name": "Korrupt",
-     "artist": "Disguised",
+     "id": "rel-027",
+     "name": "Disharmonized",
+     "artist": "Isaiah",
      "score": 0.7692307692307693,
      "reasons": [
       "played on the same show: Special Guests"
@@ -2132,7 +2169,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
    "depth": 0.88,
-   "x": -13,
+   "x": -12,
    "y": 14,
    "neighbours": [
     {
@@ -2171,8 +2208,8 @@ window.SEA_DATA = {
    "year": 2017,
    "country": null,
    "length": 198,
-   "album": null,
-   "label": null,
+   "album": "Shades of Violet",
+   "label": "Vestron Vulture",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -2206,10 +2243,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Phantom",
    "youtubeCheckedAt": "2026-10-16T18:36:47.470Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
-   "depth": 0.906,
-   "x": -13,
-   "y": 45,
+   "islandId": 8,
+   "depth": 0.908,
+   "x": 42,
+   "y": 20,
    "neighbours": [
     {
      "id": "rel-061",
@@ -2224,7 +2261,7 @@ window.SEA_DATA = {
      "id": "rel-020",
      "name": "The Chuckler",
      "artist": "Protomartyr",
-     "score": 0.5718644115168869,
+     "score": 0.5337401174157612,
      "reasons": [
       "shared tags: rock, post-punk",
       "played on the same show: SHAMOS",
@@ -2251,8 +2288,8 @@ window.SEA_DATA = {
    "year": 1979,
    "country": null,
    "length": 352,
-   "album": null,
-   "label": null,
+   "album": "Public Image",
+   "label": "Virgin Records Limited",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -2285,10 +2322,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Religion II (2011 Remaster)",
    "youtubeCheckedAt": "2026-10-16T18:36:50.431Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 23,
-   "depth": 0.913,
-   "x": 22,
-   "y": -81,
+   "islandId": 22,
+   "depth": 0.914,
+   "x": -63,
+   "y": 46,
    "neighbours": [
     {
      "id": "rel-061",
@@ -2398,8 +2435,8 @@ window.SEA_DATA = {
    "year": 2017,
    "country": null,
    "length": 223,
-   "album": null,
-   "label": null,
+   "album": "Relatives In Descent",
+   "label": "Domino Recording Co Ltd",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -2430,10 +2467,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Chuckler",
    "youtubeCheckedAt": "2026-10-16T18:36:55.838Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
-   "depth": 0.908,
-   "x": -14,
-   "y": 43,
+   "islandId": 8,
+   "depth": 0.91,
+   "x": 41,
+   "y": 19,
    "neighbours": [
     {
      "id": "rel-061",
@@ -2456,14 +2493,14 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-017",
-     "name": "Phantom",
-     "artist": "Vestron Vulture",
-     "score": 0.5718644115168869,
+     "id": "rel-014",
+     "name": "A Hedonist",
+     "artist": "Exek",
+     "score": 0.5622837722629166,
      "reasons": [
       "shared tags: rock, post-punk",
       "played on the same show: SHAMOS",
-      "both from 2017"
+      "3 years apart (2017 / 2014)"
      ]
     }
    ]
@@ -2474,7 +2511,7 @@ window.SEA_DATA = {
    "artist": "Artonal",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 143,
    "album": null,
    "label": null,
    "bpm": null,
@@ -2503,7 +2540,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
    "depth": 0.89,
-   "x": -12,
+   "x": -13,
    "y": 13,
    "neighbours": [
     {
@@ -2576,10 +2613,10 @@ window.SEA_DATA = {
    "youtubeTitle": "FRENCH POLICE - Vampiro [OFFICIAL AUDIO]",
    "youtubeCheckedAt": "2026-10-16T18:37:01.240Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.929,
-   "x": -8,
-   "y": 37,
+   "x": 47,
+   "y": 13,
    "neighbours": [
     {
      "id": "rel-061",
@@ -2620,7 +2657,7 @@ window.SEA_DATA = {
    "artist": "Khas",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 311,
    "album": null,
    "label": null,
    "bpm": null,
@@ -2688,8 +2725,8 @@ window.SEA_DATA = {
    "year": null,
    "country": null,
    "length": 149,
-   "album": null,
-   "label": null,
+   "album": "All Of Them Naturals",
+   "label": "Static Shock",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -2720,10 +2757,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Operation Pt.II",
    "youtubeCheckedAt": "2026-10-16T18:37:06.911Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 19,
+   "islandId": 18,
    "depth": 0.97,
-   "x": -5,
-   "y": 73,
+   "x": 51,
+   "y": -55,
    "neighbours": [
     {
      "id": "rel-001",
@@ -2733,7 +2770,8 @@ window.SEA_DATA = {
      "reasons": [
       "shared tags: rock, punk",
       "played on the same show: SHAMOS",
-      "same artist: Uranium Club"
+      "same artist: Uranium Club",
+      "same label: Static Shock"
      ]
     },
     {
@@ -2762,9 +2800,9 @@ window.SEA_DATA = {
    "artist": "Disguised",
    "year": null,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 295,
+   "album": "Korrupt",
+   "label": "Inherit",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -2790,19 +2828,10 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:09.708Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
-   "depth": 0.89,
-   "x": -13,
-   "y": 13,
+   "depth": 0.892,
+   "x": -14,
+   "y": 11,
    "neighbours": [
-    {
-     "id": "rel-015",
-     "name": "4 My Peepz (Dubfire Rework)",
-     "artist": "Paperclip People",
-     "score": 0.7692307692307693,
-     "reasons": [
-      "played on the same show: Special Guests"
-     ]
-    },
     {
      "id": "rel-016",
      "name": "Walk the Line",
@@ -2816,6 +2845,15 @@ window.SEA_DATA = {
      "id": "rel-019",
      "name": "Blind Pick",
      "artist": "Bours?",
+     "score": 0.7692307692307693,
+     "reasons": [
+      "played on the same show: Special Guests"
+     ]
+    },
+    {
+     "id": "rel-021",
+     "name": "When I Feel Like This",
+     "artist": "Artonal",
      "score": 0.7692307692307693,
      "reasons": [
       "played on the same show: Special Guests"
@@ -2865,10 +2903,10 @@ window.SEA_DATA = {
    "youtubeTitle": "CRACK CLOUD - TUNNEL VISION",
    "youtubeCheckedAt": "2026-10-16T18:37:12.706Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.916,
-   "x": -13,
-   "y": 38,
+   "x": 43,
+   "y": 14,
    "neighbours": [
     {
      "id": "rel-007",
@@ -2909,7 +2947,7 @@ window.SEA_DATA = {
    "artist": "Isaiah",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 354,
    "album": null,
    "label": null,
    "bpm": null,
@@ -2938,8 +2976,8 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
    "depth": 0.89,
-   "x": -15,
-   "y": 12,
+   "x": -14,
+   "y": 13,
    "neighbours": [
     {
      "id": "rel-015",
@@ -3008,7 +3046,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
    "depth": 0.898,
-   "x": -14,
+   "x": -13,
    "y": 14,
    "neighbours": [
     {
@@ -3082,10 +3120,10 @@ window.SEA_DATA = {
    "youtubeTitle": "EYEDRESS - JEALOUS (OFFICIAL VIDEO)",
    "youtubeCheckedAt": "2026-10-16T18:37:26.796Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.918,
-   "x": -10,
-   "y": 37,
+   "x": 45,
+   "y": 13,
    "neighbours": [
     {
      "id": "rel-061",
@@ -3125,7 +3163,7 @@ window.SEA_DATA = {
    "artist": "Albert Marcœur",
    "year": 1982,
    "country": null,
-   "length": null,
+   "length": 175,
    "album": null,
    "label": null,
    "bpm": null,
@@ -3206,8 +3244,8 @@ window.SEA_DATA = {
    "year": 1999,
    "country": null,
    "length": 186,
-   "album": null,
-   "label": null,
+   "album": "It Feels So Good",
+   "label": "Armada Music B.V.",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -3238,8 +3276,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:34.872Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
-   "depth": 0.885,
-   "x": -11,
+   "depth": 0.887,
+   "x": -12,
    "y": 13,
    "neighbours": [
     {
@@ -3261,9 +3299,9 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-025",
-     "name": "Korrupt",
-     "artist": "Disguised",
+     "id": "rel-027",
+     "name": "Disharmonized",
+     "artist": "Isaiah",
      "score": 0.7692307692307693,
      "reasons": [
       "played on the same show: Special Guests"
@@ -3312,10 +3350,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Spear - The First Breath After Death",
    "youtubeCheckedAt": "2026-10-16T18:37:37.718Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 43,
+   "islandId": 42,
    "depth": 0.912,
-   "x": -99,
-   "y": 51,
+   "x": 110,
+   "y": 31,
    "neighbours": [
     {
      "id": "rel-072",
@@ -3357,9 +3395,9 @@ window.SEA_DATA = {
    "artist": "Doctor Jeep",
    "year": null,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 285,
+   "album": "Dia De Los Muertos",
+   "label": "Kaizen",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -3390,7 +3428,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:40.499Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
-   "depth": 0.95,
+   "depth": 0.951,
    "x": -14,
    "y": 10,
    "neighbours": [
@@ -3413,9 +3451,9 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-025",
-     "name": "Korrupt",
-     "artist": "Disguised",
+     "id": "rel-027",
+     "name": "Disharmonized",
+     "artist": "Isaiah",
      "score": 0.7692307692307693,
      "reasons": [
       "played on the same show: Special Guests"
@@ -3510,9 +3548,9 @@ window.SEA_DATA = {
    "artist": "Mila Necchella",
    "year": null,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 261,
+   "album": "Aetherfall",
+   "label": "Minuit Rapide",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -3538,19 +3576,10 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:37:45.759Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1900BIS",
    "islandId": 1,
-   "depth": 0.89,
-   "x": -12,
+   "depth": 0.892,
+   "x": -13,
    "y": 10,
    "neighbours": [
-    {
-     "id": "rel-015",
-     "name": "4 My Peepz (Dubfire Rework)",
-     "artist": "Paperclip People",
-     "score": 0.7692307692307693,
-     "reasons": [
-      "played on the same show: Special Guests"
-     ]
-    },
     {
      "id": "rel-016",
      "name": "Walk the Line",
@@ -3564,6 +3593,15 @@ window.SEA_DATA = {
      "id": "rel-019",
      "name": "Blind Pick",
      "artist": "Bours?",
+     "score": 0.7692307692307693,
+     "reasons": [
+      "played on the same show: Special Guests"
+     ]
+    },
+    {
+     "id": "rel-021",
+     "name": "When I Feel Like This",
+     "artist": "Artonal",
      "score": 0.7692307692307693,
      "reasons": [
       "played on the same show: Special Guests"
@@ -3657,7 +3695,7 @@ window.SEA_DATA = {
    "artist": "BLANKA (ES)",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 260,
    "album": null,
    "label": null,
    "bpm": null,
@@ -3724,7 +3762,7 @@ window.SEA_DATA = {
    "artist": "Kara Okay",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 233,
    "album": null,
    "label": null,
    "bpm": null,
@@ -3795,7 +3833,7 @@ window.SEA_DATA = {
    "artist": "Unknown Artist",
    "year": 2019,
    "country": null,
-   "length": null,
+   "length": 476,
    "album": null,
    "label": null,
    "bpm": null,
@@ -3830,10 +3868,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Unknown Artist - Untitled 02",
    "youtubeCheckedAt": "2026-10-16T18:38:01.154Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 33,
+   "islandId": 10,
    "depth": 0.908,
-   "x": -76,
-   "y": -61,
+   "x": 18,
+   "y": -49,
    "neighbours": [
     {
      "id": "rel-089",
@@ -3906,10 +3944,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Fabrizio Lapiana - Freckles (beatless) [ATTICLP01]",
    "youtubeCheckedAt": "2026-10-16T18:38:03.785Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
+   "islandId": 10,
    "depth": 0.875,
-   "x": -52,
-   "y": 19,
+   "x": 22,
+   "y": -45,
    "neighbours": [
     {
      "id": "rel-119",
@@ -3984,7 +4022,7 @@ window.SEA_DATA = {
    "islandId": 0,
    "depth": 0.901,
    "x": 5,
-   "y": -2,
+   "y": -1,
    "neighbours": [
     {
      "id": "rel-101",
@@ -4024,8 +4062,8 @@ window.SEA_DATA = {
    "year": 2013,
    "country": null,
    "length": 502,
-   "album": null,
-   "label": null,
+   "album": "8",
+   "label": "Point G",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -4055,20 +4093,11 @@ window.SEA_DATA = {
    "youtubeTitle": "Indian (Revamp)",
    "youtubeCheckedAt": "2026-10-16T18:38:20.381Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
-   "depth": 0.872,
-   "x": -51,
-   "y": 16,
+   "islandId": 10,
+   "depth": 0.874,
+   "x": 20,
+   "y": -47,
    "neighbours": [
-    {
-     "id": "rel-119",
-     "name": "The Right Vibe (Radio Edit)",
-     "artist": "Rob Pearson & Robin Ball",
-     "score": 0.7692307692307692,
-     "reasons": [
-      "played on the same show: Special Guests"
-     ]
-    },
     {
      "id": "rel-137",
      "name": "E.F.X (European Fusion X-perience) (Electro Monkey Mix)",
@@ -4088,6 +4117,17 @@ window.SEA_DATA = {
       "played on the same show: Special Guests",
       "3 years apart (2013 / 2016)"
      ]
+    },
+    {
+     "id": "rel-006",
+     "name": "Virtual Emotion (Dub)",
+     "artist": "Larry Heard & Mr. White",
+     "score": 0.7361965244881431,
+     "reasons": [
+      "shared tags: electronic, deep house, house",
+      "played on the same show: Special Guests",
+      "4 years apart (2013 / 2017)"
+     ]
     }
    ]
   },
@@ -4097,7 +4137,7 @@ window.SEA_DATA = {
    "artist": "Claude Young",
    "year": 1999,
    "country": null,
-   "length": null,
+   "length": 73,
    "album": null,
    "label": null,
    "bpm": null,
@@ -4130,10 +4170,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Claude Young - Welcome",
    "youtubeCheckedAt": "2026-10-16T18:38:23.075Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 17,
+   "islandId": 16,
    "depth": 0.913,
-   "x": -66,
-   "y": 3,
+   "x": 57,
+   "y": 45,
    "neighbours": [
     {
      "id": "rel-015",
@@ -4174,8 +4214,8 @@ window.SEA_DATA = {
    "year": 2009,
    "country": null,
    "length": 198,
-   "album": null,
-   "label": null,
+   "album": "Party Guilt",
+   "label": "Crosstown rebels",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -4205,25 +4245,25 @@ window.SEA_DATA = {
    "youtubeTitle": "Party Guilt (Matt Styles club mix)",
    "youtubeCheckedAt": "2026-10-16T18:38:28.673Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
-   "depth": 0.903,
-   "x": -51,
-   "y": 21,
+   "islandId": 10,
+   "depth": 0.905,
+   "x": 25,
+   "y": -46,
    "neighbours": [
     {
-     "id": "rel-119",
-     "name": "The Right Vibe (Radio Edit)",
-     "artist": "Rob Pearson & Robin Ball",
+     "id": "rel-137",
+     "name": "E.F.X (European Fusion X-perience) (Electro Monkey Mix)",
+     "artist": "Missy ZeZe & Presslaboys",
      "score": 0.7692307692307692,
      "reasons": [
       "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-137",
-     "name": "E.F.X (European Fusion X-perience) (Electro Monkey Mix)",
-     "artist": "Missy ZeZe & Presslaboys",
-     "score": 0.7692307692307692,
+     "id": "rel-119",
+     "name": "The Right Vibe (Radio Edit)",
+     "artist": "Rob Pearson & Robin Ball",
+     "score": 0.7058823529411764,
      "reasons": [
       "played on the same show: Special Guests"
      ]
@@ -4248,8 +4288,8 @@ window.SEA_DATA = {
    "year": 2019,
    "country": null,
    "length": 107,
-   "album": null,
-   "label": null,
+   "album": "The Reeling",
+   "label": "River Lea Recordings",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -4279,10 +4319,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Ruidhle Mo Nighean Donn",
    "youtubeCheckedAt": "2026-10-16T18:58:43.744Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
-   "depth": 0.91,
-   "x": -30,
-   "y": -5,
+   "islandId": 2,
+   "depth": 0.912,
+   "x": 5,
+   "y": -23,
    "neighbours": [
     {
      "id": "rel-187",
@@ -4306,7 +4346,7 @@ window.SEA_DATA = {
      "id": "rel-071",
      "name": "Duan",
      "artist": "Brighde Chaimbeul",
-     "score": 0.7673469387755101,
+     "score": 0.7161904761904762,
      "reasons": [
       "shared tags: folk, world, & country",
       "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)",
@@ -4322,8 +4362,8 @@ window.SEA_DATA = {
    "year": 2024,
    "country": null,
    "length": 586,
-   "album": null,
-   "label": null,
+   "album": "Kronblade",
+   "label": "Permanent Draft",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -4355,10 +4395,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Hvid //",
    "youtubeCheckedAt": "2026-10-16T18:58:45.650Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.909,
-   "x": 1,
-   "y": -27,
+   "islandId": 4,
+   "depth": 0.911,
+   "x": -35,
+   "y": -10,
    "neighbours": [
     {
      "id": "rel-122",
@@ -4382,7 +4422,7 @@ window.SEA_DATA = {
      "id": "rel-130",
      "name": "I'll Call You Later",
      "artist": "XTEREA",
-     "score": 0.6296377794351119,
+     "score": 0.5876619274727711,
      "reasons": [
       "shared tags: electronic, abstract",
       "2 years apart (2024 / 2026)"
@@ -4431,7 +4471,7 @@ window.SEA_DATA = {
    "islandId": 0,
    "depth": 0.922,
    "x": -4,
-   "y": -3,
+   "y": -4,
    "neighbours": [
     {
      "id": "rel-164",
@@ -4552,8 +4592,8 @@ window.SEA_DATA = {
    "year": 1985,
    "country": null,
    "length": 179,
-   "album": null,
-   "label": null,
+   "album": "Mysticismes",
+   "label": "Platform 23",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -4587,10 +4627,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Trois Gouttes De Sang",
    "youtubeCheckedAt": "2026-10-16T18:58:54.129Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
-   "depth": 0.902,
-   "x": 66,
-   "y": -14,
+   "islandId": 14,
+   "depth": 0.904,
+   "x": -34,
+   "y": 53,
    "neighbours": [
     {
      "id": "rel-117",
@@ -4613,13 +4653,13 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-072",
-     "name": "Ms. Meteo",
-     "artist": "Mira Calix",
-     "score": 0.4053723855716793,
+     "id": "rel-101",
+     "name": "7",
+     "artist": "Enno Velthuys",
+     "score": 0.39443721835427376,
      "reasons": [
-      "shared tags: electronic, abstract, ambient",
-      "13 years apart (1985 / 1998)"
+      "shared tags: electronic, ambient",
+      "1 year apart (1985 / 1984)"
      ]
     }
    ]
@@ -4630,7 +4670,7 @@ window.SEA_DATA = {
    "artist": "Janice Edwards",
    "year": 1991,
    "country": null,
-   "length": null,
+   "length": 232,
    "album": null,
    "label": null,
    "bpm": null,
@@ -4663,10 +4703,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Janice Edwards - Time For Me",
    "youtubeCheckedAt": "2026-10-16T18:58:56.749Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.9,
-   "x": -21,
-   "y": -38,
+   "x": -8,
+   "y": 43,
    "neighbours": [
     {
      "id": "rel-096",
@@ -4704,8 +4744,8 @@ window.SEA_DATA = {
    "year": 2026,
    "country": null,
    "length": 196,
-   "album": null,
-   "label": null,
+   "album": "Intentions",
+   "label": "International Anthem",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -4736,16 +4776,16 @@ window.SEA_DATA = {
    "youtubeTitle": "Black Gold of the Sun",
    "youtubeCheckedAt": "2026-10-16T18:58:59.629Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
-   "depth": 0.93,
-   "x": 50,
-   "y": 45,
+   "islandId": 33,
+   "depth": 0.932,
+   "x": -82,
+   "y": -61,
    "neighbours": [
     {
      "id": "rel-067",
      "name": "Africa",
      "artist": "Retrocity",
-     "score": 0.7692307692307695,
+     "score": 0.7058823529411766,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
@@ -4754,7 +4794,7 @@ window.SEA_DATA = {
      "id": "rel-097",
      "name": "Don’t Want To Be Alone (Richard Sen Remix)",
      "artist": "Obost",
-     "score": 0.7692307692307695,
+     "score": 0.7058823529411766,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
@@ -4763,7 +4803,7 @@ window.SEA_DATA = {
      "id": "rel-167",
      "name": "Kill Bill",
      "artist": "SZA",
-     "score": 0.5419065533214246,
+     "score": 0.5057794497666629,
      "reasons": [
       "shared tags: funk / soul, contemporary r&b, neo soul",
       "4 years apart (2026 / 2022)"
@@ -4811,10 +4851,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Nolan Strong and The Diablos \"The Wind\" - 1954 Fortune Records",
    "youtubeCheckedAt": "2026-10-16T18:59:02.507Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.94,
-   "x": 25,
-   "y": -49,
+   "x": 36,
+   "y": -21,
    "neighbours": [
     {
      "id": "rel-193",
@@ -4858,8 +4898,8 @@ window.SEA_DATA = {
    "year": 1974,
    "country": null,
    "length": 251,
-   "album": null,
-   "label": null,
+   "album": "The Master",
+   "label": "Stax Records/Fantasy, Inc.",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -4892,10 +4932,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Gengis (Album Version)",
    "youtubeCheckedAt": "2026-10-16T18:59:10.786Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
-   "depth": 0.924,
-   "x": 41,
-   "y": 16,
+   "islandId": 9,
+   "depth": 0.925,
+   "x": -53,
+   "y": 17,
    "neighbours": [
     {
      "id": "rel-232",
@@ -4936,7 +4976,7 @@ window.SEA_DATA = {
    "artist": "Northworks",
    "year": 2010,
    "country": null,
-   "length": null,
+   "length": 356,
    "album": null,
    "label": null,
    "bpm": null,
@@ -5015,8 +5055,8 @@ window.SEA_DATA = {
    "year": 2024,
    "country": null,
    "length": 203,
-   "album": null,
-   "label": null,
+   "album": "Ghosts",
+   "label": "Halo",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -5049,10 +5089,10 @@ window.SEA_DATA = {
    "youtubeTitle": "1994",
    "youtubeCheckedAt": "2026-10-16T18:59:24.869Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
-   "depth": 0.918,
-   "x": -34,
-   "y": -2,
+   "islandId": 2,
+   "depth": 0.919,
+   "x": 1,
+   "y": -20,
    "neighbours": [
     {
      "id": "rel-187",
@@ -5091,8 +5131,8 @@ window.SEA_DATA = {
    "year": 1955,
    "country": null,
    "length": 189,
-   "album": null,
-   "label": null,
+   "album": "100 Relaxing Pieces for Focused Study",
+   "label": "Basilica Music",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -5124,7 +5164,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T18:59:33.070Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
-   "depth": 0.96,
+   "depth": 0.961,
    "x": 13,
    "y": 25,
    "neighbours": [
@@ -5152,7 +5192,7 @@ window.SEA_DATA = {
      "id": "rel-158",
      "name": "Piano Concerto No. 1 In D Minor, Op. 15",
      "artist": "Brahms, Curzon, London Symphony, Szell",
-     "score": 0.49622920698573436,
+     "score": 0.4631472598533521,
      "reasons": [
       "shared tags: classical, romantic, piano",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
@@ -5168,8 +5208,8 @@ window.SEA_DATA = {
    "year": 1987,
    "country": null,
    "length": 335,
-   "album": null,
-   "label": null,
+   "album": "Children of God",
+   "label": "Young God Records under exclusive license to Mute Artists Ltd.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -5203,10 +5243,10 @@ window.SEA_DATA = {
    "youtubeTitle": "In My Garden",
    "youtubeCheckedAt": "2026-10-16T18:59:36.011Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 28,
-   "depth": 0.899,
-   "x": -33,
-   "y": -84,
+   "islandId": 23,
+   "depth": 0.9,
+   "x": 17,
+   "y": -78,
    "neighbours": [
     {
      "id": "rel-117",
@@ -5218,16 +5258,6 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-093",
-     "name": "Walkabout",
-     "artist": "Throbbing Gristle",
-     "score": 0.5786864049833815,
-     "reasons": [
-      "shared tags: electronic, industrial, experimental",
-      "5 years apart (1987 / 1982)"
-     ]
-    },
-    {
      "id": "rel-212",
      "name": "Interrupt Beyond Therapy",
      "artist": "Synapse",
@@ -5235,6 +5265,16 @@ window.SEA_DATA = {
      "reasons": [
       "shared tags: electronic, ambient, industrial",
       "7 years apart (1987 / 1994)"
+     ]
+    },
+    {
+     "id": "rel-093",
+     "name": "Walkabout",
+     "artist": "Throbbing Gristle",
+     "score": 0.5401073113178227,
+     "reasons": [
+      "shared tags: electronic, industrial, experimental",
+      "5 years apart (1987 / 1982)"
      ]
     }
    ]
@@ -5246,8 +5286,8 @@ window.SEA_DATA = {
    "year": 1939,
    "country": null,
    "length": 176,
-   "album": null,
-   "label": null,
+   "album": "The Anthology",
+   "label": "Geffen Records",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -5277,22 +5317,11 @@ window.SEA_DATA = {
    "youtubeTitle": "It's Funny To Everyone But Me",
    "youtubeCheckedAt": "2026-10-16T18:59:44.073Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 34,
+   "islandId": 43,
    "depth": 0.971,
-   "x": 103,
-   "y": -8,
+   "x": -99,
+   "y": 51,
    "neighbours": [
-    {
-     "id": "rel-068",
-     "name": "Three Little Words",
-     "artist": "The Spaniels",
-     "score": 0.39514603018124167,
-     "reasons": [
-      "shared tags: pop, vocal",
-      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special",
-      "47 years apart (1939 / 1986)"
-     ]
-    },
     {
      "id": "rel-111",
      "name": "I'm Wishin'",
@@ -5301,6 +5330,17 @@ window.SEA_DATA = {
      "reasons": [
       "shared tags: jazz, vocal",
       "29 years apart (1939 / 1968)"
+     ]
+    },
+    {
+     "id": "rel-068",
+     "name": "Three Little Words",
+     "artist": "The Spaniels",
+     "score": 0.36880296150249225,
+     "reasons": [
+      "shared tags: pop, vocal",
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special",
+      "47 years apart (1939 / 1986)"
      ]
     },
     {
@@ -5322,8 +5362,8 @@ window.SEA_DATA = {
    "year": 2011,
    "country": null,
    "length": 225,
-   "album": null,
-   "label": null,
+   "album": "Spiritual-Mental-Physical",
+   "label": "Drag City Inc.",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -5357,10 +5397,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Change",
    "youtubeCheckedAt": "2026-10-16T18:59:52.698Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 19,
-   "depth": 0.904,
-   "x": -3,
-   "y": 79,
+   "islandId": 18,
+   "depth": 0.906,
+   "x": 53,
+   "y": -49,
    "neighbours": [
     {
      "id": "rel-069",
@@ -5387,7 +5427,7 @@ window.SEA_DATA = {
      "id": "rel-001",
      "name": "God's Chest",
      "artist": "Uranium Club",
-     "score": 0.3296351055801091,
+     "score": 0.30248868512057075,
      "reasons": [
       "shared tags: rock, punk"
      ]
@@ -5401,8 +5441,8 @@ window.SEA_DATA = {
    "year": 2002,
    "country": null,
    "length": 254,
-   "album": null,
-   "label": null,
+   "album": "Episode One",
+   "label": "Elektrolux",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -5435,10 +5475,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Beautiful Witness",
    "youtubeCheckedAt": "2026-10-16T18:59:55.638Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 14,
-   "depth": 0.887,
-   "x": -40,
-   "y": 50,
+   "islandId": 29,
+   "depth": 0.889,
+   "x": 85,
+   "y": 44,
    "neighbours": [
     {
      "id": "rel-254",
@@ -5464,10 +5504,11 @@ window.SEA_DATA = {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.5069298329123718,
+     "score": 0.5398011773848803,
      "reasons": [
       "shared tags: electronic, ambient, downtempo",
       "played on the same show: Special Guests",
+      "same label: Elektrolux",
       "2 years apart (2002 / 2000)"
      ]
     }
@@ -5479,7 +5520,7 @@ window.SEA_DATA = {
    "artist": "Молчат Дома, Molchat Doma",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 248,
    "album": null,
    "label": null,
    "bpm": null,
@@ -5510,10 +5551,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Молчат дома -  На Дне Official Lyrics Video ENG subtitles (Molchat Doma - Na Dne)",
    "youtubeCheckedAt": "2026-10-16T18:59:58.445Z",
    "sourceUrl": "https://www.nts.live/shows/shamos/episodes/shamos-13th-october-2026",
-   "islandId": 6,
+   "islandId": 8,
    "depth": 0.942,
-   "x": -9,
-   "y": 40,
+   "x": 46,
+   "y": 16,
    "neighbours": [
     {
      "id": "rel-001",
@@ -5589,7 +5630,7 @@ window.SEA_DATA = {
    "islandId": 0,
    "depth": 0.916,
    "x": -1,
-   "y": -7,
+   "y": -6,
    "neighbours": [
     {
      "id": "rel-187",
@@ -5662,10 +5703,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Carme López - Epilogue: Inflorescencia [Audio]",
    "youtubeCheckedAt": "2026-10-16T19:00:06.834Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
+   "islandId": 4,
    "depth": 0.915,
-   "x": 3,
-   "y": -28,
+   "x": -33,
+   "y": -10,
    "neighbours": [
     {
      "id": "rel-122",
@@ -5704,7 +5745,7 @@ window.SEA_DATA = {
    "artist": "Beethoven Piano Trio No 7 Archduke",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 708,
    "album": null,
    "label": null,
    "bpm": null,
@@ -5774,7 +5815,7 @@ window.SEA_DATA = {
    "artist": "Eddie Miller And His Band",
    "year": 1960,
    "country": null,
-   "length": null,
+   "length": 200,
    "album": null,
    "label": null,
    "bpm": null,
@@ -5885,10 +5926,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Bluesette - Mood For Love",
    "youtubeCheckedAt": "2026-10-16T19:00:17.531Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.911,
-   "x": -24,
-   "y": -43,
+   "x": -13,
+   "y": 39,
    "neighbours": [
     {
      "id": "rel-096",
@@ -5926,8 +5967,8 @@ window.SEA_DATA = {
    "year": null,
    "country": null,
    "length": 281,
-   "album": null,
-   "label": null,
+   "album": "Totally a Cappella: 1980s",
+   "label": "Somerset Group, Ltd.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -5955,20 +5996,11 @@ window.SEA_DATA = {
    "youtubeTitle": "Africa",
    "youtubeCheckedAt": "2026-10-16T19:00:20.473Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
-   "depth": 0.939,
-   "x": 52,
-   "y": 43,
+   "islandId": 13,
+   "depth": 0.94,
+   "x": 61,
+   "y": -15,
    "neighbours": [
-    {
-     "id": "rel-051",
-     "name": "Black Gold of the Sun",
-     "artist": "megiapa",
-     "score": 0.7692307692307695,
-     "reasons": [
-      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
-     ]
-    },
     {
      "id": "rel-075",
      "name": "Sweatmajor",
@@ -5979,9 +6011,18 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-087",
-     "name": "How Do U See Me Now",
-     "artist": "Zdar",
+     "id": "rel-135",
+     "name": "Barefoot In The Head (Radio Edit)",
+     "artist": "A Man Called Adam",
+     "score": 0.7692307692307695,
+     "reasons": [
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
+     ]
+    },
+    {
+     "id": "rel-160",
+     "name": "Tribute To Jazzy Jay",
+     "artist": "Bronx Dogs",
      "score": 0.7692307692307695,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
@@ -5996,8 +6037,8 @@ window.SEA_DATA = {
    "year": 1986,
    "country": null,
    "length": 266,
-   "album": null,
-   "label": null,
+   "album": "Greatest Hits",
+   "label": "Classic Music International",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -6029,10 +6070,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Three Little Words",
    "youtubeCheckedAt": "2026-10-16T19:00:23.360Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 34,
-   "depth": 0.91,
-   "x": 97,
-   "y": -9,
+   "islandId": 5,
+   "depth": 0.912,
+   "x": 36,
+   "y": -26,
    "neighbours": [
     {
      "id": "rel-204",
@@ -6108,10 +6149,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Death - Keep on Knocking (1976)",
    "youtubeCheckedAt": "2026-10-16T19:00:28.915Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 19,
+   "islandId": 18,
    "depth": 0.902,
-   "x": -1,
-   "y": 76,
+   "x": 56,
+   "y": -52,
    "neighbours": [
     {
      "id": "rel-059",
@@ -6152,8 +6193,8 @@ window.SEA_DATA = {
    "year": 2000,
    "country": null,
    "length": 211,
-   "album": null,
-   "label": null,
+   "album": "Lakeside",
+   "label": "Elektrolux",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -6186,10 +6227,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Lost Inside",
    "youtubeCheckedAt": "2026-10-16T19:00:31.613Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 5,
-   "depth": 0.865,
-   "x": 32,
-   "y": -17,
+   "islandId": 7,
+   "depth": 0.867,
+   "x": -22,
+   "y": -37,
    "neighbours": [
     {
      "id": "rel-154",
@@ -6215,7 +6256,7 @@ window.SEA_DATA = {
      "id": "rel-091",
      "name": "Rocket No. 2",
      "artist": "A Rocket In Dub",
-     "score": 0.6489962934082748,
+     "score": 0.6057298738477231,
      "reasons": [
       "shared tags: electronic, deep house, downtempo",
       "played on the same show: Special Guests",
@@ -6231,8 +6272,8 @@ window.SEA_DATA = {
    "year": 2025,
    "country": null,
    "length": 236,
-   "album": null,
-   "label": null,
+   "album": "Sunwise",
+   "label": "tak:til",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -6262,10 +6303,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Duan",
    "youtubeCheckedAt": "2026-10-16T19:00:36.732Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
-   "depth": 0.92,
-   "x": -36,
-   "y": -5,
+   "islandId": 2,
+   "depth": 0.922,
+   "x": -1,
+   "y": -23,
    "neighbours": [
     {
      "id": "rel-187",
@@ -6289,7 +6330,7 @@ window.SEA_DATA = {
      "id": "rel-045",
      "name": "Ruidhle Mo Nighean Donn",
      "artist": "Brìghde Chaimbeul",
-     "score": 0.7673469387755101,
+     "score": 0.7161904761904762,
      "reasons": [
       "shared tags: folk, world, & country",
       "played on the same show: 5 GATE TEMPLE w/ Devon Rexi (R)",
@@ -6305,8 +6346,8 @@ window.SEA_DATA = {
    "year": 1998,
    "country": null,
    "length": 545,
-   "album": null,
-   "label": null,
+   "album": "Pin Skeeling",
+   "label": "Warp Records",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -6339,10 +6380,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Ms. Meteo",
    "youtubeCheckedAt": "2026-10-16T19:00:39.583Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.887,
-   "x": 6,
-   "y": -24,
+   "islandId": 4,
+   "depth": 0.889,
+   "x": -30,
+   "y": -7,
    "neighbours": [
     {
      "id": "rel-122",
@@ -6366,7 +6407,7 @@ window.SEA_DATA = {
      "id": "rel-141",
      "name": "Arpeggio Drum Challenge",
      "artist": "Tomaga",
-     "score": 0.6530612244897958,
+     "score": 0.6095238095238094,
      "reasons": [
       "shared tags: electronic, abstract, ambient, experimental",
       "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
@@ -6382,8 +6423,8 @@ window.SEA_DATA = {
    "year": 2015,
    "country": null,
    "length": 256,
-   "album": null,
-   "label": null,
+   "album": "Gratitud",
+   "label": "Los Espiritus",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -6417,8 +6458,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:00:48.221Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 30,
-   "depth": 0.913,
-   "x": -88,
+   "depth": 0.915,
+   "x": -89,
    "y": 24,
    "neighbours": [
     {
@@ -6434,7 +6475,7 @@ window.SEA_DATA = {
      "id": "rel-011",
      "name": "Sustained Threat (Full Version)",
      "artist": "Scottibrains",
-     "score": 0.5533196804712556,
+     "score": 0.5164317017731719,
      "reasons": [
       "shared tags: rock, krautrock",
       "both shows tagged: Post Punk",
@@ -6460,7 +6501,7 @@ window.SEA_DATA = {
    "artist": "Fukutomi Yukihiro",
    "year": 1995,
    "country": null,
-   "length": null,
+   "length": 375,
    "album": null,
    "label": null,
    "bpm": null,
@@ -6495,10 +6536,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Fukutomi Yukihiro - 50 ways",
    "youtubeCheckedAt": "2026-10-16T19:00:50.799Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.902,
-   "x": -25,
-   "y": -40,
+   "x": -14,
+   "y": 41,
    "neighbours": [
     {
      "id": "rel-096",
@@ -6570,10 +6611,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Cheeseslider - Sweatmajor",
    "youtubeCheckedAt": "2026-10-16T19:00:53.518Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
+   "islandId": 13,
    "depth": 0.911,
-   "x": 57,
-   "y": 44,
+   "x": 64,
+   "y": -12,
    "neighbours": [
     {
      "id": "rel-067",
@@ -6645,10 +6686,10 @@ window.SEA_DATA = {
    "youtubeTitle": "1948 HITS ARCHIVE: It’s Too Soon To Know - Orioles (#1 R&B hit)",
    "youtubeCheckedAt": "2026-10-16T19:00:56.643Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.93,
-   "x": 25,
-   "y": -47,
+   "x": 36,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-136",
@@ -6691,7 +6732,7 @@ window.SEA_DATA = {
    "artist": "Sasho Uzun",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 381,
    "album": null,
    "label": null,
    "bpm": null,
@@ -6724,10 +6765,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Sasho Uzun - Da Rhythm [PRK040]",
    "youtubeCheckedAt": "2026-10-16T19:00:59.138Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
+   "islandId": 10,
    "depth": 0.931,
-   "x": -49,
-   "y": 15,
+   "x": 23,
+   "y": -52,
    "neighbours": [
     {
      "id": "rel-119",
@@ -6803,7 +6844,7 @@ window.SEA_DATA = {
    "islandId": 11,
    "depth": 0.949,
    "x": 21,
-   "y": 52,
+   "y": 51,
    "neighbours": [
     {
      "id": "rel-232",
@@ -6877,10 +6918,10 @@ window.SEA_DATA = {
    "youtubeTitle": "2000 And One - Sunk Ice (A1)",
    "youtubeCheckedAt": "2026-10-16T19:01:05.309Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 24,
+   "islandId": 25,
    "depth": 0.899,
-   "x": 46,
-   "y": 75,
+   "x": -79,
+   "y": -26,
    "neighbours": [
     {
      "id": "rel-154",
@@ -6955,10 +6996,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Nagamatzu - Faith (1983)",
    "youtubeCheckedAt": "2026-10-16T19:01:08.083Z",
    "sourceUrl": "https://www.nts.live/shows/snz/episodes/snz-2nd-march-2017",
-   "islandId": 29,
+   "islandId": 28,
    "depth": 0.929,
-   "x": 85,
-   "y": 44,
+   "x": -28,
+   "y": -86,
    "neighbours": [
     {
      "id": "rel-086",
@@ -7032,10 +7073,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rider Shafique - When Will We Learn (Produced By O$VMV$M)",
    "youtubeCheckedAt": "2026-10-16T19:01:11.060Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.926,
-   "x": -31,
-   "y": -3,
+   "x": 5,
+   "y": -21,
    "neighbours": [
     {
      "id": "rel-187",
@@ -7075,8 +7116,8 @@ window.SEA_DATA = {
    "year": 2018,
    "country": null,
    "length": 348,
-   "album": null,
-   "label": null,
+   "album": "Beside Herself",
+   "label": "RVNG Intl.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -7110,10 +7151,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Time Piece",
    "youtubeCheckedAt": "2026-10-16T19:01:13.980Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.911,
-   "x": 2,
-   "y": -19,
+   "islandId": 4,
+   "depth": 0.912,
+   "x": -33,
+   "y": -2,
    "neighbours": [
     {
      "id": "rel-122",
@@ -7134,14 +7175,14 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-131",
-     "name": "Cuttleburrs",
-     "artist": "Andrea Taeggi",
-     "score": 0.44270926083824813,
+     "id": "rel-188",
+     "name": "UK74R1517130",
+     "artist": "Aleksi Perälä",
+     "score": 0.4157555888440519,
      "reasons": [
-      "shared tags: electronic, leftfield",
+      "shared tags: electronic, minimal",
       "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
-      "2 years apart (2018 / 2020)"
+      "3 years apart (2018 / 2015)"
      ]
     }
    ]
@@ -7341,10 +7382,10 @@ window.SEA_DATA = {
    "youtubeTitle": "inrain - Grow",
    "youtubeCheckedAt": "2026-10-16T19:01:23.245Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 14,
+   "islandId": 44,
    "depth": 0.912,
-   "x": -34,
-   "y": 57,
+   "x": 43,
+   "y": -108,
    "neighbours": [
     {
      "id": "rel-117",
@@ -7420,10 +7461,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rah Band - Sam the samba man (1983)",
    "youtubeCheckedAt": "2026-10-16T19:01:26.217Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 23,
+   "islandId": 22,
    "depth": 0.9,
-   "x": 17,
-   "y": -77,
+   "x": -68,
+   "y": 49,
    "neighbours": [
     {
      "id": "rel-096",
@@ -7461,8 +7502,8 @@ window.SEA_DATA = {
    "year": 2005,
    "country": null,
    "length": 259,
-   "album": null,
-   "label": null,
+   "album": "Don't U Want",
+   "label": "Turbo Recordings Inc.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -7494,16 +7535,16 @@ window.SEA_DATA = {
    "youtubeTitle": "How Do You See Me Now (Original Mix)",
    "youtubeCheckedAt": "2026-10-16T19:01:29.172Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 9,
-   "depth": 0.895,
-   "x": -45,
-   "y": 23,
+   "islandId": 34,
+   "depth": 0.897,
+   "x": 97,
+   "y": -9,
    "neighbours": [
     {
      "id": "rel-067",
      "name": "Africa",
      "artist": "Retrocity",
-     "score": 0.7692307692307695,
+     "score": 0.7058823529411766,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
@@ -7512,7 +7553,7 @@ window.SEA_DATA = {
      "id": "rel-097",
      "name": "Don’t Want To Be Alone (Richard Sen Remix)",
      "artist": "Obost",
-     "score": 0.7692307692307695,
+     "score": 0.7058823529411766,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
@@ -7568,10 +7609,10 @@ window.SEA_DATA = {
    "youtubeTitle": "1962 HITS ARCHIVE: I Wish That We Were Married - Ronnie & The Hi-Lites",
    "youtubeCheckedAt": "2026-10-16T19:01:32.033Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.941,
-   "x": 25,
-   "y": -54,
+   "x": 33,
+   "y": -27,
    "neighbours": [
     {
      "id": "rel-109",
@@ -7647,10 +7688,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Traumprinz - Im Rausch Der Tiefe [APW-5]",
    "youtubeCheckedAt": "2026-10-16T19:01:34.866Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 33,
+   "islandId": 10,
    "depth": 0.888,
-   "x": -81,
-   "y": -61,
+   "x": 21,
+   "y": -52,
    "neighbours": [
     {
      "id": "rel-119",
@@ -7769,8 +7810,8 @@ window.SEA_DATA = {
    "year": 2001,
    "country": null,
    "length": 507,
-   "album": null,
-   "label": null,
+   "album": "If Music Could Talk",
+   "label": "ITALIC recordings",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -7803,10 +7844,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rocket No. 2",
    "youtubeCheckedAt": "2026-10-16T19:01:41.346Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 5,
-   "depth": 0.876,
-   "x": 28,
-   "y": -22,
+   "islandId": 7,
+   "depth": 0.878,
+   "x": -26,
+   "y": -42,
    "neighbours": [
     {
      "id": "rel-154",
@@ -7821,7 +7862,7 @@ window.SEA_DATA = {
      "id": "rel-070",
      "name": "Lost Inside",
      "artist": "Estelle Montenegro",
-     "score": 0.6489962934082748,
+     "score": 0.6057298738477231,
      "reasons": [
       "shared tags: electronic, deep house, downtempo",
       "played on the same show: Special Guests",
@@ -7847,7 +7888,7 @@ window.SEA_DATA = {
    "artist": "Alvin Curran",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 2996,
    "album": null,
    "label": null,
    "bpm": null,
@@ -7926,8 +7967,8 @@ window.SEA_DATA = {
    "year": 1982,
    "country": null,
    "length": 180,
-   "album": null,
-   "label": null,
+   "album": "20 Jazz Funk Greats",
+   "label": "under exclusive license to Mute Artists Ltd.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -7960,10 +8001,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Walkabout",
    "youtubeCheckedAt": "2026-10-16T19:01:49.506Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 28,
-   "depth": 0.917,
-   "x": -28,
-   "y": -86,
+   "islandId": 23,
+   "depth": 0.919,
+   "x": 22,
+   "y": -80,
    "neighbours": [
     {
      "id": "rel-122",
@@ -7987,7 +8028,7 @@ window.SEA_DATA = {
      "id": "rel-057",
      "name": "In My Garden",
      "artist": "Swans",
-     "score": 0.5786864049833815,
+     "score": 0.5401073113178227,
      "reasons": [
       "shared tags: electronic, experimental, industrial",
       "5 years apart (1982 / 1987)"
@@ -8002,8 +8043,8 @@ window.SEA_DATA = {
    "year": 1974,
    "country": null,
    "length": 69,
-   "album": null,
-   "label": null,
+   "album": "Radu Lupu plays Schubert",
+   "label": "Decca Music Group Limited",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -8037,7 +8078,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:01:57.710Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
-   "depth": 0.942,
+   "depth": 0.943,
    "x": 19,
    "y": 19,
    "neighbours": [
@@ -8065,7 +8106,7 @@ window.SEA_DATA = {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.47259332989703423,
+     "score": 0.4410871079038986,
      "reasons": [
       "shared tags: classical, romantic, piano",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
@@ -8081,8 +8122,8 @@ window.SEA_DATA = {
    "year": null,
    "country": null,
    "length": 321,
-   "album": null,
-   "label": null,
+   "album": "Your Secret",
+   "label": "Stroom",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -8117,8 +8158,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:02:00.546Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 15,
-   "depth": 0.934,
-   "x": -5,
+   "depth": 0.936,
+   "x": -6,
    "y": -71,
    "neighbours": [
     {
@@ -8141,12 +8182,13 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-157",
-     "name": "in motion",
-     "artist": "Ann Annie",
-     "score": 0.4209254292923898,
+     "id": "rel-250",
+     "name": "[Life] After Dark",
+     "artist": "The Flowers",
+     "score": 0.3870664413252663,
      "reasons": [
-      "shared tags: electronic, folk, world, & country, ambient"
+      "shared tags: new wave",
+      "played on the same show: The NTS Breakfast Show w/ GABI"
      ]
     }
    ]
@@ -8157,7 +8199,7 @@ window.SEA_DATA = {
    "artist": "Mayumi Kojima",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 315,
    "album": null,
    "label": null,
    "bpm": null,
@@ -8188,10 +8230,10 @@ window.SEA_DATA = {
    "youtubeTitle": "小島麻由美 Mayumi Kojima - 愛のミラージュ Ai no Mirāju (Mirage of Love) (~1995-1999)",
    "youtubeCheckedAt": "2026-10-16T19:02:03.486Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.917,
-   "x": -23,
-   "y": -42,
+   "x": -11,
+   "y": 40,
    "neighbours": [
     {
      "id": "rel-050",
@@ -8228,9 +8270,9 @@ window.SEA_DATA = {
    "artist": "Obost",
    "year": null,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 391,
+   "album": "Don't Want to be Alone",
+   "label": "Bobby Langfield Music",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -8258,33 +8300,33 @@ window.SEA_DATA = {
    "youtubeTitle": "Don't Want to be Alone (Richard Sen Remix)",
    "youtubeCheckedAt": "2026-10-16T19:02:06.269Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
-   "depth": 0.939,
-   "x": 54,
-   "y": 43,
+   "islandId": 13,
+   "depth": 0.94,
+   "x": 63,
+   "y": -14,
    "neighbours": [
-    {
-     "id": "rel-051",
-     "name": "Black Gold of the Sun",
-     "artist": "megiapa",
-     "score": 0.7692307692307695,
-     "reasons": [
-      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
-     ]
-    },
-    {
-     "id": "rel-067",
-     "name": "Africa",
-     "artist": "Retrocity",
-     "score": 0.7692307692307695,
-     "reasons": [
-      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
-     ]
-    },
     {
      "id": "rel-075",
      "name": "Sweatmajor",
      "artist": "Cheeseslider",
+     "score": 0.7692307692307695,
+     "reasons": [
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
+     ]
+    },
+    {
+     "id": "rel-135",
+     "name": "Barefoot In The Head (Radio Edit)",
+     "artist": "A Man Called Adam",
+     "score": 0.7692307692307695,
+     "reasons": [
+      "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
+     ]
+    },
+    {
+     "id": "rel-160",
+     "name": "Tribute To Jazzy Jay",
+     "artist": "Bronx Dogs",
      "score": 0.7692307692307695,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
@@ -8299,8 +8341,8 @@ window.SEA_DATA = {
    "year": 1963,
    "country": null,
    "length": 177,
-   "album": null,
-   "label": null,
+   "album": "Dark Side Of The Moon",
+   "label": "Numero Group",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -8330,7 +8372,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:02:09.617Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
    "islandId": 27,
-   "depth": 0.947,
+   "depth": 0.948,
    "x": -36,
    "y": 86,
    "neighbours": [
@@ -8355,13 +8397,14 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-045",
-     "name": "Ruidhle Mo Nighean Donn",
-     "artist": "Brìghde Chaimbeul",
-     "score": 0.2730176507293002,
+     "id": "rel-145",
+     "name": "Laughing On The Outside",
+     "artist": "Bernadette Carroll",
+     "score": 0.30666666666666664,
      "reasons": [
-      "shared tags: folk, world, & country",
-      "56 years apart (1963 / 2019)"
+      "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special",
+      "same label: Numero Group",
+      "1 year apart (1963 / 1962)"
      ]
     }
    ]
@@ -8409,7 +8452,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
    "islandId": 11,
    "depth": 0.916,
-   "x": 19,
+   "x": 18,
    "y": 59,
    "neighbours": [
     {
@@ -8451,7 +8494,7 @@ window.SEA_DATA = {
    "artist": "Rhythm Maker",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 394,
    "album": null,
    "label": null,
    "bpm": null,
@@ -8485,10 +8528,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rhythm Maker - Herzog - Background records 013a - 33 rpm / from 'Futuristic Experiments chapter III'",
    "youtubeCheckedAt": "2026-10-16T19:02:17.795Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 17,
+   "islandId": 16,
    "depth": 0.944,
-   "x": -69,
-   "y": 0,
+   "x": 55,
+   "y": 41,
    "neighbours": [
     {
      "id": "rel-154",
@@ -8526,7 +8569,7 @@ window.SEA_DATA = {
    "artist": "Enno Velthuys",
    "year": 1984,
    "country": null,
-   "length": null,
+   "length": 134,
    "album": null,
    "label": null,
    "bpm": null,
@@ -8637,10 +8680,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Clipse - Mr. Me Too (Instrumental) Prod. Pharrell Williams",
    "youtubeCheckedAt": "2026-10-16T19:02:23.286Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 18,
+   "islandId": 17,
    "depth": 0.914,
-   "x": 53,
-   "y": -49,
+   "x": -70,
+   "y": 6,
    "neighbours": [
     {
      "id": "rel-187",
@@ -8680,8 +8723,8 @@ window.SEA_DATA = {
    "year": 2019,
    "country": null,
    "length": 177,
-   "album": null,
-   "label": null,
+   "album": "Anthology of Interplanetary Folk Music Vol. 2: The Canon",
+   "label": "RVNG Intl.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -8714,10 +8757,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Earliest Trace",
    "youtubeCheckedAt": "2026-10-16T19:02:25.982Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.913,
-   "x": -1,
-   "y": -21,
+   "islandId": 4,
+   "depth": 0.914,
+   "x": -37,
+   "y": -4,
    "neighbours": [
     {
      "id": "rel-122",
@@ -9021,10 +9064,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Chris Gray - For Being (You Version)",
    "youtubeCheckedAt": "2026-10-16T19:02:36.566Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.888,
-   "x": 30,
-   "y": -23,
+   "x": -25,
+   "y": -43,
    "neighbours": [
     {
      "id": "rel-144",
@@ -9064,8 +9107,8 @@ window.SEA_DATA = {
    "year": 2024,
    "country": null,
    "length": 487,
-   "album": null,
-   "label": null,
+   "album": "Alliance Remixed",
+   "label": "Bytes",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -9097,16 +9140,16 @@ window.SEA_DATA = {
    "youtubeTitle": "The Witching Hour (Richard Sen Remix)",
    "youtubeCheckedAt": "2026-10-16T19:02:39.372Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
-   "depth": 0.911,
-   "x": 56,
-   "y": 46,
+   "islandId": 13,
+   "depth": 0.913,
+   "x": 59,
+   "y": -11,
    "neighbours": [
     {
      "id": "rel-067",
      "name": "Africa",
      "artist": "Retrocity",
-     "score": 0.7692307692307695,
+     "score": 0.7058823529411766,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
@@ -9115,7 +9158,7 @@ window.SEA_DATA = {
      "id": "rel-097",
      "name": "Don’t Want To Be Alone (Richard Sen Remix)",
      "artist": "Obost",
-     "score": 0.7692307692307695,
+     "score": 0.7058823529411766,
      "reasons": [
       "played on the same show: Low Life Loves You w/ Bill Brewster & Richard Sen"
      ]
@@ -9171,10 +9214,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Tears on my pillow 1958 (lyrics+subt.español) / Little Anthony & The Imperials",
    "youtubeCheckedAt": "2026-10-16T19:02:42.228Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.928,
-   "x": 21,
-   "y": -49,
+   "x": 31,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-185",
@@ -9216,7 +9259,7 @@ window.SEA_DATA = {
    "artist": "Rob Pearson, Robin Ball",
    "year": 2008,
    "country": null,
-   "length": null,
+   "length": 489,
    "album": null,
    "label": null,
    "bpm": null,
@@ -9248,10 +9291,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rob Pearson & Robin Ball - The Right Vibes (Evasive Records)",
    "youtubeCheckedAt": "2026-10-16T19:02:44.938Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
+   "islandId": 10,
    "depth": 0.887,
-   "x": -49,
-   "y": 22,
+   "x": 26,
+   "y": -48,
    "neighbours": [
     {
      "id": "rel-119",
@@ -9324,10 +9367,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Lorez Alexandria - I'm Wishin'",
    "youtubeCheckedAt": "2026-10-16T19:02:47.889Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.927,
-   "x": 48,
-   "y": 21,
+   "x": -46,
+   "y": 22,
    "neighbours": [
     {
      "id": "rel-232",
@@ -9369,7 +9412,7 @@ window.SEA_DATA = {
    "artist": "Ilk",
    "year": 2003,
    "country": null,
-   "length": null,
+   "length": 371,
    "album": null,
    "label": null,
    "bpm": null,
@@ -9404,10 +9447,10 @@ window.SEA_DATA = {
    "youtubeTitle": "ILK - Qwerks",
    "youtubeCheckedAt": "2026-10-16T19:02:50.597Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 9,
+   "islandId": 24,
    "depth": 0.894,
-   "x": -43,
-   "y": 19,
+   "x": 45,
+   "y": 74,
    "neighbours": [
     {
      "id": "rel-154",
@@ -9483,10 +9526,10 @@ window.SEA_DATA = {
    "youtubeTitle": "DMX - Prayer III",
    "youtubeCheckedAt": "2026-10-16T19:02:56.566Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 18,
+   "islandId": 17,
    "depth": 0.921,
-   "x": 56,
-   "y": -52,
+   "x": -67,
+   "y": 3,
    "neighbours": [
     {
      "id": "rel-187",
@@ -9526,8 +9569,8 @@ window.SEA_DATA = {
    "year": 2023,
    "country": null,
    "length": 237,
-   "album": null,
-   "label": null,
+   "album": "kisses (Daniel Avery Remix) b/w kisses - sky ii",
+   "label": "Dead Oceans",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -9561,10 +9604,10 @@ window.SEA_DATA = {
    "youtubeTitle": "kisses (sky ii)",
    "youtubeCheckedAt": "2026-10-16T19:02:59.356Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.918,
-   "x": -1,
-   "y": -27,
+   "islandId": 45,
+   "depth": 0.92,
+   "x": 45,
+   "y": 107,
    "neighbours": [
     {
      "id": "rel-122",
@@ -9603,8 +9646,8 @@ window.SEA_DATA = {
    "year": 2025,
    "country": null,
    "length": 127,
-   "album": null,
-   "label": null,
+   "album": "Lucid Dreams",
+   "label": "First Terrace Records",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -9636,7 +9679,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:03:02.280Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
    "islandId": 0,
-   "depth": 0.91,
+   "depth": 0.912,
    "x": -2,
    "y": -5,
    "neighbours": [
@@ -9679,8 +9722,8 @@ window.SEA_DATA = {
    "year": 1929,
    "country": null,
    "length": 2302,
-   "album": null,
-   "label": null,
+   "album": "Beethoven: Symphonies Nos. 5 & 7",
+   "label": "Sony Music Entertainment",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -9714,7 +9757,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
    "depth": 0.983,
-   "x": 24,
+   "x": 23,
    "y": 24,
    "neighbours": [
     {
@@ -9727,17 +9770,6 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-158",
-     "name": "Piano Concerto No. 1 In D Minor, Op. 15",
-     "artist": "Brahms, Curzon, London Symphony, Szell",
-     "score": 0.3907265963854882,
-     "reasons": [
-      "shared tags: classical, romantic",
-      "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
-      "4 years apart (1929 / 1933)"
-     ]
-    },
-    {
      "id": "rel-105",
      "name": "Der Rosenkavalier",
      "artist": "Karajan, Wiener Philharmoniker, Mozart, Beethoven, Schubert, Brahms, R. Strauss",
@@ -9746,6 +9778,17 @@ window.SEA_DATA = {
       "shared tags: classical, romantic",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
       "5 years apart (1929 / 1934)"
+     ]
+    },
+    {
+     "id": "rel-158",
+     "name": "Piano Concerto No. 1 In D Minor, Op. 15",
+     "artist": "Brahms, Curzon, London Symphony, Szell",
+     "score": 0.3646781566264557,
+     "reasons": [
+      "shared tags: classical, romantic",
+      "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
+      "4 years apart (1929 / 1933)"
      ]
     }
    ]
@@ -9756,7 +9799,7 @@ window.SEA_DATA = {
    "artist": "Rinascita",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 234,
    "album": null,
    "label": null,
    "bpm": null,
@@ -9787,10 +9830,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Enigma Eden - Rinascita",
    "youtubeCheckedAt": "2026-10-16T19:03:07.909Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.914,
-   "x": 62,
-   "y": -15,
+   "x": -37,
+   "y": 52,
    "neighbours": [
     {
      "id": "rel-049",
@@ -9827,7 +9870,7 @@ window.SEA_DATA = {
    "artist": "All Access",
    "year": 1989,
    "country": null,
-   "length": null,
+   "length": 291,
    "album": null,
    "label": null,
    "bpm": null,
@@ -9861,10 +9904,10 @@ window.SEA_DATA = {
    "youtubeTitle": "All Access - Tell Me What You Want",
    "youtubeCheckedAt": "2026-10-16T19:03:10.577Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.91,
-   "x": -18,
-   "y": -40,
+   "x": -7,
+   "y": 42,
    "neighbours": [
     {
      "id": "rel-096",
@@ -9901,9 +9944,9 @@ window.SEA_DATA = {
    "artist": "Rob Pearson & Robin Ball",
    "year": null,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 105,
+   "album": "Don't Put Up Wit Dat / The Right Vibes",
+   "label": "Evasive Records",
    "bpm": null,
    "station": "lotradio",
    "stations": [
@@ -9930,10 +9973,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Right Vibe (Radio Edit)",
    "youtubeCheckedAt": "2026-10-16T19:03:21.734Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
-   "depth": 0.917,
-   "x": -49,
-   "y": 18,
+   "islandId": 10,
+   "depth": 0.918,
+   "x": 23,
+   "y": -51,
    "neighbours": [
     {
      "id": "rel-040",
@@ -9945,18 +9988,18 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-042",
-     "name": "Indian (Revamp)",
-     "artist": "Point G",
+     "id": "rel-077",
+     "name": "Da Rhythm",
+     "artist": "Sasho Uzun",
      "score": 0.7692307692307692,
      "reasons": [
       "played on the same show: Special Guests"
      ]
     },
     {
-     "id": "rel-044",
-     "name": "Party Guilt (Matt Styles Club Mix)",
-     "artist": "The Royal We",
+     "id": "rel-089",
+     "name": "Im Rausch Der Tiefe",
+     "artist": "Traumprinz",
      "score": 0.7692307692307692,
      "reasons": [
       "played on the same show: Special Guests"
@@ -9970,7 +10013,7 @@ window.SEA_DATA = {
    "artist": "Interloper",
    "year": 2001,
    "country": null,
-   "length": null,
+   "length": 578,
    "album": null,
    "label": null,
    "bpm": null,
@@ -10003,10 +10046,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Interloper - Suck'n'Blow + Suck'n'Dub",
    "youtubeCheckedAt": "2026-10-16T19:03:26.940Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 20,
+   "islandId": 36,
    "depth": 0.9,
-   "x": -54,
-   "y": -59,
+   "x": -3,
+   "y": -104,
    "neighbours": [
     {
      "id": "rel-154",
@@ -10079,10 +10122,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Los Thuthanaka - Salay “Titi Ch’iri Siqititi” (2025)",
    "youtubeCheckedAt": "2026-10-16T19:03:29.876Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.936,
-   "x": -38,
-   "y": -7,
+   "x": -2,
+   "y": -25,
    "neighbours": [
     {
      "id": "rel-187",
@@ -10151,10 +10194,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Last Sunrise",
    "youtubeCheckedAt": "2026-10-16T19:03:32.503Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
+   "islandId": 4,
    "depth": 0.941,
-   "x": 2,
-   "y": -25,
+   "x": -34,
+   "y": -8,
    "neighbours": [
     {
      "id": "rel-046",
@@ -10225,7 +10268,7 @@ window.SEA_DATA = {
    "islandId": 0,
    "depth": 0.889,
    "x": -2,
-   "y": 0,
+   "y": 1,
    "neighbours": [
     {
      "id": "rel-189",
@@ -10267,9 +10310,9 @@ window.SEA_DATA = {
    "artist": "Mozart, Strauss, Cristina Gómez Godoy, West-Eastern Divan Orchestra, Daniel Barenboim",
    "year": 2014,
    "country": null,
-   "length": null,
-   "album": null,
-   "label": null,
+   "length": 512,
+   "album": "Mozart, Strauss & Weber: Pieces for Wind Soloist & Orchestra",
+   "label": "SONY BMG MUSIC ENTERTAINMENT",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -10301,7 +10344,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:03:37.969Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
-   "depth": 0.92,
+   "depth": 0.922,
    "x": 21,
    "y": 20,
    "neighbours": [
@@ -10318,7 +10361,7 @@ window.SEA_DATA = {
      "id": "rel-158",
      "name": "Piano Concerto No. 1 In D Minor, Op. 15",
      "artist": "Brahms, Curzon, London Symphony, Szell",
-     "score": 0.5011558502710696,
+     "score": 0.4677454602529983,
      "reasons": [
       "shared tags: classical, romantic, concerto",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
@@ -10329,7 +10372,7 @@ window.SEA_DATA = {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.3293056312973203,
+     "score": 0.30735192254416566,
      "reasons": [
       "shared tags: classical, romantic",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
@@ -10345,8 +10388,8 @@ window.SEA_DATA = {
    "year": 1986,
    "country": null,
    "length": 302,
-   "album": null,
-   "label": null,
+   "album": "Hail",
+   "label": "The copyright in this sound recording is owned by Mute Records Ltd",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -10379,10 +10422,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Pump",
    "youtubeCheckedAt": "2026-10-16T19:03:41.068Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 29,
-   "depth": 0.928,
-   "x": 81,
-   "y": 47,
+   "islandId": 28,
+   "depth": 0.929,
+   "x": -33,
+   "y": -84,
    "neighbours": [
     {
      "id": "rel-117",
@@ -10404,14 +10447,14 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-165",
-     "name": "For The Love Of Big Brother",
-     "artist": "Eurythmics",
-     "score": 0.36350365341263,
+     "id": "rel-106",
+     "name": "No Cure",
+     "artist": "Annabel Lamb",
+     "score": 0.36035550641834496,
      "reasons": [
       "shared tags: electronic, synth-pop",
       "played on the same show: The NTS Breakfast Show w/ GABI",
-      "2 years apart (1986 / 1984)"
+      "3 years apart (1986 / 1983)"
      ]
     }
    ]
@@ -10456,10 +10499,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Will King - Can We Talk",
    "youtubeCheckedAt": "2026-10-16T19:03:43.959Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.901,
-   "x": -18,
-   "y": -42,
+   "x": -7,
+   "y": 41,
    "neighbours": [
     {
      "id": "rel-096",
@@ -10497,8 +10540,8 @@ window.SEA_DATA = {
    "year": 1965,
    "country": null,
    "length": 153,
-   "album": null,
-   "label": null,
+   "album": "Liar, Liar - Single",
+   "label": "Unidisc Music Inc.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -10528,10 +10571,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Sam",
    "youtubeCheckedAt": "2026-10-16T19:03:51.542Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 36,
-   "depth": 0.944,
-   "x": -3,
-   "y": -104,
+   "islandId": 46,
+   "depth": 0.946,
+   "x": -104,
+   "y": -50,
    "neighbours": [
     {
      "id": "rel-069",
@@ -10547,7 +10590,7 @@ window.SEA_DATA = {
      "id": "rel-145",
      "name": "Laughing On The Outside",
      "artist": "Bernadette Carroll",
-     "score": 0.32006290064258214,
+     "score": 0.2987253739330767,
      "reasons": [
       "shared tags: rock",
       "played on the same show: Self Soothe w/ Margeaux: Doo Wop Special",
@@ -10555,13 +10598,13 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-168",
-     "name": "Jealous Guy",
-     "artist": "John Lennon",
-     "score": 0.3069341138465016,
+     "id": "rel-106",
+     "name": "No Cure",
+     "artist": "Annabel Lamb",
+     "score": 0.29364706642302174,
      "reasons": [
       "shared tags: rock, pop rock",
-      "6 years apart (1965 / 1971)"
+      "18 years apart (1965 / 1983)"
      ]
     }
    ]
@@ -10572,7 +10615,7 @@ window.SEA_DATA = {
    "artist": "DAV (Croatia)",
    "year": 2005,
    "country": null,
-   "length": null,
+   "length": 530,
    "album": null,
    "label": null,
    "bpm": null,
@@ -10604,10 +10647,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Dav - Headspin",
    "youtubeCheckedAt": "2026-10-16T19:03:54.134Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
+   "islandId": 10,
    "depth": 0.887,
-   "x": -47,
-   "y": 22,
+   "x": 27,
+   "y": -50,
    "neighbours": [
     {
      "id": "rel-119",
@@ -10680,10 +10723,10 @@ window.SEA_DATA = {
    "youtubeTitle": "McCoy Tyner  My Favorite Things",
    "youtubeCheckedAt": "2026-10-16T19:03:57.374Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 44,
+   "islandId": 47,
    "depth": 0.925,
-   "x": 43,
-   "y": -108,
+   "x": 115,
+   "y": -35,
    "neighbours": [
     {
      "id": "rel-232",
@@ -10725,8 +10768,8 @@ window.SEA_DATA = {
    "year": 2026,
    "country": null,
    "length": 324,
-   "album": null,
-   "label": null,
+   "album": "I'll Call You Later",
+   "label": "5 GATE TEMPLE",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -10757,10 +10800,10 @@ window.SEA_DATA = {
    "youtubeTitle": "I'll Call You Later",
    "youtubeCheckedAt": "2026-10-16T19:04:02.799Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
-   "depth": 0.921,
-   "x": -32,
-   "y": -10,
+   "islandId": 2,
+   "depth": 0.923,
+   "x": 3,
+   "y": -28,
    "neighbours": [
     {
      "id": "rel-187",
@@ -10784,7 +10827,7 @@ window.SEA_DATA = {
      "id": "rel-046",
      "name": "HVID//",
      "artist": "Irene Bianco",
-     "score": 0.6296377794351119,
+     "score": 0.5876619274727711,
      "reasons": [
       "shared tags: electronic, abstract",
       "2 years apart (2026 / 2024)"
@@ -10799,8 +10842,8 @@ window.SEA_DATA = {
    "year": 2020,
    "country": null,
    "length": 478,
-   "album": null,
-   "label": null,
+   "album": "Mycorrhiza",
+   "label": "OOH-sounds",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -10833,10 +10876,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Cuttleburrs",
    "youtubeCheckedAt": "2026-10-16T19:04:05.383Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.908,
-   "x": -2,
-   "y": -23,
+   "islandId": 4,
+   "depth": 0.91,
+   "x": -37,
+   "y": -6,
    "neighbours": [
     {
      "id": "rel-122",
@@ -10876,8 +10919,8 @@ window.SEA_DATA = {
    "year": 2023,
    "country": null,
    "length": 287,
-   "album": null,
-   "label": null,
+   "album": "A Host for All Kinds of Life",
+   "label": "Leaving Records",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -10907,8 +10950,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:04:08.188Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
    "islandId": 0,
-   "depth": 0.887,
-   "x": 0,
+   "depth": 0.89,
+   "x": -1,
    "y": 1,
    "neighbours": [
     {
@@ -10988,7 +11031,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
    "depth": 0.958,
-   "x": 14,
+   "x": 13,
    "y": 23,
    "neighbours": [
     {
@@ -11066,10 +11109,10 @@ window.SEA_DATA = {
    "youtubeTitle": "El Perro Del Mar - Walk On By (Official Music Video)",
    "youtubeCheckedAt": "2026-10-16T19:04:14.085Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 45,
+   "islandId": 48,
    "depth": 0.897,
-   "x": 45,
-   "y": 107,
+   "x": -58,
+   "y": 104,
    "neighbours": [
     {
      "id": "rel-117",
@@ -11145,10 +11188,10 @@ window.SEA_DATA = {
    "youtubeTitle": "A Man Called Adam - Barefoot In the Head (Radio Edit) [Audio]",
    "youtubeCheckedAt": "2026-10-16T19:04:19.449Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 14,
+   "islandId": 13,
    "depth": 0.874,
-   "x": -33,
-   "y": 53,
+   "x": 65,
+   "y": -15,
    "neighbours": [
     {
      "id": "rel-067",
@@ -11220,10 +11263,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Maurice Williams & the Zodiacs - Stay",
    "youtubeCheckedAt": "2026-10-16T19:04:22.131Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.922,
-   "x": 22,
-   "y": -52,
+   "x": 31,
+   "y": -22,
    "neighbours": [
     {
      "id": "rel-076",
@@ -11266,7 +11309,7 @@ window.SEA_DATA = {
    "artist": "Missy ZeZe & Presslaboys",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 430,
    "album": null,
    "label": null,
    "bpm": null,
@@ -11295,10 +11338,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Missy Zeze & Presslaboys - E.F.X. (European Fusion Experience) (Electro Monkey Mix)",
    "youtubeCheckedAt": "2026-10-16T19:04:24.824Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1800",
-   "islandId": 9,
+   "islandId": 10,
    "depth": 0.917,
-   "x": -48,
-   "y": 18,
+   "x": 25,
+   "y": -49,
    "neighbours": [
     {
      "id": "rel-040",
@@ -11371,10 +11414,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Diddys Featuring Paige Douglas ‎– Intergalactic Love Song ℗ 1977",
    "youtubeCheckedAt": "2026-10-16T19:04:27.570Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.914,
-   "x": 43,
-   "y": 14,
+   "x": -51,
+   "y": 16,
    "neighbours": [
     {
      "id": "rel-232",
@@ -11415,7 +11458,7 @@ window.SEA_DATA = {
    "artist": "Gaia Tones",
    "year": 2023,
    "country": null,
-   "length": null,
+   "length": 810,
    "album": null,
    "label": null,
    "bpm": null,
@@ -11452,8 +11495,8 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
    "islandId": 12,
    "depth": 0.903,
-   "x": -52,
-   "y": -34,
+   "x": -51,
+   "y": -35,
    "neighbours": [
     {
      "id": "rel-154",
@@ -11528,10 +11571,10 @@ window.SEA_DATA = {
    "youtubeTitle": "T.I. - Get Back Up ft. Chris Brown [Official Video]",
    "youtubeCheckedAt": "2026-10-16T19:04:33.299Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 18,
+   "islandId": 17,
    "depth": 0.916,
-   "x": 50,
-   "y": -54,
+   "x": -73,
+   "y": 2,
    "neighbours": [
     {
      "id": "rel-187",
@@ -11571,8 +11614,8 @@ window.SEA_DATA = {
    "year": 2018,
    "country": null,
    "length": 116,
-   "album": null,
-   "label": null,
+   "album": "Music For Visual Disorders",
+   "label": "Tomaga",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -11605,10 +11648,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Arpeggio Drum Challenge",
    "youtubeCheckedAt": "2026-10-16T19:04:36.123Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.886,
-   "x": 1,
-   "y": -20,
+   "islandId": 4,
+   "depth": 0.889,
+   "x": -35,
+   "y": -2,
    "neighbours": [
     {
      "id": "rel-122",
@@ -11632,7 +11675,7 @@ window.SEA_DATA = {
      "id": "rel-072",
      "name": "Ms. Meteo",
      "artist": "Mira Calix",
-     "score": 0.6530612244897958,
+     "score": 0.6095238095238094,
      "reasons": [
       "shared tags: electronic, abstract, ambient, experimental",
       "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
@@ -11683,8 +11726,8 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
    "depth": 0.973,
-   "x": 16,
-   "y": 28,
+   "x": 17,
+   "y": 29,
    "neighbours": [
     {
      "id": "rel-064",
@@ -11725,7 +11768,7 @@ window.SEA_DATA = {
    "artist": "7th Plain",
    "year": 1996,
    "country": null,
-   "length": null,
+   "length": 271,
    "album": null,
    "label": null,
    "bpm": null,
@@ -11761,10 +11804,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The 7th Plain ‎- Untitled (A4)",
    "youtubeCheckedAt": "2026-10-16T19:04:44.528Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 24,
+   "islandId": 25,
    "depth": 0.903,
-   "x": 40,
-   "y": 77,
+   "x": -84,
+   "y": -23,
    "neighbours": [
     {
      "id": "rel-117",
@@ -11836,10 +11879,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Theo Parrish - How I Feel",
    "youtubeCheckedAt": "2026-10-16T19:04:47.161Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.888,
-   "x": 30,
-   "y": -19,
+   "x": -24,
+   "y": -38,
    "neighbours": [
     {
      "id": "rel-107",
@@ -11879,8 +11922,8 @@ window.SEA_DATA = {
    "year": 1962,
    "country": null,
    "length": 140,
-   "album": null,
-   "label": null,
+   "album": "Cleopatra Girls",
+   "label": "Numero Group",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -11909,10 +11952,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Laughing on the Outside",
    "youtubeCheckedAt": "2026-10-16T19:04:55.323Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 36,
-   "depth": 0.93,
-   "x": 3,
-   "y": -104,
+   "islandId": 5,
+   "depth": 0.931,
+   "x": 30,
+   "y": -26,
    "neighbours": [
     {
      "id": "rel-200",
@@ -11988,10 +12031,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Brothers and Sisters - \"All Along the Watchtower\" (From the album, Dylan's Gospel)",
    "youtubeCheckedAt": "2026-10-16T19:04:58.465Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.926,
-   "x": 44,
-   "y": 22,
+   "x": -50,
+   "y": 23,
    "neighbours": [
     {
      "id": "rel-232",
@@ -12033,8 +12076,8 @@ window.SEA_DATA = {
    "year": 2007,
    "country": null,
    "length": 167,
-   "album": null,
-   "label": null,
+   "album": "Bonde Do Role With Lasers",
+   "label": "Domino Recording Co Ltd",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -12068,10 +12111,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Divine Gosa",
    "youtubeCheckedAt": "2026-10-16T19:05:03.749Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 20,
-   "depth": 0.908,
-   "x": -50,
-   "y": -63,
+   "islandId": 19,
+   "depth": 0.91,
+   "x": -8,
+   "y": 76,
    "neighbours": [
     {
      "id": "rel-187",
@@ -12110,8 +12153,8 @@ window.SEA_DATA = {
    "year": 2006,
    "country": null,
    "length": 157,
-   "album": null,
-   "label": null,
+   "album": "Anish Music",
+   "label": "Jenka Music",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -12143,10 +12186,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Undoubtedly",
    "youtubeCheckedAt": "2026-10-16T19:05:06.647Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 24,
-   "depth": 0.915,
-   "x": 40,
-   "y": 71,
+   "islandId": 25,
+   "depth": 0.917,
+   "x": -84,
+   "y": -29,
    "neighbours": [
     {
      "id": "rel-122",
@@ -12218,7 +12261,7 @@ window.SEA_DATA = {
    "islandId": 0,
    "depth": 0.88,
    "x": 2,
-   "y": 0,
+   "y": 1,
    "neighbours": [
     {
      "id": "rel-132",
@@ -12259,8 +12302,8 @@ window.SEA_DATA = {
    "year": 1951,
    "country": null,
    "length": 380,
-   "album": null,
-   "label": null,
+   "album": "Mozart: Don Giovanni",
+   "label": "Universal International Music B.V.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -12293,8 +12336,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:05:12.409Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
-   "depth": 0.971,
-   "x": 15,
+   "depth": 0.972,
+   "x": 14,
    "y": 27,
    "neighbours": [
     {
@@ -12374,8 +12417,8 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 37,
    "depth": 0.919,
-   "x": 73,
-   "y": 77,
+   "x": 74,
+   "y": 78,
    "neighbours": [
     {
      "id": "rel-117",
@@ -12449,10 +12492,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Jive Bombers - Bad Boy",
    "youtubeCheckedAt": "2026-10-16T19:05:26.708Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.949,
-   "x": 18,
-   "y": -46,
+   "x": 30,
+   "y": -16,
    "neighbours": [
     {
      "id": "rel-185",
@@ -12574,7 +12617,7 @@ window.SEA_DATA = {
    "artist": "E World",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 984,
    "album": null,
    "label": null,
    "bpm": null,
@@ -12681,10 +12724,10 @@ window.SEA_DATA = {
    "youtubeTitle": "THE BUG ft. MAGUGU - Deep in a Mud (Official Music Video)",
    "youtubeCheckedAt": "2026-10-16T19:05:36.468Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.921,
-   "x": -37,
-   "y": -3,
+   "x": -1,
+   "y": -21,
    "neighbours": [
     {
      "id": "rel-187",
@@ -12724,8 +12767,8 @@ window.SEA_DATA = {
    "year": 2003,
    "country": null,
    "length": 278,
-   "album": null,
-   "label": null,
+   "album": "By the Roads and the Fields",
+   "label": "FatCat Records",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -12759,10 +12802,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Mica",
    "youtubeCheckedAt": "2026-10-16T19:05:39.712Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.895,
-   "x": 6,
-   "y": -22,
+   "islandId": 4,
+   "depth": 0.897,
+   "x": -29,
+   "y": -5,
    "neighbours": [
     {
      "id": "rel-122",
@@ -12786,7 +12829,7 @@ window.SEA_DATA = {
      "id": "rel-072",
      "name": "Ms. Meteo",
      "artist": "Mira Calix",
-     "score": 0.5733573072135133,
+     "score": 0.5351334867326125,
      "reasons": [
       "shared tags: electronic, abstract, experimental",
       "played on the same show: WAVE FORM W/ AURÉLIEN ARBET & PIERRE ROUSSEAU (R)",
@@ -12802,8 +12845,8 @@ window.SEA_DATA = {
    "year": 2019,
    "country": null,
    "length": 237,
-   "album": null,
-   "label": null,
+   "album": "Wander Into",
+   "label": "Ann Annie under exclusive license to Nettwerk Music Group Inc.",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -12834,8 +12877,8 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:05:42.531Z",
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
    "islandId": 0,
-   "depth": 0.883,
-   "x": 0,
+   "depth": 0.886,
+   "x": -1,
    "y": 3,
    "neighbours": [
     {
@@ -12848,16 +12891,6 @@ window.SEA_DATA = {
      ]
     },
     {
-     "id": "rel-045",
-     "name": "Ruidhle Mo Nighean Donn",
-     "artist": "Brìghde Chaimbeul",
-     "score": 0.6247769938837712,
-     "reasons": [
-      "shared tags: folk, world, & country",
-      "both from 2019"
-     ]
-    },
-    {
      "id": "rel-149",
      "name": "Seed Bank",
      "artist": "Pariah",
@@ -12866,6 +12899,16 @@ window.SEA_DATA = {
       "shared tags: electronic, ambient",
       "played on the same show: SOPHIA ZHURAVKOVA W/ AIEL (R)",
       "1 year apart (2019 / 2018)"
+     ]
+    },
+    {
+     "id": "rel-045",
+     "name": "Ruidhle Mo Nighean Donn",
+     "artist": "Brìghde Chaimbeul",
+     "score": 0.5831251942915198,
+     "reasons": [
+      "shared tags: folk, world, & country",
+      "both from 2019"
      ]
     }
    ]
@@ -12877,8 +12920,8 @@ window.SEA_DATA = {
    "year": 1933,
    "country": null,
    "length": 2880,
-   "album": null,
-   "label": null,
+   "album": "Brahms: Oeuvres avec orchestre - La discothèque idéale de Diapason, Vol. 36",
+   "label": "La discothèque idéale de Diapason, a trademark of Reworld Media Group",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -12912,7 +12955,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:05:45.362Z",
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
-   "depth": 0.973,
+   "depth": 0.974,
    "x": 23,
    "y": 26,
    "neighbours": [
@@ -12929,7 +12972,7 @@ window.SEA_DATA = {
      "id": "rel-124",
      "name": "Oboe Concerto In D Major, TrV 292",
      "artist": "Mozart, Strauss, Cristina Gómez Godoy, West-Eastern Divan Orchestra, Daniel Barenboim",
-     "score": 0.5011558502710696,
+     "score": 0.4677454602529983,
      "reasons": [
       "shared tags: classical, romantic, concerto",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
@@ -12940,7 +12983,7 @@ window.SEA_DATA = {
      "id": "rel-056",
      "name": "Vogel Als Prophet",
      "artist": "Schumann, Robert, Backhaus, Wilhelm, The Vienna Philharmonic Orchestra, Wand, Günter",
-     "score": 0.49622920698573436,
+     "score": 0.4631472598533521,
      "reasons": [
       "shared tags: classical, romantic, piano",
       "played on the same show: NTS Guide to: Classical Works in Murakami Novels",
@@ -12955,7 +12998,7 @@ window.SEA_DATA = {
    "artist": "Chicago Party",
    "year": 2015,
    "country": null,
-   "length": null,
+   "length": 195,
    "album": null,
    "label": null,
    "bpm": null,
@@ -13064,10 +13107,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Bronx Dogs - Tribute To Jazzy Jay",
    "youtubeCheckedAt": "2026-10-16T19:05:57.606Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 20,
+   "islandId": 13,
    "depth": 0.91,
-   "x": -46,
-   "y": -59,
+   "x": 61,
+   "y": -10,
    "neighbours": [
     {
      "id": "rel-067",
@@ -13140,10 +13183,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Jiving Juniors - Valerie.wmv",
    "youtubeCheckedAt": "2026-10-16T19:06:00.743Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 22,
+   "islandId": 21,
    "depth": 0.936,
-   "x": -63,
-   "y": 46,
+   "x": 81,
+   "y": 11,
    "neighbours": [
     {
      "id": "rel-213",
@@ -13222,10 +13265,10 @@ window.SEA_DATA = {
    "youtubeTitle": "lorez alexandria - baltimore oriole",
    "youtubeCheckedAt": "2026-10-16T19:06:03.728Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.946,
-   "x": 50,
-   "y": 17,
+   "x": -44,
+   "y": 19,
    "neighbours": [
     {
      "id": "rel-232",
@@ -13267,8 +13310,8 @@ window.SEA_DATA = {
    "year": 2017,
    "country": null,
    "length": 191,
-   "album": null,
-   "label": null,
+   "album": "Heart",
+   "label": "Bounce Pass",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -13301,10 +13344,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Brighter",
    "youtubeCheckedAt": "2026-10-16T19:06:11.957Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
-   "depth": 0.896,
-   "x": 5,
-   "y": -21,
+   "islandId": 4,
+   "depth": 0.898,
+   "x": -31,
+   "y": -3,
    "neighbours": [
     {
      "id": "rel-122",
@@ -13342,7 +13385,7 @@ window.SEA_DATA = {
    "artist": "Suso Size",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 3847,
    "album": null,
    "label": null,
    "bpm": null,
@@ -13412,8 +13455,8 @@ window.SEA_DATA = {
    "year": 1984,
    "country": null,
    "length": 306,
-   "album": null,
-   "label": null,
+   "album": "1984 - For The Love Of Big Brother",
+   "label": "Virgin Records Limited",
    "bpm": null,
    "station": "nts",
    "stations": [
@@ -13448,9 +13491,9 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:06:20.523Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 15,
-   "depth": 0.914,
+   "depth": 0.915,
    "x": -9,
-   "y": -70,
+   "y": -71,
    "neighbours": [
     {
      "id": "rel-117",
@@ -13491,7 +13534,7 @@ window.SEA_DATA = {
    "artist": "DJ Razor Blade And The H.I.N.C.",
    "year": 1990,
    "country": null,
-   "length": null,
+   "length": 215,
    "album": null,
    "label": null,
    "bpm": null,
@@ -13525,10 +13568,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Razor Blade (H.N.I.C.) - Detroit's In The House (1990)",
    "youtubeCheckedAt": "2026-10-16T19:06:23.281Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 19,
    "depth": 0.908,
-   "x": -19,
-   "y": -39,
+   "x": 0,
+   "y": 75,
    "neighbours": [
     {
      "id": "rel-096",
@@ -13599,16 +13642,16 @@ window.SEA_DATA = {
    "youtubeTitle": "SZA - Kill Bill (Official Video)",
    "youtubeCheckedAt": "2026-10-16T19:10:06.644Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 25,
-   "depth": 0.928,
-   "x": -79,
-   "y": -26,
+   "islandId": 33,
+   "depth": 0.93,
+   "x": -76,
+   "y": -61,
    "neighbours": [
     {
      "id": "rel-051",
      "name": "Black Gold of the Sun",
      "artist": "megiapa",
-     "score": 0.5419065533214246,
+     "score": 0.5057794497666629,
      "reasons": [
       "shared tags: funk / soul, contemporary r&b, neo soul",
       "4 years apart (2022 / 2026)"
@@ -13676,10 +13719,10 @@ window.SEA_DATA = {
    "youtubeTitle": "JEALOUS GUY. (Ultimate Mix, 2020) - John Lennon and The Plastic Ono Band (w the Flux Fiddlers)",
    "youtubeCheckedAt": "2026-10-16T19:10:10.446Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 21,
-   "depth": 0.941,
-   "x": 75,
-   "y": 10,
+   "islandId": 20,
+   "depth": 0.942,
+   "x": -54,
+   "y": -59,
    "neighbours": [
     {
      "id": "rel-177",
@@ -13753,10 +13796,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Fred again.., BIA - ..FEISTY (Vancouver, 28th November 2025 with Ian Hotko)",
    "youtubeCheckedAt": "2026-10-16T19:10:12.407Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 46,
-   "depth": 0.944,
-   "x": -104,
-   "y": -50,
+   "islandId": 49,
+   "depth": 0.945,
+   "x": -23,
+   "y": -119,
    "neighbours": [
     {
      "id": "rel-173",
@@ -13827,10 +13870,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Diamond Day",
    "youtubeCheckedAt": "2026-10-16T19:10:14.332Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 21,
-   "depth": 0.946,
-   "x": 78,
-   "y": 14,
+   "islandId": 20,
+   "depth": 0.947,
+   "x": -50,
+   "y": -56,
    "neighbours": [
     {
      "id": "rel-175",
@@ -13904,7 +13947,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://app.radiooooo.com/",
    "islandId": 26,
    "depth": 0.958,
-   "x": 79,
+   "x": 78,
    "y": -40,
    "neighbours": [
     {
@@ -13981,7 +14024,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://app.radiooooo.com/",
    "islandId": 26,
    "depth": 0.957,
-   "x": 84,
+   "x": 83,
    "y": -37,
    "neighbours": [
     {
@@ -14053,10 +14096,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Voyou - Une île (Visualizer)",
    "youtubeCheckedAt": "2026-10-16T19:10:22.881Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 25,
-   "depth": 0.934,
-   "x": -84,
-   "y": -25,
+   "islandId": 38,
+   "depth": 0.935,
+   "x": -105,
+   "y": -9,
    "neighbours": [
     {
      "id": "rel-176",
@@ -14132,7 +14175,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://app.radiooooo.com/",
    "islandId": 26,
    "depth": 0.946,
-   "x": 78,
+   "x": 79,
    "y": -34,
    "neighbours": [
     {
@@ -14173,7 +14216,7 @@ window.SEA_DATA = {
    "artist": "Dana Gillespie",
    "year": 1968,
    "country": "GBR",
-   "length": null,
+   "length": 222,
    "album": "Foolish Seasons",
    "label": "London Records",
    "bpm": null,
@@ -14207,10 +14250,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Souvenirs of Stefan",
    "youtubeCheckedAt": "2026-10-16T19:10:28.276Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 21,
-   "depth": 0.947,
-   "x": 82,
-   "y": 10,
+   "islandId": 20,
+   "depth": 0.948,
+   "x": -47,
+   "y": -59,
    "neighbours": [
     {
      "id": "rel-170",
@@ -14281,10 +14324,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Enfin",
    "youtubeCheckedAt": "2026-10-16T19:10:31.303Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 25,
-   "depth": 0.934,
-   "x": -84,
-   "y": -28,
+   "islandId": 38,
+   "depth": 0.935,
+   "x": -107,
+   "y": -9,
    "neighbours": [
     {
      "id": "rel-173",
@@ -14361,10 +14404,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Supertramp - From Now On (Official Audio)",
    "youtubeCheckedAt": "2026-10-16T19:10:34.289Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 21,
+   "islandId": 20,
    "depth": 0.935,
-   "x": 78,
-   "y": 6,
+   "x": -51,
+   "y": -63,
    "neighbours": [
     {
      "id": "rel-168",
@@ -14440,10 +14483,10 @@ window.SEA_DATA = {
    "youtubeTitle": "🇧🇯 G. G. Vikey - Je Vous Remercie (1976)🇧🇯",
    "youtubeCheckedAt": "2026-10-16T19:10:40.246Z",
    "sourceUrl": "https://app.radiooooo.com/",
-   "islandId": 38,
-   "depth": 0.945,
-   "x": -103,
-   "y": -9,
+   "islandId": 39,
+   "depth": 0.946,
+   "x": 89,
+   "y": -66,
    "neighbours": [
     {
      "id": "rel-170",
@@ -14518,7 +14561,7 @@ window.SEA_DATA = {
    "youtubeCheckedAt": "2026-10-16T19:10:42.965Z",
    "sourceUrl": "https://app.radiooooo.com/",
    "islandId": 35,
-   "depth": 0.938,
+   "depth": 0.939,
    "x": -66,
    "y": 75,
    "neighbours": [
@@ -14595,10 +14638,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Xterea - Track 4",
    "youtubeCheckedAt": "2026-10-16T23:40:13.807Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.919,
-   "x": -36,
-   "y": -9,
+   "x": -1,
+   "y": -27,
    "neighbours": [
     {
      "id": "rel-187",
@@ -14667,10 +14710,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Ultimate Fine Hair Fix: The Volume Bob 🥰🥰",
    "youtubeCheckedAt": "2026-10-16T23:40:22.809Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
+   "islandId": 4,
    "depth": 0.941,
-   "x": 3,
-   "y": -24,
+   "x": -32,
+   "y": -6,
    "neighbours": [
     {
      "id": "rel-046",
@@ -14707,7 +14750,7 @@ window.SEA_DATA = {
    "artist": "Rossini’s",
    "year": 1960,
    "country": null,
-   "length": null,
+   "length": 579,
    "album": null,
    "label": null,
    "bpm": null,
@@ -14742,7 +14785,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/the-nts-guide-to/episodes/the-nts-guide-to-classical-works-in-murakami-novels-23rd-january-2024",
    "islandId": 3,
    "depth": 0.959,
-   "x": 14,
+   "x": 15,
    "y": 21,
    "neighbours": [
     {
@@ -14820,10 +14863,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Cleaners From Venus - Tukani (Monday Is Grey)",
    "youtubeCheckedAt": "2026-10-16T23:40:58.629Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 47,
+   "islandId": 50,
    "depth": 0.926,
-   "x": 115,
-   "y": -35,
+   "x": 102,
+   "y": 71,
    "neighbours": [
     {
      "id": "rel-117",
@@ -14898,10 +14941,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Ron Carroll - A New Day (H & F Dubhouse Mix) 1993 AF-RYTH-MIX SOUNDS",
    "youtubeCheckedAt": "2026-10-16T23:41:07.646Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.908,
-   "x": -24,
-   "y": -39,
+   "x": -10,
+   "y": 45,
    "neighbours": [
     {
      "id": "rel-096",
@@ -14971,10 +15014,10 @@ window.SEA_DATA = {
    "youtubeTitle": "DON JULIAN & THE MEADOWLARKS-  HEAVEN & PARADISE",
    "youtubeCheckedAt": "2026-10-16T23:41:25.816Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.932,
-   "x": 24,
-   "y": -47,
+   "x": 35,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-109",
@@ -15049,10 +15092,10 @@ window.SEA_DATA = {
    "youtubeTitle": "𝓣𝓻𝓮𝓿𝓸𝓻 𝓓𝓪𝓷𝓭𝔂 - 𝓓𝓸𝓷'𝓽 𝓒𝓻𝔂 𝓛𝓲𝓽𝓽𝓵𝓮 𝓣𝓻𝓮𝓮",
    "youtubeCheckedAt": "2026-10-16T23:41:34.899Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.928,
-   "x": 43,
-   "y": 20,
+   "x": -51,
+   "y": 23,
    "neighbours": [
     {
      "id": "rel-232",
@@ -15093,7 +15136,7 @@ window.SEA_DATA = {
    "artist": "DJ Shafi",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 212,
    "album": null,
    "label": null,
    "bpm": null,
@@ -15124,10 +15167,10 @@ window.SEA_DATA = {
    "youtubeTitle": "fast beat bakola by dj shafi official audio",
    "youtubeCheckedAt": "2026-10-16T23:41:52.948Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.932,
-   "x": -33,
-   "y": -8,
+   "x": 2,
+   "y": -25,
    "neighbours": [
     {
      "id": "rel-045",
@@ -15198,10 +15241,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Aleksi Perälä - Level 15 - UK74R1517130",
    "youtubeCheckedAt": "2026-10-16T23:42:02.224Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 17,
+   "islandId": 16,
    "depth": 0.9,
-   "x": -75,
-   "y": 3,
+   "x": 50,
+   "y": 44,
    "neighbours": [
     {
      "id": "rel-122",
@@ -15239,7 +15282,7 @@ window.SEA_DATA = {
    "artist": "David Cordero",
    "year": 2024,
    "country": null,
-   "length": null,
+   "length": 220,
    "album": null,
    "label": null,
    "bpm": null,
@@ -15272,7 +15315,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/sophia-zhuravkova/episodes/sophia-zhuravkova-15th-june-2025",
    "islandId": 0,
    "depth": 0.889,
-   "x": -2,
+   "x": -1,
    "y": -1,
    "neighbours": [
     {
@@ -15430,10 +15473,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Waterlillies - Tempted (Spooky Apple Crumble mix) Digweed Classic 1994",
    "youtubeCheckedAt": "2026-10-16T23:42:29.609Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 14,
+   "islandId": 6,
    "depth": 0.885,
-   "x": -41,
-   "y": 57,
+   "x": -12,
+   "y": 44,
    "neighbours": [
     {
      "id": "rel-096",
@@ -15470,7 +15513,7 @@ window.SEA_DATA = {
    "artist": "Kraak & Smaak, Izo FitzRoy, Ray Mang",
    "year": 2025,
    "country": null,
-   "length": null,
+   "length": 425,
    "album": null,
    "label": null,
    "bpm": null,
@@ -15505,10 +15548,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Kraak & Smaak and Izo FitzRoy - Velvet Seas (Ray Mang Remix)",
    "youtubeCheckedAt": "2026-10-16T23:42:38.818Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
+   "islandId": 13,
    "depth": 0.907,
-   "x": 53,
-   "y": 47,
+   "x": 58,
+   "y": -14,
    "neighbours": [
     {
      "id": "rel-067",
@@ -15580,10 +15623,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Why Do Fools Fall In Love-Frankie Lymon+The Teenagers-1956",
    "youtubeCheckedAt": "2026-10-16T23:42:47.914Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.938,
-   "x": 22,
-   "y": -46,
+   "x": 33,
+   "y": -17,
    "neighbours": [
     {
      "id": "rel-052",
@@ -15659,10 +15702,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Nick Hakim - I Can See (Official Video)",
    "youtubeCheckedAt": "2026-10-16T23:42:56.993Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 48,
+   "islandId": 51,
    "depth": 0.906,
-   "x": -58,
-   "y": 104,
+   "x": -120,
+   "y": 15,
    "neighbours": [
     {
      "id": "rel-232",
@@ -15812,10 +15855,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Lil Noid - \"Load My Clip\" (Remastered)",
    "youtubeCheckedAt": "2026-10-16T23:43:15.017Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 18,
+   "islandId": 17,
    "depth": 0.92,
-   "x": 54,
-   "y": -56,
+   "x": -69,
+   "y": 0,
    "neighbours": [
     {
      "id": "rel-187",
@@ -15890,10 +15933,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Carmen Villain - Subtle Bodies",
    "youtubeCheckedAt": "2026-10-16T23:43:24.147Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 2,
+   "islandId": 4,
    "depth": 0.893,
-   "x": -2,
-   "y": -25,
+   "x": -37,
+   "y": -8,
    "neighbours": [
     {
      "id": "rel-122",
@@ -15932,7 +15975,7 @@ window.SEA_DATA = {
    "artist": "Max Von Der Goltz",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 362,
    "album": null,
    "label": null,
    "bpm": null,
@@ -15966,7 +16009,7 @@ window.SEA_DATA = {
    "islandId": 0,
    "depth": 0.929,
    "x": 2,
-   "y": -1,
+   "y": -2,
    "neighbours": [
     {
      "id": "rel-104",
@@ -16039,10 +16082,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Darcy Clay - It Was Easy",
    "youtubeCheckedAt": "2026-10-16T23:43:42.263Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.911,
-   "x": 59,
-   "y": -16,
+   "x": -40,
+   "y": 51,
    "neighbours": [
     {
      "id": "rel-117",
@@ -16117,10 +16160,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Monotones - Book of Love",
    "youtubeCheckedAt": "2026-10-16T23:44:18.104Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.937,
-   "x": 20,
-   "y": -51,
+   "x": 30,
+   "y": -20,
    "neighbours": [
     {
      "id": "rel-193",
@@ -16198,10 +16241,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Ann Peebles - I Feel Like Breaking Up Somebody's Home Tonight (Official Audio)",
    "youtubeCheckedAt": "2026-10-16T23:44:27.159Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.914,
-   "x": 41,
-   "y": 19,
+   "x": -53,
+   "y": 21,
    "neighbours": [
     {
      "id": "rel-232",
@@ -16242,7 +16285,7 @@ window.SEA_DATA = {
    "artist": "Jorge",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 321,
    "album": null,
    "label": null,
    "bpm": null,
@@ -16273,10 +16316,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Jorge - Bunch Of Bees",
    "youtubeCheckedAt": "2026-10-16T23:45:20.631Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.917,
-   "x": -21,
-   "y": -43,
+   "x": -9,
+   "y": 40,
    "neighbours": [
     {
      "id": "rel-050",
@@ -16346,10 +16389,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Joshua Idehen - This Is The Place (Official Video)",
    "youtubeCheckedAt": "2026-10-16T23:45:29.747Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 39,
+   "islandId": 40,
    "depth": 0.917,
-   "x": 83,
-   "y": -66,
+   "x": -23,
+   "y": 108,
    "neighbours": [
     {
      "id": "rel-067",
@@ -16388,7 +16431,7 @@ window.SEA_DATA = {
    "artist": "The Cufflinks",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 165,
    "album": null,
    "label": null,
    "bpm": null,
@@ -16421,10 +16464,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Cufflinks - Guided Missiles",
    "youtubeCheckedAt": "2026-10-16T23:45:38.847Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 10,
+   "islandId": 5,
    "depth": 0.944,
-   "x": 25,
-   "y": -50,
+   "x": 36,
+   "y": -22,
    "neighbours": [
     {
      "id": "rel-109",
@@ -16500,10 +16543,10 @@ window.SEA_DATA = {
    "youtubeTitle": "the Ramsey Lewis Trio Look A here",
    "youtubeCheckedAt": "2026-10-16T23:45:47.904Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.939,
-   "x": 49,
-   "y": 20,
+   "x": -44,
+   "y": 22,
    "neighbours": [
     {
      "id": "rel-232",
@@ -16580,10 +16623,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Michel Moulinié - L'écho de l'acier",
    "youtubeCheckedAt": "2026-10-16T23:46:15.006Z",
    "sourceUrl": "https://www.nts.live/shows/wave-form/episodes/wave-form-16th-november-2024",
-   "islandId": 49,
+   "islandId": 52,
    "depth": 0.911,
-   "x": -23,
-   "y": -119,
+   "x": 84,
+   "y": -96,
    "neighbours": [
     {
      "id": "rel-122",
@@ -16655,10 +16698,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Sundays - You're not the only one I know",
    "youtubeCheckedAt": "2026-10-16T23:46:24.209Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.908,
-   "x": 64,
-   "y": -11,
+   "x": -35,
+   "y": 56,
    "neighbours": [
     {
      "id": "rel-117",
@@ -16699,7 +16742,7 @@ window.SEA_DATA = {
    "artist": "Yvette Fauche",
    "year": 1999,
    "country": null,
-   "length": null,
+   "length": 159,
    "album": null,
    "label": null,
    "bpm": null,
@@ -16732,10 +16775,10 @@ window.SEA_DATA = {
    "youtubeTitle": "YVETTE FAUCHE ~ CRAZY FOR YOU (BONEZ HIP HOP MIX)  (1998) ~ RARE UK INDIE R&B PROMO REMIX",
    "youtubeCheckedAt": "2026-10-16T23:46:33.394Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.917,
-   "x": -23,
-   "y": -44,
+   "x": -11,
+   "y": 38,
    "neighbours": [
     {
      "id": "rel-096",
@@ -16807,10 +16850,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rarrandharr - Drifting Clouds (Single)",
    "youtubeCheckedAt": "2026-10-16T23:46:42.427Z",
    "sourceUrl": "https://www.nts.live/shows/bill-brewster/episodes/bill-brewster-13th-october-2026",
-   "islandId": 16,
+   "islandId": 13,
    "depth": 0.925,
-   "x": 51,
-   "y": 42,
+   "x": 60,
+   "y": -17,
    "neighbours": [
     {
      "id": "rel-067",
@@ -16881,10 +16924,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Blues Busters - There's Always Sunshine (1968)",
    "youtubeCheckedAt": "2026-10-16T23:46:51.485Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 22,
+   "islandId": 21,
    "depth": 0.953,
-   "x": -66,
-   "y": 49,
+   "x": 78,
+   "y": 13,
    "neighbours": [
     {
      "id": "rel-213",
@@ -17007,7 +17050,7 @@ window.SEA_DATA = {
    "artist": "Synapse",
    "year": 1994,
    "country": null,
-   "length": null,
+   "length": 259,
    "album": null,
    "label": null,
    "bpm": null,
@@ -17042,10 +17085,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Synapse Interrupt - Beyond Therapy",
    "youtubeCheckedAt": "2026-10-16T23:47:09.448Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 28,
+   "islandId": 23,
    "depth": 0.889,
-   "x": -33,
-   "y": -89,
+   "x": 17,
+   "y": -83,
    "neighbours": [
     {
      "id": "rel-154",
@@ -17116,10 +17159,10 @@ window.SEA_DATA = {
    "youtubeTitle": "lloyd clarke  now i know the reason hi lite blank 1962",
    "youtubeCheckedAt": "2026-10-16T23:47:53.844Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 22,
+   "islandId": 21,
    "depth": 0.954,
-   "x": -69,
-   "y": 47,
+   "x": 75,
+   "y": 10,
    "neighbours": [
     {
      "id": "rel-161",
@@ -17197,10 +17240,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Amy Winehouse 'October Song' [HD] | North Sea Jazz (2004)",
    "youtubeCheckedAt": "2026-10-16T23:48:03.000Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.891,
-   "x": 47,
-   "y": 13,
+   "x": -47,
+   "y": 15,
    "neighbours": [
     {
      "id": "rel-232",
@@ -17277,10 +17320,10 @@ window.SEA_DATA = {
    "youtubeTitle": "femtanyl - KATAMARI",
    "youtubeCheckedAt": "2026-10-16T23:48:21.372Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.929,
-   "x": -33,
-   "y": -2,
+   "x": 3,
+   "y": -19,
    "neighbours": [
     {
      "id": "rel-187",
@@ -17353,10 +17396,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Superette - Kiss Someone",
    "youtubeCheckedAt": "2026-10-16T23:48:30.431Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.91,
-   "x": 58,
-   "y": -14,
+   "x": -41,
+   "y": 53,
    "neighbours": [
     {
      "id": "rel-117",
@@ -17430,10 +17473,10 @@ window.SEA_DATA = {
    "youtubeTitle": "PREMIERE: Jad & The - Pacific Drums (Liquid Mix)[Beats Of No Nation]",
    "youtubeCheckedAt": "2026-10-16T23:48:40.036Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 40,
+   "islandId": 24,
    "depth": 0.913,
-   "x": -17,
-   "y": 108,
+   "x": 40,
+   "y": 77,
    "neighbours": [
     {
      "id": "rel-096",
@@ -17502,10 +17545,10 @@ window.SEA_DATA = {
    "youtubeTitle": "The Downbeats - Midnight Love (1961)",
    "youtubeCheckedAt": "2026-10-16T23:48:49.110Z",
    "sourceUrl": "https://www.nts.live/shows/margeaux/episodes/margeaux-13th-october-2026",
-   "islandId": 22,
+   "islandId": 21,
    "depth": 0.97,
-   "x": -66,
-   "y": 43,
+   "x": 78,
+   "y": 6,
    "neighbours": [
     {
      "id": "rel-210",
@@ -17581,10 +17624,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Brenda Russell - In The Thick Of It [2012 Remaster]",
    "youtubeCheckedAt": "2026-10-16T23:48:58.297Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.907,
-   "x": 45,
-   "y": 13,
+   "x": -49,
+   "y": 15,
    "neighbours": [
     {
      "id": "rel-232",
@@ -17662,7 +17705,7 @@ window.SEA_DATA = {
    "islandId": 12,
    "depth": 0.88,
    "x": -54,
-   "y": -27,
+   "y": -26,
    "neighbours": [
     {
      "id": "rel-154",
@@ -17822,7 +17865,7 @@ window.SEA_DATA = {
    "islandId": 12,
    "depth": 0.905,
    "x": -48,
-   "y": -30,
+   "y": -31,
    "neighbours": [
     {
      "id": "rel-154",
@@ -17898,10 +17941,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Jim Legxacy  -  cold lewisham roses",
    "youtubeCheckedAt": "2026-10-16T23:50:10.678Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 50,
+   "islandId": 53,
    "depth": 0.977,
-   "x": 102,
-   "y": 71,
+   "x": 7,
+   "y": 127,
    "neighbours": [
     {
      "id": "rel-187",
@@ -18048,10 +18091,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Rozie Ramati - Drown in the Clouds of Dew",
    "youtubeCheckedAt": "2026-10-16T23:50:28.709Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 7,
+   "islandId": 6,
    "depth": 0.917,
-   "x": -21,
-   "y": -41,
+   "x": -10,
+   "y": 42,
    "neighbours": [
     {
      "id": "rel-050",
@@ -18168,7 +18211,7 @@ window.SEA_DATA = {
    "artist": "Nick, How Dancer, GP Da Zl & Leejack",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 161,
    "album": null,
    "label": null,
    "bpm": null,
@@ -18199,10 +18242,10 @@ window.SEA_DATA = {
    "youtubeTitle": "PIQUE DA RITMADA - Gp Da ZL, Jhow Dancer, Leejack, Nick (nine funk)",
    "youtubeCheckedAt": "2026-10-16T23:50:55.731Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.932,
-   "x": -32,
-   "y": -6,
+   "x": 3,
+   "y": -24,
    "neighbours": [
     {
      "id": "rel-045",
@@ -18275,10 +18318,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Vox Populi! - Soleymani Dub (Full Circle Sannyacid Dub)",
    "youtubeCheckedAt": "2026-10-16T23:51:04.635Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.892,
-   "x": 62,
-   "y": -18,
+   "x": -37,
+   "y": 49,
    "neighbours": [
     {
      "id": "rel-117",
@@ -18355,10 +18398,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Land of Hunger - The Earons",
    "youtubeCheckedAt": "2026-10-16T23:51:31.852Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 23,
+   "islandId": 22,
    "depth": 0.894,
-   "x": 17,
-   "y": -83,
+   "x": -68,
+   "y": 43,
    "neighbours": [
     {
      "id": "rel-232",
@@ -18432,10 +18475,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Scott Young - Commix",
    "youtubeCheckedAt": "2026-10-16T23:51:41.058Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 17,
+   "islandId": 16,
    "depth": 0.882,
-   "x": -73,
-   "y": 0,
+   "x": 52,
+   "y": 41,
    "neighbours": [
     {
      "id": "rel-154",
@@ -18511,10 +18554,10 @@ window.SEA_DATA = {
    "youtubeTitle": "(B2) Dove – Fallen (Dusk) - [Soma Quality Recordings – SOMA-2] - 1991",
    "youtubeCheckedAt": "2026-10-16T23:51:59.148Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 14,
+   "islandId": 34,
    "depth": 0.9,
-   "x": -38,
-   "y": 58,
+   "x": 103,
+   "y": -9,
    "neighbours": [
     {
      "id": "rel-117",
@@ -18553,7 +18596,7 @@ window.SEA_DATA = {
    "artist": "Ships Of The Pharaohs",
    "year": null,
    "country": null,
-   "length": null,
+   "length": 282,
    "album": null,
    "label": null,
    "bpm": null,
@@ -18584,10 +18627,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Ships of the Pharaohs - One (feat. Last Nubian & Bror Havnes) [Audio]",
    "youtubeCheckedAt": "2026-10-16T23:52:17.238Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 8,
+   "islandId": 9,
    "depth": 0.891,
-   "x": 46,
-   "y": 17,
+   "x": -48,
+   "y": 18,
    "neighbours": [
     {
      "id": "rel-053",
@@ -18657,10 +18700,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Massacooramaan - Dancehall Princess",
    "youtubeCheckedAt": "2026-10-16T23:52:35.186Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 51,
+   "islandId": 54,
    "depth": 0.919,
-   "x": -120,
-   "y": 15,
+   "x": -88,
+   "y": -91,
    "neighbours": [
     {
      "id": "rel-187",
@@ -18732,10 +18775,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Single Gun Theory - Words Written Backwards",
    "youtubeCheckedAt": "2026-10-16T23:52:44.250Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 29,
+   "islandId": 28,
    "depth": 0.924,
-   "x": 81,
-   "y": 41,
+   "x": -33,
+   "y": -89,
    "neighbours": [
     {
      "id": "rel-117",
@@ -18808,10 +18851,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Jarren - The Way You Do",
    "youtubeCheckedAt": "2026-10-16T23:52:53.307Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 39,
+   "islandId": 40,
    "depth": 0.896,
-   "x": 89,
-   "y": -66,
+   "x": -17,
+   "y": 108,
    "neighbours": [
     {
      "id": "rel-096",
@@ -18960,10 +19003,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Greville • Electric Push CPU Mix (MADHAB10)",
    "youtubeCheckedAt": "2026-10-16T23:53:11.376Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 42,
+   "islandId": 19,
    "depth": 0.887,
-   "x": 105,
-   "y": 31,
+   "x": -4,
+   "y": 72,
    "neighbours": [
     {
      "id": "rel-154",
@@ -19037,10 +19080,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Shackleton - Hamas Rule",
    "youtubeCheckedAt": "2026-10-16T23:53:20.314Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 18,
+   "islandId": 17,
    "depth": 0.918,
-   "x": 50,
-   "y": -50,
+   "x": -74,
+   "y": 6,
    "neighbours": [
     {
      "id": "rel-187",
@@ -19115,10 +19158,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Headless Chickens - Cruise Control",
    "youtubeCheckedAt": "2026-10-16T23:53:29.433Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.904,
-   "x": 59,
-   "y": -11,
+   "x": -41,
+   "y": 56,
    "neighbours": [
     {
      "id": "rel-117",
@@ -19195,10 +19238,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Deee-Lite - Party Happening People",
    "youtubeCheckedAt": "2026-10-16T23:53:38.557Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 14,
+   "islandId": 6,
    "depth": 0.897,
-   "x": -42,
-   "y": 54,
+   "x": -13,
+   "y": 43,
    "neighbours": [
     {
      "id": "rel-096",
@@ -19312,7 +19355,7 @@ window.SEA_DATA = {
    "artist": "Dubbyman",
    "year": 2005,
    "country": null,
-   "length": null,
+   "length": 320,
    "album": null,
    "label": null,
    "bpm": null,
@@ -19346,10 +19389,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Dubbyman - The Electric Days (Dub Vocoder)",
    "youtubeCheckedAt": "2026-10-16T23:53:56.679Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 42,
+   "islandId": 19,
    "depth": 0.892,
-   "x": 111,
-   "y": 30,
+   "x": -4,
+   "y": 80,
    "neighbours": [
     {
      "id": "rel-154",
@@ -19425,10 +19468,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Lush - Nothing Natural",
    "youtubeCheckedAt": "2026-10-16T23:54:23.920Z",
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
-   "islandId": 13,
+   "islandId": 14,
    "depth": 0.912,
-   "x": 61,
-   "y": -10,
+   "x": -37,
+   "y": 57,
    "neighbours": [
     {
      "id": "rel-117",
@@ -19504,10 +19547,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Perfectionist",
    "youtubeCheckedAt": "2026-10-16T23:54:32.989Z",
    "sourceUrl": "https://www.nts.live/shows/soup-to-nuts-anu/episodes/soup-to-nuts-anu-13th-october-2026",
-   "islandId": 5,
+   "islandId": 7,
    "depth": 0.873,
-   "x": 33,
-   "y": -26,
+   "x": -22,
+   "y": -46,
    "neighbours": [
     {
      "id": "rel-096",
@@ -19582,7 +19625,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
    "islandId": 11,
    "depth": 0.897,
-   "x": 14,
+   "x": 15,
    "y": 53,
    "neighbours": [
     {
@@ -19659,10 +19702,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Sans Soleil - That's The Stuff [2006]",
    "youtubeCheckedAt": "2026-10-16T23:54:51.473Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 14,
+   "islandId": 29,
    "depth": 0.875,
-   "x": -34,
-   "y": 50,
+   "x": 81,
+   "y": 41,
    "neighbours": [
     {
      "id": "rel-154",
@@ -19741,8 +19784,8 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 15,
    "depth": 0.913,
-   "x": -5,
-   "y": -63,
+   "x": -6,
+   "y": -64,
    "neighbours": [
     {
      "id": "rel-117",
@@ -19818,10 +19861,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Abel Lima - Faca Não",
    "youtubeCheckedAt": "2026-10-16T23:55:27.855Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1200",
-   "islandId": 38,
+   "islandId": 39,
    "depth": 0.923,
-   "x": -109,
-   "y": -9,
+   "x": 84,
+   "y": -66,
    "neighbours": [
     {
      "id": "rel-232",
@@ -19896,10 +19939,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Casting Spells - Teatray in the Sky [AGV003]",
    "youtubeCheckedAt": "2026-10-16T23:55:36.981Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 40,
+   "islandId": 24,
    "depth": 0.902,
-   "x": -22,
-   "y": 108,
+   "x": 41,
+   "y": 71,
    "neighbours": [
     {
      "id": "rel-154",
@@ -20057,7 +20100,7 @@ window.SEA_DATA = {
    "islandId": 11,
    "depth": 0.892,
    "x": 15,
-   "y": 51,
+   "y": 52,
    "neighbours": [
     {
      "id": "rel-232",
@@ -20131,10 +20174,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Safety Scissors - Blust (Lost At B - Cytrax/2000)",
    "youtubeCheckedAt": "2026-10-16T23:56:13.232Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 17,
+   "islandId": 16,
    "depth": 0.897,
-   "x": -69,
-   "y": 7,
+   "x": 55,
+   "y": 48,
    "neighbours": [
     {
      "id": "rel-154",
@@ -20212,8 +20255,8 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.nts.live/shows/breakfast/episodes/breakfast-gabi-13th-october-2026",
    "islandId": 15,
    "depth": 0.922,
-   "x": -8,
-   "y": -63,
+   "x": -9,
+   "y": -62,
    "neighbours": [
     {
      "id": "rel-117",
@@ -20288,10 +20331,10 @@ window.SEA_DATA = {
    "youtubeTitle": "KV5 - Landslide Victory Vendetta",
    "youtubeCheckedAt": "2026-10-16T23:56:40.745Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 14,
+   "islandId": 29,
    "depth": 0.9,
-   "x": -39,
-   "y": 49,
+   "x": 82,
+   "y": 46,
    "neighbours": [
     {
      "id": "rel-060",
@@ -20444,7 +20487,7 @@ window.SEA_DATA = {
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
    "islandId": 12,
    "depth": 0.886,
-   "x": -57,
+   "x": -56,
    "y": -29,
    "neighbours": [
     {
@@ -20597,10 +20640,10 @@ window.SEA_DATA = {
    "youtubeTitle": "EsDeeKid & Rico Ace - Phantom",
    "youtubeCheckedAt": "2026-10-16T23:57:25.970Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.935,
-   "x": -34,
-   "y": -10,
+   "x": 0,
+   "y": -28,
    "neighbours": [
     {
      "id": "rel-187",
@@ -20718,7 +20761,7 @@ window.SEA_DATA = {
    "artist": "Darso",
    "year": 2003,
    "country": null,
-   "length": null,
+   "length": 285,
    "album": null,
    "label": null,
    "bpm": null,
@@ -20750,10 +20793,10 @@ window.SEA_DATA = {
    "youtubeTitle": "Darso - Bandung Ciparay",
    "youtubeCheckedAt": "2026-10-16T23:57:44.260Z",
    "sourceUrl": "https://www.nts.live/shows/5-gate-temple/episodes/5-gate-temple-5th-august-2025",
-   "islandId": 4,
+   "islandId": 2,
    "depth": 0.907,
-   "x": -30,
-   "y": -7,
+   "x": 5,
+   "y": -24,
    "neighbours": [
     {
      "id": "rel-187",
@@ -20792,7 +20835,7 @@ window.SEA_DATA = {
    "artist": "Granite Slapper",
    "year": 1997,
    "country": null,
-   "length": null,
+   "length": 491,
    "album": null,
    "label": null,
    "bpm": null,
@@ -20826,10 +20869,10 @@ window.SEA_DATA = {
    "youtubeTitle": "granite slapper - turgis 45 (1997)",
    "youtubeCheckedAt": "2026-10-16T23:58:02.513Z",
    "sourceUrl": "https://www.thelotradio.com/shows/special-guests/2026-10-15-1000",
-   "islandId": 20,
+   "islandId": 36,
    "depth": 0.904,
-   "x": -51,
-   "y": -56,
+   "x": 2,
+   "y": -104,
    "neighbours": [
     {
      "id": "rel-154",
@@ -20869,49 +20912,49 @@ window.SEA_DATA = {
    "from": "rel-001",
    "to": "rel-061",
    "score": 0.769,
-   "fromIsland": 19,
-   "toIsland": 6
+   "fromIsland": 18,
+   "toIsland": 8
   },
   {
    "from": "rel-011",
    "to": "rel-061",
    "score": 0.769,
    "fromIsland": 30,
-   "toIsland": 6
+   "toIsland": 8
   },
   {
    "from": "rel-018",
    "to": "rel-061",
    "score": 0.769,
-   "fromIsland": 23,
-   "toIsland": 6
+   "fromIsland": 22,
+   "toIsland": 8
   },
   {
    "from": "rel-024",
    "to": "rel-061",
    "score": 0.769,
-   "fromIsland": 19,
-   "toIsland": 6
+   "fromIsland": 18,
+   "toIsland": 8
   },
   {
    "from": "rel-057",
    "to": "rel-117",
    "score": 0.769,
-   "fromIsland": 28,
-   "toIsland": 13
+   "fromIsland": 23,
+   "toIsland": 14
   },
   {
    "from": "rel-059",
    "to": "rel-232",
    "score": 0.769,
-   "fromIsland": 19,
-   "toIsland": 8
+   "fromIsland": 18,
+   "toIsland": 9
   },
   {
    "from": "rel-060",
    "to": "rel-154",
    "score": 0.769,
-   "fromIsland": 14,
+   "fromIsland": 29,
    "toIsland": 12
   },
   {
@@ -20919,34 +20962,34 @@ window.SEA_DATA = {
    "to": "rel-187",
    "score": 0.769,
    "fromIsland": 0,
-   "toIsland": 4
+   "toIsland": 2
   },
   {
    "from": "rel-065",
    "to": "rel-117",
    "score": 0.769,
    "fromIsland": 27,
-   "toIsland": 13
+   "toIsland": 14
   },
   {
    "from": "rel-067",
-   "to": "rel-087",
+   "to": "rel-203",
    "score": 0.769,
-   "fromIsland": 16,
-   "toIsland": 9
+   "fromIsland": 13,
+   "toIsland": 40
   },
   {
    "from": "rel-069",
    "to": "rel-232",
    "score": 0.769,
-   "fromIsland": 19,
-   "toIsland": 8
+   "fromIsland": 18,
+   "toIsland": 9
   },
   {
    "from": "rel-070",
    "to": "rel-154",
    "score": 0.769,
-   "fromIsland": 5,
+   "fromIsland": 7,
    "toIsland": 12
   },
   {
@@ -20954,91 +20997,91 @@ window.SEA_DATA = {
    "to": "rel-117",
    "score": 0.769,
    "fromIsland": 30,
-   "toIsland": 13
+   "toIsland": 14
   },
   {
    "from": "rel-078",
    "to": "rel-232",
    "score": 0.769,
    "fromIsland": 11,
-   "toIsland": 8
+   "toIsland": 9
   },
   {
    "from": "rel-079",
    "to": "rel-154",
    "score": 0.769,
-   "fromIsland": 24,
+   "fromIsland": 25,
    "toIsland": 12
   },
   {
    "from": "rel-085",
    "to": "rel-117",
    "score": 0.769,
-   "fromIsland": 14,
-   "toIsland": 13
+   "fromIsland": 44,
+   "toIsland": 14
   },
   {
    "from": "rel-086",
    "to": "rel-096",
    "score": 0.769,
-   "fromIsland": 23,
-   "toIsland": 7
-  },
-  {
-   "from": "rel-089",
-   "to": "rel-119",
-   "score": 0.769,
-   "fromIsland": 33,
-   "toIsland": 9
+   "fromIsland": 22,
+   "toIsland": 6
   },
   {
    "from": "rel-090",
    "to": "rel-232",
    "score": 0.769,
    "fromIsland": 35,
-   "toIsland": 8
+   "toIsland": 9
   },
   {
    "from": "rel-091",
    "to": "rel-154",
    "score": 0.769,
-   "fromIsland": 5,
+   "fromIsland": 7,
    "toIsland": 12
   },
   {
    "from": "rel-093",
    "to": "rel-122",
    "score": 0.769,
-   "fromIsland": 28,
-   "toIsland": 2
+   "fromIsland": 23,
+   "toIsland": 4
   },
   {
    "from": "rel-095",
    "to": "rel-117",
    "score": 0.769,
    "fromIsland": 15,
-   "toIsland": 13
+   "toIsland": 14
   },
   {
    "from": "rel-097",
-   "to": "rel-087",
+   "to": "rel-203",
    "score": 0.769,
-   "fromIsland": 16,
-   "toIsland": 9
+   "fromIsland": 13,
+   "toIsland": 40
   },
   {
    "from": "rel-099",
    "to": "rel-232",
    "score": 0.769,
    "fromIsland": 11,
-   "toIsland": 8
+   "toIsland": 9
   },
   {
    "from": "rel-100",
    "to": "rel-154",
    "score": 0.769,
-   "fromIsland": 17,
+   "fromIsland": 16,
    "toIsland": 12
+  },
+  {
+   "from": "rel-102",
+   "to": "rel-187",
+   "score": 0.769,
+   "fromIsland": 17,
+   "toIsland": 2
   }
  ]
 };
