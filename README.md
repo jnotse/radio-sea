@@ -57,6 +57,28 @@ curl -sL "<releases file link>" | npm run catalog:discogs -- -
 
 Already downloaded? `npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz`.
 
+### Guano's facts from Wikipedia
+
+While a song plays, Guano now and then tells you something about its artist
+or genre, taken from the opening of the Wikipedia article. They are looked
+up with [Wikipedia-API](https://pypi.org/project/Wikipedia-API/), so this one
+step needs Python:
+
+```sh
+pip install -r requirements.txt
+npm run catalog:wiki      # on Windows: python scripts/wiki_facts.py, then npm run build-demo:reuse
+git add data demo && git commit -m "Facts for Guano" && git push
+```
+
+An artist's article is only used when it is clearly theirs: the full name as
+its title, or an article that names one of their songs, albums or labels. Run
+it from your own internet connection: Wikipedia refuses scripts from
+cloud servers. Lookups are saved, so a rerun only asks about new genres and
+artists (`python3 scripts/wiki_facts.py --retry-missing` asks again about
+those that found nothing). The facts are Wikipedia text under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); the site
+links each one to its article.
+
 `catalog:youtube` reads only the details YouTube publishes about each video,
 never the audio or video. With a free YouTube Data API key in
 `YOUTUBE_API_KEY` it takes a few seconds; without one it reads the video
@@ -81,4 +103,5 @@ groves. Switching views preserves each map's pan and zoom.
 npm test                       # unit tests
 npx playwright install webkit  # once, for the phone (Safari engine) tests
 npm run test:browser           # desktop and phone browser tests
+npm run test:wiki              # the Wikipedia lookups (needs Python)
 ```

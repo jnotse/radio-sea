@@ -512,6 +512,59 @@
   const GUANO_SAYS = { walk: 'Guano is trotting over to this song.', dance: 'Guano is dancing to this one.',
     vibe: 'Guano has his eyes closed, vibing to this one.', rest: 'Guano lay down for a rest. Press play and he gets back up.',
     idle: 'Guano is waiting by this song.' };
+  // While a song plays, Guano tells a fact from Wikipedia now and then: about
+  // the artist first, then the song's rarer genres before its common ones. The
+  // first comes a few seconds after he starts listening, then one every half
+  // minute; each stays up a while over the map, and in the player with its source.
+  const FACTS = { genres: DATA.facts?.genres ?? {}, artists: DATA.facts?.artists ?? {} };
+  const FACT_DELAY = 3500, FACT_EVERY = 30000, FACT_SHOWN = 10000;
+  const talk = { id: null, facts: [], index: 0, next: 0, until: 0, current: null };
+  function factsFor(r) {
+    const rarestFirst = genres(r).sort((a, b) => (tagCounts.get(a) ?? 0) - (tagCounts.get(b) ?? 0));
+    const found = [FACTS.artists[r.artist], ...rarestFirst.map((g) => FACTS.genres[g])].filter(Boolean);
+    return found.filter((fact, i) => found.findIndex((other) => other.url === fact.url) === i);
+  }
+  function showFact(fact) {
+    $('guano-fact').hidden = !fact;
+    if (!fact) return;
+    $('guano-fact-text').textContent = fact.text;
+    $('guano-fact-link').textContent = `Wikipedia: ${fact.title} ↗`;
+    // Only ever link to Wikipedia itself.
+    if (/^https:\/\/[a-z-]+\.wikipedia\.org\//.test(fact.url)) $('guano-fact-link').href = fact.url;
+    else $('guano-fact-link').removeAttribute('href');
+  }
+  /** What Guano is saying (or null), and how long until that changes. */
+  function guanoTalk(now, mood, r) {
+    if (talk.id !== (r?.id ?? null)) {
+      Object.assign(talk, { id: r?.id ?? null, facts: r ? factsFor(r) : [], index: 0, next: 0, until: 0, current: null });
+      showFact(null);
+    }
+    if ((mood !== 'dance' && mood !== 'vibe') || !talk.facts.length) { talk.next = talk.until = 0; return { fact: null, wait: Infinity }; }
+    if (!talk.next) talk.next = now + FACT_DELAY;
+    if (now >= talk.next) {
+      talk.current = talk.facts[talk.index++ % talk.facts.length];
+      talk.until = now + FACT_SHOWN; talk.next = now + FACT_EVERY;
+      showFact(talk.current);
+    }
+    const speaking = now < talk.until;
+    return { fact: speaking ? talk.current : null, wait: (speaking ? talk.until : talk.next) - now };
+  }
+  function placeBubble(fact, feetX, feetY, y0, w) {
+    const bubble = $('guano-bubble');
+    bubble.hidden = !fact;
+    if (!fact) return;
+    if (bubble.dataset.url !== fact.url) {
+      bubble.replaceChildren(node('span', fact.text), node('span', 'Wikipedia', 'credit'));
+      bubble.dataset.url = fact.url;
+    }
+    // Over his head, kept inside the map, or under his hooves when the top is too close.
+    const half = bubble.offsetWidth / 2, left = Math.max(half + 4, Math.min(w - half - 4, feetX));
+    const above = y0 - 8 - bubble.offsetHeight >= 4;
+    bubble.classList.toggle('below', !above);
+    bubble.style.left = `${Math.round(left)}px`;
+    bubble.style.top = `${Math.round(above ? y0 - 8 : feetY + 8)}px`;
+    bubble.style.setProperty('--tail', `calc(50% + ${Math.round(feetX - left)}px)`);
+  }
   function drawGuano(w, h) {
     if (!guano.placed) return;
     const now = performance.now(), { scale, feetX, feetY, x0, y0, facingLeft } = guanoPose(w, h, now);
@@ -526,12 +579,16 @@
     Object.assign(canvas.dataset, { guano: mood, guanoX: String(Math.round(feetX)), guanoY: String(Math.round(feetY)),
       guanoFacing: facingLeft ? 'left' : 'right' });
     if ($('guano-says').textContent !== GUANO_SAYS[mood]) $('guano-says').textContent = GUANO_SAYS[mood];
-    // Redraw while he moves: every frame while walking, otherwise when his picture next changes.
-    clearTimeout(guanoTimer); cancelAnimationFrame(guanoFrame);
     const onScreen = feetX > -60 && feetX < w + 60 && feetY > -60 && feetY < h + 60;
-    if (document.hidden || (still && !walk)) return;
-    if (walk) guanoFrame = requestAnimationFrame(draw);
-    else if (onScreen) guanoTimer = setTimeout(draw, window.Guano.wait(mood, now, { bpm: r?.bpm }));
+    const said = guanoTalk(now, mood, r);
+    placeBubble(onScreen ? said.fact : null, feetX, feetY, y0, w);
+    // Redraw while he moves: every frame while walking, otherwise when his
+    // picture or what he says next changes.
+    clearTimeout(guanoTimer); cancelAnimationFrame(guanoFrame);
+    if (document.hidden) return;
+    if (walk) { guanoFrame = requestAnimationFrame(draw); return; }
+    const delay = Math.min(onScreen && !still ? window.Guano.wait(mood, now, { bpm: r?.bpm }) : Infinity, said.wait);
+    if (Number.isFinite(delay)) guanoTimer = setTimeout(draw, Math.max(16, delay + 5));
   }
   document.addEventListener('visibilitychange', () => { if (!document.hidden) draw(); });
   function resize() {

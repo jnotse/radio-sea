@@ -52,6 +52,17 @@ code { color: var(--gold); }
 .guano-face.large { width: 64px; height: 64px; background: var(--recess); border: 2px solid; border-color: var(--edge-dark) var(--edge-light) var(--edge-light) var(--edge-dark); }
 .guano-line { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .guano-line p { margin: 0; color: var(--text); }
+/* What Guano says while a song plays: a fact from Wikipedia, credited. */
+#guano-fact { margin: 0 0 10px; padding: 7px 9px; background: var(--recess); border: 2px solid var(--edge-dark); color: var(--text); }
+#guano-fact a { display: inline-block; margin-top: 2px; font: 8px var(--pixel); color: var(--glacier); }
+#guano-bubble { position: absolute; z-index: 3; pointer-events: none; width: max-content; max-width: min(240px, calc(100% - 16px));
+  padding: 6px 8px 5px; transform: translate(-50%, -100%); background: #fff8ea; color: var(--wood-ink);
+  border: 2px solid #3a261e; box-shadow: 3px 3px 0 #3a261e55; font: 11px/1.4 Tahoma, Verdana, sans-serif; }
+#guano-bubble.below { transform: translate(-50%, 0); }
+#guano-bubble::after { content: ''; position: absolute; top: 100%; left: var(--tail, 50%); width: 10px; height: 7px; margin-left: -5px;
+  background: #3a261e; clip-path: polygon(0 0, 100% 0, 30% 100%); }
+#guano-bubble.below::after { top: auto; bottom: 100%; clip-path: polygon(30% 0, 100% 100%, 0 100%); }
+#guano-bubble .credit { display: block; margin-top: 3px; font: 7px var(--pixel); color: #7a5a40; letter-spacing: .5px; text-transform: uppercase; }
 h1 { font: 18px var(--pixel); letter-spacing: -1px; margin: 0; color: var(--text); }
 .edition { font: 8px var(--pixel); color: var(--glacier); }
 

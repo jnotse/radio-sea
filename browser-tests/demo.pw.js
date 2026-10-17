@@ -498,3 +498,38 @@ test('with reduced motion Guano moves without walking; he is in the 3D view too'
   expect(g.x).toBeGreaterThan(0); expect(g.x).toBeLessThan(g.w);
   expect(g.y).toBeGreaterThan(0); expect(g.y).toBeLessThan(g.h);
 });
+
+test('while a song plays, Guano tells a fact from Wikipedia, and the player credits it', async ({ page }) => {
+  // Give one song's artist a fact before the map loads.
+  await page.addInitScript(() => {
+    let data;
+    Object.defineProperty(window, 'SEA_DATA', { configurable: true, get: () => data, set: (value) => {
+      const song = value.releases[1];
+      value.facts = { genres: {}, artists: { [song.artist]: { title: 'Test Artist', url: 'https://en.wikipedia.org/wiki/Test_Artist',
+        text: 'Test Artist is a band from the steppe that plays very long songs.' } } };
+      window.__factSong = song.id; data = value;
+    } });
+  });
+  await page.goto('/');
+  const id = await page.evaluate(() => window.__factSong);
+  const name = await page.evaluate((trackId) => window.SEA_DATA.releases.find((r) => r.id === trackId).name, id);
+  await page.locator('#search').fill(name);
+  await page.locator(`#search-results button[data-track-id="${id}"]`).click();
+  const canvas = page.locator('#sea');
+  await expect(canvas).not.toHaveAttribute('data-guano', 'walk', { timeout: 6000 });
+  await expect(page.locator('#guano-bubble')).toBeHidden();
+  await page.evaluate(() => window.__playerOptions.events.onStateChange({ data: 1 }));
+  await expect(page.locator('#guano-bubble')).toBeVisible({ timeout: 6000 });
+  await expect(page.locator('#guano-bubble')).toContainText('plays very long songs');
+  await expect(page.locator('#guano-fact')).toBeVisible();
+  await expect(page.locator('#guano-fact-link')).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Test_Artist');
+  await expect(page.locator('#guano-fact-link')).toHaveText(/Wikipedia: Test Artist/);
+  // The bubble stays inside the map, near Guano.
+  const map = await page.locator('#map-wrap').boundingBox(), bubble = await page.locator('#guano-bubble').boundingBox();
+  expect(bubble.x).toBeGreaterThanOrEqual(map.x); expect(bubble.x + bubble.width).toBeLessThanOrEqual(map.x + map.width);
+  // Paused, he lies down and stops talking; the fact stays in the player.
+  await page.locator('#transport-play').click();
+  await expect(canvas).toHaveAttribute('data-guano', 'rest');
+  await expect(page.locator('#guano-bubble')).toBeHidden();
+  await expect(page.locator('#guano-fact')).toBeVisible();
+});

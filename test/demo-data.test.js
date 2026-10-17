@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { mergeCatalogue } from '../src/catalog/resolve.js';
-import { interleavePlays, playToRaw, withOwnGenres } from '../scripts/build-demo.js';
+import { factsOnMap, interleavePlays, playToRaw, withOwnGenres } from '../scripts/build-demo.js';
 import { songKey } from '../src/catalog/extend.js';
 
 const sample = { station: 'nts', artist: 'Artist', title: 'Song', show: 'Show',
@@ -105,4 +105,18 @@ test('richer descriptors (instruments, credits, formats, curator channels and co
   assert.ok(releases[0].tags.all.includes('credit:larry heard'));
   assert.ok(releases[0].tags.all.includes('format:12"'));
   assert.ok(releases[0].tags.all.includes('channel:Shindō Vibrations'));
+});
+
+test('only facts for genres and artists on the map go into it, with their credit', () => {
+  const wiki = {
+    genres: { kuduro: { title: 'Kuduro', url: 'https://en.wikipedia.org/wiki/Kuduro', text: 'Kuduro is music from Angola.' },
+      polka: { title: 'Polka', url: 'u', text: 'Polka is a dance.' }, 'new wave': null },
+    artists: { 'Buraka Som Sistema': { title: 'Buraka Som Sistema', url: 'v', text: 'A Portuguese band.' }, Nobody: null },
+  };
+  const releases = [{ artist: 'Buraka Som Sistema', tags: ['kuduro', 'new wave', 'show-genre:polka', 'station:nts'] }, { artist: 'Nobody', tags: [] }];
+  assert.deepEqual(factsOnMap(releases, wiki), {
+    genres: { kuduro: { title: 'Kuduro', url: 'https://en.wikipedia.org/wiki/Kuduro', text: 'Kuduro is music from Angola.' } },
+    artists: { 'Buraka Som Sistema': { title: 'Buraka Som Sistema', url: 'v', text: 'A Portuguese band.' } },
+  });
+  assert.deepEqual(factsOnMap(releases), { genres: {}, artists: {} }, 'nothing looked up yet');
 });
