@@ -27,6 +27,7 @@ import { fetchRadioPlays, RADIO_STATIONS } from '../src/catalog/radio.js';
 import { resolvePlaysToYoutube } from '../src/catalog/youtube.js';
 import { mergeCatalogue } from '../src/catalog/resolve.js';
 import { RadioSeaDiscovery } from '../src/engine.js';
+import { regionName } from '../src/mapping/cartography.js';
 import { candidateMatch } from '../src/catalog/youtube.js';
 import { extendRadioCache, songKey } from '../src/catalog/extend.js';
 import { lookupGenresForPlays } from '../src/catalog/genres.js';
@@ -428,6 +429,10 @@ async function main() {
   }
 
   const tradeRoutes = engine.tradeRoutes({ minScore: 0.15 }).slice(0, 25);
+  const islands = engine.islands.map((island) => ({
+    ...island,
+    name: island.basis === 'station' ? RADIO_STATIONS.find((s) => s.id === island.name)?.label ?? island.name : island.name,
+  }));
 
   const payload = {
     generatedAt: new Date().toISOString(),
@@ -443,9 +448,10 @@ async function main() {
       merged: releases.length,
       islands: engine.islands.length,
     },
-    islands: engine.islands.map((island) => ({
-      ...island,
-      name: island.basis === 'station' ? RADIO_STATIONS.find((s) => s.id === island.name)?.label ?? island.name : island.name,
+    islands,
+    regions: engine.regions.map((region) => ({
+      ...region,
+      name: regionName(region.islandIds.map((id) => islands.find((island) => island.id === id).name)),
     })),
     releases: releases.map((release) => {
       const placement = engine.mapPlacement(release.id);

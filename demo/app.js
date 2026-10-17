@@ -115,6 +115,43 @@
   // How big a song's square is drawn in the 2D map (signs and Guano make room for it); the 3D view sizes by depth.
   const songSize = () => (state.viewMode === '3d' ? Math.round(Math.max(6, Math.min(14, state.cam3d.zoom * .78)))
     : Math.round(Math.max(3, Math.min(14, state.cam.zoom * 1.7))));
+  // The 2D map has levels of detail, like an atlas. Far out it shows regions,
+  // stretches of related groves; nearer, each grove as one patch with its
+  // sign; close in, every song. Each level shows once its places stand far
+  // enough apart on screen to read, so the map stays legible however many
+  // songs it holds. Pressing a region or grove flies in to the next level.
+  const groves = DATA.islands.map((island) => {
+    const songs = island.memberIds.map((id) => byId.get(id)).filter(Boolean);
+    const x = songs.reduce((sum, r) => sum + r.x, 0) / songs.length, y = songs.reduce((sum, r) => sum + r.y, 0) / songs.length;
+    return { kind: 'grove', id: island.id, name: island.name, songs, x, y,
+      reach: Math.max(0, ...songs.map((r) => Math.hypot(r.x - x, r.y - y))) + 2 };
+  }).filter((grove) => grove.songs.length);
+  const groveById = new Map(groves.map((grove) => [grove.id, grove]));
+  const regions = (DATA.regions ?? []).map((region) => {
+    const members = region.islandIds.map((id) => groveById.get(id)).filter(Boolean);
+    return { kind: 'region', id: region.id, name: region.name, groves: members, songs: members.flatMap((g) => g.songs),
+      x: region.centre.x, y: region.centre.y, reach: region.radius };
+  }).filter((region) => region.groves.length);
+  const SONG_ZOOM = 4; // songs stand 3 apart: 12 px
+  const groveGaps = groves.map((g) => Math.min(...groves.filter((o) => o !== g).map((o) => Math.hypot(o.x - g.x, o.y - g.y))))
+    .filter(Number.isFinite).sort((a, b) => a - b);
+  const GROVE_ZOOM = regions.length && groveGaps.length
+    ? Math.min(SONG_ZOOM * 0.75, 44 / groveGaps[Math.floor(groveGaps.length / 2)]) : 0;
+  const mapLevel = () => (state.cam.zoom >= SONG_ZOOM ? 'songs' : state.cam.zoom >= GROVE_ZOOM ? 'groves' : 'regions');
+  // Songs grow out of their grove as you zoom in to them, and fold back in.
+  const opening = { value: -1, at: 0 };
+  let openingFrame = null;
+  function openness(now) {
+    const target = mapLevel() === 'songs' ? 1 : 0;
+    if (opening.value < 0 || opening.value === target || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      Object.assign(opening, { value: target, at: now }); return target;
+    }
+    const step = Math.min(50, now - opening.at) / 320;
+    opening.at = now;
+    opening.value = target > opening.value ? Math.min(1, opening.value + step) : Math.max(0, opening.value - step);
+    if (opening.value !== target && openingFrame === null) openingFrame = requestAnimationFrame(() => { openingFrame = null; draw(); });
+    return opening.value;
+  }
   function project3D(wx, wy, wz, w = canvas.clientWidth, h = canvas.clientHeight) {
     const dx = wx - state.cam3d.x, dy = wy - state.cam3d.y, dz = wz - state.cam3d.z;
     const cy = Math.cos(state.cam3d.yaw), sy = Math.sin(state.cam3d.yaw);
@@ -173,17 +210,32 @@
       }
       animation = requestAnimationFrame(step3d); return;
     }
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      Object.assign(state.cam, { x: r.x, y: r.y, zoom: Math.max(state.cam.zoom, 14) }); draw(); return;
-    }
-    const from = { ...state.cam }, start = performance.now(), targetZoom = Math.max(from.zoom, 14);
+    flyCamera({ x: r.x, y: r.y, zoom: Math.max(state.cam.zoom, 14) });
+  }
+  function flyCamera(target, duration = 300) {
+    cancelFly();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { Object.assign(state.cam, target); draw(); return; }
+    const from = { ...state.cam }, start = performance.now();
     function step(now) {
-      const t = Math.min(1, (now - start) / 300), e = 1 - (1 - t) ** 3;
-      Object.assign(state.cam, { x: from.x + (r.x - from.x) * e, y: from.y + (r.y - from.y) * e,
-        zoom: from.zoom + (targetZoom - from.zoom) * e });
+      const t = Math.min(1, (now - start) / duration), e = 1 - (1 - t) ** 3;
+      Object.assign(state.cam, { x: from.x + (target.x - from.x) * e, y: from.y + (target.y - from.y) * e,
+        zoom: from.zoom + (target.zoom - from.zoom) * e });
       draw(); animation = t < 1 ? requestAnimationFrame(step) : null;
     }
     animation = requestAnimationFrame(step);
+  }
+  /**
+   * Fly in to a grove, centring it as it opens; or to a region, zooming in
+   * around the pressed point so what was under it stays there.
+   */
+  function openPlace(place, at) {
+    const w = canvas.clientWidth, h = canvas.clientHeight, fit = Math.min(w, h) / (2 * (place.reach + 6));
+    if (place.kind === 'grove') {
+      flyCamera({ x: place.x, y: place.y, zoom: Math.max(SONG_ZOOM * 1.25, Math.min(7, fit)) }, 450); return;
+    }
+    const zoom = Math.max(GROVE_ZOOM * 1.2, Math.min(SONG_ZOOM * 0.9, fit)), { x, y } = at;
+    const world = { x: state.cam.x + (x - w / 2) / state.cam.zoom, y: state.cam.y + (y - h / 2) / state.cam.zoom };
+    flyCamera({ x: world.x - (x - w / 2) / zoom, y: world.y - (y - h / 2) / zoom, zoom }, 450);
   }
   function zoomAt(factor, x = canvas.clientWidth / 2, y = canvas.clientHeight / 2) {
     cancelFly();
@@ -383,12 +435,21 @@
       pendingLand = requestAnimationFrame(() => { pendingLand = null; draw(); });
     }
     landDrawn = true;
+    const level = mapLevel(), open = openness(performance.now()), spread = 1 - (1 - open) ** 3;
+    Object.assign(canvas.dataset, { level, open: String(open) });
+    showHint(level === 'songs');
     if (state.showRoutes) {
+      // Trails run between songs, or between their groves while those are closed.
       ctx.strokeStyle = '#5a3b26cc'; ctx.setLineDash([2, 4]);
+      const drawn = new Set();
       for (const r of DATA.tradeRoutes) {
         const a = byId.get(r.from), b = byId.get(r.to);
         if (!passesFilter(a) || !passesFilter(b)) continue;
-        const p = toScreen(a.x, a.y), q = toScreen(b.x, b.y);
+        const [from, to] = open === 1 ? [a, b] : [groveById.get(a.islandId) ?? a, groveById.get(b.islandId) ?? b];
+        const key = open === 1 ? '' : [a.islandId, b.islandId].sort().join('>');
+        if (key && drawn.has(key)) continue;
+        drawn.add(key);
+        const p = toScreen(from.x, from.y), q = toScreen(to.x, to.y);
         ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
       }
       ctx.setLineDash([]);
@@ -401,9 +462,14 @@
       }); ctx.stroke(); ctx.lineWidth = 1;
     }
     for (const r of releases) {
-      const projected = toScreen(r.x, r.y), p = { x: Math.round(projected.x), y: Math.round(projected.y) };
+      // While its grove is closed only the current song shows, so you can see where Guano is.
+      const current = r.id === state.selected;
+      if (!open && !current) continue;
+      const g = current ? r : groveById.get(r.islandId) ?? r;
+      const projected = toScreen(g.x + (r.x - g.x) * spread, g.y + (r.y - g.y) * spread);
+      const p = { x: Math.round(projected.x), y: Math.round(projected.y) };
       const size = songSize();
-      ctx.globalAlpha = passesFilter(r) ? 1 : .2;
+      ctx.globalAlpha = (passesFilter(r) ? 1 : .2) * (current ? 1 : open);
       // Each song is a small cabin-dark square with a lamp-lit centre.
       if (size >= 5) {
         ctx.fillStyle = '#f6ead2'; ctx.fillRect(Math.round(p.x - size / 2) - 1, Math.round(p.y - size / 2) - 1, size + 2, size + 2);
@@ -417,8 +483,100 @@
       }
     }
     ctx.globalAlpha = 1;
-    drawIslandLabels(w, h);
+    if (open === 1) drawIslandLabels(w, h);
+    else drawPlaceSigns(w, h, level === 'regions' ? regions : groves, 1 - open);
     drawGuano(w, h);
+  }
+  function showHint(songs) {
+    const [desktop, touch] = songs ? ['CLICK A SQUARE TO PLAY', 'TAP TO PLAY · PINCH TO ZOOM']
+      : ['CLICK A GROVE TO OPEN IT', 'TAP A GROVE TO OPEN IT · PINCH TO ZOOM'];
+    const desktopHint = document.querySelector('#map-help .desktop-hint'), touchHint = document.querySelector('#map-help .touch-hint');
+    if (desktopHint && desktopHint.textContent !== desktop) desktopHint.textContent = desktop;
+    if (touchHint && touchHint.textContent !== touch) touchHint.textContent = touch;
+  }
+  // What signs keep clear of: the hint, status and zoom buttons floating over
+  // the map, and Guano while he stands still (walking, he passes over them).
+  function signObstacles(w, h) {
+    const frame = canvas.getBoundingClientRect();
+    const placed = ['map-help', 'map-status', 'map-controls'].map($).filter((el) => el && !el.hidden).map((el) => {
+      const r = el.getBoundingClientRect();
+      return { x: r.left - frame.left, y: r.top - frame.top, w: r.width, h: r.height };
+    });
+    if (guano.placed && !guano.walk) {
+      const g = guanoPose(w, h);
+      placed.push({ x: g.x0, y: g.y0, w: 24 * g.scale, h: 24 * g.scale });
+    }
+    return placed;
+  }
+  const overlaps = (box, placed) => placed.some((o) => box.x < o.x + o.w + 4 && o.x < box.x + box.w + 4 && box.y < o.y + o.h + 2 && o.y < box.y + box.h + 2);
+  // Closed groves and regions each get one sign over their middle, naming
+  // them and counting their songs (those matching the filters, if any). The
+  // current song's place and bigger places choose first. Where a region's
+  // sign would overlap another it drops its last style or moves aside;
+  // otherwise a sign waits until zooming in makes room. Places with
+  // nothing matching fade.
+  let placeSigns = [];
+  function drawPlaceSigns(w, h, places, alpha) {
+    const current = byId.get(state.selected)?.islandId;
+    const holds = (place) => (place.kind === 'grove' ? place.id === current : place.groves.some((g) => g.id === current));
+    const filtering = state.tags.size > 0 || state.query !== '';
+    const placed = signObstacles(w, h), overlays = placed.length;
+    placeSigns = [];
+    const big = places[0]?.kind === 'region';
+    for (const place of places.slice().sort((a, b) => holds(b) - holds(a) || b.songs.length - a.songs.length)) {
+      const p = toScreen(place.x, place.y);
+      const matching = filtering ? place.songs.filter(passesFilter).length : place.songs.length;
+      const count = big ? `${matching} SONGS · ${place.groves.length} GROVES` : String(matching);
+      const parts = place.name.trim().toUpperCase().split(' · ');
+      const names = big ? parts.map((_, i) => parts.slice(0, parts.length - i).join(' · '))
+        .filter((name, i, all) => name.length <= 30 || i === all.length - 1) : [parts.join(' · ')];
+      let label, nameWidth, countWidth, width, box;
+      const height = big ? 27 : 15;
+      for (const name of names) {
+        label = name.length > 30 ? `${name.slice(0, 29).trimEnd()}…` : name;
+        ctx.font = big ? '10px Silkscreen, monospace' : '9px Silkscreen, monospace';
+        nameWidth = ctx.measureText(label).width;
+        ctx.font = '8px Silkscreen, monospace';
+        countWidth = ctx.measureText(count).width;
+        width = Math.ceil(big ? Math.max(nameWidth, countWidth) + 14 : nameWidth + countWidth + 18);
+        // A region's sign can also stand on one of its largest groves.
+        const spots = big ? [[0, 0], [0, -(height + 6)], [0, height + 6], [-(width / 2 + 6), 0], [width / 2 + 6, 0]]
+          .map(([dx, dy]) => ({ x: p.x + dx, y: p.y + dy })).concat(place.groves.slice(0, 3).map((g) => toScreen(g.x, g.y))) : [p];
+        box = spots.map((spot) => ({ x: Math.round(spot.x - width / 2), y: Math.round(spot.y - height / 2), w: width, h: height }))
+          .find((b) => b.x >= 2 && b.x + b.w <= w - 2 && b.y >= 2 && b.y + b.h <= h - 2 && !overlaps(b, placed));
+        if (box) break;
+      }
+      if (!box) continue;
+      placed.push(box); placeSigns.push({ place, box });
+      ctx.globalAlpha = alpha * (matching ? 1 : .35);
+      ctx.fillStyle = big ? '#3a261e' : '#4a3328'; ctx.fillRect(box.x - (big ? 2 : 1), box.y - (big ? 2 : 1), box.w + (big ? 4 : 2), box.h + (big ? 4 : 2));
+      ctx.fillStyle = holds(place) ? '#fff8ea' : '#f1dfb8'; ctx.fillRect(box.x, box.y, box.w, box.h);
+      ctx.textAlign = 'left';
+      if (big) {
+        ctx.font = '10px Silkscreen, monospace'; ctx.fillStyle = '#3a2a22';
+        ctx.fillText(label, Math.round(box.x + (box.w - nameWidth) / 2), box.y + 12);
+        ctx.font = '8px Silkscreen, monospace'; ctx.fillStyle = '#8a5a3a';
+        ctx.fillText(count, Math.round(box.x + (box.w - countWidth) / 2), box.y + 22);
+      } else {
+        ctx.font = '9px Silkscreen, monospace'; ctx.fillStyle = '#3a2a22'; ctx.fillText(label, box.x + 6, box.y + 10);
+        ctx.font = '8px Silkscreen, monospace'; ctx.fillStyle = '#8a5a3a'; ctx.fillText(count, box.x + width - 6 - countWidth, box.y + 10);
+      }
+    }
+    ctx.globalAlpha = 1; ctx.textAlign = 'center';
+    canvas.dataset.labels = String(placed.length - overlays);
+  }
+  /** The closed grove or region under a point: its sign, else the patch itself. */
+  function placeAt(event) {
+    if (state.viewMode === '3d' || mapLevel() === 'songs') return null;
+    const rect = canvas.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
+    const sign = placeSigns.find(({ box }) => x >= box.x - 2 && x <= box.x + box.w + 2 && y >= box.y - 2 && y <= box.y + box.h + 2);
+    if (sign) return sign.place;
+    let best = null, nearest = Infinity;
+    for (const place of mapLevel() === 'regions' ? regions : groves) {
+      const p = toScreen(place.x, place.y), d = Math.hypot(p.x - x, p.y - y) / Math.max(14, place.reach * state.cam.zoom);
+      if (d <= 1 && d < nearest) { best = place; nearest = d; }
+    }
+    return best;
   }
   // Signs never overlap each other or cover a song: each goes just above its
   // grove's songs, or below them, or waits until zooming in makes room. The
@@ -432,19 +590,9 @@
       .sort((a, b) => (b.id === current) - (a.id === current) || b.memberIds.length - a.memberIds.length);
     const size = songSize() + 6;
     const songs = releases.map((r) => screenPos(r, w, h));
-    // The hint, status and zoom buttons float over the map; signs stay clear of them.
-    const frame = canvas.getBoundingClientRect();
-    const placed = ['map-help', 'map-status', 'map-controls'].map($).filter((el) => el && !el.hidden).map((el) => {
-      const r = el.getBoundingClientRect();
-      return { x: r.left - frame.left, y: r.top - frame.top, w: r.width, h: r.height };
-    });
-    // They keep clear of Guano too while he stands still; walking, he passes over them.
-    if (guano.placed && !guano.walk) {
-      const g = guanoPose(w, h);
-      placed.push({ x: g.x0, y: g.y0, w: 24 * g.scale, h: 24 * g.scale });
-    }
-    const overlays = placed.length;
-    const clear = (box) => !placed.some((o) => box.x < o.x + o.w + 4 && o.x < box.x + box.w + 4 && box.y < o.y + o.h + 2 && o.y < box.y + box.h + 2) &&
+    const placed = signObstacles(w, h), overlays = placed.length;
+    placeSigns = [];
+    const clear = (box) => !overlaps(box, placed) &&
       !songs.some((p) => p.x + size / 2 > box.x && p.x - size / 2 < box.x + box.w && p.y + size / 2 > box.y && p.y - size / 2 < box.y + box.h);
     ctx.font = '9px Silkscreen, monospace'; ctx.textAlign = 'center';
     for (const island of order) {
@@ -595,6 +743,7 @@
   }
   document.fonts?.ready.then(draw);
   function tileAt(event) {
+    if (state.viewMode === '2d' && mapLevel() !== 'songs') return null;
     const rect = canvas.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
     const activeZoom = state.viewMode === '3d' ? state.cam3d.zoom : state.cam.zoom;
     let best = null, distance = event.pointerType === 'touch' ? 22 : Math.max(7, Math.min(12, activeZoom * .5));
@@ -649,11 +798,15 @@
       pointer.x = e.clientX; pointer.y = e.clientY; return;
     }
     if (e.pointerType === 'touch') return;
-    const r = tileAt(e); state.hovered = r?.id ?? null;
-    $('tooltip').hidden = !r;
-    if (r) {
+    const place = placeAt(e), r = place ? null : tileAt(e);
+    state.hovered = r?.id ?? null;
+    canvas.classList.toggle('over-place', !!place);
+    $('tooltip').hidden = !r && !place;
+    if (r || place) {
       const rect = canvas.getBoundingClientRect();
-      $('tooltip').textContent = `${r.artist} — ${r.name}`;
+      $('tooltip').textContent = r ? `${r.artist} — ${r.name}` : place.kind === 'grove'
+        ? `${place.name} · ${place.songs.length} songs. Click to open.`
+        : `${place.name} · ${place.songs.length} songs in ${place.groves.length} groves. Click to look closer.`;
       $('tooltip').style.left = `${Math.min(e.clientX - rect.left + 12, Math.max(0, rect.width - 260))}px`;
       $('tooltip').style.top = `${Math.min(e.clientY - rect.top + 12, rect.height - 70)}px`;
     }
@@ -665,8 +818,11 @@
     pointers.delete(e.pointerId);
     if (!pointers.size) canvas.classList.remove('dragging');
     if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
-    // Pressing a square plays it.
-    if (click) { const r = tileAt(e); if (r) playTrack(r.id); }
+    // Pressing a square plays it; pressing a closed grove or region flies in to it.
+    if (click) {
+      const place = placeAt(e), r = place ? null : tileAt(e), rect = canvas.getBoundingClientRect();
+      if (place) openPlace(place, { x: e.clientX - rect.left, y: e.clientY - rect.top }); else if (r) playTrack(r.id);
+    }
   }
   canvas.addEventListener('pointerup', (e) => finishPointer(e, true));
   for (const type of ['pointercancel', 'lostpointercapture']) canvas.addEventListener(type, (e) => finishPointer(e, false));
@@ -1010,8 +1166,8 @@
       if ($('map-window-title')) $('map-window-title').textContent = is3d ? '3d topology · nerve & cycles' : 'the steppe';
       const desktopHint = document.querySelector('#map-help .desktop-hint');
       const touchHint = document.querySelector('#map-help .touch-hint');
-      if (desktopHint) desktopHint.textContent = is3d ? 'DRAG TO ORBIT 3D · CLICK TO PLAY' : 'CLICK A SQUARE TO PLAY';
-      if (touchHint) touchHint.textContent = is3d ? 'DRAG TO ORBIT 3D · TAP TO PLAY' : 'TAP TO PLAY · PINCH TO ZOOM';
+      if (is3d && desktopHint) desktopHint.textContent = 'DRAG TO ORBIT 3D · CLICK TO PLAY';
+      if (is3d && touchHint) touchHint.textContent = 'DRAG TO ORBIT 3D · TAP TO PLAY';
       if (is3d && !fitted3D) fitView();
       else draw();
       if (is3d && orbitFrame === null) {

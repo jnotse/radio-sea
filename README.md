@@ -7,9 +7,15 @@ Radio, plus picks from Radiooooo, finds each song on YouTube, and lays
 everything out as a Patagonian steppe seen from above. Songs that sound alike
 grow together as groves of bushes (lenga forests, calafate and neneo
 thickets), with the Andes, glacial lakes and rivers in the open ground and
-trails leading to related groves. Press a square to play it; when a song ends
-the music wanders on to the nearest song you haven't heard, so you can leave
-it running.
+trails leading to related groves.
+
+The map reads like an atlas. Far out, it shows regions, stretches of related
+groves named after their biggest ones ("dub · downtempo · drum n bass");
+nearer, each grove is one patch with its sign and how many songs it holds;
+close in, the grove opens and its songs come out as squares. Press a region
+or a grove to fly in to it, and a square to play it. When a song ends the
+music wanders on to the nearest song you haven't heard, so you can leave it
+running.
 
 Guano, a guanaco drawn from a souvenir plush made in Magallanes, Chile, walks
 the map with you. He trots over to each song as it starts, dances to upbeat
@@ -141,8 +147,8 @@ mood and radio context for songs without genres. A style ("new wave",
 "electronic"), and a compilation's styles, which describe the whole record,
 count for less than a song's own. The groves are packed around the biggest
 one, each next to the groves it is most like, so the map grows only as fast
-as its songs do; zoomed out, only groves big enough on screen show their
-signs. Instruments,
+as its songs do. Neighbouring groves that sound alike join into regions of
+similar size, about √(groves) of them. Instruments,
 credits, formats, uploader channels, co-play sequence and spectral audio
 descriptors can inform discovery and the 3D topology without moving its
 groves. Switching views preserves each map's pan and zoom.

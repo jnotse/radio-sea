@@ -13,7 +13,9 @@
 // 3. shores   — releases inside an island fill a compact grove ordered by era
 //               and relaxed by pairwise similarity, so the coastline walks
 //               smoothly through the island's variants.
-// 4. depth    — each release gets a depth value: how deep-cut / unexplored it
+// 4. regions  — neighbouring islands that sound alike join into regions, so
+//               a map of thousands of islands can still be read from afar.
+// 5. depth    — each release gets a depth value: how deep-cut / unexplored it
 //               is (isolation + low cross-source agreement). Depth can be
 //               rendered as water darkening.
 //
@@ -287,6 +289,79 @@ function arrangeIslands(islands, links, rand) {
   }));
 }
 
+// Regions: islands that touch on the map merge, the two most alike first
+// (average linkage over their songs), until about √(islands) remain. No
+// region may grow past one and a half times the average size, or one sound
+// would swallow the map; a region left small by that joins the neighbour it
+// is most like. Since only touching islands merge, every region is one
+// stretch of land. A region is named after its largest islands. Small maps have no
+// regions.
+const MIN_REGION_ISLANDS = 12;
+
+/** A region's name from its islands' names, largest first: "dub · house · breakbeat". */
+export function regionName(islandNames) {
+  return [...new Set(islandNames.map((name) => name.replace(/ \(\d+\)$/, '')))].slice(0, 3).join(' · ');
+}
+
+function regionsOf(centres, links) {
+  const k = centres.length;
+  if (k < MIN_REGION_ISLANDS) return [];
+  const size = centres.map((c) => c.island.members.length);
+  const link = Float64Array.from(links);
+  const groups = centres.map((_, i) => [i]);
+  const near = centres.map((a, i) => new Set(centres.flatMap((b, j) => (j !== i &&
+    Math.hypot(a.x - b.x, a.y - b.y) <= a.radius + b.radius + GROUND * 2 ? [j] : []))));
+  const target = Math.max(4, Math.round(Math.sqrt(k)));
+  const cap = Math.ceil((1.5 * size.reduce((sum, n) => sum + n, 0)) / target);
+  const merge = (a, b) => {
+    for (let c = 0; c < k; c += 1) {
+      if (!groups[c] || c === a || c === b) continue;
+      const value = (size[a] * link[a * k + c] + size[b] * link[b * k + c]) / (size[a] + size[b]);
+      link[a * k + c] = value;
+      link[c * k + a] = value;
+    }
+    size[a] += size[b];
+    groups[a].push(...groups[b]);
+    groups[b] = null;
+    for (const c of near[b]) {
+      near[c].delete(b);
+      if (c !== a) { near[c].add(a); near[a].add(c); }
+    }
+    near[a].delete(a);
+  };
+  for (let count = k; count > target; count -= 1) {
+    let best = null;
+    for (let a = 0; a < k; a += 1) {
+      if (!groups[a]) continue;
+      for (const b of near[a]) {
+        if (b > a && size[a] + size[b] <= cap && (!best || link[a * k + b] > best.value)) best = { a, b, value: link[a * k + b] };
+      }
+    }
+    if (!best) break;
+    merge(best.a, best.b);
+  }
+  // A region the cap left small joins the neighbour it is most like, one with room if it can.
+  for (let a = 0; a < k; a += 1) {
+    if (!groups[a] || size[a] >= cap / 4 || !near[a].size) continue;
+    const order = [...near[a]].sort((x, y) => ((size[x] + size[a] > cap) - (size[y] + size[a] > cap)) || link[a * k + y] - link[a * k + x]);
+    merge(order[0], a);
+  }
+  const members = groups;
+  return members.filter(Boolean).map((group) => {
+    const islands = group.map((i) => centres[i]).sort((x, y) => y.island.members.length - x.island.members.length);
+    const songs = islands.reduce((sum, c) => sum + c.island.members.length, 0);
+    const x = islands.reduce((sum, c) => sum + c.x * c.island.members.length, 0) / songs;
+    const y = islands.reduce((sum, c) => sum + c.y * c.island.members.length, 0) / songs;
+    return {
+      name: regionName(islands.map((c) => c.island.name)),
+      islandIds: islands.map((c) => c.island.id),
+      songs,
+      centre: { x: Math.round(x), y: Math.round(y) },
+      radius: Math.round(Math.max(...islands.map((c) => Math.hypot(c.x - x, c.y - y) + c.radius))),
+    };
+  }).sort((a, b) => b.songs - a.songs || a.islandIds[0] - b.islandIds[0]).map((region, id) => ({ id, ...region }));
+}
+
 function placeIslandMembers(members, similarity, rand) {
   const ordered = members
     .slice()
@@ -418,6 +493,8 @@ export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) 
     depths.set(release.id, Number(depth.toFixed(3)));
   });
 
+  const regions = regionsOf(centres, links);
+  const regionOf = new Map(regions.flatMap((region) => region.islandIds.map((id) => [id, region.id])));
   const mappedIslands = centres.map((centre) => ({
     id: centre.island.id,
     name: centre.island.name,
@@ -425,11 +502,13 @@ export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) 
     memberIds: centre.island.members.map((m) => m.id),
     centre: { x: Math.round(centre.x), y: Math.round(centre.y) },
     radius: centre.radius,
+    ...(regionOf.has(centre.island.id) ? { regionId: regionOf.get(centre.island.id) } : {}),
   }));
 
   return {
     placements,
     islands: mappedIslands,
+    regions,
     depths,
     similarity,
   };

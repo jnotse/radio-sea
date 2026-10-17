@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { buildMapSimilarity } from '../src/mapping/embed.js';
-import { clusterReleases, mapCatalogue } from '../src/mapping/cartography.js';
+import { clusterReleases, mapCatalogue, regionName } from '../src/mapping/cartography.js';
 import { mulberry32 } from '../src/rng.js';
 
 // How the 2D map forms, names and lays out its groves once it holds a big catalogue.
@@ -111,4 +111,37 @@ test('on the map, the year and country two songs share are a weak tie, and conte
   const sim = buildMapSimilarity(releases);
   assert.ok(sim(releases[0], releases[1]) < 0.15, `different genres, same year and country: ${sim(releases[0], releases[1])}`);
   assert.equal(sim(releases[2], releases[3]), 0, 'a song known only by its channel is like nothing');
+});
+
+test('groves join into regions: about √(groves) of them, each one stretch of land, every grove in one', () => {
+  // Thirty-six groves of five songs: six families of six related groves.
+  const releases = [];
+  for (let g = 0; g < 36; g += 1) for (let i = 0; i < 5; i += 1) releases.push({ id: `g${String(g).padStart(2, '0')}-${i}`, g, styles: [`style ${g}`] });
+  const sim = (a, b) => (a.g === b.g ? 0.9 : Math.floor(a.g / 6) === Math.floor(b.g / 6) ? 0.2 : 0.01);
+  const { islands, regions } = mapCatalogue(releases, sim);
+  assert.equal(regions.length, 6);
+  const regionOf = new Map(islands.map((island) => [island.id, island.regionId]));
+  assert.deepEqual(regions.flatMap((r) => r.islandIds).sort((a, b) => a - b), islands.map((i) => i.id).sort((a, b) => a - b));
+  for (const region of regions) {
+    assert.ok(region.islandIds.every((id) => regionOf.get(id) === region.id));
+    assert.equal(region.songs, region.islandIds.length * 5);
+    // Connected through groves that touch.
+    const members = region.islandIds.map((id) => islands.find((i) => i.id === id));
+    const touch = (a, b) => Math.hypot(a.centre.x - b.centre.x, a.centre.y - b.centre.y) <= a.radius + b.radius + 18;
+    const reached = new Set([members[0]]);
+    for (let grew = true; grew;) {
+      grew = false;
+      for (const m of members) if (!reached.has(m) && [...reached].some((r) => touch(r, m))) { reached.add(m); grew = true; }
+    }
+    assert.equal(reached.size, members.length, `${region.name} is one stretch of land`);
+  }
+  // Mostly one family per region, since related groves were laid side by side.
+  const pure = regions.filter((r) => new Set(r.islandIds.map((id) => Math.floor(releases.find((s) => s.id === islands.find((i) => i.id === id).memberIds[0]).g / 6))).size <= 2);
+  assert.ok(pure.length >= 4, `${pure.length} of 6 regions hold at most two families`);
+  assert.deepEqual(mapCatalogue(releases.filter((r) => r.g < 6), sim).regions, [], 'small maps have no regions');
+});
+
+test('a region is named after its three largest groves', () => {
+  assert.equal(regionName(['dub', 'house', 'breakbeat', 'techno']), 'dub · house · breakbeat');
+  assert.equal(regionName(['dub', 'dub (2)', 'rock']), 'dub · rock');
 });

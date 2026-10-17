@@ -36,9 +36,10 @@ export class RadioSeaDiscovery {
     // The clustered 2D map is independent of the richer TDA feature space.
     this.similarityFn = buildSimilarity(releases);
     this.mapSimilarityFn = buildMapSimilarity(releases);
-    const { placements, islands, depths } = mapCatalogue(releases, this.mapSimilarityFn, { seed });
+    const { placements, islands, regions, depths } = mapCatalogue(releases, this.mapSimilarityFn, { seed });
     this.placements = placements;
     this.islands = islands;
+    this.regions = regions;
     this.depths = depths;
     this.topology = analyzeTopology(releases, this.similarityFn, { islands });
 
