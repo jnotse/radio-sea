@@ -113,6 +113,7 @@
   const MIN_ZOOM = 0.5, MAX_ZOOM = 100;
   const toScreen = (x, y) => ({ x: (x - state.cam.x) * state.cam.zoom + canvas.clientWidth / 2,
     y: (y - state.cam.y) * state.cam.zoom + canvas.clientHeight / 2 });
+  const songSize = () => Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78)));
   function cancelFly() { if (animation !== null) cancelAnimationFrame(animation); animation = null; }
   function fitView() {
     cancelFly();
@@ -180,7 +181,7 @@
     }
     for (const r of releases) {
       const projected = toScreen(r.x, r.y), p = { x: Math.round(projected.x), y: Math.round(projected.y) };
-      const size = Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78)));
+      const size = songSize();
       ctx.globalAlpha = passesFilter(r) ? 1 : .2;
       // Each song is a small cabin-dark square with a lamp-lit centre.
       ctx.fillStyle = '#f6ead2'; ctx.fillRect(Math.round(p.x - size / 2) - 1, Math.round(p.y - size / 2) - 1, size + 2, size + 2);
@@ -190,15 +191,11 @@
         ctx.strokeStyle = '#fff8ea'; ctx.lineWidth = 2;
         ctx.strokeRect(Math.round(p.x - size / 2 - 4), Math.round(p.y - size / 2 - 4), size + 8, size + 8);
         ctx.lineWidth = 1;
-        if (r.id === state.selected) {
-          // A little orange pennant over the song that is playing.
-          ctx.fillStyle = '#2b2236'; ctx.fillRect(p.x, p.y - size / 2 - 14, 2, 10);
-          ctx.fillStyle = '#ef7d3c'; ctx.fillRect(p.x + 2, p.y - size / 2 - 14, 6, 4);
-        }
       }
     }
     ctx.globalAlpha = 1;
     drawIslandLabels(w, h);
+    drawGuano(w, h);
   }
   // Signs never overlap each other or cover a song: each goes just above its
   // grove's songs, or below them, or waits until zooming in makes room. The
@@ -207,7 +204,7 @@
     const current = byId.get(state.selected)?.islandId;
     const order = DATA.islands.filter((island) => island.memberIds.length > 1)
       .sort((a, b) => (b.id === current) - (a.id === current) || b.memberIds.length - a.memberIds.length);
-    const size = Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78))) + 6;
+    const size = songSize() + 6;
     const songs = releases.map((r) => toScreen(r.x, r.y));
     // The hint, status and zoom buttons float over the map; signs stay clear of them.
     const frame = canvas.getBoundingClientRect();
@@ -238,6 +235,68 @@
     }
     canvas.dataset.labels = String(placed.length - overlays);
   }
+
+  // Guano the guanaco walks to whatever is playing: he trots over when a song
+  // starts, dances or vibes while it plays, and lies down while it is paused.
+  // He stands beside the song facing it: side -1 is to its left, 1 its right.
+  // The music never waits for him; the song starts as he sets off.
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const WALK_SPEED = 11.5; // world units a second
+  const guano = { x: 0, y: 0, side: -1, walk: null, placed: false };
+  let guanoTimer = null, guanoFrame = null;
+  function guanoAt(now) {
+    const walk = guano.walk; if (!walk) return guano;
+    const t = Math.min(1, (now - walk.start) / walk.duration);
+    if (t >= 1) { Object.assign(guano, walk.to); guano.walk = null; return guano; }
+    const lerp = (key) => walk.from[key] + (walk.to[key] - walk.from[key]) * t;
+    return { x: lerp('x'), y: lerp('y'), side: lerp('side') };
+  }
+  function walkTo(r) {
+    const now = performance.now(), here = { ...guanoAt(now) };
+    const side = r.x < here.x - .5 ? 1 : r.x > here.x + .5 ? -1 : Math.sign(here.side) || -1;
+    const to = { x: r.x, y: r.y, side };
+    if (!guano.placed || reduceMotion.matches) { Object.assign(guano, to, { walk: null, placed: true }); return; }
+    const distance = Math.hypot(to.x - here.x, to.y - here.y);
+    guano.walk = { from: { x: here.x, y: here.y, side: here.side }, to, start: now,
+      duration: Math.max(400, Math.min(4000, distance / WALK_SPEED * 1000)) };
+  }
+  function guanoMood(r) {
+    if (guano.walk) return 'walk';
+    if (playbackMode === 'paused') return 'rest';
+    if (playbackMode !== 'playing' || !r) return 'idle';
+    const showGenres = (r.tags ?? []).filter((t) => t.startsWith('show-genre:')).map((t) => t.slice(11));
+    return window.Guano.grooves({ genres: genres(r), showGenres, bpm: r.bpm });
+  }
+  const GUANO_SAYS = { walk: 'Guano is trotting over to this song.', dance: 'Guano is dancing to this one.',
+    vibe: 'Guano has his eyes closed, vibing to this one.', rest: 'Guano lay down for a rest. Press play and he gets back up.',
+    idle: 'Guano is waiting by this song.' };
+  function drawGuano(w, h) {
+    if (!guano.placed) return;
+    const now = performance.now(), r = byId.get(state.selected), at = guanoAt(now), mood = guanoMood(r);
+    const walk = guano.walk, still = reduceMotion.matches;
+    const facingLeft = walk ? walk.to.x < walk.from.x || (walk.to.x === walk.from.x && walk.to.side > 0) : at.side > 0;
+    // 2×, or 1× when the map is zoomed far out; his hooves stand on the song's ground line.
+    const scale = state.cam.zoom >= 2.5 ? 2 : 1, p = toScreen(at.x, at.y), size = songSize();
+    const feetX = p.x + at.side * (12 * scale + size / 2 + 1), feetY = p.y + size / 2 + 1;
+    const x0 = Math.round(feetX - 12 * scale), y0 = Math.round(feetY - 23 * scale);
+    ctx.fillStyle = '#3a261e47';
+    ctx.fillRect(x0 + 4 * scale, y0 + 22 * scale, 16 * scale, 2 * scale);
+    ctx.drawImage(window.Guano.sprite(window.Guano.frame(mood, now, { bpm: r?.bpm, still }), facingLeft), x0, y0, 24 * scale, 24 * scale);
+    for (const q of window.Guano.particles(mood, now, { still })) {
+      const img = window.Guano.sprite(q.name), qx = facingLeft ? 24 - q.x - img.width : q.x;
+      ctx.drawImage(img, x0 + qx * scale, y0 + q.y * scale, img.width * scale, img.height * scale);
+    }
+    Object.assign(canvas.dataset, { guano: mood, guanoX: String(Math.round(feetX)), guanoY: String(Math.round(feetY)),
+      guanoFacing: facingLeft ? 'left' : 'right' });
+    if ($('guano-says').textContent !== GUANO_SAYS[mood]) $('guano-says').textContent = GUANO_SAYS[mood];
+    // Redraw while he moves: every frame while walking, otherwise when his picture next changes.
+    clearTimeout(guanoTimer); cancelAnimationFrame(guanoFrame);
+    const onScreen = feetX > -60 && feetX < w + 60 && feetY > -60 && feetY < h + 60;
+    if (document.hidden || (still && !walk)) return;
+    if (walk) guanoFrame = requestAnimationFrame(draw);
+    else if (onScreen) guanoTimer = setTimeout(draw, window.Guano.wait(mood, now, { bpm: r?.bpm }));
+  }
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) draw(); });
   function resize() {
     const dpr = window.devicePixelRatio || 1;
     canvas.width = Math.round(canvas.clientWidth * dpr); canvas.height = Math.round(canvas.clientHeight * dpr);
@@ -334,6 +393,7 @@
     $('transport-play').setAttribute('aria-label', going ? 'Pause' : 'Play');
     $('transport-play').title = going ? 'Pause' : 'Play';
     if (mode === 'error') { playerReady = false; resetSeeking(); }
+    draw(); // Guano dances, vibes or lies down with the music.
   }
   function formatTime(seconds) {
     const n = Math.max(0, Math.floor(Number(seconds) || 0));
@@ -611,6 +671,7 @@
       button.onclick = () => playTrack(t.id); li.append(button); $('d-routes').append(li);
     }
     if (!$('d-routes').children.length) $('d-routes').append(node('li', 'No trails from this song.', 'sub'));
+    if (changed) walkTo(r);
     refreshFilters();
   }
   $('btn-banger').onclick = () => {
@@ -631,5 +692,6 @@
     const paint = () => window.RadioSeaLandscape.drawBanner(banner);
     new ResizeObserver(paint).observe(banner);
   }
+  for (const face of document.querySelectorAll('canvas.guano-face')) window.Guano.drawFace(face);
   resize(); fitView(); select(releases[0].id, false);
 })();

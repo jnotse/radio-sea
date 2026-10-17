@@ -1,8 +1,8 @@
-# Radio Sea
+# G-digs
 
 A map for wandering through music that real people played on independent radio.
 
-Radio Sea collects the tracklists of shows on stations like NTS and The Lot
+G-digs collects the tracklists of shows on stations like NTS and The Lot
 Radio, plus picks from Radiooooo, finds each song on YouTube, and lays
 everything out as a Patagonian steppe seen from above. Songs that sound alike
 grow together as groves of bushes (lenga forests, calafate and neneo
@@ -10,6 +10,11 @@ thickets), with the Andes, glacial lakes and rivers in the open ground and
 trails leading to related groves. Press a square to play it; when a song ends
 the music wanders on to the nearest song you haven't heard, so you can leave
 it running.
+
+Guano, a guanaco drawn from a souvenir plush made in Magallanes, Chile, walks
+the map with you. He trots over to each song as it starts, dances to upbeat
+ones, closes his eyes and nods along to calm ones, and lies down when the music
+is paused.
 
 It's drawn as pixel art in the colours of Torres del Paine at sunset. On
 phones, the Map / Player / Explore buttons at the bottom jump between

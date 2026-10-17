@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="theme-color" content="#2b4c80" />
-  <title>Radio Sea — FM Explorer</title>
+  <title>G-digs — FM Explorer</title>
   <link rel="preload" href="fonts/silkscreen-latin-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,14 +13,14 @@
   <div id="app">
     <header class="desktop-bar">
       <canvas id="banner" aria-hidden="true"></canvas>
-      <div class="brand"><span class="brand-icon" aria-hidden="true">▧</span><h1>radio sea</h1><span class="edition">FM EXPLORER</span></div>
+      <div class="brand"><canvas class="guano-face" width="32" height="32" aria-hidden="true"></canvas><h1>G-digs</h1><span class="edition">FM EXPLORER</span></div>
     </header>
 
     <aside id="sidebar" class="window" aria-label="Explore" tabindex="-1">
       <div class="window-title"><span>explore</span><span class="title-stripes" aria-hidden="true"></span></div>
       <div class="panel-content">
         <header class="library-intro"><p class="eyebrow">TUNE IN. WANDER OFF.</p>
-          <p class="sub">Songs DJs played on independent radio, mapped across the steppe by how they sound. Press a square to play it; the music keeps wandering to nearby songs.</p></header>
+          <p class="sub">Songs DJs played on independent radio, mapped across the steppe by how they sound. Press a square to play it and Guano the guanaco trots over to listen; when a song ends he wanders on to the next one nearby.</p></header>
         <div id="file-notice" class="notice" hidden>For embedded playback, run <code>npm start</code>,
           then open <a href="http://127.0.0.1:4173">http://127.0.0.1:4173</a>. YouTube links still work here.</div>
         <section id="stats" class="mini-display"></section>
@@ -65,8 +65,9 @@
     <aside id="detail" class="window" aria-label="Now playing" tabindex="-1">
       <div class="window-title"><span>now playing</span><span class="title-stripes" aria-hidden="true"></span></div>
       <div class="panel-content">
-        <div id="detail-empty">Select a track on the sea.</div>
+        <div id="detail-empty">Press a square on the map and Guano will walk there.</div>
         <div id="detail-body" hidden>
+          <div class="guano-line"><canvas class="guano-face large" width="32" height="32" aria-hidden="true"></canvas><p id="guano-says"></p></div>
           <div class="player-deck">
             <div class="player-display">
               <div class="display-top"><span id="deck-state">READY</span><span id="deck-island"></span></div>
@@ -101,6 +102,7 @@
   </nav>
   <script src="sea-data.js"></script>
   <script src="landscape.js"></script>
+  <script src="guano.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
