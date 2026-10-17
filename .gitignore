@@ -7,3 +7,4 @@ artifacts/
 !.env.example
 *.next
 .DS_Store
+__pycache__/
