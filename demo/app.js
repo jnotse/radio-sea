@@ -11,10 +11,8 @@
   const byId = new Map(releases.map((r) => [r.id, r]));
   const islands = new Map(DATA.islands.map((i) => [i.id, i]));
   const stationNames = new Map(DATA.stats.stations.map((s) => [s.id, s.label]));
-  const stationIds = (r) => r?.stations?.length ? r.stations : r?.station ? [r.station] : [];
   const state = { cam: { x: 0, y: 0, zoom: 8 }, selected: null, hovered: null,
-    trail: [], stations: new Set(DATA.stats.stations.filter((s) => s.tracks > 0).map((s) => s.id)),
-    tags: new Set(), query: '', showRoutes: true };
+    trail: [], tags: new Set(), query: '', showRoutes: true };
   const pointers = new Map();
   const terrain = window.RadioSeaLandscape.buildTerrain(DATA);
   let landDrawn = false, pendingLand = null;
@@ -46,23 +44,15 @@
     return (r.tags ?? []).filter((t) => !/^(show|station|show-genre|mood|decade):/.test(t));
   }
   function passesFilter(r) {
-    return !!r && stationIds(r).some((s) => state.stations.has(s)) &&
-      [...state.tags].every((t) => (r.tags ?? []).includes(t)) &&
+    return !!r && [...state.tags].every((t) => (r.tags ?? []).includes(t)) &&
       `${r.artist} ${r.name} ${r.radioPlays?.map((p) => p.show).join(' ') ?? r.show ?? ''}`
         .toLowerCase().includes(state.query);
   }
   const pool = () => releases.filter(passesFilter);
 
-  const liveStations = DATA.stats.stations.filter((s) => s.tracks > 0);
-  $('stats').append(node('div', `${releases.length} SONGS · ${DATA.islands.length} GROVES`),
-    node('div', liveStations.map((s) => s.label).join(' · '), 'sub'));
-  for (const station of liveStations) {
-    const chip = node('button', `${station.label} (${station.tracks})`, 'chip');
-    chip.dataset.station = station.id;
-    chip.title = `Show or hide songs from ${station.label}`;
-    chip.onclick = () => { toggle(state.stations, station.id); refreshFilters(); };
-    $('station-chips').append(chip);
-  }
+  // Where songs come from is shown per song ("Heard on"), not as a list of
+  // sources here: there will be more of them.
+  $('stats').append(node('div', `${releases.length} SONGS · ${DATA.islands.length} GROVES`));
   const tagCounts = new Map();
   releases.forEach((r) => genres(r).forEach((t) => tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1)));
   for (const [tag] of [...tagCounts].sort((a, b) => b[1] - a[1]).slice(0, 12)) {
@@ -75,20 +65,15 @@
   function toggle(set, value) { if (set.has(value)) set.delete(value); else set.add(value); }
   $('search').addEventListener('input', (e) => { state.query = e.target.value.trim().toLowerCase(); refreshFilters(); });
   $('btn-clear').onclick = () => {
-    state.stations = new Set(liveStations.map((s) => s.id));
     state.tags.clear(); state.query = ''; $('search').value = ''; refreshFilters();
   };
   function refreshFilters() {
-    document.querySelectorAll('[data-station]').forEach((c) => {
-      const on = state.stations.has(c.dataset.station);
-      c.classList.toggle('on', on); c.setAttribute('aria-pressed', String(on));
-    });
     document.querySelectorAll('[data-tag]').forEach((c) => {
       const on = state.tags.has(c.dataset.tag);
       c.classList.toggle('on', on); c.setAttribute('aria-pressed', String(on));
     });
     const visible = pool();
-    const filtering = state.query || state.tags.size || state.stations.size < liveStations.length;
+    const filtering = state.query || state.tags.size;
     $('map-status').hidden = !filtering;
     $('map-status').textContent = visible.length ? `${visible.length} of ${releases.length} songs match` : 'No matches — clear filters to explore again';
     $('btn-banger').disabled = !visible.length;

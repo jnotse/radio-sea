@@ -31,18 +31,21 @@ test('loaded snapshot has complete records, no playlist, and working filters', a
   await expect(page.locator('#map-status')).toBeHidden();
   expect(await page.evaluate(() => window.SEA_DATA.releases.every((r) =>
     r.station && /^[\w-]{11}$/.test(r.youtubeId) && r.sourceUrl))).toBe(true);
-  // Only stations with songs get a filter, and genre filters read as genres.
-  await expect(page.locator('[data-station="worldwidefm"]')).toHaveCount(0);
+  // Sources are not listed or filtered (there will be more); each song says where it was heard.
+  await expect(page.locator('[data-station]')).toHaveCount(0);
+  await expect(page.locator('#stats')).not.toContainText(/NTS|Lot Radio|Radiooooo/);
+  // Genre filters read as genres.
   expect(await page.locator('#tag-chips').innerText()).not.toMatch(/mood:|decade:|show/);
   await expect(page.locator('#d-sources a').first()).toHaveAttribute('href', /https:\/\/(www\.)?(nts\.live|thelotradio\.com)\/(?!api)/);
   expect(await page.locator('#detail').innerText()).not.toContain('undefined');
   expect(await page.locator('#d-meta').innerText()).not.toMatch(/depth|~|Show tagged/);
-  await page.locator('[data-station="nts"]').click();
-  const remaining = await page.evaluate(() => window.SEA_DATA.releases.filter((r) => r.stations.some((s) => s !== 'nts')).length);
-  await expect(page.locator('#sea')).toHaveAttribute('data-matching', String(remaining));
-  await expect(page.locator('#map-status')).toContainText(`${remaining} of ${total}`);
-  const stillOn = await page.locator('#station-chips button[aria-pressed="true"]').evaluateAll((chips) => chips.map((c) => c.dataset.station));
-  for (const station of stillOn) await page.locator(`[data-station="${station}"]`).click();
+  const genre = page.locator('#tag-chips button').first();
+  const tag = await genre.getAttribute('data-tag');
+  await genre.click();
+  const tagged = await page.evaluate((t) => window.SEA_DATA.releases.filter((r) => r.tags.includes(t)).length, tag);
+  await expect(page.locator('#sea')).toHaveAttribute('data-matching', String(tagged));
+  await expect(page.locator('#map-status')).toContainText(`${tagged} of ${total}`);
+  await page.locator('#search').fill('no song is called this');
   await expect(page.locator('#map-status')).toContainText('No matches');
   await expect(page.locator('#btn-banger')).toBeDisabled();
   await page.locator('#btn-clear').click();
@@ -156,7 +159,7 @@ test.describe('touch-screen layout and controls', () => {
       const map = await page.locator('#sea').boundingBox();
       expect(map.width).toBeGreaterThan(230); expect(map.height).toBeGreaterThan(145);
       for (const selector of ['#zoom-in', '#zoom-out', '#btn-home', '#transport-prev', '#transport-play', '#transport-next', '#player-seek',
-        '#player-volume', '#search', '#btn-banger', '#btn-clear', '#station-chips button:first-child', '#tag-chips button:first-child']) {
+        '#player-volume', '#search', '#btn-banger', '#btn-clear', '#tag-chips button:first-child']) {
         const box = await page.locator(selector).boundingBox();
         expect(box.height, selector).toBeGreaterThanOrEqual(44);
       }
