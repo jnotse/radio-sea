@@ -36,6 +36,7 @@ push to `main`; GitHub Pages republishes automatically.
 npm run catalog:extend    # add new songs from the saved radio tracklists
 npm run catalog:genres    # look up each song's own genres on MusicBrainz
 npm run catalog:deezer    # tempo (BPM), length and loudness from Deezer
+npm run catalog:youtube   # length, album and label from YouTube's video details
 git add data demo && git commit -m "Add more music" && git push
 ```
 
@@ -49,6 +50,11 @@ curl -sL "<releases file link>" | npm run catalog:discogs -- -
 ```
 
 Already downloaded? `npm run catalog:discogs -- discogs_YYYYMMDD_releases.xml.gz`.
+
+`catalog:youtube` reads only the details YouTube publishes about each video,
+never the audio or video. With a free YouTube Data API key in
+`YOUTUBE_API_KEY` it takes a few seconds; without one it reads the video
+pages one every 15 seconds and pauses whenever YouTube asks it to slow down.
 
 Stations only describe whole shows ("this set is jazz, drum & bass, reggae"),
 not single songs. So songs are grouped by their own genres once they have
