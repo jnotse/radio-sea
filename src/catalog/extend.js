@@ -40,7 +40,7 @@ export function newRadioCandidates(cache, limit = 160, stations = null) {
  * negative: the scan backs off and retries, and if YouTube keeps refusing it
  * stops, leaving that song for the next run. */
 export async function extendRadioCache(cache, { limit = 160, resolvePlay = resolvePlayToYoutube,
-  delayMs = 1100, stations = null, onProgress = () => {}, checkpoint = async () => {},
+  delayMs = 1100, apiKey = null, stations = null, onProgress = () => {}, checkpoint = async () => {},
   backoffs = [120000, 240000, 480000], pause = wait, onBackoff = () => {} } = {}) {
   const result = { ...cache, resolved: [...(cache.resolved ?? [])], dropped: cache.dropped ?? 0 };
   const attempted = new Set([...(cache.attemptedKeys ?? []), ...result.resolved.map(songKey)]);
@@ -49,8 +49,9 @@ export async function extendRadioCache(cache, { limit = 160, resolvePlay = resol
   for (const [index, play] of candidates.entries()) {
     let youtube = null;
     for (;;) {
-      try { youtube = await resolvePlay(play, { delayMs }); break; } catch (error) {
-        if (backoff === backoffs.length) {
+      try { youtube = await resolvePlay(play, { delayMs, apiKey }); break; } catch (error) {
+        // Waiting does not bring back a day's API quota.
+        if (backoff === backoffs.length || error.final) {
           result.attemptedKeys = [...attempted];
           await checkpoint(result);
           return { cache: result, added, attempted: index, stopped: error };

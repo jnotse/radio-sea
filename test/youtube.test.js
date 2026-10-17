@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { candidateMatch, extractSearchResults, resolvePlayToYoutube,
+import { candidateMatch, extractSearchResults, nameForms, resolvePlayToYoutube,
   resolvePlaysToYoutube, validateYoutubeUrl, youtubeIdFromUrl, YoutubeUnavailable } from '../src/catalog/youtube.js';
 
 const play = { artist: 'Uranium Club', title: "God's Chest", ids: { isrc: 'GBHLW1603489' } };
@@ -61,11 +61,59 @@ test('relevance supports non-Latin artist and title names', () => {
     { title: 'Судно (Борис Рыжий)', channel: 'Молчат Дома' }).acceptable, false);
 });
 
+test('a name in its own script with a romanization matches a video titled in either one', () => {
+  const googoosh = { artist: 'گوگوش (Googoosh)', title: 'ما به هم نمی رسیم (Ma Beh Ham Nemiresim)' };
+  assert.deepEqual(nameForms(googoosh.artist), ['گوگوش (Googoosh)', 'گوگوش', 'Googoosh']);
+  assert.equal(candidateMatch(googoosh, { title: 'Googoosh - Ma Beh Ham Nemiresim', channel: 'x' }).acceptable, true);
+  assert.equal(candidateMatch(googoosh, { title: 'گوگوش - ما به هم نمی رسیم', channel: 'x' }).acceptable, true);
+  assert.equal(candidateMatch(googoosh, { title: 'Googoosh - Bi Saranjam', channel: 'x' }).acceptable, false);
+  // Brackets in one script are part of the name: a remix never matches the original.
+  assert.deepEqual(nameForms('A New Day (H&F Dubhouse Mix)'), ['A New Day (H&F Dubhouse Mix)']);
+  assert.equal(candidateMatch({ artist: 'Ron Carroll', title: 'A New Day (H&F Dubhouse Mix)' },
+    { title: 'Ron Carroll - A New Day', channel: 'x' }).acceptable, false);
+});
+
 test('resolution skips unrelated hits and verifies the right artist/title via oEmbed', async () => {
   const r = await resolvePlayToYoutube(play, { fetchImpl: mockFetch(), delayMs: 0 });
   assert.equal(r.videoId, correct.videoId);
   assert.equal(r.confirmed, true);
   assert.ok(r.checkedAt);
+});
+
+test('with an API key, search and the embed check go through the YouTube Data API only', async () => {
+  const urls = [];
+  const api = ({ embeddable = true, quota = false } = {}) => async (url) => {
+    urls.push(url);
+    assert.ok(url.startsWith('https://www.googleapis.com/youtube/v3/'), `no search pages: ${url}`);
+    if (quota) return response(403, { error: { errors: [{ reason: 'quotaExceeded' }], message: 'quota' } });
+    if (url.includes('/search?')) {
+      return response(200, { items: [unrelated, correct].map((r) => ({ id: { videoId: r.videoId },
+        snippet: { title: r.title.replace("'", '&#39;'), channelTitle: r.channel } })) });
+    }
+    return response(200, { items: [{ snippet: { title: correct.title, channelTitle: correct.channel },
+      status: { embeddable, privacyStatus: 'public' } }] });
+  };
+  const r = await resolvePlayToYoutube(play, { fetchImpl: api(), apiKey: 'k', delayMs: 0 });
+  assert.equal(r.videoId, correct.videoId);
+  assert.equal(r.confirmed, true);
+  assert.ok(urls[0].includes('q=Uranium+Club+God%27s+Chest') && urls[0].includes('key=k'));
+  assert.ok(urls[1].includes(`/videos?part=snippet%2Cstatus&id=${correct.videoId}`));
+  // A video that may not be embedded is not admitted; a used-up quota ends the run.
+  assert.equal(await resolvePlayToYoutube(play, { fetchImpl: api({ embeddable: false }), apiKey: 'k', delayMs: 0 }), null);
+  const quota = await resolvePlayToYoutube(play, { fetchImpl: api({ quota: true }), apiKey: 'k', delayMs: 0 }).catch((e) => e);
+  assert.ok(quota instanceof YoutubeUnavailable && quota.final);
+  assert.match(quota.message, /quota for today/);
+  // A per-minute limit is only a pause: the run waits and carries on.
+  const perMinute = async () => response(403, { error: { errors: [{ reason: 'rateLimitExceeded' }],
+    message: "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per minute'" } });
+  const slow = await resolvePlayToYoutube(play, { fetchImpl: perMinute, apiKey: 'k', delayMs: 0 }).catch((e) => e);
+  assert.ok(slow instanceof YoutubeUnavailable && !slow.final);
+  // A key's daily search cap arrives as a 429 too, but waiting minutes cannot lift it.
+  const perDay = async () => response(429, { error: { errors: [{ reason: 'rateLimitExceeded' }],
+    message: "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day'" } });
+  const done = await resolvePlayToYoutube(play, { fetchImpl: perDay, apiKey: 'k', delayMs: 0 }).catch((e) => e);
+  assert.ok(done.final);
+  assert.match(done.message, /quota for today/);
 });
 
 test('oEmbed metadata disagreement is not admitted even if the search title matched', async () => {

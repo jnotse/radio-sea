@@ -34,6 +34,7 @@ push to `main`; GitHub Pages republishes automatically.
 
 ```sh
 npm run catalog:extend    # add new songs from the saved radio tracklists
+npm run catalog:radiooooo # Radiooooo picks: one per country and decade not yet sampled
 npm run catalog:genres    # look up each song's own genres on MusicBrainz
 npm run catalog:deezer    # tempo (BPM), length and loudness from Deezer
 npm run catalog:youtube   # length, album and label from YouTube's video details
