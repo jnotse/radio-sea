@@ -422,7 +422,10 @@
   }
   // Signs never overlap each other or cover a song: each goes just above its
   // grove's songs, or below them, or waits until zooming in makes room. The
-  // current song's grove and bigger groves choose first.
+  // current song's grove and bigger groves choose first. Zoomed out, a grove
+  // less than MIN_SIGN_SPAN pixels across goes without one: big groves get
+  // their signs first as you zoom in.
+  const MIN_SIGN_SPAN = 36;
   function drawIslandLabels(w, h) {
     const current = byId.get(state.selected)?.islandId;
     const order = DATA.islands.filter((island) => island.memberIds.length > 1)
@@ -451,6 +454,8 @@
       const cx = members.reduce((sum, p) => sum + p.x, 0) / members.length;
       const top = Math.min(...members.map((p) => p.y)), bottom = Math.max(...members.map((p) => p.y));
       const width = ctx.measureText(label).width + 10;
+      const span = Math.max(...members.map((p) => p.x)) - Math.min(...members.map((p) => p.x)) + size;
+      if (island.id !== current && span < MIN_SIGN_SPAN) continue;
       const box = [top - size / 2 - 17, bottom + size / 2 + 3]
         .map((y) => ({ x: Math.round(cx - width / 2), y: Math.round(y), w: width, h: 15 }))
         .find((b) => b.x + b.w > 0 && b.x < w && b.y + b.h > 0 && b.y < h && clear(b));
@@ -925,7 +930,8 @@
     if (!island) return sentence ? 'Not in a grove' : '';
     const name = island.name.trim();
     if (!sentence) return name;
-    return island.basis === 'show' ? `With songs from the show ${name}` : `In the ${name} grove`;
+    if (island.basis === 'show') return `With songs from the show ${name}`;
+    return island.basis === 'station' ? `With songs from ${name}` : `In the ${name} grove`;
   }
   function showUpNext() {
     const next = state.selected ? upNext() : null;

@@ -14,11 +14,12 @@ test('upload titles read as artist, title and year or decade', () => {
 
 test('descriptions give the label and the linked Discogs release or master', () => {
   assert.deepEqual(parseUploadDescription('cultdep \n\nhttps://www.discogs.com/release/7009353-Various-Tokio-Explosion-Vol2'),
-    { label: 'cultdep', discogs: { release: 7009353 } });
+    { label: 'cultdep', discogs: { release: 7009353, compilation: true } });
   assert.deepEqual(parseUploadDescription('bes recordings\n\nhttps://www.discogs.com/master/1790115-Various-Endless'),
-    { label: 'bes recordings', discogs: { master: 1790115 } });
+    { label: 'bes recordings', discogs: { master: 1790115, compilation: true } });
   assert.deepEqual(parseUploadDescription('not on label\n\nhttps://www.discogs.com/fr/Base-Line/release/1105367'),
     { label: null, discogs: { release: 1105367 } });
+  assert.equal(parseUploadDescription('x\nhttps://www.discogs.com/Various-Rare-Grooves/release/12').discogs.compilation, true, 'old-style links too');
   assert.deepEqual(parseUploadDescription('buy, NOW: https://number-one.bandcamp.com/album/overview\n\nwow'), { label: null, discogs: null });
 });
 
@@ -31,7 +32,7 @@ test('an upload becomes a resolved song with its own video, year, label hint and
   const play = uploadToPlay(VIDEO, STATION, '2026-10-17T00:00:00Z');
   assert.deepEqual(play, {
     station: 'floorlengthskirts', show: null, date: '2026-10-01T12:00:00Z', sourceUrl: 'https://www.youtube.com/watch?v=VxuNvoiel2g',
-    artist: 'koji nakamura', title: 'the right world', releaseYear: 1993, labelHint: 'cultdep', tags: [], ids: { discogsRelease: 7009353 },
+    artist: 'koji nakamura', title: 'the right world', releaseYear: 1993, labelHint: 'cultdep', compilation: true, tags: [], ids: { discogsRelease: 7009353 },
     youtube: { videoId: 'VxuNvoiel2g', url: 'https://www.youtube.com/watch?v=VxuNvoiel2g', title: 'koji nakamura - the right world (1993)',
       channel: 'floor length skirt(s)', via: 'channel', confirmed: true, matchScore: 1, checkedAt: '2026-10-17T00:00:00Z' },
   });

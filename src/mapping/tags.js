@@ -29,6 +29,14 @@ export function isGenreTag(tag) {
   return !isContextTag(tag) && !isDescriptorTag(tag);
 }
 
+// Discogs' broad genres, which every style sits under ("rock" > "new wave").
+const BROAD_GENRES = new Set(['electronic', 'rock', 'pop', 'jazz', 'hip hop', 'funk / soul', 'latin', 'reggae', 'classical',
+  'blues', 'folk, world, & country', 'stage & screen', 'non-music', "children's", 'brass & military']);
+
+export function isBroadGenre(tag) {
+  return BROAD_GENRES.has(tag);
+}
+
 /** Human-readable form of a tag ("decade:1970s" -> "1970s"). */
 export function tagLabel(tag) {
   return String(tag).replace(/^(station|show|show-genre|channel|city|decade|mood|inst|credit|format):/, '');

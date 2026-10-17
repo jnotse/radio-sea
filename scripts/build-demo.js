@@ -105,6 +105,8 @@ export function withOwnGenres(play, discogs = {}, musicbrainz = {}, deezer = {},
     ...(formats.length ? { formats } : {}),
     ...(video?.channel ? { channel: video.channel } : {}),
     ...(video?.views != null ? { views: video.views } : {}),
+    // A compilation's styles describe the whole record, not this song.
+    ...(play.compilation || found?.compilation ? { compilation: true } : {}),
   };
 }
 
@@ -148,6 +150,7 @@ export function playToRaw(play) {
         ...(play.instruments ?? []).map((inst) => `inst:${inst.toLowerCase()}`),
         ...(play.credits ?? []).map((credit) => `credit:${credit.toLowerCase()}`),
         ...(play.formats ?? []).map((fmt) => `format:${fmt.toLowerCase()}`),
+        ...(play.compilation ? ['format:compilation'] : []),
       ],
       styles: [`station:${play.station}`],
       descriptors: [
@@ -262,7 +265,13 @@ async function main() {
       const { videos } = await fetchChannelUploads({ handle, apiKey: youtubeApiKey });
       const checkedAt = new Date().toISOString();
       const known = new Set(cached.resolved.map((p) => p.youtube?.videoId));
-      const fresh = videos.map((video) => uploadToPlay(video, station, checkedAt)).filter((p) => !known.has(p.youtube.videoId));
+      const uploads = videos.map((video) => uploadToPlay(video, station, checkedAt));
+      const fresh = uploads.filter((p) => !known.has(p.youtube.videoId));
+      // Uploads already on the map learn which of them link a compilation.
+      const compilations = new Set(uploads.filter((p) => p.compilation).map((p) => p.youtube.videoId));
+      for (const play of [...cached.plays, ...cached.resolved]) {
+        if (play.youtube?.via === 'channel' && compilations.has(play.youtube.videoId)) play.compilation = true;
+      }
       cached.plays.push(...fresh);
       cached.resolved.push(...fresh);
       cached.attemptedKeys = [...new Set([...(cached.attemptedKeys ?? []), ...fresh.map(songKey)])];
@@ -427,7 +436,7 @@ async function main() {
     },
     islands: engine.islands.map((island) => ({
       ...island,
-      name: island.name.replace(/^station:/, ''),
+      name: island.basis === 'station' ? RADIO_STATIONS.find((s) => s.id === island.name)?.label ?? island.name : island.name,
     })),
     releases: releases.map((release) => {
       const placement = engine.mapPlacement(release.id);

@@ -3,11 +3,13 @@
 // 1. islands  — agglomerative clustering on the similarity function; releases
 //               merge into an island while their average linkage stays above a
 //               threshold, so islands emerge from the data instead of from a
-//               fixed genre list.
-// 2. world map — islands attract/repel each other: related islands end up as
-//               neighbouring archipelagos (attraction = cross-island
-//               similarity), unrelated ones keep open sea between them
-//               (repulsion = island radii).
+//               fixed genre list. On the map, islands of one or two songs
+//               join the island they are closest to; songs related to no
+//               island at all gather by the station they came from.
+// 2. world map — islands are laid down one by one, largest first, each
+//               against the ones it is most related to, so related islands
+//               neighbour each other and the map stays compact however many
+//               songs it holds. Open ground keeps them apart.
 // 3. shores   — releases inside an island fill a compact grove ordered by era
 //               and relaxed by pairwise similarity, so the coastline walks
 //               smoothly through the island's variants.
@@ -19,7 +21,7 @@
 
 import { fnv1aHash } from '../fnv1a.js';
 import { mulberry32 } from '../rng.js';
-import { isGenreTag, tagLabel } from './tags.js';
+import { isBroadGenre, isGenreTag, tagLabel } from './tags.js';
 
 // Cluster while average linkage stays above this. Measured on the radio
 // catalogue with per-song genres: songs sharing nothing score ~0 (p90 0.16),
@@ -27,39 +29,102 @@ import { isGenreTag, tagLabel } from './tags.js';
 // (p90 0.49). 0.30 forms islands of one sound across shows and stations.
 const LINKAGE_THRESHOLD = 0.30;
 
-function averageLinkage(similarity, groupA, groupB) {
-  let total = 0;
-  let count = 0;
-  for (const a of groupA) {
-    for (const b of groupB) {
-      total += similarity(a, b);
-      count += 1;
+// Islands on the map smaller than this join their closest island, if they
+// relate to one at least this much.
+const MIN_GROVE = 3;
+const FOLD_FLOOR = 0.05;
+// Open ground between neighbouring islands, in map units.
+const GROUND = 8;
+
+/** Every pairwise similarity, once: clustering, layout and depth share them. */
+function similarityMatrix(releases, similarity) {
+  const n = releases.length;
+  const matrix = new Float64Array(n * n);
+  for (let i = 0; i < n; i += 1) {
+    matrix[i * n + i] = 1;
+    for (let j = i + 1; j < n; j += 1) {
+      const value = similarity(releases[i], releases[j]);
+      matrix[i * n + j] = value;
+      matrix[j * n + i] = value;
     }
   }
-  return count === 0 ? 0 : total / count;
+  return matrix;
 }
 
-export function clusterReleases(releases, similarity, { threshold = LINKAGE_THRESHOLD } = {}) {
-  let groups = releases.map((release) => [release]);
-  while (groups.length > 1) {
-    let bestI = 0;
-    let bestJ = 1;
-    let bestLink = threshold;
-    for (let i = 0; i < groups.length; i += 1) {
-      for (let j = i + 1; j < groups.length; j += 1) {
-        const link = averageLinkage(similarity, groups[i], groups[j]);
-        if (link > bestLink) {
-          bestLink = link;
-          bestI = i;
-          bestJ = j;
-        }
-      }
+/** Mean similarity between two lists of release indices. */
+function meanLink(matrix, n, groupA, groupB) {
+  let total = 0;
+  for (const a of groupA) for (const b of groupB) total += matrix[a * n + b];
+  return groupA.length && groupB.length ? total / (groupA.length * groupB.length) : 0;
+}
+
+// Average linkage: always merge the two groups with the highest mean
+// similarity. Merged links follow from the old ones (Lance–Williams), and each
+// group remembers its closest partner, so a thousand songs take moments.
+function averageLinkage(matrix, n, threshold) {
+  const link = Float64Array.from(matrix);
+  const members = Array.from({ length: n }, (_, i) => [i]);
+  const active = new Uint8Array(n).fill(1);
+  const best = new Int32Array(n).fill(-1);
+  const findBest = (i) => {
+    let partner = -1;
+    for (let k = 0; k < n; k += 1) {
+      if (k !== i && active[k] && (partner < 0 || link[i * n + k] > link[i * n + partner])) partner = k;
     }
-    if (bestLink <= threshold) break;
-    const merged = [...groups[bestI], ...groups[bestJ]];
-    groups = groups.filter((_, index) => index !== bestI && index !== bestJ);
-    groups.push(merged);
+    best[i] = partner;
+  };
+  for (let i = 0; i < n; i += 1) findBest(i);
+  for (;;) {
+    let a = -1;
+    for (let i = 0; i < n; i += 1) {
+      if (active[i] && best[i] >= 0 && link[i * n + best[i]] > threshold && (a < 0 || link[i * n + best[i]] > link[a * n + best[a]])) a = i;
+    }
+    if (a < 0) break;
+    const b = best[a];
+    const [sizeA, sizeB] = [members[a].length, members[b].length];
+    for (let k = 0; k < n; k += 1) {
+      if (!active[k] || k === a || k === b) continue;
+      const value = (sizeA * link[a * n + k] + sizeB * link[b * n + k]) / (sizeA + sizeB);
+      link[a * n + k] = value;
+      link[k * n + a] = value;
+    }
+    members[a].push(...members[b]);
+    members[b] = null;
+    active[b] = 0;
+    for (let k = 0; k < n; k += 1) {
+      if (!active[k]) continue;
+      if (k === a || best[k] === a || best[k] === b) findBest(k);
+      else if (link[k * n + a] > link[k * n + best[k]]) best[k] = a;
+    }
   }
+  return members.filter(Boolean);
+}
+
+// Islands smaller than `minSize` join the larger island they are closest to.
+// Songs that relate to none (nothing known but who played them) gather by
+// station instead of joining an island at random.
+function foldSmall(groups, matrix, n, minSize, stationOf) {
+  const large = groups.filter((group) => group.length >= minSize);
+  if (minSize <= 1 || !large.length) return groups;
+  const extra = large.map(() => []);
+  const strays = new Map();
+  for (const group of groups.filter((g) => g.length < minSize)) {
+    let target = 0;
+    let bestLink = -Infinity;
+    large.forEach((other, index) => {
+      const value = meanLink(matrix, n, group, other);
+      if (value > bestLink) [target, bestLink] = [index, value];
+    });
+    if (bestLink >= FOLD_FLOOR) extra[target].push(...group);
+    else for (const i of group) strays.set(stationOf(i), [...(strays.get(stationOf(i)) ?? []), i]);
+  }
+  return [...large.map((group, index) => [...group, ...extra[index]]), ...strays.values()];
+}
+
+export function clusterReleases(releases, similarity, { threshold = LINKAGE_THRESHOLD, minSize = 1, matrix = similarityMatrix(releases, similarity) } = {}) {
+  const n = releases.length;
+  const groups = foldSmall(averageLinkage(matrix, n, threshold), matrix, n, minSize, (i) => releases[i].station ?? '')
+    .map((indices) => indices.sort((a, b) => a - b).map((i) => releases[i]));
 
   // Deterministic order: larger islands first, then by first member id.
   groups.sort((a, b) => b.length - a.length || a[0].id.localeCompare(b[0].id));
@@ -67,8 +132,10 @@ export function clusterReleases(releases, similarity, { threshold = LINKAGE_THRE
   for (const release of releases) {
     for (const tag of new Set(release.tags?.all ?? release.styles ?? [])) documentFrequency.set(tag, (documentFrequency.get(tag) ?? 0) + 1);
   }
+  const taken = new Set();
   return distinctNames(groups.map((members, index) => {
-    const { name, basis } = islandName(members, documentFrequency);
+    const { name, basis } = islandName(members, documentFrequency, taken);
+    taken.add(name);
     return { id: index, name: name ?? `island-${index}`, basis, members };
   }));
 }
@@ -95,24 +162,29 @@ function distinctNames(islands) {
   return islands;
 }
 
-// An island may only claim a sound that at least half of its tracks really
+// An island may only claim a genre that at least half of its tracks really
 // have. Of those, it takes the most specific: the one rarest in the whole
 // catalogue, so doo-wop songs that also carry "rock" make a "doo wop" island.
+// A decade is never a sound: songs of the 1990s share no genre by that.
 // A mixed set, where most tracks have genres but none is shared by half, is
 // named after its two commonest. Only when most of its tracks have no genre
 // at all is it named after the show most of them were played on, since that
-// is what grouped them. Station-supplied show genres never name an island:
-// they describe a whole set, not its tracks.
-function islandName(members, documentFrequency = new Map()) {
+// is what grouped them, or else the station or channel. Station-supplied show
+// genres never name an island: they describe a whole set, not its tracks. A
+// name a larger island already has goes to another style the island shares.
+function islandName(members, documentFrequency = new Map(), taken = new Set()) {
   const tagsOf = (member) => member.tags?.all ?? member.styles ?? [];
-  const soundOf = (member) => tagsOf(member).filter((tag) => isGenreTag(tag) || tag.startsWith('decade:'));
-  const genre = majorityTag(members, soundOf, documentFrequency);
+  const soundOf = (member) => tagsOf(member).filter(isGenreTag);
+  const genres = majorityTags(members, soundOf, documentFrequency);
+  const genre = genres.find((tag) => !taken.has(tagLabel(tag)) && !isBroadGenre(tag)) ?? genres[0];
   if (genre) return { name: tagLabel(genre), basis: 'sound' };
   if (members.filter((m) => soundOf(m).length > 0).length * 2 >= members.length) {
     return { name: commonestTags(members, soundOf, documentFrequency).slice(0, 2).map(tagLabel).join(' & '), basis: 'mixed' };
   }
   const show = majorityTag(members, (m) => tagsOf(m).filter((t) => t.startsWith('show:')));
   if (show) return { name: tagLabel(show), basis: 'show' };
+  const station = majorityTag(members, (m) => tagsOf(m).filter((t) => t.startsWith('station:')));
+  if (station) return { name: tagLabel(station), basis: 'station' };
   return { name: null, basis: null };
 }
 
@@ -124,12 +196,16 @@ function tagCounts(members, tagsOf) {
   return [...counts.entries()];
 }
 
-/** Tags at least half the members share; the rarest in the catalogue wins, then the commonest here. */
-function majorityTag(members, tagsOf, documentFrequency = new Map()) {
+/** Tags at least half the members share: the rarest in the catalogue first, then the commonest here. */
+function majorityTags(members, tagsOf, documentFrequency = new Map()) {
   const shared = tagCounts(members, tagsOf).filter(([, count]) => count * 2 >= members.length);
   const rarity = (tag) => documentFrequency.get(tag) ?? Infinity;
   shared.sort((a, b) => rarity(a[0]) - rarity(b[0]) || b[1] - a[1] || a[0].localeCompare(b[0]));
-  return shared[0]?.[0] ?? null;
+  return shared.map(([tag]) => tag);
+}
+
+function majorityTag(members, tagsOf, documentFrequency) {
+  return majorityTags(members, tagsOf, documentFrequency)[0] ?? null;
 }
 
 /** Every tag the members carry, commonest here first; ties go to the rarest in the catalogue. */
@@ -144,52 +220,71 @@ function islandRadius(memberCount) {
   return 1.5 + Math.sqrt(memberCount) * 1.7;
 }
 
-function arrangeIslands(islands, similarity, rand) {
-  const centres = islands.map((island, index) => {
-    const angle = index * 2.399963; // golden angle: deterministic spread
-    const distance = index === 0 ? 0 : islandRadius(islands[0].members.length) * 2.2 * Math.sqrt(index);
-    return {
-      island,
-      x: Math.cos(angle) * distance,
-      y: Math.sin(angle) * distance,
-      radius: islandRadius(island.members.length),
-    };
-  });
+// Islands go down one at a time, largest first; the next is always the one
+// most related to those already down. It takes the spot, touching an island
+// already down, that is nearest to the islands it relates to and to the
+// middle of the map. Nothing overlaps, and the map grows only as fast as its
+// islands do.
+const COMPACT = 0.6;
 
-  for (let iter = 0; iter < 60; iter += 1) {
-    for (let i = 0; i < centres.length; i += 1) {
-      for (let j = i + 1; j < centres.length; j += 1) {
-        const a = centres[i];
-        const b = centres[j];
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
-        const dist = Math.max(0.1, Math.hypot(dx, dy));
-        const ux = dx / dist;
-        const uy = dy / dist;
+function arrangeIslands(islands, links, rand) {
+  const k = islands.length;
+  const radius = islands.map((island) => islandRadius(island.members.length));
+  const placed = new Map();
+  const pending = new Set(islands.keys());
+  const gap = (i, j) => radius[i] + radius[j] + GROUND;
 
-        const wanted = a.radius + b.radius + 4; // open sea between islands
-        const repel = dist < wanted ? (wanted - dist) * 0.25 : 0;
-
-        // Attraction: average cross-island similarity pulls archipelagos close,
-        // but only when they really are related.
-        const link = averageLinkage(similarity, a.island.members, b.island.members);
-        const attract = link > 0.35 && dist > wanted ? Math.min((link - 0.35) * 6, (dist - wanted) * 0.2) : 0;
-
-        const move = -repel + attract;
-        if (move === 0) continue;
-        a.x += ux * move;
-        a.y += uy * move;
-        b.x -= ux * move;
-        b.y -= uy * move;
+  function bestSpot(i) {
+    let area = 0;
+    const middle = { x: 0, y: 0 };
+    for (const [j, c] of placed) {
+      area += radius[j] ** 2;
+      middle.x += c.x * radius[j] ** 2;
+      middle.y += c.y * radius[j] ** 2;
+    }
+    middle.x /= area;
+    middle.y /= area;
+    let best = null;
+    let bestScore = Infinity;
+    for (const [j, c] of placed) {
+      for (let step = 0; step < 24; step += 1) {
+        const angle = (step / 24) * 2 * Math.PI;
+        const spot = { x: c.x + Math.cos(angle) * gap(i, j), y: c.y + Math.sin(angle) * gap(i, j) };
+        if ([...placed].some(([l, o]) => Math.hypot(spot.x - o.x, spot.y - o.y) < gap(i, l) - 1e-6)) continue;
+        // Strong relations pull hardest; unrelated islands barely at all.
+        let total = 0;
+        let weights = 0;
+        for (const [l, o] of placed) {
+          const weight = Math.max(0, links[i * k + l]) ** 2 + 1e-4;
+          total += weight * Math.hypot(spot.x - o.x, spot.y - o.y);
+          weights += weight;
+        }
+        const score = total / weights + COMPACT * Math.hypot(spot.x - middle.x, spot.y - middle.y);
+        if (score < bestScore) [best, bestScore] = [spot, score];
       }
     }
+    return best;
   }
 
-  for (const centre of centres) {
-    centre.x += (rand() - 0.5) * 1.5;
-    centre.y += (rand() - 0.5) * 1.5;
+  while (pending.size) {
+    // Ties go to the larger island: pending keeps the islands' size order.
+    let next = -1;
+    let nextLink = -Infinity;
+    for (const i of pending) {
+      let link = 0;
+      for (const j of placed.keys()) link = Math.max(link, links[i * k + j]);
+      if (link > nextLink) [next, nextLink] = [i, link];
+    }
+    pending.delete(next);
+    placed.set(next, placed.size ? bestSpot(next) : { x: 0, y: 0 });
   }
-  return centres;
+
+  return islands.map((island, i) => ({
+    island,
+    x: placed.get(i).x + (rand() - 0.5) * 1.5,
+    y: placed.get(i).y + (rand() - 0.5) * 1.5,
+    radius: radius[i],
+  }));
 }
 
 function placeIslandMembers(members, similarity, rand) {
@@ -283,8 +378,20 @@ function snapAndResolve(entries) {
  */
 export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) {
   const rand = mulberry32(fnv1aHash(String(seed)));
-  const islands = clusterReleases(releases, similarity);
-  const centres = arrangeIslands(islands, similarity, rand);
+  const n = releases.length;
+  const matrix = similarityMatrix(releases, similarity);
+  const islands = clusterReleases(releases, similarity, { minSize: MIN_GROVE, matrix });
+  const index = new Map(releases.map((release, i) => [release.id, i]));
+  const groups = islands.map((island) => island.members.map((member) => index.get(member.id)));
+  const k = islands.length;
+  const links = new Float64Array(k * k);
+  for (let a = 0; a < k; a += 1) {
+    for (let b = a + 1; b < k; b += 1) {
+      links[a * k + b] = meanLink(matrix, n, groups[a], groups[b]);
+      links[b * k + a] = links[a * k + b];
+    }
+  }
+  const centres = arrangeIslands(islands, links, rand);
 
   const entries = [];
   centres.forEach((centre) => {
@@ -302,16 +409,14 @@ export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) 
 
   // Depth: isolation + lack of cross-source agreement -> deep cut.
   const depths = new Map();
-  for (const release of releases) {
+  releases.forEach((release, i) => {
     let simSum = 0;
-    for (const other of releases) {
-      if (other.id !== release.id) simSum += similarity(release, other);
-    }
-    const meanSim = releases.length > 1 ? simSum / (releases.length - 1) : 0;
+    for (let j = 0; j < n; j += 1) if (j !== i) simSum += matrix[i * n + j];
+    const meanSim = n > 1 ? simSum / (n - 1) : 0;
     const sources = new Set(release.sources?.map((s) => s.source) ?? []).size;
     const depth = Math.min(1, Math.max(0, 1 - meanSim - 0.08 * (sources - 1)));
     depths.set(release.id, Number(depth.toFixed(3)));
-  }
+  });
 
   const mappedIslands = centres.map((centre) => ({
     id: centre.island.id,

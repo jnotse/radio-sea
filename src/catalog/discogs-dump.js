@@ -327,6 +327,7 @@ export function createDiscogsMatcher(plays) {
           own: true,
           via: 'link',
           main: release.mainRelease || byRelease.get(release.id)?.has(songId) || false,
+          compilation: releaseArtists.some((artist) => artist.key === VARIOUS),
           year: release.year,
           country: release.country ?? null,
           labels: release.labels ?? [],
@@ -403,6 +404,8 @@ export function createDiscogsMatcher(plays) {
             ...(record?.labels?.length ? { label: record.labels[0] } : {}),
             ...(record?.title ? { artistName: linked.find((g) => g.artist)?.artist ?? null, trackTitle: record.title } : {}),
             source: linked.length ? 'link' : groups.some((group) => group.via === 'track') ? 'track' : 'video',
+            // Only compilations list it: their styles describe the whole record.
+            ...((record ? record.compilation : !groups.some((group) => group.own)) ? { compilation: true } : {}),
             releases: groups.map((group) => group.releaseId).slice(0, 5),
             ...(song.videos.size ? { youtubeCandidates: [...song.videos.values()] } : {}),
           };

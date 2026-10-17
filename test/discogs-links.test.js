@@ -48,6 +48,8 @@ test('a linked release is the record: its styles, label, album and spelling, eve
   assert.deepEqual(song.styles, ['Synth-pop'], 'the unlinked record with the same title is ignored');
   assert.deepEqual([song.album, song.label, song.country, song.length], ['Tokio Explosion Vol.2', 'Cultdep', 'Japan', 310]);
   assert.deepEqual([song.artistName, song.trackTitle], ['Koji Nakamura', 'The Right World']);
+  assert.equal(song.compilation, true, 'its styles describe the whole compilation');
+  assert.equal(of(await scan(), 'gutbrod', 'you & me').compilation, undefined);
 });
 
 test('a linked master takes its earliest year and its main release names the record', async () => {

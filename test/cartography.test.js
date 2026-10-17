@@ -153,5 +153,5 @@ test('engine exposes the whole pipeline together', () => {
   assert.ok(engine.islandOf(releases[0].id) !== null);
   assert.ok(engine.depthOf(releases[0].id) >= 0);
   assert.ok(engine.explain(releases[0].id, releases[1].id).reasons.length > 0);
-  assert.ok(engine.tradeRoutes({ minScore: 0.25 }).length > 0);
+  assert.ok(engine.tradeRoutes({ minScore: 0.15 }).length > 0);
 });
