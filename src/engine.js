@@ -2,8 +2,9 @@
 // reactions + navigation suggestions + community charts.
 
 import { layoutSea } from './layout.js';
-import { buildSimilarity } from './mapping/embed.js';
+import { buildMapSimilarity, buildSimilarity } from './mapping/embed.js';
 import { mapCatalogue } from './mapping/cartography.js';
+import { analyzeTopology } from './mapping/tda.js';
 import { tradeRoutes as buildTradeRoutes } from './mapping/routes.js';
 import { explainSimilarity, explainPick } from './explain.js';
 import { mergeCatalogue } from './catalog/resolve.js';
@@ -32,13 +33,14 @@ export class RadioSeaDiscovery {
     this.reactions = new ReactionRegistry();
     this.navigation = new NavigationGraph();
 
-    // Our own pipeline: feature-space similarity -> emergent islands & TDA -> sea.
+    // The clustered 2D map is independent of the richer TDA feature space.
     this.similarityFn = buildSimilarity(releases);
-    const { placements, islands, depths, topology } = mapCatalogue(releases, this.similarityFn, { seed });
+    this.mapSimilarityFn = buildMapSimilarity(releases);
+    const { placements, islands, depths } = mapCatalogue(releases, this.mapSimilarityFn, { seed });
     this.placements = placements;
     this.islands = islands;
     this.depths = depths;
-    this.topology = topology;
+    this.topology = analyzeTopology(releases, this.similarityFn, { islands });
 
     this.state = {
       releases,
@@ -105,7 +107,7 @@ export class RadioSeaDiscovery {
 
   /** Auto-generated navigation candidates across islands. */
   tradeRoutes({ minScore = 0.3, perRelease = 1 } = {}) {
-    return buildTradeRoutes(this.releases, this.similarityFn, {
+    return buildTradeRoutes(this.releases, this.mapSimilarityFn, {
       islands: this.islands,
       minScore,
       perRelease,

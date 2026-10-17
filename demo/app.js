@@ -19,7 +19,7 @@
     trail: [], tags: new Set(), query: '', showRoutes: true };
   const pointers = new Map();
   const terrain = window.RadioSeaLandscape.buildTerrain(DATA);
-  let landDrawn = false, pendingLand = null, orbitFrame = null, lastOrbitTime = 0;
+  let landDrawn = false, pendingLand = null, orbitFrame = null, lastOrbitTime = 0, fitted3D = false;
   let animation = null, player = null, playerGeneration = 0, playerTimer;
   let playbackMode = 'idle', volume = 75;
   let playerReady = false, songDuration = 0, scrubbing = false, pendingSeek = null;
@@ -142,6 +142,7 @@
         yaw: -0.65, pitch: 0.42,
         zoom: Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.min(canvas.clientWidth, canvas.clientHeight) / (span * 0.72))),
       });
+      fitted3D = true;
       draw(); return;
     }
     Object.assign(state.cam, { x: (songBounds.minX + songBounds.maxX) / 2, y: (songBounds.minY + songBounds.maxY) / 2,
@@ -401,10 +402,12 @@
     }
     for (const r of releases) {
       const projected = toScreen(r.x, r.y), p = { x: Math.round(projected.x), y: Math.round(projected.y) };
-      const size = Math.round(Math.max(6, Math.min(14, state.cam.zoom * .78)));
+      const size = Math.round(Math.max(3, Math.min(14, state.cam.zoom * 1.7)));
       ctx.globalAlpha = passesFilter(r) ? 1 : .2;
       // Each song is a small cabin-dark square with a lamp-lit centre.
-      ctx.fillStyle = '#f6ead2'; ctx.fillRect(Math.round(p.x - size / 2) - 1, Math.round(p.y - size / 2) - 1, size + 2, size + 2);
+      if (size >= 5) {
+        ctx.fillStyle = '#f6ead2'; ctx.fillRect(Math.round(p.x - size / 2) - 1, Math.round(p.y - size / 2) - 1, size + 2, size + 2);
+      }
       ctx.fillStyle = '#2b2236'; ctx.fillRect(Math.round(p.x - size / 2), Math.round(p.y - size / 2), size, size);
       if (size >= 8) { ctx.fillStyle = '#f0a05a'; ctx.fillRect(p.x - 1, p.y - 1, 2, 2); }
       if (r.id === state.selected || r.id === state.hovered) {
@@ -871,6 +874,8 @@
       orbitFrame = requestAnimationFrame(stepOrbit);
     }
     $('btn-topology').onclick = () => {
+      cancelFly();
+      state.hovered = null; $('tooltip').hidden = true;
       state.viewMode = state.viewMode === '3d' ? '2d' : '3d';
       const is3d = state.viewMode === '3d';
       $('btn-topology').setAttribute('aria-pressed', String(is3d));
@@ -879,7 +884,8 @@
       const touchHint = document.querySelector('#map-help .touch-hint');
       if (desktopHint) desktopHint.textContent = is3d ? 'DRAG TO ORBIT 3D · CLICK TO PLAY' : 'CLICK A SQUARE TO PLAY';
       if (touchHint) touchHint.textContent = is3d ? 'DRAG TO ORBIT 3D · TAP TO PLAY' : 'TAP TO PLAY · PINCH TO ZOOM';
-      fitView();
+      if (is3d && !fitted3D) fitView();
+      else draw();
       if (is3d && orbitFrame === null) {
         lastOrbitTime = 0;
         orbitFrame = requestAnimationFrame(stepOrbit);

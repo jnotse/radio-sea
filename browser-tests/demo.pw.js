@@ -82,6 +82,24 @@ test('search lists only matching songs, and picking a result or a neighbour play
   await expect(page.locator('#btn-banger')).toBeEnabled();
 });
 
+test('2D pan and zoom survive switching to 3D and back', async ({ page }) => {
+  await page.goto('/');
+  const canvas = page.locator('#sea');
+  await page.locator('#zoom-in').click();
+  const rect = await canvas.boundingBox();
+  await page.mouse.move(rect.x + rect.width / 2, rect.y + rect.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(rect.x + rect.width / 2 + 55, rect.y + rect.height / 2 + 25, { steps: 5 });
+  await page.mouse.up();
+  const camera = () => canvas.evaluate((el) => ({ x: el.dataset.cameraX, y: el.dataset.cameraY, zoom: el.dataset.zoom }));
+  const before = await camera();
+  await page.locator('#btn-topology').click();
+  await page.locator('#zoom-in').click();
+  await page.locator('#btn-topology').click();
+  await expect(canvas).toHaveAttribute('data-view', '2d');
+  expect(await camera()).toEqual(before);
+});
+
 async function screenPoint(page, id) {
   return page.evaluate((trackId) => {
     const c = document.querySelector('#sea'), rect = c.getBoundingClientRect();

@@ -21,26 +21,6 @@ export function tradeRoutes(releases, similarity, { islands = [], minScore = 0.3
 
   const seen = new Set();
   const routes = [];
-  const addRoute = (fromId, toId, rawScore) => {
-    const key = [fromId, toId].sort().join('>');
-    if (seen.has(key)) return;
-    seen.add(key);
-    routes.push({
-      from: fromId,
-      to: toId,
-      score: Number(rawScore.toFixed(3)),
-      fromIsland: islandOf.get(fromId) ?? null,
-      toIsland: islandOf.get(toId) ?? null,
-      bridge: nerveBridgeKeys.has(key),
-    });
-  };
-
-  // First include H0 nerve bridges that meet minScore.
-  for (const edge of mstEdges) {
-    if (edge.similarity < minScore) continue;
-    if (islandOf.size > 0 && islandOf.get(edge.from) === islandOf.get(edge.to)) continue;
-    addRoute(edge.from, edge.to, edge.similarity);
-  }
 
   for (const from of releases) {
     const candidates = releases
@@ -52,9 +32,19 @@ export function tradeRoutes(releases, similarity, { islands = [], minScore = 0.3
       .slice(0, perRelease);
 
     for (const { to, score } of candidates) {
-      addRoute(from.id, to.id, score);
+      const key = [from.id, to.id].sort().join('>');
+      if (seen.has(key)) continue;
+      seen.add(key);
+      routes.push({
+        from: from.id,
+        to: to.id,
+        score: Number(score.toFixed(3)),
+        fromIsland: islandOf.get(from.id) ?? null,
+        toIsland: islandOf.get(to.id) ?? null,
+        bridge: nerveBridgeKeys.has(key),
+      });
     }
   }
 
-  return routes.sort((a, b) => b.score - a.score || Number(b.bridge) - Number(a.bridge) || a.from.localeCompare(b.from));
+  return routes.sort((a, b) => b.score - a.score || a.from.localeCompare(b.from));
 }

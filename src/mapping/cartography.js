@@ -8,7 +8,7 @@
 //               neighbouring archipelagos (attraction = cross-island
 //               similarity), unrelated ones keep open sea between them
 //               (repulsion = island radii).
-// 3. shores   — releases inside an island are laid along a ring ordered by era
+// 3. shores   — releases inside an island fill a compact grove ordered by era
 //               and relaxed by pairwise similarity, so the coastline walks
 //               smoothly through the island's variants.
 // 4. depth    — each release gets a depth value: how deep-cut / unexplored it
@@ -19,8 +19,7 @@
 
 import { fnv1aHash } from '../fnv1a.js';
 import { mulberry32 } from '../rng.js';
-import { isContextTag, isGenreTag, tagLabel } from './tags.js';
-import { analyzeTopology, seriateIslandMembers } from './tda.js';
+import { isGenreTag, tagLabel } from './tags.js';
 
 // Cluster while average linkage stays above this. Measured on the radio
 // catalogue with per-song genres: songs sharing nothing score ~0 (p90 0.16),
@@ -106,7 +105,7 @@ function distinctNames(islands) {
 // they describe a whole set, not its tracks.
 function islandName(members, documentFrequency = new Map()) {
   const tagsOf = (member) => member.tags?.all ?? member.styles ?? [];
-  const soundOf = (member) => tagsOf(member).filter((t) => isGenreTag(t));
+  const soundOf = (member) => tagsOf(member).filter((tag) => isGenreTag(tag) || tag.startsWith('decade:'));
   const genre = majorityTag(members, soundOf, documentFrequency);
   if (genre) return { name: tagLabel(genre), basis: 'sound' };
   if (members.filter((m) => soundOf(m).length > 0).length * 2 >= members.length) {
@@ -145,26 +144,6 @@ function islandRadius(memberCount) {
   return 1.5 + Math.sqrt(memberCount) * 1.7;
 }
 
-/**
- * Topological affinity between two islands: combines mean cross-island
- * similarity with the strongest H0 bridge edge between their members.
- */
-function islandAffinity(similarity, groupA, groupB) {
-  let total = 0;
-  let count = 0;
-  let maxBridge = 0;
-  for (const a of groupA) {
-    for (const b of groupB) {
-      const s = similarity(a, b);
-      total += s;
-      count += 1;
-      if (s > maxBridge) maxBridge = s;
-    }
-  }
-  const avg = count === 0 ? 0 : total / count;
-  return 0.6 * avg + 0.4 * maxBridge;
-}
-
 function arrangeIslands(islands, similarity, rand) {
   const centres = islands.map((island, index) => {
     const angle = index * 2.399963; // golden angle: deterministic spread
@@ -176,16 +155,6 @@ function arrangeIslands(islands, similarity, rand) {
       radius: islandRadius(island.members.length),
     };
   });
-
-  // Precompute cross-island topological affinities (mean + H0 bridge strength).
-  const affinities = Array.from({ length: centres.length }, () => new Float64Array(centres.length));
-  for (let i = 0; i < centres.length; i += 1) {
-    for (let j = i + 1; j < centres.length; j += 1) {
-      const aff = islandAffinity(similarity, centres[i].island.members, centres[j].island.members);
-      affinities[i][j] = aff;
-      affinities[j][i] = aff;
-    }
-  }
 
   for (let iter = 0; iter < 60; iter += 1) {
     for (let i = 0; i < centres.length; i += 1) {
@@ -201,10 +170,10 @@ function arrangeIslands(islands, similarity, rand) {
         const wanted = a.radius + b.radius + 4; // open sea between islands
         const repel = dist < wanted ? (wanted - dist) * 0.25 : 0;
 
-        // Attraction: cross-island similarity + H0 bridge strength pulls
-        // related archipelagos together across the nerve graph.
-        const link = affinities[i][j];
-        const attract = link > 0.15 && dist > wanted ? Math.min((link - 0.15) * 4, (dist - wanted) * 0.2) : 0;
+        // Attraction: average cross-island similarity pulls archipelagos close,
+        // but only when they really are related.
+        const link = averageLinkage(similarity, a.island.members, b.island.members);
+        const attract = link > 0.35 && dist > wanted ? Math.min((link - 0.35) * 6, (dist - wanted) * 0.2) : 0;
 
         const move = -repel + attract;
         if (move === 0) continue;
@@ -224,14 +193,18 @@ function arrangeIslands(islands, similarity, rand) {
 }
 
 function placeIslandMembers(members, similarity, rand) {
-  const ordered = seriateIslandMembers(members, similarity);
+  const ordered = members
+    .slice()
+    .sort((a, b) => (a.year ?? 9999) - (b.year ?? 9999) || a.id.localeCompare(b.id));
   const radius = islandRadius(ordered.length) * 0.75;
   const points = ordered.map((release, index) => {
-    const angle = (index / ordered.length) * Math.PI * 2;
+    // A filled spiral scales with area; a single ring crowds larger groves.
+    const angle = index * 2.399963;
+    const distance = ordered.length === 1 ? 0 : radius * Math.sqrt(index / (ordered.length - 1));
     return {
       release,
-      x: Math.cos(angle) * radius,
-      y: Math.sin(angle) * radius,
+      x: Math.cos(angle) * distance,
+      y: Math.sin(angle) * distance,
     };
   });
 
@@ -266,11 +239,20 @@ function snapAndResolve(entries) {
   const occupied = new Map();
   const placements = new Map();
   const key = (x, y) => `${x}~${y}`;
+  // Distinct grid cells alone still allow neighbouring song markers to touch.
+  const free = (x, y) => {
+    for (let dx = -2; dx <= 2; dx += 1) {
+      for (let dy = -2; dy <= 2; dy += 1) {
+        if (dx * dx + dy * dy < 9 && occupied.has(key(x + dx, y + dy))) return false;
+      }
+    }
+    return true;
+  };
 
   for (const entry of entries) {
     let x = Math.round(entry.x);
     let y = Math.round(entry.y);
-    if (occupied.has(key(x, y))) {
+    if (!free(x, y)) {
       let radius = 1;
       let found = false;
       while (!found && radius < 400) {
@@ -279,7 +261,7 @@ function snapAndResolve(entries) {
             if (Math.max(Math.abs(dx), Math.abs(dy)) !== radius) continue;
             const nx = x + dx;
             const ny = y + dy;
-            if (!occupied.has(key(nx, ny))) {
+            if (free(nx, ny)) {
               x = nx;
               y = ny;
               found = true;
@@ -340,13 +322,10 @@ export function mapCatalogue(releases, similarity, { seed = 'radio-sea' } = {}) 
     radius: centre.radius,
   }));
 
-  const topology = analyzeTopology(releases, similarity, { islands: mappedIslands });
-
   return {
     placements,
     islands: mappedIslands,
     depths,
     similarity,
-    topology,
   };
 }
